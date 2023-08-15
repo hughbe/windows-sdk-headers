@@ -45,11 +45,11 @@ enum class DXCoreAdapterState : uint32_t
 {
     IsDriverUpdateInProgress = 0,
     AdapterMemoryBudget = 1,
-    AdapterEngineRunningTimeMicroseconds = 2,
-    AdapterMemoryUsageBytes = 3,
-    AdapterTemperatureCelsius = 4,
+    AdapterMemoryUsageBytes = 2,
+    AdapterMemoryUsageByProcessBytes = 3,
+    AdapterEngineRunningTimeMicroseconds = 4,
     AdapterEngineRunningTimeByProcessMicroseconds = 5,
-    AdapterMemoryUsageByProcessBytes = 6,
+    AdapterTemperatureCelsius = 6,
     AdapterInUseProcessCount = 7,
     AdapterInUseProcessSet = 8
 };
@@ -282,23 +282,22 @@ public:
     virtual HRESULT STDMETHODCALLTYPE GetPropertyWithInput(
         DXCoreAdapterProperty property,
         size_t inputPropertyDetailsSize,
-        _In_reads_bytes_opt_(inputPropertyDetailsSize) const void* inputPropertyDetails,
+        _In_reads_bytes_opt_(inputPropertyDetailsSize) const void *inputPropertyDetails,
         size_t outputBufferSize,
-        _Out_writes_bytes_(outputBufferSize) void* outputBuffer) = 0;
+        _Out_writes_bytes_(outputBufferSize) void *outputBuffer) = 0;
 
-    // No sizes provided
     template <class T1, class T2>
-    HRESULT GetPropertyWithInput(
-        DXCoreAdapterProperty property,
-        _In_reads_bytes_opt_(sizeof(T1)) const T1* inputPropertyDetails,
-        _Out_writes_bytes_(sizeof(T2)) T2* outputBuffer)
-    {
-        return GetPropertyWithInput(property,
-                                    sizeof(T1),
-                                    (void*)inputPropertyDetails,
-                                    sizeof(T2),
-                                    (void*)outputBuffer);
-    }
+    HRESULT GetPropertyWithInput( 
+            DXCoreAdapterProperty property,
+            _In_reads_bytes_opt_(sizeof(T1)) const T1 *inputPropertyDetails,
+            _Out_writes_bytes_(sizeof(T2)) T2 *outputBuffer)
+        {
+            return GetPropertyWithInput(property,
+                                        sizeof(T1),
+                                        (const void*)inputPropertyDetails,
+                                        sizeof(T2),
+                                        (void*)outputBuffer);
+        }
 };
 
 /* interface IDXCoreAdapterList */

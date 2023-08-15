@@ -1106,6 +1106,18 @@ DEFINE_GUID(
 // GUIDs for built-in conditions.
 //
 ///////////////////////////////////////////////////////////////////////////////
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+
+// 81BC78FB-F28D-4886-A604-6ACC261F261B
+DEFINE_GUID(
+   FWPM_CONDITION_ALE_PACKAGE_FAMILY_NAME,
+   0x81bc78fb,
+   0xf28d,
+   0x4886,
+   0xa6, 0x4, 0x6a, 0xcc, 0x26, 0x1f, 0x26, 0x1B
+);
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CU)
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 

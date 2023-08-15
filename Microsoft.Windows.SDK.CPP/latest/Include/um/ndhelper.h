@@ -94,12 +94,7 @@ extern "C"{
 /* interface __MIDL_itf_ndhelper_0000_0000 */
 /* [local] */ 
 
-//+--------------------------------------------------------------------------
-//
-//  Microsoft Windows
-//  Copyright (C) Microsoft Corporation, 1992-2007.
-//
-//---------------------------------------------------------------------------
+// Copyright (C) Microsoft Corporation. All rights reserved.
 #include <winapifamily.h>
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)

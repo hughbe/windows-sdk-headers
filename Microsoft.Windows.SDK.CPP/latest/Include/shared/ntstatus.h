@@ -11677,6 +11677,15 @@ Notes:
 #define STATUS_VRF_VOLATILE_SETTINGS_CONFLICT ((NTSTATUS)0xC0000C0FL)
 
 //
+// MessageId: STATUS_DIF_ZERO_SIZE_INFORMATION
+//
+// MessageText:
+//
+// There is no captured information.
+//
+#define STATUS_DIF_ZERO_SIZE_INFORMATION ((NTSTATUS)0xC0000C73L)
+
+//
 // MessageId: STATUS_DIF_DRIVER_PLUGIN_MISMATCH
 //
 // MessageText:

@@ -2356,6 +2356,11 @@ DEFINE_GUID(MFAudioFormat_Dolby_AC4_V1_ES,
 DEFINE_GUID(MFAudioFormat_Dolby_AC4_V2_ES,
 0x7e58c9f9, 0xb070, 0x45f4, 0x8c, 0xcd, 0xa9, 0x9a, 0x04, 0x17, 0xc1, 0xac);
 
+// {7c13c441-ebf8-4931-b678-800b19242236}
+// This format is used for MPEG-H MHAS bitstreams where each IMFSample is aligned with the start of a MHAS packet.
+DEFINE_GUID(MFAudioFormat_MPEGH,
+0x7c13c441, 0xebf8, 0x4931, 0xb6, 0x78, 0x80, 0x0b, 0x19, 0x24, 0x22, 0x36);
+
 DEFINE_GUID(MFAudioFormat_Vorbis,      // {8D2FD10B-5841-4a6b-8905-588FEC1ADED9}
 0x8D2FD10B, 0x5841, 0x4a6b, 0x89, 0x05, 0x58, 0x8F, 0xEC, 0x1A, 0xDE, 0xD9);
 DEFINE_GUID(MFAudioFormat_DTS_RAW, // == MEDIASUBTYPE_DTS defined in ksuuids.h
@@ -2938,6 +2943,10 @@ DEFINE_GUID( MF_MT_SPATIAL_AUDIO_DATA_PRESENT,
 // {4EACAB51-FFE5-421A-A2A7-8B7409A1CAC4} MF_MT_SPATIAL_AUDIO_IS_PREVIRTUALIZED {UINT32 (BOOL)}
 DEFINE_GUID(MF_MT_SPATIAL_AUDIO_IS_PREVIRTUALIZED,
     0x4eacab51, 0xffe5, 0x421a, 0xa2, 0xa7, 0x8b, 0x74, 0x09, 0xa1, 0xca, 0xc4 );
+
+// {51267a39-dd0c-4bb9-a7bd-9173ad4b131c}
+DEFINE_GUID(MF_MT_MPEGH_AUDIO_PROFILE_LEVEL_INDICATION,
+0x51267a39, 0xdd0c, 0x4bb9, 0xa7, 0xbd, 0x91, 0x73, 0xad, 0x4b, 0x13, 0x1c);
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 

@@ -2965,6 +2965,18 @@ typedef struct {
 } NVME_HOST_MEMORY_BUFFER_DESCRIPTOR_ENTRY, *PNVME_HOST_MEMORY_BUFFER_DESCRIPTOR_ENTRY;
 
 //
+// Data structure for NVME_FEATURE_HOST_BEHAVIOR_SUPPORT
+//
+typedef struct {
+
+    UCHAR ACRE;                   // byte 0 Advanced Command Retry Enable
+    UCHAR ETDAS;                  // byte 1 Extended Telemetry Data Area 4 Supported
+    UCHAR LBAFEE;                 // byte 2 LBA Format Extension Enable
+    UCHAR Reserved[509];          // byte 3:511
+
+} NVME_HOST_BEHAVIOR_SUPPORT_DATA, *PNVME_HOST_BEHAVIOR_SUPPORT_DATA;
+
+//
 // Parameters for NVME_FEATURE_IO_COMMAND_SET_PROFILE
 //
 typedef union {

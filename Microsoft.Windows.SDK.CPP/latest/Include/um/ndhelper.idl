@@ -1,24 +1,8 @@
-//+-------------------------------------------------------------------------
+// Copyright (C) Microsoft Corporation. All rights reserved.
 //
-//  Microsoft Windows
-//  Copyright (C) Microsoft Corporation, 1992-2004.
-//
-//  NDHelper.idl : IDL source for Network Diagnostics Helper Class
-//                 provider
-//
-// This file will be processed by the MIDL tool to
-// produce the .h file for C++ COM client.
-// type library and marshaling code are registered by the .NET serviced component
-//
-//
-//--------------------------------------------------------------------------
+//  NDHelper.idl : IDL source for Network Diagnostics Helper Class provider
 
-cpp_quote("//+--------------------------------------------------------------------------")
-cpp_quote("//")
-cpp_quote("//  Microsoft Windows")
-cpp_quote("//  Copyright (C) Microsoft Corporation, 1992-2007.")
-cpp_quote("//")
-cpp_quote("//---------------------------------------------------------------------------")
+cpp_quote("// Copyright (C) Microsoft Corporation. All rights reserved.")
 
 cpp_quote("#include <winapifamily.h>")
 

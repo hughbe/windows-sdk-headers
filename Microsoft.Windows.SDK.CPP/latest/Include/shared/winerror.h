@@ -13026,6 +13026,15 @@
 #define ERROR_VRF_VOLATILE_SETTINGS_CONFLICT 3087L
 
 //
+// MessageId: ERROR_DIF_ZERO_SIZE_INFORMATION
+//
+// MessageText:
+//
+// There is no captured information.
+//
+#define ERROR_DIF_ZERO_SIZE_INFORMATION  3187L
+
+//
 // MessageId: ERROR_DIF_DRIVER_PLUGIN_MISMATCH
 //
 // MessageText:
