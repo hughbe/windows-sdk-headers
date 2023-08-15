@@ -385,11 +385,15 @@ typedef union WHV_SYNTHETIC_PROCESSOR_FEATURES
 #if defined(_AMD64_)
         // HvCallRestorePartitionTime is supported.
         UINT64 RestoreTime:1;
+
+        // EnlightenedVmcs nested enlightenment is supported.
+        UINT64 EnlightenedVmcs:1;
 #else
-        UINT64 ReservedZ26:1;
+        UINT64 ReservedZ31:1;
+        UINT64 ReservedZ32:1;
 #endif
 
-        UINT64 Reserved:32;
+        UINT64 Reserved:31;
     };
 
     UINT64 AsUINT64;
@@ -1344,6 +1348,8 @@ typedef enum WHV_X64_PENDING_EVENT_TYPE
 {
     WHvX64PendingEventException = 0,
     WHvX64PendingEventExtInt    = 5,
+    WHvX64PendingEventSvmNestedExit = 7,
+    WHvX64PendingEventVmxNestedExit = 8,
 } WHV_X64_PENDING_EVENT_TYPE;
 
 typedef union WHV_X64_PENDING_EXCEPTION_EVENT
@@ -1383,6 +1389,157 @@ typedef union WHV_X64_PENDING_EXT_INT_EVENT
 } WHV_X64_PENDING_EXT_INT_EVENT;
 
 C_ASSERT(sizeof(WHV_X64_PENDING_EXT_INT_EVENT) == 16);
+
+//
+// Define pending event registers for nested VMEXITs. For AMD, this spans
+// four 128-bit registers. On Intel, this spans three 128-bit registers.
+//
+
+typedef union WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT0
+{
+    struct
+    {
+        UINT64 EventPending : 1;
+        UINT64 EventType : 4; // Must be WHvX64PendingEventSvmNestedExit
+        UINT64 Reserved0 : 3;
+        UINT64 InstructionBytesValid : 1;
+        UINT64 Reserved1 : 55;
+
+        UINT64 ExitCode;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT0;
+
+typedef union WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT1
+{
+    struct
+    {
+        UINT64 ExitInfo1;
+        UINT64 ExitInfo2;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT1;
+
+typedef union WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT2
+{
+    struct
+    {
+        UINT64 NextRip;
+        UINT8 InstructionBytesFetchedCount;
+        UINT8 InstructionBytes[7];
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT2;
+
+typedef union WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT3
+{
+    struct
+    {
+        UINT8 InstructionBytes[8];
+        UINT64 Reserved2;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT3;
+
+C_ASSERT(sizeof(WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT0) == 16);
+C_ASSERT(sizeof(WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT1) == 16);
+C_ASSERT(sizeof(WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT2) == 16);
+C_ASSERT(sizeof(WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT3) == 16);
+
+typedef union WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT0
+{
+    struct
+    {
+        UINT32 EventPending : 1;
+        UINT32 EventType : 4; // Must be WHvX64PendingEventVmxNestedExit
+        UINT32 Reserved0 : 27;
+        UINT32 ExitReason;
+
+        UINT64 ExitQualification;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT0;
+
+typedef union WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT1
+{
+    struct
+    {
+        UINT32 InstructionLength;
+        UINT32 InstructionInfo;
+
+        UINT32 ExitInterruptionInfo;
+        UINT32 ExitExceptionErrorCode;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT1;
+
+typedef union WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT2
+{
+    struct
+    {
+        UINT64 GuestLinearAddress;
+        UINT64 GuestPhysicalAddress;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT2;
+
+C_ASSERT(sizeof(WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT0) == 16);
+C_ASSERT(sizeof(WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT1) == 16);
+C_ASSERT(sizeof(WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT2) == 16);
+
+typedef union WHV_X64_NESTED_INVEPT_REGISTER
+{
+    struct
+    {
+        UINT8 Type;
+        UINT8 Reserved[7];
+        UINT64 Eptp;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_NESTED_INVEPT_REGISTER;
+
+C_ASSERT(sizeof(WHV_X64_NESTED_INVEPT_REGISTER) == 16);
+
+typedef union WHV_X64_NESTED_INVVPID_REGISTER
+{
+    struct
+    {
+        UINT8 Type;
+        UINT8 Reserved[3];
+        UINT32 Vpid;
+
+        UINT64 LinearAddress;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_NESTED_INVVPID_REGISTER;
+
+C_ASSERT(sizeof(WHV_X64_NESTED_INVVPID_REGISTER) == 16);
+
+typedef union WHV_X64_NESTED_GUEST_STATE
+{
+    struct
+    {
+        UINT64 NestedVirtActive:1;
+        UINT64 NestedGuestMode:1;
+        UINT64 VmEntryPending:1;
+        UINT64 Reserved0:61;
+
+        UINT64 Reserved1;
+    };
+
+    WHV_UINT128 AsUINT128;
+} WHV_X64_NESTED_GUEST_STATE;
+
+C_ASSERT(sizeof(WHV_X64_NESTED_GUEST_STATE) == 16);
 
 typedef union WHV_INTERNAL_ACTIVITY_REGISTER
 {
@@ -1448,6 +1605,16 @@ typedef union WHV_REGISTER_VALUE
     WHV_X64_PENDING_EXT_INT_EVENT ExtIntEvent;
     WHV_INTERNAL_ACTIVITY_REGISTER InternalActivity;
     WHV_X64_PENDING_DEBUG_EXCEPTION PendingDebugException;
+    WHV_X64_NESTED_GUEST_STATE NestedState;
+    WHV_X64_NESTED_INVEPT_REGISTER InvEpt;
+    WHV_X64_NESTED_INVVPID_REGISTER InvVpid;
+    WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT0 SvmNestedExit0;
+    WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT1 SvmNestedExit1;
+    WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT2 SvmNestedExit2;
+    WHV_X64_PENDING_SVM_NESTED_EXIT_EVENT3 SvmNestedExit3;
+    WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT0 VmxNestedExit0;
+    WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT1 VmxNestedExit1;
+    WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT2 VmxNestedExit2;
 } WHV_REGISTER_VALUE;
 
 C_ASSERT(sizeof(WHV_REGISTER_VALUE) == 16);
@@ -2028,6 +2195,249 @@ typedef enum WHV_VIRTUAL_PROCESSOR_STATE_TYPE
     WHvVirtualProcessorStateTypeXsaveState                = 0x00001001,
     WHvVirtualProcessorStateTypeNestedState               = 0x00001002,
 } WHV_VIRTUAL_PROCESSOR_STATE_TYPE;
+
+// Data structures for WHvVirtualProcessorStateTypeNestedState
+
+typedef enum WHV_NESTED_STATE_TYPE
+{
+    WHvNestedStateTypeVmx,
+    WHvNestedStateTypeSvm,
+
+} WHV_NESTED_STATE_TYPE;
+
+typedef struct WHV_NESTED_ENLIGHTENMENTS_CONTROL
+{
+    union
+    {
+        UINT32 AsUINT32;
+
+        struct
+        {
+            UINT32 DirectHypercall:1;
+            UINT32 VirtualizationException:1;
+            UINT32 Reserved:30;
+        };
+
+    } Features;
+
+    union
+    {
+        UINT32 AsUINT32;
+
+        struct
+        {
+            UINT32 InterPartitionCommunication:1;
+            UINT32 Reserved:31;
+        };
+
+    } HypercallControls;
+
+} WHV_NESTED_ENLIGHTENMENTS_CONTROL;
+
+typedef struct WHV_X64_VMX_NESTED_STATE
+{
+    WHV_NESTED_STATE_TYPE Vendor;
+
+    struct
+    {
+        //
+        // Indicates whether the VP is currently in nested guest mode.
+        //
+        UINT32 GuestMode : 1;
+
+        //
+        // Indicates if VMXON was executed.
+        //
+        UINT32 Vmxon : 1;
+
+        //
+        // Indicates if the VP has a current VMCS.
+        //
+        UINT32 CurrentVmcsValid : 1;
+
+        //
+        // Indicates if a physical VM-Entry is pending.
+        //
+        UINT32 VmEntryPending : 1;
+
+        //
+        // Indicates if the current VMCS is enlightened.
+        //
+        UINT32 VmcsEnlightened : 1;
+
+        //
+        // Indicates if enlightened VM entry is enabled.
+        //
+        UINT32 EnlightenedVmEntry : 1;
+
+        UINT32 Reserved : 26;
+    } Flags;
+
+    //
+    // Nested hypervisor enlightement control register.
+    //
+    WHV_NESTED_ENLIGHTENMENTS_CONTROL NestedEnlightenmentsControl;
+
+    //
+    // Loaded PDPTs if guest in PAE mode without EPT.
+    //
+    UINT64 Pdpt[4];
+
+    //
+    // GPA of the VMXON region.
+    //
+    UINT64 VmxonRegionGpa;
+
+    //
+    // GPA of current VMCS.
+    //
+    UINT64 VmcsGpa;
+
+    //
+    // GPA of the current enlightened VMCS.
+    //
+    UINT64 CurrentEnlightenedVmcs;
+
+    //
+    // Virtualized APIC registers.
+    //
+    struct
+    {
+        UINT32 Tpr;
+        UINT32 Ppr;
+        UINT32 Isr[8];
+        UINT32 Irr[8];
+        UINT32 IcrLow;
+        UINT32 IcrHigh;
+    } VirtualApicRegs;
+
+    UINT8 Reserved[3944];
+
+    //
+    // Current VMCS, see definition of enlightened VMCS in TLFS 16.11.2.
+    //
+    DECLSPEC_ALIGN(4096) UINT8 VmcsBytes[4096];
+
+} WHV_X64_VMX_NESTED_STATE;
+
+#pragma pack(push,1)
+
+typedef struct WHV_SVM_VMCB_SELECTOR
+{
+    UINT16  Selector;
+    UINT16  Attrib;
+    UINT32  Limit;
+    UINT64  Base;   // For all but GS/FS only lower 32 bits used
+
+} WHV_SVM_VMCB_SELECTOR;
+
+#pragma pack (pop)
+
+//
+// Nested host state used for internal and EXO save chunks.
+//
+
+typedef struct WHV_SVM_NESTED_HOST_STATE
+{
+    UINT64 Rip;
+    UINT64 Rsp;
+    UINT64 Rflags;
+    UINT64 Rax;
+    WHV_SVM_VMCB_SELECTOR Es;
+    WHV_SVM_VMCB_SELECTOR Cs;
+    WHV_SVM_VMCB_SELECTOR Ss;
+    WHV_SVM_VMCB_SELECTOR Ds;
+    WHV_SVM_VMCB_SELECTOR Gdtr;
+    WHV_SVM_VMCB_SELECTOR Idtr;
+    UINT64 Efer;
+    UINT64 Cr0;
+    UINT64 Cr3;
+    UINT64 Cr4;
+    UINT64 VirtualTpr;
+
+    //
+    // Reserved for future host state.
+    //
+    UINT64 Reserved[6];
+
+} WHV_SVM_NESTED_HOST_STATE;
+
+typedef struct WHV_X64_SVM_NESTED_STATE
+{
+    WHV_NESTED_STATE_TYPE Vendor;
+
+    struct
+    {
+        //
+        // Indicates if the VP is currently in nested guest mode.
+        //
+        UINT32 GuestMode : 1;
+
+        //
+        // Indicates if a physical VM-Entry is pending.
+        //
+        UINT32 VmEntryPending : 1;
+
+        //
+        // Indicates if the Host Save GPA is valid.
+        //
+        UINT32 HostSaveGpaValid : 1;
+
+        //
+        // Indicates if there is a current VMCB.
+        //
+        UINT32 CurrentVmcbValid : 1;
+
+        UINT32 Reserved : 28;
+    } Flags;
+
+    //
+    // Nested hypervisor enlightement control register.
+    //
+    WHV_NESTED_ENLIGHTENMENTS_CONTROL NestedEnlightenmentsControl;
+
+    //
+    // Host Save GPA.
+    //
+    UINT64 HostSaveGpa;
+
+    //
+    // VM_CR MSR.
+    //
+    UINT64 VmControlMsr;
+
+    //
+    // TSC ratio MSR.
+    //
+    UINT64 VirtualTscRatioMsr;
+
+    //
+    // GPA of the current VMCB.
+    //
+    UINT64 VmcbGpa;
+
+    //
+    // Specifies the current host state if the VP is currently in guest mode.
+    //
+    WHV_SVM_NESTED_HOST_STATE HostState;
+
+    UINT8 Reserved[3832];
+
+    //
+    // Specifices the current VMCB if the VP is currently in guest mode. Format is as specified by AMD.
+    //
+    DECLSPEC_ALIGN(4096) UINT8 VmcbBytes[4096];
+
+} WHV_X64_SVM_NESTED_STATE;
+
+typedef union WHV_X64_NESTED_STATE
+{
+    WHV_X64_VMX_NESTED_STATE Vmx;
+    WHV_X64_SVM_NESTED_STATE Svm;
+
+} WHV_X64_NESTED_STATE;
+
+C_ASSERT(sizeof(WHV_X64_NESTED_STATE) == (2 * 4096));
 
 //
 // Synic definitions

@@ -308,6 +308,9 @@ DEFINE_GUID(IID_IDebugHostSymbol2, 0x21515b67, 0x6720, 0x4257, 0x8a, 0x68, 0x7, 
 // {A117A435-1FB4-4092-A2AB-A929576C1E87}
 DEFINE_GUID(IID_IDebugHostEvaluator2, 0xa117a435, 0x1fb4, 0x4092, 0xa2, 0xab, 0xa9, 0x29, 0x57, 0x6c, 0x1e, 0x87);
 
+// {D2419F4A-7E8D-4C15-A499-73902B015ABB}
+DEFINE_GUID(IID_IDebugHostEvaluator3, 0xd2419f4a, 0x7e8d, 0x4c15, 0xa4, 0x99, 0x73, 0x90, 0x2b, 0x1, 0x5a, 0xbb);
+
 // {F412C5EA-2284-4622-A660-A697160D3312}
 DEFINE_GUID(IID_IDataModelManager2, 0xf412c5ea, 0x2284, 0x4622, 0xa6, 0x60, 0xa6, 0x97, 0x16, 0xd, 0x33, 0x12);
 
@@ -405,6 +408,7 @@ struct DECLSPEC_UUID("E7983FA1-80A7-498c-988F-518DDC5D4025") IDynamicKeyProvider
 struct DECLSPEC_UUID("95A7F7DD-602E-483f-9D06-A15C0EE13174") IDynamicConceptProviderConcept;
 struct DECLSPEC_UUID("80E2F7C5-7159-4e92-887E-7E0347E88406") IModelKeyReference2;
 struct DECLSPEC_UUID("A117A435-1FB4-4092-A2AB-A929576C1E87") IDebugHostEvaluator2;
+struct DECLSPEC_UUID("D2419F4A-7E8D-4C15-A499-73902B015ABB") IDebugHostEvaluator3;
 
 struct DECLSPEC_UUID("21515B67-6720-4257-8A68-077DC944471C") IDebugHostSymbol2;
 struct DECLSPEC_UUID("F412C5EA-2284-4622-A660-A697160D3312") IDataModelManager2;
@@ -5871,7 +5875,75 @@ DECLARE_INTERFACE_(IDebugHostEvaluator2, IDebugHostEvaluator)
         _COM_Errorptr_ IModelObject** assignmentResult,
         _COM_Outptr_opt_result_maybenull_ IKeyStore** assignmentMetadata
         ) PURE;
+};
 
+#undef INTERFACE
+#define INTERFACE IDebugHostEvaluator3
+DECLARE_INTERFACE_(IDebugHostEvaluator3, IDebugHostEvaluator2)
+{
+    //*************************************************
+    // IUnknown:
+
+    STDMETHOD(QueryInterface)(
+        THIS_
+        _In_ REFIID iid,
+        _COM_Outptr_ PVOID* iface
+        ) PURE;
+
+    STDMETHOD_(ULONG, AddRef)(
+        THIS
+        ) PURE;
+
+    STDMETHOD_(ULONG, Release)(
+        THIS
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostEvaluator:
+
+    STDMETHOD(EvaluateExpression)(
+        THIS_
+        _In_ IDebugHostContext* context,
+        _In_ PCWSTR expression,
+        _In_opt_ IModelObject* bindingContext,
+        _COM_Errorptr_ IModelObject** result,
+        _COM_Outptr_opt_result_maybenull_ IKeyStore** metadata
+        ) PURE;
+
+    STDMETHOD(EvaluateExtendedExpression)(
+        THIS_
+        _In_ IDebugHostContext* context,
+        _In_ PCWSTR expression,
+        _In_opt_ IModelObject* bindingContext,
+        _COM_Errorptr_ IModelObject** result,
+        _COM_Outptr_opt_result_maybenull_ IKeyStore** metadata
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostEvaluator2:
+
+    STDMETHOD(AssignTo)(
+        THIS_
+        _In_ IModelObject* assignmentReference,
+        _In_ IModelObject* assignmentValue,
+        _COM_Errorptr_ IModelObject** assignmentResult,
+        _COM_Outptr_opt_result_maybenull_ IKeyStore** assignmentMetadata
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostEvaluator3:
+
+    // Compare():
+    //
+    // For a caller which wants to compare two model based objects for equality
+    // linguistically, check if the two objects are equal. Handles pointers and
+    // pointer coercion equality if necessary.
+    STDMETHOD(Compare)(
+        THIS_
+        _In_ IModelObject *pLeft,
+        _In_ IModelObject *pRight,
+        _COM_Outptr_ IModelObject **ppResult
+        ) PURE;
 };
 
 //

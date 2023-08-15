@@ -54,7 +54,9 @@ typedef enum HCS_OPERATION_TYPE
     HcsOperationTypeGetProcessProperties = 13,
     HcsOperationTypeModifyProcess = 14,
     HcsOperationTypeCrash = 15,
-    HcsOperationTypeReserved1 = 16
+    HcsOperationTypeReserved1 = 16,
+    HcsOperationTypeMigrateSource = 17,
+    HcsOperationTypeMigrateFinalize = 18
 } HCS_OPERATION_TYPE;
 
 #define HCS_INVALID_OPERATION_ID (UINT64)(-1)

@@ -2374,6 +2374,7 @@ DnsCancelQuery(
 
 #define DNS_CUSTOM_SERVER_TYPE_UDP 0x1
 #define DNS_CUSTOM_SERVER_TYPE_DOH 0x2
+#define DNS_CUSTOM_SERVER_TYPE_DOT 0x3
 
 #define DNS_CUSTOM_SERVER_UDP_FALLBACK 0x1
 
@@ -2392,6 +2393,7 @@ typedef struct _DNS_CUSTOM_SERVER
     union
     {
         [case(DNS_CUSTOM_SERVER_TYPE_DOH)] PWSTR  pwszTemplate;
+        [case(DNS_CUSTOM_SERVER_TYPE_DOT)] PWSTR  pwszHostname;
         [case(DNS_CUSTOM_SERVER_TYPE_UDP)] ;
     };
 
@@ -2408,6 +2410,7 @@ typedef struct _DNS_CUSTOM_SERVER
     union
     {
         PWSTR pwszTemplate;
+        PWSTR pwszHostname;
     };
 
     union

@@ -8029,23 +8029,31 @@ LongLongAdd(
     )
 {
     HRESULT hr;
-    LONGLONG llResult = llAugend + llAddend;
+
+    //
+    // Signed integer overflow is undefined and must be avoided.
+    // Compilers do sometimes propagate undefined.
+    // Unsigned integer overflow is well defined to silently wraparound
+    // mod 2^n and may be used without problem.
+    //
+    ULONGLONG ullResult = ((ULONGLONG)llAugend) + (ULONGLONG)llAddend;
     
     //
     // Adding positive to negative never overflows.
     // If you add two positive numbers, you expect a positive result.
     // If you add two negative numbers, you expect a negative result.
-    // Overflow if inputs are the same sign and output is not that sign.
+    // Overflow if inputs have the same sign and output has the other sign.
+    // Unsigned greater than signed maximum, cast to signed, will be negative.
     //
     if (((llAugend < 0) == (llAddend < 0))  &&
-        ((llAugend < 0) != (llResult < 0)))
+        ((llAugend < 0) != (ullResult > (ULONGLONG)LONGLONG_MAX)))
     {
         *pllResult = LONGLONG_ERROR;
         hr = INTSAFE_E_ARITHMETIC_OVERFLOW;
     }
     else
     {
-        *pllResult = llResult;
+        *pllResult = (LONGLONG)ullResult;
         hr = S_OK;
     }
 
@@ -8239,7 +8247,14 @@ LongLongSub(
     )
 {
     HRESULT hr;
-    LONGLONG llResult = llMinuend - llSubtrahend;
+
+    //
+    // Signed integer overflow is undefined and must be avoided.
+    // Compilers do sometimes propagate undefined.
+    // Unsigned integer overflow is well defined to silently wraparound
+    // mod 2^n and may be used without problem.
+    //
+    ULONGLONG ullResult = ((ULONGLONG)llMinuend) - (ULONGLONG)llSubtrahend;
 
     //
     // Subtracting a positive number from a positive number never overflows.
@@ -8247,16 +8262,17 @@ LongLongSub(
     // If you subtract a negative number from a positive number, you expect a positive result.
     // If you subtract a positive number from a negative number, you expect a negative result.
     // Overflow if inputs vary in sign and the output does not have the same sign as the first input.
+    // Unsigned greater than signed maximum, cast to signed, will be negative.
     //
     if (((llMinuend < 0) != (llSubtrahend < 0)) &&
-        ((llMinuend < 0) != (llResult < 0)))
+        ((llMinuend < 0) != (ullResult > (ULONGLONG)LONGLONG_MAX)))
     {
         *pllResult = LONGLONG_ERROR;
         hr = INTSAFE_E_ARITHMETIC_OVERFLOW;
     }
     else
     {
-        *pllResult = llResult;
+        *pllResult = (LONGLONG)ullResult;
         hr = S_OK;
     }
     

@@ -96,7 +96,7 @@
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
+#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x30000
 #endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
@@ -3169,6 +3169,12 @@ namespace ABI {
                     WwanDataClass_Hsdpa = 0x8,
                     WwanDataClass_Hsupa = 0x10,
                     WwanDataClass_LteAdvanced = 0x20,
+#if WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+                    WwanDataClass_NewRadioNonStandalone = 0x40,
+#endif // WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+#if WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+                    WwanDataClass_NewRadioStandalone = 0x80,
+#endif // WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
                     WwanDataClass_Cdma1xRtt = 0x10000,
                     WwanDataClass_Cdma1xEvdo = 0x20000,
                     WwanDataClass_Cdma1xEvdoRevA = 0x40000,
@@ -5314,8 +5320,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -10317,6 +10323,12 @@ enum __x_ABI_CWindows_CNetworking_CConnectivity_CWwanDataClass
     WwanDataClass_Hsdpa = 0x8,
     WwanDataClass_Hsupa = 0x10,
     WwanDataClass_LteAdvanced = 0x20,
+#if WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+    WwanDataClass_NewRadioNonStandalone = 0x40,
+#endif // WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+#if WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
+    WwanDataClass_NewRadioStandalone = 0x80,
+#endif // WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION >= 0x30000
     WwanDataClass_Cdma1xRtt = 0x10000,
     WwanDataClass_Cdma1xEvdo = 0x20000,
     WwanDataClass_Cdma1xEvdoRevA = 0x40000,
@@ -13910,8 +13922,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Networking.Connectivity.INetworkInformationStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

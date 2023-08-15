@@ -1082,6 +1082,7 @@ typedef struct addrinfoex5
 
 #define AI_DNS_SERVER_TYPE_UDP 0x1
 #define AI_DNS_SERVER_TYPE_DOH 0x2
+#define AI_DNS_SERVER_TYPE_DOT 0x3
 
 
 //
@@ -1101,6 +1102,7 @@ typedef struct addrinfo_dns_server
     union
     {
         PWSTR ai_template;
+        PWSTR ai_hostname;
     };
 } ADDRINFO_DNS_SERVER;
 

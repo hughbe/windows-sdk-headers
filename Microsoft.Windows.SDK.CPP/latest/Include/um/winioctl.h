@@ -254,6 +254,8 @@ DEFINE_DEVPROPKEY(DEVPKEY_Storage_Gpt_Name,           0x4d1ebee8, 0x803, 0x4774,
 #define FILE_DEVICE_EVENT_COLLECTOR     0x0000005f
 #define FILE_DEVICE_USB4                0x00000060
 #define FILE_DEVICE_SOUNDWIRE           0x00000061
+#define FILE_DEVICE_SVM                 0x00000062
+#define FILE_DEVICE_HARDWARE_ACCELERATOR 0x00000063
 
 //
 // Macro definition for defining IOCTL and FSCTL function control codes.  Note
