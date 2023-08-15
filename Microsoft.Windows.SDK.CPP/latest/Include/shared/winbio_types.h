@@ -252,7 +252,7 @@ typedef ULONG WINBIO_CAPABILITIES, *PWINBIO_CAPABILITIES;
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
 
-// Secure Connection Protocol (SCP) V1
+// Secure Connection Protocol (SCP) V1 --> Secure Fingerprints
 #define WINBIO_CAPABILITY_SCP_V1            ((WINBIO_CAPABILITIES)0x00000200)
 
 // Modern standby support

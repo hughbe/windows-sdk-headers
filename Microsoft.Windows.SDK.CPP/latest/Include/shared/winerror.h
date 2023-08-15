@@ -3037,7 +3037,8 @@
 //
 // MessageText:
 //
-// The Windows Subsystem for Linux has not been enabled.
+// The Windows Subsystem for Linux is not installed. You can install by running 'wsl.exe --install'.
+// For more information please visit https://aka.ms/wslinstall
 //
 #define ERROR_LINUX_SUBSYSTEM_NOT_PRESENT 414L
 

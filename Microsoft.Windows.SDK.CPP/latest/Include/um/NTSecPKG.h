@@ -1176,7 +1176,6 @@ typedef NTSTATUS
         PSECPKG_SUPPLEMENTAL_CRED_ARRAY* SupplementalCredentials
         );
 
-#ifdef Feature_SecPkg_MSRC70653_39259437_Present
 // The authentication package should use this to retrieve the SID associated
 // associated with the TSPkg logon session. This is intended to bind the NLA session to the interactive logon session
 typedef NTSTATUS
@@ -1184,7 +1183,6 @@ typedef NTSTATUS
         HANDLE RedirectedLogonHandle,
         PSID* Sid
         );
-#endif
 
 #ifdef __cplusplus
 } // extern "C"
@@ -1196,9 +1194,7 @@ typedef LSA_REDIRECTED_LOGON_GET_LOGON_CREDS *PLSA_REDIRECTED_LOGON_GET_LOGON_CR
 typedef LSA_REDIRECTED_LOGON_GET_SUPP_CREDS *PLSA_REDIRECTED_LOGON_GET_SUPP_CREDS;
 typedef LSA_REDIRECTED_LOGON_CLEANUP_CALLBACK *PLSA_REDIRECTED_LOGON_CLEANUP_CALLBACK;
 
-#ifdef Feature_SecPkg_MSRC70653_39259437_Present
 typedef LSA_REDIRECTED_LOGON_GET_SID *PLSA_REDIRECTED_LOGON_GET_SID;
-#endif
 
 #define SECPKG_REDIRECTED_LOGON_GUID_INITIALIZER { 0xc2be5457, 0x82eb, 0x483e, { 0xae, 0x4e, 0x74, 0x68, 0xef, 0x14, 0xd5, 0x9 } }
 typedef struct _SECPKG_REDIRECTED_LOGON_BUFFER {
@@ -1209,9 +1205,7 @@ typedef struct _SECPKG_REDIRECTED_LOGON_BUFFER {
     PLSA_REDIRECTED_LOGON_CLEANUP_CALLBACK CleanupCallback;
     PLSA_REDIRECTED_LOGON_GET_LOGON_CREDS GetLogonCreds;
     PLSA_REDIRECTED_LOGON_GET_SUPP_CREDS GetSupplementalCreds;
-#ifdef Feature_SecPkg_MSRC70653_39259437_Present
     PLSA_REDIRECTED_LOGON_GET_SID GetRedirectedLogonSid;
-#endif
 } SECPKG_REDIRECTED_LOGON_BUFFER, *PSECPKG_REDIRECTED_LOGON_BUFFER;
 
 typedef struct _SECPKG_POST_LOGON_USER_INFO

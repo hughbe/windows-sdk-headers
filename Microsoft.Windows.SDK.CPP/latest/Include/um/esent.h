@@ -2118,8 +2118,9 @@ typedef enum
 
 #endif // JET_VERSION >= 0x0A01
 
+#define JET_paramEnableBlockCacheDetach         220 //  Indicates that ESE Block Cache detach is enabled.  This will allow a file cached by the ESE Block Cache to be detached on open.
 
-#define JET_paramMaxValueInvalid                219 //  This is not a valid parameter. It can change from release to release!
+#define JET_paramMaxValueInvalid                221 //  This is not a valid parameter. It can change from release to release!
 
 
 
@@ -2403,7 +2404,6 @@ typedef struct
 #if ( JET_VERSION >= 0x0A00 )
 #define JET_bitIndexImmutableStructure  0x00080000  // Do not write to the input structures during a JetCreateIndexN call.
 #endif // JET_VERSION >= 0x0A00
-
 
     /* Flags for index key definition */
 
