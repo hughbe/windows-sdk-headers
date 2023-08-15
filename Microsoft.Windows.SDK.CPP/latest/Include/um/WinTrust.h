@@ -1243,6 +1243,18 @@ extern HRESULT WINAPI                   WTHelperCertCheckValidSignature(CRYPT_PR
 // Used to ensure marker free encrypted digest can be created.
 #define SPC_ENCRYPTED_DIGEST_RETRY_COUNT_OBJID  "1.3.6.1.4.1.311.2.6.2"
 
+// Signed attributes used for adding metadata to signed files
+#define szOID_SIGNED_ATTRIBUTE_INTERNAL_NAME     "1.3.6.1.4.1.311.2.7.1"
+#define szOID_SIGNED_ATTRIBUTE_FILE_VERSION      "1.3.6.1.4.1.311.2.7.2"
+#define szOID_SIGNED_ATTRIBUTE_FILE_DESCRIPTION  "1.3.6.1.4.1.311.2.7.3"
+#define szOID_SIGNED_ATTRIBUTE_PRODUCT           "1.3.6.1.4.1.311.2.7.4"
+#define szOID_SIGNED_ATTRIBUTE_PRODUCT_VERSION   "1.3.6.1.4.1.311.2.7.5"
+#define szOID_SIGNED_ATTRIBUTE_ORIGINAL_FILENAME "1.3.6.1.4.1.311.2.7.6"
+#define szOID_SIGNED_ATTRIBUTE_LANGUAGE          "1.3.6.1.4.1.311.2.7.7"
+#define szOID_SIGNED_ATTRIBUTE_AUTHOR            "1.3.6.1.4.1.311.2.7.8"
+#define szOID_SIGNED_ATTRIBUTE_PUBLISH_TIME      "1.3.6.1.4.1.311.2.7.9"
+#define szOID_SIGNED_ATTRIBUTE_SOURCE_URL        "1.3.6.1.4.1.311.2.7.10"
+
 //Indicates a PKCS9 sequence number as an attribute
 #define szOID_PKCS_9_SEQUENCE_NUMBER         "1.2.840.113549.1.9.25.4"
 

@@ -613,12 +613,6 @@ WerUnregisterFile(
     _In_ PCWSTR pwzFilePath
     );
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
-#pragma endregion
-
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
-
 HRESULT
 WINAPI
 WerRegisterMemoryBlock(
@@ -653,7 +647,13 @@ STDAPI
 WerUnregisterCustomMetadata(
     _In_ PCWSTR key
     );
-    
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
+#pragma endregion
+
+#pragma region Application Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+
 STDAPI
 WerRegisterAdditionalProcess(
     _In_ DWORD processId,

@@ -10534,6 +10534,33 @@ Notes:
 //
 #define STATUS_NOT_SUPPORTED_WITH_CACHED_HANDLE ((NTSTATUS)0xC00004D5L)
 
+//
+// MessageId: STATUS_PDE_ENCRYPTION_UNAVAILABLE_FAILURE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to encrypt data are currently unavailable due to a failure.
+//
+#define STATUS_PDE_ENCRYPTION_UNAVAILABLE_FAILURE ((NTSTATUS)0xC00004D6L)
+
+//
+// MessageId: STATUS_PDE_DECRYPTION_UNAVAILABLE_FAILURE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to decrypt data are currently unavailable due to a failure.
+//
+#define STATUS_PDE_DECRYPTION_UNAVAILABLE_FAILURE ((NTSTATUS)0xC00004D7L)
+
+//
+// MessageId: STATUS_PDE_DECRYPTION_UNAVAILABLE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to decrypt data are currently unavailable.
+//
+#define STATUS_PDE_DECRYPTION_UNAVAILABLE ((NTSTATUS)0xC00004D8L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 

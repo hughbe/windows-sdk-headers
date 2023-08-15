@@ -2693,7 +2693,8 @@ typedef enum _HTTP_REQUEST_PROPERTY
     HttpRequestPropertyStreamError,
     HttpRequestPropertyWskApiTimings,
     HttpRequestPropertyQuicApiTimings,
-    HttpRequestPropertyQuicStatsV2
+    HttpRequestPropertyQuicStatsV2,
+    HttpRequestPropertyQuicStreamStats
 } HTTP_REQUEST_PROPERTY, *PHTTP_REQUEST_PROPERTY;
 
 typedef struct _HTTP_QUERY_REQUEST_QUALIFIER_TCP

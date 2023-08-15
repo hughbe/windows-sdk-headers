@@ -51,7 +51,7 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_9    0xE003
 #define DXGKDDI_INTERFACE_VERSION_WDDM3_0    0xF003
 #define DXGKDDI_INTERFACE_VERSION_WDDM3_1   0x10004
-#define DXGKDDI_INTERFACE_VERSION_WDDM3_2   0x11001
+#define DXGKDDI_INTERFACE_VERSION_WDDM3_2   0x11002
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -2053,11 +2053,62 @@ typedef enum _DXGK_FEATURE_ID
     DXGK_FEATURE_SHARE_BACKING_STORE_WITH_KMD   = 5,
 #endif
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
-    DXGK_FEATURE_MAX
+    DXGK_FEATURE_RESERVED_1                     = 6,
+    DXGK_FEATURE_RESERVED_2                     = 7,
+    DXGK_FEATURE_RESERVED_3                     = 8,
+    DXGK_FEATURE_RESERVED_4                     = 9,
+    DXGK_FEATURE_RESERVED_5                     = 10,
+    DXGK_FEATURE_RESERVED_6                     = 11,
+    DXGK_FEATURE_RESERVED_7                     = 12,
+    DXGK_FEATURE_RESERVED_8                     = 13,
+    DXGK_FEATURE_RESERVED_9                     = 14,
+    DXGK_FEATURE_RESERVED_10                    = 15,
+    DXGK_FEATURE_RESERVED_11                    = 16,
+    DXGK_FEATURE_RESERVED_12                    = 17,
+    DXGK_FEATURE_RESERVED_13                    = 18,
+    DXGK_FEATURE_RESERVED_14                    = 19,
+    DXGK_FEATURE_RESERVED_15                    = 20,
+    DXGK_FEATURE_RESERVED_16                    = 21,
+    DXGK_FEATURE_RESERVED_17                    = 22,
+    DXGK_FEATURE_RESERVED_18                    = 23,
+    DXGK_FEATURE_RESERVED_19                    = 24,
+    DXGK_FEATURE_RESERVED_20                    = 25,
+    DXGK_FEATURE_RESERVED_21                    = 26,
+    DXGK_FEATURE_RESERVED_22                    = 27,
+    DXGK_FEATURE_RESERVED_23                    = 28,
+    DXGK_FEATURE_RESERVED_24                    = 29,
+    DXGK_FEATURE_RESERVED_25                    = 30,
 #endif
+    DXGK_FEATURE_SAMPLE                         = 31,
+
+    DXGK_FEATURE_MAX
 } DXGK_FEATURE_ID;
 
+
 #endif // DXGKDDI_INTERFACE_VERSION_WDDM2_6
+
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_2)
+
+typedef UINT16 DXGK_FEATURE_VERSION;
+
+typedef struct _DXGK_ISFEATUREENABLED_RESULT
+{
+    UINT16 Version;
+    union
+    {
+        struct
+        {
+            UINT16 Enabled                  :  1;
+            UINT16 KnownFeature             :  1;
+            UINT16 SupportedByDriver        :  1;
+            UINT16 SupportedOnCurrentConfig :  1;
+            UINT16 Reserved                 : 12;
+        };
+        DXGK_FEATURE_VERSION Value;
+    };
+} DXGK_ISFEATUREENABLED_RESULT;
+
+#endif // DXGKDDI_INTERFACE_VERSION_WDDM3_2
 
 #endif // (NTDDI_VERSION >= NTDDI_LONGHORN) || defined(D3DKMDT_SPECIAL_MULTIPLATFORM_TOOL)
 

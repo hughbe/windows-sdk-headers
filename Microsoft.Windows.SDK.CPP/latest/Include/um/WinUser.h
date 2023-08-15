@@ -7404,6 +7404,41 @@ GetSystemMetricsForDpi(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 #ifndef NOMENUS
+/*
+ * Menu-specific access flags
+ */
+#define MENU_GET_ITEM_INFO      (0x0001) // GetMenuInfo, GetMenuItemInfo
+#define MENU_GET_ITEM_DATA      (0x0002) // Get dwMenuData
+#define MENU_GET_SUBMENU        (0x0004) // Get Sub Menu
+#define MENU_INSERT_MENU        (0x0008) // InsertMenu
+#define MENU_INSERT_ITEM        (0x0010) // InsertMenuItem
+#define MENU_DELETE_MENU        (0x0020) // DeleteMenu, RemoveMenu
+#define MENU_SET_ITEM_INFO      (0x0040) // SetMenuItemInfo, ModifyMenu
+#define MENU_ENABLE_ITEM        (0x0080) // EnableMenuItem
+#define MENU_CHECK_ITEM         (0x0100) // CheckMenuItem
+#define MENU_SET_DEFAULT_ITEM   (0x0200) // SetMenuDefaultItem
+#define MENU_SET_ITEM_DATA      (0x0400) // Set dwMenuData
+#define MENU_SET_SUBMENU        (0x0800) // Set Sub Menu
+
+#define MENU_READ_ACCESS       (STANDARD_RIGHTS_READ   |\
+                                MENU_GET_ITEM_INFO     |\
+                                MENU_GET_ITEM_DATA     |\
+                                MENU_GET_SUBMENU)
+
+#define MENU_WRITE_ACCESS      (STANDARD_RIGHTS_WRITE  |\
+                                MENU_INSERT_MENU            |\
+                                MENU_INSERT_ITEM       |\
+                                MENU_DELETE_MENU            |\
+                                MENU_SET_ITEM_INFO     |\
+                                MENU_ENABLE_ITEM |\
+                                MENU_CHECK_ITEM |\
+                                MENU_SET_DEFAULT_ITEM  |\
+                                MENU_SET_ITEM_DATA     |\
+                                MENU_SET_SUBMENU)
+
+#define MENU_EXECUTE_ACCESS   (STANDARD_RIGHTS_EXECUTE)
+
+#define MENU_ALL_ACCESS (STANDARD_RIGHTS_ALL | MENU_READ_ACCESS | MENU_WRITE_ACCESS | MENU_EXECUTE_ACCESS)
 
 WINUSERAPI
 HMENU

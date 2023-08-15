@@ -16673,6 +16673,33 @@
 //
 #define ERROR_WIP_ENCRYPTION_FAILED      6023L
 
+//
+// MessageId: ERROR_PDE_ENCRYPTION_UNAVAILABLE_FAILURE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to encrypt data are currently unavailable due to a failure.
+//
+#define ERROR_PDE_ENCRYPTION_UNAVAILABLE_FAILURE 6024L
+
+//
+// MessageId: ERROR_PDE_DECRYPTION_UNAVAILABLE_FAILURE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to decrypt data are currently unavailable due to a failure.
+//
+#define ERROR_PDE_DECRYPTION_UNAVAILABLE_FAILURE 6025L
+
+//
+// MessageId: ERROR_PDE_DECRYPTION_UNAVAILABLE
+//
+// MessageText:
+//
+// Personal Data Encryption keys to decrypt data are currently unavailable as the user's session is locked.
+//
+#define ERROR_PDE_DECRYPTION_UNAVAILABLE 6026L
+
 
 ///////////////////////////////////////////////////
 //                                               //
