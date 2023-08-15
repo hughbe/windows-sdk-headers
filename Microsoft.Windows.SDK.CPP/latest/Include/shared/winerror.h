@@ -3518,8 +3518,41 @@
 #define ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT 475L
 
 //
-// **** Available SYSTEM error codes ****
+// MessageId: ERROR_NOT_A_DEV_VOLUME
 //
+// MessageText:
+//
+// This operation requires a developer volume.
+//
+#define ERROR_NOT_A_DEV_VOLUME           476L
+
+//
+// MessageId: ERROR_FS_GUID_MISMATCH
+//
+// MessageText:
+//
+// The file system GUID in the per machine state did not match the one on disk.
+//
+#define ERROR_FS_GUID_MISMATCH           477L
+
+//
+// MessageId: ERROR_CANT_ATTACH_TO_DEV_VOLUME
+//
+// MessageText:
+//
+// The file system minifilter cannot attach to the developer volume.
+//
+#define ERROR_CANT_ATTACH_TO_DEV_VOLUME  478L
+
+//
+// MessageId: ERROR_INVALID_CONFIG_VALUE
+//
+// MessageText:
+//
+// The configured value is not valid.
+//
+#define ERROR_INVALID_CONFIG_VALUE       479L
+
 //
 // MessageId: ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
 //
@@ -3807,6 +3840,42 @@
 // The target file system block is shared between multiple extents.
 //
 #define ERROR_BLOCK_SHARED               514L
+
+//
+// MessageId: ERROR_VOLUME_UPGRADE_NOT_NEEDED
+//
+// MessageText:
+//
+// Volume format is up to date already.
+//
+#define ERROR_VOLUME_UPGRADE_NOT_NEEDED  515L
+
+//
+// MessageId: ERROR_VOLUME_UPGRADE_PENDING
+//
+// MessageText:
+//
+// Volume upgrade is pending.  A reboot or re-mount of the volume is required.
+//
+#define ERROR_VOLUME_UPGRADE_PENDING     516L
+
+//
+// MessageId: ERROR_VOLUME_UPGRADE_DISABLED
+//
+// MessageText:
+//
+// Volume upgrade is disabled.
+//
+#define ERROR_VOLUME_UPGRADE_DISABLED    517L
+
+//
+// MessageId: ERROR_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED
+//
+// MessageText:
+//
+// Volume upgrade is disabled until Windows OS downgrade period has expired.
+//
+#define ERROR_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED 518L
 
 //
 // **** Available SYSTEM error codes ****
@@ -54821,6 +54890,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // There is no change tracking data available associated with the specified change tracking identifier.
 //
 #define ERROR_VHD_MISSING_CHANGE_TRACKING_INFORMATION _NDIS_ERROR_TYPEDEF_(0xC03A0030L)
+
+//
+// MessageId: ERROR_VHD_UNEXPECTED_ID
+//
+// MessageText:
+//
+// The specified VHD has an unexpected virtual disk identifier.
+//
+#define ERROR_VHD_UNEXPECTED_ID          _NDIS_ERROR_TYPEDEF_(0xC03A0034L)
 
 //
 // Warnings:

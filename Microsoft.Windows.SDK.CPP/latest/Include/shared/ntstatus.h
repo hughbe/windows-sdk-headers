@@ -10533,6 +10533,78 @@ Notes:
 //
 #define STATUS_NOT_SUPPORTED_WITH_CACHED_HANDLE ((NTSTATUS)0xC00004D5L)
 
+//
+// MessageId: STATUS_VOLUME_UPGRADE_NOT_NEEDED
+//
+// MessageText:
+//
+// Volume format is up to date already.
+//
+#define STATUS_VOLUME_UPGRADE_NOT_NEEDED ((NTSTATUS)0xC00004D9L)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_PENDING
+//
+// MessageText:
+//
+// Volume upgrade is pending.  A reboot or re-mount of the volume is required.
+//
+#define STATUS_VOLUME_UPGRADE_PENDING    ((NTSTATUS)0xC00004DAL)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_DISABLED
+//
+// MessageText:
+//
+// Volume upgrade is disabled.
+//
+#define STATUS_VOLUME_UPGRADE_DISABLED   ((NTSTATUS)0xC00004DBL)
+
+//
+// MessageId: STATUS_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED
+//
+// MessageText:
+//
+// Volume upgrade is disabled until Windows OS downgrade period has expired.
+//
+#define STATUS_VOLUME_UPGRADE_DISABLED_TILL_OS_DOWNGRADE_EXPIRED ((NTSTATUS)0xC00004DCL)
+
+//
+// MessageId: STATUS_NOT_A_DEV_VOLUME
+//
+// MessageText:
+//
+// This operation requires a developer volume.
+//
+#define STATUS_NOT_A_DEV_VOLUME          ((NTSTATUS)0xC00004DDL)
+
+//
+// MessageId: STATUS_FS_GUID_MISMATCH
+//
+// MessageText:
+//
+// The file system GUID in the per machine state did not match the one on disk.
+//
+#define STATUS_FS_GUID_MISMATCH          ((NTSTATUS)0xC00004DEL)
+
+//
+// MessageId: STATUS_CANT_ATTACH_TO_DEV_VOLUME
+//
+// MessageText:
+//
+// The file system minifilter cannot attach to the developer volume.
+//
+#define STATUS_CANT_ATTACH_TO_DEV_VOLUME ((NTSTATUS)0xC00004DFL)
+
+//
+// MessageId: STATUS_INVALID_CONFIG_VALUE
+//
+// MessageText:
+//
+// The configured value is not valid.
+//
+#define STATUS_INVALID_CONFIG_VALUE      ((NTSTATUS)0xC00004E0L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -24784,6 +24856,15 @@ Notes:
 // The size of the virtual disk cannot be safely reduced further.
 //
 #define STATUS_VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE ((NTSTATUS)0xC03A0033L)
+
+//
+// MessageId: STATUS_VHD_UNEXPECTED_ID
+//
+// MessageText:
+//
+// The specified VHD has an unexpected virtual disk identifier.
+//
+#define STATUS_VHD_UNEXPECTED_ID         ((NTSTATUS)0xC03A0034L)
 
 
 //

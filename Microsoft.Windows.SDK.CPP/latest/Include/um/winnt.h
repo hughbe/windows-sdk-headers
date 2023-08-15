@@ -14652,6 +14652,15 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            )
 
 //
+// Macro to determine whether a reparse point tag corresponds to a reserved
+// tag owned by Microsoft.
+//
+
+#define IsReparseTagReserved(_tag) (               \
+                           ((_tag) & 0x40000000)   \
+                           )
+
+//
 // Macro to determine whether a reparse point tag is a name surrogate
 //
 
@@ -14668,6 +14677,7 @@ typedef struct _REPARSE_GUID_DATA_BUFFER {
                            ((_tag) & 0x10000000)   \
                            )
 
+#define IO_REPARSE_TAG_RESERVED_INVALID         (0xC0008000L)       
 #define IO_REPARSE_TAG_MOUNT_POINT              (0xA0000003L)       
 #define IO_REPARSE_TAG_HSM                      (0xC0000004L)       
 #define IO_REPARSE_TAG_HSM2                     (0x80000006L)       
@@ -14768,11 +14778,27 @@ typedef struct _SCRUB_DATA_INPUT {
 
     DWORD ObjectId[4];
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+    //
+    // Start scrubbing at byte offset for byte count
+    // Both must be cluster aligned
+    //
+
+    ULONGLONG StartingByteOffset;
+
+    ULONGLONG ByteCount;
+
     //
     // Reserved
     //
 
+    DWORD Reserved[40];
+
+#else
+
     DWORD Reserved[41];
+
+#endif
 
     //
     // Opaque data returned from the previous call to restart the
@@ -14947,9 +14973,29 @@ typedef struct _SCRUB_DATA_OUTPUT {
 
     ULONGLONG TotalNumberOfDataBytesInUse;
 
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+
+    //
+    //  Next scrub starting offset in bytes
+    //
+
+    ULONGLONG NextStartingByteOffset;
+
+    ULONGLONG ValidDataLength;
+
+#endif
+
+#else
+
+#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_FE)
+
+    ULONGLONG Reserved2[6];
+
 #else
 
     ULONGLONG Reserved2[4];
+
+#endif
 
 #endif
 

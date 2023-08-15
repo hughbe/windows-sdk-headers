@@ -11,21 +11,7 @@
 #include "winrt/impl/Windows.System.RemoteDesktop.Provider.1.h"
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
 {
-    struct __declspec(empty_bases) CloudPCDisplayInfo : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCDisplayInfo
-    {
-        CloudPCDisplayInfo(std::nullptr_t) noexcept {}
-        CloudPCDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCDisplayInfo(ptr, take_ownership_from_abi) {}
-        explicit CloudPCDisplayInfo(param::hstring const& name);
-    };
-    struct __declspec(empty_bases) CloudPCHostService : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCHostService,
-        impl::require<CloudPCHostService, winrt::Windows::Foundation::IClosable>
-    {
-        CloudPCHostService(std::nullptr_t) noexcept {}
-        CloudPCHostService(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::ICloudPCHostService(ptr, take_ownership_from_abi) {}
-        static auto GetForWindow(winrt::Windows::UI::WindowId const& windowId);
-    };
-    struct __declspec(empty_bases) RemoteDesktopConnectionInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo,
-        impl::require<RemoteDesktopConnectionInfo, winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo2>
+    struct __declspec(empty_bases) RemoteDesktopConnectionInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo
     {
         RemoteDesktopConnectionInfo(std::nullptr_t) noexcept {}
         RemoteDesktopConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionInfo(ptr, take_ownership_from_abi) {}
@@ -37,6 +23,7 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         RemoteDesktopConnectionRemoteInfo(std::nullptr_t) noexcept {}
         RemoteDesktopConnectionRemoteInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo(ptr, take_ownership_from_abi) {}
         static auto Current();
+        static auto IsSupported();
     };
     struct __declspec(empty_bases) RemoteDesktopInfo : winrt::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo
     {
