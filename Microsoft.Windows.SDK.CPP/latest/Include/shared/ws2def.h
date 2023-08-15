@@ -1142,8 +1142,7 @@ typedef struct addrinfoex6
 //  Flags for ai_extraflags
 //
 
-#define AI_EXTRA_DNSSEC_OK      0x0000000000000001 // Set DO bit in request, return IP address info if DNSSEC authenticated, note: only the IP address will be returned not the DNSSEC specific records
-#define AI_EXTRA_DNSSEC_AUTH    0x0000000000000002 // Set AD bit in request, return IP address info if DNSSEC authenticated
+#define AI_EXTRA_DNSSEC_REQUIRED    0x0000000000000001 // Set DO and AD bits in request, returns IP address info IF DNSSEC authenticated, NOTE: only the IP address will be returned not the DNSSEC specific records
 
 typedef struct addrinfoex7
 {

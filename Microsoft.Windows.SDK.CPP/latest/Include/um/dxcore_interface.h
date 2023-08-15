@@ -115,7 +115,7 @@ struct DXCoreAdapterEngineIndex
 struct DXCoreEngineQueryInput
 {
     DXCoreAdapterEngineIndex AdapterEngineIndex;
-    HANDLE Process;
+    DWORD ProcessId;
 };
 
 enum class DXCoreMemoryType : uint32_t
@@ -140,7 +140,7 @@ struct DXCoreProcessMemoryQueryInput
 {
     uint32_t PhysicalAdapterIndex;
     DXCoreMemoryType MemoryType;
-    HANDLE Process;
+    DWORD ProcessId;
 };
 
 struct DXCoreAdapterProcessSetQueryInput

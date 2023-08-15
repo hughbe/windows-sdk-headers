@@ -354,13 +354,37 @@ struct sqlite3_api_routines {
   const char *(SQLITE_APICALL *filename_journal)(const char*);
   const char *(SQLITE_APICALL *filename_wal)(const char*);
   /* Version 3.32.0 and later */
-  char *(SQLITE_APICALL *create_filename)(const char*,const char*,const char*,
+  _SQLITE_FILENAME_NONCONST(SQLITE_APICALL *create_filename)(const char*,const char*,const char*,
                            int,const char**);
-  void (SQLITE_APICALL *free_filename)(char*);
+  void (SQLITE_APICALL *free_filename)(_SQLITE_FILENAME_NONCONST);
   sqlite3_file *(SQLITE_APICALL *database_file_object)(const char*);
   /* Version 3.34.0 and later */
   int (SQLITE_APICALL *txn_state)(sqlite3*,const char*);
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
+#if NTDDI_VERSION >= NTDDI_WIN10_CU
+  /* Version 3.36.1 and later */
+  sqlite3_int64 (SQLITE_APICALL *changes64)(sqlite3*);
+  sqlite3_int64 (SQLITE_APICALL *total_changes64)(sqlite3*);
+  /* Version 3.37.0 and later */
+  int (SQLITE_APICALL *autovacuum_pages)(sqlite3*,
+     unsigned int(SQLITE_CALLBACK *)(void*,const char*,unsigned int,unsigned int,unsigned int),
+     void*, void(SQLITE_CALLBACK *)(void*));
+  /* Version 3.38.0 and later */
+  int (SQLITE_APICALL *error_offset)(sqlite3*);
+  int (SQLITE_APICALL *vtab_rhs_value)(sqlite3_index_info*,int,sqlite3_value**);
+  int (SQLITE_APICALL *vtab_distinct)(sqlite3_index_info*);
+  int (SQLITE_APICALL *vtab_in)(sqlite3_index_info*,int,int);
+  int (SQLITE_APICALL *vtab_in_first)(sqlite3_value*,sqlite3_value**);
+  int (SQLITE_APICALL *vtab_in_next)(sqlite3_value*,sqlite3_value**);
+  /* Version 3.39.0 and later */
+  int (SQLITE_APICALL *deserialize)(sqlite3*,const char*,unsigned char*,
+                     sqlite3_int64,sqlite3_int64,unsigned);
+  unsigned char *(SQLITE_APICALL *serialize)(sqlite3*,const char *,sqlite3_int64*,
+                              unsigned int);
+  const char *(SQLITE_APICALL *db_name)(sqlite3*,int);
+  /* Version 3.40.0 and later */
+  int (SQLITE_APICALL *value_encoding)(sqlite3_value*);
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
 };
 
 #if NTDDI_VERSION >= NTDDI_WIN10_RS2
@@ -687,6 +711,28 @@ typedef int (SQLITE_APICALL *sqlite3_loadext_entry)(
 /* Version 3.34.0 and later */
 #define sqlite3_txn_state              sqlite3_api->txn_state
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
+#if NTDDI_VERSION >= NTDDI_WIN10_CU
+/* Version 3.36.1 and later */
+#define sqlite3_changes64              sqlite3_api->changes64
+#define sqlite3_total_changes64        sqlite3_api->total_changes64
+/* Version 3.37.0 and later */
+#define sqlite3_autovacuum_pages       sqlite3_api->autovacuum_pages
+/* Version 3.38.0 and later */
+#define sqlite3_error_offset           sqlite3_api->error_offset
+#define sqlite3_vtab_rhs_value         sqlite3_api->vtab_rhs_value
+#define sqlite3_vtab_distinct          sqlite3_api->vtab_distinct
+#define sqlite3_vtab_in                sqlite3_api->vtab_in
+#define sqlite3_vtab_in_first          sqlite3_api->vtab_in_first
+#define sqlite3_vtab_in_next           sqlite3_api->vtab_in_next
+/* Version 3.39.0 and later */
+#ifndef SQLITE_OMIT_DESERIALIZE
+#define sqlite3_deserialize            sqlite3_api->deserialize
+#define sqlite3_serialize              sqlite3_api->serialize
+#endif
+#define sqlite3_db_name                sqlite3_api->db_name
+/* Version 3.40.0 and later */
+#define sqlite3_value_encoding         sqlite3_api->value_encoding
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
 #endif /* !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION) */
 
 #if !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION)

@@ -170,6 +170,12 @@ typedef enum _HTTP_SERVER_PROPERTY
     HttpServerDelegationProperty = 16,
 
 
+    //
+    // Used to configure fast forwarding support.
+    //
+
+    HttpServerFastForwardingProperty = 18
+
 } HTTP_SERVER_PROPERTY, *PHTTP_SERVER_PROPERTY;
 
 
@@ -391,6 +397,12 @@ typedef struct _HTTP_LISTEN_ENDPOINT_INFO
 
 } HTTP_LISTEN_ENDPOINT_INFO, *PHTTP_LISTEN_ENDPOINT_INFO;
 
+
+typedef struct _HTTP_FAST_FORWARD_INFO
+{
+    HTTP_PROPERTY_FLAGS Flags;
+    BOOLEAN EnableFastForwarding;
+} HTTP_FAST_FORWARD_INFO, *PHTTP_FAST_FORWARD_INFO;
 
 typedef struct _HTTP_SERVER_AUTHENTICATION_DIGEST_PARAMS
 {
@@ -1922,12 +1934,15 @@ typedef HTTP_REQUEST * PHTTP_REQUEST;
 // request if any.
 // HTTP_REQUEST_FLAG_HTTP2 - Indicates the request was received over HTTP/2.
 // HTTP_REQUEST_FLAG_HTTP3 - Indicates the request was received over HTTP/3.
+// HTTP_REQUEST_FLAG_FAST_FORWARDING_ALLOWED - Indicates the request is eligible
+//                                             for fast-forwarding.
 //
 
 #define HTTP_REQUEST_FLAG_MORE_ENTITY_BODY_EXISTS   0x00000001
 #define HTTP_REQUEST_FLAG_IP_ROUTED                 0x00000002
 #define HTTP_REQUEST_FLAG_HTTP2                     0x00000004
 #define HTTP_REQUEST_FLAG_HTTP3                     0x00000008
+#define HTTP_REQUEST_FLAG_FAST_FORWARDING_ALLOWED   0x00000010
 
 
 //

@@ -1709,5 +1709,12 @@
     </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="ST_UpdateWhileInUse">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="allow"/>
+      <xs:enumeration value="defer"/>
+    </xs:restriction>
+  </xs:simpleType>
+
 </xs:schema>
 

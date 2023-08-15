@@ -199,6 +199,7 @@
       <xs:element ref="uap10:PackageIntegrity" minOccurs="0"/>
       <xs:element ref="uap13:AutoUpdate" minOccurs="0"/>
       <xs:element ref="uap15:DependencyTarget" minOccurs="0"/>
+      <xs:element ref="uap16:UpdateWhileInUse" minOccurs="0"/>
       <xs:element ref="heap:HeapPolicy" minOccurs="0"/>
       <xs:element ref="deployment2:StageWhileInUse" minOccurs="0"/>
     </xs:all>

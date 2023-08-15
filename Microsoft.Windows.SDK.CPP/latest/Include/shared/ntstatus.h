@@ -10624,6 +10624,15 @@ Notes:
 //
 #define STATUS_CANT_ATTACH_TO_DEV_VOLUME ((NTSTATUS)0xC00004DFL)
 
+//
+// MessageId: STATUS_INVALID_CONFIG_VALUE
+//
+// MessageText:
+//
+// The configured value is not valid.
+//
+#define STATUS_INVALID_CONFIG_VALUE      ((NTSTATUS)0xC00004E0L)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 
@@ -25520,7 +25529,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity detected that policy rollback has been attempted.
+// Application Control detected that policy rollback has been attempted.
 //
 #define STATUS_SYSTEM_INTEGRITY_ROLLBACK_DETECTED ((NTSTATUS)0xC0E90001L)
 
@@ -25529,7 +25538,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.
+// An Application Control policy has blocked this file.
 //
 #define STATUS_SYSTEM_INTEGRITY_POLICY_VIOLATION ((NTSTATUS)0xC0E90002L)
 
@@ -25538,7 +25547,7 @@ Notes:
 //
 // MessageText:
 //
-// The System Integrity policy is invalid.
+// The Application Control policy is invalid.
 //
 #define STATUS_SYSTEM_INTEGRITY_INVALID_POLICY ((NTSTATUS)0xC0E90003L)
 
@@ -25547,7 +25556,7 @@ Notes:
 //
 // MessageText:
 //
-// The System Integrity policy is either not signed or is signed by a non-trusted signer.
+// The Application Control policy is either not signed or is signed by a non-trusted signer.
 //
 #define STATUS_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED ((NTSTATUS)0xC0E90004L)
 
@@ -25556,7 +25565,7 @@ Notes:
 //
 // MessageText:
 //
-// The number of System Integrity policies is out of limit.
+// The number of Application Control policies is out of limit.
 //
 #define STATUS_SYSTEM_INTEGRITY_TOO_MANY_POLICIES ((NTSTATUS)0xC0E90005L)
 
@@ -25565,7 +25574,7 @@ Notes:
 //
 // MessageText:
 //
-// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
+// The Application Control supplemental policy is not authorized by an Application Control base policy.
 //
 #define STATUS_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED ((NTSTATUS)0xC0E90006L)
 
@@ -25574,7 +25583,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Malicious binary reputation.
+// An Application Control policy has blocked this file.  Malicious binary reputation.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS ((NTSTATUS)0xC0E90007L)
 
@@ -25583,7 +25592,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Potentially unwanted application.
+// An Application Control policy has blocked this file.  Potentially unwanted application.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_PUA ((NTSTATUS)0xC0E90008L)
 
@@ -25592,7 +25601,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Dangerous file extension from the web.
+// An Application Control policy has blocked this file.  Dangerous file extension from the web.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT ((NTSTATUS)0xC0E90009L)
 
@@ -25601,7 +25610,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Unable to contact reputation service for unknown file.
+// An Application Control policy has blocked this file.  Unable to contact reputation service for unknown file.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_OFFLINE ((NTSTATUS)0xC0E9000AL)
 
@@ -25610,7 +25619,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Unfriendly file.
+// An Application Control policy has blocked this file.  Unfriendly file.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE ((NTSTATUS)0xC0E9000BL)
 
@@ -25619,7 +25628,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+// An Application Control policy has blocked this file.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE ((NTSTATUS)0xC0E9000CL)
 
@@ -25628,7 +25637,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Explicitly denied file.
+// An Application Control policy has blocked this file.  Explicitly denied file.
 //
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE ((NTSTATUS)0xC0E9000DL)
 
@@ -25637,7 +25646,7 @@ Notes:
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  File did not pass WHQL-only requirements.
+// An Application Control policy has blocked this file.  File did not pass WHQL-only requirements.
 //
 #define STATUS_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED ((NTSTATUS)0xC0E9000EL)
 

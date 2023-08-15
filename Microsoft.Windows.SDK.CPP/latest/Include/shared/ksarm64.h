@@ -728,7 +728,7 @@
 #define TeGuaranteedStackBytes 0x1748
 #define TeChpeV2CpuAreaInfo 0x1788
 #define TeFlsData 0x17c8
-#define ThreadEnvironmentBlockLength 0x1858
+#define ThreadEnvironmentBlockLength 0x1860
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
 #define TLS_EXPANSION_SLOTS 0x400
@@ -921,7 +921,7 @@
 #define PcSkipTick 0x1918
 #define PcStartCycles 0x1948
 #define PcSpBase 0x1500
-#define ProcessorControlRegisterLength 0x29ec0
+#define ProcessorControlRegisterLength 0x2a140
 
 //
 // Defines for user shared data
@@ -972,7 +972,7 @@
 #define PbPacketBarrier 0xa80
 #define PbDeferredReadyListHead 0xa88
 #define PbLookasideIrpFloat 0xad8
-#define PbRequestMailbox 0x9500
+#define PbRequestMailbox 0x9780
 #define PbMailbox 0xb00
 #define PbDpcGate 0xc00
 #define PbWaitListHead 0xc80

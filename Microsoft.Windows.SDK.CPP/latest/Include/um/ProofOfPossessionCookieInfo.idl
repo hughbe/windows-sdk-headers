@@ -115,6 +115,40 @@ interface IProofOfPossessionCookieInfoManager3 : IUnknown
         [out, size_is(, *cookieInfoCount)] ProofOfPossessionCookieInfo** cookieInfo);
 }
 
+[
+    object,
+    uuid(3B74C75B-6E3F-494E-95EC-13174E12A89F),
+    pointer_default(unique)
+]
+interface IProofOfPossessionCookieInfoManager4 : IUnknown
+{
+
+    // 
+    // Gets cookie information corresponding to the supplied URI.
+    // Caller can pass the clientid which will be added to the returned cookie.
+    // A case sensitive string search is performed on the supplied URI.
+    // Free the returned array using FreeProofOfPossessionCookieInfoArray().
+    // 
+    HRESULT GetCookieInfoForUriWithUserAgentId(
+        [in]                               LPCWSTR                       uri,
+        [in]                               LPCWSTR                       uaClientId,
+        [out]                              DWORD*                        cookieInfoCount,
+        [out, size_is(, *cookieInfoCount)] ProofOfPossessionCookieInfo** cookieInfo);
+
+    //
+    // Gets cookie information corresponding to the supplied WebAccount and URI.
+    // Caller can pass the clientid which will be added to the returned cookie.
+    // A case sensitive string search is performed on the supplied URI.
+    // Free the returned array using FreeProofOfPossessionCookieInfoArray().
+    //
+    HRESULT GetCookieInfoWithUriAndUserAgentIdForAccount(
+        [in]                               IInspectable*                 webAccount, // Windows.Security.Credentials.WebAccount as IInspectable.
+        [in]                               LPCWSTR                       uri,
+        [in]                               LPCWSTR                       uaClientId,
+        [out]                              DWORD*                        cookieInfoCount,
+        [out, size_is(, *cookieInfoCount)] ProofOfPossessionCookieInfo** cookieInfo);
+}
+
 //
 // Cookie Information Manager type library. 
 // 
@@ -132,6 +166,7 @@ library ProofOfPossessionCookieInfoManagerLib
         [default] interface IProofOfPossessionCookieInfoManager;
         interface IProofOfPossessionCookieInfoManager2;
         interface IProofOfPossessionCookieInfoManager3;
+        interface IProofOfPossessionCookieInfoManager4;
 };
 }
 

@@ -1695,7 +1695,6 @@ typedef struct _DnsRecordFlags
 }
 DNS_RECORD_FLAGS;
 
-
 //
 //  Wire Record Sections
 //
@@ -2217,6 +2216,20 @@ DnsRecordListFree(
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
+//  Sets pfParsed to TRUE if a record has been parsed into its corresponding struct format and
+//  FALSE if it has been flat read (i.e. just a data buffer), ullFlags is currently unused and
+//  exists for forwards compatibility
+//
+
+DNS_STATUS
+WINAPI
+DnsIsParsedRecord(
+    _In_    PDNS_RECORD    pRecord,
+    _In_    ULONG64        ullFlags,
+    _Out_   BOOL           *pfParsed
+    );
+
+//
 //  DNS Query API
 //
 
@@ -2247,8 +2260,6 @@ DnsRecordListFree(
 #define DNS_QUERY_DNSSEC_CHECKING_DISABLED  0x02000000  // Sets DNSSEC checking disabled (CD) bit in query
 #define DNS_QUERY_DNSSEC_REQUIRED           0x04000000  // Sets DNSSEC OK (DO) bit in query AND requires that response contains authenticated data (AD) bit set
 #define DNS_QUERY_RESERVED                  0xf0000000
-
-#define DNS_QUERY_DNSSEC_REQUIRED_AUTH_ONLY 0x2000000000000000 // Sets DNSSEC authenticated data (AD) bit in query (rfc6840) AND requires that response contains AD bit set
 
 //  Backward compatibility with Win2K
 //  Do not use
@@ -2616,6 +2627,7 @@ VOID
 typedef struct _DNS_QUERY_RAW_REQUEST
 {
     ULONG                                               version;
+    ULONG                                               resultsVersion;
     ULONG                                               dnsQueryRawSize;
 #ifdef MIDL_PASS
     [size_is(dnsQueryRawSize)]

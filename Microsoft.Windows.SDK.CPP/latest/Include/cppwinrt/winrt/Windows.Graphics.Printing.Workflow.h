@@ -228,9 +228,15 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs)->get_ExtendedError(put_abi(value)));
         return value;
     }
-    template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs<D>::JobIssueHandled() const
+    template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs<D>::SkipSystemErrorToast() const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs)->JobIssueHandled());
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs)->get_SkipSystemErrorToast(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs<D>::SkipSystemErrorToast(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs)->put_SkipSystemErrorToast(value));
     }
     template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobIssueDetectedEventArgs<D>::PrinterJob() const
     {
@@ -305,6 +311,16 @@ namespace winrt::impl
     template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs2<D>::DisableIppCompressionForJob() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2)->DisableIppCompressionForJob());
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs2<D>::SkipSystemFaxUI() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2)->get_SkipSystemFaxUI(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobStartingEventArgs2<D>::SkipSystemFaxUI(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2)->put_SkipSystemFaxUI(value));
     }
     template <typename D> auto consume_Windows_Graphics_Printing_Workflow_IPrintWorkflowJobTriggerDetails<D>::PrintWorkflowJobSession() const
     {
@@ -953,10 +969,17 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall JobIssueHandled() noexcept final try
+        int32_t __stdcall get_SkipSystemErrorToast(bool* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().JobIssueHandled();
+            *value = detach_from<bool>(this->shim().SkipSystemErrorToast());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SkipSystemErrorToast(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SkipSystemErrorToast(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1076,6 +1099,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             this->shim().DisableIppCompressionForJob();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SkipSystemFaxUI(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().SkipSystemFaxUI());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_SkipSystemFaxUI(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().SkipSystemFaxUI(value);
             return 0;
         }
         catch (...) { return to_hresult(); }

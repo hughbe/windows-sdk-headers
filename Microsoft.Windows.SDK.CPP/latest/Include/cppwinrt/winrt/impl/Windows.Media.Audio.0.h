@@ -70,9 +70,9 @@ WINRT_EXPORT namespace winrt::Windows::Media::Audio
     };
     enum class AudioEffectsPackStatus : int32_t
     {
-        AudioEffectsPackNotEnabled = 0,
-        AudioEffectsPackEnabled = 1,
-        AudioEffectsPackNotSupported = 2,
+        NotEnabled = 0,
+        Enabled = 1,
+        NotSupported = 2,
     };
     enum class AudioFileNodeCreationStatus : int32_t
     {
@@ -512,7 +512,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioDeviceInputNode>{ 0xB01B6BE1,0x6F4E,0x49E2,{ 0xAC,0x01,0x55,0x9D,0x62,0xBE,0xB3,0xA9 } }; // B01B6BE1-6F4E-49E2-AC01-559D62BEB3A9
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioDeviceOutputNode>{ 0x362EDBFF,0xFF1C,0x4434,{ 0x9E,0x0F,0xBD,0x2E,0xF5,0x22,0xAC,0x82 } }; // 362EDBFF-FF1C-4434-9E0F-BD2EF522AC82
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>{ 0x52B24CFF,0x5817,0x5B2D,{ 0x9A,0x4F,0xCF,0x92,0x5C,0xE9,0x1F,0x6D } }; // 52B24CFF-5817-5B2D-9A4F-CF925CE91F6D
-    template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>{ 0xC7959B41,0x6C34,0x57FF,{ 0x9F,0xA9,0xB1,0x8D,0xD0,0x83,0x66,0xDD } }; // C7959B41-6C34-57FF-9FA9-B18DD08366DD
+    template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>{ 0x61C20413,0x530C,0x55FF,{ 0xBA,0x2B,0x8E,0x68,0xA9,0xB5,0x6A,0x04 } }; // 61C20413-530C-55FF-BA2B-8E68A9B56A04
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioFileInputNode>{ 0x905B67C8,0x6F65,0x4CD4,{ 0x88,0x90,0x46,0x94,0x84,0x3C,0x27,0x6D } }; // 905B67C8-6F65-4CD4-8890-4694843C276D
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioFileOutputNode>{ 0x50E01980,0x5166,0x4093,{ 0x80,0xF8,0xAD,0xA0,0x00,0x89,0xE9,0xCF } }; // 50E01980-5166-4093-80F8-ADA00089E9CF
     template <> inline constexpr guid guid_v<winrt::Windows::Media::Audio::IAudioFrameCompletedEventArgs>{ 0xDC7C829E,0x0208,0x4504,{ 0xA5,0xA8,0xF0,0xF2,0x68,0x92,0x0A,0x65 } }; // DC7C829E-0208-4504-A5A8-F0F268920A65
@@ -644,8 +644,8 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall GetForEffectsPackOnDeviceId(void*, void*, void**) noexcept = 0;
-            virtual int32_t __stdcall IsEffectsPackApplicableOnEndpoint(void*, void*, bool*) noexcept = 0;
+            virtual int32_t __stdcall GetForDeviceId(void*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall IsDeviceIdSupported(void*, void*, bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Media::Audio::IAudioFileInputNode>
@@ -1349,8 +1349,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics
     {
-        auto GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId) const;
-        auto IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId) const;
+        auto GetForDeviceId(param::hstring const& effectsPackId, param::hstring const& deviceId) const;
+        auto IsDeviceIdSupported(param::hstring const& effectsPackId, param::hstring const& deviceId) const;
     };
     template <> struct consume<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>
     {

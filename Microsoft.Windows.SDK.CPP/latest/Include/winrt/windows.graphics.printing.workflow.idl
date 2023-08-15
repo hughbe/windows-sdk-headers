@@ -482,12 +482,13 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 16.0)]
                 [exclusiveto(Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueDetectedEventArgs)]
-                [uuid(55E6C2F1-86A0-526A-AF72-A92108B39EE3)]
+                [uuid(DE58A46E-E41E-550A-A9FB-4B1F93FB9D98)]
                 interface IPrintWorkflowJobIssueDetectedEventArgs : IInspectable
                 {
                     [propget] HRESULT JobIssueKind([out] [retval] Windows.Graphics.Printing.Workflow.PrintWorkflowJobIssueKind* value);
                     [propget] HRESULT ExtendedError([out] [retval] HRESULT* value);
-                    HRESULT JobIssueHandled();
+                    [propget] HRESULT SkipSystemErrorToast([out] [retval] boolean* value);
+                    [propput] HRESULT SkipSystemErrorToast([in] boolean value);
                     [propget] HRESULT PrinterJob([out] [retval] Windows.Graphics.Printing.Workflow.PrintWorkflowPrinterJob** value);
                     [propget] HRESULT Configuration([out] [retval] Windows.Graphics.Printing.Workflow.PrintWorkflowConfiguration** value);
                     [propget] HRESULT UILauncher([out] [retval] Windows.Graphics.Printing.Workflow.PrintWorkflowUILauncher** value);
@@ -517,11 +518,13 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 16.0)]
                 [exclusiveto(Windows.Graphics.Printing.Workflow.PrintWorkflowJobStartingEventArgs)]
-                [uuid(58975F3C-7CA7-59BD-9826-C8B9B2DEE052)]
+                [uuid(7DEDED67-D3DC-5B23-8690-4EBFC0F0914A)]
                 interface IPrintWorkflowJobStartingEventArgs2 : IInspectable
                 {
                     [propget] HRESULT IsIppCompressionEnabled([out] [retval] boolean* value);
                     HRESULT DisableIppCompressionForJob();
+                    [propget] HRESULT SkipSystemFaxUI([out] [retval] boolean* value);
+                    [propput] HRESULT SkipSystemFaxUI([in] boolean value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 13.0)]

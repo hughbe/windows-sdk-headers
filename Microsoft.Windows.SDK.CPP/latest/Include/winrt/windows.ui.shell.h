@@ -113,10 +113,10 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.ApplicationModel.Core.h"
+#include "Windows.Graphics.Imaging.h"
 #include "Windows.Storage.Streams.h"
 #include "Windows.UI.h"
 #include "Windows.UI.StartScreen.h"
-#include "Windows.UI.WindowManagement.h"
 // Importing Collections header
 #include <windows.foundation.collections.h>
 
@@ -537,7 +537,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("95c3a881-25be-5835-99dd-07eebb24cd4d"))
+struct __declspec(uuid("c4b3db8c-61d5-56eb-bd64-3090604a022b"))
 IIterator<ABI::Windows::UI::Shell::WindowTab*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -564,7 +564,7 @@ typedef IIterator<ABI::Windows::UI::Shell::WindowTab*> __FIIterator_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("72801969-b5b4-5741-9893-2540fabd1a7b"))
+struct __declspec(uuid("d39641f6-4f18-5593-ac27-c0d17c83abcd"))
 IIterable<ABI::Windows::UI::Shell::WindowTab*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -591,7 +591,7 @@ typedef IIterable<ABI::Windows::UI::Shell::WindowTab*> __FIIterable_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("c2b65430-0ef7-580b-b9e5-106b67dbe253"))
+struct __declspec(uuid("068af409-64e7-5117-a8c9-5e5765f00cca"))
 IVectorView<ABI::Windows::UI::Shell::WindowTab*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -618,7 +618,7 @@ typedef IVectorView<ABI::Windows::UI::Shell::WindowTab*> __FIVectorView_1_Window
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("8543aec9-a1ed-5c20-8871-d1d6edb3dcd9"))
+struct __declspec(uuid("ecd56176-3d74-5b34-b776-2ea5bd2e423f"))
 IVector<ABI::Windows::UI::Shell::WindowTab*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -869,7 +869,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("41f3ab0f-8711-508b-befd-04c67aa0b27e"))
+struct __declspec(uuid("b9c69284-b932-5bba-9eb2-2bcf2c50091d"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -965,6 +965,16 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 
+namespace ABI {
+    namespace Windows {
+        namespace Graphics {
+            namespace Imaging {
+                typedef struct BitmapSize BitmapSize;
+            } /* Imaging */
+        } /* Graphics */
+    } /* Windows */
+} /* ABI */
+
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 namespace ABI {
@@ -1012,31 +1022,6 @@ namespace ABI {
         } /* UI */
     } /* Windows */
 } /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace WindowManagement {
-                class AppWindow;
-            } /* WindowManagement */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace WindowManagement {
-                interface IAppWindow;
-            } /* WindowManagement */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow ABI::Windows::UI::WindowManagement::IAppWindow
-
-#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 
 namespace ABI {
     namespace Windows {
@@ -1755,7 +1740,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("ab8e2d12-707f-5a15-8acd-927000812e18")
+                MIDL_INTERFACE("9bf935c1-ec5f-5595-8ecb-8703f5f89068")
                 IWindowTab : public IInspectable
                 {
                 public:
@@ -1776,6 +1761,12 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE put_Icon(
                         ABI::Windows::UI::Shell::IWindowTabIcon* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_TreatAsSecondaryTileId(
+                        HSTRING* value
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE put_TreatAsSecondaryTileId(
+                        HSTRING value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE get_Group(
                         ABI::Windows::UI::Shell::IWindowTabGroup** value
@@ -2079,22 +2070,18 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("bc99b38a-43c1-5b14-9592-9d01bf344b21")
+                MIDL_INTERFACE("49b4f9a6-ec74-5e85-a586-32bfd6fee1c0")
                 IWindowTabManagerStatics : public IInspectable
                 {
                 public:
-                    virtual HRESULT STDMETHODCALLTYPE GetForCurrentView(
-                        ABI::Windows::UI::Shell::IWindowTabManager** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE GetForAppWindow(
-                        ABI::Windows::UI::WindowManagement::IAppWindow* appWindow,
-                        ABI::Windows::UI::Shell::IWindowTabManager** result
-                        ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetForWindow(
                         ABI::Windows::UI::WindowId id,
                         ABI::Windows::UI::Shell::IWindowTabManager** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
+                        boolean* result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE IsTabTearOutSupported(
                         boolean* result
                         ) = 0;
                 };
@@ -2207,7 +2194,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("567a78ce-c0ae-59b5-a95c-7a845eb99230")
+                MIDL_INTERFACE("2d558e54-9c4e-5abc-ab72-3350fb4937a0")
                 IWindowTabThumbnailRequestedEventArgs : public IInspectable
                 {
                 public:
@@ -2215,7 +2202,7 @@ namespace ABI {
                         ABI::Windows::UI::Shell::IWindowTab** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE get_RequestedSize(
-                        UINT32* value
+                        ABI::Windows::Graphics::Imaging::BitmapSize* value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE get_Image(
                         ABI::Windows::Storage::Streams::IRandomAccessStreamReference** value
@@ -2225,6 +2212,9 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         ABI::Windows::Foundation::IDeferral** result
+                        ) = 0;
+                    virtual HRESULT STDMETHODCALLTYPE get_IsCompositedOnWindow(
+                        boolean* value
                         ) = 0;
                 };
 
@@ -3532,6 +3522,8 @@ typedef interface __x_ABI_CWindows_CFoundation_CIUriRuntimeClass __x_ABI_CWindow
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 
+typedef struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize;
+
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference;
@@ -3545,12 +3537,6 @@ typedef interface __x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile __x_ABI_CWin
 #endif // ____x_ABI_CWindows_CUI_CStartScreen_CISecondaryTile_FWD_DEFINED__
 
 typedef struct __x_ABI_CWindows_CUI_CWindowId __x_ABI_CWindows_CUI_CWindowId;
-
-#ifndef ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow;
-
-#endif // ____x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow_FWD_DEFINED__
 
 typedef enum __x_ABI_CWindows_CUI_CShell_CSecurityAppKind __x_ABI_CWindows_CUI_CShell_CSecurityAppKind;
 
@@ -4630,6 +4616,10 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIWindowTabVtbl
         __x_ABI_CWindows_CUI_CShell_CIWindowTabIcon** value);
     HRESULT (STDMETHODCALLTYPE* put_Icon)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
         __x_ABI_CWindows_CUI_CShell_CIWindowTabIcon* value);
+    HRESULT (STDMETHODCALLTYPE* get_TreatAsSecondaryTileId)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* put_TreatAsSecondaryTileId)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
+        HSTRING value);
     HRESULT (STDMETHODCALLTYPE* get_Group)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
         __x_ABI_CWindows_CUI_CShell_CIWindowTabGroup** value);
     HRESULT (STDMETHODCALLTYPE* put_Group)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
@@ -4681,6 +4671,12 @@ interface __x_ABI_CWindows_CUI_CShell_CIWindowTab
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTab_put_Icon(This, value) \
     ((This)->lpVtbl->put_Icon(This, value))
+
+#define __x_ABI_CWindows_CUI_CShell_CIWindowTab_get_TreatAsSecondaryTileId(This, value) \
+    ((This)->lpVtbl->get_TreatAsSecondaryTileId(This, value))
+
+#define __x_ABI_CWindows_CUI_CShell_CIWindowTab_put_TreatAsSecondaryTileId(This, value) \
+    ((This)->lpVtbl->put_TreatAsSecondaryTileId(This, value))
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTab_get_Group(This, value) \
     ((This)->lpVtbl->get_Group(This, value))
@@ -5216,15 +5212,12 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStaticsVtbl
         HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetForCurrentView)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
-        __x_ABI_CWindows_CUI_CShell_CIWindowTabManager** result);
-    HRESULT (STDMETHODCALLTYPE* GetForAppWindow)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
-        __x_ABI_CWindows_CUI_CWindowManagement_CIAppWindow* appWindow,
-        __x_ABI_CWindows_CUI_CShell_CIWindowTabManager** result);
     HRESULT (STDMETHODCALLTYPE* GetForWindow)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
         struct __x_ABI_CWindows_CUI_CWindowId id,
         __x_ABI_CWindows_CUI_CShell_CIWindowTabManager** result);
     HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* IsTabTearOutSupported)(__x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics* This,
         boolean* result);
 
     END_INTERFACE
@@ -5255,17 +5248,14 @@ interface __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_GetForCurrentView(This, result) \
-    ((This)->lpVtbl->GetForCurrentView(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_GetForAppWindow(This, appWindow, result) \
-    ((This)->lpVtbl->GetForAppWindow(This, appWindow, result))
-
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_GetForWindow(This, id, result) \
     ((This)->lpVtbl->GetForWindow(This, id, result))
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_IsSupported(This, result) \
     ((This)->lpVtbl->IsSupported(This, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIWindowTabManagerStatics_IsTabTearOutSupported(This, result) \
+    ((This)->lpVtbl->IsTabTearOutSupported(This, result))
 
 #endif /* COBJMACROS */
 
@@ -5458,13 +5448,15 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArg
     HRESULT (STDMETHODCALLTYPE* get_Tab)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
         __x_ABI_CWindows_CUI_CShell_CIWindowTab** value);
     HRESULT (STDMETHODCALLTYPE* get_RequestedSize)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
-        UINT32* value);
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize* value);
     HRESULT (STDMETHODCALLTYPE* get_Image)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
         __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference** value);
     HRESULT (STDMETHODCALLTYPE* put_Image)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
         __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference* value);
     HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
         __x_ABI_CWindows_CFoundation_CIDeferral** result);
+    HRESULT (STDMETHODCALLTYPE* get_IsCompositedOnWindow)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
+        boolean* value);
 
     END_INTERFACE
 } __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgsVtbl;
@@ -5508,6 +5500,9 @@ interface __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs_GetDeferral(This, result) \
     ((This)->lpVtbl->GetDeferral(This, result))
+
+#define __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs_get_IsCompositedOnWindow(This, value) \
+    ((This)->lpVtbl->get_IsCompositedOnWindow(This, value))
 
 #endif /* COBJMACROS */
 

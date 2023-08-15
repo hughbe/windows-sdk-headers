@@ -30,8 +30,8 @@ WINRT_EXPORT namespace winrt::Windows::Media::Audio
     {
         AudioEffectsPackConfiguration(std::nullptr_t) noexcept {}
         AudioEffectsPackConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration(ptr, take_ownership_from_abi) {}
-        static auto GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId);
-        static auto IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId);
+        static auto GetForDeviceId(param::hstring const& effectsPackId, param::hstring const& deviceId);
+        static auto IsDeviceIdSupported(param::hstring const& effectsPackId, param::hstring const& deviceId);
     };
     struct __declspec(empty_bases) AudioFileInputNode : winrt::Windows::Media::Audio::IAudioFileInputNode,
         impl::require<AudioFileInputNode, winrt::Windows::Media::Audio::IAudioInputNode2>

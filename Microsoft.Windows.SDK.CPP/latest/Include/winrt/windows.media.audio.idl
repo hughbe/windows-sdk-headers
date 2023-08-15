@@ -493,12 +493,12 @@ namespace Windows
                 AccessDenied       = 4
             };
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
             enum AudioEffectsPackStatus
             {
-                AudioEffectsPackNotEnabled   = 0,
-                AudioEffectsPackEnabled      = 1,
-                AudioEffectsPackNotSupported = 2
+                NotEnabled   = 0,
+                Enabled      = 1,
+                NotSupported = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -632,7 +632,7 @@ namespace Windows
                 [propget] HRESULT Device([out] [retval] Windows.Devices.Enumeration.DeviceInformation** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
             [exclusiveto(Windows.Media.Audio.AudioEffectsPackConfiguration)]
             [uuid(52B24CFF-5817-5B2D-9A4F-CF925CE91F6D)]
             interface IAudioEffectsPackConfiguration : IInspectable
@@ -644,13 +644,13 @@ namespace Windows
                 [eventremove] HRESULT ConfigurationChanged([in] EventRegistrationToken token);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
             [exclusiveto(Windows.Media.Audio.AudioEffectsPackConfiguration)]
-            [uuid(C7959B41-6C34-57FF-9FA9-B18DD08366DD)]
+            [uuid(61C20413-530C-55FF-BA2B-8E68A9B56A04)]
             interface IAudioEffectsPackConfigurationStatics : IInspectable
             {
-                HRESULT GetForEffectsPackOnDeviceId([in] HSTRING deviceId, [in] HSTRING effectsPackId, [out] [retval] Windows.Media.Audio.AudioEffectsPackConfiguration** result);
-                HRESULT IsEffectsPackApplicableOnEndpoint([in] HSTRING deviceId, [in] HSTRING effectsPackId, [out] [retval] boolean* result);
+                HRESULT GetForDeviceId([in] HSTRING effectsPackId, [in] HSTRING deviceId, [out] [retval] Windows.Media.Audio.AudioEffectsPackConfiguration** result);
+                HRESULT IsDeviceIdSupported([in] HSTRING effectsPackId, [in] HSTRING deviceId, [out] [retval] boolean* result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1444,9 +1444,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.Media.Audio.IAudioNodeWithListener;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
             [marshaling_behavior(agile)]
-            [static(Windows.Media.Audio.IAudioEffectsPackConfigurationStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [static(Windows.Media.Audio.IAudioEffectsPackConfigurationStatics, Windows.Foundation.UniversalApiContract, 16.0)]
             [threading(both)]
             runtimeclass AudioEffectsPackConfiguration
             {

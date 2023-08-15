@@ -117,6 +117,16 @@ extern "C" {
 #define SecureZeroMemory RtlSecureZeroMemory
 #define CaptureStackBackTrace RtlCaptureStackBackTrace
 
+#define CopyVolatileMemory RtlCopyVolatileMemory
+#define MoveVolatileMemory RtlMoveVolatileMemory
+#define FillVolatileMemory RtlFillVolatileMemory
+#define SecureZeroMemory2 RtlSecureZeroMemory2
+#define ZeroVolatileMemory RtlZeroVolatileMemory
+
+#define CopyDeviceMemory RtlCopyDeviceMemory
+#define FillDeviceMemory RtlFillDeviceMemory
+#define ZeroDeviceMemory RtlZeroDeviceMemory
+
 //
 // File creation flags must start at the high end since they
 // are combined with the attributes

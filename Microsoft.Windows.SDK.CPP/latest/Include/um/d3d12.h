@@ -1053,7 +1053,7 @@ extern "C"{
 
 #define	D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 15 )
 
-#define	D3D12_PREVIEW_SDK_VERSION	( 709 )
+#define	D3D12_PREVIEW_SDK_VERSION	( 710 )
 
 #define	D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 16 )
 
@@ -1186,7 +1186,7 @@ extern "C"{
 
 #define	D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT	( 2 )
 
-#define	D3D12_SDK_VERSION	( 609 )
+#define	D3D12_SDK_VERSION	( 610 )
 
 #define	D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES	( 32 )
 
@@ -1670,6 +1670,29 @@ typedef struct D3D12_RASTERIZER_DESC1
     UINT ForcedSampleCount;
     D3D12_CONSERVATIVE_RASTERIZATION_MODE ConservativeRaster;
     } 	D3D12_RASTERIZER_DESC1;
+
+typedef 
+enum D3D12_LINE_RASTERIZATION_MODE
+    {
+        D3D12_LINE_RASTERIZATION_MODE_ALIASED	= 0,
+        D3D12_LINE_RASTERIZATION_MODE_ALPHA_ANTIALIASED	= ( D3D12_LINE_RASTERIZATION_MODE_ALIASED + 1 ) ,
+        D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_WIDE	= ( D3D12_LINE_RASTERIZATION_MODE_ALPHA_ANTIALIASED + 1 ) ,
+        D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_NARROW	= ( D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_WIDE + 1 ) 
+    } 	D3D12_LINE_RASTERIZATION_MODE;
+
+typedef struct D3D12_RASTERIZER_DESC2
+    {
+    D3D12_FILL_MODE FillMode;
+    D3D12_CULL_MODE CullMode;
+    BOOL FrontCounterClockwise;
+    FLOAT DepthBias;
+    FLOAT DepthBiasClamp;
+    FLOAT SlopeScaledDepthBias;
+    BOOL DepthClipEnable;
+    D3D12_LINE_RASTERIZATION_MODE LineRasterizationMode;
+    UINT ForcedSampleCount;
+    D3D12_CONSERVATIVE_RASTERIZATION_MODE ConservativeRaster;
+    } 	D3D12_RASTERIZER_DESC2;
 
 
 
@@ -2168,7 +2191,8 @@ enum D3D12_PIPELINE_STATE_SUBOBJECT_TYPE
         D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MS	= 25,
         D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_DEPTH_STENCIL2	= 26,
         D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1	= 27,
-        D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID	= ( D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1 + 1 ) 
+        D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER2	= 28,
+        D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID	= ( D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER2 + 1 ) 
     } 	D3D12_PIPELINE_STATE_SUBOBJECT_TYPE;
 
 typedef 
@@ -2211,7 +2235,8 @@ enum D3D12_FEATURE
         D3D12_FEATURE_D3D12_OPTIONS15	= 44,
         D3D12_FEATURE_D3D12_OPTIONS16	= 45,
         D3D12_FEATURE_D3D12_OPTIONS17	= 46,
-        D3D12_FEATURE_D3D12_OPTIONS18	= 47
+        D3D12_FEATURE_D3D12_OPTIONS18	= 47,
+        D3D12_FEATURE_D3D12_OPTIONS19	= 48
     } 	D3D12_FEATURE;
 
 typedef 
@@ -2708,18 +2733,32 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS16
     {
     _Out_  BOOL DynamicDepthBiasSupported;
     _Out_  BOOL GPUUploadHeapSupported;
-    _Out_  BOOL ManualWriteTrackingResourceSupported;
     } 	D3D12_FEATURE_DATA_D3D12_OPTIONS16;
 
 typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS17
     {
     _Out_  BOOL NonNormalizedCoordinateSamplersSupported;
+    _Out_  BOOL ManualWriteTrackingResourceSupported;
     } 	D3D12_FEATURE_DATA_D3D12_OPTIONS17;
 
 typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS18
     {
     _Out_  BOOL RenderPassesValid;
     } 	D3D12_FEATURE_DATA_D3D12_OPTIONS18;
+
+typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS19
+    {
+    BOOL MismatchingOutputDimensionsSupported;
+    UINT SupportedSampleCountsWithNoOutputs;
+    BOOL PointSamplingAddressesNeverRoundUp;
+    BOOL RasterizerDesc2Supported;
+    BOOL NarrowQuadrilateralLinesSupported;
+    BOOL AnisoFilterWithPointMipSupported;
+    UINT MaxSamplerDescriptorHeapSize;
+    UINT MaxSamplerDescriptorHeapSizeWithStaticSamplers;
+    UINT MaxViewDescriptorHeapSize;
+    _Out_  BOOL ComputeOnlyCustomHeapSupported;
+    } 	D3D12_FEATURE_DATA_D3D12_OPTIONS19;
 
 typedef struct D3D12_RESOURCE_ALLOCATION_INFO
     {
@@ -3298,6 +3337,7 @@ enum D3D12_FILTER
         D3D12_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR	= 0x11,
         D3D12_FILTER_MIN_MAG_LINEAR_MIP_POINT	= 0x14,
         D3D12_FILTER_MIN_MAG_MIP_LINEAR	= 0x15,
+        D3D12_FILTER_MIN_MAG_ANISOTROPIC_MIP_POINT	= 0x54,
         D3D12_FILTER_ANISOTROPIC	= 0x55,
         D3D12_FILTER_COMPARISON_MIN_MAG_MIP_POINT	= 0x80,
         D3D12_FILTER_COMPARISON_MIN_MAG_POINT_MIP_LINEAR	= 0x81,
@@ -3307,6 +3347,7 @@ enum D3D12_FILTER
         D3D12_FILTER_COMPARISON_MIN_LINEAR_MAG_POINT_MIP_LINEAR	= 0x91,
         D3D12_FILTER_COMPARISON_MIN_MAG_LINEAR_MIP_POINT	= 0x94,
         D3D12_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR	= 0x95,
+        D3D12_FILTER_COMPARISON_MIN_MAG_ANISOTROPIC_MIP_POINT	= 0xd4,
         D3D12_FILTER_COMPARISON_ANISOTROPIC	= 0xd5,
         D3D12_FILTER_MINIMUM_MIN_MAG_MIP_POINT	= 0x100,
         D3D12_FILTER_MINIMUM_MIN_MAG_POINT_MIP_LINEAR	= 0x101,
@@ -3316,6 +3357,7 @@ enum D3D12_FILTER
         D3D12_FILTER_MINIMUM_MIN_LINEAR_MAG_POINT_MIP_LINEAR	= 0x111,
         D3D12_FILTER_MINIMUM_MIN_MAG_LINEAR_MIP_POINT	= 0x114,
         D3D12_FILTER_MINIMUM_MIN_MAG_MIP_LINEAR	= 0x115,
+        D3D12_FILTER_MINIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT	= 0x154,
         D3D12_FILTER_MINIMUM_ANISOTROPIC	= 0x155,
         D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_POINT	= 0x180,
         D3D12_FILTER_MAXIMUM_MIN_MAG_POINT_MIP_LINEAR	= 0x181,
@@ -3325,6 +3367,7 @@ enum D3D12_FILTER
         D3D12_FILTER_MAXIMUM_MIN_LINEAR_MAG_POINT_MIP_LINEAR	= 0x191,
         D3D12_FILTER_MAXIMUM_MIN_MAG_LINEAR_MIP_POINT	= 0x194,
         D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_LINEAR	= 0x195,
+        D3D12_FILTER_MAXIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT	= 0x1d4,
         D3D12_FILTER_MAXIMUM_ANISOTROPIC	= 0x1d5
     } 	D3D12_FILTER;
 
@@ -3371,6 +3414,13 @@ enum D3D12_FILTER_REDUCTION_TYPE
                                                                     D3D12_FILTER_TYPE_LINEAR,         \
                                                                     D3D12_FILTER_TYPE_LINEAR,         \
                                                                     reduction ) ) )                     
+#define D3D12_ENCODE_MIN_MAG_ANISOTROPIC_MIP_POINT_FILTER( reduction )                                \
+                                         ( ( D3D12_FILTER ) (                                         \
+                                         D3D12_ANISOTROPIC_FILTERING_BIT |                            \
+                                         D3D12_ENCODE_BASIC_FILTER( D3D12_FILTER_TYPE_LINEAR,         \
+                                                                    D3D12_FILTER_TYPE_LINEAR,         \
+                                                                    D3D12_FILTER_TYPE_POINT,          \
+                                                                    reduction ) ) )                     
 #define D3D12_DECODE_MIN_FILTER( D3D12Filter )                                                              \
                                  ( ( D3D12_FILTER_TYPE )                                                    \
                                  ( ( ( D3D12Filter ) >> D3D12_MIN_FILTER_SHIFT ) & D3D12_FILTER_TYPE_MASK ) ) 
@@ -3388,8 +3438,7 @@ enum D3D12_FILTER_REDUCTION_TYPE
 #define D3D12_DECODE_IS_ANISOTROPIC_FILTER( D3D12Filter )                                               \
                             ( ( ( D3D12Filter ) & D3D12_ANISOTROPIC_FILTERING_BIT ) &&                  \
                             ( D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MIN_FILTER( D3D12Filter ) ) &&   \
-                            ( D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MAG_FILTER( D3D12Filter ) ) &&   \
-                            ( D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MIP_FILTER( D3D12Filter ) ) )      
+                            ( D3D12_FILTER_TYPE_LINEAR == D3D12_DECODE_MAG_FILTER( D3D12Filter ) ) )      
 typedef 
 enum D3D12_TEXTURE_ADDRESS_MODE
     {

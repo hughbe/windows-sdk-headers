@@ -11,10 +11,10 @@ import "EventToken.idl";
 import "windowscontracts.idl";
 import "Windows.Foundation.idl";
 import "Windows.ApplicationModel.Core.idl";
+import "Windows.Graphics.Imaging.idl";
 import "Windows.Storage.Streams.idl";
 import "Windows.UI.idl";
 import "Windows.UI.StartScreen.idl";
-import "Windows.UI.WindowManagement.idl";
 
 // Forward Declare
 namespace Windows
@@ -42,6 +42,16 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace Graphics
+    {
+        namespace Imaging
+        {
+            typedef struct BitmapSize BitmapSize;
+        }
+    }
+}
+namespace Windows
+{
     namespace Storage
     {
         namespace Streams
@@ -65,16 +75,6 @@ namespace Windows
     namespace UI
     {
         typedef struct WindowId WindowId;
-    }
-}
-namespace Windows
-{
-    namespace UI
-    {
-        namespace WindowManagement
-        {
-            runtimeclass AppWindow;
-        }
     }
 }
 namespace Windows
@@ -379,7 +379,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTab)]
-            [uuid(AB8E2D12-707F-5A15-8ACD-927000812E18)]
+            [uuid(9BF935C1-EC5F-5595-8ECB-8703F5F89068)]
             interface IWindowTab : IInspectable
             {
                 [propget] HRESULT Tag([out] [retval] IInspectable** value);
@@ -388,6 +388,8 @@ namespace Windows
                 [propput] HRESULT Title([in] HSTRING value);
                 [propget] HRESULT Icon([out] [retval] Windows.UI.Shell.WindowTabIcon** value);
                 [propput] HRESULT Icon([in] Windows.UI.Shell.WindowTabIcon* value);
+                [propget] HRESULT TreatAsSecondaryTileId([out] [retval] HSTRING* value);
+                [propput] HRESULT TreatAsSecondaryTileId([in] HSTRING value);
                 [propget] HRESULT Group([out] [retval] Windows.UI.Shell.WindowTabGroup** value);
                 [propput] HRESULT Group([in] Windows.UI.Shell.WindowTabGroup* value);
                 HRESULT ReportThumbnailAvailable();
@@ -456,13 +458,12 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabManager)]
-            [uuid(BC99B38A-43C1-5B14-9592-9D01BF344B21)]
+            [uuid(49B4F9A6-EC74-5E85-A586-32BFD6FEE1C0)]
             interface IWindowTabManagerStatics : IInspectable
             {
-                HRESULT GetForCurrentView([out] [retval] Windows.UI.Shell.WindowTabManager** result);
-                HRESULT GetForAppWindow([in] Windows.UI.WindowManagement.AppWindow* appWindow, [out] [retval] Windows.UI.Shell.WindowTabManager** result);
                 HRESULT GetForWindow([in] Windows.UI.WindowId id, [out] [retval] Windows.UI.Shell.WindowTabManager** result);
                 HRESULT IsSupported([out] [retval] boolean* result);
+                HRESULT IsTabTearOutSupported([out] [retval] boolean* result);
             }
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
@@ -486,14 +487,15 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs)]
-            [uuid(567A78CE-C0AE-59B5-A95C-7A845EB99230)]
+            [uuid(2D558E54-9C4E-5ABC-AB72-3350FB4937A0)]
             interface IWindowTabThumbnailRequestedEventArgs : IInspectable
             {
                 [propget] HRESULT Tab([out] [retval] Windows.UI.Shell.WindowTab** value);
-                [propget] HRESULT RequestedSize([out] [retval] UINT32* value);
+                [propget] HRESULT RequestedSize([out] [retval] Windows.Graphics.Imaging.BitmapSize* value);
                 [propget] HRESULT Image([out] [retval] Windows.Storage.Streams.IRandomAccessStreamReference** value);
                 [propput] HRESULT Image([in] Windows.Storage.Streams.IRandomAccessStreamReference* value);
                 HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** result);
+                [propget] HRESULT IsCompositedOnWindow([out] [retval] boolean* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]

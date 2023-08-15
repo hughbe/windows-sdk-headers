@@ -6570,6 +6570,14 @@ DEFINE_PROPERTYKEY(PKEY_MsGraph_ItemId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 
 DEFINE_PROPERTYKEY(PKEY_MsGraph_RecommendationReferenceId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 5);
 #define INIT_PKEY_MsGraph_RecommendationReferenceId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 5 }
 
+//  Name:     System.MsGraph.RecommendationResultSourceId -- PKEY_MsGraph_RecommendationResultSourceId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 7
+//
+//  The recommendation result source Id.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_RecommendationResultSourceId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 7);
+#define INIT_PKEY_MsGraph_RecommendationResultSourceId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 7 }
+
 //  Name:     System.MsGraph.WebAccountId -- PKEY_MsGraph_WebAccountId
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 6

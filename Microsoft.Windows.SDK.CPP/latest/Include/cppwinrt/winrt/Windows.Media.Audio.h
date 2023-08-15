@@ -70,16 +70,16 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->remove_ConfigurationChanged(impl::bind_in(token));
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId) const
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::GetForDeviceId(param::hstring const& effectsPackId, param::hstring const& deviceId) const
     {
         void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->GetForEffectsPackOnDeviceId(*(void**)(&deviceId), *(void**)(&effectsPackId), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->GetForDeviceId(*(void**)(&effectsPackId), *(void**)(&deviceId), &result));
         return winrt::Windows::Media::Audio::AudioEffectsPackConfiguration{ result, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId) const
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::IsDeviceIdSupported(param::hstring const& effectsPackId, param::hstring const& deviceId) const
     {
         bool result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->IsEffectsPackApplicableOnEndpoint(*(void**)(&deviceId), *(void**)(&effectsPackId), &result));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->IsDeviceIdSupported(*(void**)(&effectsPackId), *(void**)(&deviceId), &result));
         return result;
     }
     template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor(double value) const
@@ -1741,18 +1741,18 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics> : produce_base<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>
     {
-        int32_t __stdcall GetForEffectsPackOnDeviceId(void* deviceId, void* effectsPackId, void** result) noexcept final try
+        int32_t __stdcall GetForDeviceId(void* effectsPackId, void* deviceId, void** result) noexcept final try
         {
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>(this->shim().GetForEffectsPackOnDeviceId(*reinterpret_cast<hstring const*>(&deviceId), *reinterpret_cast<hstring const*>(&effectsPackId)));
+            *result = detach_from<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>(this->shim().GetForDeviceId(*reinterpret_cast<hstring const*>(&effectsPackId), *reinterpret_cast<hstring const*>(&deviceId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall IsEffectsPackApplicableOnEndpoint(void* deviceId, void* effectsPackId, bool* result) noexcept final try
+        int32_t __stdcall IsDeviceIdSupported(void* effectsPackId, void* deviceId, bool* result) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *result = detach_from<bool>(this->shim().IsEffectsPackApplicableOnEndpoint(*reinterpret_cast<hstring const*>(&deviceId), *reinterpret_cast<hstring const*>(&effectsPackId)));
+            *result = detach_from<bool>(this->shim().IsDeviceIdSupported(*reinterpret_cast<hstring const*>(&effectsPackId), *reinterpret_cast<hstring const*>(&deviceId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4282,13 +4282,13 @@ WINRT_EXPORT namespace winrt::Windows::Media::Audio
         left = left ^ right;
         return left;
     }
-    inline auto AudioEffectsPackConfiguration::GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId)
+    inline auto AudioEffectsPackConfiguration::GetForDeviceId(param::hstring const& effectsPackId, param::hstring const& deviceId)
     {
-        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.GetForEffectsPackOnDeviceId(deviceId, effectsPackId); });
+        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.GetForDeviceId(effectsPackId, deviceId); });
     }
-    inline auto AudioEffectsPackConfiguration::IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId)
+    inline auto AudioEffectsPackConfiguration::IsDeviceIdSupported(param::hstring const& effectsPackId, param::hstring const& deviceId)
     {
-        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.IsEffectsPackApplicableOnEndpoint(deviceId, effectsPackId); });
+        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.IsDeviceIdSupported(effectsPackId, deviceId); });
     }
     inline auto AudioGraph::CreateAsync(winrt::Windows::Media::Audio::AudioGraphSettings const& settings)
     {

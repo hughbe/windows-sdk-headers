@@ -3534,6 +3534,15 @@ LsaCreateSecret(
     _Out_ PLSA_HANDLE SecretHandle
     );
 
+//
+// Note: This is not implemented for arm64-EC lsasrv.dll
+//
+NTSTATUS
+NTAPI
+LsaIsCredentialGuardRunning(
+    _Out_ PBOOLEAN IsCredentialGuardRunning
+    );
+
 ///////////////////////////////////////////////////////////////////////////////
 //                                                                           //
 // Local Security Policy - Account Object API function prototypes            //

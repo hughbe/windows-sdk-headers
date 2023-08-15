@@ -23,12 +23,6 @@
 #include "mmreg.h"
 
 #include <avrt.h>
-#ifndef AVRT_DATA
-#define AVRT_DATA
-#endif
-#ifndef AVRT_BSS
-#define AVRT_BSS
-#endif
 
 #if !defined(MF_VERSION)
 

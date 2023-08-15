@@ -2713,10 +2713,13 @@ typedef struct DECLSPEC_ALIGN(16) _XSAVE_AREA {
     XSAVE_AREA_HEADER Header;
 } XSAVE_AREA, *PXSAVE_AREA;
 
+#define XSTATE_CONTEXT_FLAG_LOOKASIDE    0x1
+
 typedef struct _XSTATE_CONTEXT {
     DWORD64 Mask;
     DWORD Length;
-    DWORD Reserved1;
+    BYTE  Flags;
+    BYTE  Reserved0[3];
     _Field_size_bytes_opt_(Length) PXSAVE_AREA Area;
 
 #if defined(_X86_)
@@ -11663,6 +11666,7 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-profilesRootMinimal"
 #define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32-userProfileMinimal"
 #define SE_APP_SILO_PROMPT_FOR_ACCESS_CAPABILITY L"isolatedWin32-promptForAccess"
+#define SE_APP_SILO_ACCESS_TO_PUBLISHER_DIRECTORY_CAPABILITY L"isolatedWin32-accessToPublisherDirectory"
 #define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32-print"
 
 // end_ntosifs
@@ -13613,8 +13617,9 @@ typedef struct _SERVERSILO_BASIC_INFORMATION {
 } SERVERSILO_BASIC_INFORMATION, *PSERVERSILO_BASIC_INFORMATION;
 
 typedef struct _SERVERSILO_DIAGNOSTIC_INFORMATION {
+    GUID ReportId;
     DWORD    ExitStatus;
-    BYTE  CriticalProcessName[15];
+    WCHAR CriticalProcessName[15];
 } SERVERSILO_DIAGNOSTIC_INFORMATION, *PSERVERSILO_DIAGNOSTIC_INFORMATION;
 
 //
@@ -21960,28 +21965,115 @@ memcpy_inline (
 #define RtlFillMemory(Destination,Length,Fill) memset((Destination),(Fill),(Length))
 #define RtlZeroMemory(Destination,Length) memset((Destination),0,(Length))
 
-//
-// RtlCopyDeviceMemory is guaranteed to not cause alignment faults on memory
-// types that require memory accesses to be naturally aligned. On ARM32/ARM64 this
-// function will not generate alignment faults on nGnRnE memory (device memory).
-// On AMD64/X86 it is identical to RtlCopyMemory since unaligned accesses are always
-// allowed.
-//
-// RtlCopyDeviceMemory is NOT guaranteed to do backwards copies. It is only
-// guaranteed to make forwards copies (i.e. memcpy semantics only).
-//
-// RtlCopyDeviceMemory makes no guarantees about not double fetching memory,
-// or about only using register accesses of specific sizes, etc. It is not intended
-// to be universally usable on things like MMIO ranges etc. which may trigger
-// device activity on every memory access or which may require specific register
-// width accesses.
-//
+// begin_ntosp
 
-#if defined(_M_ARM) || defined(_M_ARM64)
-#define RtlCopyDeviceMemory(Destination,Source,Length) _memcpy_strict_align((Destination),(Source),(Length))
+#if !defined(MIDL_PASS) && !defined(SORTPP_PASS) && !defined(RC_INVOKED)
+
+#ifndef _RTL_VOL_MEM_ACCESSORS_
+#define _RTL_VOL_MEM_ACCESSORS_
+
+volatile void*
+__cdecl
+RtlCopyDeviceMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_reads_bytes_(Length) volatile const void* Source,
+    _In_ size_t Length
+    );
+
+volatile void*
+__cdecl
+RtlCopyVolatileMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_reads_bytes_(Length) volatile const void* Source,
+    _In_ size_t Length
+    );
+
+volatile void*
+__cdecl
+RtlMoveVolatileMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_reads_bytes_(Length) volatile const void* Source,
+    _In_ size_t Length
+    );
+
+volatile void*
+__cdecl
+RtlSetVolatileMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ int Fill,
+    _In_ size_t Length
+    );
+
+FORCEINLINE
+volatile void*
+RtlFillVolatileMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length,
+    _In_ int Fill
+    )
+{
+    return RtlSetVolatileMemory(Destination, Fill, Length);
+}
+
+FORCEINLINE
+volatile void*
+RtlZeroVolatileMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length
+    )
+{
+    return RtlFillVolatileMemory(Destination, Length, 0);
+}
+
+FORCEINLINE
+volatile void*
+RtlSecureZeroMemory2 (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length
+    )
+{
+    return RtlZeroVolatileMemory(Destination, Length);
+}
+
+#if defined(_ARM_) || defined(_ARM64_)
+
+volatile void*
+RtlFillDeviceMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length,
+    _In_ int Fill 
+    );
+
 #else
-#define RtlCopyDeviceMemory(Destination,Source,Length) RtlCopyMemory((Destination),(Source),(Length))
+
+FORCEINLINE
+volatile void*
+RtlFillDeviceMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length,
+    _In_ int Fill 
+    )
+{
+    return RtlSetVolatileMemory(Destination, Fill, Length);
+}
+
 #endif
+
+FORCEINLINE
+volatile void*
+RtlZeroDeviceMemory (
+    _Out_writes_bytes_all_(Length) volatile void* Destination,
+    _In_ size_t Length
+    )
+{
+    return RtlFillDeviceMemory(Destination, Length, 0);
+}
+
+#endif // _RTL_VOL_MEM_ACCESSORS_
+
+#endif // !defined(MIDL_PASS) && !defined(SORTPP_PASS) && !defined(RC_INVOKED)
+
+// end_ntosp
 
 #if !defined(MIDL_PASS)
 
@@ -22027,7 +22119,21 @@ RtlConstantTimeEqualMemory(
 
 #endif
 
-#if !defined(MIDL_PASS)
+#if !defined(MIDL_PASS) && !defined(SORTPP_PASS) && !defined(RC_INVOKED)
+
+#if defined(VOLATILE_ACCESSOR_LIB)
+
+FORCEINLINE
+PVOID
+RtlSecureZeroMemory(
+    _Out_writes_bytes_all_(cnt) PVOID ptr,
+    _In_ SIZE_T cnt
+    )
+{
+    return (PVOID)RtlSecureZeroMemory2(ptr, cnt);
+}
+
+#else // defined(VOLATILE_ACCESSOR_LIB)
 
 FORCEINLINE
 PVOID
@@ -22066,6 +22172,8 @@ RtlSecureZeroMemory(
 }
 
 #endif
+
+#endif //!defined(MIDL_PASS)
 
 // begin_wdm
 

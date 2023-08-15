@@ -17,6 +17,10 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
 }
+WINRT_EXPORT namespace winrt::Windows::Graphics::Imaging
+{
+    struct BitmapSize;
+}
 WINRT_EXPORT namespace winrt::Windows::Storage::Streams
 {
     struct IRandomAccessStreamReference;
@@ -28,10 +32,6 @@ WINRT_EXPORT namespace winrt::Windows::UI
 WINRT_EXPORT namespace winrt::Windows::UI::StartScreen
 {
     struct SecondaryTile;
-}
-WINRT_EXPORT namespace winrt::Windows::UI::WindowManagement
-{
-    struct AppWindow;
 }
 WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
@@ -197,17 +197,17 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManager>{ 0x87490A19,0x1AD9,0x49F4,{ 0xB2,0xE8,0x86,0x73,0x8D,0xC5,0xAC,0x40 } }; // 87490A19-1AD9-49F4-B2E8-86738DC5AC40
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManager2>{ 0x79F0A06E,0x7B02,0x4911,{ 0x91,0x8C,0xDE,0xE0,0xBB,0xD2,0x0B,0xA4 } }; // 79F0A06E-7B02-4911-918C-DEE0BBD20BA4
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManagerStatics>{ 0xDB32AB74,0xDE52,0x4FE6,{ 0xB7,0xB6,0x95,0xFF,0x9F,0x83,0x95,0xDF } }; // DB32AB74-DE52-4FE6-B7B6-95FF9F8395DF
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTab>{ 0xAB8E2D12,0x707F,0x5A15,{ 0x8A,0xCD,0x92,0x70,0x00,0x81,0x2E,0x18 } }; // AB8E2D12-707F-5A15-8ACD-927000812E18
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTab>{ 0x9BF935C1,0xEC5F,0x5595,{ 0x8E,0xCB,0x87,0x03,0xF5,0xF8,0x90,0x68 } }; // 9BF935C1-EC5F-5595-8ECB-8703F5F89068
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabCloseRequestedEventArgs>{ 0x477282E9,0xEEC4,0x5882,{ 0x98,0x89,0x2D,0xD6,0x4D,0x0F,0x9F,0xB6 } }; // 477282E9-EEC4-5882-9889-2DD64D0F9FB6
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabCollection>{ 0xACCD0D6C,0xED07,0x519A,{ 0x8C,0x33,0x17,0xE0,0x2E,0x7E,0x9B,0x0F } }; // ACCD0D6C-ED07-519A-8C33-17E02E7E9B0F
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabGroup>{ 0x9E490279,0xD59B,0x574D,{ 0x8D,0xA2,0x42,0xAA,0x08,0x12,0xBB,0x3A } }; // 9E490279-D59B-574D-8DA2-42AA0812BB3A
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabIcon>{ 0x358FE345,0xAC8D,0x5EC4,{ 0xBC,0x73,0xC7,0xE1,0xA8,0xD9,0x6D,0xC4 } }; // 358FE345-AC8D-5EC4-BC73-C7E1A8D96DC4
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabIconStatics>{ 0xD32F391D,0xFAC3,0x51A5,{ 0xBD,0x6B,0xB5,0xCD,0x2A,0x8E,0x71,0xCF } }; // D32F391D-FAC3-51A5-BD6B-B5CD2A8E71CF
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabManager>{ 0x547BBE72,0xF443,0x58B2,{ 0xAD,0xBA,0x7B,0x48,0x06,0x98,0x0E,0x01 } }; // 547BBE72-F443-58B2-ADBA-7B4806980E01
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabManagerStatics>{ 0xBC99B38A,0x43C1,0x5B14,{ 0x95,0x92,0x9D,0x01,0xBF,0x34,0x4B,0x21 } }; // BC99B38A-43C1-5B14-9592-9D01BF344B21
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabManagerStatics>{ 0x49B4F9A6,0xEC74,0x5E85,{ 0xA5,0x86,0x32,0xBF,0xD6,0xFE,0xE1,0xC0 } }; // 49B4F9A6-EC74-5E85-A586-32BFD6FEE1C0
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabSwitchRequestedEventArgs>{ 0x7CBC421A,0x58A4,0x568B,{ 0xA3,0x51,0xF8,0xA9,0x47,0xA5,0xAA,0xD8 } }; // 7CBC421A-58A4-568B-A351-F8A947A5AAD8
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabTearOutRequestedEventArgs>{ 0x17D66659,0x5005,0x5ECE,{ 0x99,0xAF,0x56,0x63,0x06,0xE7,0x36,0x42 } }; // 17D66659-5005-5ECE-99AF-566306E73642
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>{ 0x567A78CE,0xC0AE,0x59B5,{ 0xA9,0x5C,0x7A,0x84,0x5E,0xB9,0x92,0x30 } }; // 567A78CE-C0AE-59B5-A95C-7A845EB99230
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>{ 0x2D558E54,0x9C4E,0x5ABC,{ 0xAB,0x72,0x33,0x50,0xFB,0x49,0x37,0xA0 } }; // 2D558E54-9C4E-5ABC-AB72-3350FB4937A0
     template <> struct default_interface<winrt::Windows::UI::Shell::FocusSession>{ using type = winrt::Windows::UI::Shell::IFocusSession; };
     template <> struct default_interface<winrt::Windows::UI::Shell::FocusSessionManager>{ using type = winrt::Windows::UI::Shell::IFocusSessionManager; };
     template <> struct default_interface<winrt::Windows::UI::Shell::SecurityAppManager>{ using type = winrt::Windows::UI::Shell::ISecurityAppManager; };
@@ -342,6 +342,8 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Title(void*) noexcept = 0;
             virtual int32_t __stdcall get_Icon(void**) noexcept = 0;
             virtual int32_t __stdcall put_Icon(void*) noexcept = 0;
+            virtual int32_t __stdcall get_TreatAsSecondaryTileId(void**) noexcept = 0;
+            virtual int32_t __stdcall put_TreatAsSecondaryTileId(void*) noexcept = 0;
             virtual int32_t __stdcall get_Group(void**) noexcept = 0;
             virtual int32_t __stdcall put_Group(void*) noexcept = 0;
             virtual int32_t __stdcall ReportThumbnailAvailable() noexcept = 0;
@@ -406,10 +408,9 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall GetForCurrentView(void**) noexcept = 0;
-            virtual int32_t __stdcall GetForAppWindow(void*, void**) noexcept = 0;
             virtual int32_t __stdcall GetForWindow(struct struct_Windows_UI_WindowId, void**) noexcept = 0;
             virtual int32_t __stdcall IsSupported(bool*) noexcept = 0;
+            virtual int32_t __stdcall IsTabTearOutSupported(bool*) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::UI::Shell::IWindowTabSwitchRequestedEventArgs>
@@ -434,10 +435,11 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_Tab(void**) noexcept = 0;
-            virtual int32_t __stdcall get_RequestedSize(uint32_t*) noexcept = 0;
+            virtual int32_t __stdcall get_RequestedSize(struct struct_Windows_Graphics_Imaging_BitmapSize*) noexcept = 0;
             virtual int32_t __stdcall get_Image(void**) noexcept = 0;
             virtual int32_t __stdcall put_Image(void*) noexcept = 0;
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
+            virtual int32_t __stdcall get_IsCompositedOnWindow(bool*) noexcept = 0;
         };
     };
     template <typename D>
@@ -588,6 +590,8 @@ namespace winrt::impl
         auto Title(param::hstring const& value) const;
         [[nodiscard]] auto Icon() const;
         auto Icon(winrt::Windows::UI::Shell::WindowTabIcon const& value) const;
+        [[nodiscard]] auto TreatAsSecondaryTileId() const;
+        auto TreatAsSecondaryTileId(param::hstring const& value) const;
         [[nodiscard]] auto Group() const;
         auto Group(winrt::Windows::UI::Shell::WindowTabGroup const& value) const;
         auto ReportThumbnailAvailable() const;
@@ -674,10 +678,9 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_UI_Shell_IWindowTabManagerStatics
     {
-        auto GetForCurrentView() const;
-        auto GetForAppWindow(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow) const;
         auto GetForWindow(winrt::Windows::UI::WindowId const& id) const;
         auto IsSupported() const;
+        auto IsTabTearOutSupported() const;
     };
     template <> struct consume<winrt::Windows::UI::Shell::IWindowTabManagerStatics>
     {
@@ -712,6 +715,7 @@ namespace winrt::impl
         [[nodiscard]] auto Image() const;
         auto Image(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
         auto GetDeferral() const;
+        [[nodiscard]] auto IsCompositedOnWindow() const;
     };
     template <> struct consume<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>
     {

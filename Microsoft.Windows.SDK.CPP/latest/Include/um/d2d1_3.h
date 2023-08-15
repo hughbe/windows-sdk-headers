@@ -1860,7 +1860,7 @@ interface DX_DECLARE_INTERFACE("f07c8968-dd4e-4ba6-9cbd-eb6d3752dcbb") ID2D1Devi
 
 /// <summary>
 /// Creates Direct2D resources. This interface also enables the creation of
-/// ID2D1Device6 objects.
+/// ID2D1Device7 objects.
 /// </summary>
 interface DX_DECLARE_INTERFACE("677c9311-f36d-4b1f-ae86-86d1223ffd3a") ID2D1Factory8  : public ID2D1Factory7
 {

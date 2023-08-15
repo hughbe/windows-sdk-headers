@@ -57,18 +57,12 @@ DEFINE_GUID(GUID_DEVINTERFACE_MONITOR, 0xe6f07b5f, 0xee97, 0x4a90, 0xb0, 0x76, 0
 #define GUID_DISPLAY_ADAPTER_INTERFACE  GUID_DEVINTERFACE_DISPLAY_ADAPTER
 
 //
-// Interface used by anyone listening for arrival of the display device
+// Interface used by anyone listening for arrival of the graphics devices
+// This includes Display only, Full graphics adapters, etc., but excludes MCDM (Compute only devices).
 // {1CA05180-A699-450A-9A0C-DE4FBE3DDD89}
 //
 
 DEFINE_GUID(GUID_DISPLAY_DEVICE_ARRIVAL, 0x1CA05180, 0xA699, 0x450A, 0x9A, 0x0C, 0xDE, 0x4F, 0xBE, 0x3D, 0xDD, 0x89);
-
-//
-// Interface used by anyone listening for arrival of the compute accelerator device (MCDM)
-// {A6ECCFB8-3CDA-4428-AE6D-52E782A7DDFC}
-//
-
-DEFINE_GUID(GUID_COMPUTE_ACCELERATOR_ARRIVAL, 0xa6eccfb8, 0x3cda, 0x4428, 0xae, 0x6d, 0x52, 0xe7, 0x82, 0xa7, 0xdd, 0xfc);
 
 //
 // Interface used by anyone listening for arrival of display children

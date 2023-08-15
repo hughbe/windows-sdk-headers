@@ -8,7 +8,7 @@ Module Name:
 
 Abstract:
 
-   Public Definitions of HID USAGES for HID Usage Tables 1.3
+   Public Definitions of HID USAGES for HID Usage Tables 1.4
 
 Environment:
 
@@ -60,6 +60,7 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_PAGE_WEIGHING_DEVICE                  ((USAGE) 0x008D)
 #define HID_USAGE_PAGE_SENSOR                           ((USAGE) 0x0020)
 #define HID_USAGE_PAGE_SIMULATION                       ((USAGE) 0x0002)
+#define HID_USAGE_PAGE_SOC                              ((USAGE) 0x0011)
 #define HID_USAGE_PAGE_SPORT                            ((USAGE) 0x0004)
 #define HID_USAGE_PAGE_TELEPHONY                        ((USAGE) 0x000B)
 #define HID_USAGE_PAGE_UNICODE                          ((USAGE) 0x0010)
@@ -1094,6 +1095,7 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_DIGITIZER_SWITCH_DISABLED                                   ((USAGE) 0x00A3)
 #define HID_USAGE_DIGITIZER_SWITCH_UNIMPLEMENTED                              ((USAGE) 0x00A4)
 #define HID_USAGE_DIGITIZER_TRANSDUCER_SWITCHES                               ((USAGE) 0x00A5)
+#define HID_USAGE_DIGITIZER_TRANSDUCER_INDEX_SELECTOR                         ((USAGE) 0x00A6)
 #define HID_USAGE_DIGITIZER_BUTTON_PRESS_THRESHOLD                            ((USAGE) 0x00B0)
 
 //
@@ -1266,6 +1268,7 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_GENERIC_SYSCTL_APP_DBG_BREAK                          ((USAGE) 0x00A6)
 #define HID_USAGE_GENERIC_SYSCTL_MUTE                                   ((USAGE) 0x00A7)
 #define HID_USAGE_GENERIC_SYSCTL_HIBERNATE                              ((USAGE) 0x00A8)
+#define HID_USAGE_GENERIC_SYSCTL_MICROPHONE_MUTE                        ((USAGE) 0x00A9)
 #define HID_USAGE_GENERIC_SYSCTL_DISP_INVERT                            ((USAGE) 0x00B0)
 #define HID_USAGE_GENERIC_SYSCTL_DISP_INTERNAL                          ((USAGE) 0x00B1)
 #define HID_USAGE_GENERIC_SYSCTL_DISP_EXTERNAL                          ((USAGE) 0x00B2)
@@ -2755,6 +2758,20 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_SIMULATION_HANDLE_BARS                       ((USAGE) 0x00CE)
 #define HID_USAGE_SIMULATION_FRONT_BRAKE                       ((USAGE) 0x00CF)
 #define HID_USAGE_SIMULATION_REAR_BRAKE                        ((USAGE) 0x00D0)
+
+//
+// SoC (System on Chip) Page (0x11)
+//
+#define HID_USAGE_SOC_SOC_CONTROL                               ((USAGE) 0x0001)
+#define HID_USAGE_SOC_FIRMWARE_TRANSFER                         ((USAGE) 0x0002)
+#define HID_USAGE_SOC_FIRMWARE_FILE_ID                          ((USAGE) 0x0003)
+#define HID_USAGE_SOC_FILE_OFFSET_IN_BYTES                      ((USAGE) 0x0004)
+#define HID_USAGE_SOC_FILE_TRANSFER_SIZE_MAX_IN_BYTES           ((USAGE) 0x0005)
+#define HID_USAGE_SOC_FILE_PAYLOAD                              ((USAGE) 0x0006)
+#define HID_USAGE_SOC_FILE_PAYLOAD_SIZE_IN_BYTES                ((USAGE) 0x0007)
+#define HID_USAGE_SOC_FILE_PAYLOAD_CONTAINS_LAST_BYTES          ((USAGE) 0x0008)
+#define HID_USAGE_SOC_FILE_TRANSFER_STOP                        ((USAGE) 0x0009)
+#define HID_USAGE_SOC_FILE_TRANSFER_TILL_END                    ((USAGE) 0x000A)
 
 //
 // Sport Controls Page (0x04)

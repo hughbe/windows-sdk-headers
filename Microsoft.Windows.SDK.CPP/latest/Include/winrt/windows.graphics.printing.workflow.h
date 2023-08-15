@@ -1403,7 +1403,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("20a28393-f8be-571c-bf37-aed6360625ed"))
+struct __declspec(uuid("241e075c-dab5-5dd5-9f31-713910aa28fa"))
 ITypedEventHandler<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession*, ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowJobBackgroundSession*, ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Graphics::Printing::Workflow::PrintWorkflowJobIssueDetectedEventArgs*, ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -2694,7 +2694,7 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 namespace Workflow {
-                    MIDL_INTERFACE("55e6c2f1-86a0-526a-af72-a92108b39ee3")
+                    MIDL_INTERFACE("de58a46e-e41e-550a-a9fb-4b1f93fb9d98")
                     IPrintWorkflowJobIssueDetectedEventArgs : public IInspectable
                     {
                     public:
@@ -2704,7 +2704,12 @@ namespace ABI {
                         virtual HRESULT STDMETHODCALLTYPE get_ExtendedError(
                             HRESULT* value
                             ) = 0;
-                        virtual HRESULT STDMETHODCALLTYPE JobIssueHandled(void) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE get_SkipSystemErrorToast(
+                            boolean* value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE put_SkipSystemErrorToast(
+                            boolean value
+                            ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE get_PrinterJob(
                             ABI::Windows::Graphics::Printing::Workflow::IPrintWorkflowPrinterJob** value
                             ) = 0;
@@ -2837,7 +2842,7 @@ namespace ABI {
         namespace Graphics {
             namespace Printing {
                 namespace Workflow {
-                    MIDL_INTERFACE("58975f3c-7ca7-59bd-9826-c8b9b2dee052")
+                    MIDL_INTERFACE("7deded67-d3dc-5b23-8690-4ebfc0f0914a")
                     IPrintWorkflowJobStartingEventArgs2 : public IInspectable
                     {
                     public:
@@ -2845,6 +2850,12 @@ namespace ABI {
                             boolean* value
                             ) = 0;
                         virtual HRESULT STDMETHODCALLTYPE DisableIppCompressionForJob(void) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE get_SkipSystemFaxUI(
+                            boolean* value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE put_SkipSystemFaxUI(
+                            boolean value
+                            ) = 0;
                     };
 
                     MIDL_CONST_ID IID& IID_IPrintWorkflowJobStartingEventArgs2 = __uuidof(IPrintWorkflowJobStartingEventArgs2);
@@ -7096,7 +7107,10 @@ typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJob
         enum __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CPrintWorkflowJobIssueKind* value);
     HRESULT (STDMETHODCALLTYPE* get_ExtendedError)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This,
         HRESULT* value);
-    HRESULT (STDMETHODCALLTYPE* JobIssueHandled)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* get_SkipSystemErrorToast)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* put_SkipSystemErrorToast)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This,
+        boolean value);
     HRESULT (STDMETHODCALLTYPE* get_PrinterJob)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This,
         __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowPrinterJob** value);
     HRESULT (STDMETHODCALLTYPE* get_Configuration)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs* This,
@@ -7140,8 +7154,11 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssue
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs_get_ExtendedError(This, value) \
     ((This)->lpVtbl->get_ExtendedError(This, value))
 
-#define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs_JobIssueHandled(This) \
-    ((This)->lpVtbl->JobIssueHandled(This))
+#define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs_get_SkipSystemErrorToast(This, value) \
+    ((This)->lpVtbl->get_SkipSystemErrorToast(This, value))
+
+#define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs_put_SkipSystemErrorToast(This, value) \
+    ((This)->lpVtbl->put_SkipSystemErrorToast(This, value))
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobIssueDetectedEventArgs_get_PrinterJob(This, value) \
     ((This)->lpVtbl->get_PrinterJob(This, value))
@@ -7355,6 +7372,10 @@ typedef struct __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJob
     HRESULT (STDMETHODCALLTYPE* get_IsIppCompressionEnabled)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2* This,
         boolean* value);
     HRESULT (STDMETHODCALLTYPE* DisableIppCompressionForJob)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2* This);
+    HRESULT (STDMETHODCALLTYPE* get_SkipSystemFaxUI)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* put_SkipSystemFaxUI)(__x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2* This,
+        boolean value);
 
     END_INTERFACE
 } __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2Vtbl;
@@ -7389,6 +7410,12 @@ interface __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStart
 
 #define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2_DisableIppCompressionForJob(This) \
     ((This)->lpVtbl->DisableIppCompressionForJob(This))
+
+#define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2_get_SkipSystemFaxUI(This, value) \
+    ((This)->lpVtbl->get_SkipSystemFaxUI(This, value))
+
+#define __x_ABI_CWindows_CGraphics_CPrinting_CWorkflow_CIPrintWorkflowJobStartingEventArgs2_put_SkipSystemFaxUI(This, value) \
+    ((This)->lpVtbl->put_SkipSystemFaxUI(This, value))
 
 #endif /* COBJMACROS */
 

@@ -3550,8 +3550,14 @@
 #define ERROR_CANT_ATTACH_TO_DEV_VOLUME  478L
 
 //
-// **** Available SYSTEM error codes ****
+// MessageId: ERROR_INVALID_CONFIG_VALUE
 //
+// MessageText:
+//
+// The configured value is not valid.
+//
+#define ERROR_INVALID_CONFIG_VALUE       479L
+
 //
 // MessageId: ERROR_PNP_QUERY_REMOVE_DEVICE_TIMEOUT
 //
@@ -14448,7 +14454,7 @@
 //
 // MessageText:
 //
-// System Integrity detected that policy rollback has been attempted.
+// Application Control detected that policy rollback has been attempted.
 //
 #define ERROR_SYSTEM_INTEGRITY_ROLLBACK_DETECTED 4550L
 
@@ -14457,7 +14463,7 @@
 //
 // MessageText:
 //
-// Your organization used Device Guard to block this app. Contact your support person for more info.
+// An Application Control policy has blocked this file.
 //
 #define ERROR_SYSTEM_INTEGRITY_POLICY_VIOLATION 4551L
 
@@ -14466,7 +14472,7 @@
 //
 // MessageText:
 //
-// The System Integrity policy is invalid.
+// The Application Control policy is invalid.
 //
 #define ERROR_SYSTEM_INTEGRITY_INVALID_POLICY 4552L
 
@@ -14475,7 +14481,7 @@
 //
 // MessageText:
 //
-// The System Integrity policy is either not signed or is signed by a non-trusted signer.
+// The Application Control policy is either not signed or is signed by a non-trusted signer.
 //
 #define ERROR_SYSTEM_INTEGRITY_POLICY_NOT_SIGNED 4553L
 
@@ -14484,7 +14490,7 @@
 //
 // MessageText:
 //
-// The number of System Integrity policies is out of limit.
+// The number of Application Control policies is out of limit.
 //
 #define ERROR_SYSTEM_INTEGRITY_TOO_MANY_POLICIES 4554L
 
@@ -14493,7 +14499,7 @@
 //
 // MessageText:
 //
-// The Code Integrity supplemental policy is not authorized by a Code Integrity base policy.
+// The Application Control supplemental policy is not authorized by an Application Control base policy.
 //
 #define ERROR_SYSTEM_INTEGRITY_SUPPLEMENTAL_POLICY_NOT_AUTHORIZED 4555L
 
@@ -14502,7 +14508,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Malicious binary reputation.
+// An Application Control policy has blocked this file.  Malicious binary reputation.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_MALICIOUS 4556L
 
@@ -14511,7 +14517,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Potentially unwanted application.
+// An Application Control policy has blocked this file.  Potentially unwanted application.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_PUA 4557L
 
@@ -14520,7 +14526,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Dangerous file extension from the web.
+// An Application Control policy has blocked this file.  Dangerous file extension from the web.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_DANGEROUS_EXT 4558L
 
@@ -14529,7 +14535,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Unable to contact reputation service for unknown file.
+// An Application Control policy has blocked this file.  Unable to contact reputation service for unknown file.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_OFFLINE 4559L
 
@@ -14641,7 +14647,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Unfriendly file.
+// An Application Control policy has blocked this file.  Unfriendly file.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_UNFRIENDLY_FILE 4580L
 
@@ -14650,7 +14656,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
+// An Application Control policy has blocked this file.  Failed to obtain file reputation because an infrastructure issue occurred. Try again later.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE 4581L
 
@@ -14659,7 +14665,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  Explicit denied file.
+// An Application Control policy has blocked this file.  Explicit denied file.
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE 4582L
 
@@ -14668,7 +14674,7 @@
 //
 // MessageText:
 //
-// System Integrity policy has been violated.  File did not pass WHQL-only requirements.
+// An Application Control policy has blocked this file.  File did not pass WHQL-only requirements.
 //
 #define ERROR_SYSTEM_INTEGRITY_WHQL_NOT_SATISFIED 4583L
 
@@ -42401,6 +42407,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // Mobile Device Management (MDM) is not configured.
 //
 #define MENROLL_E_MDM_NOT_CONFIGURED     _HRESULT_TYPEDEF_(0x80180031L)
+
+//
+// MessageId: MENROLL_E_CUSTOMSERVERERROR
+//
+// MessageText:
+//
+// The server responded with a custom error string, see DeviceManagement-Enterprise-Diagnostics for details.
+//
+#define MENROLL_E_CUSTOMSERVERERROR      _HRESULT_TYPEDEF_(0x80180032L)
 
 //
 // FACILITY_WER

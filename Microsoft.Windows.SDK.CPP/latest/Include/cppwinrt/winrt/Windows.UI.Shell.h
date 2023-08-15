@@ -13,10 +13,10 @@ static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatche
 #include "winrt/impl/Windows.ApplicationModel.Core.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Collections.2.h"
+#include "winrt/impl/Windows.Graphics.Imaging.2.h"
 #include "winrt/impl/Windows.Storage.Streams.2.h"
 #include "winrt/impl/Windows.UI.2.h"
 #include "winrt/impl/Windows.UI.StartScreen.2.h"
-#include "winrt/impl/Windows.UI.WindowManagement.2.h"
 #include "winrt/impl/Windows.UI.Shell.2.h"
 namespace winrt::impl
 {
@@ -262,6 +262,16 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->put_Icon(*(void**)(&value)));
     }
+    template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::TreatAsSecondaryTileId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->get_TreatAsSecondaryTileId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::TreatAsSecondaryTileId(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->put_TreatAsSecondaryTileId(*(void**)(&value)));
+    }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::Group() const
     {
         void* value{};
@@ -390,18 +400,6 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabManager)->remove_TabThumbnailRequested(impl::bind_in(token));
     }
-    template <typename D> auto consume_Windows_UI_Shell_IWindowTabManagerStatics<D>::GetForCurrentView() const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabManagerStatics)->GetForCurrentView(&result));
-        return winrt::Windows::UI::Shell::WindowTabManager{ result, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_Windows_UI_Shell_IWindowTabManagerStatics<D>::GetForAppWindow(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow) const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabManagerStatics)->GetForAppWindow(*(void**)(&appWindow), &result));
-        return winrt::Windows::UI::Shell::WindowTabManager{ result, take_ownership_from_abi };
-    }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTabManagerStatics<D>::GetForWindow(winrt::Windows::UI::WindowId const& id) const
     {
         void* result{};
@@ -412,6 +410,12 @@ namespace winrt::impl
     {
         bool result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabManagerStatics)->IsSupported(&result));
+        return result;
+    }
+    template <typename D> auto consume_Windows_UI_Shell_IWindowTabManagerStatics<D>::IsTabTearOutSupported() const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabManagerStatics)->IsTabTearOutSupported(&result));
         return result;
     }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTabSwitchRequestedEventArgs<D>::Tab() const
@@ -450,8 +454,8 @@ namespace winrt::impl
     }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTabThumbnailRequestedEventArgs<D>::RequestedSize() const
     {
-        uint32_t value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->get_RequestedSize(&value));
+        winrt::Windows::Graphics::Imaging::BitmapSize value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->get_RequestedSize(put_abi(value)));
         return value;
     }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTabThumbnailRequestedEventArgs<D>::Image() const
@@ -469,6 +473,12 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_UI_Shell_IWindowTabThumbnailRequestedEventArgs<D>::IsCompositedOnWindow() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->get_IsCompositedOnWindow(&value));
+        return value;
     }
     template <typename D>
     struct produce<D, winrt::Windows::UI::Shell::IAdaptiveCard> : produce_base<D, winrt::Windows::UI::Shell::IAdaptiveCard>
@@ -863,6 +873,21 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall get_TreatAsSecondaryTileId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().TreatAsSecondaryTileId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_TreatAsSecondaryTileId(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().TreatAsSecondaryTileId(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
         int32_t __stdcall get_Group(void** value) noexcept final try
         {
             clear_abi(value);
@@ -1067,22 +1092,6 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::UI::Shell::IWindowTabManagerStatics> : produce_base<D, winrt::Windows::UI::Shell::IWindowTabManagerStatics>
     {
-        int32_t __stdcall GetForCurrentView(void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::UI::Shell::WindowTabManager>(this->shim().GetForCurrentView());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall GetForAppWindow(void* appWindow, void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::UI::Shell::WindowTabManager>(this->shim().GetForAppWindow(*reinterpret_cast<winrt::Windows::UI::WindowManagement::AppWindow const*>(&appWindow)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
         int32_t __stdcall GetForWindow(struct struct_Windows_UI_WindowId id, void** result) noexcept final try
         {
             clear_abi(result);
@@ -1095,6 +1104,13 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *result = detach_from<bool>(this->shim().IsSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsTabTearOutSupported(bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsTabTearOutSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1162,10 +1178,11 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_RequestedSize(uint32_t* value) noexcept final try
+        int32_t __stdcall get_RequestedSize(struct struct_Windows_Graphics_Imaging_BitmapSize* value) noexcept final try
         {
+            zero_abi<winrt::Windows::Graphics::Imaging::BitmapSize>(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<uint32_t>(this->shim().RequestedSize());
+            *value = detach_from<winrt::Windows::Graphics::Imaging::BitmapSize>(this->shim().RequestedSize());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1189,6 +1206,13 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_IsCompositedOnWindow(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsCompositedOnWindow());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -1241,14 +1265,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
     {
         return impl::call_factory<WindowTabIcon, IWindowTabIconStatics>([&](IWindowTabIconStatics const& f) { return f.CreateFromImage(image); });
     }
-    inline auto WindowTabManager::GetForCurrentView()
-    {
-        return impl::call_factory_cast<winrt::Windows::UI::Shell::WindowTabManager(*)(IWindowTabManagerStatics const&), WindowTabManager, IWindowTabManagerStatics>([](IWindowTabManagerStatics const& f) { return f.GetForCurrentView(); });
-    }
-    inline auto WindowTabManager::GetForAppWindow(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow)
-    {
-        return impl::call_factory<WindowTabManager, IWindowTabManagerStatics>([&](IWindowTabManagerStatics const& f) { return f.GetForAppWindow(appWindow); });
-    }
     inline auto WindowTabManager::GetForWindow(winrt::Windows::UI::WindowId const& id)
     {
         return impl::call_factory<WindowTabManager, IWindowTabManagerStatics>([&](IWindowTabManagerStatics const& f) { return f.GetForWindow(id); });
@@ -1256,6 +1272,10 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
     inline auto WindowTabManager::IsSupported()
     {
         return impl::call_factory_cast<bool(*)(IWindowTabManagerStatics const&), WindowTabManager, IWindowTabManagerStatics>([](IWindowTabManagerStatics const& f) { return f.IsSupported(); });
+    }
+    inline auto WindowTabManager::IsTabTearOutSupported()
+    {
+        return impl::call_factory_cast<bool(*)(IWindowTabManagerStatics const&), WindowTabManager, IWindowTabManagerStatics>([](IWindowTabManagerStatics const& f) { return f.IsTabTearOutSupported(); });
     }
 }
 namespace std

@@ -700,7 +700,7 @@ TeInstrumentation equ 016B8H
 TeGdiBatchCount equ 01740H
 TeGuaranteedStackBytes equ 01748H
 TeFlsData equ 017C8H
-ThreadEnvironmentBlockLength equ 01858H
+ThreadEnvironmentBlockLength equ 01860H
 CmThreadEnvironmentBlockOffset equ 02000H
 TLS_MINIMUM_AVAILABLE equ 00040H
 TLS_EXPANSION_SLOTS equ 00400H
@@ -905,7 +905,7 @@ PcRspBase equ 001A8H
 PcRspBaseShadow equ 0A008H
 PcShadowFlags equ 0A018H
 PcVerwSelector equ 0A02AH
-PcIsrStackNesting equ 09910H
+PcIsrStackNesting equ 09950H
 PcPrcbLock equ 001B0H
 PcCr0 equ 00280H
 PcCr2 equ 00288H

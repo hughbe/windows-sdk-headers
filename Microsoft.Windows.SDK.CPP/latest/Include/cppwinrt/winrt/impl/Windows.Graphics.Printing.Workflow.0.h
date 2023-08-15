@@ -334,10 +334,10 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobActivatedEventArgs>{ 0xD4BD5E6D,0x034E,0x5E00,{ 0xA6,0x16,0xF9,0x61,0xA0,0x33,0xDC,0xC8 } }; // D4BD5E6D-034E-5E00-A616-F961A033DCC8
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession>{ 0xC5EC6AD8,0x20C9,0x5D51,{ 0x85,0x07,0x27,0x34,0xB4,0x6F,0x96,0xC5 } }; // C5EC6AD8-20C9-5D51-8507-2734B46F96C5
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobBackgroundSession2>{ 0x592AADAF,0xEF26,0x5A55,{ 0xAD,0x21,0x5F,0x63,0xFF,0xCF,0x83,0x66 } }; // 592AADAF-EF26-5A55-AD21-5F63FFCF8366
-    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>{ 0x55E6C2F1,0x86A0,0x526A,{ 0xAF,0x72,0xA9,0x21,0x08,0xB3,0x9E,0xE3 } }; // 55E6C2F1-86A0-526A-AF72-A92108B39EE3
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobIssueDetectedEventArgs>{ 0xDE58A46E,0xE41E,0x550A,{ 0xA9,0xFB,0x4B,0x1F,0x93,0xFB,0x9D,0x98 } }; // DE58A46E-E41E-550A-A9FB-4B1F93FB9D98
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobNotificationEventArgs>{ 0x0AE16FBA,0x5398,0x5EBA,{ 0xB4,0x72,0x97,0x86,0x50,0x18,0x6A,0x9A } }; // 0AE16FBA-5398-5EBA-B472-978650186A9A
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs>{ 0xE3D99BA8,0x31AD,0x5E09,{ 0xB0,0xD7,0x60,0x1B,0x97,0xF1,0x61,0xAD } }; // E3D99BA8-31AD-5E09-B0D7-601B97F161AD
-    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>{ 0x58975F3C,0x7CA7,0x59BD,{ 0x98,0x26,0xC8,0xB9,0xB2,0xDE,0xE0,0x52 } }; // 58975F3C-7CA7-59BD-9826-C8B9B2DEE052
+    template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>{ 0x7DEDED67,0xD3DC,0x5B23,{ 0x86,0x90,0x4E,0xBF,0xC0,0xF0,0x91,0x4A } }; // 7DEDED67-D3DC-5B23-8690-4EBFC0F0914A
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails>{ 0xFF296129,0x60E2,0x51DB,{ 0xBA,0x8C,0xE2,0xCC,0xDD,0xB5,0x16,0xB9 } }; // FF296129-60E2-51DB-BA8C-E2CCDDB516B9
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobUISession>{ 0x00C8736B,0x7637,0x5687,{ 0xA3,0x02,0x0F,0x66,0x4D,0x2A,0xAC,0x65 } }; // 00C8736B-7637-5687-A302-0F664D2AAC65
     template <> inline constexpr guid guid_v<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowObjectModelSourceFileContent>{ 0xC36C8A6A,0x8A2A,0x419A,{ 0xB3,0xC3,0x20,0x90,0xE6,0xBF,0xAB,0x2F } }; // C36C8A6A-8A2A-419A-B3C3-2090E6BFAB2F
@@ -483,7 +483,8 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_JobIssueKind(int32_t*) noexcept = 0;
             virtual int32_t __stdcall get_ExtendedError(winrt::hresult*) noexcept = 0;
-            virtual int32_t __stdcall JobIssueHandled() noexcept = 0;
+            virtual int32_t __stdcall get_SkipSystemErrorToast(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_SkipSystemErrorToast(bool) noexcept = 0;
             virtual int32_t __stdcall get_PrinterJob(void**) noexcept = 0;
             virtual int32_t __stdcall get_Configuration(void**) noexcept = 0;
             virtual int32_t __stdcall get_UILauncher(void**) noexcept = 0;
@@ -515,6 +516,8 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_IsIppCompressionEnabled(bool*) noexcept = 0;
             virtual int32_t __stdcall DisableIppCompressionForJob() noexcept = 0;
+            virtual int32_t __stdcall get_SkipSystemFaxUI(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_SkipSystemFaxUI(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobTriggerDetails>
@@ -835,7 +838,8 @@ namespace winrt::impl
     {
         [[nodiscard]] auto JobIssueKind() const;
         [[nodiscard]] auto ExtendedError() const;
-        auto JobIssueHandled() const;
+        [[nodiscard]] auto SkipSystemErrorToast() const;
+        auto SkipSystemErrorToast(bool value) const;
         [[nodiscard]] auto PrinterJob() const;
         [[nodiscard]] auto Configuration() const;
         [[nodiscard]] auto UILauncher() const;
@@ -873,6 +877,8 @@ namespace winrt::impl
     {
         [[nodiscard]] auto IsIppCompressionEnabled() const;
         auto DisableIppCompressionForJob() const;
+        [[nodiscard]] auto SkipSystemFaxUI() const;
+        auto SkipSystemFaxUI(bool value) const;
     };
     template <> struct consume<winrt::Windows::Graphics::Printing::Workflow::IPrintWorkflowJobStartingEventArgs2>
     {

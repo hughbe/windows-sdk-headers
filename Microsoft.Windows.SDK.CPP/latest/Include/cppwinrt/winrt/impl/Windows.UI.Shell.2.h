@@ -10,7 +10,6 @@
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.UI.1.h"
-#include "winrt/impl/Windows.UI.WindowManagement.1.h"
 #include "winrt/impl/Windows.UI.Shell.1.h"
 WINRT_EXPORT namespace winrt::Windows::UI::Shell
 {
@@ -90,10 +89,9 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
     {
         WindowTabManager(std::nullptr_t) noexcept {}
         WindowTabManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IWindowTabManager(ptr, take_ownership_from_abi) {}
-        static auto GetForCurrentView();
-        static auto GetForAppWindow(winrt::Windows::UI::WindowManagement::AppWindow const& appWindow);
         static auto GetForWindow(winrt::Windows::UI::WindowId const& id);
         static auto IsSupported();
+        static auto IsTabTearOutSupported();
     };
     struct __declspec(empty_bases) WindowTabSwitchRequestedEventArgs : winrt::Windows::UI::Shell::IWindowTabSwitchRequestedEventArgs
     {

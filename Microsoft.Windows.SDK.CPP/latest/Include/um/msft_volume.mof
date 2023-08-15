@@ -117,6 +117,12 @@ class MSFT_Volume : MSFT_StorageObject {
     ]
     UInt32 DedupMode;
 
+    [Description ("Indicates the ReFS deduplication mode of the volume."),
+        ValueMap {"0", "1", "2", "3", "4"},
+        Values { "Disabled", "Dedup", "DedupAndCompress", "Compress", "NotAvailable" }
+    ]
+    UInt32 ReFSDedupMode;
+
     [Read, Description ("The allocation unit size of the volume."),
         Units("Bytes")]
     UInt32 AllocationUnitSize;

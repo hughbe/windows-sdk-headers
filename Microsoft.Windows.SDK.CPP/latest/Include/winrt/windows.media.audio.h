@@ -2107,7 +2107,7 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 #ifndef DEF___FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_USE
 #define DEF___FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_USE
@@ -2132,7 +2132,7 @@ typedef ITypedEventHandler<ABI::Windows::Media::Audio::AudioEffectsPackConfigura
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_USE */
 
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 namespace ABI {
     namespace Windows {
@@ -3090,25 +3090,25 @@ namespace ABI {
  *
  * Struct Windows.Media.Audio.AudioEffectsPackStatus
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Audio {
                 enum AudioEffectsPackStatus : int
                 {
-                    AudioEffectsPackStatus_AudioEffectsPackNotEnabled = 0,
-                    AudioEffectsPackStatus_AudioEffectsPackEnabled = 1,
-                    AudioEffectsPackStatus_AudioEffectsPackNotSupported = 2,
+                    AudioEffectsPackStatus_NotEnabled = 0,
+                    AudioEffectsPackStatus_Enabled = 1,
+                    AudioEffectsPackStatus_NotSupported = 2,
                 };
             } /* Audio */
         } /* Media */
     } /* Windows */
 } /* ABI */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -3512,12 +3512,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode;
  *
  * Interface Windows.Media.Audio.IAudioEffectsPackConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * Interface is a part of the implementation of type Windows.Media.Audio.AudioEffectsPackConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #if !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Audio_IAudioEffectsPackConfiguration[] = L"Windows.Media.Audio.IAudioEffectsPackConfiguration";
@@ -3555,18 +3555,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
  * Interface Windows.Media.Audio.IAudioEffectsPackConfigurationStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * Interface is a part of the implementation of type Windows.Media.Audio.AudioEffectsPackConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #if !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics[] = L"Windows.Media.Audio.IAudioEffectsPackConfigurationStatics";
@@ -3574,18 +3574,18 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Audio {
-                MIDL_INTERFACE("c7959b41-6c34-57ff-9fa9-b18dd08366dd")
+                MIDL_INTERFACE("61c20413-530c-55ff-ba2b-8e68a9b56a04")
                 IAudioEffectsPackConfigurationStatics : public IInspectable
                 {
                 public:
-                    virtual HRESULT STDMETHODCALLTYPE GetForEffectsPackOnDeviceId(
-                        HSTRING deviceId,
+                    virtual HRESULT STDMETHODCALLTYPE GetForDeviceId(
                         HSTRING effectsPackId,
+                        HSTRING deviceId,
                         ABI::Windows::Media::Audio::IAudioEffectsPackConfiguration** result
                         ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE IsEffectsPackApplicableOnEndpoint(
-                        HSTRING deviceId,
+                    virtual HRESULT STDMETHODCALLTYPE IsDeviceIdSupported(
                         HSTRING effectsPackId,
+                        HSTRING deviceId,
                         boolean* result
                         ) = 0;
                 };
@@ -3598,7 +3598,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -6699,10 +6699,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.Audio.AudioEffectsPackConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.Audio.IAudioEffectsPackConfigurationStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.Audio.IAudioEffectsPackConfigurationStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.Audio.IAudioEffectsPackConfiguration ** Default Interface **
@@ -6712,12 +6712,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #ifndef RUNTIMECLASS_Windows_Media_Audio_AudioEffectsPackConfiguration_DEFINED
 #define RUNTIMECLASS_Windows_Media_Audio_AudioEffectsPackConfiguration_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Audio_AudioEffectsPackConfiguration[] = L"Windows.Media.Audio.AudioEffectsPackConfiguration";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -10054,7 +10054,7 @@ interface __FIReference_1_Windows__CFoundation__CTimeSpan
 #endif // ____FIReference_1_Windows__CFoundation__CTimeSpan_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION >= 0x10000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #if !defined(____FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_INTERFACE_DEFINED__)
 #define ____FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_INTERFACE_DEFINED__
 
@@ -10101,7 +10101,7 @@ interface __FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConf
 #endif /* COBJMACROS */
 
 #endif // ____FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioEffectsPackConfiguration_IInspectable_INTERFACE_DEFINED__
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CMedia__CAudio__CAudioFileInputNode_IInspectable_INTERFACE_DEFINED__)
@@ -10670,17 +10670,17 @@ enum __x_ABI_CWindows_CMedia_CAudio_CAudioDeviceNodeCreationStatus
  *
  * Struct Windows.Media.Audio.AudioEffectsPackStatus
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 enum __x_ABI_CWindows_CMedia_CAudio_CAudioEffectsPackStatus
 {
-    AudioEffectsPackStatus_AudioEffectsPackNotEnabled = 0,
-    AudioEffectsPackStatus_AudioEffectsPackEnabled = 1,
-    AudioEffectsPackStatus_AudioEffectsPackNotSupported = 2,
+    AudioEffectsPackStatus_NotEnabled = 0,
+    AudioEffectsPackStatus_Enabled = 1,
+    AudioEffectsPackStatus_NotSupported = 2,
 };
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -11044,12 +11044,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioDeviceOutputNode;
  *
  * Interface Windows.Media.Audio.IAudioEffectsPackConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * Interface is a part of the implementation of type Windows.Media.Audio.AudioEffectsPackConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #if !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Audio_IAudioEffectsPackConfiguration[] = L"Windows.Media.Audio.IAudioEffectsPackConfiguration";
@@ -11128,18 +11128,18 @@ interface __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
  * Interface Windows.Media.Audio.IAudioEffectsPackConfigurationStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * Interface is a part of the implementation of type Windows.Media.Audio.AudioEffectsPackConfiguration
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #if !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics[] = L"Windows.Media.Audio.IAudioEffectsPackConfigurationStatics";
@@ -11159,13 +11159,13 @@ typedef struct __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationSta
         HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetForEffectsPackOnDeviceId)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics* This,
-        HSTRING deviceId,
+    HRESULT (STDMETHODCALLTYPE* GetForDeviceId)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics* This,
         HSTRING effectsPackId,
+        HSTRING deviceId,
         __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfiguration** result);
-    HRESULT (STDMETHODCALLTYPE* IsEffectsPackApplicableOnEndpoint)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics* This,
-        HSTRING deviceId,
+    HRESULT (STDMETHODCALLTYPE* IsDeviceIdSupported)(__x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics* This,
         HSTRING effectsPackId,
+        HSTRING deviceId,
         boolean* result);
 
     END_INTERFACE
@@ -11196,17 +11196,17 @@ interface __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics
 #define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_GetForEffectsPackOnDeviceId(This, deviceId, effectsPackId, result) \
-    ((This)->lpVtbl->GetForEffectsPackOnDeviceId(This, deviceId, effectsPackId, result))
+#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_GetForDeviceId(This, effectsPackId, deviceId, result) \
+    ((This)->lpVtbl->GetForDeviceId(This, effectsPackId, deviceId, result))
 
-#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_IsEffectsPackApplicableOnEndpoint(This, deviceId, effectsPackId, result) \
-    ((This)->lpVtbl->IsEffectsPackApplicableOnEndpoint(This, deviceId, effectsPackId, result))
+#define __x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_IsDeviceIdSupported(This, effectsPackId, deviceId, result) \
+    ((This)->lpVtbl->IsDeviceIdSupported(This, effectsPackId, deviceId, result))
 
 #endif /* COBJMACROS */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CAudio_CIAudioEffectsPackConfigurationStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
@@ -16842,10 +16842,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.Audio.AudioEffectsPackConfiguration
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.Audio.IAudioEffectsPackConfigurationStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.Audio.IAudioEffectsPackConfigurationStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.Audio.IAudioEffectsPackConfiguration ** Default Interface **
@@ -16855,12 +16855,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 #ifndef RUNTIMECLASS_Windows_Media_Audio_AudioEffectsPackConfiguration_DEFINED
 #define RUNTIMECLASS_Windows_Media_Audio_AudioEffectsPackConfiguration_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Audio_AudioEffectsPackConfiguration[] = L"Windows.Media.Audio.AudioEffectsPackConfiguration";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
 /*
  *
