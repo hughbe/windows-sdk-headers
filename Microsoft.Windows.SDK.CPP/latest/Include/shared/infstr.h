@@ -72,6 +72,8 @@
 #define SZ_KEY_DELPROP               TEXT("DelProperty")
 #define SZ_KEY_FEATURESCORE          TEXT("FeatureScore")
 #define SZ_KEY_ADDEVENTPROVIDER      TEXT("AddEventProvider")
+#define SZ_KEY_ADDCOMSERVER          TEXT("AddComServer")
+#define SZ_KEY_ADDCOMCLASS           TEXT("AddComClass")
 #define SZ_KEY_ADDCHANNEL            TEXT("AddChannel")
 #define SZ_KEY_IMPORTCHANNEL         TEXT("ImportChannel")
 #define SZ_KEY_ADDAUTOLOGGER         TEXT("AddAutoLogger")
@@ -238,6 +240,21 @@
 #define INFSTR_KEY_PARAMETER_FILE       TEXT("ParameterFile")
 
 //
+// Used in COM server section
+//
+#define INFSTR_KEY_COM_SERVER_TYPE            TEXT("ServerType")
+#define INFSTR_KEY_COM_SERVER_BINARY          TEXT("ServerBinary")
+#define INFSTR_KEY_COM_SERVER_BINARY_WOW64    TEXT("ServerBinaryWow64")
+#define INFSTR_KEY_COM_SERVER_BINARY_ARMWOW64 TEXT("ServerBinaryArmWow64")
+#define INFSTR_KEY_COM_SERVER_DESCRIPTION     TEXT("Description")
+#define INFSTR_KEY_COM_SERVER_ADD_COM_CLASS   TEXT("AddComClass")
+
+//
+// Used in COM class section
+//
+#define INFSTR_KEY_COM_CLASS_THREADING_MODEL TEXT("ThreadingModel")
+
+//
 // Used for channel attributes in event channel section
 //
 #define INFSTR_KEY_CHANNEL_ACCESS       TEXT("Access")
@@ -332,6 +349,7 @@
 #define INFSTR_SUBKEY_LOGCONFIGOVERRIDE TEXT("LogConfigOverride")
 #define INFSTR_SUBKEY_WMI               TEXT("WMI")
 #define INFSTR_SUBKEY_EVENTS            TEXT("Events")
+#define INFSTR_SUBKEY_COM               TEXT("COM")
 #define INFSTR_SUBKEY_FILTERS           TEXT("Filters")
 
 // Control Section

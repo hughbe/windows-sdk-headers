@@ -2038,6 +2038,7 @@ typedef enum _POLICY_INFORMATION_CLASS {
     PolicyDnsDomainInformationInt,
     PolicyLocalAccountDomainInformation,
     PolicyMachineAccountInformation,
+    PolicyMachineAccountInformation2,
     PolicyLastEntry
 
 } POLICY_INFORMATION_CLASS, *PPOLICY_INFORMATION_CLASS;
@@ -2423,6 +2424,19 @@ typedef struct _POLICY_MACHINE_ACCT_INFO {
     PSID Sid;
 
 } POLICY_MACHINE_ACCT_INFO, *PPOLICY_MACHINE_ACCT_INFO;
+
+//
+// The following structure corresponds to the PolicyMachineAccountInformation2
+// information class.  Only valid when the machine is joined to an AD domain.
+// When not joined, will return 0+NULL+GUID_NULL.
+//
+typedef struct _POLICY_MACHINE_ACCT_INFO2 {
+
+    ULONG Rid;
+    PSID Sid;
+    GUID ObjectGuid;
+
+} POLICY_MACHINE_ACCT_INFO2, *PPOLICY_MACHINE_ACCT_INFO2;
 
 //
 // The following data type defines the classes of Policy Information / Policy Domain Information

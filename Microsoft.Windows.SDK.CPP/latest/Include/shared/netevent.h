@@ -1402,7 +1402,7 @@ Notes:
 // available, the string represents a cluster device name.
 // 
 //
-#define EVENT_NBT_CREATE_DEVICE          0xC00010D7L
+#define EVENT_NBT_CREATE_DEVICE          0x400010D7L
 
 //
 // MessageId: EVENT_NBT_NO_DEVICES

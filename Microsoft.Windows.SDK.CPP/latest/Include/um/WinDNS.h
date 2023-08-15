@@ -244,11 +244,14 @@ DNS_ADDR_ARRAY, *PDNS_ADDR_ARRAY;
 //
 
 //
-//  DNS port for both UDP and TCP is 53.
+//  DNS port for both UDP and TCP is 53. For DoT, the port is 853.
 //
 
 #define DNS_PORT_HOST_ORDER     (0x0035)    // port 53
 #define DNS_PORT_NET_ORDER      (0x3500)
+
+#define INTERNET_DEFAULT_DNS_PORT DNS_PORT_HOST_ORDER
+#define INTERNET_DEFAULT_DOT_PORT (853)
 
 //
 //  DNS UDP packets no more than 512 bytes

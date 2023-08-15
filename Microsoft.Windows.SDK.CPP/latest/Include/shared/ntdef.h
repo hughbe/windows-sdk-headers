@@ -369,6 +369,8 @@ Abstract:
 
 // begin_winnt begin_ntminiport begin_ntndis begin_ntminitape
 
+// begin_ntoshvp
+
 #ifndef DECLSPEC_GUARDNOCF
 #if (_MSC_FULL_VER >= 170065501) || defined(_D1VERSIONLKG171_)
 #define DECLSPEC_GUARDNOCF  __declspec(guard(nocf))
@@ -401,7 +403,6 @@ Abstract:
 #endif
 #endif
 
-// begin_ntoshvp
 
 #ifndef FORCEINLINE
 #if (_MSC_VER >= 1200)
