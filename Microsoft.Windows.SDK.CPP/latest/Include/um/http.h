@@ -959,6 +959,10 @@ typedef struct _HTTP_BYTE_RANGE
 // The type for HTTP protocol version numbers.
 //
 
+#ifdef HTTP_VERSION
+#undef HTTP_VERSION
+#endif
+
 typedef struct _HTTP_VERSION
 {
     USHORT MajorVersion;

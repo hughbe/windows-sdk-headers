@@ -359,27 +359,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         IToastNotificationFactory(std::nullptr_t = nullptr) noexcept {}
         IToastNotificationFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IToastNotificationFilter :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IToastNotificationFilter>
-    {
-        IToastNotificationFilter(std::nullptr_t = nullptr) noexcept {}
-        IToastNotificationFilter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IToastNotificationFilterChangedEventArgs :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IToastNotificationFilterChangedEventArgs>
-    {
-        IToastNotificationFilterChangedEventArgs(std::nullptr_t = nullptr) noexcept {}
-        IToastNotificationFilterChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
-    struct __declspec(empty_bases) IToastNotificationFilterStatics :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IToastNotificationFilterStatics>
-    {
-        IToastNotificationFilterStatics(std::nullptr_t = nullptr) noexcept {}
-        IToastNotificationFilterStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IToastNotificationHistory :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IToastNotificationHistory>

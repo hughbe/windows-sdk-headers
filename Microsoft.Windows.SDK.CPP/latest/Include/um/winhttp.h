@@ -41,7 +41,10 @@ extern "C" {
 #define WINHTTPAPI DECLSPEC_IMPORT
 #else
 #define WINHTTPAPI
+#endif
 
+#ifdef BOOLAPI
+#undef BOOLAPI
 #endif
 
 #define BOOLAPI WINHTTPAPI BOOL WINAPI
@@ -80,13 +83,13 @@ typedef INTERNET_PORT * LPINTERNET_PORT;
 
 
 #define SECURITY_FLAG_IGNORE_UNKNOWN_CA         0x00000100
-#define SECURITY_FLAG_IGNORE_CERT_DATE_INVALID  0x00002000 // expired X509 Cert.
-#define SECURITY_FLAG_IGNORE_CERT_CN_INVALID    0x00001000 // bad common name in X509 Cert.
 #define SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE   0x00000200
+#define SECURITY_FLAG_IGNORE_CERT_CN_INVALID    0x00001000 // bad common name in X509 Cert.
+#define SECURITY_FLAG_IGNORE_CERT_DATE_INVALID  0x00002000 // expired X509 Cert.
 #define SECURITY_FLAG_IGNORE_ALL_CERT_ERRORS    (SECURITY_FLAG_IGNORE_UNKNOWN_CA        | \
-                                                 SECURITY_FLAG_IGNORE_CERT_DATE_INVALID | \
+                                                 SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE  | \
                                                  SECURITY_FLAG_IGNORE_CERT_CN_INVALID   | \
-                                                 SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE)
+                                                 SECURITY_FLAG_IGNORE_CERT_DATE_INVALID)
 
 
 //
@@ -110,16 +113,24 @@ typedef struct _WINHTTP_ASYNC_RESULT
 // HTTP_VERSION_INFO - query or set global HTTP version (1.0 or 1.1)
 //
 
+#ifndef _HTTP_VERSION_INFO_
+#define _HTTP_VERSION_INFO_
+
 typedef struct _HTTP_VERSION_INFO
 {
     DWORD dwMajorVersion;
     DWORD dwMinorVersion;
 } HTTP_VERSION_INFO, *LPHTTP_VERSION_INFO, *PHTTP_VERSION_INFO;
 
+#endif
+
 
 //
 // INTERNET_SCHEME - URL scheme type
 //
+
+#ifndef _INTERNET_SCHEME_
+#define _INTERNET_SCHEME_
 
 typedef int INTERNET_SCHEME, *LPINTERNET_SCHEME;
 
@@ -127,6 +138,9 @@ typedef int INTERNET_SCHEME, *LPINTERNET_SCHEME;
 #define INTERNET_SCHEME_HTTPS       (2)
 #define INTERNET_SCHEME_FTP         (3)
 #define INTERNET_SCHEME_SOCKS       (4)
+
+
+#endif
 
 
 //
@@ -147,6 +161,9 @@ typedef int INTERNET_SCHEME, *LPINTERNET_SCHEME;
 //
 
 #pragma warning( disable : 4121 )   // disable alignment warning
+
+#ifndef _URL_COMPONENTS_
+#define _URL_COMPONENTS_
 
 typedef struct _WINHTTP_URL_COMPONENTS
 {
@@ -169,6 +186,8 @@ typedef struct _WINHTTP_URL_COMPONENTS
 
 typedef URL_COMPONENTS URL_COMPONENTSW;
 typedef LPURL_COMPONENTS LPURL_COMPONENTSW;
+
+#endif
 
 #pragma warning( default : 4121 )   // restore alignment warning
 

@@ -2296,6 +2296,9 @@ HttpPreConnect(
     _In_ DWORD cConnections
 );
 
+#ifndef _HTTP_POLICY_EXTENSION_
+#define _HTTP_POLICY_EXTENSION_
+
 typedef enum
 {
     POLICY_EXTENSION_TYPE_NONE = 0,
@@ -2316,6 +2319,8 @@ typedef DWORD
 
 typedef DWORD
 (WINAPI * HTTP_POLICY_EXTENSION_SHUTDOWN)(_In_ HTTP_POLICY_EXTENSION_TYPE Type);
+
+#endif
 
 
 #if defined(__cplusplus)

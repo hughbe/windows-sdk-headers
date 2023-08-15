@@ -14,16 +14,22 @@ WINRT_EXPORT namespace winrt::Windows::UI::Shell
         AdaptiveCardBuilder() = delete;
         static auto CreateAdaptiveCardFromJson(param::hstring const& value);
     };
-    struct __declspec(empty_bases) FocusAssist : winrt::Windows::UI::Shell::IFocusAssist
-    {
-        FocusAssist(std::nullptr_t) noexcept {}
-        FocusAssist(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssist(ptr, take_ownership_from_abi) {}
-        static auto GetDefault();
-    };
     struct __declspec(empty_bases) FocusAssistChangedEventArgs : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs
     {
         FocusAssistChangedEventArgs(std::nullptr_t) noexcept {}
         FocusAssistChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) FocusAssistManager : winrt::Windows::UI::Shell::IFocusAssistManager
+    {
+        FocusAssistManager(std::nullptr_t) noexcept {}
+        FocusAssistManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistManager(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        [[nodiscard]] static auto IsSupported();
+    };
+    struct __declspec(empty_bases) FocusAssistSession : winrt::Windows::UI::Shell::IFocusAssistSession
+    {
+        FocusAssistSession(std::nullptr_t) noexcept {}
+        FocusAssistSession(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Shell::IFocusAssistSession(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) SecurityAppManager : winrt::Windows::UI::Shell::ISecurityAppManager
     {

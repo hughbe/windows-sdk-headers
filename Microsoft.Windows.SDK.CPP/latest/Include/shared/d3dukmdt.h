@@ -707,7 +707,8 @@ typedef struct _D3DDDI_CREATEHWQUEUEFLAGS
             UINT    NoBroadcastSignal   : 1;      // 0x00000002
             UINT    NoBroadcastWait     : 1;      // 0x00000004
             UINT    NoKmdAccess         : 1;      // 0x00000008
-            UINT    Reserved            :28;      // 0xFFFFFFF0
+            UINT    UserModeSubmission  : 1;      // 0x00000010
+            UINT    Reserved            :27;      // 0xFFFFFFE0
         };
         UINT Value;
     };
@@ -1891,6 +1892,16 @@ typedef struct _D3DDDI_CREATENATIVEFENCEINFO
 
     D3DDDI_NATIVEFENCEMAPPING               NativeFenceMapping;     // out: process mapping information for the native fence
 } D3DDDI_CREATENATIVEFENCEINFO;
+
+#define D3DDDI_DOORBELL_PRIVATEDATA_MAX_BYTES_WDDM3_1 16
+
+typedef enum _D3DDDI_DOORBELLSTATUS
+{
+    D3DDDI_DOORBELLSTATUS_CONNECTED = 0,
+    D3DDDI_DOORBELLSTATUS_CONNECTED_NOTIFY_KMD = 1,
+    D3DDDI_DOORBELLSTATUS_DISCONNECTED_RETRY = 2,
+    D3DDDI_DOORBELLSTATUS_DISCONNECTED_ABORT = 3,
+}D3DDDI_DOORBELLSTATUS;
 
 #endif // >= 3_1
 

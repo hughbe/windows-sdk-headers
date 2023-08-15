@@ -793,6 +793,77 @@ typedef struct _D3DKMT_CANCEL_PRESENTS
 #endif
 
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+
+
+typedef struct _D3DKMT_CREATE_DOORBELL_FLAGS
+{
+    union
+    {
+        struct
+        {
+            UINT RequireSecondaryCpuVA : 1;
+            UINT ResizeRingBufferOperation : 1;
+            UINT Reserved : 30;
+        };
+        UINT Value;
+    };
+}D3DKMT_CREATE_DOORBELL_FLAGS;
+
+typedef struct _D3DKMT_CREATE_DOORBELL
+{
+    D3DKMT_HANDLE hHwQueue;                                                   // in:      HWQueue for which doorbell is required
+    D3DKMT_HANDLE hRingBuffer;                                                // in:      Ring buffer allocation handle
+    D3DKMT_HANDLE hRingBufferControl;                                         // in opt:  ring buffer control area allocation handle
+    D3DKMT_CREATE_DOORBELL_FLAGS Flags;                                       // in opt:  flags
+    _Field_range_(0, D3DDDI_DOORBELL_PRIVATEDATA_MAX_BYTES_WDDM3_1)
+    UINT PrivateDriverDataSize;                                               // in:      Size of private driver data
+    D3DKMT_PTR(_Field_size_(PrivateDriverDataSize) VOID*, PrivateDriverData); // in/out:  Private driver data
+    D3DKMT_HANDLE hDoorbell;                                                  // out:     Handle of the created doorbell
+    D3DKMT_PTR(VOID*, DoorbellCPUVirtualAddress);                             // out:     CPU VA of the created doorbell
+    D3DKMT_PTR(VOID*, DoorbellSecondaryCPUVirtualAddress);                    // out opt: Secondary CPU VA of the created doorbell
+    D3DKMT_PTR(VOID*, DoorbellStatusCPUVirtualAddress);                       // out:     CPU VA of the status page of doorbell
+}D3DKMT_CREATE_DOORBELL;
+
+typedef struct _D3DKMT_CONNECT_DOORBELL_FLAGS
+{
+    union
+    {
+        struct
+        {
+            UINT Reserved : 32;
+        };
+        UINT Value;
+    };
+}D3DKMT_CONNECT_DOORBELL_FLAGS;
+
+typedef struct _D3DKMT_CONNECT_DOORBELL
+{
+    D3DKMT_HANDLE hDoorbell;             // in: UM handle to doorbell which needs to be connected
+    D3DKMT_CONNECT_DOORBELL_FLAGS Flags;
+}D3DKMT_CONNECT_DOORBELL;
+
+typedef struct _D3DKMT_DESTROY_DOORBELL
+{
+    D3DKMT_HANDLE hDoorbell; // in: UM handle to doorbell which is being destroyed
+}D3DKMT_DESTROY_DOORBELL;
+
+typedef struct _D3DKMT_NOTIFY_WORK_SUBMISSION_FLAGS
+{
+    union
+    {
+        struct
+        {
+            UINT Reserved : 32;
+        };
+        UINT Value;
+    };
+}D3DKMT_NOTIFY_WORK_SUBMISSION_FLAGS;
+
+typedef struct _D3DKMT_NOTIFY_WORK_SUBMISSION
+{
+    D3DKMT_HANDLE hHwQueue;                    // in: UM handle to HWQueue
+    D3DKMT_NOTIFY_WORK_SUBMISSION_FLAGS Flags; 
+}D3DKMT_NOTIFY_WORK_SUBMISSION;
 #endif
 
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_4)
@@ -5537,6 +5608,10 @@ typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_CANCELPRESENTS)(_In_ D3DKMT
 
 typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_CREATENATIVEFENCE)(_Inout_ D3DKMT_CREATENATIVEFENCE*);
 typedef _Check_return_ NTSTATUS (APIENTRY *PFND3DKMT_OPENNATIVEFENCEFROMNTHANDLE)(_Inout_ D3DKMT_OPENNATIVEFENCEFROMNTHANDLE*);
+typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_CREATEDOORBELL)(_In_ D3DKMT_CREATE_DOORBELL*);
+typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_CONNECTDOORBELL)(_In_ D3DKMT_CONNECT_DOORBELL*);
+typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_DESTROYDOORBELL)(_In_ D3DKMT_DESTROY_DOORBELL*);
+typedef _Check_return_ NTSTATUS (APIENTRY* PFND3DKMT_NOTIFYWORKSUBMISSION)(_In_ D3DKMT_NOTIFY_WORK_SUBMISSION*);
 
 #endif
 
@@ -5812,8 +5887,12 @@ EXTERN_C VOID APIENTRY D3DKMTCloseDxCoreDevice();
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTCreateNativeFence(_Inout_ D3DKMT_CREATENATIVEFENCE*);
 EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTOpenNativeFenceFromNtHandle(_Inout_ D3DKMT_OPENNATIVEFENCEFROMNTHANDLE*);
 
-#endif
 
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTCreateDoorbell(_In_ D3DKMT_CREATE_DOORBELL*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTConnectDoorbell(_In_ D3DKMT_CONNECT_DOORBELL*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTDestroyDoorbell(_In_ D3DKMT_DESTROY_DOORBELL*);
+EXTERN_C _Check_return_ NTSTATUS APIENTRY D3DKMTNotifyWorkSubmission(_In_ D3DKMT_NOTIFY_WORK_SUBMISSION*);
+#endif
 //
 // Interface used for shared power component management
 // {ea5c6870-e93c-4588-bef1-fec42fc9429a}

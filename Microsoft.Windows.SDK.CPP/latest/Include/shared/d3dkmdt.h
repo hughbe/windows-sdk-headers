@@ -1970,7 +1970,8 @@ typedef struct _DXGK_NODEMETADATA_FLAGS
 
             UINT RingBufferFenceRelease     :  1;
             UINT SupportTrackedWorkload     :  1;
-            UINT Reserved                   : 13;
+            UINT UserModeSubmission         :  1;
+            UINT Reserved                   : 12;
 
             UINT MaxInFlightHwQueueBuffers  : 16;
 

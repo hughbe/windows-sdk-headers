@@ -1072,32 +1072,6 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationFactory)->CreateToastNotification(*(void**)(&content), &value));
         return winrt::Windows::UI::Notifications::ToastNotification{ value, take_ownership_from_abi };
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationFilterMode) consume_Windows_UI_Notifications_IToastNotificationFilter<D>::FilterMode() const
-    {
-        winrt::Windows::UI::Notifications::ToastNotificationFilterMode value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationFilter)->get_FilterMode(reinterpret_cast<int32_t*>(&value)));
-        return value;
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_UI_Notifications_IToastNotificationFilter<D>::Changed(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationFilter, winrt::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs> const& handler) const
-    {
-        winrt::event_token token{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationFilter)->add_Changed(*(void**)(&handler), put_abi(token)));
-        return token;
-    }
-    template <typename D> typename consume_Windows_UI_Notifications_IToastNotificationFilter<D>::Changed_revoker consume_Windows_UI_Notifications_IToastNotificationFilter<D>::Changed(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationFilter, winrt::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs> const& handler) const
-    {
-        return impl::make_event_revoker<D, Changed_revoker>(this, Changed(handler));
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotificationFilter<D>::Changed(winrt::event_token const& token) const noexcept
-    {
-        WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationFilter)->remove_Changed(impl::bind_in(token)));
-    }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::Notifications::ToastNotificationFilter) consume_Windows_UI_Notifications_IToastNotificationFilterStatics<D>::GetDefault() const
-    {
-        void* result{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationFilterStatics)->GetDefault(&result));
-        return winrt::Windows::UI::Notifications::ToastNotificationFilter{ result, take_ownership_from_abi };
-    }
     template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_Notifications_IToastNotificationHistory<D>::RemoveGroup(param::hstring const& group) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Notifications::IToastNotificationHistory)->RemoveGroup(*(void**)(&group)));
@@ -3103,53 +3077,6 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
-    struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationFilter> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationFilter>
-    {
-        int32_t __stdcall get_FilterMode(int32_t* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::UI::Notifications::ToastNotificationFilterMode>(this->shim().FilterMode());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall add_Changed(void* handler, winrt::event_token* token) noexcept final try
-        {
-            zero_abi<winrt::event_token>(token);
-            typename D::abi_guard guard(this->shim());
-            *token = detach_from<winrt::event_token>(this->shim().Changed(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::UI::Notifications::ToastNotificationFilter, winrt::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs> const*>(&handler)));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall remove_Changed(winrt::event_token token) noexcept final
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().Changed(*reinterpret_cast<winrt::event_token const*>(&token));
-            return 0;
-        }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs>
-    {
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationFilterStatics> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationFilterStatics>
-    {
-        int32_t __stdcall GetDefault(void** result) noexcept final try
-        {
-            clear_abi(result);
-            typename D::abi_guard guard(this->shim());
-            *result = detach_from<winrt::Windows::UI::Notifications::ToastNotificationFilter>(this->shim().GetDefault());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
     struct produce<D, winrt::Windows::UI::Notifications::IToastNotificationHistory> : produce_base<D, winrt::Windows::UI::Notifications::IToastNotificationHistory>
     {
         int32_t __stdcall RemoveGroup(void* group) noexcept final try
@@ -3799,10 +3726,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         ToastNotification(impl::call_factory<ToastNotification, IToastNotificationFactory>([&](IToastNotificationFactory const& f) { return f.CreateToastNotification(content); }))
     {
     }
-    inline auto ToastNotificationFilter::GetDefault()
-    {
-        return impl::call_factory_cast<winrt::Windows::UI::Notifications::ToastNotificationFilter(*)(IToastNotificationFilterStatics const&), ToastNotificationFilter, IToastNotificationFilterStatics>([](IToastNotificationFilterStatics const& f) { return f.GetDefault(); });
-    }
     inline auto ToastNotificationManager::CreateToastNotifier()
     {
         return impl::call_factory_cast<winrt::Windows::UI::Notifications::ToastNotifier(*)(IToastNotificationManagerStatics const&), ToastNotificationManager, IToastNotificationManagerStatics>([](IToastNotificationManagerStatics const& f) { return f.CreateToastNotifier(); });
@@ -3885,9 +3808,6 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotification6> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationFactory> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationFilter> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationFilterStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationHistory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationHistory2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::IToastNotificationHistoryChangedTriggerDetail> : winrt::impl::hash_base {};
@@ -3933,8 +3853,6 @@ namespace std
     template<> struct hash<winrt::Windows::UI::Notifications::ToastFailedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotification> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationActionTriggerDetail> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationFilter> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationFilterChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationHistory> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationHistoryChangedTriggerDetail> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::Notifications::ToastNotificationManager> : winrt::impl::hash_base {};

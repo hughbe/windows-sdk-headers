@@ -215,17 +215,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::Notifications
         ToastNotificationActionTriggerDetail(std::nullptr_t) noexcept {}
         ToastNotificationActionTriggerDetail(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationActionTriggerDetail(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) ToastNotificationFilter : winrt::Windows::UI::Notifications::IToastNotificationFilter
-    {
-        ToastNotificationFilter(std::nullptr_t) noexcept {}
-        ToastNotificationFilter(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationFilter(ptr, take_ownership_from_abi) {}
-        static auto GetDefault();
-    };
-    struct __declspec(empty_bases) ToastNotificationFilterChangedEventArgs : winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs
-    {
-        ToastNotificationFilterChangedEventArgs(std::nullptr_t) noexcept {}
-        ToastNotificationFilterChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::UI::Notifications::IToastNotificationFilterChangedEventArgs(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) ToastNotificationHistory : winrt::Windows::UI::Notifications::IToastNotificationHistory,
         impl::require<ToastNotificationHistory, winrt::Windows::UI::Notifications::IToastNotificationHistory2>
     {
