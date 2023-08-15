@@ -220,6 +220,15 @@
 //
 #define WU_S_SEARCH_LOAD_SHEDDING        _HRESULT_TYPEDEF_(0x00248001L)
 
+//
+// MessageId: WU_S_AAD_DEVICE_TICKET_NOT_NEEDED
+//
+// MessageText:
+//
+// There was no need to retrieve an AAD device ticket.
+//
+#define WU_S_AAD_DEVICE_TICKET_NOT_NEEDED _HRESULT_TYPEDEF_(0x00248002L)
+
 ///////////////////////////////////////////////////////////////////////////////
 // Windows Update Error Codes
 ///////////////////////////////////////////////////////////////////////////////

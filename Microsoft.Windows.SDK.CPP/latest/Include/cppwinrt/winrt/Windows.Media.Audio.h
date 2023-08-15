@@ -38,6 +38,50 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioDeviceOutputNode)->get_Device(&value));
         return winrt::Windows::Devices::Enumeration::DeviceInformation{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::DeviceId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->get_DeviceId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::EffectsPackId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->get_EffectsPackId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::Status() const
+    {
+        winrt::Windows::Media::Audio::AudioEffectsPackStatus value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->get_Status(reinterpret_cast<int32_t*>(&value)));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->add_ConfigurationChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged_revoker consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, ConfigurationChanged_revoker>(this, ConfigurationChanged(handler));
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfiguration<D>::ConfigurationChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration)->remove_ConfigurationChanged(impl::bind_in(token));
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->GetForEffectsPackOnDeviceId(*(void**)(&deviceId), *(void**)(&effectsPackId), &result));
+        return winrt::Windows::Media::Audio::AudioEffectsPackConfiguration{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Media_Audio_IAudioEffectsPackConfigurationStatics<D>::IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId) const
+    {
+        bool result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics)->IsEffectsPackApplicableOnEndpoint(*(void**)(&deviceId), *(void**)(&effectsPackId), &result));
+        return result;
+    }
     template <typename D> auto consume_Windows_Media_Audio_IAudioFileInputNode<D>::PlaybackSpeedFactor(double value) const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Media::Audio::IAudioFileInputNode)->put_PlaybackSpeedFactor(value));
@@ -1645,6 +1689,70 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Devices::Enumeration::DeviceInformation>(this->shim().Device());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration> : produce_base<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration>
+    {
+        int32_t __stdcall get_DeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DeviceId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_EffectsPackId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().EffectsPackId());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Status(int32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Media::Audio::AudioEffectsPackStatus>(this->shim().Status());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_ConfigurationChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().ConfigurationChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_ConfigurationChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ConfigurationChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics> : produce_base<D, winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics>
+    {
+        int32_t __stdcall GetForEffectsPackOnDeviceId(void* deviceId, void* effectsPackId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration>(this->shim().GetForEffectsPackOnDeviceId(*reinterpret_cast<hstring const*>(&deviceId), *reinterpret_cast<hstring const*>(&effectsPackId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall IsEffectsPackApplicableOnEndpoint(void* deviceId, void* effectsPackId, bool* result) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<bool>(this->shim().IsEffectsPackApplicableOnEndpoint(*reinterpret_cast<hstring const*>(&deviceId), *reinterpret_cast<hstring const*>(&effectsPackId)));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4174,6 +4282,14 @@ WINRT_EXPORT namespace winrt::Windows::Media::Audio
         left = left ^ right;
         return left;
     }
+    inline auto AudioEffectsPackConfiguration::GetForEffectsPackOnDeviceId(param::hstring const& deviceId, param::hstring const& effectsPackId)
+    {
+        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.GetForEffectsPackOnDeviceId(deviceId, effectsPackId); });
+    }
+    inline auto AudioEffectsPackConfiguration::IsEffectsPackApplicableOnEndpoint(param::hstring const& deviceId, param::hstring const& effectsPackId)
+    {
+        return impl::call_factory<AudioEffectsPackConfiguration, IAudioEffectsPackConfigurationStatics>([&](IAudioEffectsPackConfigurationStatics const& f) { return f.IsEffectsPackApplicableOnEndpoint(deviceId, effectsPackId); });
+    }
     inline auto AudioGraph::CreateAsync(winrt::Windows::Media::Audio::AudioGraphSettings const& settings)
     {
         return impl::call_factory<AudioGraph, IAudioGraphStatics>([&](IAudioGraphStatics const& f) { return f.CreateAsync(settings); });
@@ -4308,6 +4424,8 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceInputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::IAudioDeviceOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioEffectsPackConfiguration> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::IAudioEffectsPackConfigurationStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::IAudioFileInputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::IAudioFileOutputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::IAudioFrameCompletedEventArgs> : winrt::impl::hash_base {};
@@ -4373,6 +4491,7 @@ namespace std
     template<> struct hash<winrt::Windows::Media::Audio::ISpatialAudioFormatSubtypeStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceInputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::AudioDeviceOutputNode> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Media::Audio::AudioEffectsPackConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::AudioFileInputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::AudioFileOutputNode> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Media::Audio::AudioFrameCompletedEventArgs> : winrt::impl::hash_base {};

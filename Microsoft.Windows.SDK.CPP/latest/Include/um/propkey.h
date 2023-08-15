@@ -2938,6 +2938,14 @@ DEFINE_PROPERTYKEY(PKEY_StorageProviderError, 0xFCEFF153, 0xE839, 0x4CF3, 0xA9, 
 DEFINE_PROPERTYKEY(PKEY_StorageProviderFileChecksum, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 5);
 #define INIT_PKEY_StorageProviderFileChecksum { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 5 }
 
+//  Name:     System.StorageProviderFileCreatedBy -- PKEY_StorageProviderFileCreatedBy
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {B2F9B9D6-FEC4-4DD5-94D7-8957488C807B}, 10
+//
+//  The display name of the user who created the file or folder specified by the storage provider.
+DEFINE_PROPERTYKEY(PKEY_StorageProviderFileCreatedBy, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 10);
+#define INIT_PKEY_StorageProviderFileCreatedBy { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 10 }
+
 //  Name:     System.StorageProviderFileFlags -- PKEY_StorageProviderFileFlags
 //  Type:     UInt32 -- VT_UI4
 //  FormatID: {B2F9B9D6-FEC4-4DD5-94D7-8957488C807B}, 8
@@ -2961,6 +2969,14 @@ DEFINE_PROPERTYKEY(PKEY_StorageProviderFileHasConflict, 0xB2F9B9D6, 0xFEC4, 0x4D
 //  The storage provider identifier for this file.
 DEFINE_PROPERTYKEY(PKEY_StorageProviderFileIdentifier, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 3);
 #define INIT_PKEY_StorageProviderFileIdentifier { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 3 }
+
+//  Name:     System.StorageProviderFileModifiedBy -- PKEY_StorageProviderFileModifiedBy
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {B2F9B9D6-FEC4-4DD5-94D7-8957488C807B}, 11
+//
+//  The display name of the user who last modified the file or folder specified by the storage provider.
+DEFINE_PROPERTYKEY(PKEY_StorageProviderFileModifiedBy, 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B, 11);
+#define INIT_PKEY_StorageProviderFileModifiedBy { { 0xB2F9B9D6, 0xFEC4, 0x4DD5, 0x94, 0xD7, 0x89, 0x57, 0x48, 0x8C, 0x80, 0x7B }, 11 }
 
 //  Name:     System.StorageProviderFileRemoteUri -- PKEY_StorageProviderFileRemoteUri
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
@@ -6510,6 +6526,33 @@ DEFINE_PROPERTYKEY(PKEY_Message_ToDoTitle, 0xBCCC8A3C, 0x8CEF, 0x42E5, 0x9B, 0x1
 //  Person names in To: field
 DEFINE_PROPERTYKEY(PKEY_Message_ToName, 0xE3E0584C, 0xB788, 0x4A5A, 0xBB, 0x20, 0x7F, 0x5A, 0x44, 0xC9, 0xAC, 0xDD, 17);
 #define INIT_PKEY_Message_ToName { { 0xE3E0584C, 0xB788, 0x4A5A, 0xBB, 0x20, 0x7F, 0x5A, 0x44, 0xC9, 0xAC, 0xDD }, 17 }
+
+//-----------------------------------------------------------------------------
+// MsGraph properties
+
+//  Name:     System.MsGraph.CompositeId -- PKEY_MsGraph_CompositeId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 2
+//
+//  The Microsoft Graph unique composite identifier of this item.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_CompositeId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 2);
+#define INIT_PKEY_MsGraph_CompositeId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 2 }
+
+//  Name:     System.MsGraph.DriveId -- PKEY_MsGraph_DriveId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 3
+//
+//  The Microsoft Graph unique identifier of the drive instance that contains the item.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_DriveId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 3);
+#define INIT_PKEY_MsGraph_DriveId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 3 }
+
+//  Name:     System.MsGraph.ItemId -- PKEY_MsGraph_ItemId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 4
+//
+//  The Microsoft Graph unique identifier of this item in the drive.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_ItemId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 4);
+#define INIT_PKEY_MsGraph_ItemId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 4 }
 
 //-----------------------------------------------------------------------------
 // Music properties

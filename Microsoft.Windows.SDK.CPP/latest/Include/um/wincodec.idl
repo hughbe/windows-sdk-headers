@@ -265,6 +265,14 @@ cpp_quote("DEFINE_GUID(GUID_WICPixelFormat8bppGray,   0x6fddc324, 0x4e03, 0x4bfe
 /* Alpha only format */
 cpp_quote("DEFINE_GUID(GUID_WICPixelFormat8bppAlpha, 0xe6cd0116, 0xeeba, 0x4161, 0xaa, 0x85, 0x27, 0xdd, 0x9f, 0xb3, 0xa8, 0x95);")
 
+/* Depth only format */
+/* 4c9c9f45-1d89-4e31-9bc7-69343a0dca69 */
+cpp_quote("DEFINE_GUID(GUID_WICPixelFormat8bppDepth, 0x4c9c9f45, 0x1d89, 0x4e31, 0x9b, 0xc7, 0x69, 0x34, 0x3a, 0x0d, 0xca, 0x69);")
+
+/* Gain only format */
+/* a884022a-af13-4c16-b746-619bf618b878 */
+cpp_quote("DEFINE_GUID(GUID_WICPixelFormat8bppGain, 0xa884022a, 0xaf13, 0x4c16, 0xb7, 0x46, 0x61, 0x9b, 0xf6, 0x18, 0xb8, 0x78);")
+
 /* sRGB formats (gamma is approx. 2.2) */
 /* For a full definition, see the sRGB spec */
 
@@ -2553,6 +2561,20 @@ typedef [public] enum WICPngFilterOption
     WICPngFilterAdaptive           = 0x00000006,
     WICPNGFILTEROPTION_FORCE_DWORD = CODEC_FORCE_DWORD
 } WICPngFilterOption;
+
+
+/*=========================================================================*\
+    WICHeifCompressionOption
+\*=========================================================================*/
+
+typedef [public] enum WICHeifCompressionOption
+{
+    WICHeifCompressionDontCare      = 0x00000000,
+    WICHeifCompressionNone          = 0x00000001,
+    WICHeifCompressionHEVC          = 0x00000002,
+    WICHeifCompressionAV1           = 0x00000003,
+    WICHEIFCOMPRESSIONOPTION_FORCE_DWORD = CODEC_FORCE_DWORD
+} WICHeifCompressionOption;
 
 
 /*=========================================================================*\

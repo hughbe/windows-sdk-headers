@@ -1768,6 +1768,7 @@ typedef USHORT USAGE, *PUSAGE;
 //
 #define HID_USAGE_MS_BTH_HF_DIALNUMBER      ((USAGE) 0x0021)
 #define HID_USAGE_MS_BTH_HF_DIALMEMORY      ((USAGE) 0x0022)
+#define HID_USAGE_MS_BTH_HF_CALLSETUP       ((USAGE) 0x0024)
 
 //
 // Monitor Page (0x80)

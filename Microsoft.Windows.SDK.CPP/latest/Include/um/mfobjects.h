@@ -2853,7 +2853,9 @@ enum _MFVideoTransferFunction
         MFVideoTransFunc_2084	= 15,
         MFVideoTransFunc_HLG	= 16,
         MFVideoTransFunc_10_rel	= 17,
-        MFVideoTransFunc_Last	= ( MFVideoTransFunc_10_rel + 1 ) ,
+        MFVideoTransFunc_BT1361_ECG	= 18,
+        MFVideoTransFunc_SMPTE428	= 19,
+        MFVideoTransFunc_Last	= ( MFVideoTransFunc_SMPTE428 + 1 ) ,
         MFVideoTransFunc_ForceDWORD	= 0x7fffffff
     } 	MFVideoTransferFunction;
 
@@ -2873,7 +2875,8 @@ enum _MFVideoPrimaries
         MFVideoPrimaries_XYZ	= 10,
         MFVideoPrimaries_DCI_P3	= 11,
         MFVideoPrimaries_ACES	= 12,
-        MFVideoPrimaries_Last	= ( MFVideoPrimaries_ACES + 1 ) ,
+        MFVideoPrimaries_Display_P3	= 13,
+        MFVideoPrimaries_Last	= ( MFVideoPrimaries_Display_P3 + 1 ) ,
         MFVideoPrimaries_ForceDWORD	= 0x7fffffff
     } 	MFVideoPrimaries;
 
@@ -2898,7 +2901,14 @@ enum _MFVideoTransferMatrix
         MFVideoTransferMatrix_SMPTE240M	= 3,
         MFVideoTransferMatrix_BT2020_10	= 4,
         MFVideoTransferMatrix_BT2020_12	= 5,
-        MFVideoTransferMatrix_Last	= ( MFVideoTransferMatrix_BT2020_12 + 1 ) ,
+        MFVideoTransferMatrix_Identity	= 6,
+        MFVideoTransferMatrix_FCC47	= 7,
+        MFVideoTransferMatrix_YCgCo	= 8,
+        MFVideoTransferMatrix_SMPTE2085	= 9,
+        MFVideoTransferMatrix_Chroma	= 10,
+        MFVideoTransferMatrix_Chroma_const	= 11,
+        MFVideoTransferMatrix_ICtCp	= 12,
+        MFVideoTransferMatrix_Last	= ( MFVideoTransferMatrix_ICtCp + 1 ) ,
         MFVideoTransferMatrix_ForceDWORD	= 0x7fffffff
     } 	MFVideoTransferMatrix;
 

@@ -168,6 +168,8 @@ namespace Windows
         {
             typedef enum AudioDeviceNodeCreationStatus AudioDeviceNodeCreationStatus;
 
+            typedef enum AudioEffectsPackStatus AudioEffectsPackStatus;
+
             typedef enum AudioFileNodeCreationStatus AudioFileNodeCreationStatus;
 
             typedef enum AudioGraphCreationStatus AudioGraphCreationStatus;
@@ -197,6 +199,10 @@ namespace Windows
             interface IAudioDeviceInputNode;
 
             interface IAudioDeviceOutputNode;
+
+            interface IAudioEffectsPackConfiguration;
+
+            interface IAudioEffectsPackConfigurationStatics;
 
             interface IAudioFileInputNode;
 
@@ -328,6 +334,8 @@ namespace Windows
 
             runtimeclass AudioDeviceOutputNode;
 
+            runtimeclass AudioEffectsPackConfiguration;
+
             runtimeclass AudioFileInputNode;
 
             runtimeclass AudioFileOutputNode;
@@ -444,6 +452,8 @@ namespace Windows
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Media.Audio.SetDefaultSpatialAudioFormatResult*>;
 
+                interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration*, IInspectable*>;
+
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFileInputNode*, IInspectable*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioFrameInputNode*, Windows.Media.Audio.AudioFrameCompletedEventArgs*>;
@@ -481,6 +491,14 @@ namespace Windows
                 FormatNotSupported = 2,
                 UnknownFailure     = 3,
                 AccessDenied       = 4
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            enum AudioEffectsPackStatus
+            {
+                AudioEffectsPackNotEnabled   = 0,
+                AudioEffectsPackEnabled      = 1,
+                AudioEffectsPackNotSupported = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -612,6 +630,27 @@ namespace Windows
                     Windows.Foundation.IClosable
             {
                 [propget] HRESULT Device([out] [retval] Windows.Devices.Enumeration.DeviceInformation** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Media.Audio.AudioEffectsPackConfiguration)]
+            [uuid(52B24CFF-5817-5B2D-9A4F-CF925CE91F6D)]
+            interface IAudioEffectsPackConfiguration : IInspectable
+            {
+                [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                [propget] HRESULT EffectsPackId([out] [retval] HSTRING* value);
+                [propget] HRESULT Status([out] [retval] Windows.Media.Audio.AudioEffectsPackStatus* value);
+                [eventadd] HRESULT ConfigurationChanged([in] Windows.Foundation.TypedEventHandler<Windows.Media.Audio.AudioEffectsPackConfiguration*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ConfigurationChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Media.Audio.AudioEffectsPackConfiguration)]
+            [uuid(C7959B41-6C34-57FF-9FA9-B18DD08366DD)]
+            interface IAudioEffectsPackConfigurationStatics : IInspectable
+            {
+                HRESULT GetForEffectsPackOnDeviceId([in] HSTRING deviceId, [in] HSTRING effectsPackId, [out] [retval] Windows.Media.Audio.AudioEffectsPackConfiguration** result);
+                HRESULT IsEffectsPackApplicableOnEndpoint([in] HSTRING deviceId, [in] HSTRING effectsPackId, [out] [retval] boolean* result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1403,6 +1442,15 @@ namespace Windows
                 interface Windows.Media.Audio.IAudioNode;
                 interface Windows.Foundation.IClosable;
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)] interface Windows.Media.Audio.IAudioNodeWithListener;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.Media.Audio.IAudioEffectsPackConfigurationStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+            [threading(both)]
+            runtimeclass AudioEffectsPackConfiguration
+            {
+                [default] interface Windows.Media.Audio.IAudioEffectsPackConfiguration;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

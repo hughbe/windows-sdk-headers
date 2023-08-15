@@ -3642,6 +3642,11 @@ SetupScanFileQueueW(
 
 #endif // _SETUPAPI_VER >= _WIN32_WINNT_LONGHORN
 
+#if _SETUPAPI_VER >= _WIN32_WINNT_WIN10
+
+#define SPQ_SCAN_USE_OEM_CATALOGS               0x00000800
+
+#endif // _SETUPAPI_VER >= _WIN32_WINNT_WIN10
 
 //
 // Define flags used with Param2 for SPFILENOTIFY_QUEUESCAN

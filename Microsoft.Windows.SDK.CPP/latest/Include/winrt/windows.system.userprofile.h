@@ -2132,8 +2132,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.UserProfile.ILockScreenImageFeedStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
  *   Static Methods exist on the Windows.System.UserProfile.ILockScreenStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
+ *   Static Methods exist on the Windows.System.UserProfile.ILockScreenImageFeedStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
@@ -5286,8 +5286,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.UserProfile.ILockScreenImageFeedStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
  *   Static Methods exist on the Windows.System.UserProfile.ILockScreenStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
+ *   Static Methods exist on the Windows.System.UserProfile.ILockScreenImageFeedStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
