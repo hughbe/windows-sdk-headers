@@ -307,8 +307,8 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
         AUDIO_ENDPOINT_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioEndpointPropertyChange;
         // Used for audio system effects property store notifications on a specific endpoint, property context pair.
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioSystemEffectsPropertyChange;
-        // Used for mic boost notification.
-        AUDIO_MICROPHONE_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicBoost;
+        // Used for microphone boost notifications.
+        AUDIO_MICROPHONE_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicrophoneBoost;
     } DUMMYUNIONNAME;
 } APO_NOTIFICATION_DESCRIPTOR;
 

@@ -62,6 +62,7 @@ extern "C"{
 //
 //  IDL for defining Diagnostic API structures necessary for public consumption. This, along with
 //  DiagnosticDataQueryTypes.h, are the only headers that should be necessary for consuming the Diagnostic Data Query APIs.
+//  New function definition must be added at the end of the file.
 //
 //--------------------------------------------------------------------------
 

@@ -19097,6 +19097,24 @@ Notes:
 //
 #define STATUS_FVE_POLICY_ON_RDV_EXCLUSION_LIST ((NTSTATUS)0xC0210042L)
 
+//
+// MessageId: STATUS_FVE_DATASET_FULL
+//
+// MessageText:
+//
+// This operation cannot be completed because dataset is full.
+//
+#define STATUS_FVE_DATASET_FULL          ((NTSTATUS)0xC0210043L)
+
+//
+// MessageId: STATUS_FVE_METADATA_FULL
+//
+// MessageText:
+//
+// This operation cannot be completed because BitLocker Drive Encryption metadata area is full. Consider removing unnecessary key protectors for this drive.
+//
+#define STATUS_FVE_METADATA_FULL         ((NTSTATUS)0xC0210044L)
+
 
 //
 // FWP error codes (fwpkclnt.sys)

@@ -680,6 +680,7 @@ typedef struct _WINHTTP_HTTP2_RECEIVE_WINDOW
 #define WINHTTP_OPTION_RECEIVE_PROXY_CONNECT_RESPONSE   103
 #define WINHTTP_OPTION_IS_PROXY_CONNECT_RESPONSE        104
 
+#define WINHTTP_OPTION_NETWORK_INTERFACE_AFFINITY       105
 
 #define WINHTTP_OPTION_SERVER_SPN_USED                  106
 #define WINHTTP_OPTION_PROXY_SPN_USED                   107
@@ -2227,7 +2228,9 @@ VOID
 
 #define WINHTTP_PROXY_NOTIFY_CHANGE 0x0001
 
+WINHTTPAPI
 DWORD
+WINAPI
 WinHttpRegisterProxyChangeNotification(
     _In_ ULONGLONG ullFlags,
     _In_ WINHTTP_PROXY_CHANGE_CALLBACK pfnCallback,
@@ -2235,7 +2238,9 @@ WinHttpRegisterProxyChangeNotification(
     _Out_ WINHTTP_PROXY_CHANGE_REGISTRATION_HANDLE *hRegistration
 );
 
+WINHTTPAPI
 DWORD
+WINAPI
 WinHttpUnregisterProxyChangeNotification(
     _In_ WINHTTP_PROXY_CHANGE_REGISTRATION_HANDLE hRegistration
 );
@@ -2268,7 +2273,9 @@ typedef struct _WINHTTP_PROXY_SETTINGS_EX
     PCWSTR pcwszConnectionName;
 } WINHTTP_PROXY_SETTINGS_EX, *PWINHTTP_PROXY_SETTINGS_EX;
 
+WINHTTPAPI
 DWORD
+WINAPI
 WinHttpGetProxySettingsEx(
     _In_ HINTERNET hResolver,
     _In_ WINHTTP_PROXY_SETTINGS_TYPE ProxySettingsType,
@@ -2280,13 +2287,17 @@ WinHttpGetProxySettingsEx(
     _In_opt_ DWORD_PTR pContext
 );
 
+WINHTTPAPI
 DWORD
+WINAPI
 WinHttpGetProxySettingsResultEx(
     _In_ HINTERNET hResolver,
     _Out_ PVOID pProxySettingsEx
 );
 
+WINHTTPAPI
 DWORD
+WINAPI
 WinHttpFreeProxySettingsEx(
     _In_ WINHTTP_PROXY_SETTINGS_TYPE ProxySettingsType,
     _In_ PVOID pProxySettingsEx

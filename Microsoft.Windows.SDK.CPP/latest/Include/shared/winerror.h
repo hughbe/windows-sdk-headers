@@ -50304,6 +50304,24 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define FVE_E_AAD_SERVER_FAIL_BACKOFF    _HRESULT_TYPEDEF_(0x803100EAL)
 
 //
+// MessageId: FVE_E_DATASET_FULL
+//
+// MessageText:
+//
+// This operation cannot be completed because dataset is full.
+//
+#define FVE_E_DATASET_FULL               _HRESULT_TYPEDEF_(0x803100EBL)
+
+//
+// MessageId: FVE_E_METADATA_FULL
+//
+// MessageText:
+//
+// This operation cannot be completed because BitLocker Drive Encryption metadata area is full. Consider removing unnecessary key protectors for this drive.
+//
+#define FVE_E_METADATA_FULL              _HRESULT_TYPEDEF_(0x803100ECL)
+
+//
 // =======================================================
 // Windows Filtering Platform Error Messages
 // =======================================================

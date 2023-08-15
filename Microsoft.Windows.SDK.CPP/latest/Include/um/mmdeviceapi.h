@@ -287,7 +287,7 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  ERole role,
             /* [annotation][in] */ 
-            _In_  LPCWSTR pwstrDefaultDeviceId) = 0;
+            _In_opt_  LPCWSTR pwstrDefaultDeviceId) = 0;
         
         virtual /* [helpstring][id] */ HRESULT STDMETHODCALLTYPE OnPropertyValueChanged( 
             /* [annotation][in] */ 
@@ -347,7 +347,7 @@ EXTERN_C const IID IID_IMMNotificationClient;
             /* [annotation][in] */ 
             _In_  ERole role,
             /* [annotation][in] */ 
-            _In_  LPCWSTR pwstrDefaultDeviceId);
+            _In_opt_  LPCWSTR pwstrDefaultDeviceId);
         
         DECLSPEC_XFGVIRT(IMMNotificationClient, OnPropertyValueChanged)
         /* [helpstring][id] */ HRESULT ( STDMETHODCALLTYPE *OnPropertyValueChanged )( 
