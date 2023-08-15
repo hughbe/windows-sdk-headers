@@ -19,6 +19,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs)->get_AcceptedMedia(reinterpret_cast<uint32_t*>(&value)));
         return value;
     }
+    template <typename D> auto consume_Windows_Phone_Networking_Voip_ICallAnswerEventArgs2<D>::SourceDeviceId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2)->get_SourceDeviceId(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> auto consume_Windows_Phone_Networking_Voip_ICallRejectEventArgs<D>::RejectReason() const
     {
         winrt::Windows::Phone::Networking::Voip::VoipCallRejectReason value{};
@@ -277,6 +283,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Phone::Networking::Voip::VoipCallMedia>(this->shim().AcceptedMedia());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2> : produce_base<D, winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>
+    {
+        int32_t __stdcall get_SourceDeviceId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().SourceDeviceId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -753,6 +773,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Phone::Networking::Voip::IMuteChangeEventArgs> : winrt::impl::hash_base {};

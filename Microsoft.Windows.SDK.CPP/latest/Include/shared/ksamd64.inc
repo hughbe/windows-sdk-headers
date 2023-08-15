@@ -580,7 +580,7 @@ ThWin32Thread equ 001C8H
 ThStackBase equ 00038H
 ThLegoData equ 002D0H
 KernelThreadObjectLength equ 00480H
-ExecutiveThreadObjectLength equ 009E8H
+ExecutiveThreadObjectLength equ 006E0H
 
 
 ;
@@ -905,6 +905,7 @@ PcRspBase equ 001A8H
 PcRspBaseShadow equ 0A008H
 PcShadowFlags equ 0A018H
 PcVerwSelector equ 0A02AH
+PcIsrStackNesting equ 09910H
 PcPrcbLock equ 001B0H
 PcCr0 equ 00280H
 PcCr2 equ 00288H

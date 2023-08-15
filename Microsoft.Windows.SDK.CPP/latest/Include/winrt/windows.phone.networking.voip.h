@@ -133,6 +133,23 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Phone {
+            namespace Networking {
+                namespace Voip {
+                    interface ICallAnswerEventArgs2;
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2 ABI::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2
+
+#endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_FWD_DEFINED__
 namespace ABI {
@@ -863,6 +880,47 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Phone.Networking.Voip.ICallAnswerEventArgs2
+ *
+ * Introduced to Windows.Phone.PhoneInternalContract in version 1.0
+ *
+ * Interface is a part of the implementation of type Windows.Phone.Networking.Voip.CallAnswerEventArgs
+ *
+ * Any object which implements this interface must also implement the following interfaces:
+ *     Windows.Phone.Networking.Voip.ICallAnswerEventArgs
+ *
+ */
+#if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
+#if !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Phone_Networking_Voip_ICallAnswerEventArgs2[] = L"Windows.Phone.Networking.Voip.ICallAnswerEventArgs2";
+namespace ABI {
+    namespace Windows {
+        namespace Phone {
+            namespace Networking {
+                namespace Voip {
+                    MIDL_INTERFACE("ec5dcbbe-3c84-4de4-8817-fc788173406e")
+                    ICallAnswerEventArgs2 : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_SourceDeviceId(
+                            HSTRING* value
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_ICallAnswerEventArgs2 = __uuidof(ICallAnswerEventArgs2);
+                } /* Voip */
+            } /* Networking */
+        } /* Phone */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 /*
@@ -1772,6 +1830,12 @@ typedef interface __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArg
 
 #endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+#define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2 __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2;
+
+#endif // ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_FWD_DEFINED__
+
 #ifndef ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_FWD_DEFINED__
 #define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallRejectEventArgs;
@@ -2245,6 +2309,78 @@ interface __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs
 
 EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs_INTERFACE_DEFINED__) */
+#endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
+
+/*
+ *
+ * Interface Windows.Phone.Networking.Voip.ICallAnswerEventArgs2
+ *
+ * Introduced to Windows.Phone.PhoneInternalContract in version 1.0
+ *
+ * Interface is a part of the implementation of type Windows.Phone.Networking.Voip.CallAnswerEventArgs
+ *
+ * Any object which implements this interface must also implement the following interfaces:
+ *     Windows.Phone.Networking.Voip.ICallAnswerEventArgs
+ *
+ */
+#if WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
+#if !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Phone_Networking_Voip_ICallAnswerEventArgs2[] = L"Windows.Phone.Networking.Voip.ICallAnswerEventArgs2";
+typedef struct __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2Vtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceDeviceId)(__x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2* This,
+        HSTRING* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2Vtbl;
+
+interface __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2
+{
+    CONST_VTBL struct __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2Vtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_get_SourceDeviceId(This, value) \
+    ((This)->lpVtbl->get_SourceDeviceId(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2;
+#endif /* !defined(____x_ABI_CWindows_CPhone_CNetworking_CVoip_CICallAnswerEventArgs2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION >= 0x10000
 
 /*

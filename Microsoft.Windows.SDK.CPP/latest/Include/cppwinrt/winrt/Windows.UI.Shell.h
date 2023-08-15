@@ -272,16 +272,6 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->put_Group(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::ExternalTab() const
-    {
-        void* value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->get_ExternalTab(&value));
-        return winrt::Windows::Foundation::IInspectable{ value, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::ExternalTab(winrt::Windows::Foundation::IInspectable const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->put_ExternalTab(*(void**)(&value)));
-    }
     template <typename D> auto consume_Windows_UI_Shell_IWindowTab<D>::ReportThumbnailAvailable() const
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTab)->ReportThumbnailAvailable());
@@ -479,12 +469,6 @@ namespace winrt::impl
         void* result{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->GetDeferral(&result));
         return winrt::Windows::Foundation::Deferral{ result, take_ownership_from_abi };
-    }
-    template <typename D> auto consume_Windows_UI_Shell_IWindowTabThumbnailRequestedEventArgs<D>::IsCompositedOnWindow() const
-    {
-        bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs)->get_IsCompositedOnWindow(&value));
-        return value;
     }
     template <typename D>
     struct produce<D, winrt::Windows::UI::Shell::IAdaptiveCard> : produce_base<D, winrt::Windows::UI::Shell::IAdaptiveCard>
@@ -894,21 +878,6 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_ExternalTab(void** value) noexcept final try
-        {
-            clear_abi(value);
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::Foundation::IInspectable>(this->shim().ExternalTab());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_ExternalTab(void* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().ExternalTab(*reinterpret_cast<winrt::Windows::Foundation::IInspectable const*>(&value));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
         int32_t __stdcall ReportThumbnailAvailable() noexcept final try
         {
             typename D::abi_guard guard(this->shim());
@@ -1220,13 +1189,6 @@ namespace winrt::impl
             clear_abi(result);
             typename D::abi_guard guard(this->shim());
             *result = detach_from<winrt::Windows::Foundation::Deferral>(this->shim().GetDeferral());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall get_IsCompositedOnWindow(bool* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().IsCompositedOnWindow());
             return 0;
         }
         catch (...) { return to_hresult(); }

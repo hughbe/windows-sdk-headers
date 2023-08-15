@@ -5367,7 +5367,7 @@ FwpmvSwitchEventsSetSecurityInfo0(
 //
 ////////////////////////////////////////////////////////////////
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
 DWORD
 WINAPI
 FwpmConnectionPolicyAdd0(
@@ -5387,7 +5387,7 @@ FwpmConnectionPolicyDeleteByKey0(
    _In_ HANDLE engineHandle,
    _In_ const GUID* key
    );
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_CU)
 
 #ifdef __cplusplus
 }

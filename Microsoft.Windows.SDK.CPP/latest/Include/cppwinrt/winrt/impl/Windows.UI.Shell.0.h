@@ -197,7 +197,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManager>{ 0x87490A19,0x1AD9,0x49F4,{ 0xB2,0xE8,0x86,0x73,0x8D,0xC5,0xAC,0x40 } }; // 87490A19-1AD9-49F4-B2E8-86738DC5AC40
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManager2>{ 0x79F0A06E,0x7B02,0x4911,{ 0x91,0x8C,0xDE,0xE0,0xBB,0xD2,0x0B,0xA4 } }; // 79F0A06E-7B02-4911-918C-DEE0BBD20BA4
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::ITaskbarManagerStatics>{ 0xDB32AB74,0xDE52,0x4FE6,{ 0xB7,0xB6,0x95,0xFF,0x9F,0x83,0x95,0xDF } }; // DB32AB74-DE52-4FE6-B7B6-95FF9F8395DF
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTab>{ 0xFA99600F,0xDA81,0x5D2C,{ 0x81,0x07,0x88,0x25,0x90,0xF5,0x3F,0xB4 } }; // FA99600F-DA81-5D2C-8107-882590F53FB4
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTab>{ 0xAB8E2D12,0x707F,0x5A15,{ 0x8A,0xCD,0x92,0x70,0x00,0x81,0x2E,0x18 } }; // AB8E2D12-707F-5A15-8ACD-927000812E18
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabCloseRequestedEventArgs>{ 0x477282E9,0xEEC4,0x5882,{ 0x98,0x89,0x2D,0xD6,0x4D,0x0F,0x9F,0xB6 } }; // 477282E9-EEC4-5882-9889-2DD64D0F9FB6
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabCollection>{ 0xACCD0D6C,0xED07,0x519A,{ 0x8C,0x33,0x17,0xE0,0x2E,0x7E,0x9B,0x0F } }; // ACCD0D6C-ED07-519A-8C33-17E02E7E9B0F
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabGroup>{ 0x9E490279,0xD59B,0x574D,{ 0x8D,0xA2,0x42,0xAA,0x08,0x12,0xBB,0x3A } }; // 9E490279-D59B-574D-8DA2-42AA0812BB3A
@@ -207,7 +207,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabManagerStatics>{ 0xBC99B38A,0x43C1,0x5B14,{ 0x95,0x92,0x9D,0x01,0xBF,0x34,0x4B,0x21 } }; // BC99B38A-43C1-5B14-9592-9D01BF344B21
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabSwitchRequestedEventArgs>{ 0x7CBC421A,0x58A4,0x568B,{ 0xA3,0x51,0xF8,0xA9,0x47,0xA5,0xAA,0xD8 } }; // 7CBC421A-58A4-568B-A351-F8A947A5AAD8
     template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabTearOutRequestedEventArgs>{ 0x17D66659,0x5005,0x5ECE,{ 0x99,0xAF,0x56,0x63,0x06,0xE7,0x36,0x42 } }; // 17D66659-5005-5ECE-99AF-566306E73642
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>{ 0xB6E256DF,0xD524,0x53A1,{ 0xB1,0xEB,0x1E,0x39,0xA2,0x1E,0xD3,0x41 } }; // B6E256DF-D524-53A1-B1EB-1E39A21ED341
+    template <> inline constexpr guid guid_v<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>{ 0x567A78CE,0xC0AE,0x59B5,{ 0xA9,0x5C,0x7A,0x84,0x5E,0xB9,0x92,0x30 } }; // 567A78CE-C0AE-59B5-A95C-7A845EB99230
     template <> struct default_interface<winrt::Windows::UI::Shell::FocusSession>{ using type = winrt::Windows::UI::Shell::IFocusSession; };
     template <> struct default_interface<winrt::Windows::UI::Shell::FocusSessionManager>{ using type = winrt::Windows::UI::Shell::IFocusSessionManager; };
     template <> struct default_interface<winrt::Windows::UI::Shell::SecurityAppManager>{ using type = winrt::Windows::UI::Shell::ISecurityAppManager; };
@@ -344,8 +344,6 @@ namespace winrt::impl
             virtual int32_t __stdcall put_Icon(void*) noexcept = 0;
             virtual int32_t __stdcall get_Group(void**) noexcept = 0;
             virtual int32_t __stdcall put_Group(void*) noexcept = 0;
-            virtual int32_t __stdcall get_ExternalTab(void**) noexcept = 0;
-            virtual int32_t __stdcall put_ExternalTab(void*) noexcept = 0;
             virtual int32_t __stdcall ReportThumbnailAvailable() noexcept = 0;
         };
     };
@@ -440,7 +438,6 @@ namespace winrt::impl
             virtual int32_t __stdcall get_Image(void**) noexcept = 0;
             virtual int32_t __stdcall put_Image(void*) noexcept = 0;
             virtual int32_t __stdcall GetDeferral(void**) noexcept = 0;
-            virtual int32_t __stdcall get_IsCompositedOnWindow(bool*) noexcept = 0;
         };
     };
     template <typename D>
@@ -593,8 +590,6 @@ namespace winrt::impl
         auto Icon(winrt::Windows::UI::Shell::WindowTabIcon const& value) const;
         [[nodiscard]] auto Group() const;
         auto Group(winrt::Windows::UI::Shell::WindowTabGroup const& value) const;
-        [[nodiscard]] auto ExternalTab() const;
-        auto ExternalTab(winrt::Windows::Foundation::IInspectable const& value) const;
         auto ReportThumbnailAvailable() const;
     };
     template <> struct consume<winrt::Windows::UI::Shell::IWindowTab>
@@ -717,7 +712,6 @@ namespace winrt::impl
         [[nodiscard]] auto Image() const;
         auto Image(winrt::Windows::Storage::Streams::IRandomAccessStreamReference const& value) const;
         auto GetDeferral() const;
-        [[nodiscard]] auto IsCompositedOnWindow() const;
     };
     template <> struct consume<winrt::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs>
     {

@@ -379,7 +379,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTab)]
-            [uuid(FA99600F-DA81-5D2C-8107-882590F53FB4)]
+            [uuid(AB8E2D12-707F-5A15-8ACD-927000812E18)]
             interface IWindowTab : IInspectable
             {
                 [propget] HRESULT Tag([out] [retval] IInspectable** value);
@@ -390,8 +390,6 @@ namespace Windows
                 [propput] HRESULT Icon([in] Windows.UI.Shell.WindowTabIcon* value);
                 [propget] HRESULT Group([out] [retval] Windows.UI.Shell.WindowTabGroup** value);
                 [propput] HRESULT Group([in] Windows.UI.Shell.WindowTabGroup* value);
-                [propget] HRESULT ExternalTab([out] [retval] IInspectable** value);
-                [propput] HRESULT ExternalTab([in] IInspectable* value);
                 HRESULT ReportThumbnailAvailable();
             }
 
@@ -488,7 +486,7 @@ namespace Windows
 
             [contract(Windows.UI.Shell.WindowTabManagerContract, 1.0)]
             [exclusiveto(Windows.UI.Shell.WindowTabThumbnailRequestedEventArgs)]
-            [uuid(B6E256DF-D524-53A1-B1EB-1E39A21ED341)]
+            [uuid(567A78CE-C0AE-59B5-A95C-7A845EB99230)]
             interface IWindowTabThumbnailRequestedEventArgs : IInspectable
             {
                 [propget] HRESULT Tab([out] [retval] Windows.UI.Shell.WindowTab** value);
@@ -496,7 +494,6 @@ namespace Windows
                 [propget] HRESULT Image([out] [retval] Windows.Storage.Streams.IRandomAccessStreamReference** value);
                 [propput] HRESULT Image([in] Windows.Storage.Streams.IRandomAccessStreamReference* value);
                 HRESULT GetDeferral([out] [retval] Windows.Foundation.Deferral** result);
-                [propget] HRESULT IsCompositedOnWindow([out] [retval] boolean* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 5.0)]

@@ -3288,9 +3288,12 @@ InterlockedExchangePointer(
 #if (_MSC_VER >= 1600)
 
 #define InterlockedExchange8 _InterlockedExchange8
-#define InterlockedExchange16 _InterlockedExchange16
 #define InterlockedExchangeNoFence8 InterlockedExchange8
 #define InterlockedExchangeAcquire8 InterlockedExchange8
+
+#define InterlockedExchange16 _InterlockedExchange16
+#define InterlockedExchangeNoFence16 InterlockedExchange16
+#define InterlockedExchangeAcquire16 InterlockedExchange16
 
 CHAR
 InterlockedExchange8 (
@@ -3326,9 +3329,19 @@ InterlockedExchange16 (
 #define InterlockedXorAcquire8 _InterlockedXor8
 #define InterlockedXorRelease8 _InterlockedXor8
 #define InterlockedXorNoFence8 _InterlockedXor8
+#define InterlockedExchangeAdd16 _InterlockedExchangeAdd16
 #define InterlockedAnd16 _InterlockedAnd16
+#define InterlockedAndAcquire16 InterlockedAnd16
+#define InterlockedAndRelease16 InterlockedAnd16
+#define InterlockedAndNoFence16 InterlockedAnd16
 #define InterlockedOr16 _InterlockedOr16
+#define InterlockedOrAcquire16 InterlockedOr16
+#define InterlockedOrRelease16 InterlockedOr16
+#define InterlockedOrNoFence16 InterlockedOr16
 #define InterlockedXor16 _InterlockedXor16
+#define InterlockedXorAcquire16 InterlockedXor16
+#define InterlockedXorRelease16 InterlockedXor16
+#define InterlockedXorNoFence16 InterlockedXor16
 
 char
 InterlockedExchangeAdd8 (
@@ -7686,9 +7699,12 @@ _InlineInterlockedCompareExchangePointer (
 #if (_MSC_VER >= 1600)
 
 #define InterlockedExchange8 _InterlockedExchange8
-#define InterlockedExchange16 _InterlockedExchange16
 #define InterlockedExchangeNoFence8 InterlockedExchange8
 #define InterlockedExchangeAcquire8 InterlockedExchange8
+
+#define InterlockedExchange16 _InterlockedExchange16
+#define InterlockedExchangeNoFence16 InterlockedExchange16
+#define InterlockedExchangeAcquire16 InterlockedExchange16
 
 CHAR
 InterlockedExchange8 (
@@ -7722,12 +7738,19 @@ InterlockedExchange16 (
 #define InterlockedXorAcquire8 _InterlockedXor8
 #define InterlockedXorRelease8 _InterlockedXor8
 #define InterlockedXorNoFence8 _InterlockedXor8
+#define InterlockedExchangeAdd16 _InterlockedExchangeAdd16
 #define InterlockedAnd16 _InterlockedAnd16
+#define InterlockedAndAcquire16 InterlockedAnd16
+#define InterlockedAndRelease16 InterlockedAnd16
+#define InterlockedAndNoFence16 InterlockedAnd16
 #define InterlockedOr16 _InterlockedOr16
+#define InterlockedOrAcquire16 InterlockedOr16
+#define InterlockedOrRelease16 InterlockedOr16
+#define InterlockedOrNoFence16 InterlockedOr16
 #define InterlockedXor16 _InterlockedXor16
-#define InterlockedCompareExchange16 _InterlockedCompareExchange16
-#define InterlockedIncrement16 _InterlockedIncrement16
-#define InterlockedDecrement16 _InterlockedDecrement16
+#define InterlockedXorAcquire16 InterlockedXor16
+#define InterlockedXorRelease16 InterlockedXor16
+#define InterlockedXorNoFence16 InterlockedXor16
 
 char
 InterlockedExchangeAdd8 (
@@ -8859,6 +8882,54 @@ WriteRaw64 (
 
     *(LONG64 *)Destination = Value;
     return;
+}
+
+FORCEINLINE
+LONG
+AddRaw (
+    _Inout_ _Interlocked_operand_ LONG volatile *Destination,
+    _In_ LONG Value
+    )
+
+{
+    LONG NewValue;
+
+    NewValue = ReadRaw(Destination);
+    NewValue += Value;
+    WriteRaw(Destination, NewValue);
+
+    return NewValue;
+}
+
+FORCEINLINE
+DWORD
+AddULongRaw (
+    _Inout_ _Interlocked_operand_ DWORD volatile *Destination,
+    _In_ DWORD Value
+    )
+
+{
+    return (DWORD)AddRaw((PLONG)Destination, (LONG)Value);
+}
+
+FORCEINLINE
+LONG
+IncrementRaw (
+    _Inout_ _Interlocked_operand_ LONG volatile *Destination
+    )
+
+{
+    return AddRaw(Destination, 1);
+}
+
+FORCEINLINE
+DWORD
+IncrementULongRaw (
+    _Inout_ _Interlocked_operand_ DWORD volatile *Destination
+    )
+
+{
+    return (DWORD)IncrementRaw((PLONG)Destination);
 }
 
 //
@@ -13507,6 +13578,7 @@ typedef enum _JOBOBJECTINFOCLASS {
     JobObjectReserved25Information = 47,
     JobObjectReserved26Information = 48,
     JobObjectReserved27Information = 49,
+    JobObjectReserved28Information = 50,
     MaxJobObjectInfoClass
 } JOBOBJECTINFOCLASS;
 
@@ -13539,6 +13611,11 @@ typedef struct _SERVERSILO_BASIC_INFORMATION {
     DWORD ContainerBuildNumber;
     DWORD HostBuildNumber;
 } SERVERSILO_BASIC_INFORMATION, *PSERVERSILO_BASIC_INFORMATION;
+
+typedef struct _SERVERSILO_DIAGNOSTIC_INFORMATION {
+    DWORD    ExitStatus;
+    BYTE  CriticalProcessName[15];
+} SERVERSILO_DIAGNOSTIC_INFORMATION, *PSERVERSILO_DIAGNOSTIC_INFORMATION;
 
 //
 // begin_wdm
@@ -14227,7 +14304,6 @@ typedef struct _CFG_CALL_TARGET_INFO {
 #define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE            0x00000010  
 #define MEM_EXTENDED_PARAMETER_SOFT_FAULT_PAGES         0x00000020  
 #define MEM_EXTENDED_PARAMETER_EC_CODE                  0x00000040  
-#define MEM_EXTENDED_PARAMETER_IMAGE_NO_HPAT            0x00000080  
 #define MEM_EXTENDED_PARAMETER_NUMA_NODE_MANDATORY      MINLONG64	  
 // begin_wdm
 
@@ -17576,6 +17652,7 @@ typedef enum {
     MonitorRequestReasonPdcSignalSensorsHumanPresence,          // PDC_SIGNAL_PROVIDER_SENSORS_HUMAN_PRESENCE_MONITOR
     MonitorRequestReasonBatteryPreCritical,
     MonitorRequestReasonUserInputTouch,
+    MonitorRequestReasonAusterityBatteryDrain,
     MonitorRequestReasonMax
 } POWER_MONITOR_REQUEST_REASON;
 
@@ -20601,6 +20678,7 @@ typedef struct _IMAGE_DEBUG_DIRECTORY {
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_DYNAMIC_APIS_ALLOW_IN_PROC              0x08
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_1                              0x10  // Reserved for CET policy *downgrade* only!
 #define IMAGE_DLLCHARACTERISTICS_EX_CET_RESERVED_2                              0x20  // Reserved for CET policy *downgrade* only!
+#define IMAGE_DLLCHARACTERISTICS_EX_HOTPATCH_COMPATIBLE                         0x80
 
 
 typedef struct _IMAGE_COFF_SYMBOLS_HEADER {

@@ -16,6 +16,14 @@ WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
         ICallAnswerEventArgs(std::nullptr_t = nullptr) noexcept {}
         ICallAnswerEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) ICallAnswerEventArgs2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICallAnswerEventArgs2>,
+        impl::require<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2, winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>
+    {
+        ICallAnswerEventArgs2(std::nullptr_t = nullptr) noexcept {}
+        ICallAnswerEventArgs2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) ICallRejectEventArgs :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICallRejectEventArgs>

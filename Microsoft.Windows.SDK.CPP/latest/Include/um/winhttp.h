@@ -816,7 +816,9 @@ typedef struct _WINHTTP_HTTP2_RECEIVE_WINDOW
 
 #define WINHTTP_OPTION_USE_LOOKASIDE                    203
 
-#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_USE_LOOKASIDE
+#define WINHTTP_OPTION_ERROR_LOG_GUID                   204
+
+#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_ERROR_LOG_GUID
 
 #define WINHTTP_OPTION_USERNAME                         0x1000
 #define WINHTTP_OPTION_PASSWORD                         0x1001

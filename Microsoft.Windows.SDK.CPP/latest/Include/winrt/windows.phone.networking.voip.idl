@@ -51,6 +51,8 @@ namespace Windows
 
                 interface ICallAnswerEventArgs;
 
+                interface ICallAnswerEventArgs2;
+
                 interface ICallRejectEventArgs;
 
                 interface ICallStateChangeEventArgs;
@@ -183,6 +185,16 @@ namespace Windows
                 interface ICallAnswerEventArgs : IInspectable
                 {
                     [propget] HRESULT AcceptedMedia([out] [retval] Windows.Phone.Networking.Voip.VoipCallMedia* value);
+                }
+
+                [contract(Windows.Phone.PhoneInternalContract, 1.0)]
+                [exclusiveto(Windows.Phone.Networking.Voip.CallAnswerEventArgs)]
+                [uuid(EC5DCBBE-3C84-4DE4-8817-FC788173406E)]
+                interface ICallAnswerEventArgs2 : IInspectable
+                    requires
+                        Windows.Phone.Networking.Voip.ICallAnswerEventArgs
+                {
+                    [propget] HRESULT SourceDeviceId([out] [retval] HSTRING* value);
                 }
 
                 [contract(Windows.Phone.PhoneInternalContract, 1.0)]

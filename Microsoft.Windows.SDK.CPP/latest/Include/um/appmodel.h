@@ -695,7 +695,10 @@ typedef enum PackageDependencyProcessorArchitectures
 } PackageDependencyProcessorArchitectures;
 DEFINE_ENUM_FLAG_OPERATORS(PackageDependencyProcessorArchitectures)
 
+#if !defined(__PACKAGEDEPENDENCY_CONTEXT_DEFINED__)
+#define __PACKAGEDEPENDENCY_CONTEXT_DEFINED__
 DECLARE_HANDLE(PACKAGEDEPENDENCY_CONTEXT);
+#endif
 
 /// Define a package dependency. The criteria for a PackageDependency
 /// (package family name, minimum version, etc)

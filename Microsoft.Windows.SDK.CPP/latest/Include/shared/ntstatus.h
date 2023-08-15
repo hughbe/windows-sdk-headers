@@ -10615,6 +10615,15 @@ Notes:
 //
 #define STATUS_FS_GUID_MISMATCH          ((NTSTATUS)0xC00004DEL)
 
+//
+// MessageId: STATUS_CANT_ATTACH_TO_DEV_VOLUME
+//
+// MessageText:
+//
+// The file system minifilter cannot attach to the developer volume.
+//
+#define STATUS_CANT_ATTACH_TO_DEV_VOLUME ((NTSTATUS)0xC00004DFL)
+
 
 //     **** New SYSTEM error codes can be inserted here ****
 

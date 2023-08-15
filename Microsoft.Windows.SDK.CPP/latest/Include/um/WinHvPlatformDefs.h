@@ -240,7 +240,8 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 NptExecuteOnlySupport : 1;
         UINT64 NptADFlagsSupport : 1;
         UINT64 Npt1GbPageSupport : 1;
-        UINT64 Reserved4 : 28;
+        UINT64 AmdProcessorTopologyNodeIdSupport : 1;
+        UINT64 Reserved4 : 27;
     };
 
     UINT64 AsUINT64;

@@ -3541,6 +3541,15 @@
 #define ERROR_FS_GUID_MISMATCH           477L
 
 //
+// MessageId: ERROR_CANT_ATTACH_TO_DEV_VOLUME
+//
+// MessageText:
+//
+// The file system minifilter cannot attach to the developer volume.
+//
+#define ERROR_CANT_ATTACH_TO_DEV_VOLUME  478L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //

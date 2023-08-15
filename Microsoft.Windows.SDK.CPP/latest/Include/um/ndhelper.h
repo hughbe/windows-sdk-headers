@@ -173,7 +173,7 @@ extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0000_v0_0_s_ifspec;
 #define __INetDiagHelper_INTERFACE_DEFINED__
 
 /* interface INetDiagHelper */
-/* [unique][helpstring][uuid][object] */ 
+/* [unique][uuid][object] */ 
 
 
 EXTERN_C const IID IID_INetDiagHelper;
@@ -492,7 +492,7 @@ extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0001_v0_0_s_ifspec;
 #define __INetDiagHelperUtilFactory_INTERFACE_DEFINED__
 
 /* interface INetDiagHelperUtilFactory */
-/* [unique][helpstring][uuid][object] */ 
+/* [unique][uuid][object] */ 
 
 
 EXTERN_C const IID IID_INetDiagHelperUtilFactory;
@@ -578,7 +578,7 @@ EXTERN_C const IID IID_INetDiagHelperUtilFactory;
 #define __INetDiagHelperEx_INTERFACE_DEFINED__
 
 /* interface INetDiagHelperEx */
-/* [unique][helpstring][uuid][object] */ 
+/* [unique][uuid][object] */ 
 
 
 EXTERN_C const IID IID_INetDiagHelperEx;
@@ -688,7 +688,7 @@ EXTERN_C const IID IID_INetDiagHelperEx;
 #define __INetDiagHelperInfo_INTERFACE_DEFINED__
 
 /* interface INetDiagHelperInfo */
-/* [unique][helpstring][uuid][object] */ 
+/* [unique][uuid][object] */ 
 
 
 EXTERN_C const IID IID_INetDiagHelperInfo;
@@ -774,7 +774,7 @@ EXTERN_C const IID IID_INetDiagHelperInfo;
 #define __INetDiagExtensibleHelper_INTERFACE_DEFINED__
 
 /* interface INetDiagExtensibleHelper */
-/* [unique][helpstring][uuid][object] */ 
+/* [unique][uuid][object] */ 
 
 
 EXTERN_C const IID IID_INetDiagExtensibleHelper;

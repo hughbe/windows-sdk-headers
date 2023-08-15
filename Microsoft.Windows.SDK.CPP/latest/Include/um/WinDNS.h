@@ -2250,11 +2250,64 @@ DnsRecordListFree(
 
 #define DNS_QUERY_DNSSEC_REQUIRED_AUTH_ONLY 0x2000000000000000 // Sets DNSSEC authenticated data (AD) bit in query (rfc6840) AND requires that response contains AD bit set
 
-
 //  Backward compatibility with Win2K
 //  Do not use
 
 #define DNS_QUERY_CACHE_ONLY                DNS_QUERY_NO_WIRE_QUERY
+
+//
+//  When DNS_QUERY_PARSE_ALL_RECORDS is NOT set: the following records will be parsed:
+//  DNS_TYPE_A
+//  DNS_TYPE_NS
+//  DNS_TYPE_MD
+//  DNS_TYPE_MF
+//  DNS_TYPE_CNAME
+//  DNS_TYPE_SOA
+//  DNS_TYPE_MB
+//  DNS_TYPE_MG
+//  DNS_TYPE_MR
+//  DNS_TYPE_WKS
+//  DNS_TYPE_PTR
+//  DNS_TYPE_HINFO
+//  DNS_TYPE_MINFO
+//  DNS_TYPE_MX
+//  DNS_TYPE_TEXT
+//  DNS_TYPE_RP
+//  DNS_TYPE_AFSDB
+//  DNS_TYPE_X25
+//  DNS_TYPE_ISDN
+//  DNS_TYPE_RT
+//  DNS_TYPE_SIG
+//  DNS_TYPE_KEY
+//  DNS_TYPE_AAAA
+//  DNS_TYPE_SRV
+//  DNS_TYPE_ATMA
+//  DNS_TYPE_NAPTR
+//  DNS_TYPE_DNAME
+//  DNS_TYPE_OPT
+//  DNS_TYPE_DS
+//  DNS_TYPE_RRSIG
+//  DNS_TYPE_NSEC
+//  DNS_TYPE_DNSKEY
+//  DNS_TYPE_DHCID
+//  DNS_TYPE_NSEC3
+//  DNS_TYPE_NSEC3PARAM
+//  DNS_TYPE_TLSA
+//  DNS_TYPE_TKEY
+//  DNS_TYPE_TSIG
+//  DNS_TYPE_WINS
+//  DNS_TYPE_WINSR
+//  All other record types will be returned in flat format (so long as they are flat read compatible)
+//  and it is the caller's responsibility to parse them if needed
+//  NOTE: to get any other record types back in a parsed format (where available) one must set DNS_QUERY_PARSE_ALL_RECORDS
+//
+
+//
+//  When DNS_QUERY_PARSE_ALL_RECORDS is set: ONLY parsed records will be returned (unknown records which cannot be parsed will not be returned)
+//  NOTE: for backwards compatiblity one MUST set this flag to parse DNS_TYPE_SVCB/DNS_TYPE_HTTPS, or any new record types defined in the future
+//
+
+#define DNS_QUERY_PARSE_ALL_RECORDS         0x0400000000000000
 
 
 
@@ -2568,6 +2621,8 @@ typedef struct _DNS_QUERY_RAW_REQUEST
     [size_is(dnsQueryRawSize)]
 #endif
     _Field_size_bytes_(dnsQueryRawSize) BYTE            *dnsQueryRaw;
+    PWSTR                                               dnsQueryName;
+    USHORT                                              dnsQueryType;
     ULONG64                                             queryOptions;
     ULONG                                               interfaceIndex;
     DNS_QUERY_RAW_COMPLETION_ROUTINE                    queryCompletionCallback;

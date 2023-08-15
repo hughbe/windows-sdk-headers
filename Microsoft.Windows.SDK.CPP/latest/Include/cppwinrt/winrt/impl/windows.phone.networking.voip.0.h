@@ -47,6 +47,7 @@ WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
         QueryRemotePartySeamless = 0,
     };
     struct ICallAnswerEventArgs;
+    struct ICallAnswerEventArgs2;
     struct ICallRejectEventArgs;
     struct ICallStateChangeEventArgs;
     struct IMuteChangeEventArgs;
@@ -74,6 +75,7 @@ WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
 namespace winrt::impl
 {
     template <> struct category<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::IMuteChangeEventArgs>{ using type = interface_category; };
@@ -115,6 +117,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::VoipCallState> = L"Windows.Phone.Networking.Voip.VoipCallState";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::VoipOperationType> = L"Windows.Phone.Networking.Voip.VoipOperationType";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs> = L"Windows.Phone.Networking.Voip.ICallAnswerEventArgs";
+    template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2> = L"Windows.Phone.Networking.Voip.ICallAnswerEventArgs2";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs> = L"Windows.Phone.Networking.Voip.ICallRejectEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs> = L"Windows.Phone.Networking.Voip.ICallStateChangeEventArgs";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IMuteChangeEventArgs> = L"Windows.Phone.Networking.Voip.IMuteChangeEventArgs";
@@ -132,6 +135,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3> = L"Windows.Phone.Networking.Voip.IVoipPhoneCall3";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady> = L"Windows.Phone.Networking.Voip.IVoipPhoneCallReady";
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>{ 0x61F132AA,0xF92A,0x48FA,{ 0xAA,0x8F,0x4F,0x3A,0x17,0x66,0x29,0x80 } }; // 61F132AA-F92A-48FA-AA8F-4F3A17662980
+    template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>{ 0xEC5DCBBE,0x3C84,0x4DE4,{ 0x88,0x17,0xFC,0x78,0x81,0x73,0x40,0x6E } }; // EC5DCBBE-3C84-4DE4-8817-FC788173406E
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs>{ 0x3E04061A,0xCE7D,0x49C2,{ 0xA2,0xB8,0x7F,0x49,0xB6,0xEA,0xEB,0xC5 } }; // 3E04061A-CE7D-49C2-A2B8-7F49B6EAEBC5
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallStateChangeEventArgs>{ 0x1F3E87B0,0xD371,0x4395,{ 0x8B,0x6C,0x17,0x86,0xA4,0x2E,0x2F,0x18 } }; // 1F3E87B0-D371-4395-8B6C-1786A42E2F18
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IMuteChangeEventArgs>{ 0xF914EAD4,0x1C94,0x458C,{ 0xAC,0xB7,0x19,0x26,0xA2,0x33,0xF7,0x4C } }; // F914EAD4-1C94-458C-ACB7-1926A233F74C
@@ -160,6 +164,13 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall get_AcceptedMedia(uint32_t*) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_SourceDeviceId(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs>
@@ -312,6 +323,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>
     {
         template <typename D> using type = consume_Windows_Phone_Networking_Voip_ICallAnswerEventArgs<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Phone_Networking_Voip_ICallAnswerEventArgs2
+    {
+        [[nodiscard]] auto SourceDeviceId() const;
+    };
+    template <> struct consume<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>
+    {
+        template <typename D> using type = consume_Windows_Phone_Networking_Voip_ICallAnswerEventArgs2<D>;
     };
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_ICallRejectEventArgs

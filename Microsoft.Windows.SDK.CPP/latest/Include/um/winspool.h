@@ -3379,6 +3379,7 @@ _In_        LPWSTR   pPrintProvidorName
 #define SPLDS_URL                               TEXT("url")
 #define SPLDS_FLAGS                             TEXT("flags")
 #define SPLDS_VERSION_NUMBER                    TEXT("versionNumber")
+#define SPLDS_PRINT_IPP_COMPRESSION_SUPPORTED   TEXT("ippCompressionSupported")
 
 /*
     -- Additional Print-Queue properties --

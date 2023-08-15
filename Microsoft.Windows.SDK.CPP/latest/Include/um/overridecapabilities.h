@@ -405,8 +405,11 @@
 #define OVRDCAP_ARM64_V2_CAPSET                           0x0001001A
 #define OVRDCAP_ARM64_CFG_CHECK_OPT                       0x0001001B // MUST NOT CHANGE, hard coded in compiler
 #define OVRDCAP_ARM64_CFG_DISPATCH_OPT                    0x0001001C // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_ARM64_EC_CFG_CHECK_OPT                    0x0001001D // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_ARM64_EC_ICALL_CHECK_OPT                  0x0001001E // MUST NOT CHANGE, hard coded in compiler
+#define OVRDCAP_ARM64_EC_CALL_CHECK_OPT                   0x0001001F // MUST NOT CHANGE, hard coded in compiler
 
-#define OVRDCAP_ARM64_MAX                                 0x0001001D
+#define OVRDCAP_ARM64_MAX                                 0x00010020
 
 #define OVRDCAP_ALWAYS_OFF                                0x7FFFFFFF
 

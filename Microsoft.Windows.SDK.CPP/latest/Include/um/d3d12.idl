@@ -1496,6 +1496,7 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS16
 {
     [annotation("_Out_")] BOOL DynamicDepthBiasSupported;
     [annotation("_Out_")] BOOL GPUUploadHeapSupported;
+    [annotation("_Out_")] BOOL ManualWriteTrackingResourceSupported;
 } D3D12_FEATURE_DATA_D3D12_OPTIONS16;
 
 // D3D12_FEATURE_D3D12_OPTIONS17
@@ -5541,15 +5542,6 @@ interface ID3D12Device9
     );
 };
 
-[uuid(5405c344-d457-444e-b4dd-2366e45aee39), object, local, pointer_default(unique)]
-interface ID3D12Device11
-    : ID3D12Device10
-{
-    void CreateSampler2(
-        [annotation("_In_")] const D3D12_SAMPLER_DESC2* pDesc,
-        [annotation("_In_")] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor);
-};
-
 [uuid(517f8718-aa66-49f9-b02b-a7ab89c06031), object, local, pointer_default(unique)]
 interface ID3D12Device10
     : ID3D12Device9
@@ -5562,7 +5554,7 @@ interface ID3D12Device10
         [annotation("_In_opt_")] const D3D12_CLEAR_VALUE* pOptimizedClearValue,
         [annotation("_In_opt_")] ID3D12ProtectedResourceSession* pProtectedSession,
         UINT32 NumCastableFormats,
-        [annotation("_In_opt_count_(NumCastableFormats)")] DXGI_FORMAT *pCastableFormats,
+        [annotation("_In_opt_count_(NumCastableFormats)")] const DXGI_FORMAT *pCastableFormats,
         [in] REFIID riidResource, // Expected: ID3D12Resource1*
         [out, iid_is(riidResource), annotation("_COM_Outptr_opt_")] void** ppvResource);
 
@@ -5573,7 +5565,7 @@ interface ID3D12Device10
         D3D12_BARRIER_LAYOUT InitialLayout,
         [annotation("_In_opt_")] const D3D12_CLEAR_VALUE* pOptimizedClearValue,
         UINT32 NumCastableFormats,
-        [annotation("_In_opt_count_(NumCastableFormats)")] DXGI_FORMAT *pCastableFormats,
+        [annotation("_In_opt_count_(NumCastableFormats)")] const DXGI_FORMAT *pCastableFormats,
         [in] REFIID riid, // Expected: ID3D12Resource*
         [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppvResource);
 
@@ -5583,10 +5575,32 @@ interface ID3D12Device10
         [annotation("_In_opt_")] const D3D12_CLEAR_VALUE* pOptimizedClearValue,
         [annotation("_In_opt_")] ID3D12ProtectedResourceSession *pProtectedSession,
         UINT32 NumCastableFormats,
-        [annotation("_In_opt_count_(NumCastableFormats)")] DXGI_FORMAT *pCastableFormats,
+        [annotation("_In_opt_count_(NumCastableFormats)")] const DXGI_FORMAT *pCastableFormats,
         [in] REFIID riid, // Expected: ID3D12Resource1*
         [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppvResource
     );
+};
+
+[uuid(5405c344-d457-444e-b4dd-2366e45aee39), object, local, pointer_default(unique)]
+interface ID3D12Device11
+    : ID3D12Device10
+{
+    void CreateSampler2(
+        [annotation("_In_")] const D3D12_SAMPLER_DESC2* pDesc,
+        [annotation("_In_")] D3D12_CPU_DESCRIPTOR_HANDLE DestDescriptor);
+};
+
+[uuid(5af5c532-4c91-4cd0-b541-15a405395fc5), object, local, pointer_default(unique)]
+interface ID3D12Device12
+    : ID3D12Device11
+{
+    D3D12_RESOURCE_ALLOCATION_INFO GetResourceAllocationInfo3(
+        UINT visibleMask,
+        UINT numResourceDescs,
+        [annotation("_In_reads_(numResourceDescs)")] const D3D12_RESOURCE_DESC1* pResourceDescs,
+        [annotation("_In_opt_count_(numResourceDescs)")] const UINT32* pNumCastableFormats,
+        [annotation("_In_opt_count_(numResourceDescs)")] const DXGI_FORMAT *const *ppCastableFormats,
+        [annotation("_Out_writes_opt_(numResourceDescs)")] D3D12_RESOURCE_ALLOCATION_INFO1* pResourceAllocationInfo1);
 };
 
 [uuid(bc66d368-7373-4943-8757-fc87dc79e476), object, local, pointer_default(unique)]
@@ -6022,6 +6036,7 @@ cpp_quote( "DEFINE_GUID(IID_ID3D12ShaderCacheSession,0x28e2495d,0x0f64,0x4ae4,0x
 cpp_quote( "DEFINE_GUID(IID_ID3D12Device9,0x4c80e962,0xf032,0x4f60,0xbc,0x9e,0xeb,0xc2,0xcf,0xa1,0xd8,0x3c);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Device10,0x517f8718,0xaa66,0x49f9,0xb0,0x2b,0xa7,0xab,0x89,0xc0,0x60,0x31);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Device11,0x5405c344,0xd457,0x444e,0xb4,0xdd,0x23,0x66,0xe4,0x5a,0xee,0x39);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12Device12,0x5af5c532,0x4c91,0x4cd0,0xb5,0x41,0x15,0xa4,0x05,0x39,0x5f,0xc5);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12VirtualizationGuestDevice,0xbc66d368,0x7373,0x4943,0x87,0x57,0xfc,0x87,0xdc,0x79,0xe4,0x76);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12Tools,0x7071e1f0,0xe84b,0x4b33,0x97,0x4f,0x12,0xfa,0x49,0xde,0x65,0xc5);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12SDKConfiguration,0xe9eb5314,0x33aa,0x42b2,0xa7,0x18,0xd7,0x7f,0x58,0xb1,0xf1,0xc7);" )

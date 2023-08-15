@@ -571,7 +571,7 @@
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
 #define KernelThreadObjectLength 0x2a0
-#define ExecutiveThreadObjectLength 0x5c8
+#define ExecutiveThreadObjectLength 0x408
 
 #define KF_VFP_32REG 0x10
 

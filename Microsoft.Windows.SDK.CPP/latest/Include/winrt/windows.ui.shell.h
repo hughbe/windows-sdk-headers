@@ -537,7 +537,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("3e5624f9-99c8-5789-87fe-2e854b7d0c32"))
+struct __declspec(uuid("95c3a881-25be-5835-99dd-07eebb24cd4d"))
 IIterator<ABI::Windows::UI::Shell::WindowTab*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -564,7 +564,7 @@ typedef IIterator<ABI::Windows::UI::Shell::WindowTab*> __FIIterator_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("58d2b4dd-1df9-5083-8606-98c1f2dc834f"))
+struct __declspec(uuid("72801969-b5b4-5741-9893-2540fabd1a7b"))
 IIterable<ABI::Windows::UI::Shell::WindowTab*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -591,7 +591,7 @@ typedef IIterable<ABI::Windows::UI::Shell::WindowTab*> __FIIterable_1_Windows__C
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("6a2a8ebe-264f-54e2-b7a8-0f2f198edb17"))
+struct __declspec(uuid("c2b65430-0ef7-580b-b9e5-106b67dbe253"))
 IVectorView<ABI::Windows::UI::Shell::WindowTab*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -618,7 +618,7 @@ typedef IVectorView<ABI::Windows::UI::Shell::WindowTab*> __FIVectorView_1_Window
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
-struct __declspec(uuid("78838ccf-ccd6-5f55-8088-3d39dfd9440c"))
+struct __declspec(uuid("8543aec9-a1ed-5c20-8871-d1d6edb3dcd9"))
 IVector<ABI::Windows::UI::Shell::WindowTab*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTab*, ABI::Windows::UI::Shell::IWindowTab*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -869,7 +869,7 @@ namespace ABI {
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("ba7f65cf-169a-5df6-819c-ae872860d16e"))
+struct __declspec(uuid("41f3ab0f-8711-508b-befd-04c67aa0b27e"))
 ITypedEventHandler<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabManager*, ABI::Windows::UI::Shell::IWindowTabManager*>, ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::UI::Shell::WindowTabThumbnailRequestedEventArgs*, ABI::Windows::UI::Shell::IWindowTabThumbnailRequestedEventArgs*>>
 {
     static const wchar_t* z_get_rc_name_impl()
@@ -1755,7 +1755,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("fa99600f-da81-5d2c-8107-882590f53fb4")
+                MIDL_INTERFACE("ab8e2d12-707f-5a15-8acd-927000812e18")
                 IWindowTab : public IInspectable
                 {
                 public:
@@ -1782,12 +1782,6 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE put_Group(
                         ABI::Windows::UI::Shell::IWindowTabGroup* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_ExternalTab(
-                        IInspectable** value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_ExternalTab(
-                        IInspectable* value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ReportThumbnailAvailable(void) = 0;
                 };
@@ -2213,7 +2207,7 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace Shell {
-                MIDL_INTERFACE("b6e256df-d524-53a1-b1eb-1e39a21ed341")
+                MIDL_INTERFACE("567a78ce-c0ae-59b5-a95c-7a845eb99230")
                 IWindowTabThumbnailRequestedEventArgs : public IInspectable
                 {
                 public:
@@ -2231,9 +2225,6 @@ namespace ABI {
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeferral(
                         ABI::Windows::Foundation::IDeferral** result
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE get_IsCompositedOnWindow(
-                        boolean* value
                         ) = 0;
                 };
 
@@ -4643,10 +4634,6 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIWindowTabVtbl
         __x_ABI_CWindows_CUI_CShell_CIWindowTabGroup** value);
     HRESULT (STDMETHODCALLTYPE* put_Group)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
         __x_ABI_CWindows_CUI_CShell_CIWindowTabGroup* value);
-    HRESULT (STDMETHODCALLTYPE* get_ExternalTab)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
-        IInspectable** value);
-    HRESULT (STDMETHODCALLTYPE* put_ExternalTab)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This,
-        IInspectable* value);
     HRESULT (STDMETHODCALLTYPE* ReportThumbnailAvailable)(__x_ABI_CWindows_CUI_CShell_CIWindowTab* This);
 
     END_INTERFACE
@@ -4700,12 +4687,6 @@ interface __x_ABI_CWindows_CUI_CShell_CIWindowTab
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTab_put_Group(This, value) \
     ((This)->lpVtbl->put_Group(This, value))
-
-#define __x_ABI_CWindows_CUI_CShell_CIWindowTab_get_ExternalTab(This, value) \
-    ((This)->lpVtbl->get_ExternalTab(This, value))
-
-#define __x_ABI_CWindows_CUI_CShell_CIWindowTab_put_ExternalTab(This, value) \
-    ((This)->lpVtbl->put_ExternalTab(This, value))
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTab_ReportThumbnailAvailable(This) \
     ((This)->lpVtbl->ReportThumbnailAvailable(This))
@@ -5484,8 +5465,6 @@ typedef struct __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArg
         __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamReference* value);
     HRESULT (STDMETHODCALLTYPE* GetDeferral)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
         __x_ABI_CWindows_CFoundation_CIDeferral** result);
-    HRESULT (STDMETHODCALLTYPE* get_IsCompositedOnWindow)(__x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs* This,
-        boolean* value);
 
     END_INTERFACE
 } __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgsVtbl;
@@ -5529,9 +5508,6 @@ interface __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs
 
 #define __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs_GetDeferral(This, result) \
     ((This)->lpVtbl->GetDeferral(This, result))
-
-#define __x_ABI_CWindows_CUI_CShell_CIWindowTabThumbnailRequestedEventArgs_get_IsCompositedOnWindow(This, value) \
-    ((This)->lpVtbl->get_IsCompositedOnWindow(This, value))
 
 #endif /* COBJMACROS */
 
