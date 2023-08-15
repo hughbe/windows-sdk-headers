@@ -641,11 +641,9 @@ namespace ABI {
                     LampArrayKind_Wearable = 8,
                     LampArrayKind_Furniture = 9,
                     LampArrayKind_Art = 10,
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
                     LampArrayKind_Headset = 11,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
                 };
             } /* Lights */
         } /* Devices */
@@ -886,12 +884,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArray;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Devices.Lights.LampArray
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__
@@ -925,7 +920,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArray2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -1844,11 +1838,9 @@ enum __x_ABI_CWindows_CDevices_CLights_CLampArrayKind
     LampArrayKind_Wearable = 8,
     LampArrayKind_Furniture = 9,
     LampArrayKind_Art = 10,
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
     LampArrayKind_Headset = 11,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
@@ -2209,12 +2201,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArray;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.Devices.Lights.LampArray
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__
@@ -2285,7 +2274,6 @@ interface __x_ABI_CWindows_CDevices_CLights_CILampArray2
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CLights_CILampArray2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CLights_CILampArray2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *

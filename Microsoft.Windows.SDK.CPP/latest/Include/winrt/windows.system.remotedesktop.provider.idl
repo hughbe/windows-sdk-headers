@@ -124,7 +124,6 @@ namespace Windows
                 };
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-                [experimental]
                 enum RemoteDesktopLocalAction
                 {
                     ShowBluetoothSettings = 0
@@ -132,7 +131,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs)]
-                [experimental]
                 [uuid(59359F4F-0862-53A3-A3B3-C932FB718CDC)]
                 interface IPerformLocalActionRequestedEventArgs : IInspectable
                 {
@@ -168,7 +166,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
-                [experimental]
                 [uuid(40A046F6-207E-52E5-84D6-82371E7A2BCD)]
                 interface IRemoteDesktopConnectionRemoteInfo2 : IInspectable
                 {
@@ -187,7 +184,6 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
-                [experimental]
                 [uuid(C44F2A84-5454-5357-904A-B9F71B6090C1)]
                 interface IRemoteDesktopConnectionRemoteInfoStatics2 : IInspectable
                 {
@@ -222,11 +218,10 @@ namespace Windows
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-                [experimental]
                 [marshaling_behavior(agile)]
                 runtimeclass PerformLocalActionRequestedEventArgs
                 {
-                    [default] [experimental] interface Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs;
+                    [default] interface Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -246,7 +241,7 @@ namespace Windows
                 runtimeclass RemoteDesktopConnectionRemoteInfo
                 {
                     [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo;
-                    [experimental] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo2;
+                    [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo2;
                     interface Windows.Foundation.IClosable;
                 }
 

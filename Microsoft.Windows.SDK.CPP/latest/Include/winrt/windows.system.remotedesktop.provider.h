@@ -454,7 +454,6 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
@@ -483,7 +482,6 @@ typedef ITypedEventHandler<ABI::Windows::System::RemoteDesktop::Provider::Remote
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -596,10 +594,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 namespace ABI {
     namespace Windows {
@@ -616,7 +611,6 @@ namespace ABI {
     } /* Windows */
 } /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -624,12 +618,9 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__
@@ -658,7 +649,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -788,12 +778,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__
@@ -826,7 +813,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -875,12 +861,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__
@@ -913,7 +896,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -1043,22 +1025,18 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs[] = L"Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -1627,7 +1605,6 @@ interface __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__C
 #endif // ____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_Windows__CSystem__CRemoteDesktop__CProvider__CPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__)
@@ -1678,7 +1655,6 @@ interface __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__C
 #endif // ____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_Windows__CSystem__CRemoteDesktop__CProvider__CPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
@@ -1721,17 +1697,13 @@ enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopConnectionS
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopLocalAction
 {
     RemoteDesktopLocalAction_ShowBluetoothSettings = 0,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -1739,12 +1711,9 @@ enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopLocalAction
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__
@@ -1804,7 +1773,6 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalAction
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIPerformLocalActionRequestedEventArgs_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -2035,12 +2003,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__
@@ -2106,7 +2071,6 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConne
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -2188,12 +2152,9 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__
@@ -2259,7 +2220,6 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConne
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
@@ -2486,22 +2446,18 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
- * Type is for evaluation purposes and is subject to change or removal in future updates.
- *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs ** Default Interface **
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_PerformLocalActionRequestedEventArgs[] = L"Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
-#endif // defined(ENABLE_WINRT_EXPERIMENTAL_TYPES)
 
 /*
  *
