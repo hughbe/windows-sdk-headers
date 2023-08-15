@@ -1018,7 +1018,7 @@ extern "C"{
 
 #define	D3D12_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 15 )
 
-#define	D3D12_PREVIEW_SDK_VERSION	( 702 )
+#define	D3D12_PREVIEW_SDK_VERSION	( 706 )
 
 #define	D3D12_PRE_SCISSOR_PIXEL_ADDRESS_RANGE_BIT_COUNT	( 16 )
 
@@ -1151,7 +1151,7 @@ extern "C"{
 
 #define	D3D12_RS_SET_SHADING_RATE_COMBINER_COUNT	( 2 )
 
-#define	D3D12_SDK_VERSION	( 602 )
+#define	D3D12_SDK_VERSION	( 606 )
 
 #define	D3D12_SHADER_IDENTIFIER_SIZE_IN_BYTES	( 32 )
 
@@ -23688,20 +23688,6 @@ static const UUID D3D12TiledResourceTier4 = { /* c9c4725f-a81a-4f56-8c5b-c51039d
     0xa81a,
     0x4f56,
     { 0x8c, 0x5b, 0xc5, 0x10, 0x39, 0xd6, 0x94, 0xfb }
-};
-// --------------------------------------------------------------------------------------------------------------------------------
-// Experimental Feature: D3D12MetaCommand
-//
-// Use with D3D12EnableExperimentalFeatures to enable the D3D12 Meta Command.
-//
-// Enabling D3D12MetaCommand needs no configuration struct, pass NULL in the pConfigurationStructs array.
-//
-// --------------------------------------------------------------------------------------------------------------------------------
-static const UUID D3D12MetaCommand = { /* C734C97E-8077-48C8-9FDC-D9D1DD31DD77 */
-    0xc734c97e,
-    0x8077,
-    0x48c8,
-    { 0x9f, 0xdc, 0xd9, 0xd1, 0xdd, 0x31, 0xdd, 0x77 }
 };
 // --------------------------------------------------------------------------------------------------------------------------------
 // D3D12GetInterface
