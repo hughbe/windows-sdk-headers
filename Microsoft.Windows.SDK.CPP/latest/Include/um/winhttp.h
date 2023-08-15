@@ -789,7 +789,9 @@ typedef struct _WINHTTP_HTTP2_RECEIVE_WINDOW
 
 #define WINHTTP_OPTION_DISABLE_GLOBAL_POOLING           195
 
-#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_DISABLE_GLOBAL_POOLING
+#define WINHTTP_OPTION_USE_SESSION_SCH_CRED             196
+
+#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_USE_SESSION_SCH_CRED
 
 #define WINHTTP_OPTION_USERNAME                         0x1000
 #define WINHTTP_OPTION_PASSWORD                         0x1001

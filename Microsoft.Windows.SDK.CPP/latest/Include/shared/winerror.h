@@ -3509,6 +3509,15 @@
 #define ERROR_INDEX_OUT_OF_BOUNDS        474L
 
 //
+// MessageId: ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT
+//
+// MessageText:
+//
+// The cloud provider failed to acknowledge a message before the time-out expired.
+//
+#define ERROR_CLOUD_FILE_US_MESSAGE_TIMEOUT 475L
+
+//
 // **** Available SYSTEM error codes ****
 //
 //
@@ -22235,6 +22244,15 @@
 //
 #define ERROR_WEAK_WHFBKEY_BLOCKED       8651L
 
+//
+// MessageId: ERROR_DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD
+//
+// MessageText:
+//
+// The add object operation failed because the caller was not authorized to add one or more attributes included in the request.
+//
+#define ERROR_DS_PER_ATTRIBUTE_AUTHZ_FAILED_DURING_ADD 8652L
+
 
 ///////////////////////////////////////////////////
 //                                                /
@@ -28320,6 +28338,15 @@
 // No default value for language was specified.
 //
 #define ERROR_MRM_MISSING_DEFAULT_LANGUAGE 15160L
+
+//
+// MessageId: ERROR_MRM_SCOPE_ITEM_CONFLICT
+//
+// MessageText:
+//
+// An entity was defined as both resource and scope, which is not allowed.
+//
+#define ERROR_MRM_SCOPE_ITEM_CONFLICT    15161L
 
 
 ///////////////////////////////////////////////////

@@ -671,15 +671,16 @@
 
 #define Cv2ciInSimulation 0x0
 #define Cv2ciInSyscallCallback 0x1
-#define Cv2ciEmulatorData 0x28
-#define Cv2ciEmulatorData2 0x30
-#define Cv2ciEmulatorData3 0x38
-#define Cv2ciEmulatorData4 0x40
+#define Cv2ciEmulatorData 0x30
+#define Cv2ciEmulatorData2 0x38
+#define Cv2ciEmulatorData3 0x40
+#define Cv2ciEmulatorData4 0x48
 #define Cv2ciEmulatorDataInline 0x50
 #define Cv2ciEmulatorStackBase 0x8
 #define Cv2ciEmulatorStackLimit 0x10
 #define Cv2ciContextAmd64 0x18
 #define Cv2ciSuspendDoorbell 0x20
+#define Cv2ciLoadingModuleModflag 0x28
 
 //
 // Thread Environment Block Structure Offset Definitions

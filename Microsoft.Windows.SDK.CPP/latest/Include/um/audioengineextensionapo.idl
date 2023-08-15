@@ -111,6 +111,16 @@ typedef enum APO_NOTIFICATION_TYPE
 
     // Audio system effects property change notifications for an endpoint.
     APO_NOTIFICATION_TYPE_SYSTEM_EFFECTS_PROPERTY_CHANGE = 3,
+
+    // Endpoint volume notifications for an endpoint that includes master and channel volume in dB.
+    APO_NOTIFICATION_TYPE_ENDPOINT_VOLUME2 = 4,
+    
+    // Orientation notifications for the device.
+    APO_NOTIFICATION_TYPE_DEVICE_ORIENTATION = 5,
+
+    // Mic boost notifications
+    APO_NOTIFICATION_TYPE_MIC_BOOST = 6
+
 } APO_NOTIFICATION_TYPE;
 
 // When an endpoint volume changes, the OS will send an object with the following structure to the APOs that are interested in volume change notifications.
@@ -148,6 +158,43 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION
     PROPERTYKEY propertyKey;
 } AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION;
 
+typedef struct AUDIO_VOLUME_NOTIFICATION_DATA2
+{
+    PAUDIO_VOLUME_NOTIFICATION_DATA notificationData;
+    float fMasterVolumeDB;
+    float fVolumeMinDB;
+    float fVolumeMaxDB;
+    float fVolumeIncrementDB;
+    UINT  nStep;
+    UINT  nStepCount;
+    float afChannelVolumesDB[ 1 ];
+} AUDIO_VOLUME_NOTIFICATION_DATA2, *PAUDIO_VOLUME_NOTIFICATION_DATA2;
+
+typedef struct AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2
+{
+    IMMDevice* endpoint;
+    PAUDIO_VOLUME_NOTIFICATION_DATA2 volume;
+} AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2;
+
+typedef enum DEVICE_ORIENTATION_TYPE
+{
+    DEVICE_NOT_ROTATED,
+    DEVICE_ROTATED_90_DEGREES_CLOCKWISE,
+    DEVICE_ROTATED_180_DEGREES_CLOCKWISE,
+    DEVICE_ROTATED_270_DEGREES_CLOCKWISE
+}DEVICE_ORIENTATION_TYPE;
+
+typedef struct AUDIO_MIC_BOOST_NOTIFICATION
+{
+    // Device that the mic boost has changed on.
+    IMMDevice* endpoint;
+    BOOL bMicBoostEnabled;
+    float fLevelDB;
+    float fLevelMinDB;
+    float fLevelMaxDB;
+    float fLevelStepDB;
+} AUDIO_MIC_BOOST_NOTIFICATION;
+
 // This structure is used to describe the type of notification that is sent from the OS to the APO using IAudioProcessingObjectNotifications::HandleNotification.
 typedef struct APO_NOTIFICATION
 {
@@ -162,6 +209,15 @@ typedef struct APO_NOTIFICATION
 
         // Used when type is AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION.
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION audioSystemEffectsPropertyChange;
+
+        // Used when type is APO_NOTIFICATION_TYPE_ENDPOINT_VOLUME2.
+        AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2 audioEndpointVolumeChange2;
+
+        // Used when type is APO_NOTIFICATION_TYPE_DEVICE_ORIENTATION.
+        DEVICE_ORIENTATION_TYPE deviceOrientation;
+
+        // Used when type is APO_NOTIFICATION_TYPE_MIC_BOOST.
+        AUDIO_MIC_BOOST_NOTIFICATION audioMicBoostChange;
     } DUMMYUNIONNAME;
 } APO_NOTIFICATION;
 
@@ -184,6 +240,12 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR
     GUID       propertyStoreContext;
 } AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR;
 
+// Used for mic boost notification.
+typedef struct AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR
+{
+    IMMDevice* device;
+} AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR;
+
 //
 // This is the structure provided by the APO to indicate the type of notification it is interested in.
 //
@@ -198,6 +260,8 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
         AUDIO_ENDPOINT_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioEndpointPropertyChange;
         // Used for audio system effects property store notifications on a specific endpoint, property context pair.
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioSystemEffectsPropertyChange;
+        // Used for mic boost notification.
+        AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicBoost;
     } DUMMYUNIONNAME;
 } APO_NOTIFICATION_DESCRIPTOR;
 
@@ -218,7 +282,21 @@ interface IAudioProcessingObjectNotifications : IUnknown
 
     // This method is invoked by the OS to send notifications to the APO.
     void HandleNotification([in, annotation("_In_")] APO_NOTIFICATION* apoNotification);
-}
+};
+
+[
+    object,
+    uuid(ca2cfbde-a9d6-4eb0-bc95-c4d026b380f0),
+    local
+]
+interface IAudioProcessingObjectNotifications2 : IAudioProcessingObjectNotifications
+{
+    HRESULT GetApoNotificationRegistrationInfo2(
+        APO_NOTIFICATION_TYPE maxApoNotificationTypeSupported,
+        [out, annotation("_Out_writes_(count)")] APO_NOTIFICATION_DESCRIPTOR** apoNotifications,
+        [out, annotation("_Out_")] DWORD* count);
+};
+
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion

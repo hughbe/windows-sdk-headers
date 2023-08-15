@@ -2007,6 +2007,7 @@ typedef enum
 #define JET_paramAlternateDatabaseRecoveryPath  113 //  recovery-only - search for dirty-shutdown databases in specified location only
 #endif // JET_VERSION >= 0x0502
 
+
 // Parameters added in Windows Vista.
 #if ( JET_VERSION >= 0x0600 )
 #define JET_paramIndexTupleIncrement            132 //  for tuple indexes, offset increment for each succesive tuple
@@ -2886,19 +2887,19 @@ typedef struct
 
     /* Info levels for JetGetTableInfo/JetSetTableInfo */
 
-#define JET_TblInfo             0U
-#define JET_TblInfoName         1U
-#define JET_TblInfoDbid         2U
-#define JET_TblInfoMostMany     3U
-#define JET_TblInfoRvt          4U
-#define JET_TblInfoOLC          5U
-#define JET_TblInfoResetOLC     6U
-#define JET_TblInfoSpaceUsage   7U
-#define JET_TblInfoDumpTable    8U
-#define JET_TblInfoSpaceAlloc   9U
-#define JET_TblInfoSpaceOwned   10U                 // OwnExt
-#define JET_TblInfoSpaceAvailable       11U         // AvailExt
-#define JET_TblInfoTemplateTableName    12U
+#define JET_TblInfo                    0U
+#define JET_TblInfoName                1U
+#define JET_TblInfoDbid                2U
+#define JET_TblInfoMostMany            3U
+#define JET_TblInfoRvt                 4U
+#define JET_TblInfoOLC                 5U
+#define JET_TblInfoResetOLC            6U
+#define JET_TblInfoSpaceUsage          7U
+#define JET_TblInfoDumpTable           8U
+#define JET_TblInfoSpaceAlloc          9U
+#define JET_TblInfoSpaceOwned         10U         // OwnExt
+#define JET_TblInfoSpaceAvailable     11U         // AvailExt
+#define JET_TblInfoTemplateTableName  12U
 
     /* Info levels for JetGetIndexInfo and JetGetTableIndexInfo */
 
@@ -4586,8 +4587,6 @@ JetDeleteTableW(
 #define JetDeleteTable JetDeleteTableA
 #endif
 #endif
-
-
 #if ( JET_VERSION < 0x0600 )
 #define JetRenameTableA JetRenameTable
 #endif

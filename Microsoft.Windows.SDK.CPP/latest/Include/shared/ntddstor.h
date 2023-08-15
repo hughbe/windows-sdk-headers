@@ -4174,8 +4174,8 @@ typedef struct _DEVICE_STORAGE_RANGE_ATTRIBUTES {
             //
 
             ULONG IsRangeBad : 1;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
 
     ULONG Reserved;
 

@@ -5317,13 +5317,13 @@ typedef struct REGFILTER2
             {
             ULONG cPins;
             /* [size_is] */ const REGFILTERPINS *rgPins;
-            } 	;
+            } 	DUMMYSTRUCTNAME;
         /* [case()] */ struct 
             {
             ULONG cPins2;
             /* [size_is] */ const REGFILTERPINS2 *rgPins2;
-            } 	;
-        } 	;
+            } 	DUMMYSTRUCTNAME2;
+        } 	DUMMYUNIONNAME;
     } 	REGFILTER2;
 
 
@@ -14219,7 +14219,7 @@ typedef union _timecode {
   WORD   wFrameRate;
   WORD   wFrameFract;
   DWORD  dwFrames;
-  };
+  } DUMMYSTRUCTNAME;
    DWORDLONG  qw;
    } TIMECODE;
 

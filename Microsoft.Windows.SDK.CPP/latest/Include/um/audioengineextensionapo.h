@@ -75,6 +75,13 @@ typedef interface IAudioProcessingObjectNotifications IAudioProcessingObjectNoti
 #endif 	/* __IAudioProcessingObjectNotifications_FWD_DEFINED__ */
 
 
+#ifndef __IAudioProcessingObjectNotifications2_FWD_DEFINED__
+#define __IAudioProcessingObjectNotifications2_FWD_DEFINED__
+typedef interface IAudioProcessingObjectNotifications2 IAudioProcessingObjectNotifications2;
+
+#endif 	/* __IAudioProcessingObjectNotifications2_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "audioenginebaseapo.h"
 #include "endpointvolume.h"
@@ -457,7 +464,10 @@ enum APO_NOTIFICATION_TYPE
         APO_NOTIFICATION_TYPE_NONE	= 0,
         APO_NOTIFICATION_TYPE_ENDPOINT_VOLUME	= 1,
         APO_NOTIFICATION_TYPE_ENDPOINT_PROPERTY_CHANGE	= 2,
-        APO_NOTIFICATION_TYPE_SYSTEM_EFFECTS_PROPERTY_CHANGE	= 3
+        APO_NOTIFICATION_TYPE_SYSTEM_EFFECTS_PROPERTY_CHANGE	= 3,
+        APO_NOTIFICATION_TYPE_ENDPOINT_VOLUME2	= 4,
+        APO_NOTIFICATION_TYPE_DEVICE_ORIENTATION	= 5,
+        APO_NOTIFICATION_TYPE_MIC_BOOST	= 6
     } 	APO_NOTIFICATION_TYPE;
 
 typedef struct AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION
@@ -482,6 +492,45 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION
     PROPERTYKEY propertyKey;
     } 	AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION;
 
+typedef struct AUDIO_VOLUME_NOTIFICATION_DATA2
+    {
+    PAUDIO_VOLUME_NOTIFICATION_DATA notificationData;
+    float fMasterVolumeDB;
+    float fVolumeMinDB;
+    float fVolumeMaxDB;
+    float fVolumeIncrementDB;
+    UINT nStep;
+    UINT nStepCount;
+    float afChannelVolumesDB[ 1 ];
+    } 	AUDIO_VOLUME_NOTIFICATION_DATA2;
+
+typedef struct AUDIO_VOLUME_NOTIFICATION_DATA2 *PAUDIO_VOLUME_NOTIFICATION_DATA2;
+
+typedef struct AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2
+    {
+    IMMDevice *endpoint;
+    PAUDIO_VOLUME_NOTIFICATION_DATA2 volume;
+    } 	AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2;
+
+typedef 
+enum DEVICE_ORIENTATION_TYPE
+    {
+        DEVICE_NOT_ROTATED	= 0,
+        DEVICE_ROTATED_90_DEGREES_CLOCKWISE	= ( DEVICE_NOT_ROTATED + 1 ) ,
+        DEVICE_ROTATED_180_DEGREES_CLOCKWISE	= ( DEVICE_ROTATED_90_DEGREES_CLOCKWISE + 1 ) ,
+        DEVICE_ROTATED_270_DEGREES_CLOCKWISE	= ( DEVICE_ROTATED_180_DEGREES_CLOCKWISE + 1 ) 
+    } 	DEVICE_ORIENTATION_TYPE;
+
+typedef struct AUDIO_MIC_BOOST_NOTIFICATION
+    {
+    IMMDevice *endpoint;
+    BOOL bMicBoostEnabled;
+    float fLevelDB;
+    float fLevelMinDB;
+    float fLevelMaxDB;
+    float fLevelStepDB;
+    } 	AUDIO_MIC_BOOST_NOTIFICATION;
+
 typedef struct APO_NOTIFICATION
     {
     APO_NOTIFICATION_TYPE type;
@@ -490,6 +539,9 @@ typedef struct APO_NOTIFICATION
         AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION audioEndpointVolumeChange;
         AUDIO_ENDPOINT_PROPERTY_CHANGE_NOTIFICATION audioEndpointPropertyChange;
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_NOTIFICATION audioSystemEffectsPropertyChange;
+        AUDIO_ENDPOINT_VOLUME_CHANGE_NOTIFICATION2 audioEndpointVolumeChange2;
+        DEVICE_ORIENTATION_TYPE deviceOrientation;
+        AUDIO_MIC_BOOST_NOTIFICATION audioMicBoostChange;
         } 	DUMMYUNIONNAME;
     } 	APO_NOTIFICATION;
 
@@ -509,6 +561,11 @@ typedef struct AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR
     GUID propertyStoreContext;
     } 	AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR;
 
+typedef struct AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR
+    {
+    IMMDevice *device;
+    } 	AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR;
+
 typedef struct APO_NOTIFICATION_DESCRIPTOR
     {
     APO_NOTIFICATION_TYPE type;
@@ -517,6 +574,7 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
         AUDIO_ENDPOINT_VOLUME_APO_NOTIFICATION_DESCRIPTOR audioEndpointVolume;
         AUDIO_ENDPOINT_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioEndpointPropertyChange;
         AUDIO_SYSTEMEFFECTS_PROPERTY_CHANGE_APO_NOTIFICATION_DESCRIPTOR audioSystemEffectsPropertyChange;
+        AUDIO_MIC_BOOST_APO_NOTIFICATION_DESCRIPTOR audioMicBoost;
         } 	DUMMYUNIONNAME;
     } 	APO_NOTIFICATION_DESCRIPTOR;
 
@@ -628,15 +686,128 @@ EXTERN_C const IID IID_IAudioProcessingObjectNotifications;
 #endif 	/* __IAudioProcessingObjectNotifications_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioengineextensionapo_0000_0004 */
+#ifndef __IAudioProcessingObjectNotifications2_INTERFACE_DEFINED__
+#define __IAudioProcessingObjectNotifications2_INTERFACE_DEFINED__
+
+/* interface IAudioProcessingObjectNotifications2 */
+/* [local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioProcessingObjectNotifications2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("ca2cfbde-a9d6-4eb0-bc95-c4d026b380f0")
+    IAudioProcessingObjectNotifications2 : public IAudioProcessingObjectNotifications
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetApoNotificationRegistrationInfo2( 
+            APO_NOTIFICATION_TYPE maxApoNotificationTypeSupported,
+            /* [annotation][out] */ 
+            _Out_writes_(count)  APO_NOTIFICATION_DESCRIPTOR **apoNotifications,
+            /* [annotation][out] */ 
+            _Out_  DWORD *count) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioProcessingObjectNotifications2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioProcessingObjectNotifications2 * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioProcessingObjectNotifications2 * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioProcessingObjectNotifications2 * This);
+        
+        DECLSPEC_XFGVIRT(IAudioProcessingObjectNotifications, GetApoNotificationRegistrationInfo)
+        HRESULT ( STDMETHODCALLTYPE *GetApoNotificationRegistrationInfo )( 
+            IAudioProcessingObjectNotifications2 * This,
+            /* [annotation][out] */ 
+            _Out_writes_(*count)  APO_NOTIFICATION_DESCRIPTOR **apoNotifications,
+            /* [annotation][out] */ 
+            _Out_  DWORD *count);
+        
+        DECLSPEC_XFGVIRT(IAudioProcessingObjectNotifications, HandleNotification)
+        void ( STDMETHODCALLTYPE *HandleNotification )( 
+            IAudioProcessingObjectNotifications2 * This,
+            /* [annotation][in] */ 
+            _In_  APO_NOTIFICATION *apoNotification);
+        
+        DECLSPEC_XFGVIRT(IAudioProcessingObjectNotifications2, GetApoNotificationRegistrationInfo2)
+        HRESULT ( STDMETHODCALLTYPE *GetApoNotificationRegistrationInfo2 )( 
+            IAudioProcessingObjectNotifications2 * This,
+            APO_NOTIFICATION_TYPE maxApoNotificationTypeSupported,
+            /* [annotation][out] */ 
+            _Out_writes_(count)  APO_NOTIFICATION_DESCRIPTOR **apoNotifications,
+            /* [annotation][out] */ 
+            _Out_  DWORD *count);
+        
+        END_INTERFACE
+    } IAudioProcessingObjectNotifications2Vtbl;
+
+    interface IAudioProcessingObjectNotifications2
+    {
+        CONST_VTBL struct IAudioProcessingObjectNotifications2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioProcessingObjectNotifications2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioProcessingObjectNotifications2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioProcessingObjectNotifications2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioProcessingObjectNotifications2_GetApoNotificationRegistrationInfo(This,apoNotifications,count)	\
+    ( (This)->lpVtbl -> GetApoNotificationRegistrationInfo(This,apoNotifications,count) ) 
+
+#define IAudioProcessingObjectNotifications2_HandleNotification(This,apoNotification)	\
+    ( (This)->lpVtbl -> HandleNotification(This,apoNotification) ) 
+
+
+#define IAudioProcessingObjectNotifications2_GetApoNotificationRegistrationInfo2(This,maxApoNotificationTypeSupported,apoNotifications,count)	\
+    ( (This)->lpVtbl -> GetApoNotificationRegistrationInfo2(This,maxApoNotificationTypeSupported,apoNotifications,count) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioProcessingObjectNotifications2_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_audioengineextensionapo_0000_0005 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0004_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0004_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0005_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0005_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

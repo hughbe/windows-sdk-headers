@@ -2718,8 +2718,8 @@ typedef struct _KERNEL_CET_CONTEXT {
             WORD   UseWrss : 1;
             WORD   PopShadowStackOne : 1;
             WORD   Unused : 14;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
     WORD   Fill[2];
 } KERNEL_CET_CONTEXT, *PKERNEL_CET_CONTEXT;
 
@@ -13781,8 +13781,8 @@ typedef struct _XSTATE_CONFIGURATION {
             DWORD OptimizedSave : 1;
             DWORD CompactionEnabled : 1;
             DWORD ExtendedFeatureDisable : 1;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
 
     // List of features
     XSTATE_FEATURE Features[MAXIMUM_XSTATE_FEATURES];
@@ -20021,7 +20021,7 @@ typedef union IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA {
         DWORD EpilogInHeader : 1;
         DWORD EpilogCount : 5;          // number of epilogs or byte index of the first unwind code for the one only epilog
         DWORD CodeWords : 5;            // number of dwords with unwind codes
-    };
+    } DUMMYSTRUCTNAME;
 } IMAGE_ARM64_RUNTIME_FUNCTION_ENTRY_XDATA;
 
 typedef struct _IMAGE_ALPHA64_RUNTIME_FUNCTION_ENTRY {
@@ -22258,6 +22258,8 @@ typedef struct _IMAGE_POLICY_ENTRY {
 } IMAGE_POLICY_ENTRY;
 typedef const IMAGE_POLICY_ENTRY* PCIMAGE_POLICY_ENTRY;
 
+#ifdef _MSC_EXTENSIONS
+
 #pragma warning(push)
 #pragma warning(disable:4200) // zero-sized array in struct/union
 typedef struct _IMAGE_POLICY_METADATA {
@@ -22283,6 +22285,8 @@ IMAGE_POLICY_METADATA IMAGE_POLICY_METADATA_NAME = {                          \
     }                                                                         \
 };                                                                            \
 __pragma(const_seg(pop))
+
+#endif
 
 #define IMAGE_POLICY_BOOL(_PolicyId_, _Value_)             \
     {ImagePolicyEntryTypeBool, _PolicyId_, (const VOID*)_Value_},

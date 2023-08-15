@@ -15949,10 +15949,10 @@ SetProcessRestrictionExemption(
  *
  * These are flags used with the RegisterForTooltipDismissNotification API.
  *
- * TDF_REGISTER -   Used to register tooltip to receive notification of trigger key combination 
+ * TDF_REGISTER -   Used to register tooltip to receive notification of trigger key combination
  *                  via WM_TOOLTIPDISMISS.
- * 
- * TDF_UNREGISTER - Used to unregister tooltip from receiving notification of trigger key 
+ *
+ * TDF_UNREGISTER - Used to unregister tooltip from receiving notification of trigger key
  *                  combination via WM_TOOLTIPDISMISS.
  */
 
@@ -15969,11 +15969,11 @@ RegisterForTooltipDismissNotification(HWND hWnd,
 
 /*
  * Support for Accessibility Tooltip Dismissal API:
- * 
- * This message notifies apps/frameworks that a trigger event has occurred and they should dismiss the 
+ *
+ * This message notifies apps/frameworks that a trigger event has occurred and they should dismiss the
  * respective tooltip window.
  * This is used with RegisterForTooltipDismissNotification.
- * 
+ *
  * Note that only kernel mode can originate this message.
  */
 #define WM_TOOLTIPDISMISS               0x0345

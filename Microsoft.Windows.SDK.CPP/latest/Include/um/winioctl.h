@@ -4334,8 +4334,8 @@ typedef struct _DEVICE_STORAGE_RANGE_ATTRIBUTES {
             //
 
             DWORD IsRangeBad : 1;
-        };
-    };
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
 
     DWORD Reserved;
 
