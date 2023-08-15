@@ -3383,6 +3383,9 @@ InterlockedXor16(
 #endif
 
 VOID
+#if defined(_M_ARM64EC)
+__stdcall
+#endif
 __cpuidex (
     int CPUInfo[4],
     int Function,
@@ -11535,6 +11538,10 @@ typedef enum _SECURITY_IMPERSONATION_LEVEL {
                                        TOKEN_QUERY  |\
                                        TOKEN_QUERY_SOURCE )
 
+#define TOKEN_TRUST_ALLOWED_MASK    (TOKEN_TRUST_CONSTRAINT_MASK |\
+                                    TOKEN_DUPLICATE              |\
+                                    TOKEN_IMPERSONATE)
+
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 
 #define TOKEN_ACCESS_PSEUDO_HANDLE_WIN8 (TOKEN_QUERY | TOKEN_QUERY_SOURCE)
@@ -13694,6 +13701,7 @@ typedef struct _SYSTEM_SUPPORTED_PROCESSOR_ARCHITECTURES_INFORMATION {
 #define PF_ERMS_AVAILABLE                           42   
 #define PF_ARM_V82_DP_INSTRUCTIONS_AVAILABLE        43   
 #define PF_ARM_V83_JSCVT_INSTRUCTIONS_AVAILABLE     44   
+#define PF_ARM_V83_LRCPC_INSTRUCTIONS_AVAILABLE     45   
 //
 
 //

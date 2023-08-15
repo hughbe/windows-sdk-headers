@@ -1058,6 +1058,7 @@ ValidLabel SETS "$ValidTarget"
         eret
         dsb sy
         isb sy
+        DCD 0xD50330FF ; sb
         MEND
 
 #define eret ERET_FIX

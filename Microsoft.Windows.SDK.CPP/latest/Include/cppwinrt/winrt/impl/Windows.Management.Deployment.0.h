@@ -24,6 +24,7 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
 WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
 {
     template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename K, typename V> struct __declspec(empty_bases) IMap;
     template <typename T> struct __declspec(empty_bases) IVectorView;
     template <typename T> struct __declspec(empty_bases) IVector;
 }
@@ -122,6 +123,7 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
         UsePreference = 3,
     };
     struct IAddPackageOptions;
+    struct IAddPackageOptions2;
     struct IAppInstallerManager;
     struct IAppInstallerManagerStatics;
     struct IAutoUpdateSettingsOptions;
@@ -149,12 +151,14 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
     struct IPackageVolume;
     struct IPackageVolume2;
     struct IRegisterPackageOptions;
+    struct IRegisterPackageOptions2;
     struct ISharedPackageContainer;
     struct ISharedPackageContainerManager;
     struct ISharedPackageContainerManagerStatics;
     struct ISharedPackageContainerMember;
     struct ISharedPackageContainerMemberFactory;
     struct IStagePackageOptions;
+    struct IStagePackageOptions2;
     struct IUpdateSharedPackageContainerOptions;
     struct IUpdateSharedPackageContainerResult;
     struct AddPackageOptions;
@@ -183,6 +187,7 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
 namespace winrt::impl
 {
     template <> struct category<winrt::Windows::Management::Deployment::IAddPackageOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Management::Deployment::IAddPackageOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IAppInstallerManager>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IAppInstallerManagerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptions>{ using type = interface_category; };
@@ -210,12 +215,14 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Management::Deployment::IPackageVolume>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IPackageVolume2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IRegisterPackageOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Management::Deployment::IRegisterPackageOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::ISharedPackageContainer>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::ISharedPackageContainerManager>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::ISharedPackageContainerManagerStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::ISharedPackageContainerMember>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::ISharedPackageContainerMemberFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IStagePackageOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Management::Deployment::IStagePackageOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerOptions>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerResult>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::AddPackageOptions>{ using type = class_category; };
@@ -287,6 +294,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::StubPackageOption> = L"Windows.Management.Deployment.StubPackageOption";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::DeploymentProgress> = L"Windows.Management.Deployment.DeploymentProgress";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IAddPackageOptions> = L"Windows.Management.Deployment.IAddPackageOptions";
+    template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IAddPackageOptions2> = L"Windows.Management.Deployment.IAddPackageOptions2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IAppInstallerManager> = L"Windows.Management.Deployment.IAppInstallerManager";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IAppInstallerManagerStatics> = L"Windows.Management.Deployment.IAppInstallerManagerStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptions> = L"Windows.Management.Deployment.IAutoUpdateSettingsOptions";
@@ -314,15 +322,18 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageVolume> = L"Windows.Management.Deployment.IPackageVolume";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageVolume2> = L"Windows.Management.Deployment.IPackageVolume2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IRegisterPackageOptions> = L"Windows.Management.Deployment.IRegisterPackageOptions";
+    template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IRegisterPackageOptions2> = L"Windows.Management.Deployment.IRegisterPackageOptions2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::ISharedPackageContainer> = L"Windows.Management.Deployment.ISharedPackageContainer";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::ISharedPackageContainerManager> = L"Windows.Management.Deployment.ISharedPackageContainerManager";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::ISharedPackageContainerManagerStatics> = L"Windows.Management.Deployment.ISharedPackageContainerManagerStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::ISharedPackageContainerMember> = L"Windows.Management.Deployment.ISharedPackageContainerMember";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::ISharedPackageContainerMemberFactory> = L"Windows.Management.Deployment.ISharedPackageContainerMemberFactory";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IStagePackageOptions> = L"Windows.Management.Deployment.IStagePackageOptions";
+    template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IStagePackageOptions2> = L"Windows.Management.Deployment.IStagePackageOptions2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerOptions> = L"Windows.Management.Deployment.IUpdateSharedPackageContainerOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerResult> = L"Windows.Management.Deployment.IUpdateSharedPackageContainerResult";
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IAddPackageOptions>{ 0x05CEE018,0xF68F,0x422B,{ 0x95,0xA4,0x66,0x67,0x9E,0xC7,0x7F,0xC0 } }; // 05CEE018-F68F-422B-95A4-66679EC77FC0
+    template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IAddPackageOptions2>{ 0xEE515828,0xBF33,0x40F7,{ 0x84,0xAF,0x1B,0x6F,0xAD,0x29,0x19,0xD7 } }; // EE515828-BF33-40F7-84AF-1B6FAD2919D7
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IAppInstallerManager>{ 0xE7EE21C3,0x2103,0x53EE,{ 0x9B,0x18,0x68,0xAF,0xEA,0xB0,0x03,0x3D } }; // E7EE21C3-2103-53EE-9B18-68AFEAB0033D
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IAppInstallerManagerStatics>{ 0xC95A6ED5,0xFC59,0x5336,{ 0x9B,0x2E,0x2B,0x07,0xC5,0xE6,0x14,0x34 } }; // C95A6ED5-FC59-5336-9B2E-2B07C5E61434
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IAutoUpdateSettingsOptions>{ 0x67491D87,0x35E1,0x512A,{ 0x89,0x68,0x1A,0xE8,0x8D,0x1B,0xE6,0xD3 } }; // 67491D87-35E1-512A-8968-1AE88D1BE6D3
@@ -350,12 +361,14 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageVolume>{ 0xCF2672C3,0x1A40,0x4450,{ 0x97,0x39,0x2A,0xCE,0x2E,0x89,0x88,0x53 } }; // CF2672C3-1A40-4450-9739-2ACE2E898853
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageVolume2>{ 0x46ABCF2E,0x9DD4,0x47A2,{ 0xAB,0x8C,0xC6,0x40,0x83,0x49,0xBC,0xD8 } }; // 46ABCF2E-9DD4-47A2-AB8C-C6408349BCD8
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IRegisterPackageOptions>{ 0x677112A7,0x50D4,0x496C,{ 0x84,0x15,0x06,0x02,0xB4,0xC6,0xD3,0xBF } }; // 677112A7-50D4-496C-8415-0602B4C6D3BF
+    template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IRegisterPackageOptions2>{ 0x3DFA9743,0x86FF,0x4A11,{ 0xBC,0x93,0x43,0x4E,0xB6,0xBE,0x3A,0x0B } }; // 3DFA9743-86FF-4A11-BC93-434EB6BE3A0B
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::ISharedPackageContainer>{ 0x177F1AA9,0x151E,0x5EF7,{ 0xB1,0xD9,0x2F,0xBA,0x0B,0x4B,0x0D,0x17 } }; // 177F1AA9-151E-5EF7-B1D9-2FBA0B4B0D17
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::ISharedPackageContainerManager>{ 0xBE353068,0x1EF7,0x5AC8,{ 0xAB,0x3F,0x0B,0x9F,0x61,0x2F,0x02,0x74 } }; // BE353068-1EF7-5AC8-AB3F-0B9F612F0274
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::ISharedPackageContainerManagerStatics>{ 0x2EF56348,0x838A,0x5F55,{ 0xA8,0x9E,0x11,0x98,0xA2,0xC6,0x27,0xE6 } }; // 2EF56348-838A-5F55-A89E-1198A2C627E6
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::ISharedPackageContainerMember>{ 0xFE0D0438,0x43C9,0x5426,{ 0xB8,0x9C,0xF7,0x9B,0xF8,0x5D,0xDF,0xF4 } }; // FE0D0438-43C9-5426-B89C-F79BF85DDFF4
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::ISharedPackageContainerMemberFactory>{ 0x49B0CEEB,0x498F,0x5A62,{ 0xB7,0x38,0xB3,0xCA,0x0D,0x43,0x67,0x04 } }; // 49B0CEEB-498F-5A62-B738-B3CA0D436704
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IStagePackageOptions>{ 0x0B110C9C,0xB95D,0x4C56,{ 0xBD,0x36,0x6D,0x65,0x68,0x00,0xD0,0x6B } }; // 0B110C9C-B95D-4C56-BD36-6D656800D06B
+    template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IStagePackageOptions2>{ 0x990C4CCC,0x6226,0x4192,{ 0xBA,0x92,0x79,0x87,0x5F,0xCE,0x0D,0x9C } }; // 990C4CCC-6226-4192-BA92-79875FCE0D9C
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerOptions>{ 0x80672E83,0x7194,0x59F9,{ 0xB5,0xB9,0xDA,0xA5,0x37,0x5F,0x13,0x0A } }; // 80672E83-7194-59F9-B5B9-DAA5375F130A
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerResult>{ 0xAA407DF7,0xC72D,0x5458,{ 0xAE,0xA3,0x46,0x45,0xB6,0xA8,0xEE,0x99 } }; // AA407DF7-C72D-5458-AEA3-4645B6A8EE99
     template <> struct default_interface<winrt::Windows::Management::Deployment::AddPackageOptions>{ using type = winrt::Windows::Management::Deployment::IAddPackageOptions; };
@@ -413,6 +426,15 @@ namespace winrt::impl
             virtual int32_t __stdcall put_AllowUnsigned(bool) noexcept = 0;
             virtual int32_t __stdcall get_DeferRegistrationWhenPackagesAreInUse(bool*) noexcept = 0;
             virtual int32_t __stdcall put_DeferRegistrationWhenPackagesAreInUse(bool) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Management::Deployment::IAddPackageOptions2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ExpectedDigests(void**) noexcept = 0;
+            virtual int32_t __stdcall get_LimitToExistingPackages(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_LimitToExistingPackages(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Management::Deployment::IAppInstallerManager>
@@ -740,6 +762,13 @@ namespace winrt::impl
             virtual int32_t __stdcall put_DeferRegistrationWhenPackagesAreInUse(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Management::Deployment::IRegisterPackageOptions2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ExpectedDigests(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Management::Deployment::ISharedPackageContainer>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -813,6 +842,13 @@ namespace winrt::impl
             virtual int32_t __stdcall put_AllowUnsigned(bool) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Management::Deployment::IStagePackageOptions2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_ExpectedDigests(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Management::Deployment::IUpdateSharedPackageContainerOptions>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -868,6 +904,17 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Management::Deployment::IAddPackageOptions>
     {
         template <typename D> using type = consume_Windows_Management_Deployment_IAddPackageOptions<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Management_Deployment_IAddPackageOptions2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<winrt::Windows::Foundation::Uri, hstring>) ExpectedDigests() const;
+        [[nodiscard]] WINRT_IMPL_AUTO(bool) LimitToExistingPackages() const;
+        WINRT_IMPL_AUTO(void) LimitToExistingPackages(bool value) const;
+    };
+    template <> struct consume<winrt::Windows::Management::Deployment::IAddPackageOptions2>
+    {
+        template <typename D> using type = consume_Windows_Management_Deployment_IAddPackageOptions2<D>;
     };
     template <typename D>
     struct consume_Windows_Management_Deployment_IAppInstallerManager
@@ -1249,6 +1296,15 @@ namespace winrt::impl
         template <typename D> using type = consume_Windows_Management_Deployment_IRegisterPackageOptions<D>;
     };
     template <typename D>
+    struct consume_Windows_Management_Deployment_IRegisterPackageOptions2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<winrt::Windows::Foundation::Uri, hstring>) ExpectedDigests() const;
+    };
+    template <> struct consume<winrt::Windows::Management::Deployment::IRegisterPackageOptions2>
+    {
+        template <typename D> using type = consume_Windows_Management_Deployment_IRegisterPackageOptions2<D>;
+    };
+    template <typename D>
     struct consume_Windows_Management_Deployment_ISharedPackageContainer
     {
         [[nodiscard]] WINRT_IMPL_AUTO(hstring) Name() const;
@@ -1332,6 +1388,15 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Management::Deployment::IStagePackageOptions>
     {
         template <typename D> using type = consume_Windows_Management_Deployment_IStagePackageOptions<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Management_Deployment_IStagePackageOptions2
+    {
+        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMap<winrt::Windows::Foundation::Uri, hstring>) ExpectedDigests() const;
+    };
+    template <> struct consume<winrt::Windows::Management::Deployment::IStagePackageOptions2>
+    {
+        template <typename D> using type = consume_Windows_Management_Deployment_IStagePackageOptions2<D>;
     };
     template <typename D>
     struct consume_Windows_Management_Deployment_IUpdateSharedPackageContainerOptions

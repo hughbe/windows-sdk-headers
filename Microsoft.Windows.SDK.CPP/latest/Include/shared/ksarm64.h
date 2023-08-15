@@ -853,15 +853,11 @@
 // Processor Control Region Structure Offset Definitions
 //
 
-#define PCR_BTI_MITIGATION_NONE 0x0
-#define PCR_BTI_MITIGATION_TRAP_HVC 0x1
-#define PCR_BTI_MITIGATION_TRAP_SMC 0x2
-#define PCR_BTI_MITIGATION_CSWAP_HVC 0x4
-#define PCR_BTI_MITIGATION_CSWAP_SMC 0x8
-#define PCR_BTI_MITIGATION_TRAP_HVC_BIT 0x0
-#define PCR_BTI_MITIGATION_TRAP_SMC_BIT 0x1
-#define PCR_BTI_MITIGATION_CSWAP_HVC_BIT 0x2
-#define PCR_BTI_MITIGATION_CSWAP_SMC_BIT 0x3
+#define PCR_BTI_MITIGATION_VBAR_MASK 0xf
+#define PCR_BTI_MITIGATION_CSWAP_HVC 0x10
+#define PCR_BTI_MITIGATION_CSWAP_SMC 0x20
+#define PCR_BTI_MITIGATION_CSWAP_HVC_BIT 0x4
+#define PCR_BTI_MITIGATION_CSWAP_SMC_BIT 0x5
 #define ARM64_ASID_KVA_SHADOW 0x8000
 #define PSCI_FUNCTION_CODE_SMCCC_ARCH_WORKAROUND_1 0x80008000
 #define PcSelf 0x18
@@ -871,6 +867,7 @@
 #define PcStallScaleFactor 0x40
 #define PcBtiMitigation 0x4c
 #define PcSsbMitigationFlags 0x4d
+#define PcBhbMitigation 0x4e
 #define PcPanicStorage 0x50
 #define PcHalReserved 0x88
 #define PcPrcb 0x980

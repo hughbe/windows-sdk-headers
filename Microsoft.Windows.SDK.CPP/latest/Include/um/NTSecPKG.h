@@ -627,7 +627,7 @@ typedef LPSECURITY_ATTRIBUTES   SEC_ATTRS;
               ( ((PLUID)L1)->HighPart == ((PLUID)L2)->HighPart ) ) \
 
 #define SecIsZeroLuid( L1 ) \
-            ( ( L1->LowPart | L1->HighPart ) == 0 )
+            ( ( (L1)->LowPart | (L1)->HighPart ) == 0 )
 
 //
 // The following structures are used by the helper functions
@@ -655,6 +655,24 @@ typedef struct _SECPKG_CLIENT_INFO {
     HANDLE                          ClientToken;
 
 } SECPKG_CLIENT_INFO, * PSECPKG_CLIENT_INFO;
+
+typedef struct _SECPKG_CLIENT_INFO_EX {
+    LUID            LogonId;            // Effective Logon Id
+    ULONG           ProcessID;          // Process Id of caller
+    ULONG           ThreadID;           // Thread Id of caller
+    BOOLEAN         HasTcbPrivilege;    // Client has TCB
+    BOOLEAN         Impersonating;      // Client is impersonating
+    BOOLEAN         Restricted;         // Client is restricted
+
+    UCHAR                           ClientFlags;            // Extra flags about the client
+    SECURITY_IMPERSONATION_LEVEL    ImpersonationLevel;     // Impersonation level of client
+
+    HANDLE                          ClientToken;
+
+    LUID                            IdentificationLogonId;
+    HANDLE                          IdentificationToken;
+
+} SECPKG_CLIENT_INFO_EX, * PSECPKG_CLIENT_INFO_EX;
 
 #define SECPKG_CLIENT_PROCESS_TERMINATED    0x01    // The client process has terminated
 #define SECPKG_CLIENT_THREAD_TERMINATED     0x02    // The client thread has terminated
@@ -1158,6 +1176,14 @@ typedef NTSTATUS
         PSECPKG_SUPPLEMENTAL_CRED_ARRAY* SupplementalCredentials
         );
 
+// The authentication package should use this to retrieve the SID associated
+// associated with the TSPkg logon session. This is intended to bind the NLA session to the interactive logon session
+typedef NTSTATUS
+(NTAPI LSA_REDIRECTED_LOGON_GET_SID)(
+        HANDLE RedirectedLogonHandle,
+        PSID* Sid
+        );
+
 #ifdef __cplusplus
 } // extern "C"
 #endif
@@ -1167,6 +1193,7 @@ typedef LSA_REDIRECTED_LOGON_CALLBACK *PLSA_REDIRECTED_LOGON_CALLBACK;
 typedef LSA_REDIRECTED_LOGON_GET_LOGON_CREDS *PLSA_REDIRECTED_LOGON_GET_LOGON_CREDS;
 typedef LSA_REDIRECTED_LOGON_GET_SUPP_CREDS *PLSA_REDIRECTED_LOGON_GET_SUPP_CREDS;
 typedef LSA_REDIRECTED_LOGON_CLEANUP_CALLBACK *PLSA_REDIRECTED_LOGON_CLEANUP_CALLBACK;
+typedef LSA_REDIRECTED_LOGON_GET_SID *PLSA_REDIRECTED_LOGON_GET_SID;
 
 #define SECPKG_REDIRECTED_LOGON_GUID_INITIALIZER { 0xc2be5457, 0x82eb, 0x483e, { 0xae, 0x4e, 0x74, 0x68, 0xef, 0x14, 0xd5, 0x9 } }
 typedef struct _SECPKG_REDIRECTED_LOGON_BUFFER {
@@ -1177,6 +1204,7 @@ typedef struct _SECPKG_REDIRECTED_LOGON_BUFFER {
     PLSA_REDIRECTED_LOGON_CLEANUP_CALLBACK CleanupCallback;
     PLSA_REDIRECTED_LOGON_GET_LOGON_CREDS GetLogonCreds;
     PLSA_REDIRECTED_LOGON_GET_SUPP_CREDS GetSupplementalCreds;
+    PLSA_REDIRECTED_LOGON_GET_SID GetRedirectedLogonSid;
 } SECPKG_REDIRECTED_LOGON_BUFFER, *PSECPKG_REDIRECTED_LOGON_BUFFER;
 
 typedef struct _SECPKG_POST_LOGON_USER_INFO
@@ -1235,6 +1263,11 @@ typedef NTSTATUS
     _Out_ PSECPKG_CLIENT_INFO ClientInfo
     );
 
+typedef NTSTATUS
+(NTAPI LSA_GET_CLIENT_INFO_EX)(
+    _Out_ PSECPKG_CLIENT_INFO_EX ClientInfo,
+    _In_ ULONG StructSize
+    );
 
 typedef HANDLE
 (NTAPI LSA_REGISTER_NOTIFICATION)(
@@ -1627,6 +1660,7 @@ typedef LSA_DUPLICATE_HANDLE * PLSA_DUPLICATE_HANDLE;
 typedef LSA_SAVE_SUPPLEMENTAL_CREDENTIALS * PLSA_SAVE_SUPPLEMENTAL_CREDENTIALS;
 typedef LSA_CREATE_THREAD * PLSA_CREATE_THREAD;
 typedef LSA_GET_CLIENT_INFO * PLSA_GET_CLIENT_INFO;
+typedef LSA_GET_CLIENT_INFO_EX* PLSA_GET_CLIENT_INFO_EX;
 typedef LSA_REGISTER_NOTIFICATION * PLSA_REGISTER_NOTIFICATION;
 typedef LSA_CANCEL_NOTIFICATION * PLSA_CANCEL_NOTIFICATION;
 typedef LSA_MAP_BUFFER * PLSA_MAP_BUFFER;
@@ -1882,6 +1916,7 @@ typedef struct _LSA_SECPKG_FUNCTION_TABLE {
     PLSA_QUERY_CLIENT_REQUEST QueryClientRequest;
     PLSA_GET_APP_MODE_INFO GetAppModeInfo;
     PLSA_SET_APP_MODE_INFO SetAppModeInfo;
+    PLSA_GET_CLIENT_INFO_EX GetClientInfoEx;
 } LSA_SECPKG_FUNCTION_TABLE, *PLSA_SECPKG_FUNCTION_TABLE;
 
 

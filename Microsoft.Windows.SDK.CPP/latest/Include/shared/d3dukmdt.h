@@ -278,14 +278,21 @@ typedef struct _DXGKVGPU_ESCAPE_PAUSE
 {
     DXGKVGPU_ESCAPE_HEAD    Header;
     LUID                    DeviceLuid;
-    UINT                    Flags;          // GPUP_SAVE_RESTORE_PAUSE_STATE 
+    union
+    {
+        struct
+        {
+            UINT GuestVmRunning  : 1;
+        };
+        UINT                Flags;
+    };
 } DXGKVGPU_ESCAPE_PAUSE;
 
 typedef struct _DXGKVGPU_ESCAPE_RESUME
 {
     DXGKVGPU_ESCAPE_HEAD    Header;
     LUID                    DeviceLuid;
-    UINT                    Flags;          // GPUP_SAVE_RESTORE_PAUSE_STATE 
+    UINT                    Flags;          // enum GPUP_SAVE_RESTORE_PAUSE_STATE 
 } DXGKVGPU_ESCAPE_RESUME;
 
 

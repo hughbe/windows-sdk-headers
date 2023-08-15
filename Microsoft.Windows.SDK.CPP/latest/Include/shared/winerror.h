@@ -34012,6 +34012,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define APPX_E_INVALID_PUBLISHER_BRIDGING _HRESULT_TYPEDEF_(0x80080218L)
 
 //
+// MessageId: APPX_E_DIGEST_MISMATCH
+//
+// MessageText:
+//
+// The expected digest value did not match the actual digest value of the content.
+//
+#define APPX_E_DIGEST_MISMATCH           _HRESULT_TYPEDEF_(0x80080219L)
+
+//
 // Codes 0x0300-0x030f are reserved for background task error codes.
 //
 //

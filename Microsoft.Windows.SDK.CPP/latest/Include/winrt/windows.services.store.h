@@ -5804,8 +5804,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Services.Store.StoreContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *   Type can be activated via the Windows.Services.Store.IStorePurchasePropertiesFactory interface starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePurchaseProperties ** Default Interface **
@@ -15371,8 +15371,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Services.Store.StoreContract in version 1.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *   Type can be activated via the Windows.Services.Store.IStorePurchasePropertiesFactory interface starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
+ *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Services.Store.StoreContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Services.Store.IStorePurchaseProperties ** Default Interface **

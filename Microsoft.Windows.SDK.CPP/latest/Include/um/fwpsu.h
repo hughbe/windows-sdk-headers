@@ -2059,6 +2059,7 @@ typedef enum {
     IpDiscardTooManyDecapsulations,
     IpDiscardAdministrativelyProhibited, // Blocked, ICMP should be sent.
     IpDiscardBadChecksum,
+    IpDiscardFirstFragmentIncomplete,
 
     IpDiscardReceivePathMax = 127,
 
