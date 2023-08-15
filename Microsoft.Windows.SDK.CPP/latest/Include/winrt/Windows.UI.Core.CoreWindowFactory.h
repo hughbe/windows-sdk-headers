@@ -355,7 +355,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_ICoreWindowFactory=_uuidof(ICoreWindowFactory);
+                MIDL_CONST_ID IID & IID_ICoreWindowFactory=__uuidof(ICoreWindowFactory);
                 
             } /* Core */
         } /* UI */

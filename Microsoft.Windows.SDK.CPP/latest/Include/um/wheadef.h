@@ -720,26 +720,27 @@ Return Value:
 // WHEA PFA Policy Type
 //
 
-#define    WHEA_DISABLE_OFFLINE            0
-#define    WHEA_MEM_PERSISTOFFLINE         1
-#define    WHEA_MEM_PFA_DISABLE            2
-#define    WHEA_MEM_PFA_PAGECOUNT          3
-#define    WHEA_MEM_PFA_THRESHOLD          4
-#define    WHEA_MEM_PFA_TIMEOUT            5
-#define    WHEA_DISABLE_DUMMY_WRITE        6
-#define    WHEA_RESTORE_CMCI_ENABLED       7
-#define    WHEA_RESTORE_CMCI_ATTEMPTS      8
-#define    WHEA_RESTORE_CMCI_ERR_LIMIT     9
-#define    WHEA_CMCI_THRESHOLD_COUNT       10
-#define    WHEA_CMCI_THRESHOLD_TIME        11
-#define    WHEA_CMCI_THRESHOLD_POLL_COUNT  12
-#define    WHEA_PENDING_PAGE_LIST_SZ       13
-#define    WHEA_BAD_PAGE_LIST_MAX_SIZE     14
-#define    WHEA_BAD_PAGE_LIST_LOCATION     15
-#define    WHEA_NOTIFY_ALL_OFFLINES        16
-#define    WHEA_ROW_FAIL_CHECK_EXTENT      17
-#define    WHEA_ROW_FAIL_CHECK_ENABLE      18
-#define    WHEA_ROW_FAIL_CHECK_THRESHOLD   19
+#define    WHEA_DISABLE_OFFLINE                 0
+#define    WHEA_MEM_PERSISTOFFLINE              1
+#define    WHEA_MEM_PFA_DISABLE                 2
+#define    WHEA_MEM_PFA_PAGECOUNT               3
+#define    WHEA_MEM_PFA_THRESHOLD               4
+#define    WHEA_MEM_PFA_TIMEOUT                 5
+#define    WHEA_DISABLE_DUMMY_WRITE             6
+#define    WHEA_RESTORE_CMCI_ENABLED            7
+#define    WHEA_RESTORE_CMCI_ATTEMPTS           8
+#define    WHEA_RESTORE_CMCI_ERR_LIMIT          9
+#define    WHEA_CMCI_THRESHOLD_COUNT            10
+#define    WHEA_CMCI_THRESHOLD_TIME             11
+#define    WHEA_CMCI_THRESHOLD_POLL_COUNT       12
+#define    WHEA_PENDING_PAGE_LIST_SZ            13
+#define    WHEA_BAD_PAGE_LIST_MAX_SIZE          14
+#define    WHEA_BAD_PAGE_LIST_LOCATION          15
+#define    WHEA_NOTIFY_ALL_OFFLINES             16
+#define    WHEA_ROW_FAIL_CHECK_EXTENT           17
+#define    WHEA_ROW_FAIL_CHECK_ENABLE           18
+#define    WHEA_ROW_FAIL_CHECK_THRESHOLD        19
+#define    WHEA_DISABLE_PRM_ADDRESS_TRANSLATION 20
 
 #define IPMI_OS_SEL_RECORD_SIGNATURE 'RSSO'
 #define IPMI_OS_SEL_RECORD_VERSION_1 1

@@ -459,7 +459,7 @@ namespace ABI {
                 
             };
 
-            MIDL_CONST_ID IID & IID_IActivatableClassRegistration=_uuidof(IActivatableClassRegistration);
+            MIDL_CONST_ID IID & IID_IActivatableClassRegistration=__uuidof(IActivatableClassRegistration);
             
         } /* Foundation */
     } /* Windows */
@@ -494,7 +494,7 @@ namespace ABI {
                 
             };
 
-            MIDL_CONST_ID IID & IID_IDllServerActivatableClassRegistration=_uuidof(IDllServerActivatableClassRegistration);
+            MIDL_CONST_ID IID & IID_IDllServerActivatableClassRegistration=__uuidof(IDllServerActivatableClassRegistration);
             
         } /* Foundation */
     } /* Windows */
@@ -526,7 +526,7 @@ namespace ABI {
                 
             };
 
-            MIDL_CONST_ID IID & IID_IExeServerActivatableClassRegistration=_uuidof(IExeServerActivatableClassRegistration);
+            MIDL_CONST_ID IID & IID_IExeServerActivatableClassRegistration=__uuidof(IExeServerActivatableClassRegistration);
             
         } /* Foundation */
     } /* Windows */
@@ -579,7 +579,7 @@ namespace ABI {
                 
             };
 
-            MIDL_CONST_ID IID & IID_IExeServerRegistration=_uuidof(IExeServerRegistration);
+            MIDL_CONST_ID IID & IID_IExeServerRegistration=__uuidof(IExeServerRegistration);
             
         } /* Foundation */
     } /* Windows */

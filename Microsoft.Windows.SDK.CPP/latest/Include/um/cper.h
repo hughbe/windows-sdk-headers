@@ -1066,6 +1066,102 @@ CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, ResponderId,         56, 8);
 CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, TargetId,            64, 8);
 CPER_FIELD_CHECK(WHEA_MEMORY_ERROR_SECTION, ErrorType,           72, 1);
 
+//----------------------------------------------- WHEA_MEMORY_ERROR_EXT_SECTION
+
+typedef enum _WHEA_MEMORY_DEFINITION {
+    WheaMemoryUndefined = 0,
+    WheaMemoryFm,
+    WheaMemoryNm,
+    WheaMemoryHbm,
+    WheaMemoryMax
+} WHEA_MEMORY_DEFINITION, *PWHEA_MEMORY_DEFINITION;
+
+typedef union _WHEA_MEMORY_ERROR_EXT_SECTION_FLAGS {
+    struct {
+        UINT64 AddressTranslationByPrmSuccess : 1;
+        UINT64 AddressTranslationByPrmFailed : 1;
+        UINT64 AddressTranslationByPrmNotSupported : 1;
+        UINT64 AddressTranslationByPluginSuccess : 1;
+        UINT64 AddressTranslationByPluginFailed : 1;
+        UINT64 AddressTranslationByPluginNotSupported : 1;
+        UINT64 Reserved : 58;
+    } DUMMYSTRUCTNAME;
+
+    UINT64 AsUINT64;
+} WHEA_MEMORY_ERROR_EXT_SECTION_FLAGS, *PWHEA_MEMORY_ERROR_EXT_SECTION_FLAGS;
+
+typedef union _WHEA_MEMORY_ERROR_EXT_SECTION_INTEL_VALIDBITS {
+    struct {
+        UINT64 MemDef : 1;
+        UINT64 SystemAddress : 1;
+        UINT64 SpareSystemAddress : 1;
+        UINT64 DevicePhysicalAddress : 1;
+        UINT64 ChannelAddress : 1;
+        UINT64 RankAddress : 1;
+        UINT64 ProcessorSocketId : 1;
+        UINT64 MemoryControllerId : 1;
+        UINT64 TargetId : 1;
+        UINT64 LogicalChannelId : 1;
+        UINT64 ChannelId : 1;
+        UINT64 SubChannelId : 1;
+        UINT64 PhysicalRankId : 1;
+        UINT64 DimmSlotId : 1;
+        UINT64 DimmRankId : 1;
+        UINT64 Bank : 1;
+        UINT64 BankGroup : 1;
+        UINT64 Row : 1;
+        UINT64 Column : 1;
+        UINT64 LockStepRank : 1;
+        UINT64 LockStepPhysicalRank : 1;
+        UINT64 LockStepBank : 1;
+        UINT64 LockStepBankGroup : 1;
+        UINT64 ChipSelect : 1;
+        UINT64 Node : 1;
+        UINT64 ChipId : 1;
+        UINT64 Reserved : 38;
+    } DUMMYSTRUCTNAME;
+
+    UINT64 ValidBits;
+} WHEA_MEMORY_ERROR_EXT_SECTION_INTEL_VALIDBITS,
+  *PWHEA_MEMORY_ERROR_EXT_SECTION_INTEL_VALIDBITS;
+
+typedef struct _WHEA_MEMORY_HARDWARE_ADDRESS_INTEL {
+    WHEA_MEMORY_DEFINITION MemDef;
+    UINT64 SystemAddress;
+    UINT64 SpareSystemAddress;
+    UINT64 DevicePhysicalAddress;
+    UINT64 ChannelAddress;
+    UINT64 RankAddress;
+    UINT8 ProcessorSocketId;
+    UINT8 MemoryControllerId;
+    UINT8 TargetId;
+    UINT8 LogicalChannelId;
+    UINT8 ChannelId;
+    UINT8 SubChannelId;
+    UINT8 PhysicalRankId;
+    UINT8 DimmSlotId;
+    UINT8 DimmRankId;
+    UINT8 Bank;
+    UINT8 BankGroup;
+    UINT32 Row;
+    UINT32 Column;
+    UINT8 LockStepRank;
+    UINT8 LockStepPhysicalRank;
+    UINT8 LockStepBank;
+    UINT8 LockStepBankGroup;
+    UINT8 ChipSelect;
+    UINT8 Node;
+    UINT8 ChipId;
+    UINT8 Reserved[40];
+} WHEA_MEMORY_HARDWARE_ADDRESS_INTEL, *PWHEA_MEMORY_HARDWARE_ADDRESS_INTEL;
+
+typedef struct _WHEA_MEMORY_ERROR_EXT_SECTION_INTEL {
+    WHEA_MEMORY_ERROR_EXT_SECTION_FLAGS Flags;
+    WHEA_MEMORY_ERROR_EXT_SECTION_INTEL_VALIDBITS ValidBits;
+    WHEA_MEMORY_HARDWARE_ADDRESS_INTEL HardwareAddress;
+    UINT8 Reserved[40];
+} WHEA_MEMORY_ERROR_EXT_SECTION_INTEL, *PWHEA_MEMORY_ERROR_EXT_SECTION_INTEL;
+
 //----------------------------------------------------- WHEA_PMEM_ERROR_SECTION
 
 #define WHEA_PMEM_ERROR_SECTION_LOCATION_INFO_SIZE 64

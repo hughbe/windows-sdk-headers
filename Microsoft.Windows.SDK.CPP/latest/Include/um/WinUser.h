@@ -783,8 +783,8 @@ wsprintfW(
  */
 #define WH_MIN              (-1)
 #define WH_MSGFILTER        (-1)
-#define WH_JOURNALRECORD    0
-#define WH_JOURNALPLAYBACK  1
+#define WH_JOURNALRECORD    0   // OBSOLETE: discontinued
+#define WH_JOURNALPLAYBACK  1   // OBSOLETE: discontinued
 #define WH_KEYBOARD         2
 #define WH_GETMESSAGE       3
 #define WH_CALLWNDPROC      4

@@ -35,6 +35,8 @@ typedef union uint128_t
     uint32_t   D[4];
     uint16_t   W[8];
     uint8_t    B[16];
+    float      F32[4];
+    double     F64[2];
 
 } uint128_t;
 
@@ -71,6 +73,8 @@ uint64_t WIDEMATHAPI UDIV128(uint64_t DividendHi, uint64_t DividendLo, uint64_t 
 
 uint64_t WIDEMATHAPI PADC64(uint64_t X, uint64_t Y, uint64_t C, uint64_t Mask);
 
+uint64_t WIDEMATHAPI PABS64(uint64_t Y, uint64_t Mask, unsigned DataWidth);
+
 uint64_t WIDEMATHAPI PADD64(uint64_t X, uint64_t Y, uint64_t Mask);
 
 uint64_t WIDEMATHAPI PSUB64(uint64_t X, uint64_t Y, uint64_t Mask);
@@ -79,13 +83,15 @@ uint64_t WIDEMATHAPI PADDSI64(uint64_t X, uint64_t Y, uint64_t Mask, unsigned Da
 
 uint64_t WIDEMATHAPI PADDSU64(uint64_t X, uint64_t Y, uint64_t Mask, unsigned DataWidth);
 
-static __forceinline
+uint64_t WIDEMATHAPI PALIGNR64(uint64_t X, uint64_t Y, uint64_t ShiftCount);
+
+__forceinline
 uint64_t WIDEMATHAPI PAND64(uint64_t X, uint64_t Y)
 {
     return X & Y;
 }
 
-static __forceinline
+__forceinline
 uint64_t WIDEMATHAPI PANDN64(uint64_t X, uint64_t Y)
 {
     return (~X) & Y;
@@ -132,7 +138,7 @@ uint64_t WIDEMATHAPI PMULHUW64(uint64_t X, uint64_t Y);
 
 uint64_t WIDEMATHAPI PMULUDQ64(uint64_t X, uint64_t Y);
 
-static __forceinline
+__forceinline
 uint64_t WIDEMATHAPI POR64(uint64_t X, uint64_t Y)
 {
     return X | Y;
@@ -154,7 +160,7 @@ uint64_t WIDEMATHAPI PSHUFW64(uint64_t Y, int Imm);
 
 uint64_t WIDEMATHAPI PUNPCK64(uint64_t X, uint64_t Y, uint64_t SwizzleBytes);
 
-static __forceinline
+__forceinline
 uint64_t WIDEMATHAPI PXOR64(uint64_t X, uint64_t Y)
 {
     return X ^ Y;

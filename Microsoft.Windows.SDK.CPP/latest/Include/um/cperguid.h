@@ -300,6 +300,11 @@ DEFINE_GUID(PCI_RECOVERY_SECTION_GUID,
             0xdd060800, 0xf6e1, 0x4204, 0xac, 0x27, 
             0xc4, 0xbc, 0xa9, 0x56, 0x84, 0x02);
 
+/* e16edb28-6113-4263-a41d-e53f8de78751 */
+DEFINE_GUID(MEMORY_ERROR_EXT_SECTION_INTEL_GUID,
+            0xe16edb28, 0x6113, 0x4263, 0xa4, 0x1d,
+            0xe5, 0x3f, 0x8d, 0xe7, 0x87, 0x51);
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 

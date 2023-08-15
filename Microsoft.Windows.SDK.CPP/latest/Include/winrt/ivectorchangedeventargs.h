@@ -214,7 +214,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IVectorChangedEventArgs=_uuidof(IVectorChangedEventArgs);
+                MIDL_CONST_ID IID & IID_IVectorChangedEventArgs=__uuidof(IVectorChangedEventArgs);
                 
             } /* Collections */
         } /* Foundation */

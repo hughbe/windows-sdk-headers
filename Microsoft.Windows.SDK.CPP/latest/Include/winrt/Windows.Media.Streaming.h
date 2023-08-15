@@ -2199,7 +2199,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IConnectionStatusHandler=_uuidof(IConnectionStatusHandler);
+                MIDL_CONST_ID IID & IID_IConnectionStatusHandler=__uuidof(IConnectionStatusHandler);
                 
             } /* Streaming */
         } /* Media */
@@ -2239,7 +2239,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IDeviceControllerFinderHandler=_uuidof(IDeviceControllerFinderHandler);
+                MIDL_CONST_ID IID & IID_IDeviceControllerFinderHandler=__uuidof(IDeviceControllerFinderHandler);
                 
             } /* Streaming */
         } /* Media */
@@ -2278,7 +2278,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IRenderingParametersUpdateHandler=_uuidof(IRenderingParametersUpdateHandler);
+                MIDL_CONST_ID IID & IID_IRenderingParametersUpdateHandler=__uuidof(IRenderingParametersUpdateHandler);
                 
             } /* Streaming */
         } /* Media */
@@ -2317,7 +2317,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_ITransportParametersUpdateHandler=_uuidof(ITransportParametersUpdateHandler);
+                MIDL_CONST_ID IID & IID_ITransportParametersUpdateHandler=__uuidof(ITransportParametersUpdateHandler);
                 
             } /* Streaming */
         } /* Media */
@@ -2408,7 +2408,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IActiveBasicDevice=_uuidof(IActiveBasicDevice);
+                MIDL_CONST_ID IID & IID_IActiveBasicDevice=__uuidof(IActiveBasicDevice);
                 
             } /* Streaming */
         } /* Media */
@@ -2467,7 +2467,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IActiveBasicDeviceStatics=_uuidof(IActiveBasicDeviceStatics);
+                MIDL_CONST_ID IID & IID_IActiveBasicDeviceStatics=__uuidof(IActiveBasicDeviceStatics);
                 
             } /* Streaming */
         } /* Media */
@@ -2567,7 +2567,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IBasicDevice=_uuidof(IBasicDevice);
+                MIDL_CONST_ID IID & IID_IBasicDevice=__uuidof(IBasicDevice);
                 
             } /* Streaming */
         } /* Media */
@@ -2626,7 +2626,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IDeviceController=_uuidof(IDeviceController);
+                MIDL_CONST_ID IID & IID_IDeviceController=__uuidof(IDeviceController);
                 
             } /* Streaming */
         } /* Media */
@@ -2674,7 +2674,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IDeviceIcon=_uuidof(IDeviceIcon);
+                MIDL_CONST_ID IID & IID_IDeviceIcon=__uuidof(IDeviceIcon);
                 
             } /* Streaming */
         } /* Media */
@@ -2716,7 +2716,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IDevicePair=_uuidof(IDevicePair);
+                MIDL_CONST_ID IID & IID_IDevicePair=__uuidof(IDevicePair);
                 
             } /* Streaming */
         } /* Media */
@@ -2846,7 +2846,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IMediaRenderer=_uuidof(IMediaRenderer);
+                MIDL_CONST_ID IID & IID_IMediaRenderer=__uuidof(IMediaRenderer);
                 
             } /* Streaming */
         } /* Media */
@@ -2906,7 +2906,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IMediaRendererActionInformation=_uuidof(IMediaRendererActionInformation);
+                MIDL_CONST_ID IID & IID_IMediaRendererActionInformation=__uuidof(IMediaRendererActionInformation);
                 
             } /* Streaming */
         } /* Media */
@@ -2950,7 +2950,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IMediaRendererFactory=_uuidof(IMediaRendererFactory);
+                MIDL_CONST_ID IID & IID_IMediaRendererFactory=__uuidof(IMediaRendererFactory);
                 
             } /* Streaming */
         } /* Media */
@@ -3006,7 +3006,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_IStreamSelectorStatics=_uuidof(IStreamSelectorStatics);
+                MIDL_CONST_ID IID & IID_IStreamSelectorStatics=__uuidof(IStreamSelectorStatics);
                 
             } /* Streaming */
         } /* Media */
@@ -3051,7 +3051,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_ITransportParameters=_uuidof(ITransportParameters);
+                MIDL_CONST_ID IID & IID_ITransportParameters=__uuidof(ITransportParameters);
                 
             } /* Streaming */
         } /* Media */

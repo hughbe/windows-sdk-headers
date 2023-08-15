@@ -311,6 +311,13 @@ typedef interface ID3D12DeviceRemovedExtendedDataSettings1 ID3D12DeviceRemovedEx
 #endif 	/* __ID3D12DeviceRemovedExtendedDataSettings1_FWD_DEFINED__ */
 
 
+#ifndef __ID3D12DeviceRemovedExtendedDataSettings2_FWD_DEFINED__
+#define __ID3D12DeviceRemovedExtendedDataSettings2_FWD_DEFINED__
+typedef interface ID3D12DeviceRemovedExtendedDataSettings2 ID3D12DeviceRemovedExtendedDataSettings2;
+
+#endif 	/* __ID3D12DeviceRemovedExtendedDataSettings2_FWD_DEFINED__ */
+
+
 #ifndef __ID3D12DeviceRemovedExtendedData_FWD_DEFINED__
 #define __ID3D12DeviceRemovedExtendedData_FWD_DEFINED__
 typedef interface ID3D12DeviceRemovedExtendedData ID3D12DeviceRemovedExtendedData;
@@ -2015,7 +2022,8 @@ enum D3D12_INDEX_BUFFER_STRIP_CUT_VALUE
     {
         D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_DISABLED	= 0,
         D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFF	= 1,
-        D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF	= 2
+        D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_0xFFFFFFFF	= 2,
+        D3D12_INDEX_BUFFER_STRIP_CUT_VALUE_MAX_OF_IB_FORMAT	= 3
     } 	D3D12_INDEX_BUFFER_STRIP_CUT_VALUE;
 
 typedef struct D3D12_CACHED_PIPELINE_STATE
@@ -2145,7 +2153,8 @@ enum D3D12_FEATURE
         D3D12_FEATURE_D3D12_OPTIONS11	= 40,
         D3D12_FEATURE_D3D12_OPTIONS12	= 41,
         D3D12_FEATURE_D3D12_OPTIONS13	= 42,
-        D3D12_FEATURE_D3D12_OPTIONS14	= 43
+        D3D12_FEATURE_D3D12_OPTIONS14	= 43,
+        D3D12_FEATURE_D3D12_OPTIONS15	= 44
     } 	D3D12_FEATURE;
 
 typedef 
@@ -2630,6 +2639,12 @@ typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS14
     _Out_  BOOL WriteableMSAATexturesSupported;
     _Out_  BOOL IndependentFrontAndBackStencilRefMaskSupported;
     } 	D3D12_FEATURE_DATA_D3D12_OPTIONS14;
+
+typedef struct D3D12_FEATURE_DATA_D3D12_OPTIONS15
+    {
+    _Out_  BOOL TriangleFanSupported;
+    _Out_  BOOL DynamicIndexBufferStripCutSupported;
+    } 	D3D12_FEATURE_DATA_D3D12_OPTIONS15;
 
 typedef struct D3D12_RESOURCE_ALLOCATION_INFO
     {
@@ -14750,6 +14765,123 @@ EXTERN_C const IID IID_ID3D12DeviceRemovedExtendedDataSettings1;
 #endif 	/* __ID3D12DeviceRemovedExtendedDataSettings1_INTERFACE_DEFINED__ */
 
 
+#ifndef __ID3D12DeviceRemovedExtendedDataSettings2_INTERFACE_DEFINED__
+#define __ID3D12DeviceRemovedExtendedDataSettings2_INTERFACE_DEFINED__
+
+/* interface ID3D12DeviceRemovedExtendedDataSettings2 */
+/* [unique][local][object][uuid] */ 
+
+
+EXTERN_C const IID IID_ID3D12DeviceRemovedExtendedDataSettings2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("61552388-01ab-4008-a436-83db189566ea")
+    ID3D12DeviceRemovedExtendedDataSettings2 : public ID3D12DeviceRemovedExtendedDataSettings1
+    {
+    public:
+        virtual void STDMETHODCALLTYPE UseMarkersOnlyAutoBreadcrumbs( 
+            BOOL MarkersOnly) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ID3D12DeviceRemovedExtendedDataSettings2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceRemovedExtendedDataSettings, SetAutoBreadcrumbsEnablement)
+        void ( STDMETHODCALLTYPE *SetAutoBreadcrumbsEnablement )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            D3D12_DRED_ENABLEMENT Enablement);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceRemovedExtendedDataSettings, SetPageFaultEnablement)
+        void ( STDMETHODCALLTYPE *SetPageFaultEnablement )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            D3D12_DRED_ENABLEMENT Enablement);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceRemovedExtendedDataSettings, SetWatsonDumpEnablement)
+        void ( STDMETHODCALLTYPE *SetWatsonDumpEnablement )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            D3D12_DRED_ENABLEMENT Enablement);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceRemovedExtendedDataSettings1, SetBreadcrumbContextEnablement)
+        void ( STDMETHODCALLTYPE *SetBreadcrumbContextEnablement )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            D3D12_DRED_ENABLEMENT Enablement);
+        
+        DECLSPEC_XFGVIRT(ID3D12DeviceRemovedExtendedDataSettings2, UseMarkersOnlyAutoBreadcrumbs)
+        void ( STDMETHODCALLTYPE *UseMarkersOnlyAutoBreadcrumbs )( 
+            ID3D12DeviceRemovedExtendedDataSettings2 * This,
+            BOOL MarkersOnly);
+        
+        END_INTERFACE
+    } ID3D12DeviceRemovedExtendedDataSettings2Vtbl;
+
+    interface ID3D12DeviceRemovedExtendedDataSettings2
+    {
+        CONST_VTBL struct ID3D12DeviceRemovedExtendedDataSettings2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_SetAutoBreadcrumbsEnablement(This,Enablement)	\
+    ( (This)->lpVtbl -> SetAutoBreadcrumbsEnablement(This,Enablement) ) 
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_SetPageFaultEnablement(This,Enablement)	\
+    ( (This)->lpVtbl -> SetPageFaultEnablement(This,Enablement) ) 
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_SetWatsonDumpEnablement(This,Enablement)	\
+    ( (This)->lpVtbl -> SetWatsonDumpEnablement(This,Enablement) ) 
+
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_SetBreadcrumbContextEnablement(This,Enablement)	\
+    ( (This)->lpVtbl -> SetBreadcrumbContextEnablement(This,Enablement) ) 
+
+
+#define ID3D12DeviceRemovedExtendedDataSettings2_UseMarkersOnlyAutoBreadcrumbs(This,MarkersOnly)	\
+    ( (This)->lpVtbl -> UseMarkersOnlyAutoBreadcrumbs(This,MarkersOnly) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ID3D12DeviceRemovedExtendedDataSettings2_INTERFACE_DEFINED__ */
+
+
 #ifndef __ID3D12DeviceRemovedExtendedData_INTERFACE_DEFINED__
 #define __ID3D12DeviceRemovedExtendedData_INTERFACE_DEFINED__
 
@@ -15081,7 +15213,7 @@ EXTERN_C const IID IID_ID3D12DeviceRemovedExtendedData2;
 #endif 	/* __ID3D12DeviceRemovedExtendedData2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0040 */
+/* interface __MIDL_itf_d3d12_0000_0041 */
 /* [local] */ 
 
 typedef 
@@ -15104,8 +15236,8 @@ enum D3D12_MEASUREMENTS_ACTION
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0040_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0040_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0041_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0041_v0_0_s_ifspec;
 
 #ifndef __ID3D12Device6_INTERFACE_DEFINED__
 #define __ID3D12Device6_INTERFACE_DEFINED__
@@ -15857,7 +15989,7 @@ EXTERN_C const IID IID_ID3D12Device6;
 #endif 	/* __ID3D12Device6_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0041 */
+/* interface __MIDL_itf_d3d12_0000_0042 */
 /* [local] */ 
 
 DEFINE_GUID(D3D12_PROTECTED_RESOURCES_SESSION_HARDWARE_PROTECTED,                           0x62B0084E, 0xC70E, 0x4DAA, 0xA1, 0x09, 0x30, 0xFF, 0x8D, 0x5A, 0x04, 0x82); 
@@ -15883,8 +16015,8 @@ typedef struct D3D12_PROTECTED_RESOURCE_SESSION_DESC1
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0041_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0041_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0042_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0042_v0_0_s_ifspec;
 
 #ifndef __ID3D12ProtectedResourceSession1_INTERFACE_DEFINED__
 #define __ID3D12ProtectedResourceSession1_INTERFACE_DEFINED__
@@ -18984,7 +19116,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList3;
 #endif 	/* __ID3D12GraphicsCommandList3_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0048 */
+/* interface __MIDL_itf_d3d12_0000_0049 */
 /* [local] */ 
 
 typedef 
@@ -19076,8 +19208,8 @@ enum D3D12_RENDER_PASS_FLAGS
 DEFINE_ENUM_FLAG_OPERATORS( D3D12_RENDER_PASS_FLAGS );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0048_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0048_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0049_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0049_v0_0_s_ifspec;
 
 #ifndef __ID3D12MetaCommand_INTERFACE_DEFINED__
 #define __ID3D12MetaCommand_INTERFACE_DEFINED__
@@ -19213,7 +19345,7 @@ EXTERN_C const IID IID_ID3D12MetaCommand;
 #endif 	/* __ID3D12MetaCommand_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0049 */
+/* interface __MIDL_itf_d3d12_0000_0050 */
 /* [local] */ 
 
 typedef struct D3D12_DISPATCH_RAYS_DESC
@@ -19229,8 +19361,8 @@ typedef struct D3D12_DISPATCH_RAYS_DESC
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0049_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0049_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0050_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0050_v0_0_s_ifspec;
 
 #ifndef __ID3D12GraphicsCommandList4_INTERFACE_DEFINED__
 #define __ID3D12GraphicsCommandList4_INTERFACE_DEFINED__
@@ -20079,7 +20211,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList4;
 #endif 	/* __ID3D12GraphicsCommandList4_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0050 */
+/* interface __MIDL_itf_d3d12_0000_0051 */
 /* [local] */ 
 
 typedef 
@@ -20281,8 +20413,8 @@ typedef struct D3D12_BARRIER_GROUP
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0050_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0050_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0051_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0051_v0_0_s_ifspec;
 
 #ifndef __ID3D12ShaderCacheSession_INTERFACE_DEFINED__
 #define __ID3D12ShaderCacheSession_INTERFACE_DEFINED__
@@ -20469,7 +20601,7 @@ EXTERN_C const IID IID_ID3D12ShaderCacheSession;
 #endif 	/* __ID3D12ShaderCacheSession_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0051 */
+/* interface __MIDL_itf_d3d12_0000_0052 */
 /* [local] */ 
 
 typedef 
@@ -20493,8 +20625,8 @@ enum D3D12_SHADER_CACHE_CONTROL_FLAGS
 DEFINE_ENUM_FLAG_OPERATORS( D3D12_SHADER_CACHE_CONTROL_FLAGS );
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0051_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0051_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0052_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0052_v0_0_s_ifspec;
 
 #ifndef __ID3D12Device9_INTERFACE_DEFINED__
 #define __ID3D12Device9_INTERFACE_DEFINED__
@@ -23440,7 +23572,7 @@ EXTERN_C const IID IID_ID3D12Tools;
 #endif 	/* __ID3D12Tools_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0056 */
+/* interface __MIDL_itf_d3d12_0000_0057 */
 /* [local] */ 
 
 typedef struct D3D12_SUBRESOURCE_DATA
@@ -23588,8 +23720,8 @@ HRESULT WINAPI D3D12GetInterface( _In_ REFCLSID rclsid, _In_ REFIID riid, _COM_O
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0056_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0056_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0057_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0057_v0_0_s_ifspec;
 
 #ifndef __ID3D12SDKConfiguration_INTERFACE_DEFINED__
 #define __ID3D12SDKConfiguration_INTERFACE_DEFINED__
@@ -23676,7 +23808,7 @@ EXTERN_C const IID IID_ID3D12SDKConfiguration;
 #endif 	/* __ID3D12SDKConfiguration_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0057 */
+/* interface __MIDL_itf_d3d12_0000_0058 */
 /* [local] */ 
 
 typedef 
@@ -23716,8 +23848,8 @@ enum D3D12_SHADING_RATE_COMBINER
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0057_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0057_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_s_ifspec;
 
 #ifndef __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__
 #define __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__
@@ -24552,7 +24684,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList5;
 #endif 	/* __ID3D12GraphicsCommandList5_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0058 */
+/* interface __MIDL_itf_d3d12_0000_0059 */
 /* [local] */ 
 
 typedef struct D3D12_DISPATCH_MESH_ARGUMENTS
@@ -24564,8 +24696,8 @@ typedef struct D3D12_DISPATCH_MESH_ARGUMENTS
 
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0058_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0059_v0_0_s_ifspec;
 
 #ifndef __ID3D12GraphicsCommandList6_INTERFACE_DEFINED__
 #define __ID3D12GraphicsCommandList6_INTERFACE_DEFINED__
@@ -27121,7 +27253,7 @@ EXTERN_C const IID IID_ID3D12GraphicsCommandList8;
 #endif 	/* __ID3D12GraphicsCommandList8_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d12_0000_0061 */
+/* interface __MIDL_itf_d3d12_0000_0062 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
@@ -27163,6 +27295,7 @@ DEFINE_GUID(IID_ID3D12StateObjectProperties,0xde5fa827,0x9bf9,0x4f26,0x89,0xff,0
 DEFINE_GUID(IID_ID3D12Device5,0x8b4f173b,0x2fea,0x4b80,0x8f,0x58,0x43,0x07,0x19,0x1a,0xb9,0x5d);
 DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedDataSettings,0x82BC481C,0x6B9B,0x4030,0xAE,0xDB,0x7E,0xE3,0xD1,0xDF,0x1E,0x63);
 DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedDataSettings1,0xDBD5AE51,0x3317,0x4F0A,0xAD,0xF9,0x1D,0x7C,0xED,0xCA,0xAE,0x0B);
+DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedDataSettings2,0x61552388,0x01ab,0x4008,0xa4,0x36,0x83,0xdb,0x18,0x95,0x66,0xea);
 DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedData,0x98931D33,0x5AE8,0x4791,0xAA,0x3C,0x1A,0x73,0xA2,0x93,0x4E,0x71);
 DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedData1,0x9727A022,0xCF1D,0x4DDA,0x9E,0xBA,0xEF,0xFA,0x65,0x3F,0xC5,0x06);
 DEFINE_GUID(IID_ID3D12DeviceRemovedExtendedData2,0x67FC5816,0xE4CA,0x4915,0xBF,0x18,0x42,0x54,0x12,0x72,0xDA,0x54);
@@ -27189,8 +27322,8 @@ DEFINE_GUID(IID_ID3D12GraphicsCommandList7,0xdd171223,0x8b61,0x4769,0x90,0xe3,0x
 DEFINE_GUID(IID_ID3D12GraphicsCommandList8,0xee936ef9,0x599d,0x4d28,0x93,0x8e,0x23,0xc4,0xad,0x05,0xce,0x51);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0061_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0061_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d12_0000_0062_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

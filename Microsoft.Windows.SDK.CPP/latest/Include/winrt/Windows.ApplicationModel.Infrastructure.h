@@ -324,7 +324,7 @@ namespace ABI {
                     
                 };
 
-                MIDL_CONST_ID IID & IID_ISetWindowWithWindowFactory=_uuidof(ISetWindowWithWindowFactory);
+                MIDL_CONST_ID IID & IID_ISetWindowWithWindowFactory=__uuidof(ISetWindowWithWindowFactory);
                 
             } /* Infrastructure */
         } /* ApplicationModel */

@@ -456,7 +456,7 @@ namespace ABI {
                         
                     };
 
-                    MIDL_CONST_ID IID & IID_IMediaRendererBrokerStatics=_uuidof(IMediaRendererBrokerStatics);
+                    MIDL_CONST_ID IID & IID_IMediaRendererBrokerStatics=__uuidof(IMediaRendererBrokerStatics);
                     
                 } /* Internal */
             } /* Streaming */
