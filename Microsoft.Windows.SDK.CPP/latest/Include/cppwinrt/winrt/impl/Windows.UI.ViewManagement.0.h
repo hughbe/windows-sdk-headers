@@ -167,7 +167,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement
     struct IApplicationViewInteropStatics;
     struct IApplicationViewScaling;
     struct IApplicationViewScalingStatics;
-    struct IApplicationViewScreenCaptureDisabledBehavior;
     struct IApplicationViewStatics;
     struct IApplicationViewStatics2;
     struct IApplicationViewStatics3;
@@ -239,7 +238,6 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewInteropStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewScaling>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics>{ using type = interface_category; };
-    template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewStatics>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3>{ using type = interface_category; };
@@ -353,7 +351,6 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewInteropStatics> = L"Windows.UI.ViewManagement.IApplicationViewInteropStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewScaling> = L"Windows.UI.ViewManagement.IApplicationViewScaling";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics> = L"Windows.UI.ViewManagement.IApplicationViewScalingStatics";
-    template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior> = L"Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics> = L"Windows.UI.ViewManagement.IApplicationViewStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2> = L"Windows.UI.ViewManagement.IApplicationViewStatics2";
     template <> inline constexpr auto& name_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3> = L"Windows.UI.ViewManagement.IApplicationViewStatics3";
@@ -403,7 +400,6 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewInteropStatics>{ 0xC446FB5D,0x4793,0x4896,{ 0xA8,0xE2,0xBE,0x57,0xA8,0xBB,0x0F,0x50 } }; // C446FB5D-4793-4896-A8E2-BE57A8BB0F50
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewScaling>{ 0x1D0DDC23,0x23F3,0x4B2D,{ 0x84,0xFE,0x74,0xBF,0x37,0xB4,0x8B,0x66 } }; // 1D0DDC23-23F3-4B2D-84FE-74BF37B48B66
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics>{ 0xB08FECF0,0xB946,0x45C8,{ 0xA5,0xE3,0x71,0xF5,0xAA,0x78,0xF8,0x61 } }; // B08FECF0-B946-45C8-A5E3-71F5AA78F861
-    template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior>{ 0x07C19B29,0x7B3B,0x44D3,{ 0xB7,0x47,0x2F,0xDC,0x18,0x55,0x36,0x80 } }; // 07C19B29-7B3B-44D3-B747-2FDC18553680
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics>{ 0x010A6306,0xC433,0x44E5,{ 0xA9,0xF2,0xBD,0x84,0xD4,0x03,0x0A,0x95 } }; // 010A6306-C433-44E5-A9F2-BD84D4030A95
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2>{ 0xAF338AE5,0xCF64,0x423C,{ 0x85,0xE5,0xF3,0xE7,0x24,0x48,0xFB,0x23 } }; // AF338AE5-CF64-423C-85E5-F3E72448FB23
     template <> inline constexpr guid guid_v<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3>{ 0xA28D7594,0x8C41,0x4E13,{ 0x97,0x19,0x51,0x64,0x79,0x6F,0xE4,0xC7 } }; // A28D7594-8C41-4E13-9719-5164796FE4C7
@@ -588,14 +584,6 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_DisableLayoutScaling(bool*) noexcept = 0;
             virtual int32_t __stdcall TrySetDisableLayoutScaling(bool, bool*) noexcept = 0;
-        };
-    };
-    template <> struct abi<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior>
-    {
-        struct __declspec(novtable) type : inspectable_abi
-        {
-            virtual int32_t __stdcall get_ScreenCaptureDisabledBehavior(int32_t*) noexcept = 0;
-            virtual int32_t __stdcall put_ScreenCaptureDisabledBehavior(int32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::UI::ViewManagement::IApplicationViewStatics>
@@ -1106,16 +1094,6 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics>
     {
         template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewScalingStatics<D>;
-    };
-    template <typename D>
-    struct consume_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior
-    {
-        [[nodiscard]] WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior) ScreenCaptureDisabledBehavior() const;
-        WINRT_IMPL_AUTO(void) ScreenCaptureDisabledBehavior(winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior const& value) const;
-    };
-    template <> struct consume<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior>
-    {
-        template <typename D> using type = consume_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior<D>;
     };
     template <typename D>
     struct consume_Windows_UI_ViewManagement_IApplicationViewStatics

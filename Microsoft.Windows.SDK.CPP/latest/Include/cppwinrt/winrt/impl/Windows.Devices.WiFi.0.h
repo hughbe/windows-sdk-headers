@@ -107,6 +107,7 @@ WINRT_EXPORT namespace winrt::Windows::Devices::WiFi
         Vht = 8,
         Dmg = 9,
         HE = 10,
+        Eht = 11,
     };
     enum class WiFiReconnectionKind : int32_t
     {

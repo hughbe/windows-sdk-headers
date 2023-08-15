@@ -729,6 +729,15 @@ Notes:
 #define STATUS_REPARSE_GLOBAL            ((NTSTATUS)0x00000368L)
 
 //
+// MessageId: STATUS_PAGE_FAULT_RETRY
+//
+// MessageText:
+//
+// Page fault should be retried.
+//
+#define STATUS_PAGE_FAULT_RETRY          ((NTSTATUS)0x00000369L)
+
+//
 // MessageId: DBG_EXCEPTION_HANDLED
 //
 // MessageText:

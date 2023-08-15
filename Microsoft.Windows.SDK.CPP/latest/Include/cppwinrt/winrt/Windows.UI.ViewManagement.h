@@ -310,16 +310,6 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics)->TrySetDisableLayoutScaling(disableLayoutScaling, &success));
         return success;
     }
-    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior) consume_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior<D>::ScreenCaptureDisabledBehavior() const
-    {
-        winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior)->get_ScreenCaptureDisabledBehavior(reinterpret_cast<int32_t*>(&value)));
-        return value;
-    }
-    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior<D>::ScreenCaptureDisabledBehavior(winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior const& value) const
-    {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior)->put_ScreenCaptureDisabledBehavior(static_cast<int32_t>(value)));
-    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::UI::ViewManagement::ApplicationViewState) consume_Windows_UI_ViewManagement_IApplicationViewStatics<D>::Value() const
     {
         winrt::Windows::UI::ViewManagement::ApplicationViewState value{};
@@ -1511,26 +1501,6 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *success = detach_from<bool>(this->shim().TrySetDisableLayoutScaling(disableLayoutScaling));
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-    };
-#endif
-#ifndef WINRT_LEAN_AND_MEAN
-    template <typename D>
-    struct produce<D, winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior> : produce_base<D, winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior>
-    {
-        int32_t __stdcall get_ScreenCaptureDisabledBehavior(int32_t* value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            *value = detach_from<winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior>(this->shim().ScreenCaptureDisabledBehavior());
-            return 0;
-        }
-        catch (...) { return to_hresult(); }
-        int32_t __stdcall put_ScreenCaptureDisabledBehavior(int32_t value) noexcept final try
-        {
-            typename D::abi_guard guard(this->shim());
-            this->shim().ScreenCaptureDisabledBehavior(*reinterpret_cast<winrt::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -2956,7 +2926,6 @@ namespace std
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewInteropStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewScaling> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewScalingStatics> : winrt::impl::hash_base {};
-    template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::UI::ViewManagement::IApplicationViewStatics3> : winrt::impl::hash_base {};

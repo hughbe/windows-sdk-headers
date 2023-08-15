@@ -285,6 +285,11 @@ DEFINE_GUID(MEMORY_CORRECTABLE_ERROR_SUMMARY_SECTION_GUID,
             0xca15, 0x4a83,
             0xba, 0x8a, 0xcb, 0xe8, 0x0f, 0x7f, 0x00, 0x17);
 
+/* f5fe48a6-84ce-4c1e-aa64-20c9a53099f1 */
+DEFINE_GUID(SEA_SECTION_GUID,
+            0xf5fe48a6, 0x84ce, 0x4c1e, 0xaa, 0x64,
+            0x20, 0xc9, 0xa5, 0x30, 0x99, 0xf1);
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 

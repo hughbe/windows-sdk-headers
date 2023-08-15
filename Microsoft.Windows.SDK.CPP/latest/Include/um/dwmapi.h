@@ -84,7 +84,12 @@ typedef enum {
     /*
      * Round the corners if appropriate, with a small radius
      */
-    DWMWCP_ROUNDSMALL                              = 3
+    DWMWCP_ROUNDSMALL                              = 3,
+
+    /*
+     * Round the corners of the window in the same style as system popup menus
+     */
+    DWMWCP_MENU                                    = 4
 
 } DWM_WINDOW_CORNER_PREFERENCE;
 

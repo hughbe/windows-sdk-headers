@@ -156,8 +156,6 @@ namespace Windows
 
             interface IApplicationViewScalingStatics;
 
-            interface IApplicationViewScreenCaptureDisabledBehavior;
-
             interface IApplicationViewStatics;
 
             interface IApplicationViewStatics2;
@@ -615,15 +613,6 @@ namespace Windows
                 HRESULT TrySetDisableLayoutScaling([in] boolean disableLayoutScaling, [out] [retval] boolean* success);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
-            [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
-            [uuid(07C19B29-7B3B-44D3-B747-2FDC18553680)]
-            interface IApplicationViewScreenCaptureDisabledBehavior : IInspectable
-            {
-                [propget] HRESULT ScreenCaptureDisabledBehavior([out] [retval] Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior* value);
-                [propput] HRESULT ScreenCaptureDisabledBehavior([in] Windows.UI.ViewManagement.ScreenCaptureDisabledBehavior value);
-            }
-
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [deprecated("ApplicationView static methods may be altered or unavailable for releases after Windows 8.1. Instead, use ApplicationView.GetForCurrentView to get an instance of ApplicationView.", deprecate, Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.ViewManagement.ApplicationView)]
@@ -1033,7 +1022,6 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.UI.ViewManagement.IApplicationView4;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView7;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationView9;
-                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior;
                 [contract(Windows.Foundation.UniversalApiContract, 8.0)] interface Windows.UI.ViewManagement.IApplicationViewWithContext;
             }
 

@@ -2972,6 +2972,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Class implements the following interfaces:
  *    Windows.Devices.Printers.IIppPrintDevice ** Default Interface **
  *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
@@ -9577,6 +9579,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class implements the following interfaces:
  *    Windows.Devices.Printers.IIppPrintDevice ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

@@ -513,6 +513,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
         ICompositionObjectStatics(std::nullptr_t = nullptr) noexcept {}
         ICompositionObjectStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) ICompositionObject_AnimationController :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICompositionObject_AnimationController>
+    {
+        ICompositionObject_AnimationController(std::nullptr_t = nullptr) noexcept {}
+        ICompositionObject_AnimationController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) ICompositionPath :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<ICompositionPath>
@@ -799,6 +806,13 @@ WINRT_EXPORT namespace winrt::Windows::UI::Composition
     {
         ICompositor7(std::nullptr_t = nullptr) noexcept {}
         ICompositor7(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICompositorCreateAnimationController :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICompositorCreateAnimationController>
+    {
+        ICompositorCreateAnimationController(std::nullptr_t = nullptr) noexcept {}
+        ICompositorCreateAnimationController(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) ICompositorStatics :
         winrt::Windows::Foundation::IInspectable,

@@ -35,7 +35,12 @@ typedef struct _D3DKMT_CREATEDEVICEFLAGS
     UINT    RequestVSync             :  1;   // 0x00000002
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WIN8)
     UINT    DisableGpuTimeout        :  1;   // 0x00000004
+#if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
+    UINT    TestDevice               :  1;   // 0x00000008 The device is created by a test. Testsigning must be enabled.
+    UINT    Reserved                 : 28;   // 0xFFFFFFF0
+#else
     UINT    Reserved                 : 29;   // 0xFFFFFFF8
+#endif
 #else
     UINT    Reserved                 : 30;   // 0xFFFFFFFC
 #endif

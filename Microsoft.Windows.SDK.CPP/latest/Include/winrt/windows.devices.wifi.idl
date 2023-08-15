@@ -270,7 +270,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 Dmg        = 9,
                 [contract(Windows.Foundation.UniversalApiContract, 7.0)]
-                HE         = 10
+                HE         = 10,
+                [contract(Windows.Foundation.UniversalApiContract, 7.0)]
+                Eht        = 11
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

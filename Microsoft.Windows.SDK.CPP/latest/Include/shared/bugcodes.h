@@ -4564,6 +4564,33 @@ Notes:
 #define VMBUS_LIVEDUMP                   ((ULONG)0x400001EFL)
 
 //
+// MessageId: KASAN_ILLEGAL_ACCESS
+//
+// MessageText:
+//
+//  KASAN_ILLEGAL_ACCESS
+//
+#define KASAN_ILLEGAL_ACCESS             ((ULONG)0x000001F0L)
+
+//
+// MessageId: KASAN_ENLIGHTENMENT_VIOLATION
+//
+// MessageText:
+//
+//  KASAN_ENLIGHTENMENT_VIOLATION
+//
+#define KASAN_ENLIGHTENMENT_VIOLATION    ((ULONG)0x000001F1L)
+
+//
+// MessageId: USB4_HARDWARE_VIOLATION
+//
+// MessageText:
+//
+//  USB4_HARDWARE_VIOLATION
+//
+#define USB4_HARDWARE_VIOLATION          ((ULONG)0x000001F2L)
+
+//
 // MessageId: XBOX_VMCTRL_CS_TIMEOUT
 //
 // MessageText:

@@ -52,6 +52,27 @@ interface IPrintDocumentPackageTarget : IUnknown
     HRESULT Cancel();
 }
 
+[
+    object,
+    uuid(c560298a-535c-48f9-866a-632540660cb4),
+    helpstring("Document Target IPrintDocumentPackageTarget2 interface: allows users to see if the target printer supports pdl pass through,
+                and it returns Pdl passthrough provider if the printer supports passthrough")
+]
+interface IPrintDocumentPackageTarget2 : IUnknown
+{
+    [helpstring("This method returns true if the printer supports pdl passthrough.")]
+    HRESULT GetIsPdlPassthroughSupported(
+        [in, string] LPCWSTR pdlContentType,
+        [out]        BOOL*   isPassthroughSupported
+        );
+
+    [helpstring("This method returns the Pdl passthrough provider for the target printer.")]
+    HRESULT GetPdlPassthroughProvider(
+        [in]                REFIID  riid,
+        [out, iid_is(riid)] void**  ppvTarget
+        );
+}
+
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
 #pragma endregion
 

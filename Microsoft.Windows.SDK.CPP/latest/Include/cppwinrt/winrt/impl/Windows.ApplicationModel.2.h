@@ -78,6 +78,12 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         EnteredBackgroundEventArgs(std::nullptr_t) noexcept {}
         EnteredBackgroundEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::IEnteredBackgroundEventArgs(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) FindRelatedPackagesOptions : winrt::Windows::ApplicationModel::IFindRelatedPackagesOptions
+    {
+        FindRelatedPackagesOptions(std::nullptr_t) noexcept {}
+        FindRelatedPackagesOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::IFindRelatedPackagesOptions(ptr, take_ownership_from_abi) {}
+        explicit FindRelatedPackagesOptions(winrt::Windows::ApplicationModel::PackageRelationship const& Relationship);
+    };
     struct __declspec(empty_bases) FullTrustProcessLaunchResult : winrt::Windows::ApplicationModel::IFullTrustProcessLaunchResult
     {
         FullTrustProcessLaunchResult(std::nullptr_t) noexcept {}
@@ -109,7 +115,7 @@ WINRT_EXPORT namespace winrt::Windows::ApplicationModel
         static auto TryUnlockFeature(param::hstring const& featureId, param::hstring const& token, param::hstring const& attestation);
     };
     struct __declspec(empty_bases) Package : winrt::Windows::ApplicationModel::IPackage,
-        impl::require<Package, winrt::Windows::ApplicationModel::IPackage2, winrt::Windows::ApplicationModel::IPackage3, winrt::Windows::ApplicationModel::IPackageWithMetadata, winrt::Windows::ApplicationModel::IPackage4, winrt::Windows::ApplicationModel::IPackage5, winrt::Windows::ApplicationModel::IPackage6, winrt::Windows::ApplicationModel::IPackage7, winrt::Windows::ApplicationModel::IPackage8>
+        impl::require<Package, winrt::Windows::ApplicationModel::IPackage2, winrt::Windows::ApplicationModel::IPackage3, winrt::Windows::ApplicationModel::IPackageWithMetadata, winrt::Windows::ApplicationModel::IPackage4, winrt::Windows::ApplicationModel::IPackage5, winrt::Windows::ApplicationModel::IPackage6, winrt::Windows::ApplicationModel::IPackage7, winrt::Windows::ApplicationModel::IPackage8, winrt::Windows::ApplicationModel::IPackage9>
     {
         Package(std::nullptr_t) noexcept {}
         Package(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::ApplicationModel::IPackage(ptr, take_ownership_from_abi) {}

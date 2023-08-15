@@ -107,13 +107,6 @@ WINRT_EXPORT namespace winrt::Windows::UI::ViewManagement
         IApplicationViewScalingStatics(std::nullptr_t = nullptr) noexcept {}
         IApplicationViewScalingStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) IApplicationViewScreenCaptureDisabledBehavior :
-        winrt::Windows::Foundation::IInspectable,
-        impl::consume_t<IApplicationViewScreenCaptureDisabledBehavior>
-    {
-        IApplicationViewScreenCaptureDisabledBehavior(std::nullptr_t = nullptr) noexcept {}
-        IApplicationViewScreenCaptureDisabledBehavior(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
-    };
     struct __declspec(empty_bases) IApplicationViewStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IApplicationViewStatics>

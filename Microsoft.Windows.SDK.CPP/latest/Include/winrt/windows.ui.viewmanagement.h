@@ -341,21 +341,6 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_FWD_DEFINED__
 
-#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace ViewManagement {
-                interface IApplicationViewScreenCaptureDisabledBehavior;
-            } /* ViewManagement */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior ABI::Windows::UI::ViewManagement::IApplicationViewScreenCaptureDisabledBehavior
-
-#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
-
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_FWD_DEFINED__
 namespace ABI {
@@ -1700,16 +1685,6 @@ namespace ABI {
     namespace Windows {
         namespace UI {
             namespace ViewManagement {
-                typedef enum ScreenCaptureDisabledBehavior : int ScreenCaptureDisabledBehavior;
-            } /* ViewManagement */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace ViewManagement {
                 typedef enum UIColorType : int UIColorType;
             } /* ViewManagement */
         } /* UI */
@@ -2803,45 +2778,6 @@ namespace ABI {
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior[] = L"Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior";
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace ViewManagement {
-                MIDL_INTERFACE("07c19b29-7b3b-44d3-b747-2fdc18553680")
-                IApplicationViewScreenCaptureDisabledBehavior : public IInspectable
-                {
-                public:
-                    virtual HRESULT STDMETHODCALLTYPE get_ScreenCaptureDisabledBehavior(
-                        ABI::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior* value
-                        ) = 0;
-                    virtual HRESULT STDMETHODCALLTYPE put_ScreenCaptureDisabledBehavior(
-                        ABI::Windows::UI::ViewManagement::ScreenCaptureDisabledBehavior value
-                        ) = 0;
-                };
-
-                extern MIDL_CONST_ID IID& IID_IApplicationViewScreenCaptureDisabledBehavior = _uuidof(IApplicationViewScreenCaptureDisabledBehavior);
-            } /* ViewManagement */
-        } /* UI */
-    } /* Windows */
-} /* ABI */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior;
-#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
@@ -4496,10 +4432,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewFullscreenStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewInteropStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics3 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewInteropStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.ViewManagement.IApplicationView ** Default Interface **
@@ -4508,7 +4444,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IApplicationView4
  *    Windows.UI.ViewManagement.IApplicationView7
  *    Windows.UI.ViewManagement.IApplicationView9
- *    Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior
  *    Windows.UI.ViewManagement.IApplicationViewWithContext
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -4570,9 +4505,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -4679,8 +4614,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -4946,12 +4881,6 @@ typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScaling 
 typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics;
 
 #endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_FWD_DEFINED__
-
-#ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
-#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
-typedef interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior;
-
-#endif // ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_FWD_DEFINED__
 #define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewStatics_FWD_DEFINED__
@@ -6207,8 +6136,6 @@ typedef enum __x_ABI_CWindows_CUI_CViewManagement_CApplicationViewWindowingMode 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CFullScreenSystemOverlayMode __x_ABI_CWindows_CUI_CViewManagement_CFullScreenSystemOverlayMode;
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CHandPreference __x_ABI_CWindows_CUI_CViewManagement_CHandPreference;
-
-typedef enum __x_ABI_CWindows_CUI_CViewManagement_CScreenCaptureDisabledBehavior __x_ABI_CWindows_CUI_CViewManagement_CScreenCaptureDisabledBehavior;
 
 typedef enum __x_ABI_CWindows_CUI_CViewManagement_CUIColorType __x_ABI_CWindows_CUI_CViewManagement_CUIColorType;
 
@@ -7678,80 +7605,6 @@ interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics
 EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics;
 #endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScalingStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION >= 0x10000
-
-/*
- *
- * Interface Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior
- *
- * Introduced to Windows.Foundation.UniversalApiContract in version 10.0
- *
- * Interface is a part of the implementation of type Windows.UI.ViewManagement.ApplicationView
- *
- */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
-#if !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__)
-#define ____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__
-extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_UI_ViewManagement_IApplicationViewScreenCaptureDisabledBehavior[] = L"Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior";
-typedef struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehaviorVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        REFIID riid,
-        void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This);
-    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        ULONG* iidCount,
-        IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_ScreenCaptureDisabledBehavior)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        enum __x_ABI_CWindows_CUI_CViewManagement_CScreenCaptureDisabledBehavior* value);
-    HRESULT (STDMETHODCALLTYPE* put_ScreenCaptureDisabledBehavior)(__x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior* This,
-        enum __x_ABI_CWindows_CUI_CViewManagement_CScreenCaptureDisabledBehavior value);
-
-    END_INTERFACE
-} __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehaviorVtbl;
-
-interface __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior
-{
-    CONST_VTBL struct __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehaviorVtbl* lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_QueryInterface(This, riid, ppvObject) \
-    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_AddRef(This) \
-    ((This)->lpVtbl->AddRef(This))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_Release(This) \
-    ((This)->lpVtbl->Release(This))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_GetIids(This, iidCount, iids) \
-    ((This)->lpVtbl->GetIids(This, iidCount, iids))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_GetRuntimeClassName(This, className) \
-    ((This)->lpVtbl->GetRuntimeClassName(This, className))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_GetTrustLevel(This, trustLevel) \
-    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_get_ScreenCaptureDisabledBehavior(This, value) \
-    ((This)->lpVtbl->get_ScreenCaptureDisabledBehavior(This, value))
-
-#define __x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_put_ScreenCaptureDisabledBehavior(This, value) \
-    ((This)->lpVtbl->put_ScreenCaptureDisabledBehavior(This, value))
-
-#endif /* COBJMACROS */
-
-EXTERN_C const IID IID___x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior;
-#endif /* !defined(____x_ABI_CWindows_CUI_CViewManagement_CIApplicationViewScreenCaptureDisabledBehavior_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xa0000
 
 /*
  *
@@ -10763,10 +10616,10 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewFullscreenStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewInteropStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics3 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewStatics4 interface starting with version 8.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewInteropStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.UI.ViewManagement.IApplicationView ** Default Interface **
@@ -10775,7 +10628,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *    Windows.UI.ViewManagement.IApplicationView4
  *    Windows.UI.ViewManagement.IApplicationView7
  *    Windows.UI.ViewManagement.IApplicationView9
- *    Windows.UI.ViewManagement.IApplicationViewScreenCaptureDisabledBehavior
  *    Windows.UI.ViewManagement.IApplicationViewWithContext
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -10837,9 +10689,9 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IApplicationViewSwitcherStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -10946,8 +10798,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.UI.ViewManagement.IProjectionManagerStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

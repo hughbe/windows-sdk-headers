@@ -16504,6 +16504,37 @@ DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_SCHEDULING_POLICY,
 DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_RUNTIME_THRESHOLD,
 0xd92998c2, 0x6a48, 0x49ca, 0x85, 0xd4, 0x8c, 0xce, 0xec, 0x29, 0x45, 0x70);
 
+//
+// Specify the upper limit of architecture class for short run threads.
+//
+// {828423EB-8662-4344-90F7-52BF15870F5A}
+//
+DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_ARCH_CLASS_UPPER_THRESHOLD,
+0x828423eb, 0x8662, 0x4344, 0x90, 0xf7, 0x52, 0xbf, 0x15, 0x87, 0x0f, 0x5a);
+
+//
+// Specify the lower limit of architecture class for short run threads.
+//
+// {53824D46-87BD-4739-AA1B-AA793FAC36D6}
+//
+DEFINE_GUID( GUID_PROCESSOR_SHORT_THREAD_ARCH_CLASS_LOWER_THRESHOLD,
+0x53824d46, 0x87bd, 0x4739, 0xaa, 0x1b, 0xaa, 0x79, 0x3f, 0xac, 0x36, 0xd6);
+
+//
+// Specify the upper limit of architecture class for long run threads.
+//
+// {BF903D33-9D24-49D3-A468-E65E0325046A}
+//
+DEFINE_GUID( GUID_PROCESSOR_LONG_THREAD_ARCH_CLASS_UPPER_THRESHOLD,
+0xbf903d33, 0x9d24, 0x49d3, 0xa4, 0x68, 0xe6, 0x5e, 0x03, 0x25, 0x04, 0x6a);
+
+//
+// Specify the lower limit of architecture class for long run threads.
+//
+// {43F278BC-0F8A-46D0-8B31-9A23E615D713}
+//
+DEFINE_GUID( GUID_PROCESSOR_LONG_THREAD_ARCH_CLASS_LOWER_THRESHOLD,
+0x43f278bc, 0x0f8a, 0x46d0, 0x8b, 0x31, 0x9a, 0x23, 0xe6, 0x15, 0xd7, 0x13);
 
 //
 // Specifies active vs passive cooling.  Although not directly related to
@@ -22789,6 +22820,7 @@ typedef struct _PERFORMANCE_DATA {
 #define DEVICEFAMILYDEVICEFORM_XBOX_ONE_X_DEVKIT        0x00000021
 #define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_X            0x00000022
 #define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_X_DEVKIT     0x00000023
+#define DEVICEFAMILYDEVICEFORM_XBOX_SERIES_S            0x00000024
 
 // This is a range reserved for future Xbox consoles.
 #define DEVICEFAMILYDEVICEFORM_XBOX_RESERVED_00         0x00000024

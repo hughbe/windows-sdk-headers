@@ -259,6 +259,7 @@ typedef enum FILE_FLUSH_MODE
 
 #endif /* _WIN32_WINNT >= 0x0400 */
 
+
 #if (_WIN32_WINNT >= 0x0500)
 //
 // Define ReplaceFile option flags

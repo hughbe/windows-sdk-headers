@@ -882,6 +882,11 @@ ValidLabel SETS "$ValidTarget"
 
 ; ARM64_WORKITEM : should we use acquire/release semantics instead of DMB?
 
+;
+; TODO: Today this routine is not used. If it is used in the future, consider
+;       whether the yield should be switched to enlightened yield.
+;
+
         MACRO
         ACQUIRE_SPIN_LOCK $Reg, $Offset
 

@@ -39230,9 +39230,28 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 // Since these error codes aren't in the standard Win32 range (i.e., 0-64K), define a
 // macro to map either Win32 or SetupAPI error codes into an HRESULT.
 //
-#define HRESULT_FROM_SETUPAPI(x) ((((x) & (APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR)) == (APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR)) \
-                                 ? ((HRESULT) (((x) & 0x0000FFFF) | (FACILITY_SETUPAPI << 16) | 0x80000000))                               \
-                                 : HRESULT_FROM_WIN32(x))
+// HRESULT_FROM_SETUPAPI(x) used to be a macro, however we now run it as an inline function
+// to prevent double evaluation of 'x'. If you still need the macro, you can use __HRESULT_FROM_SETUPAPI(x)
+//
+#define __HRESULT_FROM_SETUPAPI(x) ((((x) & (APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR)) == (APPLICATION_ERROR_MASK|ERROR_SEVERITY_ERROR)) \
+                                   ? ((HRESULT) (((x) & 0x0000FFFF) | (FACILITY_SETUPAPI << 16) | 0x80000000))                               \
+                                   : HRESULT_FROM_WIN32(x))
+
+#if !defined(_HRESULT_DEFINED) && !defined(__midl)
+#define _HRESULT_DEFINED
+typedef _Return_type_success_(return >= 0) long HRESULT;
+#endif
+
+#ifndef __midl
+#if defined(__cplusplus) && _MSC_VER >= 1900 && !defined(SORTPP_PASS)
+constexpr
+#endif
+FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x20000000|0xC0000000)) == (0x20000000|0xC0000000))                \
+                                                                    ? ((HRESULT) (((x) & 0x0000FFFF) | (FACILITY_SETUPAPI << 16) | 0x80000000)) \
+                                                                    : HRESULT_FROM_WIN32(x);}
+#else
+#define HRESULT_FROM_SETUPAPI(x) __HRESULT_FROM_SETUPAPI(x)
+#endif
 //
 // MessageId: SPAPI_E_EXPECTED_SECTION_NAME
 //
