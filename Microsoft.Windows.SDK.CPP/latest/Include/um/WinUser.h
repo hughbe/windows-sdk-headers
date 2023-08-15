@@ -4861,6 +4861,7 @@ IsZoomed(
 /*
  * SetWindowPos Flags
  */
+#define SWP_NONE            0x0000
 #define SWP_NOSIZE          0x0001
 #define SWP_NOMOVE          0x0002
 #define SWP_NOZORDER        0x0004

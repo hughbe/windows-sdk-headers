@@ -14234,6 +14234,12 @@ typedef PENCLAVE_TARGET_FUNCTION LPENCLAVE_TARGET_FUNCTION;
 typedef struct DECLSPEC_ALIGN(8) _MEMORY_PARTITION_DEDICATED_MEMORY_ATTRIBUTE {
     MEM_DEDICATED_ATTRIBUTE_TYPE Type;
     DWORD Reserved;
+
+    //
+    // The unit of Value is determined by the Type.
+    // When Type is a latency, Value is in picoseconds.
+    // When Type is a bandwidth, Value is in megabyte per second.
+    //
     DWORD64 Value;
 } MEMORY_PARTITION_DEDICATED_MEMORY_ATTRIBUTE, *PMEMORY_PARTITION_DEDICATED_MEMORY_ATTRIBUTE;
 

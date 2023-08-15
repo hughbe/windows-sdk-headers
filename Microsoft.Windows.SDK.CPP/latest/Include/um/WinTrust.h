@@ -140,6 +140,7 @@ typedef struct _WINTRUST_DATA
 #       define WTD_USE_IE4_TRUST_FLAG                   0x00000001
 #       define WTD_NO_IE4_CHAIN_FLAG                    0x00000002
 #       define WTD_NO_POLICY_USAGE_FLAG                 0x00000004
+#       define WTD_USE_LOCAL_MACHINE_CERTS              0x00000008
 #       define WTD_REVOCATION_CHECK_NONE                0x00000010
 #       define WTD_REVOCATION_CHECK_END_CERT            0x00000020
 #       define WTD_REVOCATION_CHECK_CHAIN               0x00000040
