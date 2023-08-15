@@ -53,6 +53,16 @@ namespace winrt::impl
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability)->remove_AccessChanged(impl::bind_in(token)));
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability2<D>::DisplayMessage() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2)->get_DisplayMessage(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapability2<D>::DisplayMessage(param::hstring const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2)->put_DisplayMessage(*(void**)(&value)));
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapabilityAccessStatus>>) consume_Windows_Security_Authorization_AppCapabilityAccess_IAppCapabilityStatics<D>::RequestAccessForCapabilitiesAsync(param::async_iterable<hstring> const& capabilityNames) const
     {
         void* operation{};
@@ -130,6 +140,27 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2> : produce_base<D, winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2>
+    {
+        int32_t __stdcall get_DisplayMessage(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().DisplayMessage());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DisplayMessage(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DisplayMessage(*reinterpret_cast<hstring const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> : produce_base<D, winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs>
     {
     };
@@ -196,6 +227,7 @@ namespace std
 {
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapability2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityAccessChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::IAppCapabilityStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Security::Authorization::AppCapabilityAccess::AppCapability> : winrt::impl::hash_base {};

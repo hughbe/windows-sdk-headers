@@ -118,6 +118,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim2)->DiscoverWithServerAddressAndMatchingIdAsync(*(void**)(&serverAddress), *(void**)(&matchingId), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>{ operation, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(uint32_t) consume_Windows_Networking_NetworkOperators_IESim3<D>::SlotId() const
+    {
+        uint32_t value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IESim3)->get_SlotId(&value));
+        return value;
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::ESim) consume_Windows_Networking_NetworkOperators_IESimAddedEventArgs<D>::ESim() const
     {
         void* value{};
@@ -1561,6 +1567,18 @@ namespace winrt::impl
     {
         WINRT_VERIFY_(0, WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3)->remove_IsInEmergencyCallModeChanged(impl::bind_in(token)));
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::SetIsPassthroughEnabledAsync(bool value, uint32_t slotid) const
+    {
+        void* asyncInfo{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->SetIsPassthroughEnabledAsync(value, slotid, &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>{ asyncInfo, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IAsyncOperation<bool>) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModem4<D>::GetIsPassthroughEnabledAsync(uint32_t slotid) const
+    {
+        void* asyncInfo{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4)->GetIsPassthroughEnabledAsync(slotid, &asyncInfo));
+        return winrt::Windows::Foundation::IAsyncOperation<bool>{ asyncInfo, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandUicc) consume_Windows_Networking_NetworkOperators_IMobileBroadbandModemConfiguration<D>::Uicc() const
     {
         void* value{};
@@ -1984,6 +2002,12 @@ namespace winrt::impl
         winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo)->get_State(reinterpret_cast<int32_t*>(&value)));
         return value;
+    }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSlotInfo2<D>::IccId() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo2)->get_IccId(&value));
+        return hstring{ value, take_ownership_from_abi };
     }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotInfo) consume_Windows_Networking_NetworkOperators_IMobileBroadbandSlotInfoChangedEventArgs<D>::SlotInfo() const
     {
@@ -2616,6 +2640,19 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::ESimDiscoverResult>>(this->shim().DiscoverAsync(*reinterpret_cast<hstring const*>(&serverAddress), *reinterpret_cast<hstring const*>(&matchingId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::IESim3> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IESim3>
+    {
+        int32_t __stdcall get_SlotId(uint32_t* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<uint32_t>(this->shim().SlotId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4801,6 +4838,28 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>
+    {
+        int32_t __stdcall SetIsPassthroughEnabledAsync(bool value, uint32_t slotid, void** asyncInfo) noexcept final try
+        {
+            clear_abi(asyncInfo);
+            typename D::abi_guard guard(this->shim());
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Networking::NetworkOperators::MobileBroadbandModemStatus>>(this->shim().SetIsPassthroughEnabledAsync(value, slotid));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetIsPassthroughEnabledAsync(uint32_t slotid, void** asyncInfo) noexcept final try
+        {
+            clear_abi(asyncInfo);
+            typename D::abi_guard guard(this->shim());
+            *asyncInfo = detach_from<winrt::Windows::Foundation::IAsyncOperation<bool>>(this->shim().GetIsPassthroughEnabledAsync(slotid));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemConfiguration> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemConfiguration>
     {
         int32_t __stdcall get_Uicc(void** value) noexcept final try
@@ -5466,6 +5525,20 @@ namespace winrt::impl
         {
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Networking::NetworkOperators::MobileBroadbandSlotState>(this->shim().State());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo2> : produce_base<D, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo2>
+    {
+        int32_t __stdcall get_IccId(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().IccId());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6533,6 +6606,7 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESim> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESim2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESim3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimAddedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimDiscoverEvent> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IESimDiscoverResult> : winrt::impl::hash_base {};
@@ -6590,6 +6664,7 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemConfiguration> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemConfiguration2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModemIsolation> : winrt::impl::hash_base {};
@@ -6611,6 +6686,7 @@ namespace std
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandRadioStateChangeTriggerDetails> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSarManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfoChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Networking::NetworkOperators::IMobileBroadbandTransmissionStateChangedEventArgs> : winrt::impl::hash_base {};

@@ -41,6 +41,22 @@ WINRT_EXPORT namespace winrt::Windows::Devices::WiFi
         WiFiOnDemandHotspotConnectTriggerDetails(std::nullptr_t) noexcept {}
         WiFiOnDemandHotspotConnectTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectTriggerDetails(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) WiFiOnDemandHotspotConnectionResult : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectionResult
+    {
+        WiFiOnDemandHotspotConnectionResult(std::nullptr_t) noexcept {}
+        WiFiOnDemandHotspotConnectionResult(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotConnectionResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) WiFiOnDemandHotspotNetwork : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetwork
+    {
+        WiFiOnDemandHotspotNetwork(std::nullptr_t) noexcept {}
+        WiFiOnDemandHotspotNetwork(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetwork(ptr, take_ownership_from_abi) {}
+        static auto GetOrCreateById(winrt::guid const& networkId);
+    };
+    struct __declspec(empty_bases) WiFiOnDemandHotspotNetworkProperties : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetworkProperties
+    {
+        WiFiOnDemandHotspotNetworkProperties(std::nullptr_t) noexcept {}
+        WiFiOnDemandHotspotNetworkProperties(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Devices::WiFi::IWiFiOnDemandHotspotNetworkProperties(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) WiFiWpsConfigurationResult : winrt::Windows::Devices::WiFi::IWiFiWpsConfigurationResult
     {
         WiFiWpsConfigurationResult(std::nullptr_t) noexcept {}

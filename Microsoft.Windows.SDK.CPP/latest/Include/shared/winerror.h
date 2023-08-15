@@ -41728,7 +41728,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// The Mobile Device Mangement (MDM) server was not able to validate your account. Try again or contact your system administrator.
+// The Mobile Device Management (MDM) server was not able to validate your account. Try again or contact your system administrator.
 //
 #define MENROLL_E_DEVICE_INVALIDSECURITY_ERROR _HRESULT_TYPEDEF_(0x80180007L)
 
@@ -41836,7 +41836,7 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 //
 // MessageText:
 //
-// Mobile Device Danagement (MDM) is generally not supported for this device.
+// Mobile Device Management (MDM) is generally not supported for this device.
 //
 #define MENROLL_E_NOT_SUPPORTED          _HRESULT_TYPEDEF_(0x80180015L)
 

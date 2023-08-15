@@ -38,7 +38,7 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         return !(left == right);
     }
     struct __declspec(empty_bases) ESim : winrt::Windows::Networking::NetworkOperators::IESim,
-        impl::require<ESim, winrt::Windows::Networking::NetworkOperators::IESim2>
+        impl::require<ESim, winrt::Windows::Networking::NetworkOperators::IESim2, winrt::Windows::Networking::NetworkOperators::IESim3>
     {
         ESim(std::nullptr_t) noexcept {}
         ESim(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IESim(ptr, take_ownership_from_abi) {}
@@ -285,10 +285,14 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         MobileBroadbandDeviceServiceTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandDeviceServiceTriggerDetails(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) MobileBroadbandModem : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem,
-        impl::require<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem2, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3>
+        impl::require<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem2, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem3, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>
     {
         MobileBroadbandModem(std::nullptr_t) noexcept {}
         MobileBroadbandModem(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem(ptr, take_ownership_from_abi) {}
+        using impl::consume_t<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem2>::GetIsPassthroughEnabledAsync;
+        using impl::consume_t<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>::GetIsPassthroughEnabledAsync;
+        using impl::consume_t<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem2>::SetIsPassthroughEnabledAsync;
+        using impl::consume_t<MobileBroadbandModem, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandModem4>::SetIsPassthroughEnabledAsync;
         static auto GetDeviceSelector();
         static auto FromId(param::hstring const& deviceId);
         static auto GetDefault();
@@ -371,7 +375,8 @@ WINRT_EXPORT namespace winrt::Windows::Networking::NetworkOperators
         MobileBroadbandSarManager(std::nullptr_t) noexcept {}
         MobileBroadbandSarManager(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSarManager(ptr, take_ownership_from_abi) {}
     };
-    struct __declspec(empty_bases) MobileBroadbandSlotInfo : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo
+    struct __declspec(empty_bases) MobileBroadbandSlotInfo : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo,
+        impl::require<MobileBroadbandSlotInfo, winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo2>
     {
         MobileBroadbandSlotInfo(std::nullptr_t) noexcept {}
         MobileBroadbandSlotInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Networking::NetworkOperators::IMobileBroadbandSlotInfo(ptr, take_ownership_from_abi) {}

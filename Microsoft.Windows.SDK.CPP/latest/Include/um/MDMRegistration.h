@@ -349,7 +349,10 @@ HRESULT indicating success or failure.
 
 --*/
 HRESULT WINAPI
-RegisterDeviceDualEnrollMmpcUsingAADDeviceCredentials();
+RegisterDeviceDualEnrollMmpcUsingAADDeviceCredentials(
+    _In_ DWORD cchEnrollmentId,
+    _Out_writes_(cchEnrollmentId) LPWSTR pszEnrollmentId
+    );
 
 /*++
 

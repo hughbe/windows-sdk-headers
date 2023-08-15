@@ -10241,6 +10241,7 @@ typedef struct _SID_AND_ATTRIBUTES_HASH {
 #define SECURITY_CAPABILITY_CONTACTS                            (0x0000000CL)
 
 #define SECURITY_CAPABILITY_INTERNET_EXPLORER                   (0x00001000L)
+#define SECURITY_CAPABILITY_APP_SILO                            (0x00010000L)
 
 //
 // Mandatory Label Authority.
@@ -11565,6 +11566,7 @@ typedef enum _TOKEN_INFORMATION_CLASS {
     TokenChildProcessFlags,
     TokenIsLessPrivilegedAppContainer,
     TokenIsSandboxed,
+    TokenIsAppSilo,
     MaxTokenInfoClass  // MaxTokenInfoClass should always be the last enum
 } TOKEN_INFORMATION_CLASS, *PTOKEN_INFORMATION_CLASS;
 
