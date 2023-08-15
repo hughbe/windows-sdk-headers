@@ -254,7 +254,7 @@ UsLastSystemRITEventTickCount equ 002E4H
 UsNumberOfPhysicalPages equ 002E8H
 UsSafeBootMode equ 002ECH
 UsTestRetInstruction equ 002F8H
-UsSystemCallPad equ 00310H
+UsSystemCallPad equ 00318H
 UsTickCount equ 00320H
 UsTickCountQuad equ 00320H
 UsXState equ 003D8H

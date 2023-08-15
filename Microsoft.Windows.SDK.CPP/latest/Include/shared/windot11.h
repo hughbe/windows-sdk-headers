@@ -93,6 +93,55 @@ typedef enum _DOT11_PHY_TYPE {
     dot11_phy_type_IHV_end = 0xffffffff
 } DOT11_PHY_TYPE, * PDOT11_PHY_TYPE;
 
+// The AKMs are defined in the IEEE 802.11 spec in Table 9-188-AKM suite selectors
+// The mappings are defined in Table 12-11-Integrity and key wrap algorithms
+// The KCK length for SAE is defined in the IEEE 802.11 spec in Table 12-1-Hash algorithm based on length of prime
+
+#define AKM_FROM_TYPE(_prefix, _akm) (_prefix + (_akm << 24))
+
+#define RSNA_AKM_OUI_PREFIX         0xac0f00
+typedef enum
+{
+    rsna_akm_none                   = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 0),
+    rsna_akm_1x                     = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 1),        // 1X + PRF-128
+    rsna_akm_psk                    = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 2),        // PSK + PRF-128
+    rsna_akm_ft_1x_sha256           = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 3),        // FT_1X + SHA-256
+    rsna_akm_ft_psk_sha256          = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 4),        // FT_PSK + SHA-256
+    rsna_akm_1x_sha256              = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 5),        // 1X + SHA-256
+    rsna_akm_psk_sha256             = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 6),        // PSK + SHA-256
+    rsna_akm_tdls_sha256            = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 7),        // TPK + SHA-256
+    rsna_akm_sae_pmk256             = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 8),        // SAE + [PMK = 256]
+    rsna_akm_ft_sae_pmk256          = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 9),        // FT_SAE + [PMK = 256]
+    rsna_akm_peerkey_sha256         = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 10),
+    rsna_akm_1x_suite_b_sha256      = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 11),       // 1X_Suite_B + SHA-256
+    rsna_akm_1x_suite_b_sha384      = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 12),       // 1X_Suite_B/CSNA + SHA-384
+    rsna_akm_ft_1x_sha384_cmp_256   = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 13),       // FT_1X + SHA-384 + CCMP-256/GCMP-256
+    rsna_akm_fils_1x_sha256         = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 14),
+    rsna_akm_fils_1x_sha384         = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 15),
+    rsna_akm_ft_fils_1x_sha256      = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 16),
+    rsna_akm_ft_fils_sha384         = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 17),
+    rsna_akm_owe                    = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 18),       // Reserved
+    rsna_akm_ft_psk_sha384          = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 19),       // FT_PSK + SHA-384
+    rsna_akm_psk_sha384             = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 20),       // PSK + SHA-384
+                                                                                    // 21 is not defined
+    rsna_akm_ft_1x_sha384           = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 22),       // FT_1X + SHA-384
+    rsna_akm_1x_sha384              = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 23),       // 1X + SHA-384
+    rsna_akm_sae_pmk384             = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 24),       // SAE + [PMK = 384]
+    rsna_akm_ft_sae_pmk384          = AKM_FROM_TYPE(RSNA_AKM_OUI_PREFIX, 25),       // FT_SAE + [PMK = 384]
+
+    rsna_akm_max = rsna_akm_ft_sae_pmk384,
+} RSNA_AKM_SUITE;
+
+#define WPA_AKM_OUI_PREFIX          0xf25000
+typedef enum
+{
+    wpa_akm_none                    = AKM_FROM_TYPE(WPA_AKM_OUI_PREFIX, 0),
+    wpa_akm_1x                      = AKM_FROM_TYPE(WPA_AKM_OUI_PREFIX, 1),         // 1X + PRF-128
+    wpa_akm_psk                     = AKM_FROM_TYPE(WPA_AKM_OUI_PREFIX, 2),         // PSK + PRF-128
+
+    wpa_akm_max = wpa_akm_psk,
+} WPA_AKM_SUITE;
+
 #define DOT11_RATE_SET_MAX_LENGTH               126 // 126 bytes
 typedef struct _DOT11_RATE_SET {
     _Field_range_(<=, DOT11_RATE_SET_MAX_LENGTH) ULONG uRateSetLength;
@@ -1425,7 +1474,7 @@ typedef struct DOT11_BYTE_ARRAY {
 #ifdef __midl
         [unique, size_is(usKeyLength)] UCHAR ucKey[*];
 #else
-        UCHAR ucKey[1];			// Must be the last field
+        UCHAR ucKey[1];                 // Must be the last field
 #endif
     } DOT11_CIPHER_DEFAULT_KEY_VALUE, * PDOT11_CIPHER_DEFAULT_KEY_VALUE;
     typedef struct DOT11_KEY_ALGO_TKIP_MIC {

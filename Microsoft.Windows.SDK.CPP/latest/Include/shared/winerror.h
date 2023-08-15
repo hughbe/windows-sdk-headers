@@ -36326,6 +36326,24 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define NTE_NOT_ACTIVE_CONSOLE           _HRESULT_TYPEDEF_(0x80090038L)
 
 //
+// MessageId: NTE_VBS_UNAVAILABLE
+//
+// MessageText:
+//
+// VBS key isolation is not available.
+//
+#define NTE_VBS_UNAVAILABLE              _HRESULT_TYPEDEF_(0x80090039L)
+
+//
+// MessageId: NTE_VBS_CANNOT_DECRYPT_KEY
+//
+// MessageText:
+//
+// Cannot decrypt a VBS-isolated key.
+//
+#define NTE_VBS_CANNOT_DECRYPT_KEY       _HRESULT_TYPEDEF_(0x8009003AL)
+
+//
 // MessageId: SEC_E_INSUFFICIENT_MEMORY
 //
 // MessageText:
@@ -50429,6 +50447,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // This operation cannot be completed because BitLocker Drive Encryption metadata area is full. Consider removing unnecessary key protectors for this drive.
 //
 #define FVE_E_METADATA_FULL              _HRESULT_TYPEDEF_(0x803100ECL)
+
+//
+// MessageId: FVE_E_DISCOVERY_VOLUME_NOT_SUPPORTED
+//
+// MessageText:
+//
+// BitLocker Drive Encryption no longer supports discovery volumes.
+//
+#define FVE_E_DISCOVERY_VOLUME_NOT_SUPPORTED _HRESULT_TYPEDEF_(0x803100EDL)
 
 //
 // =======================================================

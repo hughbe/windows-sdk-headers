@@ -3528,6 +3528,8 @@ CryptDecodeObject(
 // a quicker sync of the autorootupdate CTL
 #define szOID_SYNC_ROOT_CTL_EXT         "1.3.6.1.4.1.311.10.3.50"
 
+// The following extension is set to identify flighted CTLs
+#define szOID_FLIGHT_CTL_EXT            "1.3.6.1.4.1.311.10.3.51"
 
 // CTL containing HPKP Domain Names
 #define szOID_HPKP_DOMAIN_NAME_CTL      "1.3.6.1.4.1.311.10.3.60"

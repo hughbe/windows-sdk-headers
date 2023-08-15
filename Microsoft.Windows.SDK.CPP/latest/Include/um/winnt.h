@@ -14064,34 +14064,16 @@ typedef struct _CFG_CALL_TARGET_INFO {
 #define MEM_DECOMMIT                    0x00004000  
 #define MEM_RELEASE                     0x00008000  
 #define MEM_FREE                        0x00010000  
+#define MEM_EXTENDED_PARAMETER_GRAPHICS                 0x00000001  
+#define MEM_EXTENDED_PARAMETER_NONPAGED                 0x00000002  
+#define MEM_EXTENDED_PARAMETER_ZERO_PAGES_OPTIONAL      0x00000004  
+#define MEM_EXTENDED_PARAMETER_NONPAGED_LARGE           0x00000008  
+#define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE            0x00000010  
+#define MEM_EXTENDED_PARAMETER_SOFT_FAULT_PAGES         0x00000020  
+#define MEM_EXTENDED_PARAMETER_EC_CODE                  0x00000040  
+#define MEM_EXTENDED_PARAMETER_IMAGE_NO_HPAT            0x00000080  
+#define MEM_EXTENDED_PARAMETER_NUMA_NODE_MANDATORY      MINLONG64	  
 // begin_wdm
-
-typedef struct _MEM_ADDRESS_REQUIREMENTS {
-    PVOID LowestStartingAddress;
-    PVOID HighestEndingAddress;
-    SIZE_T Alignment;
-} MEM_ADDRESS_REQUIREMENTS, *PMEM_ADDRESS_REQUIREMENTS;
-
-#define MEM_EXTENDED_PARAMETER_GRAPHICS                 0x00000001
-#define MEM_EXTENDED_PARAMETER_NONPAGED                 0x00000002
-#define MEM_EXTENDED_PARAMETER_ZERO_PAGES_OPTIONAL      0x00000004
-#define MEM_EXTENDED_PARAMETER_NONPAGED_LARGE           0x00000008
-#define MEM_EXTENDED_PARAMETER_NONPAGED_HUGE            0x00000010
-#define MEM_EXTENDED_PARAMETER_SOFT_FAULT_PAGES         0x00000020
-#define MEM_EXTENDED_PARAMETER_EC_CODE                  0x00000040
-#define MEM_EXTENDED_PARAMETER_IMAGE_NO_HPAT            0x00000080
-
-//
-// Use the high DWORD64 bit of the MEM_EXTENDED_PARAMETER to indicate
-// that the supplied NUMA node in the low bits is mandatory.  Note this
-// is different from the MEM_EXTENDED_PARAMETER_XXX fields above because
-// those are encoded in the Type field; this is encoded in the ULong64 field.
-//
-// This can only be used nonpaged allocations since we don't want page
-// faults to fail due to transient memory shortages on arbitrary nodes.
-//
-
-#define MEM_EXTENDED_PARAMETER_NUMA_NODE_MANDATORY      MINLONG64
 
 typedef enum MEM_EXTENDED_PARAMETER_TYPE {
     MemExtendedParameterInvalidType = 0,
@@ -14122,6 +14104,12 @@ typedef struct DECLSPEC_ALIGN(8) MEM_EXTENDED_PARAMETER {
     } DUMMYUNIONNAME;
 
 } MEM_EXTENDED_PARAMETER, *PMEM_EXTENDED_PARAMETER;
+
+typedef struct _MEM_ADDRESS_REQUIREMENTS {
+    PVOID LowestStartingAddress;
+    PVOID HighestEndingAddress;
+    SIZE_T Alignment;
+} MEM_ADDRESS_REQUIREMENTS, *PMEM_ADDRESS_REQUIREMENTS;
 
 #define MEMORY_CURRENT_PARTITION_HANDLE         ((HANDLE) (LONG_PTR) -1)
 #define MEMORY_SYSTEM_PARTITION_HANDLE          ((HANDLE) (LONG_PTR) -2)

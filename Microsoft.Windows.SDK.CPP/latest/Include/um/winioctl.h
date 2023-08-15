@@ -13908,8 +13908,14 @@ typedef struct _REQUEST_OPLOCK_INPUT_BUFFER {
 
 } REQUEST_OPLOCK_INPUT_BUFFER, *PREQUEST_OPLOCK_INPUT_BUFFER;
 
-#define REQUEST_OPLOCK_OUTPUT_FLAG_ACK_REQUIRED     (0x00000001)
-#define REQUEST_OPLOCK_OUTPUT_FLAG_MODES_PROVIDED   (0x00000002)
+#define REQUEST_OPLOCK_OUTPUT_FLAG_ACK_REQUIRED                 (0x00000001)
+#define REQUEST_OPLOCK_OUTPUT_FLAG_MODES_PROVIDED               (0x00000002)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+// If the oplock request fails with STATUS_OPLOCK_NOT_GRANTED, this flag indicates that the oplock
+// could not be granted due to the presence of a writable user-mapped section.
+#define REQUEST_OPLOCK_OUTPUT_FLAG_WRITABLE_SECTION_PRESENT     (0x00000004)
+#endif
 
 typedef struct _REQUEST_OPLOCK_OUTPUT_BUFFER {
 

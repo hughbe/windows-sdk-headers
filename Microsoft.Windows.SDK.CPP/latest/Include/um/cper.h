@@ -2204,6 +2204,7 @@ CPER_FIELD_CHECK(WHEA_ARM_PROCESSOR_ERROR_CONTEXT_INFORMATION_HEADER, Version,  
 CPER_FIELD_CHECK(WHEA_ARM_PROCESSOR_ERROR_CONTEXT_INFORMATION_HEADER, RegisterContextType,   2,    2);
 CPER_FIELD_CHECK(WHEA_ARM_PROCESSOR_ERROR_CONTEXT_INFORMATION_HEADER, RegisterArraySize,     4,    4);
 CPER_FIELD_CHECK(WHEA_ARM_PROCESSOR_ERROR_CONTEXT_INFORMATION_HEADER, RegisterArray,         8,    1);
+
 // ----------------------------------------------------------------- SEA Section
 
 typedef struct _WHEA_SEA_SECTION {
@@ -2217,6 +2218,44 @@ typedef struct _WHEA_SEI_SECTION {
     ULONG Esr;
     ULONG64 Far;
 } WHEA_SEI_SECTION, *PWHEA_SEI_SECTION;
+
+// -------------------------------------------------------- Arm RAS Node Section
+
+typedef struct _WHEA_ARM_RAS_NODE_SECTION {
+    UINT32 NodeFieldCount;
+    UINT32 NodeIndex;
+    UINT8 InterfaceType;
+    UINT8 Reserved[7];
+    // Fields as defined in the Arm RAS extensions version 8.6  (ARM DDI 0587)
+    UINT64 ErrFr;
+    UINT64 ErrCtlr;
+    UINT64 ErrStatus;
+    UINT64 ErrAddr;
+    UINT64 ErrMisc0;
+    UINT64 ErrMisc1;
+    UINT64 ErrMisc2;
+    UINT64 ErrMisc3;
+} WHEA_ARM_RAS_NODE_SECTION, *PWHEA_ARM_RAS_NODE_SECTION;
+
+//
+// To make ensure backwards compatability in the future the number of node field's
+// is recorded. This allows expanding the section on new machines without breaking
+// parsing for older generations.
+//
+
+#define WHEA_ARM_RAS_NODE_FIELD_COUNT 8
+
+//
+// Interface types possible for Arm Ras Nodes, as defined in the AEST ACPI table
+// definition in "ACPI for the Armv8 RAS Extenstions"  (Document Number DEN0085)
+//
+
+typedef enum _WHEA_ARM_RAS_NODE_INTERFACES {
+    WheaArmRasNodeInterfaceSystemRegister = 0,
+    WheaArmRasNodeInterfaceMmio = 1
+} WHEA_ARM_RAS_NODE_INTERFACES, *PWHEA_ARM_RAS_NODE_INTERFACES;
+
+// -------------------------------------------------------- PCI Recovery Section
 
 typedef enum _WHEA_PCI_RECOVERY_SIGNAL {
     WheaPciRecoverySignalUnknown = 0,

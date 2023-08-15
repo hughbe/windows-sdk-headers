@@ -45,6 +45,7 @@ Abstract:
 #define WLDP_CANEXECUTEBUFFER_FN                    "WldpCanExecuteBuffer"
 #define WLDP_CANEXECUTEFILE_FN                      "WldpCanExecuteFile"
 #define WLDP_CANEXECUTEBUFFER_FN                    "WldpCanExecuteBuffer"
+#define WLDP_CANEXECUTEFILEFROMDETACHEDSIGNATURE_FN "WldpCanExecuteFileFromDetachedSignature"
 
 //
 //  Policy state bits.
@@ -607,6 +608,30 @@ typedef HRESULT(WINAPI *PWLDP_CANEXECUTESTREAM_API)(
 );
 
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_NI */
+
+#if NTDDI_VERSION >= NTDDI_WIN10_CU
+
+STDAPI
+WldpCanExecuteFileFromDetachedSignature(
+    _In_ REFGUID host,
+    _In_ WLDP_EXECUTION_EVALUATION_OPTIONS options,
+    _In_ HANDLE contentFileHandle,
+    _In_ HANDLE signatureFileHandle,
+    _In_opt_ PCWSTR auditInfo,
+    _Out_ WLDP_EXECUTION_POLICY* result
+);
+
+typedef HRESULT(WINAPI *PWLDP_CANEXECUTEFILEFROMDETACHEDSIGNATURE_API)(
+    _In_ REFGUID host,
+    _In_ WLDP_EXECUTION_EVALUATION_OPTIONS options,
+    _In_ HANDLE contentFileHandle,
+    _In_ HANDLE signatureFileHandle,
+    _In_opt_ PCWSTR auditInfo,
+    _Out_ WLDP_EXECUTION_POLICY* result
+);
+
+#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

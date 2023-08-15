@@ -15,7 +15,7 @@
 
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__
-#define __REQUIRED_RPCNDR_H_VERSION__ 501
+#define __REQUIRED_RPCNDR_H_VERSION__ 500
 #endif
 
 /* verify that the <rpcsal.h> version is high enough to compile this file*/
@@ -621,10 +621,6 @@ EXTERN_C const IID IID_ID3D12VideoDecoderHeap;
 
 
 
-
-
-
-
 #endif 	/* __ID3D12VideoDecoderHeap_INTERFACE_DEFINED__ */
 
 
@@ -907,10 +903,6 @@ EXTERN_C const IID IID_ID3D12VideoDecoder;
 
 
 #endif 	/* C style interface */
-
-
-
-
 
 
 
@@ -1337,10 +1329,6 @@ EXTERN_C const IID IID_ID3D12VideoProcessor;
 
 
 #endif 	/* C style interface */
-
-
-
-
 
 
 
@@ -2991,10 +2979,6 @@ EXTERN_C const IID IID_ID3D12VideoMotionEstimator;
 
 
 
-
-
-
-
 #endif 	/* __ID3D12VideoMotionEstimator_INTERFACE_DEFINED__ */
 
 
@@ -3169,10 +3153,6 @@ EXTERN_C const IID IID_ID3D12VideoMotionVectorHeap;
 
 
 #endif 	/* C style interface */
-
-
-
-
 
 
 
@@ -4517,10 +4497,6 @@ EXTERN_C const IID IID_ID3D12VideoExtensionCommand;
 
 
 #endif 	/* C style interface */
-
-
-
-
 
 
 

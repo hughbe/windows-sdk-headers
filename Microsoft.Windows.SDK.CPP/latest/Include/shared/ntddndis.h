@@ -5880,6 +5880,11 @@ typedef enum _NDIS_RSS_PROFILE
     NdisRssProfileNuma,
     NdisRssProfileNumaStatic,
     NdisRssProfileConservative,
+
+#if (NDIS_SUPPORT_NDIS688)
+    NdisRssProfileBalanced,
+#endif // (NDIS_SUPPORT_NDIS688)
+
     NdisRssProfileMaximum,
 } NDIS_RSS_PROFILE, *PNDIS_RSS_PROFILE;
 #endif // (NDIS_SUPPORT_NDIS630)

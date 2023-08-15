@@ -252,7 +252,7 @@
 #define UsNumberOfPhysicalPages 0x2e8
 #define UsSafeBootMode 0x2ec
 #define UsTestRetInstruction 0x2f8
-#define UsSystemCallPad 0x310
+#define UsSystemCallPad 0x318
 #define UsTickCount 0x320
 #define UsTickCountQuad 0x320
 #define UsXState 0x3d8
