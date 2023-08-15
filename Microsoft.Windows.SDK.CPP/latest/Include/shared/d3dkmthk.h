@@ -5369,9 +5369,6 @@ typedef struct _D3DKMT_CREATEHWQUEUE
     D3DKMT_HANDLE               hHwQueueProgressFence;                  // out: handle to the monitored fence object used to monitor the queue progress.
     D3DKMT_PTR(VOID*,           HwQueueProgressFenceCPUVirtualAddress); // out: Read-only mapping of the queue progress fence value for the CPU
     D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS HwQueueProgressFenceGPUVirtualAddress;  // out: Read/write mapping of the queue progress fence value for the GPU
-    UINT NativeFenceWaitLogBufferGpuVa;                                 // out: Opaque 64 bit GPUVA used for programming GPU writes into native fence wait log buffer 
-    UINT NativeFenceSignalLogBufferGpuVa;                               // out: Opaque 64 bit GPUVA used for programming GPU writes into native fence signal log buffer
-    UINT NativeFenceLogBufferNumberOfEntries;                           // out: Size of Entries array in DXGK_FENCE_LOG_BUFFER
 } D3DKMT_CREATEHWQUEUE;
 
 typedef struct _D3DKMT_DESTROYHWQUEUE

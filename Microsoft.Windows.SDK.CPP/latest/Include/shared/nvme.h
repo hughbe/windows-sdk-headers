@@ -1088,7 +1088,7 @@ typedef struct {
         UCHAR   Reserved            : 7;
     } NSATTR;                           // byte 99 O - Namespace Attributes
 
-    USHORT          NVMSETID;           // byte 100:101 O - Associated NVM Set Identifier
+    USHORT          NVMSETID;           // byte 100:101 O - Associated NVM Set Identifier: 1-based value specifying NVM Set of this namespace. 
 
     USHORT          ENDGID;             // byte 102:103 O - Associated Endurance Group Identier
 
@@ -1353,7 +1353,7 @@ typedef struct {
     ULONG   HMMINDS;            // byte 332:335  O - Host Memory Buffer Minimum Descriptor Entry Size (HMMINDS)
     USHORT  HMMAXD;             // byte 336:337  O - Host Memory Maxiumum Descriptors Entries (HMMAXD)
 
-    USHORT  NSETIDMAX;          // byte 338:339  O - NVM Set Identifier Maximum
+    USHORT  NSETIDMAX;          // byte 338:339  O - NVM Set Identifier Maximum: 1-based maximum value of a valid NVM Set Identifier.
     USHORT  ENDGIDMAX;          // byte 340:341  O - Endurance Group Identifier Maximum (ENDGIDMAX)
     
     UCHAR   ANATT;              // byte 342      O - ANA Transition Time (ANATT)

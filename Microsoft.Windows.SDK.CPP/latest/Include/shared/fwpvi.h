@@ -674,7 +674,7 @@
 #define IPsecSaContextSubscriptionsGet IPsecSaContextSubscriptionsGet0
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 #define FwpmConnectionPolicyAdd FwpmConnectionPolicyAdd0
 #define FwpmConnectionPolicyDeleteByKey FwpmConnectionPolicyDeleteByKey0
 #endif
