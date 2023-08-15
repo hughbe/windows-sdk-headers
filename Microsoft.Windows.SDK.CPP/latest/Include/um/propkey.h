@@ -8190,6 +8190,14 @@ DEFINE_PROPERTYKEY(PKEY_Home_Grouping, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0
 DEFINE_PROPERTYKEY(PKEY_Home_IsPinned, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29, 4);
 #define INIT_PKEY_Home_IsPinned { { 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29 }, 4 }
 
+//  Name:     System.Home.ItemFolderPathDisplay -- PKEY_Home_ItemFolderPathDisplay
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {30C8EEF4-A832-41E2-AB32-E3C3CA28FD29}, 6
+//
+//  Friendly name used for the folder path when displayed on File Explorer Home"
+DEFINE_PROPERTYKEY(PKEY_Home_ItemFolderPathDisplay, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29, 6);
+#define INIT_PKEY_Home_ItemFolderPathDisplay { { 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29 }, 6 }
+
 //  Name:     System.InternalName -- PKEY_InternalName
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: (PSFMTID_VERSION) {0CEF7D53-FA64-11D1-A203-0000F81FEDEE}, 5 (PIDVSI_InternalName)
