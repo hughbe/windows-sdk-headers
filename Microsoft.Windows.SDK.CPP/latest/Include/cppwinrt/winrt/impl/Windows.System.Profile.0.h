@@ -185,7 +185,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::ISharedModeSettingsStatics2>{ 0x608988A4,0xCCF1,0x4EE8,{ 0xA5,0xE2,0xFD,0x6A,0x1D,0x0C,0xFA,0xC8 } }; // 608988A4-CCF1-4EE8-A5E2-FD6A1D0CFAC8
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::ISystemIdentificationInfo>{ 0x0C659E7D,0xC3C2,0x4D33,{ 0xA2,0xDF,0x21,0xBC,0x41,0x91,0x6E,0xB3 } }; // 0C659E7D-C3C2-4D33-A2DF-21BC41916EB3
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::ISystemIdentificationStatics>{ 0x5581F42A,0xD3DF,0x4D93,{ 0xA3,0x7D,0xC4,0x1A,0x61,0x6C,0x6D,0x01 } }; // 5581F42A-D3DF-4D93-A37D-C41A616C6D01
-    template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::ISystemSetupInfoStatics>{ 0x2C9620A8,0x1D88,0x5E2D,{ 0xA3,0x24,0xA5,0x43,0xAF,0x42,0x47,0xEE } }; // 2C9620A8-1D88-5E2D-A324-A543AF4247EE
+    template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::ISystemSetupInfoStatics>{ 0xB8366A4B,0xFB6A,0x4571,{ 0xBE,0x0A,0x9A,0x0F,0x67,0x95,0x41,0x23 } }; // B8366A4B-FB6A-4571-BE0A-9A0F67954123
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IUnsupportedAppRequirement>{ 0x6182445C,0x894B,0x5CBC,{ 0x89,0x76,0xA9,0x8E,0x0A,0x9B,0x99,0x8D } }; // 6182445C-894B-5CBC-8976-A98E0A9B998D
     template <> inline constexpr guid guid_v<winrt::Windows::System::Profile::IWindowsIntegrityPolicyStatics>{ 0x7D1D81DB,0x8D63,0x4789,{ 0x9E,0xA5,0xDD,0xCF,0x65,0xA9,0x4F,0x3C } }; // 7D1D81DB-8D63-4789-9EA5-DDCF65A94F3C
     template <> struct default_interface<winrt::Windows::System::Profile::AnalyticsVersionInfo>{ using type = winrt::Windows::System::Profile::IAnalyticsVersionInfo; };

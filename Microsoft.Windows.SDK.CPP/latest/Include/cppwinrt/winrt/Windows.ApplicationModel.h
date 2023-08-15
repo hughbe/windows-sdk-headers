@@ -624,6 +624,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackage9)->FindRelatedPackages(*(void**)(&options), &result));
         return winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Package>{ result, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_ApplicationModel_IPackage9<D>::SourceUriSchemeName() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::ApplicationModel::IPackage9)->get_SourceUriSchemeName(&value));
+        return hstring{ value, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::event_token) consume_Windows_ApplicationModel_IPackageCatalog<D>::PackageStaging(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::ApplicationModel::PackageCatalog, winrt::Windows::ApplicationModel::PackageStagingEventArgs> const& handler) const
     {
         winrt::event_token token{};
@@ -2189,6 +2195,7 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::ApplicationModel::IPackage9> : produce_base<D, winrt::Windows::ApplicationModel::IPackage9>
     {
@@ -2200,7 +2207,16 @@ namespace winrt::impl
             return 0;
         }
         catch (...) { return to_hresult(); }
+        int32_t __stdcall get_SourceUriSchemeName(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<hstring>(this->shim().SourceUriSchemeName());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
     };
+#endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::ApplicationModel::IPackageCatalog> : produce_base<D, winrt::Windows::ApplicationModel::IPackageCatalog>

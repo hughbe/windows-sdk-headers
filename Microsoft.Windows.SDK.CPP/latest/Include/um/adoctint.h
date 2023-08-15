@@ -18,7 +18,7 @@
 #endif
 
 /* this ALWAYS GENERATED file contains the definitions for the interfaces */
- /* File created by MIDL compiler version 8.01.0627 */
+ /* File created by MIDL compiler version 8.01.0628 */
 /* @@MIDL_FILE_HEADING(  ) */
 /* verify that the <rpcndr.h> version is high enough to compile this file*/
 #ifndef __REQUIRED_RPCNDR_H_VERSION__

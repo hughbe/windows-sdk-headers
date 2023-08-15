@@ -811,10 +811,12 @@ namespace Windows
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 15.0)]
-        [uuid(59891E1C-FBFA-5194-85DA-F9A65A755DB7)]
+        [exclusiveto(Windows.ApplicationModel.Package)]
+        [uuid(D5AB224F-D7E1-49EC-90CE-720CDBD02E9C)]
         interface IPackage9 : IInspectable
         {
             HRESULT FindRelatedPackages([in] Windows.ApplicationModel.FindRelatedPackagesOptions* options, [out] [retval] Windows.Foundation.Collections.IVector<Windows.ApplicationModel.Package*>** result);
+            [propget] HRESULT SourceUriSchemeName([out] [retval] HSTRING* value);
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]

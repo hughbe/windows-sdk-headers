@@ -1743,7 +1743,7 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace Profile {
-                MIDL_INTERFACE("2c9620a8-1d88-5e2d-a324-a543af4247ee")
+                MIDL_INTERFACE("b8366a4b-fb6a-4571-be0a-9a0f67954123")
                 ISystemSetupInfoStatics : public IInspectable
                 {
                 public:
@@ -2073,8 +2073,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.Profile.ProfileSharedModeContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
+ *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
@@ -5263,8 +5263,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.System.Profile.ProfileSharedModeContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics interface starting with version 1.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
+ *   Static Methods exist on the Windows.System.Profile.ISharedModeSettingsStatics2 interface starting with version 2.0 of the Windows.System.Profile.ProfileSharedModeContract API contract
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *

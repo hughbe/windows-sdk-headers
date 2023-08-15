@@ -5454,6 +5454,21 @@ WINAPI
 GetClipboardData(
     _In_ UINT uFormat);
 
+typedef struct tagGETCLIPBMETADATA {
+
+    UINT Version; // Currently version 1; increment this value to add more fields.
+    BOOL IsDelayRendered; // Indicates if the data is delay-rendered.
+    BOOL IsSynthetic; // Indicates if the data is produced on-demand from another format (some bitmap/text/metafile).
+
+} GETCLIPBMETADATA, *PGETCLIPBMETADATA;
+
+WINUSERAPI
+BOOL
+WINAPI
+GetClipboardMetadata(
+    UINT format,
+    _Inout_ PGETCLIPBMETADATA metadata);
+
 WINUSERAPI
 UINT
 WINAPI

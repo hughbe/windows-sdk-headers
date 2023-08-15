@@ -153,7 +153,13 @@
       <xs:pattern value=".+\.([Dd][Ll][Ll])"/>
     </xs:restriction>
   </xs:simpleType>
-  
+
+  <xs:simpleType name="ST_Dll_EXE_File">
+    <xs:restriction base="ST_FileName">
+      <xs:pattern value=".+\.(([Dd][Ll][Ll])|([Ee][Xx][Ee]))"/>
+    </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="ST_ImageFile">
     <xs:restriction base="ST_FileName">
       <xs:pattern value=".+\.((jpg)|(png)|(jpeg))"/>
@@ -175,6 +181,12 @@
   <xs:simpleType name="ST_AlphaNumericString">
     <xs:restriction base="ST_NonEmptyString">
       <xs:pattern value="[A-Za-z0-9]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_AlphaNumericString_WhitespaceAllowedWithin">
+    <xs:restriction base="ST_NonEmptyString">
+      <xs:pattern value="([A-Za-z0-9][A-Za-z0-9\s]*[A-Za-z0-9])|[A-Za-z0-9]+"/>
     </xs:restriction>
   </xs:simpleType>
 
@@ -932,6 +944,7 @@
       <!-- Package Extensions -->
       <xs:enumeration value="windows.folder"/>
       <xs:enumeration value="windows.dataShortcuts"/>
+      <xs:enumeration value="windows.customDesktopEventLog"/>
     </xs:restriction>
   </xs:simpleType>
   
@@ -1642,6 +1655,36 @@
       <xs:pattern value="\$\(([\.\w])*\)(/[^/\\]*[^./\\]+)+(/?)"/>
     </xs:restriction>
   </xs:simpleType>
-  
+
+  <xs:simpleType name="ST_HexInt8">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="0[xX][0-9A-Fa-f]{1,2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_HexInt32">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="0[xX][0-9A-Fa-f]{1,8}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_HexInt64">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="0[xX][0-9A-Fa-f]{1,16}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_UInt8">
+    <xs:union memberTypes="xs:unsignedByte ST_HexInt8"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_UInt32">
+    <xs:union memberTypes="xs:unsignedInt ST_HexInt32"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="ST_UInt64">
+    <xs:union memberTypes="xs:unsignedLong ST_HexInt64"/>
+  </xs:simpleType>
+
 </xs:schema>
 

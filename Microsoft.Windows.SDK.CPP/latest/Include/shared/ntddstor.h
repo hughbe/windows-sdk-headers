@@ -2837,15 +2837,41 @@ typedef struct _STORAGE_DEVICE_LED_STATE_DESCRIPTOR {
 //
 // Output buffer for StorageDeviceSelfEncryptionProperty.
 //
+
+// Version 1 of the structure
 typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY {
 
-    ULONG Version;
+    ULONG Version; // Sizeof(STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY)
 
     ULONG Size;
 
     BOOLEAN SupportsSelfEncryption;
 
 } STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY, *PSTORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY;
+
+
+typedef enum _STORAGE_ENCRYPTION_TYPE {
+
+    StorageEncryptionTypeUnknown  = 0x00,
+    StorageEncryptionTypeEDrive   = 0x01,
+    StorageEncryptionTypeTcgOpal  = 0x02,
+
+} STORAGE_ENCRYPTION_TYPE, *PSTORAGE_ENCRYPTION_TYPE;
+
+// Version 2 of the structure
+// First three fields should be the same
+// as V1 to allow typecasting
+typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2 {
+
+    ULONG Version; // Sizeof(STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2)
+
+    ULONG Size;
+
+    BOOLEAN SupportsSelfEncryption;
+
+    STORAGE_ENCRYPTION_TYPE EncryptionType;
+
+} STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2, *PSTORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2;
 
 //
 // Output buffer for StorageFruIdProperty.

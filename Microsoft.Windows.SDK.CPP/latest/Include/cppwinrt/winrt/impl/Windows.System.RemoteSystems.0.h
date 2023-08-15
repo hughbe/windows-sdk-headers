@@ -50,6 +50,7 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteSystems
     {
         SameUser = 0,
         Anonymous = 1,
+        SameFamily = 2,
     };
     enum class RemoteSystemDiscoveryType : int32_t
     {

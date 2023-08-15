@@ -372,7 +372,7 @@ namespace Windows
 
             [contract(Windows.Foundation.UniversalApiContract, 7.0)]
             [exclusiveto(Windows.System.Profile.SystemSetupInfo)]
-            [uuid(2C9620A8-1D88-5E2D-A324-A543AF4247EE)]
+            [uuid(B8366A4B-FB6A-4571-BE0A-9A0F67954123)]
             interface ISystemSetupInfoStatics : IInspectable
             {
                 [propget] HRESULT OutOfBoxExperienceState([out] [retval] Windows.System.Profile.SystemOutOfBoxExperienceState* value);

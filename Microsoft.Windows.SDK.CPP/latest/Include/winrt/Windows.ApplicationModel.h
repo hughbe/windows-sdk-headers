@@ -4480,6 +4480,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage8;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Package
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CIPackage9_INTERFACE_DEFINED__)
@@ -4488,13 +4490,16 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows
 namespace ABI {
     namespace Windows {
         namespace ApplicationModel {
-            MIDL_INTERFACE("59891e1c-fbfa-5194-85da-f9a65a755db7")
+            MIDL_INTERFACE("d5ab224f-d7e1-49ec-90ce-720cdbd02e9c")
             IPackage9 : public IInspectable
             {
             public:
                 virtual HRESULT STDMETHODCALLTYPE FindRelatedPackages(
                     ABI::Windows::ApplicationModel::IFindRelatedPackagesOptions* options,
                     __FIVector_1_Windows__CApplicationModel__CPackage** result
+                    ) = 0;
+                virtual HRESULT STDMETHODCALLTYPE get_SourceUriSchemeName(
+                    HSTRING* value
                     ) = 0;
             };
 
@@ -5846,8 +5851,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -13428,6 +13433,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CIPackage8;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
+ * Interface is a part of the implementation of type Windows.ApplicationModel.Package
+ *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CIPackage9_INTERFACE_DEFINED__)
@@ -13452,6 +13459,8 @@ typedef struct __x_ABI_CWindows_CApplicationModel_CIPackage9Vtbl
     HRESULT (STDMETHODCALLTYPE* FindRelatedPackages)(__x_ABI_CWindows_CApplicationModel_CIPackage9* This,
         __x_ABI_CWindows_CApplicationModel_CIFindRelatedPackagesOptions* options,
         __FIVector_1_Windows__CApplicationModel__CPackage** result);
+    HRESULT (STDMETHODCALLTYPE* get_SourceUriSchemeName)(__x_ABI_CWindows_CApplicationModel_CIPackage9* This,
+        HSTRING* value);
 
     END_INTERFACE
 } __x_ABI_CWindows_CApplicationModel_CIPackage9Vtbl;
@@ -13483,6 +13492,9 @@ interface __x_ABI_CWindows_CApplicationModel_CIPackage9
 
 #define __x_ABI_CWindows_CApplicationModel_CIPackage9_FindRelatedPackages(This, options, result) \
     ((This)->lpVtbl->FindRelatedPackages(This, options, result))
+
+#define __x_ABI_CWindows_CApplicationModel_CIPackage9_get_SourceUriSchemeName(This, value) \
+    ((This)->lpVtbl->get_SourceUriSchemeName(This, value))
 
 #endif /* COBJMACROS */
 
@@ -16026,8 +16038,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics2 interface starting with version 5.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.ApplicationModel.IDesignModeStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *

@@ -309,11 +309,6 @@ EXTERN_GUID(WLDP_HOST_POWERSHELL,
 EXTERN_GUID(WLDP_HOST_PYTHON,
     0xbfd557ef, 0x2448, 0x42ec, 0x81, 0xb, 0xd, 0x9f, 0x9, 0x35, 0x2d, 0x4a);
 
-// Visual Basic for Applications Host
-// {D4D44341-37BE-4A35-82B0-759F73166F05}
-EXTERN_GUID(WLDP_HOST_VBA,
-    0xd4d44341, 0x37be, 0x4a35, 0x82, 0xb0, 0x75, 0x9f, 0x73, 0x16, 0x6f, 0x5);
-
 // Windows Script Host, for example, cscript, wscript.
 // {D30B84C5-29CE-4FF3-86EC-A30007A82E49}
 EXTERN_GUID(WLDP_HOST_WINDOWS_SCRIPT_HOST,

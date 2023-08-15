@@ -450,7 +450,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackage6>{ 0x8B1AD942,0x12D7,0x4754,{ 0xAE,0x4E,0x63,0x8C,0xBC,0x0E,0x3A,0x2E } }; // 8B1AD942-12D7-4754-AE4E-638CBC0E3A2E
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackage7>{ 0x86FF8D31,0xA2E4,0x45E0,{ 0x97,0x32,0x28,0x3A,0x6D,0x88,0xFD,0xE1 } }; // 86FF8D31-A2E4-45E0-9732-283A6D88FDE1
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackage8>{ 0x2C584F7B,0xCE2A,0x4BE6,{ 0xA0,0x93,0x77,0xCF,0xBB,0x2A,0x7E,0xA1 } }; // 2C584F7B-CE2A-4BE6-A093-77CFBB2A7EA1
-    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackage9>{ 0x59891E1C,0xFBFA,0x5194,{ 0x85,0xDA,0xF9,0xA6,0x5A,0x75,0x5D,0xB7 } }; // 59891E1C-FBFA-5194-85DA-F9A65A755DB7
+    template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackage9>{ 0xD5AB224F,0xD7E1,0x49EC,{ 0x90,0xCE,0x72,0x0C,0xDB,0xD0,0x2E,0x9C } }; // D5AB224F-D7E1-49EC-90CE-720CDBD02E9C
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalog>{ 0x230A3751,0x9DE3,0x4445,{ 0xBE,0x74,0x91,0xFB,0x32,0x5A,0xBE,0xFE } }; // 230A3751-9DE3-4445-BE74-91FB325ABEFE
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalog2>{ 0x96A60C36,0x8FF7,0x4344,{ 0xB6,0xBF,0xEE,0x64,0xC2,0x20,0x7E,0xD2 } }; // 96A60C36-8FF7-4344-B6BF-EE64C2207ED2
     template <> inline constexpr guid guid_v<winrt::Windows::ApplicationModel::IPackageCatalog3>{ 0x96DD5C88,0x8837,0x43F9,{ 0x90,0x15,0x03,0x34,0x34,0xBA,0x14,0xF3 } }; // 96DD5C88-8837-43F9-9015-033434BA14F3
@@ -791,6 +791,7 @@ namespace winrt::impl
         struct __declspec(novtable) type : inspectable_abi
         {
             virtual int32_t __stdcall FindRelatedPackages(void*, void**) noexcept = 0;
+            virtual int32_t __stdcall get_SourceUriSchemeName(void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::ApplicationModel::IPackageCatalog>
@@ -1412,6 +1413,7 @@ namespace winrt::impl
     struct consume_Windows_ApplicationModel_IPackage9
     {
         WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IVector<winrt::Windows::ApplicationModel::Package>) FindRelatedPackages(winrt::Windows::ApplicationModel::FindRelatedPackagesOptions const& options) const;
+        [[nodiscard]] WINRT_IMPL_AUTO(hstring) SourceUriSchemeName() const;
     };
     template <> struct consume<winrt::Windows::ApplicationModel::IPackage9>
     {
