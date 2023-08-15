@@ -1124,10 +1124,10 @@ CfGetPlaceholderRangeInfoForHydration(
     _In_ LARGE_INTEGER FileId,
     _In_ CF_PLACEHOLDER_RANGE_INFO_CLASS InfoClass,
     _In_ LARGE_INTEGER StartingOffset,
-    _In_ LARGE_INTEGER Length,
-    _Out_bytecapcount_(InfoBufferLength) PVOID InfoBuffer,
-    _In_ DWORD InfoBufferLength,
-    _Out_opt_ PDWORD ReturnedLength
+    _In_ LARGE_INTEGER RangeLength,
+    _Out_writes_bytes_to_(InfoBufferSize, *InfoBufferWritten) PVOID InfoBuffer,
+    _In_ DWORD InfoBufferSize,
+    _Out_opt_ PDWORD InfoBufferWritten
     );
 
 

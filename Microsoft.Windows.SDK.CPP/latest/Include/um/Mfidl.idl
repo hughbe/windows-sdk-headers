@@ -13801,6 +13801,123 @@ cpp_quote("    _In_ PCWSTR displayMonitorDeviceId,")
 cpp_quote("    _COM_Outptr_ IMFRelativePanelWatcher** ppRelativePanelWatcher")
 cpp_quote("    );")
 
+[
+    object,
+    local,
+    uuid(725B77C7-CA9F-4FE5-9D72-9946BF9B3C70),
+    helpstring("IMFVideoCaptureSampleAllocator Interface"),
+    pointer_default(unique)
+]
+/// <summary>
+/// The IMFVideoCaptureSampleAllocator interface is a specialized
+/// sample allocator for video capture devices.
+/// </summary>
+interface IMFVideoCaptureSampleAllocator : IMFVideoSampleAllocator
+{
+    /// <param name="cbSampleSize">
+    /// Sample size in bytes.
+    /// The actual sample size used by the allocator is the maximum of
+    /// the size required by pMediaType and cbSampleSize.
+    /// </param>
+    /// <param name="cbCaptureMetadataSize">
+    /// Capture metadata size in bytes. Applies only to callers that want to
+    /// to include additional metadata with the captured frames. The metadata size
+    /// should include the size of a KSCAMERA_METADATA_ITEMHEADER in addition to
+    /// the size of the metadata payload itself.
+    /// </param>
+    /// <param name="cbAlignment">
+    /// Buffer alignment size in bytes.
+    /// The default and minimum alignment size is 4KB. Custom alignment sizes
+    /// less than 4KB will be treated as 4KB.
+    /// </param>
+    /// <param name="cMinimumSamples">
+    /// Minimum number of pre-allocated samples.
+    /// This method will fail if the allocator cannot pre-allocate the specified
+    /// minimum number of samples.
+    /// </param>
+    /// <param name="pAttributes">
+    /// Optional parameter. An IMFAttributes store with additional configuration
+    /// attributes for the sample allocator. The attributes that are accepted
+    /// are the same as for IMFVideoSampleAllocatorEx::InitializeSampleAllocatorEx.
+    /// (See online documentation for that API for more details.)
+    /// </param>
+    /// <param name="pMediaType">
+    /// The IMFMediaType for which samples will be allocator. The sample
+    /// allocator uses this parameter to calculate the minimum required size
+    /// for the media samples.
+    /// </param>
+    HRESULT InitializeCaptureSampleAllocator(
+        [in, annotation("_In_")] DWORD cbSampleSize,
+        [in, annotation("_In_")] DWORD cbCaptureMetadataSize,
+        [in, annotation("_In_")] DWORD cbAlignment,
+        [in, annotation("_In_")] DWORD cMinimumSamples,
+        [in, annotation("_In_opt_")] IMFAttributes *pAttributes,
+        [in, annotation("_In_")] IMFMediaType *pMediaType
+    );
+};
+
+/// <summary>
+///     The enumeration type defines video capture sample allocator mode
+/// </summary>
+typedef enum MFSampleAllocatorUsage
+{
+    MFSampleAllocatorUsage_UsesProvidedAllocator = 0,
+    MFSampleAllocatorUsage_UsesCustomAllocator,
+    MFSampleAllocatorUsage_DoesNotAllocate
+} MFSampleAllocatorUsage;
+
+[
+    object,
+    uuid(DA62B958-3A38-4A97-BD27-149C640C0771),
+    helpstring("IMFSampleAllocatorControl Interface"),
+    local
+]
+/// <summary>
+/// An enumeration that specifies how an object that implements
+/// IMFSampleAllocatorControl uses a sample allocator.
+/// </summary>
+interface IMFSampleAllocatorControl : IUnknown
+{
+    /// <summary>
+    /// Sets the default sample allocator to use for the specified output stream.
+    /// When this allocator is in use, the sample allocator usage value is
+    /// MFSampleAllocatorUsage_UsesProvidedAllocator.
+    /// </summary>
+    /// <param name="dwOutputStreamID">
+    /// The ID of the output stream that the pAllocator parameter applies to.
+    /// </param>
+    /// <param name="pAllocator">
+    /// Provides a sample allocator to use for the specified output stream. The
+    /// allocator must support one of the MF allocator interfaces, such as,
+    /// IMFVideoCaptureSampleAllocator or IMFVideoSampleAllocatorEx.
+    /// </param>
+    HRESULT SetDefaultAllocator(
+        [in, annotation("_In_")] DWORD dwOutputStreamID,
+        [in, annotation("_In_")] IUnknown *pAllocator
+    );
+
+    /// <summary>
+    /// Retrieves the sample allocator usage for the specified output stream.
+    /// </summary>
+    /// <param name="dwOutputStreamID">
+    /// The ID of the output stream whose sample allocator usage is requested.
+    /// </param>
+    /// <param name="pdwInputStreamID">
+    /// If the allocator usage is MFSampleAllocatorUsage_DoesNotAllocate,
+    /// then this output parameter is set to the ID of the input stream that
+    /// the output samples are coming from.
+    /// For all other allocator usage values, this parameter shall be ignored.
+    /// </param>
+    /// <param name="peUsage">
+    /// The sample allocator usage of the specified output stream.
+    /// </param>
+    HRESULT GetAllocatorUsage(
+        [in, annotation("_In_")] DWORD dwOutputStreamID,
+        [out, annotation("_Out_")] DWORD* pdwInputStreamID,
+        [out, annotation("_Out_")] MFSampleAllocatorUsage* peUsage
+    );
+};
+
 cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB) ")
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_CO) ")
@@ -14046,127 +14163,6 @@ cpp_quote("    _In_ IMFCameraControlNotify* callback,")
 cpp_quote("    _COM_Outptr_ IMFCameraControlMonitor ** ppCameraControlMonitor")
 cpp_quote("    );")
 
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI) ")
-
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
-
-[
-    object,
-    local,
-    uuid(725B77C7-CA9F-4FE5-9D72-9946BF9B3C70),
-    helpstring("IMFVideoCaptureSampleAllocator Interface"),
-    pointer_default(unique)
-]
-/// <summary>
-/// The IMFVideoCaptureSampleAllocator interface is a specialized
-/// sample allocator for video capture devices.
-/// </summary>
-interface IMFVideoCaptureSampleAllocator : IMFVideoSampleAllocator
-{
-    /// <param name="cbSampleSize">
-    /// Sample size in bytes.
-    /// The actual sample size used by the allocator is the maximum of
-    /// the size required by pMediaType and cbSampleSize.
-    /// </param>
-    /// <param name="cbCaptureMetadataSize">
-    /// Capture metadata size in bytes. Applies only to callers that want to
-    /// to include additional metadata with the captured frames. The metadata size
-    /// should include the size of a KSCAMERA_METADATA_ITEMHEADER in addition to
-    /// the size of the metadata payload itself.
-    /// </param>
-    /// <param name="cbAlignment">
-    /// Buffer alignment size in bytes.
-    /// The default and minimum alignment size is 4KB. Custom alignment sizes
-    /// less than 4KB will be treated as 4KB.
-    /// </param>
-    /// <param name="cMinimumSamples">
-    /// Minimum number of pre-allocated samples.
-    /// This method will fail if the allocator cannot pre-allocate the specified
-    /// minimum number of samples.
-    /// </param>
-    /// <param name="pAttributes">
-    /// Optional parameter. An IMFAttributes store with additional configuration
-    /// attributes for the sample allocator. The attributes that are accepted
-    /// are the same as for IMFVideoSampleAllocatorEx::InitializeSampleAllocatorEx.
-    /// (See online documentation for that API for more details.)
-    /// </param>
-    /// <param name="pMediaType">
-    /// The IMFMediaType for which samples will be allocator. The sample
-    /// allocator uses this parameter to calculate the minimum required size
-    /// for the media samples.
-    /// </param>
-    HRESULT InitializeCaptureSampleAllocator(
-        [in, annotation("_In_")] DWORD cbSampleSize,
-        [in, annotation("_In_")] DWORD cbCaptureMetadataSize,
-        [in, annotation("_In_")] DWORD cbAlignment,
-        [in, annotation("_In_")] DWORD cMinimumSamples,
-        [in, annotation("_In_opt_")] IMFAttributes *pAttributes,
-        [in, annotation("_In_")] IMFMediaType *pMediaType
-    );
-};
-
-/// <summary>
-///     The enumeration type defines video capture sample allocator mode
-/// </summary>
-typedef enum MFSampleAllocatorUsage
-{
-    MFSampleAllocatorUsage_UsesProvidedAllocator = 0,
-    MFSampleAllocatorUsage_UsesCustomAllocator,
-    MFSampleAllocatorUsage_DoesNotAllocate
-} MFSampleAllocatorUsage;
-
-[
-    object,
-    uuid(DA62B958-3A38-4A97-BD27-149C640C0771),
-    helpstring("IMFSampleAllocatorControl Interface"),
-    local
-]
-/// <summary>
-/// An enumeration that specifies how an object that implements
-/// IMFSampleAllocatorControl uses a sample allocator.
-/// </summary>
-interface IMFSampleAllocatorControl : IUnknown
-{
-    /// <summary>
-    /// Sets the default sample allocator to use for the specified output stream.
-    /// When this allocator is in use, the sample allocator usage value is
-    /// MFSampleAllocatorUsage_UsesProvidedAllocator.
-    /// </summary>
-    /// <param name="dwOutputStreamID">
-    /// The ID of the output stream that the pAllocator parameter applies to.
-    /// </param>
-    /// <param name="pAllocator">
-    /// Provides a sample allocator to use for the specified output stream. The
-    /// allocator must support one of the MF allocator interfaces, such as,
-    /// IMFVideoCaptureSampleAllocator or IMFVideoSampleAllocatorEx.
-    /// </param>
-    HRESULT SetDefaultAllocator(
-        [in, annotation("_In_")] DWORD dwOutputStreamID,
-        [in, annotation("_In_")] IUnknown *pAllocator
-    );
-
-    /// <summary>
-    /// Retrieves the sample allocator usage for the specified output stream.
-    /// </summary>
-    /// <param name="dwOutputStreamID">
-    /// The ID of the output stream whose sample allocator usage is requested.
-    /// </param>
-    /// <param name="pdwInputStreamID">
-    /// If the allocator usage is MFSampleAllocatorUsage_DoesNotAllocate,
-    /// then this output parameter is set to the ID of the input stream that
-    /// the output samples are coming from.
-    /// For all other allocator usage values, this parameter shall be ignored.
-    /// </param>
-    /// <param name="peUsage">
-    /// The sample allocator usage of the specified output stream.
-    /// </param>
-    HRESULT GetAllocatorUsage(
-        [in, annotation("_In_")] DWORD dwOutputStreamID,
-        [out, annotation("_Out_")] DWORD* pdwInputStreamID,
-        [out, annotation("_Out_")] MFSampleAllocatorUsage* peUsage
-    );
-};
-
 typedef enum
 {
     MF_CAMERA_CONTROL_CONFIGURATION_TYPE_PRESTART = 0,
@@ -14373,4 +14369,7 @@ interface IMFCameraConfigurationManager : IUnknown
         );
 };
 
-#pragma endregion // Application Family  
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI) ")
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+#pragma endregion // Application Family
