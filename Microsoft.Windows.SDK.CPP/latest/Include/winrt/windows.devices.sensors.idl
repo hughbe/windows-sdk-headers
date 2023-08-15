@@ -200,9 +200,15 @@ namespace Windows
 
             interface IHumanPresenceSensor2;
 
+            interface IHumanPresenceSensorExtensionPlugin;
+
             interface IHumanPresenceSensorReading;
 
+            interface IHumanPresenceSensorReading2;
+
             interface IHumanPresenceSensorReadingChangedEventArgs;
+
+            interface IHumanPresenceSensorReadingUpdate;
 
             interface IHumanPresenceSensorStatics;
 
@@ -424,6 +430,8 @@ namespace Windows
 
             runtimeclass HumanPresenceSensorReadingChangedEventArgs;
 
+            runtimeclass HumanPresenceSensorReadingUpdate;
+
             runtimeclass HumanPresenceSettings;
 
             runtimeclass Inclinometer;
@@ -577,6 +585,10 @@ namespace Windows
                 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.ActivitySensorReading*>*>;
 
                 interface Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Devices.Sensors.PedometerReading*>*>;
+
+                interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement>;
+
+                interface Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Devices.Sensors.Accelerometer*, Windows.Devices.Sensors.AccelerometerReadingChangedEventArgs*>;
 
@@ -1371,6 +1383,19 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [uuid(1DF6595D-D9DE-5EA5-9B6B-AA71324CE426)]
+            interface IHumanPresenceSensorExtensionPlugin : IInspectable
+            {
+                HRESULT Initialize([in] HSTRING DeviceId);
+                HRESULT Start();
+                HRESULT ProcessReading([in] Windows.Devices.Sensors.HumanPresenceSensorReading* Reading, [out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate** result);
+                HRESULT ProcessReadingTimeoutExpired([in] Windows.Devices.Sensors.HumanPresenceSensorReading* Reading);
+                HRESULT Stop();
+                HRESULT Uninitialize();
+                HRESULT Reset();
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReading)]
             [uuid(83533BF5-A85A-5D50-8BE4-6072D745A3BB)]
             interface IHumanPresenceSensorReading : IInspectable
@@ -1382,11 +1407,34 @@ namespace Windows
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReading)]
+            [uuid(C4F0E950-3BFF-53D6-A0F8-514EA3705C66)]
+            interface IHumanPresenceSensorReading2 : IInspectable
+            {
+                [propget] HRESULT Properties([out] [retval] Windows.Foundation.Collections.IMapView<HSTRING, IInspectable*>** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReadingChangedEventArgs)]
             [uuid(A9DC4583-FD69-5C5E-AB1F-942204EAE2DB)]
             interface IHumanPresenceSensorReadingChangedEventArgs : IInspectable
             {
                 [propget] HRESULT Reading([out] [retval] Windows.Devices.Sensors.HumanPresenceSensorReading** value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [exclusiveto(Windows.Devices.Sensors.HumanPresenceSensorReadingUpdate)]
+            [uuid(42419C77-6D2F-55A0-9E01-C9CBE7B2D6DF)]
+            interface IHumanPresenceSensorReadingUpdate : IInspectable
+            {
+                [propget] HRESULT Timestamp([out] [retval] Windows.Foundation.IReference<Windows.Foundation.DateTime>** value);
+                [propput] HRESULT Timestamp([in] Windows.Foundation.IReference<Windows.Foundation.DateTime>* value);
+                [propget] HRESULT Presence([out] [retval] Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence>** value);
+                [propput] HRESULT Presence([in] Windows.Foundation.IReference<Windows.Devices.Sensors.HumanPresence>* value);
+                [propget] HRESULT Engagement([out] [retval] Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement>** value);
+                [propput] HRESULT Engagement([in] Windows.Foundation.IReference<Windows.Devices.Sensors.HumanEngagement>* value);
+                [propget] HRESULT DistanceInMillimeters([out] [retval] Windows.Foundation.IReference<UINT32>** value);
+                [propput] HRESULT DistanceInMillimeters([in] Windows.Foundation.IReference<UINT32>* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -2423,6 +2471,7 @@ namespace Windows
             runtimeclass HumanPresenceSensorReading
             {
                 [default] interface Windows.Devices.Sensors.IHumanPresenceSensorReading;
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.Devices.Sensors.IHumanPresenceSensorReading2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -2430,6 +2479,15 @@ namespace Windows
             runtimeclass HumanPresenceSensorReadingChangedEventArgs
             {
                 [default] interface Windows.Devices.Sensors.IHumanPresenceSensorReadingChangedEventArgs;
+            }
+
+            [activatable(Windows.Foundation.UniversalApiContract, 15.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+            [marshaling_behavior(agile)]
+            [threading(both)]
+            runtimeclass HumanPresenceSensorReadingUpdate
+            {
+                [default] interface Windows.Devices.Sensors.IHumanPresenceSensorReadingUpdate;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 15.0)]

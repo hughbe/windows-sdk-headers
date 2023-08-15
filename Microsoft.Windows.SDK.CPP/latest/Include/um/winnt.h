@@ -15750,19 +15750,38 @@ DEFINE_GUID( GUID_STANDBY_RESERVE_TIME, 0x468FE7E5, 0x1158, 0x46EC, 0x88, 0xbc, 
 DEFINE_GUID(GUID_STANDBY_RESET_PERCENT, 0x49cb11a5, 0x56e2, 0x4afb, 0x9d, 0x38, 0x3d, 0xf4, 0x78, 0x72, 0xe2, 0x1b);
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Display Timeout.
+// Defines a guid to control Human Presence Sensor Adaptive Away Display Timeout.
 //
 // {0A7D6AB6-AC83-4AD1-8282-ECA5B58308F3}
 //
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT, 0x0A7D6AB6, 0xAC83, 0x4AD1, 0x82, 0x82, 0xEC, 0xA5, 0xB5, 0x83, 0x08, 0xF3);
+
+#define GUID_HUPR_ADAPTIVE_DISPLAY_TIMEOUT GUID_HUPR_ADAPTIVE_AWAY_DISPLAY_TIMEOUT
 
 //
-// Defines a guid to control Human Presence Sensor Adaptive Dim Timeout;
+// Defines a guid to control Human Presence Sensor Adaptive Inattentive Dim Timeout;
 //
 // {CF8C6097-12B8-4279-BBDD-44601EE5209D}
 //
 
-DEFINE_GUID(GUID_HUPR_ADAPTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT, 0xCF8C6097, 0x12B8, 0x4279, 0xBB, 0xDD, 0x44, 0x60, 0x1E, 0xE5, 0x20, 0x9D);
+
+#define GUID_HUPR_ADAPTIVE_DIM_TIMEOUT GUID_HUPR_ADAPTIVE_INATTENTIVE_DIM_TIMEOUT
+
+//
+// Defines a guid to control Human Presence Sensor Adaptive Inattentive Display Timeout.
+//
+// {EE16691E-6AB3-4619-BB48-1C77C9357E5A}
+//
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_INATTENTIVE_DISPLAY_TIMEOUT, 0xEE16691E, 0x6AB3, 0x4619, 0xBB, 0x48, 0x1C, 0x77, 0xC9, 0x35, 0x7E, 0x5A);
+
+//
+// Defines a guid to control Human Presence Sensor Adaptive Away Dim Timeout;
+//
+// {A79C8E0E-F271-482D-8F8A-5DB9A18312DE}
+//
+
+DEFINE_GUID(GUID_HUPR_ADAPTIVE_AWAY_DIM_TIMEOUT, 0xA79C8E0E, 0xF271, 0x482D, 0x8F, 0x8A, 0x5D, 0xB9, 0xA1, 0x83, 0x12, 0xDE);
 
 //
 // Defines a guid for enabling/disabling standby (S1-S3) states. This does not

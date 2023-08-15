@@ -1038,6 +1038,36 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor2)->get_IsEngagementSupported(&value));
         return value;
     }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::Initialize(param::hstring const& DeviceId) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->Initialize(*(void**)(&DeviceId)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::Start() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->Start());
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::ProcessReading(winrt::Windows::Devices::Sensors::HumanPresenceSensorReading const& Reading) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->ProcessReading(*(void**)(&Reading), &result));
+        return winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate{ result, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::ProcessReadingTimeoutExpired(winrt::Windows::Devices::Sensors::HumanPresenceSensorReading const& Reading) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->ProcessReadingTimeoutExpired(*(void**)(&Reading)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::Stop() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->Stop());
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::Uninitialize() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->Uninitialize());
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorExtensionPlugin<D>::Reset() const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin)->Reset());
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::DateTime) consume_Windows_Devices_Sensors_IHumanPresenceSensorReading<D>::Timestamp() const
     {
         winrt::Windows::Foundation::DateTime value{};
@@ -1062,11 +1092,57 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading)->get_DistanceInMillimeters(&value));
         return winrt::Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
     }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>) consume_Windows_Devices_Sensors_IHumanPresenceSensorReading2<D>::Properties() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading2)->get_Properties(&value));
+        return winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>{ value, take_ownership_from_abi };
+    }
     template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Devices::Sensors::HumanPresenceSensorReading) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingChangedEventArgs<D>::Reading() const
     {
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs)->get_Reading(&value));
         return winrt::Windows::Devices::Sensors::HumanPresenceSensorReading{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Timestamp() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->get_Timestamp(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Timestamp(winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->put_Timestamp(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Presence() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->get_Presence(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Presence(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->put_Presence(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement>) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Engagement() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->get_Engagement(&value));
+        return winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::Engagement(winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->put_Engagement(*(void**)(&value)));
+    }
+    template <typename D> WINRT_IMPL_AUTO(winrt::Windows::Foundation::IReference<uint32_t>) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::DistanceInMillimeters() const
+    {
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->get_DistanceInMillimeters(&value));
+        return winrt::Windows::Foundation::IReference<uint32_t>{ value, take_ownership_from_abi };
+    }
+    template <typename D> WINRT_IMPL_AUTO(void) consume_Windows_Devices_Sensors_IHumanPresenceSensorReadingUpdate<D>::DistanceInMillimeters(winrt::Windows::Foundation::IReference<uint32_t> const& value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate)->put_DistanceInMillimeters(*(void**)(&value)));
     }
     template <typename D> WINRT_IMPL_AUTO(hstring) consume_Windows_Devices_Sensors_IHumanPresenceSensorStatics<D>::GetDeviceSelector() const
     {
@@ -4001,6 +4077,60 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin>
+    {
+        int32_t __stdcall Initialize(void* DeviceId) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Initialize(*reinterpret_cast<hstring const*>(&DeviceId));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Start() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Start();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ProcessReading(void* Reading, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate>(this->shim().ProcessReading(*reinterpret_cast<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading const*>(&Reading)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall ProcessReadingTimeoutExpired(void* Reading) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().ProcessReadingTimeoutExpired(*reinterpret_cast<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading const*>(&Reading));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Stop() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Stop();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Uninitialize() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Uninitialize();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall Reset() noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Reset();
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading>
@@ -4039,6 +4169,20 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading2>
+    {
+        int32_t __stdcall get_Properties(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::Collections::IMapView<hstring, winrt::Windows::Foundation::IInspectable>>(this->shim().Properties());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs>
     {
         int32_t __stdcall get_Reading(void** value) noexcept final try
@@ -4046,6 +4190,72 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading>(this->shim().Reading());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate>
+    {
+        int32_t __stdcall get_Timestamp(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime>>(this->shim().Timestamp());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Timestamp(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Timestamp(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Foundation::DateTime> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Presence(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence>>(this->shim().Presence());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Presence(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Presence(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanPresence> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_Engagement(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement>>(this->shim().Engagement());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_Engagement(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().Engagement(*reinterpret_cast<winrt::Windows::Foundation::IReference<winrt::Windows::Devices::Sensors::HumanEngagement> const*>(&value));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DistanceInMillimeters(void** value) noexcept final try
+        {
+            clear_abi(value);
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<winrt::Windows::Foundation::IReference<uint32_t>>(this->shim().DistanceInMillimeters());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DistanceInMillimeters(void* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DistanceInMillimeters(*reinterpret_cast<winrt::Windows::Foundation::IReference<uint32_t> const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -6212,6 +6422,10 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     {
         return impl::call_factory_cast<winrt::Windows::Devices::Sensors::HumanPresenceSensor(*)(IHumanPresenceSensorStatics2 const&), HumanPresenceSensor, IHumanPresenceSensorStatics2>([](IHumanPresenceSensorStatics2 const& f) { return f.GetDefault(); });
     }
+    inline HumanPresenceSensorReadingUpdate::HumanPresenceSensorReadingUpdate() :
+        HumanPresenceSensorReadingUpdate(impl::call_factory_cast<HumanPresenceSensorReadingUpdate(*)(winrt::Windows::Foundation::IActivationFactory const&), HumanPresenceSensorReadingUpdate>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<HumanPresenceSensorReadingUpdate>(); }))
+    {
+    }
     inline auto HumanPresenceSettings::GetCurrentSettingsAsync()
     {
         return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::HumanPresenceSettings>(*)(IHumanPresenceSettingsStatics const&), HumanPresenceSettings, IHumanPresenceSettingsStatics>([](IHumanPresenceSettingsStatics const& f) { return f.GetCurrentSettingsAsync(); });
@@ -6452,8 +6666,11 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorExtensionPlugin> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingUpdate> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> : winrt::impl::hash_base {};
@@ -6564,6 +6781,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::HumanPresenceSensor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::HumanPresenceSensorReading> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::HumanPresenceSensorReadingUpdate> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::HumanPresenceSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::Inclinometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::InclinometerDataThreshold> : winrt::impl::hash_base {};
