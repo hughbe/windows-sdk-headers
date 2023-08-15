@@ -8737,7 +8737,7 @@
 //
 // MessageText:
 //
-// Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the domain.
+// Unable to update the password. The value provided for the new password does not meet the length, complexity, or history requirements of the machine or domain. Try increasing the length of your password, along with including upper and lowercase characters, numbers, and symbols.
 //
 #define ERROR_PASSWORD_RESTRICTION       1325L
 
@@ -22486,6 +22486,33 @@
 // The account is controlled by external policy and cannot be modified.
 //
 #define ERROR_POLICY_CONTROLLED_ACCOUNT  8654L
+
+//
+// MessageId: ERROR_LAPS_LEGACY_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the legacy LAPS schema needs to be added to Active Directory.
+//
+#define ERROR_LAPS_LEGACY_SCHEMA_MISSING 8655L
+
+//
+// MessageId: ERROR_LAPS_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the Windows LAPS schema needs to be added to Active Directory.
+//
+#define ERROR_LAPS_SCHEMA_MISSING        8656L
+
+//
+// MessageId: ERROR_LAPS_ENCRYPTION_REQUIRES_2016_DFL
+//
+// MessageText:
+//
+// The Local Administrator Password Solution encrypted password update operation failed because Active Directory is not yet running at the minimum required domain functional level (2016).
+//
+#define ERROR_LAPS_ENCRYPTION_REQUIRES_2016_DFL 8657L
 
 
 ///////////////////////////////////////////////////
@@ -50589,7 +50616,7 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 // MessageText:
 //
-// The operation failed because BitLocker Drive Encryption is configured to not allow suspending protection.
+// The operation failed because BitLocker Drive Encryption cannot suspend protection by policy.
 //
 #define FVE_E_SUSPEND_PROTECTION_NOT_ALLOWED _HRESULT_TYPEDEF_(0x803100F0L)
 

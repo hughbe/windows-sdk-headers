@@ -1094,6 +1094,7 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_DIGITIZER_SWITCH_DISABLED                                   ((USAGE) 0x00A3)
 #define HID_USAGE_DIGITIZER_SWITCH_UNIMPLEMENTED                              ((USAGE) 0x00A4)
 #define HID_USAGE_DIGITIZER_TRANSDUCER_SWITCHES                               ((USAGE) 0x00A5)
+#define HID_USAGE_DIGITIZER_BUTTON_PRESS_THRESHOLD                            ((USAGE) 0x00B0)
 
 //
 // Eye and Head Trackers Page (0x12)

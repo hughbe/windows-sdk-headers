@@ -328,6 +328,16 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IActivitySensorTriggerDetails)->ReadReports(&value));
         return winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Devices_Sensors_IAdaptiveDimmingOptions<D>::AllowWhenExternalDisplayConnected() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IAdaptiveDimmingOptions)->get_AllowWhenExternalDisplayConnected(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IAdaptiveDimmingOptions<D>::AllowWhenExternalDisplayConnected(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IAdaptiveDimmingOptions)->put_AllowWhenExternalDisplayConnected(value));
+    }
     template <typename D> auto consume_Windows_Devices_Sensors_IAltimeter<D>::GetCurrentReading() const
     {
         void* value{};
@@ -972,6 +982,12 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceFeatures)->get_IsAttentionAwareDimmingSupported(&value));
         return value;
     }
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceFeatures2<D>::IsAdaptiveDimmingSupported() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2)->get_IsAdaptiveDimmingSupported(&value));
+        return value;
+    }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensor<D>::DeviceId() const
     {
         void* value{};
@@ -1010,16 +1026,16 @@ namespace winrt::impl
     {
         WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor)->remove_ReadingChanged(impl::bind_in(token));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensor2<D>::IsHumanPresenceCapable() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensor2<D>::IsPresenceSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor2)->get_IsHumanPresenceCapable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor2)->get_IsPresenceSupported(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensor2<D>::IsHumanEngagementCapable() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensor2<D>::IsEngagementSupported() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor2)->get_IsHumanEngagementCapable(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensor2)->get_IsEngagementSupported(&value));
         return value;
     }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorReading<D>::Timestamp() const
@@ -1069,6 +1085,18 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics)->GetDefaultAsync(&operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::HumanPresenceSensor>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorStatics2<D>::FromId(param::hstring const& sensorId) const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2)->FromId(*(void**)(&sensorId), &result));
+        return winrt::Windows::Devices::Sensors::HumanPresenceSensor{ result, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSensorStatics2<D>::GetDefault() const
+    {
+        void* result{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2)->GetDefault(&result));
+        return winrt::Windows::Devices::Sensors::HumanPresenceSensor{ result, take_ownership_from_abi };
     }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings<D>::SensorId() const
     {
@@ -1140,45 +1168,45 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings)->put_IsAttentionAwareDimmingEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowWakeOnApproachWhenExternalDisplayConnected() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::IsAdaptiveDimmingEnabled() const
     {
         bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_AllowWakeOnApproachWhenExternalDisplayConnected(&value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_IsAdaptiveDimmingEnabled(&value));
         return value;
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowWakeOnApproachWhenExternalDisplayConnected(bool value) const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::IsAdaptiveDimmingEnabled(bool value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_AllowWakeOnApproachWhenExternalDisplayConnected(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_IsAdaptiveDimmingEnabled(value));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowAttentionAwareDimmingWhenExternalDisplayConnected() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::WakeOptions() const
     {
-        bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_AllowAttentionAwareDimmingWhenExternalDisplayConnected(&value));
-        return value;
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_WakeOptions(&value));
+        return winrt::Windows::Devices::Sensors::WakeOnApproachOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool value) const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::WakeOptions(winrt::Windows::Devices::Sensors::WakeOnApproachOptions const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_AllowAttentionAwareDimmingWhenExternalDisplayConnected(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_WakeOptions(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowLockOnLeaveWhenExternalDisplayConnected() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::DimmingOptions() const
     {
-        bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_AllowLockOnLeaveWhenExternalDisplayConnected(&value));
-        return value;
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_DimmingOptions(&value));
+        return winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowLockOnLeaveWhenExternalDisplayConnected(bool value) const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::DimmingOptions(winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_AllowLockOnLeaveWhenExternalDisplayConnected(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_DimmingOptions(*(void**)(&value)));
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowWakeOnApproachWhenBatterySaverActive() const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::LockOptions() const
     {
-        bool value{};
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->get_AllowWakeOnApproachWhenBatterySaverActive(&value));
-        return value;
+        void* value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->get_LockOptions(&value));
+        return winrt::Windows::Devices::Sensors::LockOnLeaveOptions{ value, take_ownership_from_abi };
     }
-    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings2<D>::AllowWakeOnApproachWhenBatterySaverActive(bool value) const
+    template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettings3<D>::LockOptions(winrt::Windows::Devices::Sensors::LockOnLeaveOptions const& value) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings2)->put_AllowWakeOnApproachWhenBatterySaverActive(value));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IHumanPresenceSettings3)->put_LockOptions(*(void**)(&value)));
     }
     template <typename D> auto consume_Windows_Devices_Sensors_IHumanPresenceSettingsStatics<D>::GetCurrentSettingsAsync() const
     {
@@ -1553,6 +1581,16 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::ILightSensorStatics2)->FromIdAsync(*(void**)(&deviceId), &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::LightSensor>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_ILockOnLeaveOptions<D>::AllowWhenExternalDisplayConnected() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::ILockOnLeaveOptions)->get_AllowWhenExternalDisplayConnected(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_ILockOnLeaveOptions<D>::AllowWhenExternalDisplayConnected(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::ILockOnLeaveOptions)->put_AllowWhenExternalDisplayConnected(value));
     }
     template <typename D> auto consume_Windows_Devices_Sensors_IMagnetometer<D>::GetCurrentReading() const
     {
@@ -2250,6 +2288,26 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::ISimpleOrientationSensorStatics2)->FromIdAsync(*(void**)(&deviceId), &result));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::SimpleOrientationSensor>{ result, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_Devices_Sensors_IWakeOnApproachOptions<D>::AllowWhenExternalDisplayConnected() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IWakeOnApproachOptions)->get_AllowWhenExternalDisplayConnected(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IWakeOnApproachOptions<D>::AllowWhenExternalDisplayConnected(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IWakeOnApproachOptions)->put_AllowWhenExternalDisplayConnected(value));
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IWakeOnApproachOptions<D>::DisableWhenBatterySaverOn() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IWakeOnApproachOptions)->get_DisableWhenBatterySaverOn(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Sensors_IWakeOnApproachOptions<D>::DisableWhenBatterySaverOn(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Sensors::IWakeOnApproachOptions)->put_DisableWhenBatterySaverOn(value));
+    }
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IAccelerometer> : produce_base<D, winrt::Windows::Devices::Sensors::IAccelerometer>
@@ -2761,6 +2819,26 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Foundation::Collections::IVectorView<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport>>(this->shim().ReadReports());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IAdaptiveDimmingOptions> : produce_base<D, winrt::Windows::Devices::Sensors::IAdaptiveDimmingOptions>
+    {
+        int32_t __stdcall get_AllowWhenExternalDisplayConnected(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllowWhenExternalDisplayConnected());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowWhenExternalDisplayConnected(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowWhenExternalDisplayConnected(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3852,6 +3930,19 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2>
+    {
+        int32_t __stdcall get_IsAdaptiveDimmingSupported(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsAdaptiveDimmingSupported());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensor> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensor>
     {
         int32_t __stdcall get_DeviceId(void** value) noexcept final try
@@ -3906,17 +3997,17 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensor2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensor2>
     {
-        int32_t __stdcall get_IsHumanPresenceCapable(bool* value) noexcept final try
+        int32_t __stdcall get_IsPresenceSupported(bool* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().IsHumanPresenceCapable());
+            *value = detach_from<bool>(this->shim().IsPresenceSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_IsHumanEngagementCapable(bool* value) noexcept final try
+        int32_t __stdcall get_IsEngagementSupported(bool* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().IsHumanEngagementCapable());
+            *value = detach_from<bool>(this->shim().IsEngagementSupported());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3997,6 +4088,28 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::HumanPresenceSensor>>(this->shim().GetDefaultAsync());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2>
+    {
+        int32_t __stdcall FromId(void* sensorId, void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Devices::Sensors::HumanPresenceSensor>(this->shim().FromId(*reinterpret_cast<hstring const*>(&sensorId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall GetDefault(void** result) noexcept final try
+        {
+            clear_abi(result);
+            typename D::abi_guard guard(this->shim());
+            *result = detach_from<winrt::Windows::Devices::Sensors::HumanPresenceSensor>(this->shim().GetDefault());
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4114,59 +4227,68 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings2>
     {
-        int32_t __stdcall get_AllowWakeOnApproachWhenExternalDisplayConnected(bool* value) noexcept final try
+        int32_t __stdcall get_IsAdaptiveDimmingEnabled(bool* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().AllowWakeOnApproachWhenExternalDisplayConnected());
+            *value = detach_from<bool>(this->shim().IsAdaptiveDimmingEnabled());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_AllowWakeOnApproachWhenExternalDisplayConnected(bool value) noexcept final try
+        int32_t __stdcall put_IsAdaptiveDimmingEnabled(bool value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AllowWakeOnApproachWhenExternalDisplayConnected(value);
+            this->shim().IsAdaptiveDimmingEnabled(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool* value) noexcept final try
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> : produce_base<D, winrt::Windows::Devices::Sensors::IHumanPresenceSettings3>
+    {
+        int32_t __stdcall get_WakeOptions(void** value) noexcept final try
         {
+            clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().AllowAttentionAwareDimmingWhenExternalDisplayConnected());
+            *value = detach_from<winrt::Windows::Devices::Sensors::WakeOnApproachOptions>(this->shim().WakeOptions());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_AllowAttentionAwareDimmingWhenExternalDisplayConnected(bool value) noexcept final try
+        int32_t __stdcall put_WakeOptions(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AllowAttentionAwareDimmingWhenExternalDisplayConnected(value);
+            this->shim().WakeOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::WakeOnApproachOptions const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_AllowLockOnLeaveWhenExternalDisplayConnected(bool* value) noexcept final try
+        int32_t __stdcall get_DimmingOptions(void** value) noexcept final try
         {
+            clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().AllowLockOnLeaveWhenExternalDisplayConnected());
+            *value = detach_from<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions>(this->shim().DimmingOptions());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_AllowLockOnLeaveWhenExternalDisplayConnected(bool value) noexcept final try
+        int32_t __stdcall put_DimmingOptions(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AllowLockOnLeaveWhenExternalDisplayConnected(value);
+            this->shim().DimmingOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall get_AllowWakeOnApproachWhenBatterySaverActive(bool* value) noexcept final try
+        int32_t __stdcall get_LockOptions(void** value) noexcept final try
         {
+            clear_abi(value);
             typename D::abi_guard guard(this->shim());
-            *value = detach_from<bool>(this->shim().AllowWakeOnApproachWhenBatterySaverActive());
+            *value = detach_from<winrt::Windows::Devices::Sensors::LockOnLeaveOptions>(this->shim().LockOptions());
             return 0;
         }
         catch (...) { return to_hresult(); }
-        int32_t __stdcall put_AllowWakeOnApproachWhenBatterySaverActive(bool value) noexcept final try
+        int32_t __stdcall put_LockOptions(void* value) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().AllowWakeOnApproachWhenBatterySaverActive(value);
+            this->shim().LockOptions(*reinterpret_cast<winrt::Windows::Devices::Sensors::LockOnLeaveOptions const*>(&value));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -4800,6 +4922,26 @@ namespace winrt::impl
             clear_abi(operation);
             typename D::abi_guard guard(this->shim());
             *operation = detach_from<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::LightSensor>>(this->shim().FromIdAsync(*reinterpret_cast<hstring const*>(&deviceId)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::ILockOnLeaveOptions> : produce_base<D, winrt::Windows::Devices::Sensors::ILockOnLeaveOptions>
+    {
+        int32_t __stdcall get_AllowWhenExternalDisplayConnected(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllowWhenExternalDisplayConnected());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowWhenExternalDisplayConnected(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowWhenExternalDisplayConnected(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -5960,6 +6102,40 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Devices::Sensors::IWakeOnApproachOptions> : produce_base<D, winrt::Windows::Devices::Sensors::IWakeOnApproachOptions>
+    {
+        int32_t __stdcall get_AllowWhenExternalDisplayConnected(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().AllowWhenExternalDisplayConnected());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_AllowWhenExternalDisplayConnected(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AllowWhenExternalDisplayConnected(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall get_DisableWhenBatterySaverOn(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DisableWhenBatterySaverOn());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DisableWhenBatterySaverOn(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DisableWhenBatterySaverOn(value);
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
 {
@@ -6066,6 +6242,14 @@ WINRT_EXPORT namespace winrt::Windows::Devices::Sensors
     inline auto HumanPresenceSensor::GetDefaultAsync()
     {
         return impl::call_factory_cast<winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Devices::Sensors::HumanPresenceSensor>(*)(IHumanPresenceSensorStatics const&), HumanPresenceSensor, IHumanPresenceSensorStatics>([](IHumanPresenceSensorStatics const& f) { return f.GetDefaultAsync(); });
+    }
+    inline auto HumanPresenceSensor::FromId(param::hstring const& sensorId)
+    {
+        return impl::call_factory<HumanPresenceSensor, IHumanPresenceSensorStatics2>([&](IHumanPresenceSensorStatics2 const& f) { return f.FromId(sensorId); });
+    }
+    inline auto HumanPresenceSensor::GetDefault()
+    {
+        return impl::call_factory_cast<winrt::Windows::Devices::Sensors::HumanPresenceSensor(*)(IHumanPresenceSensorStatics2 const&), HumanPresenceSensor, IHumanPresenceSensorStatics2>([](IHumanPresenceSensorStatics2 const& f) { return f.GetDefault(); });
     }
     inline auto HumanPresenceSettings::GetCurrentSettingsAsync()
     {
@@ -6260,6 +6444,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::IActivitySensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IActivitySensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IActivitySensorTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IAdaptiveDimmingOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IAltimeter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IAltimeter2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IAltimeterReading> : winrt::impl::hash_base {};
@@ -6303,13 +6488,16 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::IHingeAngleSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHingeAngleSensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceFeatures2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensor2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReading> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSensorStatics2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettings3> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IHumanPresenceSettingsStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IInclinometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IInclinometer2> : winrt::impl::hash_base {};
@@ -6335,6 +6523,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::ILightSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ILightSensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ILightSensorStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::ILockOnLeaveOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IMagnetometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IMagnetometer2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::IMagnetometer3> : winrt::impl::hash_base {};
@@ -6381,6 +6570,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::ISimpleOrientationSensorOrientationChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ISimpleOrientationSensorStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ISimpleOrientationSensorStatics2> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::IWakeOnApproachOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::Accelerometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::AccelerometerDataThreshold> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::AccelerometerReading> : winrt::impl::hash_base {};
@@ -6391,6 +6581,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangeReport> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ActivitySensorReadingChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::ActivitySensorTriggerDetails> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::AdaptiveDimmingOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::Altimeter> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::AltimeterReading> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::AltimeterReadingChangedEventArgs> : winrt::impl::hash_base {};
@@ -6422,6 +6613,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::LightSensorDataThreshold> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::LightSensorReading> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::LightSensorReadingChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::LockOnLeaveOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::Magnetometer> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::MagnetometerDataThreshold> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::MagnetometerReading> : winrt::impl::hash_base {};
@@ -6443,6 +6635,7 @@ namespace std
     template<> struct hash<winrt::Windows::Devices::Sensors::SensorRotationMatrix> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::SimpleOrientationSensor> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Sensors::SimpleOrientationSensorOrientationChangedEventArgs> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Sensors::WakeOnApproachOptions> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

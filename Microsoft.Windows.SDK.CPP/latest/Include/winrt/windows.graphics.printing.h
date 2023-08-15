@@ -2976,8 +2976,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintManager ** Default Interface **
@@ -7176,8 +7176,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CGraphics_CPrinting_CIStandardPrintTaskO
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Graphics.Printing.IPrintManagerStatic interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Graphics.Printing.IPrintManager ** Default Interface **

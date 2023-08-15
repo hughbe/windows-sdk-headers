@@ -3045,7 +3045,7 @@ Notes:
 //
 // MessageText:
 //
-// When trying to update a password, this status indicates that some password update rule has been violated. For example, the password may not meet length criteria.
+// When trying to update a password, this status indicates that the password does not meet the length, complexity, or history requirements of the machine or domain. Try increasing the length of your password, along with including upper and lowercase characters, numbers, and symbols.
 //
 #define STATUS_PASSWORD_RESTRICTION      ((NTSTATUS)0xC000006CL)     // ntsubauth
 
@@ -12052,6 +12052,33 @@ Notes:
 // The account is controlled by external policy and cannot be modified.
 //
 #define STATUS_POLICY_CONTROLLED_ACCOUNT ((NTSTATUS)0xC000A08BL)
+
+//
+// MessageId: STATUS_LAPS_LEGACY_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the legacy LAPS schema needs to be added to Active Directory.
+//
+#define STATUS_LAPS_LEGACY_SCHEMA_MISSING ((NTSTATUS)0xC000A08CL)
+
+//
+// MessageId: STATUS_LAPS_SCHEMA_MISSING
+//
+// MessageText:
+//
+// The Local Administrator Password Solution password update operation failed because the Windows LAPS schema needs to be added to Active Directory.
+//
+#define STATUS_LAPS_SCHEMA_MISSING       ((NTSTATUS)0xC000A08DL)
+
+//
+// MessageId: STATUS_LAPS_ENCRYPTION_REQUIRES_2016_DFL
+//
+// MessageText:
+//
+// The Local Administrator Password Solution encrypted password update operation failed because Active Directory is not yet running at the minimum required domain functional level (2016).
+//
+#define STATUS_LAPS_ENCRYPTION_REQUIRES_2016_DFL ((NTSTATUS)0xC000A08EL)
 
 /*++
 

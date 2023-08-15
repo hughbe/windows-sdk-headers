@@ -66,6 +66,24 @@ extern "C" {
 
 #ifndef _JET_BASE_TYPES_DEFINED
 #define _JET_BASE_TYPES_DEFINED
+// Do we define the basic JET integral types from stdint.h, or do we use the
+// historical definitions?
+#ifdef _JET_API_USE_STDINT
+
+#include <stdint.h>
+
+typedef int8_t                          JET_INT8;
+typedef uint8_t                         JET_UINT8;
+typedef int16_t                         JET_INT16;
+typedef uint16_t                        JET_UINT16;
+typedef int32_t                         JET_INT32;
+typedef uint32_t                        JET_UINT32;
+typedef int64_t                         JET_INT64;
+typedef uint64_t                        JET_UINT64;
+typedef uint8_t                         JET_BYTE;
+
+#else
+
 // Note the use of "long" rather than "int" for JET_INT32/JET_UINT32.
 // The JET_API has historically used the base type "long" for 32bit integral
 // types.  While "int" and "long" are both 32bit integral types and coerce
@@ -81,6 +99,9 @@ typedef unsigned long      JET_UINT32;
 typedef long long          JET_INT64;
 typedef unsigned long long JET_UINT64;
 typedef unsigned char      JET_BYTE;
+
+#endif
+
 typedef void               JET_VOID;
 typedef void *             JET_PVOID;
 typedef const void *       JET_PCVOID;
@@ -91,6 +112,9 @@ typedef unsigned short     JET_WCHAR;
 typedef wchar_t            JET_WCHAR;
 #endif
 #endif // _JET_BASE_TYPES_DEFINED
+// After this point, use only JET_type style types.  That is, don't use base types like
+// long, int, short, etc, use JET_INT32, JET_INT16, etc.
+
 
 #if defined(_WIN64)
     typedef JET_UINT64 JET_API_PTR;
@@ -99,6 +123,10 @@ typedef wchar_t            JET_WCHAR;
 #endif
 
 typedef _Return_type_success_( return >= 0 ) JET_INT32 JET_ERR;
+
+typedef JET_UINT32         JET_LCID;
+typedef JET_UINT16         JET_LANGID;
+typedef JET_UINT16         JET_CP;
 
 
 typedef JET_API_PTR JET_HANDLE;     // backup file handle
@@ -398,8 +426,8 @@ typedef struct
     JET_COLUMNID    columnid;
     JET_COLTYP      coltyp;
     JET_UINT16      wCountry;           // sepcifies the country/region for the column definition
-    JET_UINT16      langid;
-    JET_UINT16      cp;
+    JET_LANGID      langid;
+    JET_CP          cp;
     JET_UINT16      wCollate;           // Must be 0
     JET_UINT32      cbMax;
     JET_GRBIT       grbit;
@@ -412,8 +440,8 @@ typedef struct
     JET_COLUMNID    columnid;
     JET_COLTYP      coltyp;
     JET_UINT16      wCountry;           // specifies the columnid for the country/region field
-    JET_UINT16      langid;
-    JET_UINT16      cp;
+    JET_LANGID      langid;
+    JET_CP          cp;
     JET_UINT16      wFiller;            // Must be 0
     JET_UINT32      cbMax;
     JET_GRBIT       grbit;
@@ -428,8 +456,8 @@ typedef struct
     JET_COLUMNID    columnid;
     JET_COLTYP      coltyp;
     JET_UINT16      wCountry;           // specifies the columnid for the country/region field
-    JET_UINT16      langid;
-    JET_UINT16      cp;
+    JET_LANGID      langid;
+    JET_CP          cp;
     JET_UINT16      wFiller;            // Must be 0
     JET_UINT32      cbMax;
     JET_GRBIT       grbit;
@@ -480,7 +508,8 @@ typedef struct tag_JET_COLUMNCREATE_A
     JET_GRBIT       grbit;                  // column options
     JET_PVOID       pvDefault;              // default value (NULL if none)
     JET_UINT32      cbDefault;              // length of default value
-    JET_UINT32      cp;                     // code page (for text columns only)
+    JET_UINT32      cp;                     // code page (for text columns only).  Note that historically we don't use JET_CP for this,
+                                            //     although the value actually is a JET_CP.
     JET_COLUMNID    columnid;               // returned column id
     JET_ERR         err;                    // returned error code
 } JET_COLUMNCREATE_A;
@@ -494,7 +523,8 @@ typedef struct tag_JET_COLUMNCREATE_W
     JET_GRBIT       grbit;                  // column options
     JET_PVOID       pvDefault;              // default value (NULL if none)
     JET_UINT32      cbDefault;              // length of default value
-    JET_UINT32      cp;                     // code page (for text columns only)
+    JET_UINT32      cp;                     // code page (for text columns only).  Note that historically we don't use JET_CP for this,
+                                            //     although the value actually is a JET_CP.
     JET_COLUMNID    columnid;               // returned column id
     JET_ERR         err;                    // returned error code
 } JET_COLUMNCREATE_W;
@@ -555,7 +585,7 @@ typedef struct tagJET_CONDITIONALCOLUMN_W
 
 typedef struct tagJET_UNICODEINDEX
 {
-    JET_UINT32      lcid;
+    JET_LCID        lcid;
     JET_UINT32      dwMapFlags;
 } JET_UNICODEINDEX;
 
@@ -615,7 +645,7 @@ typedef struct tagJET_INDEXCREATE_A
 
     union
     {
-        JET_UINT32             lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
+        JET_LCID               lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
         JET_UNICODEINDEX *     pidxunicode;         // pointer to JET_UNICODEINDEX struct (if JET_bitIndexUnicode specified)
     };
 
@@ -646,7 +676,7 @@ typedef struct tagJET_INDEXCREATE_W
 
     union
     {
-        JET_UINT32             lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
+        JET_LCID               lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
         JET_UNICODEINDEX *     pidxunicode;         // pointer to JET_UNICODEINDEX struct (if JET_bitIndexUnicode specified)
     };
 
@@ -685,7 +715,7 @@ typedef struct tagJET_INDEXCREATE2_A
 
     union
     {
-        JET_UINT32             lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
+        JET_LCID               lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
         JET_UNICODEINDEX *     pidxunicode;         // pointer to JET_UNICODEINDEX struct (if JET_bitIndexUnicode specified)
     };
 
@@ -713,7 +743,7 @@ typedef struct tagJET_INDEXCREATE2_W
 
     union
     {
-        JET_UINT32             lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
+        JET_LCID               lcid;                // lcid for the index (if JET_bitIndexUnicode NOT specified)
         JET_UNICODEINDEX *     pidxunicode;         // pointer to JET_UNICODEINDEX struct (if JET_bitIndexUnicode specified)
     };
 
@@ -1678,7 +1708,7 @@ typedef struct
 } JET_COMMIT_ID;
 
 // assert that commit-id is 8-byte aligned so managed interop works correctly
-// C_ASSERT( offsetof( JET_COMMIT_ID, commitId ) % 8 == 0 );
+// static_assert( offsetof( JET_COMMIT_ID, commitId ) % 8 == 0 );
 
 // callback for JET_paramDurableCommitCallback
 typedef JET_ERR (JET_API * JET_PFNDURABLECOMMITCALLBACK)(
@@ -2142,7 +2172,9 @@ typedef enum
 #define JET_paramEnableBlockCacheDetach         220 //  Indicates that ESE Block Cache detach is enabled.  This will allow a file cached by the ESE Block Cache to be detached on open.
 
 
-#define JET_paramMaxValueInvalid                222 //  This is not a valid parameter. It can change from release to release!
+#define JET_paramTraceFlags                     223 // Specific flags to include in IO traces indicating various info
+
+#define JET_paramMaxValueInvalid                224 //  This is not a valid parameter. It can change from release to release!
 
 
 
@@ -6394,7 +6426,7 @@ JetOpenTempTable2(
     _In_ JET_SESID                                  sesid,
     _In_reads_( ccolumn ) const JET_COLUMNDEF *     prgcolumndef,
     _In_ JET_UINT32                                 ccolumn,
-    _In_ JET_UINT32                                 lcid,
+    _In_ JET_LCID                                   lcid,
     _In_ JET_GRBIT                                  grbit,
     _Out_ JET_TABLEID *                             ptableid,
     _Out_writes_( ccolumn ) JET_COLUMNID *          prgcolumnid );

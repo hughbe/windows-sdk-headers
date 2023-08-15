@@ -12628,6 +12628,9 @@ typedef struct tagTouchPredictionParameters
 /* constants for SPI_{GET|SET}WAKEONINPUTDEVICETYPES */
 #endif // NTDDI_VERSION >= NTDDI_WIN10_CO
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#endif // NTDDI_VERSION >= NTDDI_WIN10_CU
+
 
 #if(WINVER >= 0x0500)
 #define SPI_GETACTIVEWINDOWTRACKING         0x1000

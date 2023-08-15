@@ -3433,89 +3433,9 @@ VOID APIENTRY WNDOBJ_vSetConsumer(
     PVOID    pvConsumer
     );
 
+
+
 #if (NTDDI_VERSION >= NTDDI_VISTA)
-/*
- * Engine callback - Region support.
- */
-
-HANDLE APIENTRY EngCreateRectRgn(INT left, INT top, INT right, INT bottom);
-
-VOID APIENTRY EngDeleteRgn(
-    HANDLE hrgn
-    );
-
-INT APIENTRY  EngCombineRgn(
-    HANDLE hrgnTrg,
-    HANDLE hrgnSrc1,
-    HANDLE hrgnSrc2,
-    int    imode
-    );
-
-INT APIENTRY EngCopyRgn(
-    HANDLE hrgnDst,
-    HANDLE hrgnSrc
-    );
-
-INT APIENTRY EngIntersectRgn(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-INT APIENTRY EngSubtractRgn(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-INT APIENTRY EngUnionRgn(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-INT APIENTRY EngXorRgn(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-BOOL APIENTRY EngRectInRgn(
-    HANDLE hrgn,
-    LPRECT prcl
-    );
-
-BOOL APIENTRY EngEqualRgn(
-    HANDLE hrgn1,
-    HANDLE hrgn2
-    );
-
-DWORD APIENTRY EngGetRgnData(
-    HANDLE hrgn,
-    DWORD  nCount,
-    LPRGNDATA lpRgnData
-    );
-
-BOOL APIENTRY EngSetRectRgn(
-    HANDLE hrgn,
-    INT left,
-    INT top,
-    INT right,
-    INT bottom
-    );
-
-INT APIENTRY EngGetRgnBox(
-    HANDLE hrgn,
-    LPRECT prcl
-    );
-
-INT APIENTRY EngOffsetRgn(
-    HANDLE hrgn,
-    INT x,
-    INT y
-    );
-
-
 /*
  * Engine Render Hint
  */
@@ -5023,47 +4943,6 @@ typedef struct _DRH_APIBITMAPDATA
 
 #define DRH_APIBITMAP 0x00000001
 
-typedef HANDLE (APIENTRY *PFN_EngCreateRectRgn)(INT left, INT top, INT right, INT bottom);
-
-typedef VOID (APIENTRY *PFN_EngDeleteRgn)(
-    HANDLE hrgn
-    );
-
-typedef INT (APIENTRY *PFN_EngCombineRgn)(
-    HANDLE hrgnTrg,
-    HANDLE hrgnSrc1,
-    HANDLE hrgnSrc2,
-    int    imode
-    );
-
-typedef INT (APIENTRY *PFN_EngCopyRgn)(
-    HANDLE hrgnDst,
-    HANDLE hrgnSrc
-    );
-
-typedef INT (APIENTRY *PFN_EngIntersectRgn)(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-typedef INT (APIENTRY *PFN_EngSubtractRgn)(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-typedef INT (APIENTRY *PFN_EngUnionRgn)(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
-
-typedef INT (APIENTRY *PFN_EngXorRgn)(
-    HANDLE hrgnResult,
-    HANDLE hRgnA,
-    HANDLE hRgnB
-    );
 #endif // (NTDDI_VERSION >= NTDDI_VISTA) 
 
 #if (NTDDI_VERSION >= NTDDI_WIN7)

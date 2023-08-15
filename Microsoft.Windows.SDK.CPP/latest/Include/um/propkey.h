@@ -6554,6 +6554,22 @@ DEFINE_PROPERTYKEY(PKEY_MsGraph_DriveId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9,
 DEFINE_PROPERTYKEY(PKEY_MsGraph_ItemId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 4);
 #define INIT_PKEY_MsGraph_ItemId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 4 }
 
+//  Name:     System.MsGraph.RecommendationReferenceId -- PKEY_MsGraph_RecommendationReferenceId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 5
+//
+//  The 3S Recommendations reference Id used as a unique Id for recommended items.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_RecommendationReferenceId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 5);
+#define INIT_PKEY_MsGraph_RecommendationReferenceId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 5 }
+
+//  Name:     System.MsGraph.WebAccountId -- PKEY_MsGraph_WebAccountId
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 6
+//
+//  The WAM account identifier associated with this item.
+DEFINE_PROPERTYKEY(PKEY_MsGraph_WebAccountId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 6);
+#define INIT_PKEY_MsGraph_WebAccountId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 6 }
+
 //-----------------------------------------------------------------------------
 // Music properties
 

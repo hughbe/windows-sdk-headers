@@ -2243,10 +2243,12 @@ DnsRecordListFree(
 #define DNS_QUERY_DONT_RESET_TTL_VALUES     0x00100000
 #define DNS_QUERY_DISABLE_IDN_ENCODING      0x00200000
 #define DNS_QUERY_APPEND_MULTILABEL         0x00800000
-#define DNS_QUERY_DNSSEC_OK                 0x01000000
-#define DNS_QUERY_DNSSEC_CHECKING_DISABLED  0x02000000
-#define DNS_QUERY_DNSSEC_REQUIRED           0x04000000
+#define DNS_QUERY_DNSSEC_OK                 0x01000000  // Sets DNSSEC OK (DO) bit in query
+#define DNS_QUERY_DNSSEC_CHECKING_DISABLED  0x02000000  // Sets DNSSEC checking disabled (CD) bit in query
+#define DNS_QUERY_DNSSEC_REQUIRED           0x04000000  // Sets DNSSEC OK (DO) bit in query AND requires that response contains authenticated data (AD) bit set
 #define DNS_QUERY_RESERVED                  0xf0000000
+
+#define DNS_QUERY_DNSSEC_REQUIRED_AUTH_ONLY 0x2000000000000000 // Sets DNSSEC authenticated data (AD) bit in query (rfc6840) AND requires that response contains AD bit set
 
 
 //  Backward compatibility with Win2K

@@ -447,14 +447,14 @@ typedef struct _NCRYPT_VBS_ROOT_ATTESTATION_HEADER
 {
     ULONG Magic;        // {'H', 'C', 'R', 'V'} - 'VRCH' for VBS Root Claim Header
     ULONG Version;      // Set to NCRYPT_VBS_ROOT_ATTESTATION_HEADER_CURRENT_VERSION
-    ULONG cbSignature;  // Number of bytes in the secure kernel signature over the isolation report
-    ULONG cbReport;     // Number of bytes in key isolation report from the secure kernel
     ULONG cbAttributes; // Number of bytes in attributes of the isolated key (including public key blob )
     ULONG cbNonce;      // Number of bytes in the provided nonce, can be 0 if nonce doesn't exist
-    // UCHAR Signature[cbSignature]    -- Secure kernel signature of the report
-    // UCHAR Report[cbReport]          -- Secure kernel report including hash of Attributes, dwFlags and nonce (if available)
+    ULONG cbReport;     // Number of bytes in key isolation report from the secure kernel
+    ULONG cbSignature;  // Number of bytes in the secure kernel signature over the isolation report
     // UCHAR Attributes[cbAttributes]  -- Trustlet-reported attributes of the key
     // UCHAR Nonce[cbNonce]            -- Nonce value to be used when hashing Attributes
+    // UCHAR Report[cbReport]          -- Secure kernel report including hash of Attributes, dwFlags and nonce (if available)
+    // UCHAR Signature[cbSignature]    -- Secure kernel signature of the report
 } NCRYPT_VBS_ROOT_ATTESTATION_HEADER, * PNCRYPT_VBS_ROOT_ATTESTATION_HEADER;
 
 // Padding structure for identity claims
@@ -504,10 +504,10 @@ typedef struct _NCRYPT_VBS_KEY_ATTESTATION_STATEMENT
     ULONG Version;      // Set to NCRYPT_VBS_KEY_ATTESTATION_STATEMENT_CURRENT_VERSION
     ULONG ClaimType;    // The claim type in the memory that follows this structure
     // Root binary data - NCRYPT_VBS_ROOT_ATTESTATION_HEADER
-    // UCHAR Signature[cbSignature]    -- Secure kernel signature of the report
-    // UCHAR Report[cbReport]          -- Secure kernel report including hash of Attributes, dwFlags and nonce (if available)
     // UCHAR Attributes[cbAttributes]  -- Trustlet-reported attributes of the key
     // UCHAR Nonce[cbNonce]            -- Nonce value to be used when hashing Attributes
+    // UCHAR Report[cbReport]          -- Secure kernel report including hash of Attributes, dwFlags and nonce (if available)
+    // UCHAR Signature[cbSignature]    -- Secure kernel signature of the report
     // --------------------------------------------------------------------------------------
     // Identity binary data - NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER
     // UCHAR Attributes[cbAttributes]      -- Trustlet-reported attributes of the subject key blob
@@ -1496,5 +1496,4 @@ NCryptVerifyClaim(
 #endif
 
 #endif // __NCRYPT_H__
-
 
