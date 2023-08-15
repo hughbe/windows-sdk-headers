@@ -42,6 +42,10 @@ namespace winrt::impl
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory)->CreateInstance(impl::bind_in(connectionId), *(void**)(&pduForwarder), &value));
         return winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection{ value, take_ownership_from_abi };
     }
+    template <typename D> auto consume_Windows_System_RemoteDesktop_Input_IRemoteTextKeyRedirector<D>::RedirectKeyEvent(uint16_t scanCode, winrt::Windows::System::RemoteDesktop::Input::RedirectedKeyEventFlags const& keyFlags) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector)->RedirectKeyEvent(scanCode, static_cast<uint32_t>(keyFlags)));
+    }
     template <typename H> struct delegate<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler, H> final : implements_delegate<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler, H>
     {
         delegate(H&& handler) : implements_delegate<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler, H>(std::forward<H>(handler)) {}
@@ -108,11 +112,59 @@ namespace winrt::impl
         catch (...) { return to_hresult(); }
     };
 #endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector> : produce_base<D, winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector>
+    {
+        int32_t __stdcall RedirectKeyEvent(uint16_t scanCode, uint32_t keyFlags) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().RedirectKeyEvent(scanCode, *reinterpret_cast<winrt::Windows::System::RemoteDesktop::Input::RedirectedKeyEventFlags const*>(&keyFlags));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
 }
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
 {
+    constexpr auto operator|(RedirectedKeyEventFlags const left, RedirectedKeyEventFlags const right) noexcept
+    {
+        return static_cast<RedirectedKeyEventFlags>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+    }
+    constexpr auto operator|=(RedirectedKeyEventFlags& left, RedirectedKeyEventFlags const right) noexcept
+    {
+        left = left | right;
+        return left;
+    }
+    constexpr auto operator&(RedirectedKeyEventFlags const left, RedirectedKeyEventFlags const right) noexcept
+    {
+        return static_cast<RedirectedKeyEventFlags>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+    }
+    constexpr auto operator&=(RedirectedKeyEventFlags& left, RedirectedKeyEventFlags const right) noexcept
+    {
+        left = left & right;
+        return left;
+    }
+    constexpr auto operator~(RedirectedKeyEventFlags const value) noexcept
+    {
+        return static_cast<RedirectedKeyEventFlags>(~impl::to_underlying_type(value));
+    }
+    constexpr auto operator^(RedirectedKeyEventFlags const left, RedirectedKeyEventFlags const right) noexcept
+    {
+        return static_cast<RedirectedKeyEventFlags>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+    }
+    constexpr auto operator^=(RedirectedKeyEventFlags& left, RedirectedKeyEventFlags const right) noexcept
+    {
+        left = left ^ right;
+        return left;
+    }
     inline RemoteTextConnection::RemoteTextConnection(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder) :
         RemoteTextConnection(impl::call_factory<RemoteTextConnection, IRemoteTextConnectionFactory>([&](IRemoteTextConnectionFactory const& f) { return f.CreateInstance(connectionId, pduForwarder); }))
+    {
+    }
+    inline RemoteTextKeyRedirector::RemoteTextKeyRedirector() :
+        RemoteTextKeyRedirector(impl::call_factory_cast<RemoteTextKeyRedirector(*)(winrt::Windows::Foundation::IActivationFactory const&), RemoteTextKeyRedirector>([](winrt::Windows::Foundation::IActivationFactory const& f) { return f.template ActivateInstance<RemoteTextKeyRedirector>(); }))
     {
     }
     template <typename L> RemoteTextConnectionDataHandler::RemoteTextConnectionDataHandler(L handler) :
@@ -147,7 +199,9 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::System::RemoteDesktop::Input::RemoteTextKeyRedirector> : winrt::impl::hash_base {};
 #endif
 #ifdef __cpp_lib_format
 #endif

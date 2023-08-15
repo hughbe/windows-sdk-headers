@@ -740,7 +740,9 @@ typedef enum {
     NVME_FEATURE_READONLY_WRITETHROUGH_MODE             = 0xC2, // This is from OCP NVMe Cloud SSD spec.
     NVME_FEATURE_CLEAR_PCIE_CORRECTABLE_ERROR_COUNTERS  = 0xC3, // This is from OCP NVMe Cloud SSD spec.
     NVME_FEATURE_ENABLE_IEEE1667_SILO                   = 0xC4, // This is from OCP NVMe Cloud SSD spec.
-    NVME_FEATURE_PLP_HEALTH_MONITOR                     = 0xC5, // This is from OCP NVMe Cloud SSD spec.
+    NVME_FEATURE_LATENCY_MONITOR                        = 0xC5, // This is from OCP NVMe Cloud SSD spec.
+    NVME_FEATURE_PLP_HEALTH_CHECK_INTERVAL              = 0xC6, // This is from OCP NVMe Cloud SSD spec.
+    NVME_FEATURE_DSSD_POWER_STATE                       = 0xC7, // This is from OCP NVMe Cloud SSD spec.
 
 } NVME_FEATURES;
 
@@ -1877,6 +1879,9 @@ C_ASSERT(sizeof(NVME_WCS_DEVICE_SMART_ATTRIBUTES_LOG_V2) == sizeof(NVME_WCS_DEVI
 
 #define NVME_OCP_DEVICE_SMART_INFORMATION_LOG_VERSION_3        0x0003
 
+#define NVME_OCP_DEVICE_DSSD_SPEC_MAJOR_VERSION_0              0x00 // For OCP 1.0 compliance
+#define NVME_OCP_DEVICE_DSSD_SPEC_MAJOR_VERSION_2              0x02 // For OCP 2.0 compliance
+
 typedef struct _NVME_OCP_DEVICE_SMART_INFORMATION_LOG_V3 {
 
     UCHAR MediaUnitsWritten[16];
@@ -1914,7 +1919,12 @@ typedef struct _NVME_OCP_DEVICE_SMART_INFORMATION_LOG_V3 {
         UCHAR Status;
     } ThermalThrottling;
 
-    UCHAR DSSDSpecVersion[6];
+    struct {
+        UCHAR Errata;
+        USHORT PointVersion;
+        USHORT MinorVersion;
+        UCHAR MajorVersion;
+    } DSSDSpecVersion;
 
     ULONGLONG PCIeCorrectableErrorCount;
     ULONG IncompleteShutdownCount;
@@ -3238,6 +3248,56 @@ typedef union {
     ULONG AsUlong;
 
 } NVME_CDW0_FEATURE_ENABLE_IEEE1667_SILO, *PNVME_CDW0_FEATURE_ENABLE_IEEE1667_SILO;
+
+//
+// Parameter for set feature NVME_FEATURE_LATENCY_MONITOR.
+// This is from OCP NVMe Cloud SSD spec.
+//
+
+#pragma pack(push, 1)
+typedef struct {
+
+    USHORT ActiveBucketTimerThreshold;
+
+    UCHAR ActiveThresholdA;
+
+    UCHAR ActiveThresholdB;
+
+    UCHAR ActiveThresholdC;
+
+    UCHAR ActiveThresholdD;
+
+    USHORT ActiveLatencyConfig;
+
+    UCHAR ActiveLatencyMinimumWindow;
+
+    USHORT DebugLogTriggerEnable;
+
+    UCHAR DiscardDebugLog;
+
+    UCHAR LatencyMonitorFeatureEnable;
+
+    UCHAR Reserved0[4083];
+
+} NVME_LATENCY_MONITORING_ENTRY, *PNVME_LATENCY_MONITORING_ENTRY;
+#pragma pack(pop)
+
+C_ASSERT(sizeof(NVME_LATENCY_MONITORING_ENTRY) == 4096);
+
+//
+// Output for get feature NVME_DSSD_POWER_STATE
+// This is from OCP NVMe Cloud SSD spec.
+//
+typedef union {
+
+    struct {
+        ULONG DSSDPowerState  : 7;
+        ULONG Reserved0       : 25;
+    } DUMMYSTRUCTNAME;
+
+    ULONG AsUlong;
+
+} NVME_CDW0_FEATURE_DSSD_POWER_STATE, *PNVME_CDW0_FEATURE_DSSD_POWER_STATE;
 
 //
 // Parameters for NVME_FEATURE_NVM_HOST_IDENTIFIER

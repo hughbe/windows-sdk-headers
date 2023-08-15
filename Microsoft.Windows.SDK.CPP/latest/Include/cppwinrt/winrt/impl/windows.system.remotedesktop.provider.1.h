@@ -9,12 +9,47 @@
 #include "winrt/impl/Windows.System.RemoteDesktop.Provider.0.h"
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
 {
+    struct __declspec(empty_bases) ICloudPCDisplayInfo :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICloudPCDisplayInfo>
+    {
+        ICloudPCDisplayInfo(std::nullptr_t = nullptr) noexcept {}
+        ICloudPCDisplayInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICloudPCDisplayInfoFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICloudPCDisplayInfoFactory>
+    {
+        ICloudPCDisplayInfoFactory(std::nullptr_t = nullptr) noexcept {}
+        ICloudPCDisplayInfoFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICloudPCHostService :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICloudPCHostService>
+    {
+        ICloudPCHostService(std::nullptr_t = nullptr) noexcept {}
+        ICloudPCHostService(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICloudPCHostServiceStatics :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<ICloudPCHostServiceStatics>
+    {
+        ICloudPCHostServiceStatics(std::nullptr_t = nullptr) noexcept {}
+        ICloudPCHostServiceStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IRemoteDesktopConnectionInfo :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRemoteDesktopConnectionInfo>
     {
         IRemoteDesktopConnectionInfo(std::nullptr_t = nullptr) noexcept {}
         IRemoteDesktopConnectionInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRemoteDesktopConnectionInfo2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRemoteDesktopConnectionInfo2>
+    {
+        IRemoteDesktopConnectionInfo2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteDesktopConnectionInfo2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IRemoteDesktopConnectionInfoStatics :
         winrt::Windows::Foundation::IInspectable,

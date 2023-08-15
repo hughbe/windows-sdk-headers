@@ -28,5 +28,12 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
         RemoteTextConnection(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection(ptr, take_ownership_from_abi) {}
         RemoteTextConnection(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder);
     };
+    struct __declspec(empty_bases) RemoteTextKeyRedirector : winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector,
+        impl::require<RemoteTextKeyRedirector, winrt::Windows::Foundation::IClosable>
+    {
+        RemoteTextKeyRedirector(std::nullptr_t) noexcept {}
+        RemoteTextKeyRedirector(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::System::RemoteDesktop::Input::IRemoteTextKeyRedirector(ptr, take_ownership_from_abi) {}
+        RemoteTextKeyRedirector();
+    };
 }
 #endif

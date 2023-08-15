@@ -111,13 +111,22 @@ extern "C" {
 //          - WEBAUTHN_AUTHENTICATOR_MAKE_CREDENTIAL_OPTIONS    :   5
 //          - WEBAUTHN_AUTHENTICATOR_GET_ASSERTION_OPTIONS      :   6
 //          - WEBAUTHN_ASSERTION                                :   3
+//          - WEBAUTHN_CREDENTIAL_DETAILS                       :   1
 //      APIs:
 //          - WebAuthNGetPlatformCredentialList
 //          - WebAuthNFreePlatformCredentialList
 //          - WebAuthNDeletePlatformCredential
 //
 
-#define WEBAUTHN_API_CURRENT_VERSION    WEBAUTHN_API_VERSION_4
+#define WEBAUTHN_API_VERSION_5          5
+// WEBAUTHN_API_VERSION_5 : Delta From WEBAUTHN_API_VERSION_4
+//      Data Structures and their sub versions:
+//          - WEBAUTHN_CREDENTIAL_DETAILS                       :   2
+//      Extension Changes:
+//          - Enabled LARGE_BLOB Support
+//
+
+#define WEBAUTHN_API_CURRENT_VERSION    WEBAUTHN_API_VERSION_5
 
 //+------------------------------------------------------------------------------------------
 // Information about an RP Entity
@@ -311,7 +320,8 @@ typedef const WEBAUTHN_CREDENTIAL_LIST *PCWEBAUTHN_CREDENTIAL_LIST;
 //-------------------------------------------------------------------------------------------
 
 #define WEBAUTHN_CREDENTIAL_DETAILS_VERSION_1           1
-#define WEBAUTHN_CREDENTIAL_DETAILS_CURRENT_VERSION     WEBAUTHN_CREDENTIAL_DETAILS_VERSION_1
+#define WEBAUTHN_CREDENTIAL_DETAILS_VERSION_2           2
+#define WEBAUTHN_CREDENTIAL_DETAILS_CURRENT_VERSION     WEBAUTHN_CREDENTIAL_DETAILS_VERSION_2
 
 typedef struct _WEBAUTHN_CREDENTIAL_DETAILS {
     // Version of this structure, to allow for modifications in the future.
@@ -330,6 +340,13 @@ typedef struct _WEBAUTHN_CREDENTIAL_DETAILS {
 
     // Removable or not.
     BOOL bRemovable;
+
+    //
+    // The following fields have been added in WEBAUTHN_CREDENTIAL_DETAILS_VERSION_2
+    //
+
+    // Backed Up or not.
+    BOOL bBackedUp;
 } WEBAUTHN_CREDENTIAL_DETAILS, *PWEBAUTHN_CREDENTIAL_DETAILS;
 typedef const WEBAUTHN_CREDENTIAL_DETAILS *PCWEBAUTHN_CREDENTIAL_DETAILS;
 

@@ -5361,6 +5361,34 @@ FwpmvSwitchEventsSetSecurityInfo0(
    );
 #endif // (NTDDI_VERSION >= NTDDI_WIN8)
 
+////////////////////////////////////////////////////////////////
+//
+// Functions for managing connection policy.
+//
+////////////////////////////////////////////////////////////////
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+DWORD
+WINAPI
+FwpmConnectionPolicyAdd0(
+   _In_ HANDLE engineHandle,
+   _In_ const FWPM_PROVIDER_CONTEXT3* connectionPolicy,
+   _In_ FWP_IP_VERSION ipVersion,
+   _In_ UINT64 weight,
+   _In_ UINT32 numFilterConditions,
+   _In_reads_(numFilterConditions)
+      const FWPM_FILTER_CONDITION0* filterConditions,
+   _In_opt_ PSECURITY_DESCRIPTOR sd
+   );
+
+DWORD
+WINAPI
+FwpmConnectionPolicyDeleteByKey0(
+   _In_ HANDLE engineHandle,
+   _In_ const GUID* key
+   );
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
+
 #ifdef __cplusplus
 }
 #endif

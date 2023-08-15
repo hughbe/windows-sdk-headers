@@ -2173,8 +2173,7 @@ typedef enum
 
 
 #define JET_paramTraceFlags                     223 // Specific flags to include in IO traces indicating various info
-
-#define JET_paramMaxValueInvalid                224 //  This is not a valid parameter. It can change from release to release!
+#define JET_paramMaxValueInvalid                225 //  This is not a valid parameter. It can change from release to release!
 
 
 

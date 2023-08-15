@@ -88,7 +88,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics> = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics";
     template <> inline constexpr auto& name_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2> = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2";
     template <> inline constexpr guid guid_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>{ 0x10AA1F84,0xCC30,0x4141,{ 0xB5,0x03,0x52,0x72,0x28,0x9E,0x0C,0x20 } }; // 10AA1F84-CC30-4141-B503-5272289E0C20
-    template <> inline constexpr guid guid_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>{ 0xD151E9B3,0x4E31,0x57F9,{ 0x8E,0x2F,0x4A,0x79,0x54,0x6E,0x6B,0x6B } }; // D151E9B3-4E31-57F9-8E2F-4A79546E6B6B
+    template <> inline constexpr guid guid_v<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics2>{ 0x9DE26870,0x37DE,0x4197,{ 0x88,0x45,0x9A,0x48,0xDC,0x5A,0xC3,0x17 } }; // 9DE26870-37DE-4197-8845-9A48DC5AC317
     template <> struct abi<winrt::Windows::Media::ClosedCaptioning::IClosedCaptionPropertiesStatics>
     {
         struct __declspec(novtable) type : inspectable_abi

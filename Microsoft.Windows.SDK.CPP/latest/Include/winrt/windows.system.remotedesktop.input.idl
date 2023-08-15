@@ -29,13 +29,19 @@ namespace Windows
         {
             namespace Input
             {
+                typedef enum RedirectedKeyEventFlags RedirectedKeyEventFlags;
+
                 delegate RemoteTextConnectionDataHandler;
 
                 interface IRemoteTextConnection;
 
                 interface IRemoteTextConnectionFactory;
 
+                interface IRemoteTextKeyRedirector;
+
                 runtimeclass RemoteTextConnection;
+
+                runtimeclass RemoteTextKeyRedirector;
             }
         }
     }
@@ -52,6 +58,14 @@ namespace Windows
         {
             namespace Input
             {
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [flags]
+                enum RedirectedKeyEventFlags
+                {
+                    None  = 0x0,
+                    KeyUp = 0x1
+                };
+
                 [contract(Windows.Foundation.UniversalApiContract, 13.0)]
                 [uuid(099FFBC8-8BCB-41B5-B056-57E77021BF1B)]
                 delegate
@@ -77,6 +91,14 @@ namespace Windows
                     HRESULT CreateInstance([in] GUID connectionId, [in] Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler* pduForwarder, [out] [retval] Windows.System.RemoteDesktop.Input.RemoteTextConnection** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Input.RemoteTextKeyRedirector)]
+                [uuid(83BA066C-27D7-5E98-8A73-F81FE08E3E84)]
+                interface IRemoteTextKeyRedirector : IInspectable
+                {
+                    HRESULT RedirectKeyEvent([in] UINT16 scanCode, [in] Windows.System.RemoteDesktop.Input.RedirectedKeyEventFlags keyFlags);
+                }
+
                 [activatable(Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory, Windows.Foundation.UniversalApiContract, 13.0)]
                 [contract(Windows.Foundation.UniversalApiContract, 13.0)]
                 [marshaling_behavior(agile)]
@@ -84,6 +106,16 @@ namespace Windows
                 runtimeclass RemoteTextConnection
                 {
                     [default] interface Windows.System.RemoteDesktop.Input.IRemoteTextConnection;
+                    interface Windows.Foundation.IClosable;
+                }
+
+                [activatable(Windows.Foundation.UniversalApiContract, 16.0)]
+                [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+                [marshaling_behavior(agile)]
+                [threading(both)]
+                runtimeclass RemoteTextKeyRedirector
+                {
+                    [default] interface Windows.System.RemoteDesktop.Input.IRemoteTextKeyRedirector;
                     interface Windows.Foundation.IClosable;
                 }
             }

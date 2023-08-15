@@ -435,12 +435,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaption
  *
  * Interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.ClosedCaptioning.ClosedCaptionProperties
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics2[] = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2";
@@ -448,7 +448,7 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace ClosedCaptioning {
-                MIDL_INTERFACE("d151e9b3-4e31-57f9-8e2f-4a79546e6b6b")
+                MIDL_INTERFACE("9de26870-37de-4197-8845-9a48dc5ac317")
                 IClosedCaptionPropertiesStatics2 : public IInspectable
                 {
                 public:
@@ -469,7 +469,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -478,7 +478,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaption
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
@@ -796,12 +796,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaption
  *
  * Interface Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.ClosedCaptioning.ClosedCaptionProperties
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_ClosedCaptioning_IClosedCaptionPropertiesStatics2[] = L"Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2";
@@ -865,7 +865,7 @@ interface __x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesSta
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaptionPropertiesStatics2_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -874,7 +874,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CClosedCaptioning_CIClosedCaption
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics2 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.ClosedCaptioning.IClosedCaptionPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment

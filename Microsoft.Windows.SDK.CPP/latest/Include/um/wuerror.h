@@ -1573,15 +1573,6 @@
 #define WU_E_PT_LOAD_SHEDDING            _HRESULT_TYPEDEF_(0x8024402DL)
 
 //
-// MessageId: WU_E_PT_DATA_BOUNDARY_RESTRICTED
-//
-// MessageText:
-//
-// The client is data boundary restricted and needs to talk to a restricted endpoint.
-//
-#define WU_E_PT_DATA_BOUNDARY_RESTRICTED _HRESULT_TYPEDEF_(0x8024402EL)
-
-//
 // MessageId: WU_E_PT_SAME_REDIR_ID
 //
 // MessageText:
@@ -1869,6 +1860,24 @@
 // A security operation failed in the Windows Web Services framework.
 //
 #define WU_E_PT_SECURITY_SYSTEM_FAILURE  _HRESULT_TYPEDEF_(0x8024044BL)
+
+//
+// MessageId: WU_E_PT_DATA_BOUNDARY_RESTRICTED
+//
+// MessageText:
+//
+// The client is data boundary restricted and needs to talk to a restricted endpoint.
+//
+#define WU_E_PT_DATA_BOUNDARY_RESTRICTED _HRESULT_TYPEDEF_(0x80244100L)
+
+//
+// MessageId: WU_E_PT_GENERAL_AAD_CLIENT_ERROR
+//
+// MessageText:
+//
+// The client hit an error in retrievingg AAD device ticket.
+//
+#define WU_E_PT_GENERAL_AAD_CLIENT_ERROR _HRESULT_TYPEDEF_(0x80244101L)
 
 //
 // MessageId: WU_E_PT_UNEXPECTED

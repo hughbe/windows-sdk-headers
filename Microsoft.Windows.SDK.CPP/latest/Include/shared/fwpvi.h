@@ -666,17 +666,18 @@
 #endif
 
 #if (NTDDI_VERSION >= NTDDI_WIN8)
-
 #define IPSEC_SA_CONTEXT_SUBSCRIPTION IPSEC_SA_CONTEXT_SUBSCRIPTION0
 #define IPSEC_SA_CONTEXT_EVENT_TYPE IPSEC_SA_CONTEXT_EVENT_TYPE0
 #define IPSEC_SA_CONTEXT_CHANGE IPSEC_SA_CONTEXT_CHANGE0
 #define IPsecSaContextSubscribe IPsecSaContextSubscribe0
 #define IPsecSaContextUnsubscribe IPsecSaContextUnsubscribe0
 #define IPsecSaContextSubscriptionsGet IPsecSaContextSubscriptionsGet0
-
 #endif
 
-
+#if (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#define FwpmConnectionPolicyAdd FwpmConnectionPolicyAdd0
+#define FwpmConnectionPolicyDeleteByKey FwpmConnectionPolicyDeleteByKey0
+#endif
 
 ///////////////////////////////////////////////////////////////////////////////
 //

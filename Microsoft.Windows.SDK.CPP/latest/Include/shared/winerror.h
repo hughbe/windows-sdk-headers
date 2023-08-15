@@ -3037,8 +3037,11 @@
 //
 // MessageText:
 //
-// The Windows Subsystem for Linux is not installed. You can install by running 'wsl.exe --install'.
-// For more information please visit https://aka.ms/wslinstall
+// The Windows Subsystem for Linux has transitioned to a Microsoft Store application.
+// To perform a one-time update to the latest version, please run `wsl.exe --install`.
+// Any existing distributions and user data will be available after the installation is completed.
+// 
+// Please visit https://aka.ms/wslstoreinfo to learn more.
 //
 #define ERROR_LINUX_SUBSYSTEM_NOT_PRESENT 414L
 
@@ -53737,6 +53740,29 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // The attempted DM / resize operation exceeds the supported size.
 //
 #define ERROR_DM_OPERATION_LIMIT_EXCEEDED _HRESULT_TYPEDEF_(0xC0370600L)
+
+
+//
+// VMMS related error code (0x0700-0x07ff)
+//
+
+//
+// MessageId: VM_E_CLIENT_NAME_REQUIRED
+//
+// MessageText:
+//
+// Required WMI metadata 'ClientName' was not provided.
+//
+#define VM_E_CLIENT_NAME_REQUIRED        _HRESULT_TYPEDEF_(0xC0370700L)
+
+//
+// MessageId: VM_E_MODIFY_VTL2_SETTINGS_CONFLICT
+//
+// MessageText:
+//
+// VTL2 settings were not modified because another client modified them. Requery the settings and try again.
+//
+#define VM_E_MODIFY_VTL2_SETTINGS_CONFLICT _HRESULT_TYPEDEF_(0xC0370701L)
 
 
 //

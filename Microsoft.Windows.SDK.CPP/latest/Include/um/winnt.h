@@ -11591,6 +11591,7 @@ typedef struct _SE_ACCESS_REPLY
 #define SE_APP_SILO_VOLUME_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-volumeRootMinimal"
 #define SE_APP_SILO_PROFILES_ROOT_MINIMAL_CAPABILITY L"isolatedWin32-profilesRootMinimal"
 #define SE_APP_SILO_USER_PROFILE_MINIMAL_CAPABILITY L"isolatedWin32-userProfileMinimal"
+#define SE_APP_SILO_PROMPT_FOR_ACCESS_CAPABILITY L"isolatedWin32-promptForAccess"
 #define SE_APP_SILO_PRINT_CAPABILITY L"isolatedWin32-print"
 
 // end_ntosifs
@@ -21845,6 +21846,7 @@ HEAP_MAKE_TAG_FLAGS (
 #define COMPRESSION_FORMAT_XPRESS        (0x0003)   
 #define COMPRESSION_FORMAT_XPRESS_HUFF   (0x0004)   
 #define COMPRESSION_FORMAT_XP10          (0x0005)   
+#define COMPRESSION_FORMAT_LZ4           (0x0006)   
 #define COMPRESSION_ENGINE_STANDARD      (0x0000)   
 #define COMPRESSION_ENGINE_MAXIMUM       (0x0100)   
 #define COMPRESSION_ENGINE_HIBER         (0x0200)   

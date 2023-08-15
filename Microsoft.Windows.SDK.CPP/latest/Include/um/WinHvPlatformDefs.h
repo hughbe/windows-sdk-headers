@@ -210,13 +210,13 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 TscInvariantSupport : 1;
         UINT64 ClZeroSupport : 1;
         UINT64 RdpruSupport : 1;
-        UINT64 Reserved2 : 2;
+        UINT64 Reserved1 : 2;
         UINT64 NestedVirtSupport : 1;
         UINT64 PsfdSupport: 1;
         UINT64 CetSsSupport : 1;
         UINT64 CetIbtSupport : 1;
         UINT64 VmxExceptionInjectSupport : 1;
-        UINT64 Reserved4 : 1;
+        UINT64 Reserved2 : 1;
         UINT64 UmwaitTpauseSupport : 1;
         UINT64 MovdiriSupport : 1;
         UINT64 Movdir64bSupport : 1;
@@ -228,7 +228,19 @@ typedef union WHV_PROCESSOR_FEATURES1
         UINT64 FSRepStosb : 1;
         UINT64 FSRepCmpsb : 1;
         UINT64 TsxLdTrkSupport : 1;
-        UINT64 Reserved5 : 41;
+        UINT64 Reserved3 : 2;
+        UINT64 SbdrSsdpNoSupport : 1;
+        UINT64 FbsdpNoSupport : 1;
+        UINT64 PsdpNoSupport : 1;
+        UINT64 FbClearSupport : 1;
+        UINT64 BtcNoSupport : 1;
+        UINT64 IbpbRsbFlushSupport : 1;
+        UINT64 StibpAlwaysOnSupport : 1;
+        UINT64 PerfGlobalCtrlSupport : 1;
+        UINT64 NptExecuteOnlySupport : 1;
+        UINT64 NptADFlagsSupport : 1;
+        UINT64 Npt1GbPageSupport : 1;
+        UINT64 Reserved4 : 28;
     };
 
     UINT64 AsUINT64;
@@ -388,12 +400,20 @@ typedef union WHV_SYNTHETIC_PROCESSOR_FEATURES
 
         // EnlightenedVmcs nested enlightenment is supported.
         UINT64 EnlightenedVmcs:1;
+
+        // Non-zero values can be written to DEBUG_CTL.
+        UINT64 NestedDebugCtl:1;
+
+        // Synthetic time-unhalted timer MSRs are supported.
+        UINT64 SyntheticTimeUnhaltedTimer : 1;
 #else
         UINT64 ReservedZ31:1;
         UINT64 ReservedZ32:1;
+        UINT64 ReservedZ33:1;
+        UINT64 ReservedZ34:1;
 #endif
 
-        UINT64 Reserved:31;
+        UINT64 Reserved:29;
     };
 
     UINT64 AsUINT64;
