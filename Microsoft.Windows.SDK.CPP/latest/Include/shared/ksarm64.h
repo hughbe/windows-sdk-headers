@@ -1043,7 +1043,6 @@
 #define DeferredReady 0x7
 #define GateWaitObsolete 0x8
 #define THREAD_FLAGS_CYCLE_PROFILING_BIT 0x0
-#define DEBUG_ACTIVE_EMULATION_THREAD_BIT 0x6
 
 //
 // Immediate Interprocessor Command Definitions
@@ -1744,6 +1743,8 @@
 #define DEBUG_ACTIVE_INSTRUMENTED 0x2
 #define DEBUG_ACTIVE_MINIMAL_THREAD 0x4
 #define DEBUG_ACTIVE_MINIMAL_THREAD_BIT 0x2
+#define DEBUG_ACTIVE_EMULATION_THREAD 0x40
+#define DEBUG_ACTIVE_EMULATION_THREAD_BIT 0x6
 
 //
 // ARM64EC Context Frame Offsets

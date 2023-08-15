@@ -41,33 +41,33 @@ static __forceinline uint64_t __U64(const __m64 V) { uint64_t *T = (uint64_t *)&
 
 static __forceinline __m64 __MI64(const uint64_t U) { __m64 *T = (__m64 *)&U; return *T; }
 
-static __forceinline __declspec(safebuffers) uint128_t __S128(const __m128  V) { uint128_t *T = (uint128_t *)&V; return *T; }
-static __forceinline __declspec(safebuffers) uint128_t __U128(const __m128i V) { uint128_t *T = (uint128_t *)&V; return *T; }
-static __forceinline __declspec(safebuffers) uint128_t __D128(const __m128d V) { uint128_t *T = (uint128_t *)&V; return *T; }
+static __forceinline uint128_t __S128(const __m128  V) { uint128_t *T = (uint128_t *)&V; return *T; }
+static __forceinline uint128_t __U128(const __m128i V) { uint128_t *T = (uint128_t *)&V; return *T; }
+static __forceinline uint128_t __D128(const __m128d V) { uint128_t *T = (uint128_t *)&V; return *T; }
 
-static __forceinline __declspec(safebuffers) uint32_t  __S128D0(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[0]; }
-static __forceinline __declspec(safebuffers) uint32_t  __S128D1(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[1]; }
-static __forceinline __declspec(safebuffers) uint32_t  __S128D2(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[2]; }
-static __forceinline __declspec(safebuffers) uint32_t  __S128D3(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[3]; }
+static __forceinline uint32_t  __S128D0(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[0]; }
+static __forceinline uint32_t  __S128D1(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[1]; }
+static __forceinline uint32_t  __S128D2(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[2]; }
+static __forceinline uint32_t  __S128D3(const __m128  V) { uint128_t *T = (uint128_t *)&V; return T->D[3]; }
 
-static __forceinline __declspec(safebuffers) uint32_t  __U128W0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->W[0]; }
-static __forceinline __declspec(safebuffers) uint32_t  __U128D0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->D[0]; }
-static __forceinline __declspec(safebuffers) uint64_t __U128Q0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
-static __forceinline __declspec(safebuffers) uint64_t __U128Q1(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
+static __forceinline uint32_t  __U128W0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->W[0]; }
+static __forceinline uint32_t  __U128D0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->D[0]; }
+static __forceinline uint64_t __U128Q0(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
+static __forceinline uint64_t __U128Q1(const __m128i V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
 
-static __forceinline __declspec(safebuffers) uint64_t __D128Q0(const __m128d V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
-static __forceinline __declspec(safebuffers) uint64_t __D128Q1(const __m128d V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
-static __forceinline __declspec(safebuffers) uint64_t __S128Q0(const __m128 V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
-static __forceinline __declspec(safebuffers) uint64_t __S128Q1(const __m128 V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
+static __forceinline uint64_t __D128Q0(const __m128d V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
+static __forceinline uint64_t __D128Q1(const __m128d V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
+static __forceinline uint64_t __S128Q0(const __m128 V) { uint128_t *T = (uint128_t *)&V; return T->Q[0]; }
+static __forceinline uint64_t __S128Q1(const __m128 V) { uint128_t *T = (uint128_t *)&V; return T->Q[1]; }
 
-static __forceinline __declspec(safebuffers) double __D128F0(const __m128d V) { uint128_t *T = (uint128_t *)&V; return *(double *)&T->Q[0]; }
-static __forceinline __declspec(safebuffers) float  __S128F0(const __m128  V) { uint128_t *T = (uint128_t *)&V; return *(float *)&T->D[0]; }
+static __forceinline double __D128F0(const __m128d V) { uint128_t *T = (uint128_t *)&V; return *(double *)&T->Q[0]; }
+static __forceinline float  __S128F0(const __m128  V) { uint128_t *T = (uint128_t *)&V; return *(float *)&T->D[0]; }
 
-static __forceinline __declspec(safebuffers) uint128_t __IMM8_128(const uint64_t C) { uint128_t T; T.Q[0] = C & 0xff; T.Q[1] = 0; return T; }
+static __forceinline uint128_t __IMM8_128(const uint64_t C) { uint128_t T; T.Q[0] = C & 0xff; T.Q[1] = 0; return T; }
 
-static __forceinline __declspec(safebuffers) __m128  __MM128(const uint128_t U) { __m128  *T = (__m128  *)&U; return *T; }
-static __forceinline __declspec(safebuffers) __m128i __MI128(const uint128_t U) { __m128i *T = (__m128i *)&U; return *T; }
-static __forceinline __declspec(safebuffers) __m128d __MD128(const uint128_t U) { __m128d *T = (__m128d *)&U; return *T; }
+static __forceinline __m128  __MM128(const uint128_t U) { __m128  *T = (__m128  *)&U; return *T; }
+static __forceinline __m128i __MI128(const uint128_t U) { __m128i *T = (__m128i *)&U; return *T; }
+static __forceinline __m128d __MD128(const uint128_t U) { __m128d *T = (__m128d *)&U; return *T; }
 
 static __forceinline uint128_t __MAKEU8_U128(const uint8_t A, const uint8_t B, const uint8_t C, const uint8_t D, const uint8_t E, const uint8_t F, const uint8_t G, const uint8_t H, const uint8_t I, const uint8_t J, const uint8_t K, const uint8_t L, const uint8_t M, const uint8_t N, const uint8_t O, const uint8_t P)
 { uint128_t T; T.B[0] = A; T.B[1] = B; T.B[2] = C; T.B[3] = D; T.B[4] = E; T.B[5] = F; T.B[6] = G; T.B[7] = H; T.B[8] = I; T.B[9] = J; T.B[10] = K; T.B[11] = L; T.B[12] = M; T.B[13] = N; T.B[14] = O; T.B[15] = P; return T; }
@@ -82,12 +82,12 @@ static __forceinline uint128_t __MAKEF32_U128(const float A, const float B, cons
 static __forceinline uint128_t __MAKEF64_U128(const double A, const double B)
 { uint128_t T; T.Q[0] = *(uint64_t *)&A; T.Q[1] = *(uint64_t *)&B; return T; }
 
-static __forceinline __declspec(safebuffers) uint128_t __INSERT8_U128(const uint128_t A, const uint8_t B, const int C) { uint128_t T = A; T.B[C & 0b1111] = B; return T; }
-static __forceinline __declspec(safebuffers) uint128_t __INSERT16_U128(const uint128_t A, const uint16_t B, const int C) { uint128_t T = A; T.W[C & 0b111] = B; return T; }
-static __forceinline __declspec(safebuffers) uint128_t __INSERT32_U128(const uint128_t A, const uint32_t B, const int C) { uint128_t T = A; T.D[C & 0b011] = B; return T; }
-static __forceinline __declspec(safebuffers) uint128_t __INSERT64_U128(const uint128_t A, const uint64_t B, const int C) { uint128_t T = A; T.Q[C & 0b001] = B; return T; }
+static __forceinline uint128_t __INSERT8_U128(const uint128_t A, const uint8_t B, const int C) { uint128_t T = A; T.B[C & 0b1111] = B; return T; }
+static __forceinline uint128_t __INSERT16_U128(const uint128_t A, const uint16_t B, const int C) { uint128_t T = A; T.W[C & 0b111] = B; return T; }
+static __forceinline uint128_t __INSERT32_U128(const uint128_t A, const uint32_t B, const int C) { uint128_t T = A; T.D[C & 0b011] = B; return T; }
+static __forceinline uint128_t __INSERT64_U128(const uint128_t A, const uint64_t B, const int C) { uint128_t T = A; T.Q[C & 0b001] = B; return T; }
 
-static __forceinline __declspec(safebuffers) void __MASKMOVEU128(const  uint128_t A, const uint128_t M, char *Mem)
+static __forceinline void __MASKMOVEU128(const  uint128_t A, const uint128_t M, char *Mem)
 {
     for (unsigned i = 0; i < 16; i++)
     {

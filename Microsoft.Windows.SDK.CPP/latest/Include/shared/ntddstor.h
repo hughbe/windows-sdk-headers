@@ -2839,6 +2839,10 @@ typedef struct _STORAGE_DEVICE_LED_STATE_DESCRIPTOR {
 //
 
 // Version 1 of the structure
+// Note: This version only checks if the storage device
+//       is eDrive capable to keep it backward compatible.
+//       To handle both eDrive and native TCG implementations
+//       use Version 2 of the structure.
 typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY {
 
     ULONG Version; // Sizeof(STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY)
@@ -2859,8 +2863,9 @@ typedef enum _STORAGE_ENCRYPTION_TYPE {
 } STORAGE_ENCRYPTION_TYPE, *PSTORAGE_ENCRYPTION_TYPE;
 
 // Version 2 of the structure
-// First three fields should be the same
-// as V1 to allow typecasting
+// Note: This version handles both eDrive and native TCG implementations.
+//       To check if a storage device supports a native TCG implementation,
+//       a client must use this version of the structure.
 typedef struct _STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2 {
 
     ULONG Version; // Sizeof(STORAGE_DEVICE_SELF_ENCRYPTION_PROPERTY_V2)

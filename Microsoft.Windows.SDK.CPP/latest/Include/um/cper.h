@@ -2122,6 +2122,28 @@ typedef struct _WHEA_SEI_SECTION {
     ULONG64 Far;
 } WHEA_SEI_SECTION, *PWHEA_SEI_SECTION;
 
+typedef enum _WHEA_PCI_RECOVERY_SIGNAL {
+    WheaPciRecoverySignalUnknown = 0,
+    WheaPciRecoverySignalAer,
+    WheaPciRecoverySignalDpc
+}WHEA_PCI_RECOVERY_SIGNAL, *PWHEA_PCI_RECOVERY_SIGNAL;
+
+typedef enum _WHEA_PCI_RECOVERY_STATUS {
+    WheaPciREcoveryStatusUnknown = 0,
+    WheaPciRecoveryStatusNoError,
+    WheaPciRecoveryStatusLinkDisableTimeout,
+    WheaPciRecoveryStatusLinkEnableTimeout,
+    WheaPciRecoveryStatusRpBusyTimeout,
+    WheaPciRecoveryStatusComplexTree,
+    WheaPciRecoveryStatusBusNotFound,
+}WHEA_PCI_RECOVERY_STATUS,  *PWHEA_PCI_RECOVERY_STATUS;
+
+typedef struct _WHEA_PCI_RECOVERY_SECTION {
+    UINT8 SignalType;
+    BOOLEAN RecoveryAttempted;
+    UINT8 RecoveryStatus;
+} WHEA_PCI_RECOVERY_SECTION, *PWHEA_PCI_RECOVERY_SECTION;
+
 #include <poppack.h>
 
 #pragma warning(pop)
