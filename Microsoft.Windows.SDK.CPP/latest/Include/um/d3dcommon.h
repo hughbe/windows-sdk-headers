@@ -1044,6 +1044,46 @@ enum _D3D_PARAMETER_FLAGS
         D3D_PF_FORCE_DWORD	= 0x7fffffff
     } 	D3D_PARAMETER_FLAGS;
 
+typedef 
+enum D3D_FORMAT_LAYOUT
+    {
+        D3DFL_STANDARD	= 0,
+        D3DFL_CUSTOM	= -1
+    } 	D3D_FORMAT_LAYOUT;
+
+typedef 
+enum D3D_FORMAT_TYPE_LEVEL
+    {
+        D3DFTL_NO_TYPE	= 0,
+        D3DFTL_PARTIAL_TYPE	= -2,
+        D3DFTL_FULL_TYPE	= -1
+    } 	D3D_FORMAT_TYPE_LEVEL;
+
+typedef 
+enum D3D_FORMAT_COMPONENT_NAME
+    {
+        D3DFCN_R	= -4,
+        D3DFCN_G	= -3,
+        D3DFCN_B	= -2,
+        D3DFCN_A	= -1,
+        D3DFCN_D	= 0,
+        D3DFCN_S	= 1,
+        D3DFCN_X	= 2
+    } 	D3D_FORMAT_COMPONENT_NAME;
+
+typedef 
+enum D3D_FORMAT_COMPONENT_INTERPRETATION
+    {
+        D3DFCI_TYPELESS	= 0,
+        D3DFCI_FLOAT	= -4,
+        D3DFCI_SNORM	= -3,
+        D3DFCI_UNORM	= -2,
+        D3DFCI_SINT	= -1,
+        D3DFCI_UINT	= 1,
+        D3DFCI_UNORM_SRGB	= 2,
+        D3DFCI_BIASED_FIXED_2_8	= 3
+    } 	D3D_FORMAT_COMPONENT_INTERPRETATION;
+
 DEFINE_GUID(WKPDID_D3DDebugObjectName,0x429b8c22,0x9188,0x4b0c,0x87,0x42,0xac,0xb0,0xbf,0x85,0xc2,0x00);
 DEFINE_GUID(WKPDID_D3DDebugObjectNameW,0x4cca5fd8,0x921f,0x42c8,0x85,0x66,0x70,0xca,0xf2,0xa9,0xb7,0x41);
 DEFINE_GUID(WKPDID_CommentStringW,0xd0149dc0,0x90e8,0x4ec8,0x81, 0x44, 0xe9, 0x00, 0xad, 0x26, 0x6b, 0xb2);

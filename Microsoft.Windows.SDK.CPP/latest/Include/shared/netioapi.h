@@ -3192,12 +3192,25 @@ Return Value:
 #define DNS_SETTING_DOT_PROFILE                   0x20000
 
 #define DNS_ENABLE_DOH                            0x0001
+
 #define DNS_DOH_POLICY_NOT_CONFIGURED             0x0004
 #define DNS_DOH_POLICY_DISABLE                    0x0008
 #define DNS_DOH_POLICY_AUTO                       0x0010
 #define DNS_DOH_POLICY_REQUIRED                   0x0020
+
+//
+//  For backwards compatibility reasons, we need to keep the old names as well.
+//
+
+#define DNS_ENCRYPTION_POLICY_NOT_CONFIGURED      DNS_DOH_POLICY_NOT_CONFIGURED
+#define DNS_ENCRYPTION_POLICY_DISABLE             DNS_DOH_POLICY_DISABLE
+#define DNS_ENCRYPTION_POLICY_AUTO                DNS_DOH_POLICY_AUTO
+#define DNS_ENCRYPTION_POLICY_REQUIRED            DNS_DOH_POLICY_REQUIRED
+
 #define DNS_ENABLE_DDR                            0x0040
 #define DNS_ENABLE_DOT                            0x0080
+#define DNS_DOT_POLICY_BLOCK                      0x0100
+#define DNS_DOH_POLICY_BLOCK                      0x0200
 
 #define DNS_SERVER_PROPERTY_VERSION1              0x0001
 

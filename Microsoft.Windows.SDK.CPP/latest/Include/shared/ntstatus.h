@@ -25471,6 +25471,15 @@ Notes:
 #define STATUS_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE ((NTSTATUS)0xC0E9000CL)
 
 //
+// MessageId: STATUS_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Explicitly denied file.
+//
+#define STATUS_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE ((NTSTATUS)0xC0E9000DL)
+
+//
 // Clip modern app and windows licensing error messages.
 //
 //

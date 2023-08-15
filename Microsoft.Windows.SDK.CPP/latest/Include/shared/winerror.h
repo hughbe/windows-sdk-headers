@@ -14569,6 +14569,15 @@
 //
 #define ERROR_SYSTEM_INTEGRITY_REPUTATION_UNATTAINABLE 4581L
 
+//
+// MessageId: ERROR_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE
+//
+// MessageText:
+//
+// System Integrity policy has been violated.  Explicit denied file.
+//
+#define ERROR_SYSTEM_INTEGRITY_REPUTATION_EXPLICIT_DENY_FILE 4582L
+
 ///////////////////////////////////////////////////
 //                                               //
 //                  Available                    //

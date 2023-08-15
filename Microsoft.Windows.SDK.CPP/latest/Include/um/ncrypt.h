@@ -249,11 +249,12 @@ typedef struct NCRYPT_ALLOC_PARA {
 
 #if (NTDDI_VERSION >= NTDDI_WIN11_SV3)
 
-#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_HASH            90
-#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SCHEME  91
-#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_ALGO    92
-#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SALT    93
-#define NCRYPTBUFFER_ATTESTATION_STATEMENT_NONCE                     NCRYPTBUFFER_CLAIM_KEYATTESTATION_NONCE
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_HASH              90
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SCHEME    91
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_ALGO      92
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SALT_SIZE 93
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SALT      NCRYPTBUFFER_ATTESTATION_STATEMENT_SIGNATURE_PADDING_SALT_SIZE // Added to avoid failure for existing users
+#define NCRYPTBUFFER_ATTESTATION_STATEMENT_NONCE                       NCRYPTBUFFER_CLAIM_KEYATTESTATION_NONCE
 
 #define NCRYPTBUFFER_VBS_ATTESTATION_STATEMENT_ROOT_DETAILS          94
 #define NCRYPTBUFFER_VBS_ATTESTATION_STATEMENT_IDENTITY_DETAILS      95
@@ -517,18 +518,20 @@ typedef struct _NCRYPT_VBS_IDENTITY_ATTESTATION_PADDING
 
 typedef struct _NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER
 {
-    ULONG Magic;        // {'H', 'C', 'I', 'V'} - 'VICH' for VBS Identity Claim Header  
-    ULONG Version;      // Set to NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER_CURRENT_VERSION 
-    ULONG cbSignature;  // Number of bytes in the signature over the hash of Attributes, dwFlags and nonce (if available)
-    ULONG cbAttributes; // Number of bytes in attributes of the isolated key (including public key blob )
-    ULONG cbHashAlg;    // Number of bytes in Unicode name of hash algorithm used
-    ULONG cbPadding;    // Padding info (scheme and more) of the signing algorithm that was used through claim creation
-    ULONG cbNonce;      // Number of bytes in the provided nonce, can be 0 if nonce doesn't exist
-    // UCHAR Signature[cbSignature]    -- Signature over the hash of Attributes and nonce (if available)
-    // UCHAR Attributes[cbAttributes]  -- Trustlet-reported attributes of the subject key blob
-    // UCHAR HashAlg[cbHashAlg]        -- Unicode name of hash algorithm used through attributes signing
-    // UCHAR Padding[cbPadding]        -- Padding information that is set through identity hash signing 
-    // UCHAR Nonce[cbNonce]            -- Nonce value to be used when hashing Attributes
+    ULONG Magic;           // {'H', 'C', 'I', 'V'} - 'VICH' for VBS Identity Claim Header  
+    ULONG Version;         // Set to NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER_CURRENT_VERSION 
+    ULONG cbAttributes;    // Number of bytes in attributes of the isolated key (including public key blob )
+    ULONG cbNonce;         // Number of bytes in the provided nonce, can be 0 if nonce doesn't exist
+    ULONG cbHashAlg;       // Number of bytes in Unicode name of hash algorithm used
+    ULONG cbPadding;       // Padding info (scheme and more) of the signing algorithm that was used through claim creation
+    ULONG cbSignatureAlg;  // Number of bytes in Unicode name of the signing hash algorithm used
+    ULONG cbSignature;     // Number of bytes in the signature over the hash of Attributes, dwFlags and nonce (if available)
+    // UCHAR Attributes[cbAttributes]     -- Trustlet-reported attributes of the subject key blob
+    // UCHAR Nonce[cbNonce]               -- Nonce value to be used when hashing Attributes
+    // UCHAR HashAlg[cbHashAlg]           -- Unicode name of hash algorithm used through attributes signing
+    // UCHAR Padding[cbPadding]           -- Padding information that is set through identity hash signing 
+    // UCHAR SignatureAlg[cbSignatureAlg] -- Unicode name of signing algorithm used
+    // UCHAR Signature[cbSignature]       -- Signature over the hash of Attributes and nonce (if available)
 } NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER, * PNCRYPT_VBS_IDENTITY_ATTESTATION_HEADER;
 
 
@@ -548,11 +551,12 @@ typedef struct _NCRYPT_VBS_KEY_ATTESTATION_STATEMENT
     // UCHAR Nonce[cbNonce]            -- Nonce value to be used when hashing Attributes
     // --------------------------------------------------------------------------------------
     // Identity binary data - NCRYPT_VBS_IDENTITY_ATTESTATION_HEADER
-    // UCHAR Signature[cbSignature]    -- Signature over the hash of Attributes and nonce (if available)
-    // UCHAR Attributes[cbAttributes]  -- Trustlet-reported attributes of the subject key blob
-    // UCHAR HashAlg[cbHashAlg]        -- Unicode name of hash algorithm used through attributes signing
-    // UCHAR Padding[cbPadding]        -- Padding information that is set through identity hash signing 
-    // UCHAR Nonce[cbNonce]            -- Nonce value to be used when hashing Attributes
+    // UCHAR Attributes[cbAttributes]      -- Trustlet-reported attributes of the subject key blob
+    // UCHAR Nonce[cbNonce]                -- Nonce value to be used when hashing Attributes
+    // UCHAR HashAlg[cbHashAlg]            -- Unicode name of hash algorithm used through attributes signing
+    // UCHAR Padding[cbPadding]            -- Padding information that is set through identity hash signing 
+    // UCHAR SignatureAlg[cbSignatureAlg]  -- Unicode name of signing algorithm used
+    // UCHAR Signature[cbSignature]        -- Signature over the hash of Attributes and nonce (if available)
 } NCRYPT_VBS_KEY_ATTESTATION_STATEMENT, * PNCRYPT_VBS_KEY_ATTESTATION_STATEMENT;
 
 #define _NCRYPT_VSM_KEY_ATTESTATION_STATEMENT  _NCRYPT_VBS_KEY_ATTESTATION_STATEMENT

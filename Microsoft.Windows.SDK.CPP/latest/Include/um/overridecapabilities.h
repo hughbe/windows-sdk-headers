@@ -358,8 +358,34 @@
 #define OVRDCAP_ARM64_USERMODE                            0x00010001
 #define OVRDCAP_ARM64_KERNELMODE                          0x00010002
 #define OVRDCAP_ARM64_V1_CAPSET                           0x00010003
-#define OVRDCAP_ARM64_MAX                                 0x00010004
 
+#define OVRDCAP_ARM64_SHA256                              0x00010004
+#define OVRDCAP_ARM64_SHA512                              0x00010005
+#define OVRDCAP_ARM64_SHA3                                0x00010006
+#define OVRDCAP_ARM64_LSE                                 0x00010007
+#define OVRDCAP_ARM64_LSE2                                0x00010008
+#define OVRDCAP_ARM64_RDM                                 0x00010009
+#define OVRDCAP_ARM64_SM3                                 0x0001000A
+#define OVRDCAP_ARM64_SM4                                 0x0001000B
+#define OVRDCAP_ARM64_DP                                  0x0001000C
+#define OVRDCAP_ARM64_FHM                                 0x0001000D
+#define OVRDCAP_ARM64_FLAGM                               0x0001000E
+#define OVRDCAP_ARM64_FLAGM2                              0x0001000F
+#define OVRDCAP_ARM64_FCMA                                0x00010010
+#define OVRDCAP_ARM64_LRCPC                               0x00010011
+#define OVRDCAP_ARM64_LRCPC2                              0x00010012
+#define OVRDCAP_ARM64_BF16                                0x00010013
+#define OVRDCAP_ARM64_I8MM                                0x00010014
+#define OVRDCAP_ARM64_FP16                                0x00010015
+#define OVRDCAP_ARM64_SVE                                 0x00010016
+#define OVRDCAP_ARM64_SVE2                                0x00010017
+#define OVRDCAP_ARM64_F32MM                               0x00010018
+#define OVRDCAP_ARM64_F64MM                               0x00010019
+#define OVRDCAP_ARM64_V2_CAPSET                           0x0001001A
+
+#define OVRDCAP_ARM64_MAX                                 0x0001001B
+
+#define OVRDCAP_ALWAYS_OFF                                0x7FFFFFFF
 
 //
 // SPECIAL OS FUNCTIONS:

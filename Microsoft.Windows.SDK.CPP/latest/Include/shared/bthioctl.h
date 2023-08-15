@@ -14,6 +14,7 @@
 #endif
 #pragma warning(disable:4201) // nameless struct/union
 
+
 #if (NTDDI_VERSION >= NTDDI_VISTA)
 
 #ifndef CTL_CODE
