@@ -1881,6 +1881,19 @@
 #define ProcessorStartBlockLength 0x10
 
 //
+// Enclave call dispatch frame
+//
+
+#define EcFramePointer 0x0
+#define EcReturnAddress 0x8
+#define EcOriginalFramePointer 0x10
+#define EcOriginalReturn 0x18
+#define EcEnclaveNumber 0x20
+#define EcParameterAddress 0x28
+#define EcParameterValue 0x30
+#define EnclaveDispatchFrameLength 0x40
+
+//
 // EPROCESS
 //
 
