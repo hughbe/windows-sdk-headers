@@ -35,9 +35,9 @@ WINBASEAPI
 LSTATUS
 WINAPI
 GetRegistryValueWithFallbackW(
-    __in HKEY hkeyPrimary,
+    __in_opt HKEY hkeyPrimary,
     __in_opt LPCWSTR pwszPrimarySubKey,
-    __in HKEY hkeyFallback,
+    __in_opt HKEY hkeyFallback,
     __in_opt LPCWSTR pwszFallbackSubKey,
     __in PCWSTR pwszValue,
     __in DWORD dwFlags,

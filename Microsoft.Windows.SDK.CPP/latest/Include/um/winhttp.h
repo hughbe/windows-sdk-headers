@@ -66,6 +66,7 @@ typedef INTERNET_PORT * LPINTERNET_PORT;
 
 // flags for WinHttpOpen():
 #define WINHTTP_FLAG_ASYNC              0x10000000  // this session is asynchronous (where supported)
+#define WINHTTP_FLAG_SECURE_DEFAULTS    0x30000000  // note that this flag also forces async
 
 // flags for WinHttpOpenRequest():
 #define WINHTTP_FLAG_SECURE                0x00800000  // use SSL if applicable (HTTPS)
@@ -81,6 +82,10 @@ typedef INTERNET_PORT * LPINTERNET_PORT;
 #define SECURITY_FLAG_IGNORE_CERT_DATE_INVALID  0x00002000 // expired X509 Cert.
 #define SECURITY_FLAG_IGNORE_CERT_CN_INVALID    0x00001000 // bad common name in X509 Cert.
 #define SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE   0x00000200
+#define SECURITY_FLAG_IGNORE_ALL_CERT_ERRORS    (SECURITY_FLAG_IGNORE_UNKNOWN_CA        | \
+                                                 SECURITY_FLAG_IGNORE_CERT_DATE_INVALID | \
+                                                 SECURITY_FLAG_IGNORE_CERT_CN_INVALID   | \
+                                                 SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE)
 
 
 //
@@ -255,6 +260,11 @@ typedef struct _WinHttpProxyNetworkKey
     unsigned char pbBuffer[NETWORKING_KEY_BUFSIZE];
 } WINHTTP_PROXY_NETWORKING_KEY, *PWINHTTP_PROXY_NETWORKING_KEY;
 
+#define WINHTTP_PROXY_TYPE_DIRECT             0x00000001   // Direct to net
+#define WINHTTP_PROXY_TYPE_PROXY              0x00000002   // Via named proxy
+#define WINHTTP_PROXY_TYPE_AUTO_PROXY_URL     0x00000004   // Autoproxy URL
+#define WINHTTP_PROXY_TYPE_AUTO_DETECT        0x00000008   // Use autoproxy detection
+
 typedef struct _WINHTTP_PROXY_SETTINGS
 {
     DWORD dwStructSize;
@@ -351,6 +361,16 @@ typedef struct _WINHTTP_CONNECTION_INFO
     SOCKADDR_STORAGE LocalAddress;  // local ip, local port
     SOCKADDR_STORAGE RemoteAddress; // remote ip, remote port
 } WINHTTP_CONNECTION_INFO, *PWINHTTP_CONNECTION_INFO;
+
+#endif
+
+#ifdef __SCHANNEL_H__
+
+typedef struct _WINHTTP_SECURITY_INFO
+{
+    SecPkgContext_ConnectionInfo ConnectionInfo;
+    SecPkgContext_CipherInfo CipherInfo;
+} WINHTTP_SECURITY_INFO, *PWINHTTP_SECURITY_INFO;
 
 #endif
 
@@ -453,6 +473,25 @@ typedef struct _WINHTTP_REQUEST_STATS
     ULONG cStats;
     ULONGLONG rgullStats[WinHttpRequestStatMax];
 } WINHTTP_REQUEST_STATS, *PWINHTTP_REQUEST_STATS;
+
+#pragma warning(push)
+#pragma warning(disable:4201) //nameless unions
+
+typedef struct _WINHTTP_EXTENDED_HEADER
+{
+    union
+    {
+        PCWSTR pwszName;
+        PCSTR  pszName;
+    };
+    union
+    {
+        PCWSTR pwszValue;
+        PCSTR  pszValue;
+    };
+} WINHTTP_EXTENDED_HEADER, *PWINHTTP_EXTENDED_HEADER;
+
+#pragma warning(pop)
 
 //
 // constants for WinHttpTimeFromSystemTime
@@ -582,7 +621,21 @@ typedef struct _WINHTTP_REQUEST_STATS
 #define WINHTTP_OPTION_SERVER_CERT_CHAIN_CONTEXT        147
 
 
-#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_SERVER_CERT_CHAIN_CONTEXT
+#define WINHTTP_OPTION_CONNECTION_STATS_V1              150
+
+#define WINHTTP_OPTION_SECURITY_INFO                    151
+
+#define WINHTTP_OPTION_TCP_KEEPALIVE                    152
+
+#define WINHTTP_OPTION_TCP_FAST_OPEN                    153
+
+#define WINHTTP_OPTION_TLS_FALSE_START                  154
+
+#define WINHTTP_OPTION_IGNORE_CERT_REVOCATION_OFFLINE   155
+
+#define WINHTTP_OPTION_SOURCE_ADDRESS                   156
+
+#define WINHTTP_LAST_OPTION                             WINHTTP_OPTION_IGNORE_CERT_REVOCATION_OFFLINE
 
 #define WINHTTP_OPTION_USERNAME                         0x1000
 #define WINHTTP_OPTION_PASSWORD                         0x1001
@@ -1091,6 +1144,17 @@ typedef WINHTTP_STATUS_CALLBACK * LPWINHTTP_STATUS_CALLBACK;
 
 #define WINHTTP_ADDREQ_FLAG_REPLACE    0x80000000
 
+//
+// values for ullFlags member of WINHTTP_EXTENDED_HEADER
+//
+
+//
+// WINHTTP_EXTENDED_HEADER_FLAG_UNICODE - indicates the value of the request header
+// is unicode.
+//
+
+#define WINHTTP_EXTENDED_HEADER_FLAG_UNICODE 0x00000001
+
 #define WINHTTP_IGNORE_REQUEST_TOTAL_LENGTH 0
 
 // WinHttpSendRequest prettifiers for optional parameters.
@@ -1465,6 +1529,18 @@ WinHttpAddRequestHeaders
     IN DWORD dwModifiers
 );
 
+WINHTTPAPI
+DWORD
+WINAPI
+WinHttpAddRequestHeadersEx(
+    IN HINTERNET hRequest,
+    IN DWORD dwModifiers,
+    IN ULONGLONG ullFlags,
+    IN ULONGLONG ullExtra,
+    IN DWORD cHeaders,
+    _In_reads_(cHeaders) WINHTTP_EXTENDED_HEADER *pHeaders
+);
+
 BOOLAPI
 WinHttpSendRequest
 (
@@ -1687,6 +1763,13 @@ WINAPI
 WinHttpGetProxySettingsVersion(
     _In_ HINTERNET hSession,
     _Out_ DWORD *pdwProxySettingsVersion
+);
+
+WINHTTPAPI
+DWORD
+WINAPI
+WinHttpSetProxySettingsPerUser(
+    _In_ BOOL fProxySettingsPerUser
 );
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */

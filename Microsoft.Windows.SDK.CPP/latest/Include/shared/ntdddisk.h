@@ -678,6 +678,8 @@ typedef struct __WRAPPED__ _PARTITION_INFORMATION_GPT {
 //
 
 #define GPT_ATTRIBUTE_PLATFORM_REQUIRED             (0x0000000000000001)
+#define GPT_ATTRIBUTE_NO_BLOCK_IO_PROTOCOL          (0x0000000000000002)
+#define GPT_ATTRIBUTE_LEGACY_BIOS_BOOTABLE          (0x0000000000000004)
 
 //
 // The following are GPT partition attributes applicable when the

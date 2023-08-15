@@ -906,7 +906,6 @@ typedef struct InstallationAgent InstallationAgent;
 
 /* header files for imported files */
 #include "oaidl.h"
-#include "wuapicommon.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -1287,6 +1286,15 @@ enum tagOperationResultCode
         orcFailed	= 4,
         orcAborted	= 5
     } 	OperationResultCode;
+
+typedef /* [v1_enum][helpstring][public] */ 
+enum tagServerSelection
+    {
+        ssDefault	= 0,
+        ssManagedServer	= 1,
+        ssWindowsUpdate	= 2,
+        ssOthers	= 3
+    } 	ServerSelection;
 
 typedef /* [v1_enum][helpstring][public] */ 
 enum tagUpdateType
@@ -11406,7 +11414,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntry;
     {
     public:
         virtual /* [helpstring][propget][id] */ HRESULT STDMETHODCALLTYPE get_Operation( 
-            /* [retval][out] */ __RPC__out UpdateOperation *retval) = 0;
+            /* [retval][out] */ __RPC__out enum tagUpdateOperation *retval) = 0;
         
         virtual /* [helpstring][propget][id] */ HRESULT STDMETHODCALLTYPE get_ResultCode( 
             /* [retval][out] */ __RPC__out OperationResultCode *retval) = 0;
@@ -11507,7 +11515,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntry;
         
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Operation )( 
             __RPC__in IUpdateHistoryEntry * This,
-            /* [retval][out] */ __RPC__out UpdateOperation *retval);
+            /* [retval][out] */ __RPC__out enum tagUpdateOperation *retval);
         
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateHistoryEntry * This,
@@ -11728,7 +11736,7 @@ EXTERN_C const IID IID_IUpdateHistoryEntry2;
         
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_Operation )( 
             __RPC__in IUpdateHistoryEntry2 * This,
-            /* [retval][out] */ __RPC__out UpdateOperation *retval);
+            /* [retval][out] */ __RPC__out enum tagUpdateOperation *retval);
         
         /* [helpstring][propget][id] */ HRESULT ( STDMETHODCALLTYPE *get_ResultCode )( 
             __RPC__in IUpdateHistoryEntry2 * This,

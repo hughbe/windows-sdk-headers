@@ -1,34 +1,33 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.Activation.0.h"
-#include "winrt/impl/Windows.Perception.Spatial.0.h"
+#ifndef WINRT_Windows_ApplicationModel_Preview_Holographic_1_H
+#define WINRT_Windows_ApplicationModel_Preview_Holographic_1_H
 #include "winrt/impl/Windows.ApplicationModel.Preview.Holographic.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Preview::Holographic {
-
-struct WINRT_EBO IHolographicApplicationPreviewStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IHolographicApplicationPreviewStatics>
+namespace winrt::Windows::ApplicationModel::Preview::Holographic
 {
-    IHolographicApplicationPreviewStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IHolographicKeyboardPlacementOverridePreview :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IHolographicKeyboardPlacementOverridePreview>
-{
-    IHolographicKeyboardPlacementOverridePreview(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IHolographicKeyboardPlacementOverridePreviewStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IHolographicKeyboardPlacementOverridePreviewStatics>
-{
-    IHolographicKeyboardPlacementOverridePreviewStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IHolographicApplicationPreviewStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHolographicApplicationPreviewStatics>
+    {
+        IHolographicApplicationPreviewStatics(std::nullptr_t = nullptr) noexcept {}
+        IHolographicApplicationPreviewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHolographicKeyboardPlacementOverridePreview :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHolographicKeyboardPlacementOverridePreview>
+    {
+        IHolographicKeyboardPlacementOverridePreview(std::nullptr_t = nullptr) noexcept {}
+        IHolographicKeyboardPlacementOverridePreview(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IHolographicKeyboardPlacementOverridePreviewStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IHolographicKeyboardPlacementOverridePreviewStatics>
+    {
+        IHolographicKeyboardPlacementOverridePreviewStatics(std::nullptr_t = nullptr) noexcept {}
+        IHolographicKeyboardPlacementOverridePreviewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

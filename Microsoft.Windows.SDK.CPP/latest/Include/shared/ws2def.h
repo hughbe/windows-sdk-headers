@@ -167,6 +167,8 @@ typedef USHORT ADDRESS_FAMILY;
 //
 
 #define SOL_SOCKET 0xffff
+#define SOL_IP     (SOL_SOCKET-4)
+#define SOL_IPV6   (SOL_SOCKET-5)
 
 //
 // Define socket-level options.
@@ -213,9 +215,9 @@ typedef USHORT ADDRESS_FAMILY;
                                     // outbound connections
 #define SO_REUSE_MULTICASTPORT 0x3008 // enable port reuse and disable unicast
                                     //reception.
-#define SO_MSG_SEGMENT_SIZE 0x300C  // Segment sends into datagrams of length
-                                    // MSG_SEGMENT_SIZE. The final datagram is
-                                    // less than or equal to MSG_SEGMENT_SIZE.
+#define SO_ORIGINAL_DST 0x300F      // Query the original destination address
+                                    // of a redirected connection.
+#define IP6T_SO_ORIGINAL_DST SO_ORIGINAL_DST
 #endif //(_WIN32_WINNT >= 0x0600)
 
 //

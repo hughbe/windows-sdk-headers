@@ -285,19 +285,6 @@ static const DWORD c_cKeyNameTextMaximum = 32;
 
 
 //
-// ButtonEventInfo represents information about a button event (could be
-// hardware or capacitive buttons).
-//
-
-struct ButtonEventInfo
-{
-    DWORD       ButtonType;   // See DeviceButtonType_* types
-    DWORD       EventFlags;   // See InputEventFlag_* flags
-    UINT64      DeviceId;
-};
-
-
-//
 // InputDeviceType represents an input device type or set of input device types.
 //
 

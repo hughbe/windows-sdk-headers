@@ -285,10 +285,11 @@ typedef struct _TCP_ACK_FREQUENCY_PARAMETERS {
 
 } TCP_ACK_FREQUENCY_PARAMETERS, *PTCP_ACK_FREQUENCY_PARAMETERS;
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 //
 // Output for SIO_TCP_INFO.
 //
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS2)
 typedef struct _TCP_INFO_v0 {
     TCPSTATE State;
     ULONG Mss;
@@ -311,6 +312,56 @@ typedef struct _TCP_INFO_v0 {
     UCHAR SynRetrans;
 } TCP_INFO_v0, *PTCP_INFO_v0;
 #endif // NTDDI_VERSION >= NTDDI_WIN10_RS2
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+typedef struct _TCP_INFO_v1 {
+    TCPSTATE State;
+    ULONG Mss;
+    ULONG64 ConnectionTimeMs;
+    BOOLEAN TimestampsEnabled;
+    ULONG RttUs;
+    ULONG MinRttUs;
+    ULONG BytesInFlight;
+    ULONG Cwnd;
+    ULONG SndWnd;
+    ULONG RcvWnd;
+    ULONG RcvBuf;
+    ULONG64 BytesOut;
+    ULONG64 BytesIn;
+    ULONG BytesReordered;
+    ULONG BytesRetrans;
+    ULONG FastRetrans;
+    ULONG DupAcksIn;
+    ULONG TimeoutEpisodes;
+    UCHAR SynRetrans;
+
+    //
+    // Info about the limiting factor in send throughput.
+    //
+    // States:
+    // -Rwin: peer's receive window.
+    // -Cwnd: congestion window.
+    // -Snd: app not writing enough data to its socket.
+    //
+    // Per-state statistics:
+    // -Trans: number of transitions into the state.
+    // -Time: time spent in the state in milliseconds.
+    // -Bytes: number of bytes sent while in the state.
+    //
+    // These fields match those in TCP_ESTATS_SND_CONG_ROD.
+    //
+    ULONG SndLimTransRwin;
+    ULONG SndLimTimeRwin;
+    ULONG64 SndLimBytesRwin;
+    ULONG SndLimTransCwnd;
+    ULONG SndLimTimeCwnd;
+    ULONG64 SndLimBytesCwnd;
+    ULONG SndLimTransSnd;
+    ULONG SndLimTimeSnd;
+    ULONG64 SndLimBytesSnd;
+
+} TCP_INFO_v1, *PTCP_INFO_v1;
+#endif // NTDDI_VERSION >= NTDDI_WIN10_RS5
 
 //
 // TCP/UDP port management definitions.

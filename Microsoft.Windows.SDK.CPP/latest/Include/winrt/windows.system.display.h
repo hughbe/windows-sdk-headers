@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.system.display.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -140,39 +116,22 @@ namespace ABI {
                 interface IDisplayRequest;
             } /* Display */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest ABI::Windows::System::Display::IDisplayRequest
 
 #endif // ____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace System {
-            namespace Display {
-                class DisplayRequest;
-            } /* Display */
-        } /* System */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
+// Collection interface definitions
 /*
  *
  * Interface Windows.System.Display.IDisplayRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.Display.DisplayRequest
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -183,33 +142,29 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace Display {
-                /* [object, uuid("E5732044-F49F-4B60-8DD4-5E7E3A632AC0"), exclusiveto, contract] */
-                MIDL_INTERFACE("E5732044-F49F-4B60-8DD4-5E7E3A632AC0")
+                MIDL_INTERFACE("e5732044-f49f-4b60-8dd4-5e7e3a632ac0")
                 IDisplayRequest : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE RequestActive(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RequestRelease(void) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDisplayRequest=_uuidof(IDisplayRequest);
-                
+                extern MIDL_CONST_ID IID& IID_IDisplayRequest = _uuidof(IDisplayRequest);
             } /* Display */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.System.Display.DisplayRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -223,15 +178,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_Display_DisplayRequest_DEFINED
 #define RUNTIMECLASS_Windows_System_Display_DisplayRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Display_DisplayRequest[] = L"Windows.System.Display.DisplayRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -241,14 +192,9 @@ typedef interface __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest __x_ABI_CWi
 
 #endif // ____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
 
-
-
-
-
-
-
-
+// Collection interface definitions
 
 /*
  *
@@ -256,104 +202,77 @@ typedef interface __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest __x_ABI_CWi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.Display.DisplayRequest
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_Display_IDisplayRequest[] = L"Windows.System.Display.IDisplayRequest";
-/* [object, uuid("E5732044-F49F-4B60-8DD4-5E7E3A632AC0"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequestVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* RequestActive)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This);
+    HRESULT (STDMETHODCALLTYPE* RequestRelease)(__x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest* This);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *RequestActive )(
-        __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This
-        );
-    HRESULT ( STDMETHODCALLTYPE *RequestRelease )(
-        __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest * This
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequestVtbl;
 
 interface __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequestVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequestVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_RequestActive(This) \
-    ( (This)->lpVtbl->RequestActive(This) )
+    ((This)->lpVtbl->RequestActive(This))
 
 #define __x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_RequestRelease(This) \
-    ( (This)->lpVtbl->RequestRelease(This) )
-
+    ((This)->lpVtbl->RequestRelease(This))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.System.Display.DisplayRequest
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -367,15 +286,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CDisplay_CIDisplayRequest;
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_Display_DisplayRequest_DEFINED
 #define RUNTIMECLASS_Windows_System_Display_DisplayRequest_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_Display_DisplayRequest[] = L"Windows.System.Display.DisplayRequest";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

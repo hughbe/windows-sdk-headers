@@ -45,7 +45,19 @@ extern "C" {
 #define WINVER 0x0500   // version 5.0
 #endif /* !WINVER */
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Application Family or Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 typedef _Return_type_success_(return==ERROR_SUCCESS) LONG LSTATUS;
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Application Family or Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 //
 // RRF - Registry Routine Flags (for RegGetValue)
@@ -77,6 +89,12 @@ typedef _Return_type_success_(return==ERROR_SUCCESS) LONG LSTATUS;
 //
 #define REG_PROCESS_APPKEY          0x00000001
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Application Family or Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 //
 // Requested Key access mask type.
 //
@@ -94,10 +112,16 @@ typedef ACCESS_MASK REGSAM;
 #define HKEY_PERFORMANCE_DATA               (( HKEY ) (ULONG_PTR)((LONG)0x80000004) )
 #define HKEY_PERFORMANCE_TEXT               (( HKEY ) (ULONG_PTR)((LONG)0x80000050) )
 #define HKEY_PERFORMANCE_NLSTEXT            (( HKEY ) (ULONG_PTR)((LONG)0x80000060) )
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 #define HKEY_CURRENT_CONFIG                 (( HKEY ) (ULONG_PTR)((LONG)0x80000005) )
 #define HKEY_DYN_DATA                       (( HKEY ) (ULONG_PTR)((LONG)0x80000006) )
 #define HKEY_CURRENT_USER_LOCAL_SETTINGS    (( HKEY ) (ULONG_PTR)((LONG)0x80000007) )
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Application Family or Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 /*NOINC*/
 #ifndef _PROVIDER_STRUCTS_DEFINED
@@ -193,7 +217,7 @@ typedef PVALENTA PVALENT;
 //
 #define REG_MUI_STRING_TRUNCATE     0x00000001
 
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 
 //
 // RegConnectRegistryEx supported flags
@@ -202,9 +226,15 @@ typedef PVALENTA PVALENT;
 
 #endif /* WINVER >= 0x0400 */
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
 //
 // API Prototypes.
 //
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINADVAPI
 LSTATUS
@@ -213,6 +243,12 @@ RegCloseKey(
     _In_ HKEY hKey
     );
 
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINADVAPI
 LSTATUS
@@ -303,6 +339,12 @@ RegConnectRegistryExW (
 #define RegConnectRegistryEx  RegConnectRegistryExA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -361,6 +403,12 @@ RegCreateKeyExW(
 #define RegCreateKeyEx  RegCreateKeyExA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -398,6 +446,12 @@ RegCreateKeyTransactedW (
 #else
 #define RegCreateKeyTransacted  RegCreateKeyTransactedA
 #endif // !UNICODE
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINADVAPI
 LSTATUS
@@ -444,6 +498,12 @@ RegDeleteKeyExW(
 #else
 #define RegDeleteKeyEx  RegDeleteKeyExA
 #endif // !UNICODE
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINADVAPI
 LSTATUS
@@ -494,6 +554,12 @@ RegQueryReflectionKey (
     _In_ HKEY hBase,
     _Out_ BOOL *bIsReflectionDisabled
     );
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINADVAPI
 LSTATUS
@@ -609,6 +675,12 @@ RegEnumValueW(
 #define RegEnumValue  RegEnumValueA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -664,6 +736,12 @@ RegNotifyChangeKeyValue(
     );
 
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -714,6 +792,12 @@ RegOpenKeyExW(
 #define RegOpenKeyEx  RegOpenKeyExA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -743,6 +827,12 @@ RegOpenKeyTransactedW (
 #else
 #define RegOpenKeyTransacted  RegOpenKeyTransactedA
 #endif // !UNICODE
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 
 WINADVAPI
 LSTATUS
@@ -786,6 +876,12 @@ RegQueryInfoKeyW(
 #define RegQueryInfoKey  RegQueryInfoKeyA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -810,7 +906,7 @@ RegQueryValueW (
 #define RegQueryValue  RegQueryValueA
 #endif // !UNICODE
 
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 
 WINADVAPI
 LSTATUS
@@ -842,6 +938,12 @@ RegQueryMultipleValuesW(
 
 #endif /* WINVER >= 0x0400 */
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -871,6 +973,12 @@ RegQueryValueExW(
 #else
 #define RegQueryValueEx  RegQueryValueExA
 #endif // !UNICODE
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINADVAPI
 LSTATUS
@@ -920,7 +1028,7 @@ RegRestoreKeyW(
 #define RegRestoreKey  RegRestoreKeyA
 #endif // !UNICODE
 
-#if (WINVER >= 0x0600)
+#if(WINVER >= 0x0600)
 
 WINADVAPI
 LSTATUS
@@ -991,6 +1099,12 @@ RegSetValueW (
 #define RegSetValue  RegSetValueA
 #endif // !UNICODE
 
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+
 WINADVAPI
 LSTATUS
 APIENTRY
@@ -1020,6 +1134,12 @@ RegSetValueExW(
 #else
 #define RegSetValueEx  RegSetValueExA
 #endif // !UNICODE
+
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
+#pragma endregion
+
+#pragma region Desktop Family or OneCore Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 
 WINADVAPI
 LSTATUS

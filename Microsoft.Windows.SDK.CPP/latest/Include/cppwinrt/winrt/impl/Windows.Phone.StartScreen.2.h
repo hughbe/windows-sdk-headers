@@ -1,35 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.Notifications.1.h"
+#ifndef WINRT_Windows_Phone_StartScreen_2_H
+#define WINRT_Windows_Phone_StartScreen_2_H
 #include "winrt/impl/Windows.Phone.StartScreen.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Phone::StartScreen {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Phone::StartScreen {
-
-struct WINRT_EBO DualSimTile :
-    Windows::Phone::StartScreen::IDualSimTile
+namespace winrt::Windows::Phone::StartScreen
 {
-    DualSimTile(std::nullptr_t) noexcept {}
-    DualSimTile();
-    static Windows::Phone::StartScreen::DualSimTile GetTileForSim2();
-    static Windows::Foundation::IAsyncOperation<bool> UpdateDisplayNameForSim1Async(param::hstring const& name);
-    static Windows::UI::Notifications::TileUpdater CreateTileUpdaterForSim1();
-    static Windows::UI::Notifications::TileUpdater CreateTileUpdaterForSim2();
-    static Windows::UI::Notifications::BadgeUpdater CreateBadgeUpdaterForSim1();
-    static Windows::UI::Notifications::BadgeUpdater CreateBadgeUpdaterForSim2();
-    static Windows::UI::Notifications::ToastNotifier CreateToastNotifierForSim1();
-    static Windows::UI::Notifications::ToastNotifier CreateToastNotifierForSim2();
-};
-
+    struct __declspec(empty_bases) DualSimTile : Windows::Phone::StartScreen::IDualSimTile
+    {
+        DualSimTile(std::nullptr_t) noexcept {}
+        DualSimTile(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Phone::StartScreen::IDualSimTile(ptr, take_ownership_from_abi) {}
+        DualSimTile();
+        static auto GetTileForSim2();
+        static auto UpdateDisplayNameForSim1Async(param::hstring const& name);
+        static auto CreateTileUpdaterForSim1();
+        static auto CreateTileUpdaterForSim2();
+        static auto CreateBadgeUpdaterForSim1();
+        static auto CreateBadgeUpdaterForSim2();
+        static auto CreateToastNotifierForSim1();
+        static auto CreateToastNotifierForSim2();
+    };
 }
+#endif

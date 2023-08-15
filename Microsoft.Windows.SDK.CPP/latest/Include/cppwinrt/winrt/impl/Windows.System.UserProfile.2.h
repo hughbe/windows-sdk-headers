@@ -1,122 +1,104 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_System_UserProfile_2_H
+#define WINRT_Windows_System_UserProfile_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.Globalization.1.h"
+#include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.System.1.h"
-#include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.UserProfile.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::UserProfile {
-
+namespace winrt::Windows::System::UserProfile
+{
+    struct AdvertisingManager
+    {
+        AdvertisingManager() = delete;
+        [[nodiscard]] static auto AdvertisingId();
+        static auto GetForUser(Windows::System::User const& user);
+    };
+    struct __declspec(empty_bases) AdvertisingManagerForUser : Windows::System::UserProfile::IAdvertisingManagerForUser
+    {
+        AdvertisingManagerForUser(std::nullptr_t) noexcept {}
+        AdvertisingManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IAdvertisingManagerForUser(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AssignedAccessSettings : Windows::System::UserProfile::IAssignedAccessSettings
+    {
+        AssignedAccessSettings(std::nullptr_t) noexcept {}
+        AssignedAccessSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IAssignedAccessSettings(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto GetForUser(Windows::System::User const& user);
+    };
+    struct __declspec(empty_bases) DiagnosticsSettings : Windows::System::UserProfile::IDiagnosticsSettings
+    {
+        DiagnosticsSettings(std::nullptr_t) noexcept {}
+        DiagnosticsSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IDiagnosticsSettings(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto GetForUser(Windows::System::User const& user);
+    };
+    struct __declspec(empty_bases) FirstSignInSettings : Windows::System::UserProfile::IFirstSignInSettings
+    {
+        FirstSignInSettings(std::nullptr_t) noexcept {}
+        FirstSignInSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IFirstSignInSettings(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+    };
+    struct GlobalizationPreferences
+    {
+        GlobalizationPreferences() = delete;
+        [[nodiscard]] static auto Calendars();
+        [[nodiscard]] static auto Clocks();
+        [[nodiscard]] static auto Currencies();
+        [[nodiscard]] static auto Languages();
+        [[nodiscard]] static auto HomeGeographicRegion();
+        [[nodiscard]] static auto WeekStartsOn();
+        static auto TrySetHomeGeographicRegion(param::hstring const& region);
+        static auto TrySetLanguages(param::iterable<hstring> const& languageTags);
+        static auto GetForUser(Windows::System::User const& user);
+    };
+    struct __declspec(empty_bases) GlobalizationPreferencesForUser : Windows::System::UserProfile::IGlobalizationPreferencesForUser
+    {
+        GlobalizationPreferencesForUser(std::nullptr_t) noexcept {}
+        GlobalizationPreferencesForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IGlobalizationPreferencesForUser(ptr, take_ownership_from_abi) {}
+    };
+    struct LockScreen
+    {
+        LockScreen() = delete;
+        static auto RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri);
+        static auto TryRemoveImageFeed();
+        [[nodiscard]] static auto OriginalImageFile();
+        static auto GetImageStream();
+        static auto SetImageFileAsync(Windows::Storage::IStorageFile const& value);
+        static auto SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value);
+    };
+    struct UserInformation
+    {
+        UserInformation() = delete;
+        [[nodiscard]] static auto AccountPictureChangeEnabled();
+        [[nodiscard]] static auto NameAccessAllowed();
+        static auto GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind);
+        static auto SetAccountPictureAsync(Windows::Storage::IStorageFile const& image);
+        static auto SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video);
+        static auto SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image);
+        static auto SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video);
+        static auto AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
+        using AccountPictureChanged_revoker = impl::factory_event_revoker<Windows::System::UserProfile::IUserInformationStatics, &impl::abi_t<Windows::System::UserProfile::IUserInformationStatics>::remove_AccountPictureChanged>;
+        static AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
+        static auto AccountPictureChanged(winrt::event_token const& token);
+        static auto GetDisplayNameAsync();
+        static auto GetFirstNameAsync();
+        static auto GetLastNameAsync();
+        static auto GetPrincipalNameAsync();
+        static auto GetSessionInitiationProtocolUriAsync();
+        static auto GetDomainNameAsync();
+    };
+    struct __declspec(empty_bases) UserProfilePersonalizationSettings : Windows::System::UserProfile::IUserProfilePersonalizationSettings
+    {
+        UserProfilePersonalizationSettings(std::nullptr_t) noexcept {}
+        UserProfilePersonalizationSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::UserProfile::IUserProfilePersonalizationSettings(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto Current();
+        static auto IsSupported();
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::System::UserProfile {
-
-struct AdvertisingManager
-{
-    AdvertisingManager() = delete;
-    static hstring AdvertisingId();
-    static Windows::System::UserProfile::AdvertisingManagerForUser GetForUser(Windows::System::User const& user);
-};
-
-struct WINRT_EBO AdvertisingManagerForUser :
-    Windows::System::UserProfile::IAdvertisingManagerForUser
-{
-    AdvertisingManagerForUser(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AssignedAccessSettings :
-    Windows::System::UserProfile::IAssignedAccessSettings
-{
-    AssignedAccessSettings(std::nullptr_t) noexcept {}
-    static Windows::System::UserProfile::AssignedAccessSettings GetDefault();
-    static Windows::System::UserProfile::AssignedAccessSettings GetForUser(Windows::System::User const& user);
-};
-
-struct WINRT_EBO DiagnosticsSettings :
-    Windows::System::UserProfile::IDiagnosticsSettings
-{
-    DiagnosticsSettings(std::nullptr_t) noexcept {}
-    static Windows::System::UserProfile::DiagnosticsSettings GetDefault();
-    static Windows::System::UserProfile::DiagnosticsSettings GetForUser(Windows::System::User const& user);
-};
-
-struct WINRT_EBO FirstSignInSettings :
-    Windows::System::UserProfile::IFirstSignInSettings
-{
-    FirstSignInSettings(std::nullptr_t) noexcept {}
-    static Windows::System::UserProfile::FirstSignInSettings GetDefault();
-};
-
-struct GlobalizationPreferences
-{
-    GlobalizationPreferences() = delete;
-    static Windows::Foundation::Collections::IVectorView<hstring> Calendars();
-    static Windows::Foundation::Collections::IVectorView<hstring> Clocks();
-    static Windows::Foundation::Collections::IVectorView<hstring> Currencies();
-    static Windows::Foundation::Collections::IVectorView<hstring> Languages();
-    static hstring HomeGeographicRegion();
-    static Windows::Globalization::DayOfWeek WeekStartsOn();
-    static bool TrySetHomeGeographicRegion(param::hstring const& region);
-    static bool TrySetLanguages(param::iterable<hstring> const& languageTags);
-    static Windows::System::UserProfile::GlobalizationPreferencesForUser GetForUser(Windows::System::User const& user);
-};
-
-struct WINRT_EBO GlobalizationPreferencesForUser :
-    Windows::System::UserProfile::IGlobalizationPreferencesForUser
-{
-    GlobalizationPreferencesForUser(std::nullptr_t) noexcept {}
-};
-
-struct LockScreen
-{
-    LockScreen() = delete;
-    static Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetImageFeedResult> RequestSetImageFeedAsync(Windows::Foundation::Uri const& syndicationFeedUri);
-    static bool TryRemoveImageFeed();
-    static Windows::Foundation::Uri OriginalImageFile();
-    static Windows::Storage::Streams::IRandomAccessStream GetImageStream();
-    static Windows::Foundation::IAsyncAction SetImageFileAsync(Windows::Storage::IStorageFile const& value);
-    static Windows::Foundation::IAsyncAction SetImageStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& value);
-};
-
-struct UserInformation
-{
-    UserInformation() = delete;
-    static bool AccountPictureChangeEnabled();
-    static bool NameAccessAllowed();
-    static Windows::Storage::IStorageFile GetAccountPicture(Windows::System::UserProfile::AccountPictureKind const& kind);
-    static Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult> SetAccountPictureAsync(Windows::Storage::IStorageFile const& image);
-    static Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult> SetAccountPicturesAsync(Windows::Storage::IStorageFile const& smallImage, Windows::Storage::IStorageFile const& largeImage, Windows::Storage::IStorageFile const& video);
-    static Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult> SetAccountPictureFromStreamAsync(Windows::Storage::Streams::IRandomAccessStream const& image);
-    static Windows::Foundation::IAsyncOperation<Windows::System::UserProfile::SetAccountPictureResult> SetAccountPicturesFromStreamsAsync(Windows::Storage::Streams::IRandomAccessStream const& smallImage, Windows::Storage::Streams::IRandomAccessStream const& largeImage, Windows::Storage::Streams::IRandomAccessStream const& video);
-    static winrt::event_token AccountPictureChanged(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
-    using AccountPictureChanged_revoker = impl::factory_event_revoker<Windows::System::UserProfile::IUserInformationStatics, &impl::abi_t<Windows::System::UserProfile::IUserInformationStatics>::remove_AccountPictureChanged>;
-    static AccountPictureChanged_revoker AccountPictureChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& changeHandler);
-    static void AccountPictureChanged(winrt::event_token const& token);
-    static Windows::Foundation::IAsyncOperation<hstring> GetDisplayNameAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetFirstNameAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetLastNameAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetPrincipalNameAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Uri> GetSessionInitiationProtocolUriAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetDomainNameAsync();
-};
-
-struct WINRT_EBO UserProfilePersonalizationSettings :
-    Windows::System::UserProfile::IUserProfilePersonalizationSettings
-{
-    UserProfilePersonalizationSettings(std::nullptr_t) noexcept {}
-    static Windows::System::UserProfile::UserProfilePersonalizationSettings Current();
-    static bool IsSupported();
-};
-
-}
+#endif

@@ -4686,6 +4686,30 @@ interface IMFMuxStreamSampleManager : IUnknown
     ULONGLONG GetStreamConfiguration();
 }
 
-cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)")    
+///////////////////////////////////////////////////////////////////////////////
+//
+// IMFSecureBuffer Interface
+//
+///////////////////////////////////////////////////////////////////////////////
+[
+    object,
+    uuid(C1209904-E584-4752-A2D6-7F21693F8B21),
+    local
+]
+/// <summary>
+/// This interface encapsulates a secure buffer allocated by the frame server
+/// trustlet.
+/// </summary>
+interface IMFSecureBuffer : IUnknown
+{
+    /// <summary>
+    /// Get the identifier for a secure buffer.  This GUID can be used by
+    /// a device's trustlet to open a secure section containing the buffer.
+    /// </summary>  
+    HRESULT GetIdentifier(
+        [out, annotation("_Out_")] GUID *pGuidIdentifier);
+};
+
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)")
 cpp_quote("#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES)")
 #pragma endregion

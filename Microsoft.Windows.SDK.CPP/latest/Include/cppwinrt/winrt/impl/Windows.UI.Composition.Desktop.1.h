@@ -1,20 +1,19 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.UI.Composition.0.h"
+#ifndef WINRT_Windows_UI_Composition_Desktop_1_H
+#define WINRT_Windows_UI_Composition_Desktop_1_H
 #include "winrt/impl/Windows.UI.Composition.Desktop.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Composition::Desktop {
-
-struct WINRT_EBO IDesktopWindowTarget :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IDesktopWindowTarget>
+namespace winrt::Windows::UI::Composition::Desktop
 {
-    IDesktopWindowTarget(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IDesktopWindowTarget :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IDesktopWindowTarget>
+    {
+        IDesktopWindowTarget(std::nullptr_t = nullptr) noexcept {}
+        IDesktopWindowTarget(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

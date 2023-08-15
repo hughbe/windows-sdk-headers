@@ -59,6 +59,16 @@ typedef enum HDV_PCI_BAR_SELECTOR
 
 } HDV_PCI_BAR_SELECTOR;
 
+typedef enum HDV_DOORBELL_FLAGS
+{
+    HDV_DOORBELL_FLAG_TRIGGER_SIZE_ANY   = 0,
+    HDV_DOORBELL_FLAG_TRIGGER_SIZE_BYTE  = 1,
+    HDV_DOORBELL_FLAG_TRIGGER_SIZE_WORD  = 2,
+    HDV_DOORBELL_FLAG_TRIGGER_SIZE_DWORD = 3,
+    HDV_DOORBELL_FLAG_TRIGGER_SIZE_QWORD = 4,
+    HDV_DOORBELL_FLAG_TRIGGER_ANY_VALUE  = 0x80000000
+} HDV_DOORBELL_FLAGS;
+
 #endif // _HDV_COMMON_DEFINITIONS_
 
 #define HDV_PCI_BAR_COUNT 6
@@ -139,22 +149,30 @@ HdvDeliverGuestInterrupt(
     );
 
 
+
+
+
+
 HRESULT
 WINAPI
-HdvRegisterDoorbellPage(
+HdvRegisterDoorbell(
     _In_ HDV_DEVICE requestor,
     _In_ HDV_PCI_BAR_SELECTOR BarIndex,
-    _In_ UINT64 PageIndex,
-    _In_ PVOID DoorbellEvent
+    _In_ UINT64 BarOffset,
+    _In_ UINT64 TriggerValue,
+    _In_ UINT64 Flags,
+    _In_ HANDLE DoorbellEvent
     );
 
 
 HRESULT
 WINAPI
-HdvUnregisterDoorbellPage(
+HdvUnregisterDoorbell(
     _In_ HDV_DEVICE requestor,
     _In_ HDV_PCI_BAR_SELECTOR BarIndex,
-    _In_ UINT64 PageIndex
+    _In_ UINT64 BarOffset,
+    _In_ UINT64 TriggerValue,
+    _In_ UINT64 Flags
     );
 
 
@@ -252,8 +270,8 @@ typedef struct HDV_PCI_DEVICE_INTERFACE
 #endif // _HYPERV_DEVICE_VIRTUALIZATION_H_
 
 
-#ifndef ext_ms_win_hyperv_devicevirtualization_l1_1_1_query_routines
-#define ext_ms_win_hyperv_devicevirtualization_l1_1_1_query_routines
+#ifndef ext_ms_win_hyperv_devicevirtualization_l1_2_0_query_routines
+#define ext_ms_win_hyperv_devicevirtualization_l1_2_0_query_routines
 
 
 
@@ -315,13 +333,13 @@ IsHdvDeliverGuestInterruptPresent(
 
 BOOLEAN
 __stdcall
-IsHdvRegisterDoorbellPagePresent(
+IsHdvRegisterDoorbellPresent(
     VOID
     );
 
 BOOLEAN
 __stdcall
-IsHdvUnregisterDoorbellPagePresent(
+IsHdvUnregisterDoorbellPresent(
     VOID
     );
 

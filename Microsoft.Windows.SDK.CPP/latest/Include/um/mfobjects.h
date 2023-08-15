@@ -228,6 +228,13 @@ typedef interface IMFMuxStreamSampleManager IMFMuxStreamSampleManager;
 #endif 	/* __IMFMuxStreamSampleManager_FWD_DEFINED__ */
 
 
+#ifndef __IMFSecureBuffer_FWD_DEFINED__
+#define __IMFSecureBuffer_FWD_DEFINED__
+typedef interface IMFSecureBuffer IMFSecureBuffer;
+
+#endif 	/* __IMFSecureBuffer_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "unknwn.h"
 #include "propsys.h"
@@ -6506,7 +6513,89 @@ EXTERN_C const IID IID_IMFMuxStreamSampleManager;
 #endif 	/* __IMFMuxStreamSampleManager_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_mfobjects_0000_0027 */
+#ifndef __IMFSecureBuffer_INTERFACE_DEFINED__
+#define __IMFSecureBuffer_INTERFACE_DEFINED__
+
+/* interface IMFSecureBuffer */
+/* [local][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IMFSecureBuffer;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("C1209904-E584-4752-A2D6-7F21693F8B21")
+    IMFSecureBuffer : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetIdentifier( 
+            /* [annotation][out] */ 
+            _Out_  GUID *pGuidIdentifier) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IMFSecureBufferVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IMFSecureBuffer * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IMFSecureBuffer * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IMFSecureBuffer * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIdentifier )( 
+            IMFSecureBuffer * This,
+            /* [annotation][out] */ 
+            _Out_  GUID *pGuidIdentifier);
+        
+        END_INTERFACE
+    } IMFSecureBufferVtbl;
+
+    interface IMFSecureBuffer
+    {
+        CONST_VTBL struct IMFSecureBufferVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IMFSecureBuffer_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IMFSecureBuffer_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IMFSecureBuffer_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IMFSecureBuffer_GetIdentifier(This,pGuidIdentifier)	\
+    ( (This)->lpVtbl -> GetIdentifier(This,pGuidIdentifier) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IMFSecureBuffer_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_mfobjects_0000_0028 */
 /* [local] */ 
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS2)
@@ -6514,8 +6603,8 @@ EXTERN_C const IID IID_IMFMuxStreamSampleManager;
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0027_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0027_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0028_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_mfobjects_0000_0028_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

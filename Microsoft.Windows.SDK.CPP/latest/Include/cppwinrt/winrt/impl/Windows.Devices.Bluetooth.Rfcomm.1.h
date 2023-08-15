@@ -1,100 +1,95 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Bluetooth.0.h"
-#include "winrt/impl/Windows.Devices.Enumeration.0.h"
-#include "winrt/impl/Windows.Networking.0.h"
-#include "winrt/impl/Windows.Networking.Sockets.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.Foundation.0.h"
+#ifndef WINRT_Windows_Devices_Bluetooth_Rfcomm_1_H
+#define WINRT_Windows_Devices_Bluetooth_Rfcomm_1_H
 #include "winrt/impl/Windows.Devices.Bluetooth.Rfcomm.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Rfcomm {
-
-struct WINRT_EBO IRfcommDeviceService :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceService>
+namespace winrt::Windows::Devices::Bluetooth::Rfcomm
 {
-    IRfcommDeviceService(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommDeviceService2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceService2>,
-    impl::require<IRfcommDeviceService2, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
-{
-    IRfcommDeviceService2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommDeviceService3 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceService3>,
-    impl::require<IRfcommDeviceService3, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
-{
-    IRfcommDeviceService3(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommDeviceServiceStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceServiceStatics>
-{
-    IRfcommDeviceServiceStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommDeviceServiceStatics2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceServiceStatics2>,
-    impl::require<IRfcommDeviceServiceStatics2, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
-{
-    IRfcommDeviceServiceStatics2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommDeviceServicesResult :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommDeviceServicesResult>
-{
-    IRfcommDeviceServicesResult(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommServiceId :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommServiceId>
-{
-    IRfcommServiceId(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommServiceIdStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommServiceIdStatics>
-{
-    IRfcommServiceIdStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommServiceProvider :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommServiceProvider>
-{
-    IRfcommServiceProvider(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRfcommServiceProvider2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommServiceProvider2>,
-    impl::require<IRfcommServiceProvider2, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
-{
-    IRfcommServiceProvider2(std::nullptr_t = nullptr) noexcept {}
-    using impl::consume_t<IRfcommServiceProvider2, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>::StartAdvertising;
-    using impl::consume_t<IRfcommServiceProvider2, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>::StartAdvertising;
-};
-
-struct WINRT_EBO IRfcommServiceProviderStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRfcommServiceProviderStatics>
-{
-    IRfcommServiceProviderStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IRfcommDeviceService :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceService>
+    {
+        IRfcommDeviceService(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceService(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommDeviceService2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceService2>,
+        impl::require<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService>
+    {
+        IRfcommDeviceService2(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceService2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommDeviceService3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceService3>,
+        impl::require<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2>
+    {
+        IRfcommDeviceService3(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceService3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommDeviceServiceStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceServiceStatics>
+    {
+        IRfcommDeviceServiceStatics(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceServiceStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommDeviceServiceStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceServiceStatics2>,
+        impl::require<Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics2, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServiceStatics>
+    {
+        IRfcommDeviceServiceStatics2(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceServiceStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommDeviceServicesResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommDeviceServicesResult>
+    {
+        IRfcommDeviceServicesResult(std::nullptr_t = nullptr) noexcept {}
+        IRfcommDeviceServicesResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommServiceId :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommServiceId>
+    {
+        IRfcommServiceId(std::nullptr_t = nullptr) noexcept {}
+        IRfcommServiceId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommServiceIdStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommServiceIdStatics>
+    {
+        IRfcommServiceIdStatics(std::nullptr_t = nullptr) noexcept {}
+        IRfcommServiceIdStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommServiceProvider :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommServiceProvider>
+    {
+        IRfcommServiceProvider(std::nullptr_t = nullptr) noexcept {}
+        IRfcommServiceProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRfcommServiceProvider2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommServiceProvider2>,
+        impl::require<Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>
+    {
+        IRfcommServiceProvider2(std::nullptr_t = nullptr) noexcept {}
+        IRfcommServiceProvider2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+        using impl::consume_t<IRfcommServiceProvider2, IRfcommServiceProvider2>::StartAdvertising;
+        using impl::consume_t<IRfcommServiceProvider2, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider>::StartAdvertising;
+    };
+    struct __declspec(empty_bases) IRfcommServiceProviderStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRfcommServiceProviderStatics>
+    {
+        IRfcommServiceProviderStatics(std::nullptr_t = nullptr) noexcept {}
+        IRfcommServiceProviderStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

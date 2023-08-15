@@ -1,52 +1,38 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.Streams.1.h"
-#include "winrt/impl/Windows.System.1.h"
-#include "winrt/impl/Windows.UI.1.h"
+#ifndef WINRT_Windows_Devices_Lights_2_H
+#define WINRT_Windows_Devices_Lights_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Lights.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Lights {
-
+namespace winrt::Windows::Devices::Lights
+{
+    struct __declspec(empty_bases) Lamp : Windows::Devices::Lights::ILamp
+    {
+        Lamp(std::nullptr_t) noexcept {}
+        Lamp(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Lights::ILamp(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDefaultAsync();
+    };
+    struct __declspec(empty_bases) LampArray : Windows::Devices::Lights::ILampArray
+    {
+        LampArray(std::nullptr_t) noexcept {}
+        LampArray(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Lights::ILampArray(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto FromIdAsync(param::hstring const& deviceId);
+    };
+    struct __declspec(empty_bases) LampAvailabilityChangedEventArgs : Windows::Devices::Lights::ILampAvailabilityChangedEventArgs
+    {
+        LampAvailabilityChangedEventArgs(std::nullptr_t) noexcept {}
+        LampAvailabilityChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Lights::ILampAvailabilityChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) LampInfo : Windows::Devices::Lights::ILampInfo
+    {
+        LampInfo(std::nullptr_t) noexcept {}
+        LampInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Lights::ILampInfo(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Lights {
-
-struct WINRT_EBO Lamp :
-    Windows::Devices::Lights::ILamp
-{
-    Lamp(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::Lamp> GetDefaultAsync();
-};
-
-struct WINRT_EBO LampArray :
-    Windows::Devices::Lights::ILampArray
-{
-    LampArray(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Lights::LampArray> FromIdAsync(param::hstring const& deviceId);
-};
-
-struct WINRT_EBO LampAvailabilityChangedEventArgs :
-    Windows::Devices::Lights::ILampAvailabilityChangedEventArgs
-{
-    LampAvailabilityChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO LampInfo :
-    Windows::Devices::Lights::ILampInfo
-{
-    LampInfo(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

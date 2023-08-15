@@ -1,48 +1,36 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.Appointments.1.h"
+#ifndef WINRT_Windows_ApplicationModel_Appointments_AppointmentsProvider_2_H
+#define WINRT_Windows_ApplicationModel_Appointments_AppointmentsProvider_2_H
 #include "winrt/impl/Windows.ApplicationModel.Appointments.AppointmentsProvider.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider {
-
+namespace winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider
+{
+    struct __declspec(empty_bases) AddAppointmentOperation : Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation
+    {
+        AddAppointmentOperation(std::nullptr_t) noexcept {}
+        AddAppointmentOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation(ptr, take_ownership_from_abi) {}
+    };
+    struct AppointmentsProviderLaunchActionVerbs
+    {
+        AppointmentsProviderLaunchActionVerbs() = delete;
+        [[nodiscard]] static auto AddAppointment();
+        [[nodiscard]] static auto ReplaceAppointment();
+        [[nodiscard]] static auto RemoveAppointment();
+        [[nodiscard]] static auto ShowTimeFrame();
+        [[nodiscard]] static auto ShowAppointmentDetails();
+    };
+    struct __declspec(empty_bases) RemoveAppointmentOperation : Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation
+    {
+        RemoveAppointmentOperation(std::nullptr_t) noexcept {}
+        RemoveAppointmentOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ReplaceAppointmentOperation : Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation
+    {
+        ReplaceAppointmentOperation(std::nullptr_t) noexcept {}
+        ReplaceAppointmentOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Appointments::AppointmentsProvider {
-
-struct WINRT_EBO AddAppointmentOperation :
-    Windows::ApplicationModel::Appointments::AppointmentsProvider::IAddAppointmentOperation
-{
-    AddAppointmentOperation(std::nullptr_t) noexcept {}
-};
-
-struct AppointmentsProviderLaunchActionVerbs
-{
-    AppointmentsProviderLaunchActionVerbs() = delete;
-    static hstring AddAppointment();
-    static hstring ReplaceAppointment();
-    static hstring RemoveAppointment();
-    static hstring ShowTimeFrame();
-    static hstring ShowAppointmentDetails();
-};
-
-struct WINRT_EBO RemoveAppointmentOperation :
-    Windows::ApplicationModel::Appointments::AppointmentsProvider::IRemoveAppointmentOperation
-{
-    RemoveAppointmentOperation(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ReplaceAppointmentOperation :
-    Windows::ApplicationModel::Appointments::AppointmentsProvider::IReplaceAppointmentOperation
-{
-    ReplaceAppointmentOperation(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

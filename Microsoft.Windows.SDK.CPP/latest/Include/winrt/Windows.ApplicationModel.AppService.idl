@@ -175,7 +175,15 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 RemoteSystemNotSupportedByApp = 6,
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
-                NotAuthorized                 = 7
+                NotAuthorized                 = 7,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                AuthenticationError           = 8,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                NetworkNotAvailable           = 9,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                DisabledByPolicy              = 10,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                WebServiceUnavailable         = 11
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -188,7 +196,17 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
                 RemoteSystemUnavailable = 4,
                 [contract(Windows.Foundation.UniversalApiContract, 3.0)]
-                MessageSizeTooLarge     = 5
+                MessageSizeTooLarge     = 5,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                AppUnavailable          = 6,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                AuthenticationError     = 7,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                NetworkNotAvailable     = 8,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                DisabledByPolicy        = 9,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                WebServiceUnavailable   = 10
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
@@ -204,7 +222,15 @@ namespace Windows
                 ResourceLimitsExceeded        = 7,
                 MessageSizeTooLarge           = 8,
                 Failure                       = 9,
-                Unknown                       = 10
+                Unknown                       = 10,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                AuthenticationError           = 11,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                NetworkNotAvailable           = 12,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                DisabledByPolicy              = 13,
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                WebServiceUnavailable         = 14
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

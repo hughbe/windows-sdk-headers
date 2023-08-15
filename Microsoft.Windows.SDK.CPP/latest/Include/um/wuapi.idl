@@ -306,8 +306,6 @@ cpp_quote("")
 import "oaidl.idl";
 #endif
 
-import "wuapicommon.idl";
-
 [
     helpstring(
         "Defines possible ways in which elevated users will be notified about "
@@ -428,6 +426,19 @@ typedef [public] enum tagOperationResultCode
     [helpstring("Failed")]                  orcFailed               = 4,
     [helpstring("Aborted")]                 orcAborted              = 5,
 } OperationResultCode;
+
+[
+    helpstring(
+        "Defines possible server selections the Searcher can search against."),
+    v1_enum
+]
+typedef [public] enum tagServerSelection
+{
+    [helpstring("Default")]         ssDefault       = 0,
+    [helpstring("Managed server")]  ssManagedServer = 1,
+    [helpstring("Windows Update")]  ssWindowsUpdate = 2,
+    [helpstring("Others")]          ssOthers        = 3,
+} ServerSelection;
 
 [
     helpstring("Defines possible types of an update."),
@@ -2791,7 +2802,7 @@ interface IUpdateHistoryEntry : IDispatch
             "the operation on the update.")
     ]
     HRESULT Operation(
-                [out, retval] UpdateOperation* retval );
+                [out, retval] enum tagUpdateOperation* retval );
 
     [
         id(0x60020002),

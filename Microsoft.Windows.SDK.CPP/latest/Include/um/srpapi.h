@@ -197,7 +197,8 @@ IsSrpDisablePermissiveModeFileEncryptionPresent(
     VOID
     );
 
-#endif
+#endif /* _WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD */
+
 
 BOOLEAN
 __stdcall
@@ -220,7 +221,8 @@ IsSrpDoesPolicyAllowAppExecutionPresent(
     VOID
     );
 
-#endif
+#endif /* _WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD */
+
 
 #ifdef __cplusplus
 }

@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.ui.xaml.automation.text.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -131,55 +107,16 @@
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
+// Parameterized interface forward declarations (C++)
 
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Xaml {
-                namespace Automation {
-                    namespace Text {
-                        
-                        typedef enum TextPatternRangeEndpoint : int TextPatternRangeEndpoint;
-                        
-                    } /* Text */
-                } /* Automation */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace UI {
-            namespace Xaml {
-                namespace Automation {
-                    namespace Text {
-                        
-                        typedef enum TextUnit : int TextUnit;
-                        
-                    } /* Text */
-                } /* Automation */
-            } /* Xaml */
-        } /* UI */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
+// Collection interface definitions
 /*
  *
  * Struct Windows.UI.Xaml.Automation.Text.TextPatternRangeEndpoint
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
@@ -187,20 +124,18 @@ namespace ABI {
             namespace Xaml {
                 namespace Automation {
                     namespace Text {
-                        /* [v1_enum, contract] */
                         enum TextPatternRangeEndpoint : int
                         {
                             TextPatternRangeEndpoint_Start = 0,
                             TextPatternRangeEndpoint_End = 1,
                         };
-                        
                     } /* Text */
                 } /* Automation */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -208,9 +143,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
@@ -218,7 +151,6 @@ namespace ABI {
             namespace Xaml {
                 namespace Automation {
                     namespace Text {
-                        /* [v1_enum, contract] */
                         enum TextUnit : int
                         {
                             TextUnit_Character = 0,
@@ -229,35 +161,19 @@ namespace ABI {
                             TextUnit_Page = 5,
                             TextUnit_Document = 6,
                         };
-                        
                     } /* Text */
                 } /* Automation */
             } /* Xaml */
         } /* UI */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
+// Parameterized interface forward declarations (C)
 
-
-
-
-typedef enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextPatternRangeEndpoint __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextPatternRangeEndpoint;
-
-
-typedef enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextUnit __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextUnit;
-
-
-
-
-
-
+// Collection interface definitions
 
 /*
  *
@@ -265,11 +181,8 @@ typedef enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextUnit __x_ABI_CWin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextPatternRangeEndpoint
 {
     TextPatternRangeEndpoint_Start = 0,
@@ -277,18 +190,14 @@ enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextPatternRangeEndpoint
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.UI.Xaml.Automation.Text.TextUnit
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextUnit
 {
     TextUnit_Character = 0,
@@ -300,11 +209,6 @@ enum __x_ABI_CWindows_CUI_CXaml_CAutomation_CText_CTextUnit
     TextUnit_Document = 6,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

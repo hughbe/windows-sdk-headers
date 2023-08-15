@@ -1166,8 +1166,8 @@ enum PIDMSI_STATUS_VALUE
     } ;
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
-#pragma region Application Family or OneCore Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM)
+#pragma region Application Family or OneCore or Games Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES)
 _Check_return_ WINOLEAPI PropVariantCopy(
             _Out_ PROPVARIANT* pvarDest,
             _In_ const PROPVARIANT * pvarSrc);
@@ -1200,7 +1200,7 @@ inline void PropVariantInit (_Out_ PROPVARIANT * pvar )
 #endif /* _MSC_EXTENSIONS */
 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 
 #pragma region Desktop Family

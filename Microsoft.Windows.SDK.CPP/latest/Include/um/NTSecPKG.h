@@ -770,6 +770,20 @@ typedef struct _SECPKG_SUPPLEMENTAL_CRED_ARRAY {
 #endif // MIDL_PASS
 } SECPKG_SUPPLEMENTAL_CRED_ARRAY, *PSECPKG_SUPPLEMENTAL_CRED_ARRAY;
 
+typedef struct _SECPKG_SURROGATE_LOGON_ENTRY {
+    GUID Type;
+    PVOID Data;
+} SECPKG_SURROGATE_LOGON_ENTRY, *PSECPKG_SURROGATE_LOGON_ENTRY;
+
+typedef struct _SECPKG_SURROGATE_LOGON {
+    ULONG Version;
+    LUID SurrogateLogonID;
+    ULONG EntryCount;
+    PSECPKG_SURROGATE_LOGON_ENTRY Entries;
+} SECPKG_SURROGATE_LOGON, *PSECPKG_SURROGATE_LOGON;
+
+#define SECPKG_SURROGATE_LOGON_VERSION_1 1
+
 //
 // This flag is used for to indicate which buffers in the LSA are located
 // in the client's address space
@@ -823,6 +837,7 @@ typedef LSA_CALLBACK_FUNCTION * PLSA_CALLBACK_FUNCTION;
                                                                 // denotes network logon was attempted.
 #define PRIMARY_CRED_INTERACTIVE_NGC_LOGON          0x00080000
 #define PRIMARY_CRED_INTERACTIVE_FIDO_LOGON         0x00100000
+#define PRIMARY_CRED_ARSO_LOGON                     0x00200000
 
 #define PRIMARY_CRED_LOGON_PACKAGE_SHIFT 24
 #define PRIMARY_CRED_PACKAGE_MASK 0xff000000
@@ -1908,6 +1923,66 @@ typedef LSA_AP_LOGON_USER_EX2 *PLSA_AP_LOGON_USER_EX2;
 #define LSA_AP_NAME_LOGON_USER_EX2 "LsaApLogonUserEx2\0"
 
 typedef NTSTATUS
+(LSA_AP_LOGON_USER_EX3) (
+    _In_ PLSA_CLIENT_REQUEST ClientRequest,
+    _In_ SECURITY_LOGON_TYPE LogonType,
+    _In_reads_bytes_(SubmitBufferSize) PVOID ProtocolSubmitBuffer,
+    _In_ PVOID ClientBufferBase,
+    _In_ ULONG SubmitBufferSize,
+    _Inout_ PSECPKG_SURROGATE_LOGON SurrogateLogon,
+    _Outptr_result_bytebuffer_(*ProfileBufferSize) PVOID *ProfileBuffer,
+    _Out_ PULONG ProfileBufferSize,
+    _Out_ PLUID LogonId,
+    _Out_ PNTSTATUS SubStatus,
+    _Out_ PLSA_TOKEN_INFORMATION_TYPE TokenInformationType,
+    _Outptr_ PVOID *TokenInformation,
+    _Out_ PUNICODE_STRING *AccountName,
+    _Out_ PUNICODE_STRING *AuthenticatingAuthority,
+    _Out_ PUNICODE_STRING *MachineName,
+    _Out_ PSECPKG_PRIMARY_CRED PrimaryCredentials,
+    _Outptr_ PSECPKG_SUPPLEMENTAL_CRED_ARRAY * SupplementalCredentials
+    );
+
+typedef LSA_AP_LOGON_USER_EX3 *PLSA_AP_LOGON_USER_EX3;
+
+typedef NTSTATUS
+(LSA_AP_PRE_LOGON_USER_SURROGATE) (
+    _In_ PLSA_CLIENT_REQUEST ClientRequest,
+    _In_ SECURITY_LOGON_TYPE LogonType,
+    _In_reads_bytes_(SubmitBufferSize) PVOID ProtocolSubmitBuffer,
+    _In_ PVOID ClientBufferBase,
+    _In_ ULONG SubmitBufferSize,
+    _Inout_ PSECPKG_SURROGATE_LOGON SurrogateLogon,
+    _Out_ PNTSTATUS SubStatus
+    );
+
+typedef LSA_AP_PRE_LOGON_USER_SURROGATE *PLSA_AP_PRE_LOGON_USER_SURROGATE;
+
+typedef NTSTATUS
+(LSA_AP_POST_LOGON_USER_SURROGATE) (
+    _In_ PLSA_CLIENT_REQUEST ClientRequest,
+    _In_ SECURITY_LOGON_TYPE LogonType,
+    _In_reads_bytes_(SubmitBufferSize) PVOID ProtocolSubmitBuffer,
+    _In_ PVOID ClientBufferBase,
+    _In_ ULONG SubmitBufferSize,
+    _In_ PSECPKG_SURROGATE_LOGON SurrogateLogon,
+    _In_reads_bytes_(ProfileBufferSize) PVOID ProfileBuffer,
+    _In_ ULONG ProfileBufferSize,
+    _In_ PLUID LogonId,
+    _In_ NTSTATUS Status,
+    _In_ NTSTATUS SubStatus,
+    _In_ LSA_TOKEN_INFORMATION_TYPE TokenInformationType,
+    _In_ PVOID TokenInformation,
+    _In_ PUNICODE_STRING AccountName,
+    _In_ PUNICODE_STRING AuthenticatingAuthority,
+    _In_ PUNICODE_STRING MachineName,
+    _In_ PSECPKG_PRIMARY_CRED PrimaryCredentials,
+    _In_ PSECPKG_SUPPLEMENTAL_CRED_ARRAY SupplementalCredentials
+    );
+
+typedef LSA_AP_POST_LOGON_USER_SURROGATE *PLSA_AP_POST_LOGON_USER_SURROGATE;
+
+typedef NTSTATUS
 (NTAPI SpAcceptCredentialsFn)(
     _In_ SECURITY_LOGON_TYPE LogonType,
     _In_ PUNICODE_STRING AccountName,
@@ -2182,6 +2257,10 @@ typedef struct _SECPKG_FUNCTION_TABLE {
     SpGetRemoteCredGuardSupplementalCredsFn* GetRemoteCredGuardSupplementalCreds; // SECPKG_INTERFACE_VERSION_8
 
     SpGetTbalSupplementalCredsFn* GetTbalSupplementalCreds;                 // SECPKG_INTERFACE_VERSION_9
+
+    PLSA_AP_LOGON_USER_EX3 LogonUserEx3;                                    // SECPKG_INTERFACE_VERSION_10
+    PLSA_AP_PRE_LOGON_USER_SURROGATE PreLogonUserSurrogate;                 // SECPKG_INTERFACE_VERSION_10
+    PLSA_AP_POST_LOGON_USER_SURROGATE PostLogonUserSurrogate;               // SECPKG_INTERFACE_VERSION_10
 } SECPKG_FUNCTION_TABLE, *PSECPKG_FUNCTION_TABLE;
 
 //
@@ -2337,6 +2416,7 @@ typedef NTSTATUS
 //      SECPKG_INTERFACE_VERSION_7 indicates all fields through PostLogonUserInfo are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_8 indicates all fields through GetRemoteSupplementalCreds are defined (potentially to NULL)
 //      SECPKG_INTERFACE_VERSION_9 indicates all fields through GetTbalSupplementalCreds are defined (potentially to NULL)
+//      SECPKG_INTERFACE_VERSION_10 indicates all fields through PostLogonUserSurrogate are defined (potentially to NULL)
 //
 // * Returned from SpUserModeInitializeFn to indicate the version of the auth package.
 //      All packages currently return SECPKG_INTERFACE_VERSION
@@ -2351,6 +2431,7 @@ typedef NTSTATUS
 #define SECPKG_INTERFACE_VERSION_7  0x00400000
 #define SECPKG_INTERFACE_VERSION_8  0x00800000
 #define SECPKG_INTERFACE_VERSION_9  0x01000000
+#define SECPKG_INTERFACE_VERSION_10 0x02000000
 
 typedef enum _KSEC_CONTEXT_TYPE {
     KSecPaged,

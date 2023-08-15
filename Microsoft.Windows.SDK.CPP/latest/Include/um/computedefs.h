@@ -19,9 +19,6 @@ Abstract:
 #pragma once
 #endif
 
-#define HCS_E_PROCESS_INFO_NOT_AVAILABLE ((HRESULT)0x8037011DL)
-#define HCS_E_SERVICE_DISCONNECT ((HRESULT)0x8037011EL)
-
 // Handle to a compute system
 DECLARE_HANDLE(HCS_SYSTEM);
 
@@ -52,7 +49,8 @@ typedef enum HCS_OPERATION_TYPE
     HcsOperationTypeSignalProcess = 11,
     HcsOperationTypeGetProcessInfo = 12,
     HcsOperationTypeGetProcessProperties = 13,
-    HcsOperationTypeModifyProcess = 14
+    HcsOperationTypeModifyProcess = 14,
+    HcsOperationTypeCrash = 15
 } HCS_OPERATION_TYPE;
 
 #define HCS_INVALID_OPERATION_ID (UINT64)(-1)
@@ -173,5 +171,23 @@ typedef struct
     HANDLE StdOutput; // If created, standard output handle of the process
     HANDLE StdError;  // If created, standard error handle of the process
 } HCS_PROCESS_INFORMATION;
+
+// Versions available for HCS_CREATE_OPTIONS used by HcsCreateComputeSystemInNamespace.
+typedef enum HCS_CREATE_OPTIONS
+{
+    HcsCreateOptions_1 = 0x00010000 // HCS_CREATE_OPTIONS_1
+}HCS_CREATE_OPTIONS;
+
+// Struct containing different options when creating a compute system with HcsCreateComputeSystemInNamespace.
+// Header.Version should be initialized to HcsCreateOptions_1.
+typedef struct
+{
+    HCS_CREATE_OPTIONS      Version;    // HcsCreateOptions_1
+    HANDLE                  UserToken;  // Optional user token to run the compute system as
+    SECURITY_DESCRIPTOR*    SecurityDescriptor;
+    HCS_EVENT_OPTIONS       CallbackOptions;
+    void*                   CallbackContext;
+    HCS_EVENT_CALLBACK      Callback;
+} HCS_CREATE_OPTIONS_1;
 
 #endif // _HYPERV_COMPUTEDEFS_H_

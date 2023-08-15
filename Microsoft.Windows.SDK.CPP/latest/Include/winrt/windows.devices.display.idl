@@ -49,6 +49,8 @@ namespace Windows
 
             interface IDisplayMonitor;
 
+            interface IDisplayMonitor2;
+
             interface IDisplayMonitorStatics;
 
             runtimeclass DisplayMonitor;
@@ -142,6 +144,14 @@ namespace Windows
                 HRESULT GetDescriptor([in] Windows.Devices.Display.DisplayMonitorDescriptorKind descriptorKind, [out] UINT32* __resultSize, [out] [retval] [size_is(, *__resultSize)] BYTE** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Devices.Display.DisplayMonitor)]
+            [uuid(023018E6-CB23-5830-96DF-A7BF6E602577)]
+            interface IDisplayMonitor2 : IInspectable
+            {
+                [propget] HRESULT IsDolbyVisionSupportedInHdrMode([out] [retval] boolean* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [exclusiveto(Windows.Devices.Display.DisplayMonitor)]
             [uuid(6EAE698F-A228-4C05-821D-B695D667DE8E)]
@@ -159,6 +169,7 @@ namespace Windows
             runtimeclass DisplayMonitor
             {
                 [default] interface Windows.Devices.Display.IDisplayMonitor;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Devices.Display.IDisplayMonitor2;
             }
         }
     }

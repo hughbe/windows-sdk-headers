@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.media.transcoding.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -278,7 +122,8 @@ namespace ABI {
                 interface IMediaTranscoder;
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder ABI::Windows::Media::Transcoding::IMediaTranscoder
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_FWD_DEFINED__
@@ -292,7 +137,8 @@ namespace ABI {
                 interface IMediaTranscoder2;
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 ABI::Windows::Media::Transcoding::IMediaTranscoder2
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_FWD_DEFINED__
@@ -306,7 +152,8 @@ namespace ABI {
                 interface IPrepareTranscodeResult;
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult ABI::Windows::Media::Transcoding::IPrepareTranscodeResult
 
 #endif // ____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_FWD_DEFINED__
@@ -314,266 +161,6 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Transcoding {
-                enum TranscodeFailureReason : int;
-            } /* Transcoding */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#define DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("009c6245-0e59-53b0-9fd2-d250e45a00a3"))
-IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> : IAsyncOperationProgressHandler_impl<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationProgressHandler`2<Windows.Media.Transcoding.TranscodeFailureReason, Double>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationProgressHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-//#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t ABI::Windows::Foundation::IAsyncOperationProgressHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#define DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("080f1890-4fca-5165-a989-4b07da8e0b53"))
-IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> : IAsyncOperationWithProgressCompletedHandler_impl<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationWithProgressCompletedHandler`2<Windows.Media.Transcoding.TranscodeFailureReason, Double>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationWithProgressCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-//#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t ABI::Windows::Foundation::IAsyncOperationWithProgressCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#define DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("272eec20-4b64-5d53-a644-f9917b3d19d8"))
-IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> : IAsyncOperationWithProgress_impl<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperationWithProgress`2<Windows.Media.Transcoding.TranscodeFailureReason, Double>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationWithProgress<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason,double> __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t;
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::__FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-//#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_t ABI::Windows::Foundation::IAsyncOperationWithProgress<ABI::Windows::Media::Transcoding::TranscodeFailureReason,DOUBLE>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Transcoding {
-                class PrepareTranscodeResult;
-            } /* Transcoding */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("a44d7d07-8f74-52ee-9f02-c2b244b4ff2a"))
-IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*, ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Transcoding.PrepareTranscodeResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("f5f07c13-3047-5bab-8eb7-6e5d7d14afae"))
-IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*, ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Transcoding.PrepareTranscodeResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
-//#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("c42ae2bf-e194-5179-b8ad-03b51c04e1da"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Transcoding.TranscodeFailureReason>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE
-#define DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("02132510-3899-5257-bed9-a43e5149d28c"))
-IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> : IAsyncOperation_impl<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Transcoding.TranscodeFailureReason>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<enum ABI::Windows::Media::Transcoding::TranscodeFailureReason> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t;
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
-//#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::Transcoding::TranscodeFailureReason>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_USE */
-
-
-
-
-#ifndef DEF___FIAsyncActionProgressHandler_1_double_USE
-#define DEF___FIAsyncActionProgressHandler_1_double_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("44825c7c-0da9-5691-b2b4-914f231eeced"))
-IAsyncActionProgressHandler<double> : IAsyncActionProgressHandler_impl<double> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncActionProgressHandler`1<Double>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncActionProgressHandler<double> __FIAsyncActionProgressHandler_1_double_t;
-#define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::IAsyncActionProgressHandler<DOUBLE>
-//#define __FIAsyncActionProgressHandler_1_double_t ABI::Windows::Foundation::IAsyncActionProgressHandler<DOUBLE>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncActionProgressHandler_1_double_USE */
-
-
-
 
 #ifndef DEF___FIAsyncActionWithProgressCompletedHandler_1_double_USE
 #define DEF___FIAsyncActionWithProgressCompletedHandler_1_double_USE
@@ -581,11 +168,11 @@ typedef IAsyncActionProgressHandler<double> __FIAsyncActionProgressHandler_1_dou
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("94d64ac6-4491-53ef-8be8-36481f3ff1e8"))
-IAsyncActionWithProgressCompletedHandler<double> : IAsyncActionWithProgressCompletedHandler_impl<double> 
+IAsyncActionWithProgressCompletedHandler<double> : IAsyncActionWithProgressCompletedHandler_impl<double>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<Double>"; 
+        return L"Windows.Foundation.AsyncActionWithProgressCompletedHandler`1<Double>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -593,14 +180,10 @@ IAsyncActionWithProgressCompletedHandler<double> : IAsyncActionWithProgressCompl
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgressCompletedHandler<double> __FIAsyncActionWithProgressCompletedHandler_1_double_t;
 #define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgressCompletedHandler_1_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncActionWithProgressCompletedHandler_1_double ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<DOUBLE>
-//#define __FIAsyncActionWithProgressCompletedHandler_1_double_t ABI::Windows::Foundation::IAsyncActionWithProgressCompletedHandler<DOUBLE>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncActionWithProgressCompletedHandler_1_double_USE */
-
 
 
 
@@ -610,11 +193,11 @@ typedef IAsyncActionWithProgressCompletedHandler<double> __FIAsyncActionWithProg
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("4f1430a6-a825-56ca-b047-1a9bad52ba67"))
-IAsyncActionWithProgress<double> : IAsyncActionWithProgress_impl<double> 
+IAsyncActionWithProgress<double> : IAsyncActionWithProgress_impl<double>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncActionWithProgress`1<Double>"; 
+        return L"Windows.Foundation.IAsyncActionWithProgress`1<Double>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -622,17 +205,100 @@ IAsyncActionWithProgress<double> : IAsyncActionWithProgress_impl<double>
 // correct parameterized interface specialization.
 typedef IAsyncActionWithProgress<double> __FIAsyncActionWithProgress_1_double_t;
 #define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::__FIAsyncActionWithProgress_1_double_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncActionWithProgress_1_double ABI::Windows::Foundation::IAsyncActionWithProgress<DOUBLE>
-//#define __FIAsyncActionWithProgress_1_double_t ABI::Windows::Foundation::IAsyncActionWithProgress<DOUBLE>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncActionWithProgress_1_double_USE */
 
 
 
+#ifndef DEF___FIAsyncActionProgressHandler_1_double_USE
+#define DEF___FIAsyncActionProgressHandler_1_double_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("44825c7c-0da9-5691-b2b4-914f231eeced"))
+IAsyncActionProgressHandler<double> : IAsyncActionProgressHandler_impl<double>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncActionProgressHandler`1<Double>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncActionProgressHandler<double> __FIAsyncActionProgressHandler_1_double_t;
+#define __FIAsyncActionProgressHandler_1_double ABI::Windows::Foundation::__FIAsyncActionProgressHandler_1_double_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncActionProgressHandler_1_double_USE */
+
+
+namespace ABI {
+    namespace Windows {
+        namespace Media {
+            namespace Transcoding {
+                class PrepareTranscodeResult;
+            } /* Transcoding */
+        } /* Media */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("f5f07c13-3047-5bab-8eb7-6e5d7d14afae"))
+IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*, ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.Transcoding.PrepareTranscodeResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("a44d7d07-8f74-52ee-9f02-c2b244b4ff2a"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*, ABI::Windows::Media::Transcoding::IPrepareTranscodeResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.Transcoding.PrepareTranscodeResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::Transcoding::PrepareTranscodeResult*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -643,26 +309,19 @@ namespace ABI {
                 interface IPropertySet;
             } /* Collections */
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct TimeSpan TimeSpan;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
@@ -673,14 +332,11 @@ namespace ABI {
                 interface IMediaSource;
             } /* Core */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CCore_CIMediaSource ABI::Windows::Media::Core::IMediaSource
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -689,7 +345,8 @@ namespace ABI {
                 class MediaEncodingProfile;
             } /* MediaProperties */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
@@ -700,14 +357,11 @@ namespace ABI {
                 interface IMediaEncodingProfile;
             } /* MediaProperties */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile ABI::Windows::Media::MediaProperties::IMediaEncodingProfile
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -716,13 +370,11 @@ namespace ABI {
         namespace Storage {
             interface IStorageFile;
         } /* Storage */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
-
-
-
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -733,58 +385,31 @@ namespace ABI {
                 interface IRandomAccessStream;
             } /* Streams */
         } /* Storage */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                
                 typedef enum MediaVideoProcessingAlgorithm : int MediaVideoProcessingAlgorithm;
-                
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                
                 typedef enum TranscodeFailureReason : int TranscodeFailureReason;
-                
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Media {
-            namespace Transcoding {
-                class MediaTranscoder;
-            } /* Transcoding */
-        } /* Media */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -792,26 +417,22 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                /* [v1_enum, contract] */
                 enum MediaVideoProcessingAlgorithm : int
                 {
                     MediaVideoProcessingAlgorithm_Default = 0,
                     MediaVideoProcessingAlgorithm_MrfCrf444 = 1,
                 };
-                
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -819,15 +440,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                /* [v1_enum, contract] */
                 enum TranscodeFailureReason : int
                 {
                     TranscodeFailureReason_None = 0,
@@ -835,12 +453,11 @@ namespace ABI {
                     TranscodeFailureReason_InvalidProfile = 2,
                     TranscodeFailureReason_CodecNotFound = 3,
                 };
-                
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -848,9 +465,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.MediaTranscoder
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -861,77 +476,74 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                /* [object, uuid("190C99D2-A0AA-4D34-86BC-EED1B12C2F5B"), exclusiveto, contract] */
-                MIDL_INTERFACE("190C99D2-A0AA-4D34-86BC-EED1B12C2F5B")
+                MIDL_INTERFACE("190c99d2-a0aa-4d34-86bc-eed1b12c2f5b")
                 IMediaTranscoder : public IInspectable
                 {
                 public:
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TrimStartTime(
-                        /* [in] */ABI::Windows::Foundation::TimeSpan value
+                    virtual HRESULT STDMETHODCALLTYPE put_TrimStartTime(
+                        ABI::Windows::Foundation::TimeSpan value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TrimStartTime(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                    virtual HRESULT STDMETHODCALLTYPE get_TrimStartTime(
+                        ABI::Windows::Foundation::TimeSpan* value
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_TrimStopTime(
-                        /* [in] */ABI::Windows::Foundation::TimeSpan value
+                    virtual HRESULT STDMETHODCALLTYPE put_TrimStopTime(
+                        ABI::Windows::Foundation::TimeSpan value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_TrimStopTime(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                    virtual HRESULT STDMETHODCALLTYPE get_TrimStopTime(
+                        ABI::Windows::Foundation::TimeSpan* value
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_AlwaysReencode(
-                        /* [in] */::boolean value
+                    virtual HRESULT STDMETHODCALLTYPE put_AlwaysReencode(
+                        boolean value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AlwaysReencode(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_AlwaysReencode(
+                        boolean* value
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_HardwareAccelerationEnabled(
-                        /* [in] */::boolean value
+                    virtual HRESULT STDMETHODCALLTYPE put_HardwareAccelerationEnabled(
+                        boolean value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HardwareAccelerationEnabled(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_HardwareAccelerationEnabled(
+                        boolean* value
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddAudioEffect(
-                        /* [in] */__RPC__in HSTRING activatableClassId
+                    virtual HRESULT STDMETHODCALLTYPE AddAudioEffect(
+                        HSTRING activatableClassId
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddAudioEffectWithSettings(
-                        /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */::boolean effectRequired,
-                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * configuration
+                    virtual HRESULT STDMETHODCALLTYPE AddAudioEffectWithSettings(
+                        HSTRING activatableClassId,
+                        boolean effectRequired,
+                        ABI::Windows::Foundation::Collections::IPropertySet* configuration
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddVideoEffect(
-                        /* [in] */__RPC__in HSTRING activatableClassId
+                    virtual HRESULT STDMETHODCALLTYPE AddVideoEffect(
+                        HSTRING activatableClassId
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE AddVideoEffectWithSettings(
-                        /* [in] */__RPC__in HSTRING activatableClassId,
-                        /* [in] */::boolean effectRequired,
-                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::Collections::IPropertySet * configuration
+                    virtual HRESULT STDMETHODCALLTYPE AddVideoEffectWithSettings(
+                        HSTRING activatableClassId,
+                        boolean effectRequired,
+                        ABI::Windows::Foundation::Collections::IPropertySet* configuration
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ClearEffects(void) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PrepareFileTranscodeAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * source,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * destination,
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::MediaProperties::IMediaEncodingProfile * profile,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
+                        ABI::Windows::Storage::IStorageFile* source,
+                        ABI::Windows::Storage::IStorageFile* destination,
+                        ABI::Windows::Media::MediaProperties::IMediaEncodingProfile* profile,
+                        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE PrepareStreamTranscodeAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * source,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * destination,
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::MediaProperties::IMediaEncodingProfile * profile,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* source,
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* destination,
+                        ABI::Windows::Media::MediaProperties::IMediaEncodingProfile* profile,
+                        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaTranscoder=_uuidof(IMediaTranscoder);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaTranscoder = _uuidof(IMediaTranscoder);
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -939,9 +551,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.MediaTranscoder
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -952,36 +562,33 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                /* [object, uuid("40531D74-35E0-4F04-8574-CA8BC4E5A082"), exclusiveto, contract] */
-                MIDL_INTERFACE("40531D74-35E0-4F04-8574-CA8BC4E5A082")
+                MIDL_INTERFACE("40531d74-35e0-4f04-8574-ca8bc4e5a082")
                 IMediaTranscoder2 : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE PrepareMediaStreamSourceTranscodeAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::Core::IMediaSource * source,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * destination,
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::MediaProperties::IMediaEncodingProfile * profile,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
+                        ABI::Windows::Media::Core::IMediaSource* source,
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* destination,
+                        ABI::Windows::Media::MediaProperties::IMediaEncodingProfile* profile,
+                        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_VideoProcessingAlgorithm(
-                        /* [in] */ABI::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm value
+                    virtual HRESULT STDMETHODCALLTYPE put_VideoProcessingAlgorithm(
+                        ABI::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_VideoProcessingAlgorithm(
-                        /* [retval, out] */__RPC__out ABI::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm * value
+                    virtual HRESULT STDMETHODCALLTYPE get_VideoProcessingAlgorithm(
+                        ABI::Windows::Media::Transcoding::MediaVideoProcessingAlgorithm* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IMediaTranscoder2=_uuidof(IMediaTranscoder2);
-                
+                extern MIDL_CONST_ID IID& IID_IMediaTranscoder2 = _uuidof(IMediaTranscoder2);
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -989,9 +596,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.PrepareTranscodeResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1002,40 +607,36 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace Transcoding {
-                /* [object, uuid("05F25DCE-994F-4A34-9D68-97CCCE1730D6"), exclusiveto, contract] */
-                MIDL_INTERFACE("05F25DCE-994F-4A34-9D68-97CCCE1730D6")
+                MIDL_INTERFACE("05f25dce-994f-4a34-9d68-97ccce1730d6")
                 IPrepareTranscodeResult : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanTranscode(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_CanTranscode(
+                        boolean* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FailureReason(
-                        /* [retval, out] */__RPC__out ABI::Windows::Media::Transcoding::TranscodeFailureReason * value
+                    virtual HRESULT STDMETHODCALLTYPE get_FailureReason(
+                        ABI::Windows::Media::Transcoding::TranscodeFailureReason* value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TranscodeAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncActionWithProgress_1_double * * operation
+                        __FIAsyncActionWithProgress_1_double** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IPrepareTranscodeResult=_uuidof(IPrepareTranscodeResult);
-                
+                extern MIDL_CONST_ID IID& IID_IPrepareTranscodeResult = _uuidof(IPrepareTranscodeResult);
             } /* Transcoding */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.Transcoding.MediaTranscoder
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1050,20 +651,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeRe
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Transcoding_MediaTranscoder_DEFINED
 #define RUNTIMECLASS_Windows_Media_Transcoding_MediaTranscoder_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Transcoding_MediaTranscoder[] = L"Windows.Media.Transcoding.MediaTranscoder";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Transcoding.PrepareTranscodeResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Transcoding.IPrepareTranscodeResult ** Default Interface **
@@ -1074,15 +672,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Transcoding_PrepareTranscodeResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_Transcoding_PrepareTranscodeResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Transcoding_PrepareTranscodeResult[] = L"Windows.Media.Transcoding.PrepareTranscodeResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1107,223 +701,187 @@ typedef interface __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult 
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
-enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason;
-#if !defined(____FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+typedef interface __FIAsyncActionProgressHandler_1_double __FIAsyncActionProgressHandler_1_double;
+
+typedef interface __FIAsyncActionWithProgress_1_double __FIAsyncActionWithProgress_1_double;
+
+#if !defined(____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__)
+#define ____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncActionWithProgressCompletedHandler_1_double __FIAsyncActionWithProgressCompletedHandler_1_double;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+EXTERN_C const IID IID___FIAsyncActionWithProgressCompletedHandler_1_double;
 
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
-
-typedef struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl
+typedef struct __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncActionWithProgressCompletedHandler_1_double* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncActionWithProgressCompletedHandler_1_double* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncActionWithProgressCompletedHandler_1_double* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncActionWithProgressCompletedHandler_1_double* This,
+        __FIAsyncActionWithProgress_1_double* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ double progressInfo);
     END_INTERFACE
-} __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl;
+} __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl;
 
-interface __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double
+interface __FIAsyncActionWithProgressCompletedHandler_1_double
 {
-    CONST_VTBL struct __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_Invoke(This,asyncInfo,progressInfo)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
+#define __FIAsyncActionWithProgressCompletedHandler_1_double_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncActionWithProgressCompletedHandler_1_double_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncActionWithProgressCompletedHandler_1_double_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncActionWithProgressCompletedHandler_1_double_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__
 
-#endif // ____FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
+#if !defined(____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__)
+#define ____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__
 
-
-
-#if !defined(____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+typedef interface __FIAsyncActionWithProgress_1_double __FIAsyncActionWithProgress_1_double;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+EXTERN_C const IID IID___FIAsyncActionWithProgress_1_double;
 
-//  Forward declare the async operation.
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
-
-typedef struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl
+typedef struct __FIAsyncActionWithProgress_1_doubleVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *asyncInfo, /* [in] */ AsyncStatus status);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncActionWithProgress_1_double* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncActionWithProgress_1_double* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncActionWithProgress_1_double* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncActionWithProgress_1_double* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncActionWithProgress_1_double* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncActionWithProgress_1_double* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Progress)(__FIAsyncActionWithProgress_1_double* This,
+        __FIAsyncActionProgressHandler_1_double* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Progress)(__FIAsyncActionWithProgress_1_double* This,
+        __FIAsyncActionProgressHandler_1_double** result);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncActionWithProgress_1_double* This,
+        __FIAsyncActionWithProgressCompletedHandler_1_double* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncActionWithProgress_1_double* This,
+        __FIAsyncActionWithProgressCompletedHandler_1_double** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncActionWithProgress_1_double* This);
+
     END_INTERFACE
-} __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl;
+} __FIAsyncActionWithProgress_1_doubleVtbl;
 
-interface __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double
+interface __FIAsyncActionWithProgress_1_double
 {
-    CONST_VTBL struct __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncActionWithProgress_1_doubleVtbl* lpVtbl;
 };
 
-
-
 #ifdef COBJMACROS
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncActionWithProgress_1_double_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncActionWithProgress_1_double_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncActionWithProgress_1_double_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncActionWithProgress_1_double_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncActionWithProgress_1_double_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncActionWithProgress_1_double_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncActionWithProgress_1_double_put_Progress(This, handler) \
+    ((This)->lpVtbl->put_Progress(This, handler))
+
+#define __FIAsyncActionWithProgress_1_double_get_Progress(This, result) \
+    ((This)->lpVtbl->get_Progress(This, result))
+
+#define __FIAsyncActionWithProgress_1_double_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncActionWithProgress_1_double_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncActionWithProgress_1_double_GetResults(This) \
+    ((This)->lpVtbl->GetResults(This))
+
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__
 
+#if !defined(____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__)
+#define ____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__
 
-#endif // ____FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+typedef interface __FIAsyncActionProgressHandler_1_double __FIAsyncActionProgressHandler_1_double;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double;
+EXTERN_C const IID IID___FIAsyncActionProgressHandler_1_double;
 
-typedef struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl
+typedef struct __FIAsyncActionProgressHandler_1_doubleVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncActionProgressHandler_1_double* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncActionProgressHandler_1_double* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncActionProgressHandler_1_double* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncActionProgressHandler_1_double* This,
+        __FIAsyncActionWithProgress_1_double* asyncInfo,
+        DOUBLE progressInfo);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationProgressHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double **handler);
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [in] */ __RPC__in_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationWithProgressCompletedHandler_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double * This, /* [retval][out] */ __RPC__deref_out_opt enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason *results);
     END_INTERFACE
-} __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl;
+} __FIAsyncActionProgressHandler_1_doubleVtbl;
 
-interface __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double
+interface __FIAsyncActionProgressHandler_1_double
 {
-    CONST_VTBL struct __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_doubleVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncActionProgressHandler_1_doubleVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncActionProgressHandler_1_double_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_put_Progress(This,handler)	\
-    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_get_Progress(This,handler)	\
-    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncActionProgressHandler_1_double_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncActionProgressHandler_1_double_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncActionProgressHandler_1_double_Invoke(This, asyncInfo, progressInfo) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, progressInfo))
+
 #endif /* COBJMACROS */
 
-
-
-#endif // ____FIAsyncOperationWithProgress_2_Windows__CMedia__CTranscoding__CTranscodeFailureReason_double_INTERFACE_DEFINED__
-
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__
+#endif // ____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__
 
 typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__)
@@ -1337,327 +895,116 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrep
 typedef struct __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl;
 
 interface __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
-
 
 #endif // ____FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__
 
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* This,
+        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason;
-
-typedef struct __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl;
-
-interface __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReasonVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CMedia__CTranscoding__CTranscodeFailureReason_INTERFACE_DEFINED__
-
-
-#if !defined(____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__)
-#define ____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncActionProgressHandler_1_double __FIAsyncActionProgressHandler_1_double;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncActionProgressHandler_1_double;
-
-typedef interface __FIAsyncActionWithProgress_1_double __FIAsyncActionWithProgress_1_double;
-
-typedef struct __FIAsyncActionProgressHandler_1_doubleVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncActionProgressHandler_1_double * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncActionProgressHandler_1_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncActionProgressHandler_1_double * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncActionProgressHandler_1_double * This, /* [in] */ __RPC__in_opt __FIAsyncActionWithProgress_1_double *asyncInfo, /* [in] */ UINT64 progressInfo);
-    END_INTERFACE
-} __FIAsyncActionProgressHandler_1_doubleVtbl;
-
-interface __FIAsyncActionProgressHandler_1_double
-{
-    CONST_VTBL struct __FIAsyncActionProgressHandler_1_doubleVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncActionProgressHandler_1_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncActionProgressHandler_1_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncActionProgressHandler_1_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncActionProgressHandler_1_double_Invoke(This,asyncInfo,progressInfo)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,progressInfo) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncActionProgressHandler_1_double_INTERFACE_DEFINED__
-
-
-#if !defined(____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__)
-#define ____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncActionWithProgressCompletedHandler_1_double __FIAsyncActionWithProgressCompletedHandler_1_double;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncActionWithProgressCompletedHandler_1_double;
-
-typedef interface __FIAsyncActionWithProgress_1_double __FIAsyncActionWithProgress_1_double;
-
-typedef struct __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncActionWithProgressCompletedHandler_1_double * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncActionWithProgressCompletedHandler_1_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncActionWithProgressCompletedHandler_1_double * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncActionWithProgressCompletedHandler_1_double * This, /* [in] */ __RPC__in_opt __FIAsyncActionWithProgress_1_double *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl;
-
-interface __FIAsyncActionWithProgressCompletedHandler_1_double
-{
-    CONST_VTBL struct __FIAsyncActionWithProgressCompletedHandler_1_doubleVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncActionWithProgressCompletedHandler_1_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncActionWithProgressCompletedHandler_1_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncActionWithProgressCompletedHandler_1_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncActionWithProgressCompletedHandler_1_double_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncActionWithProgressCompletedHandler_1_double_INTERFACE_DEFINED__
-
-
-#if !defined(____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__)
-#define ____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncActionWithProgress_1_double __FIAsyncActionWithProgress_1_double;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncActionWithProgress_1_double;
-
-typedef struct __FIAsyncActionWithProgress_1_doubleVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncActionWithProgress_1_double * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncActionWithProgress_1_double * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncActionWithProgress_1_double * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncActionWithProgress_1_double * This,
-            /* [out] */ __RPC__out ULONG *iidCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncActionWithProgress_1_double * This,/* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncActionWithProgress_1_double * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Progress )(__RPC__in __FIAsyncActionWithProgress_1_double * This, /* [in] */ __RPC__in_opt __FIAsyncActionProgressHandler_1_double *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Progress )(__RPC__in __FIAsyncActionWithProgress_1_double * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncActionProgressHandler_1_double **handler);
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncActionWithProgress_1_double * This, /* [in] */ __RPC__in_opt __FIAsyncActionWithProgressCompletedHandler_1_double *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncActionWithProgress_1_double * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncActionWithProgressCompletedHandler_1_double **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncActionWithProgress_1_double * This);
-    END_INTERFACE
-} __FIAsyncActionWithProgress_1_doubleVtbl;
-
-interface __FIAsyncActionWithProgress_1_double
-{
-    CONST_VTBL struct __FIAsyncActionWithProgress_1_doubleVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncActionWithProgress_1_double_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncActionWithProgress_1_double_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncActionWithProgress_1_double_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncActionWithProgress_1_double_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncActionWithProgress_1_double_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncActionWithProgress_1_double_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncActionWithProgress_1_double_put_Progress(This,handler)	\
-    ( (This)->lpVtbl -> put_Progress(This,handler) ) 
-#define __FIAsyncActionWithProgress_1_double_get_Progress(This,handler)	\
-    ( (This)->lpVtbl -> get_Progress(This,handler) ) 
-#define __FIAsyncActionWithProgress_1_double_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncActionWithProgress_1_double_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncActionWithProgress_1_double_GetResults(This)	\
-    ( (This)->lpVtbl -> GetResults(This) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncActionWithProgress_1_double_INTERFACE_DEFINED__
-
-
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1665,15 +1012,7 @@ typedef interface __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet __x_AB
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
 
-
-
-
-
-
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
-
-
-
 
 #ifndef ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
@@ -1681,19 +1020,11 @@ typedef interface __x_ABI_CWindows_CMedia_CCore_CIMediaSource __x_ABI_CWindows_C
 
 #endif // ____x_ABI_CWindows_CMedia_CCore_CIMediaSource_FWD_DEFINED__
 
-
-
-
-
 #ifndef ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile;
 
 #endif // ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1701,37 +1032,15 @@ typedef interface __x_ABI_CWindows_CStorage_CIStorageFile __x_ABI_CWindows_CStor
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 
-
-
-
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream;
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm;
 
-
 typedef enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -1739,11 +1048,8 @@ typedef enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason __x_AB
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm
 {
     MediaVideoProcessingAlgorithm_Default = 0,
@@ -1751,18 +1057,14 @@ enum __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Media.Transcoding.TranscodeFailureReason
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason
 {
     TranscodeFailureReason_None = 0,
@@ -1772,206 +1074,153 @@ enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Interface Windows.Media.Transcoding.IMediaTranscoder
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.MediaTranscoder
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Transcoding_IMediaTranscoder[] = L"Windows.Media.Transcoding.IMediaTranscoder";
-/* [object, uuid("190C99D2-A0AA-4D34-86BC-EED1B12C2F5B"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoderVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_TrimStartTime)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimStartTime)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* put_TrimStopTime)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimStopTime)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* put_AlwaysReencode)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlwaysReencode)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* put_HardwareAccelerationEnabled)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_HardwareAccelerationEnabled)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* AddAudioEffect)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        HSTRING activatableClassId);
+    HRESULT (STDMETHODCALLTYPE* AddAudioEffectWithSettings)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        HSTRING activatableClassId,
+        boolean effectRequired,
+        __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet* configuration);
+    HRESULT (STDMETHODCALLTYPE* AddVideoEffect)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        HSTRING activatableClassId);
+    HRESULT (STDMETHODCALLTYPE* AddVideoEffectWithSettings)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        HSTRING activatableClassId,
+        boolean effectRequired,
+        __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet* configuration);
+    HRESULT (STDMETHODCALLTYPE* ClearEffects)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This);
+    HRESULT (STDMETHODCALLTYPE* PrepareFileTranscodeAsync)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* source,
+        __x_ABI_CWindows_CStorage_CIStorageFile* destination,
+        __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile* profile,
+        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation);
+    HRESULT (STDMETHODCALLTYPE* PrepareStreamTranscodeAsync)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* source,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* destination,
+        __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile* profile,
+        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propput] */HRESULT ( STDMETHODCALLTYPE *put_TrimStartTime )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TrimStartTime )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_TrimStopTime )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__x_ABI_CWindows_CFoundation_CTimeSpan value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_TrimStopTime )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_AlwaysReencode )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */boolean value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AlwaysReencode )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_HardwareAccelerationEnabled )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */boolean value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HardwareAccelerationEnabled )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *AddAudioEffect )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in HSTRING activatableClassId
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *AddAudioEffectWithSettings )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in HSTRING activatableClassId,
-        /* [in] */boolean effectRequired,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * configuration
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *AddVideoEffect )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in HSTRING activatableClassId
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *AddVideoEffectWithSettings )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in HSTRING activatableClassId,
-        /* [in] */boolean effectRequired,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet * configuration
-        );
-    HRESULT ( STDMETHODCALLTYPE *ClearEffects )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This
-        );
-    HRESULT ( STDMETHODCALLTYPE *PrepareFileTranscodeAsync )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * source,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * destination,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile * profile,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
-        );
-    HRESULT ( STDMETHODCALLTYPE *PrepareStreamTranscodeAsync )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * source,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * destination,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile * profile,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoderVtbl;
 
 interface __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoderVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoderVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_TrimStartTime(This,value) \
-    ( (This)->lpVtbl->put_TrimStartTime(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_TrimStartTime(This, value) \
+    ((This)->lpVtbl->put_TrimStartTime(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_TrimStartTime(This,value) \
-    ( (This)->lpVtbl->get_TrimStartTime(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_TrimStartTime(This, value) \
+    ((This)->lpVtbl->get_TrimStartTime(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_TrimStopTime(This,value) \
-    ( (This)->lpVtbl->put_TrimStopTime(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_TrimStopTime(This, value) \
+    ((This)->lpVtbl->put_TrimStopTime(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_TrimStopTime(This,value) \
-    ( (This)->lpVtbl->get_TrimStopTime(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_TrimStopTime(This, value) \
+    ((This)->lpVtbl->get_TrimStopTime(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_AlwaysReencode(This,value) \
-    ( (This)->lpVtbl->put_AlwaysReencode(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_AlwaysReencode(This, value) \
+    ((This)->lpVtbl->put_AlwaysReencode(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_AlwaysReencode(This,value) \
-    ( (This)->lpVtbl->get_AlwaysReencode(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_AlwaysReencode(This, value) \
+    ((This)->lpVtbl->get_AlwaysReencode(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_HardwareAccelerationEnabled(This,value) \
-    ( (This)->lpVtbl->put_HardwareAccelerationEnabled(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_put_HardwareAccelerationEnabled(This, value) \
+    ((This)->lpVtbl->put_HardwareAccelerationEnabled(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_HardwareAccelerationEnabled(This,value) \
-    ( (This)->lpVtbl->get_HardwareAccelerationEnabled(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_get_HardwareAccelerationEnabled(This, value) \
+    ((This)->lpVtbl->get_HardwareAccelerationEnabled(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddAudioEffect(This,activatableClassId) \
-    ( (This)->lpVtbl->AddAudioEffect(This,activatableClassId) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddAudioEffect(This, activatableClassId) \
+    ((This)->lpVtbl->AddAudioEffect(This, activatableClassId))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddAudioEffectWithSettings(This,activatableClassId,effectRequired,configuration) \
-    ( (This)->lpVtbl->AddAudioEffectWithSettings(This,activatableClassId,effectRequired,configuration) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddAudioEffectWithSettings(This, activatableClassId, effectRequired, configuration) \
+    ((This)->lpVtbl->AddAudioEffectWithSettings(This, activatableClassId, effectRequired, configuration))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddVideoEffect(This,activatableClassId) \
-    ( (This)->lpVtbl->AddVideoEffect(This,activatableClassId) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddVideoEffect(This, activatableClassId) \
+    ((This)->lpVtbl->AddVideoEffect(This, activatableClassId))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddVideoEffectWithSettings(This,activatableClassId,effectRequired,configuration) \
-    ( (This)->lpVtbl->AddVideoEffectWithSettings(This,activatableClassId,effectRequired,configuration) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_AddVideoEffectWithSettings(This, activatableClassId, effectRequired, configuration) \
+    ((This)->lpVtbl->AddVideoEffectWithSettings(This, activatableClassId, effectRequired, configuration))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_ClearEffects(This) \
-    ( (This)->lpVtbl->ClearEffects(This) )
+    ((This)->lpVtbl->ClearEffects(This))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_PrepareFileTranscodeAsync(This,source,destination,profile,operation) \
-    ( (This)->lpVtbl->PrepareFileTranscodeAsync(This,source,destination,profile,operation) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_PrepareFileTranscodeAsync(This, source, destination, profile, operation) \
+    ((This)->lpVtbl->PrepareFileTranscodeAsync(This, source, destination, profile, operation))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_PrepareStreamTranscodeAsync(This,source,destination,profile,operation) \
-    ( (This)->lpVtbl->PrepareStreamTranscodeAsync(This,source,destination,profile,operation) )
-
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_PrepareStreamTranscodeAsync(This, source, destination, profile, operation) \
+    ((This)->lpVtbl->PrepareStreamTranscodeAsync(This, source, destination, profile, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1979,109 +1228,81 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.MediaTranscoder
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Transcoding_IMediaTranscoder2[] = L"Windows.Media.Transcoding.IMediaTranscoder2";
-/* [object, uuid("40531D74-35E0-4F04-8574-CA8BC4E5A082"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* PrepareMediaStreamSourceTranscodeAsync)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        __x_ABI_CWindows_CMedia_CCore_CIMediaSource* source,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* destination,
+        __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile* profile,
+        __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult** operation);
+    HRESULT (STDMETHODCALLTYPE* put_VideoProcessingAlgorithm)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        enum __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm value);
+    HRESULT (STDMETHODCALLTYPE* get_VideoProcessingAlgorithm)(__x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2* This,
+        enum __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *PrepareMediaStreamSourceTranscodeAsync )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CCore_CIMediaSource * source,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * destination,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfile * profile,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CTranscoding__CPrepareTranscodeResult * * operation
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_VideoProcessingAlgorithm )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-        /* [in] */__x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_VideoProcessingAlgorithm )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2 * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CMedia_CTranscoding_CMediaVideoProcessingAlgorithm * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2Vtbl;
 
 interface __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_PrepareMediaStreamSourceTranscodeAsync(This,source,destination,profile,operation) \
-    ( (This)->lpVtbl->PrepareMediaStreamSourceTranscodeAsync(This,source,destination,profile,operation) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_PrepareMediaStreamSourceTranscodeAsync(This, source, destination, profile, operation) \
+    ((This)->lpVtbl->PrepareMediaStreamSourceTranscodeAsync(This, source, destination, profile, operation))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_put_VideoProcessingAlgorithm(This,value) \
-    ( (This)->lpVtbl->put_VideoProcessingAlgorithm(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_put_VideoProcessingAlgorithm(This, value) \
+    ((This)->lpVtbl->put_VideoProcessingAlgorithm(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_get_VideoProcessingAlgorithm(This,value) \
-    ( (This)->lpVtbl->get_VideoProcessingAlgorithm(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_get_VideoProcessingAlgorithm(This, value) \
+    ((This)->lpVtbl->get_VideoProcessingAlgorithm(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2089,113 +1310,84 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIMediaTranscoder2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.Transcoding.PrepareTranscodeResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_Transcoding_IPrepareTranscodeResult[] = L"Windows.Media.Transcoding.IPrepareTranscodeResult";
-/* [object, uuid("05F25DCE-994F-4A34-9D68-97CCCE1730D6"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CanTranscode)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_FailureReason)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        enum __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason* value);
+    HRESULT (STDMETHODCALLTYPE* TranscodeAsync)(__x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult* This,
+        __FIAsyncActionWithProgress_1_double** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanTranscode )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_FailureReason )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CMedia_CTranscoding_CTranscodeFailureReason * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *TranscodeAsync )(
-        __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncActionWithProgress_1_double * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResultVtbl;
 
 interface __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_get_CanTranscode(This,value) \
-    ( (This)->lpVtbl->get_CanTranscode(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_get_CanTranscode(This, value) \
+    ((This)->lpVtbl->get_CanTranscode(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_get_FailureReason(This,value) \
-    ( (This)->lpVtbl->get_FailureReason(This,value) )
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_get_FailureReason(This, value) \
+    ((This)->lpVtbl->get_FailureReason(This, value))
 
-#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_TranscodeAsync(This,operation) \
-    ( (This)->lpVtbl->TranscodeAsync(This,operation) )
-
+#define __x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_TranscodeAsync(This, operation) \
+    ((This)->lpVtbl->TranscodeAsync(This, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.Transcoding.MediaTranscoder
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass can be activated.
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2210,20 +1402,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CTranscoding_CIPrepareTranscodeRe
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Transcoding_MediaTranscoder_DEFINED
 #define RUNTIMECLASS_Windows_Media_Transcoding_MediaTranscoder_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Transcoding_MediaTranscoder[] = L"Windows.Media.Transcoding.MediaTranscoder";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.Transcoding.PrepareTranscodeResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.Transcoding.IPrepareTranscodeResult ** Default Interface **
@@ -2234,15 +1423,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_Transcoding_PrepareTranscodeResult_DEFINED
 #define RUNTIMECLASS_Windows_Media_Transcoding_PrepareTranscodeResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_Transcoding_PrepareTranscodeResult[] = L"Windows.Media.Transcoding.PrepareTranscodeResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

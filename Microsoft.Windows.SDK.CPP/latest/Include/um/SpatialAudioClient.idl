@@ -12,8 +12,8 @@ import "hstring.idl";
 import "AudioClient.idl";
 import "propsys.idl";
 
-#pragma region Application Family
-cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)")
+#pragma region Application and Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
 
 
 // Spatial Audio Object are mono PCM data plus set of attributes that
@@ -93,7 +93,7 @@ interface IAudioFormatEnumerator : IUnknown
 interface ISpatialAudioObjectBase : IUnknown
 {
     // Called to get buffer to pass data for the current processing pass.
-    // The buffer length value returned by this method "bufferLength" is the “frameCount” value
+    // The buffer length value returned by this method "bufferLength" is the "frameCount" value
     // retrieved by BeginUpdatingAudioObjects multiplied by WAVEFORMATEX::nBlockAlign of objectFormat
     // passed to ActivateSpatialAudioObjectRenderStream
     //
@@ -425,4 +425,4 @@ cpp_quote("#define SPTLAUDCLNT_E_STATIC_OBJECT_NOT_AVAILABLE         AUDCLNT_ERR
 cpp_quote("#define SPTLAUDCLNT_E_OBJECT_ALREADY_ACTIVE               AUDCLNT_ERR(0x010c)")
 cpp_quote("#define SPTLAUDCLNT_E_INTERNAL                            AUDCLNT_ERR(0x010d)")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")

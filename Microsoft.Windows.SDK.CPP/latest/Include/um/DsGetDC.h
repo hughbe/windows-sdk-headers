@@ -81,6 +81,8 @@ extern "C" {
 
 #define DS_DIRECTORY_SERVICE_10_REQUIRED 0x00800000
 
+#define DS_KEY_LIST_SUPPORT_REQUIRED     0x01000000
+
 #define DS_RETURN_DNS_NAME              0x40000000
 #define DS_RETURN_FLAT_NAME             0x80000000
 
@@ -105,6 +107,7 @@ extern "C" {
             DS_DIRECTORY_SERVICE_8_REQUIRED | \
             DS_DIRECTORY_SERVICE_9_REQUIRED | \
             DS_DIRECTORY_SERVICE_10_REQUIRED | \
+            DS_KEY_LIST_SUPPORT_REQUIRED | \
             DS_WEB_SERVICE_REQUIRED | \
             DS_RETURN_FLAT_NAME  | \
             DS_RETURN_DNS_NAME )
@@ -197,6 +200,7 @@ typedef struct _DOMAIN_CONTROLLER_INFOW {
 #define DS_DS_8_FLAG           0x00004000    // DC is running Win8 or later
 #define DS_DS_9_FLAG           0x00008000    // DC is running Win8.1 or later
 #define DS_DS_10_FLAG          0x00010000    // DC is running WinThreshold or later
+#define DS_KEY_LIST_FLAG       0x00020000    // DC supports key list requests
 #define DS_PING_FLAGS          0x000FFFFF    // Flags returned on ping
 
 #define DS_DNS_CONTROLLER_FLAG 0x20000000    // DomainControllerName is a DNS name

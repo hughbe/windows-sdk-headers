@@ -1,77 +1,96 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.System.0.h"
-#include "winrt/impl/Windows.UI.Notifications.0.h"
+#ifndef WINRT_Windows_Networking_PushNotifications_1_H
+#define WINRT_Windows_Networking_PushNotifications_1_H
 #include "winrt/impl/Windows.Networking.PushNotifications.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Networking::PushNotifications {
-
-struct WINRT_EBO IPushNotificationChannel :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannel>
+namespace winrt::Windows::Networking::PushNotifications
 {
-    IPushNotificationChannel(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationChannelManagerForUser :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannelManagerForUser>
-{
-    IPushNotificationChannelManagerForUser(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationChannelManagerForUser2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannelManagerForUser2>
-{
-    IPushNotificationChannelManagerForUser2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationChannelManagerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannelManagerStatics>
-{
-    IPushNotificationChannelManagerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationChannelManagerStatics2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannelManagerStatics2>
-{
-    IPushNotificationChannelManagerStatics2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationChannelManagerStatics3 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationChannelManagerStatics3>
-{
-    IPushNotificationChannelManagerStatics3(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IPushNotificationReceivedEventArgs :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IPushNotificationReceivedEventArgs>
-{
-    IPushNotificationReceivedEventArgs(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRawNotification :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRawNotification>
-{
-    IRawNotification(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IRawNotification2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IRawNotification2>
-{
-    IRawNotification2(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IPushNotificationChannel :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannel>
+    {
+        IPushNotificationChannel(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannel(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerForUser :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerForUser>
+    {
+        IPushNotificationChannelManagerForUser(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerForUser(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerForUser2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerForUser2>
+    {
+        IPushNotificationChannelManagerForUser2(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerForUser2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerStatics>
+    {
+        IPushNotificationChannelManagerStatics(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerStatics2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerStatics2>
+    {
+        IPushNotificationChannelManagerStatics2(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerStatics2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerStatics3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerStatics3>
+    {
+        IPushNotificationChannelManagerStatics3(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerStatics3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelManagerStatics4 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelManagerStatics4>
+    {
+        IPushNotificationChannelManagerStatics4(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelManagerStatics4(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationChannelsRevokedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationChannelsRevokedEventArgs>
+    {
+        IPushNotificationChannelsRevokedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationChannelsRevokedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPushNotificationReceivedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IPushNotificationReceivedEventArgs>
+    {
+        IPushNotificationReceivedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPushNotificationReceivedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRawNotification :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRawNotification>
+    {
+        IRawNotification(std::nullptr_t = nullptr) noexcept {}
+        IRawNotification(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRawNotification2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRawNotification2>
+    {
+        IRawNotification2(std::nullptr_t = nullptr) noexcept {}
+        IRawNotification2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRawNotification3 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IRawNotification3>
+    {
+        IRawNotification3(std::nullptr_t = nullptr) noexcept {}
+        IRawNotification3(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

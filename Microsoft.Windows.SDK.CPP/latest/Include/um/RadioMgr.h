@@ -78,12 +78,9 @@ extern "C"{
 /* interface __MIDL_itf_radiomgr_0000_0000 */
 /* [local] */ 
 
-//+-------------------------------------------------------------------------
 //
-//  Microsoft Windows
-//  Copyright (c) Microsoft Corporation. All rights reserved.
+// Copyright (C) Microsoft Corporation. All rights reserved.
 //
-//--------------------------------------------------------------------------
 #include <winapifamily.h>
 #if (NTDDI_VERSION >= NTDDI_WIN8)
 #pragma region Desktop Family

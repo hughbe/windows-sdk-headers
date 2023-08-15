@@ -358,11 +358,17 @@ extern RPC_IF_HANDLE __MIDL_itf_msxml_0000_0000_v0_0_s_ifspec;
 /* library MSXML */
 /* [version][lcid][helpstring][uuid] */ 
 
+//+-------------------------------------------------------------------------
 //
 //  Microsoft Windows
 //  Copyright (C) Microsoft Corporation, 1998.
 //
 //--------------------------------------------------------------------------
+#include <winapifamily.h>
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#pragma region Desktop Family
+#pragma endregion
 #pragma region Desktop Family
 #pragma endregion
 
@@ -402,6 +408,11 @@ enum tagDOMNodeType
         NODE_NOTATION	= ( NODE_DOCUMENT_FRAGMENT + 1 ) 
     } 	DOMNodeType;
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+#include <winapifamily.h>
+#pragma region Desktop Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 //+-------------------------------------------------------------------------
 //
 //  Microsoft Windows
@@ -410,7 +421,11 @@ enum tagDOMNodeType
 //--------------------------------------------------------------------------
 #pragma region Desktop Family
 #pragma endregion
+#pragma region Desktop Family
+#pragma endregion
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
 
 
 

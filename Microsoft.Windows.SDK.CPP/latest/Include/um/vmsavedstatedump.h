@@ -28,41 +28,6 @@ Abstract:
 extern "C" {
 #endif
 
-/// Allows callers to set an informational verbose function handler. The provided handler
-/// is used for informational verbose messages.
-///
-/// \param InfoHandler   Supplies a handler for informational verbose messages.
-///
-VOID
-WINAPI
-SetInfoVerboseHandler(
-    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER InfoHandler
-    );
-
-
-/// Allows callers to set an error verbose function handler. The provided handler
-/// is used for error verbose messages.
-///
-/// \param ErrorHandler   Supplies a handler for error verbose messages.
-///
-VOID
-WINAPI
-SetErrorVerboseHandler(
-    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER ErrorHandler
-    );
-
-
-/// Allows callers to set a debug verbose function handler. The provided handler
-/// is used for debug verbose messages.
-///
-/// \param DebugHandler   Supplies a handler for debug verbose messages.
-///
-VOID
-WINAPI
-SetDebugVerboseHandler(
-    _In_opt_    VM_SAVED_STATE_DUMP_VERBOSE_HANDLER DebugHandler
-    );
-
 
 /// Locates the saved state file(s) for a given VM and/or snapshot. This function uses WMI and the V1 or V2
 /// virtualization namespace. So this is expected to fail if ran on a machine without Hyper-V installed.
@@ -321,7 +286,11 @@ ReadGuestPhysicalAddress(
 /// \param  VirtualAddress          Supplies the virtual address to translate.
 /// \retval PhysicalAddress         Returns the physical address assigned to the supplied virtual address.
 ///
-/// \return HRESULT.
+/// \return HRESULT on any error.
+///         VM_SAVED_STATE_DUMP_E_PXE_NOT_PRESENT - Failed to read Page Map Level 4 entry (pxe) for a virtual address.
+///         VM_SAVED_STATE_DUMP_E_PDPTE_NOT_PRESENT - Failed to read Page Directory Page Table entry (pdpte) for a virtual address.
+///         VM_SAVED_STATE_DUMP_E_PDE_NOT_PRESENT - Failed to read Page Directory entry (pde) for a virtual address.
+///         VM_SAVED_STATE_DUMP_E_PTE_NOT_PRESENT - Failed to read Page Table entry (pte) for a virtual address.
 ///
 HRESULT
 WINAPI
@@ -417,6 +386,40 @@ WINAPI
 GetGuestRawSavedMemorySize(
     _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
     _Out_   UINT64*                         GuestRawSavedMemorySize
+    );
+
+
+/// Sets the memory block cache limit for a saved state file. By default this is 0.
+/// A VmSavedStateDump provider instance reads from the saved state file in a memory block basis.
+/// Setting a memory block cache limit will make the instance cache in-memory blocks read from the
+/// file, which is useful for performance.
+/// Setting the limit back to 0 discards all cached memory blocks.
+///
+///
+/// \param VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \param MemoryBlockCacheLimit   Supplies the memory block cache limit to set.
+///
+/// \return HRESULT.
+///
+HRESULT
+WINAPI
+SetMemoryBlockCacheLimit(
+    _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
+    _In_    UINT64                          MemoryBlockCacheLimit
+    );
+
+
+/// Returns the memory block cache limit for a saved state file.
+///
+/// \param  VmSavedStateDumpHandle  Supplies a handle to a dump provider instance.
+/// \retval MemoryBlockCacheLimit   Returns the memory block cache limit.
+///
+/// \return HRESULT.
+///
+HRESULT
+GetMemoryBlockCacheLimit(
+    _In_    VM_SAVED_STATE_DUMP_HANDLE      VmSavedStateDumpHandle,
+    _Out_   UINT64*                         MemoryBlockCacheLimit
     );
 
 #ifdef __cplusplus

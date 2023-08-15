@@ -867,6 +867,7 @@ HRESULT WINAPI ExtractFilesW(LPCWSTR pszCabName, LPCWSTR pszExpandDir, DWORD dwF
 #define ExtractFiles  ExtractFilesA
 #endif // !UNICODE
 #else
+//@[comment("MVI_tracked")]
 HRESULT WINAPI ExtractFiles(LPCSTR pszCabName, LPCSTR pszExpandDir, DWORD dwFlags, LPCSTR pszFileList, LPVOID lpReserved, DWORD dwReserved);
 #endif  // (_WIN32_IE >= 0x0605)
 

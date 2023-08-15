@@ -1,123 +1,107 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.1.h"
+#ifndef WINRT_Windows_ApplicationModel_Store_2_H
+#define WINRT_Windows_ApplicationModel_Store_2_H
+#include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.ApplicationModel.Store.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Store {
-
-struct LicenseChangedEventHandler : Windows::Foundation::IUnknown
+namespace winrt::Windows::ApplicationModel::Store
 {
-    LicenseChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> LicenseChangedEventHandler(L lambda);
-    template <typename F> LicenseChangedEventHandler(F* function);
-    template <typename O, typename M> LicenseChangedEventHandler(O* object, M method);
-    template <typename O, typename M> LicenseChangedEventHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> LicenseChangedEventHandler(weak_ref<O>&& object, M method);
-    void operator()() const;
-};
-
+    struct LicenseChangedEventHandler : Windows::Foundation::IUnknown
+    {
+        LicenseChangedEventHandler(std::nullptr_t = nullptr) noexcept {}
+        LicenseChangedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> LicenseChangedEventHandler(L lambda);
+        template <typename F> LicenseChangedEventHandler(F* function);
+        template <typename O, typename M> LicenseChangedEventHandler(O* object, M method);
+        template <typename O, typename M> LicenseChangedEventHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> LicenseChangedEventHandler(weak_ref<O>&& object, M method);
+        auto operator()() const;
+    };
+    struct CurrentApp
+    {
+        CurrentApp() = delete;
+        [[nodiscard]] static auto LicenseInformation();
+        [[nodiscard]] static auto LinkUri();
+        [[nodiscard]] static auto AppId();
+        static auto RequestAppPurchaseAsync(bool includeReceipt);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId, bool includeReceipt);
+        static auto LoadListingInformationAsync();
+        static auto GetAppReceiptAsync();
+        static auto GetProductReceiptAsync(param::hstring const& productId);
+        static auto GetCustomerPurchaseIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId);
+        static auto GetCustomerCollectionsIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId);
+        static auto LoadListingInformationByProductIdsAsync(param::async_iterable<hstring> const& productIds);
+        static auto LoadListingInformationByKeywordsAsync(param::async_iterable<hstring> const& keywords);
+        static auto ReportProductFulfillment(param::hstring const& productId);
+        static auto GetAppPurchaseCampaignIdAsync();
+        static auto ReportConsumableFulfillmentAsync(param::hstring const& productId, winrt::guid const& transactionId);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId, param::hstring const& offerId, Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties const& displayProperties);
+        static auto GetUnfulfilledConsumablesAsync();
+    };
+    struct CurrentAppSimulator
+    {
+        CurrentAppSimulator() = delete;
+        [[nodiscard]] static auto LicenseInformation();
+        [[nodiscard]] static auto LinkUri();
+        [[nodiscard]] static auto AppId();
+        static auto RequestAppPurchaseAsync(bool includeReceipt);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId, bool includeReceipt);
+        static auto LoadListingInformationAsync();
+        static auto GetAppReceiptAsync();
+        static auto GetProductReceiptAsync(param::hstring const& productId);
+        static auto ReloadSimulatorAsync(Windows::Storage::StorageFile const& simulatorSettingsFile);
+        static auto LoadListingInformationByProductIdsAsync(param::async_iterable<hstring> const& productIds);
+        static auto LoadListingInformationByKeywordsAsync(param::async_iterable<hstring> const& keywords);
+        static auto GetAppPurchaseCampaignIdAsync();
+        static auto ReportConsumableFulfillmentAsync(param::hstring const& productId, winrt::guid const& transactionId);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId);
+        static auto RequestProductPurchaseAsync(param::hstring const& productId, param::hstring const& offerId, Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties const& displayProperties);
+        static auto GetUnfulfilledConsumablesAsync();
+    };
+    struct __declspec(empty_bases) LicenseInformation : Windows::ApplicationModel::Store::ILicenseInformation
+    {
+        LicenseInformation(std::nullptr_t) noexcept {}
+        LicenseInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::ILicenseInformation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ListingInformation : Windows::ApplicationModel::Store::IListingInformation,
+        impl::require<ListingInformation, Windows::ApplicationModel::Store::IListingInformation2>
+    {
+        ListingInformation(std::nullptr_t) noexcept {}
+        ListingInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IListingInformation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProductLicense : Windows::ApplicationModel::Store::IProductLicense,
+        impl::require<ProductLicense, Windows::ApplicationModel::Store::IProductLicenseWithFulfillment>
+    {
+        ProductLicense(std::nullptr_t) noexcept {}
+        ProductLicense(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IProductLicense(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProductListing : Windows::ApplicationModel::Store::IProductListing,
+        impl::require<ProductListing, Windows::ApplicationModel::Store::IProductListingWithMetadata, Windows::ApplicationModel::Store::IProductListing2>
+    {
+        ProductListing(std::nullptr_t) noexcept {}
+        ProductListing(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IProductListing(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProductPurchaseDisplayProperties : Windows::ApplicationModel::Store::IProductPurchaseDisplayProperties
+    {
+        ProductPurchaseDisplayProperties(std::nullptr_t) noexcept {}
+        ProductPurchaseDisplayProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IProductPurchaseDisplayProperties(ptr, take_ownership_from_abi) {}
+        ProductPurchaseDisplayProperties();
+        ProductPurchaseDisplayProperties(param::hstring const& name);
+    };
+    struct __declspec(empty_bases) PurchaseResults : Windows::ApplicationModel::Store::IPurchaseResults
+    {
+        PurchaseResults(std::nullptr_t) noexcept {}
+        PurchaseResults(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IPurchaseResults(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UnfulfilledConsumable : Windows::ApplicationModel::Store::IUnfulfilledConsumable
+    {
+        UnfulfilledConsumable(std::nullptr_t) noexcept {}
+        UnfulfilledConsumable(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Store::IUnfulfilledConsumable(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Store {
-
-struct CurrentApp
-{
-    CurrentApp() = delete;
-    static Windows::ApplicationModel::Store::LicenseInformation LicenseInformation();
-    static Windows::Foundation::Uri LinkUri();
-    static winrt::guid AppId();
-    static Windows::Foundation::IAsyncOperation<hstring> RequestAppPurchaseAsync(bool includeReceipt);
-    static Windows::Foundation::IAsyncOperation<hstring> RequestProductPurchaseAsync(param::hstring const& productId, bool includeReceipt);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetAppReceiptAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetProductReceiptAsync(param::hstring const& productId);
-    static Windows::Foundation::IAsyncOperation<hstring> GetCustomerPurchaseIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId);
-    static Windows::Foundation::IAsyncOperation<hstring> GetCustomerCollectionsIdAsync(param::hstring const& serviceTicket, param::hstring const& publisherUserId);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationByProductIdsAsync(param::async_iterable<hstring> const& productIds);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationByKeywordsAsync(param::async_iterable<hstring> const& keywords);
-    static void ReportProductFulfillment(param::hstring const& productId);
-    static Windows::Foundation::IAsyncOperation<hstring> GetAppPurchaseCampaignIdAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::FulfillmentResult> ReportConsumableFulfillmentAsync(param::hstring const& productId, winrt::guid const& transactionId);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::PurchaseResults> RequestProductPurchaseAsync(param::hstring const& productId);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::PurchaseResults> RequestProductPurchaseAsync(param::hstring const& productId, param::hstring const& offerId, Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties const& displayProperties);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::UnfulfilledConsumable>> GetUnfulfilledConsumablesAsync();
-};
-
-struct CurrentAppSimulator
-{
-    CurrentAppSimulator() = delete;
-    static Windows::ApplicationModel::Store::LicenseInformation LicenseInformation();
-    static Windows::Foundation::Uri LinkUri();
-    static winrt::guid AppId();
-    static Windows::Foundation::IAsyncOperation<hstring> RequestAppPurchaseAsync(bool includeReceipt);
-    static Windows::Foundation::IAsyncOperation<hstring> RequestProductPurchaseAsync(param::hstring const& productId, bool includeReceipt);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetAppReceiptAsync();
-    static Windows::Foundation::IAsyncOperation<hstring> GetProductReceiptAsync(param::hstring const& productId);
-    static Windows::Foundation::IAsyncAction ReloadSimulatorAsync(Windows::Storage::StorageFile const& simulatorSettingsFile);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationByProductIdsAsync(param::async_iterable<hstring> const& productIds);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::ListingInformation> LoadListingInformationByKeywordsAsync(param::async_iterable<hstring> const& keywords);
-    static Windows::Foundation::IAsyncOperation<hstring> GetAppPurchaseCampaignIdAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::FulfillmentResult> ReportConsumableFulfillmentAsync(param::hstring const& productId, winrt::guid const& transactionId);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::PurchaseResults> RequestProductPurchaseAsync(param::hstring const& productId);
-    static Windows::Foundation::IAsyncOperation<Windows::ApplicationModel::Store::PurchaseResults> RequestProductPurchaseAsync(param::hstring const& productId, param::hstring const& offerId, Windows::ApplicationModel::Store::ProductPurchaseDisplayProperties const& displayProperties);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::Store::UnfulfilledConsumable>> GetUnfulfilledConsumablesAsync();
-};
-
-struct WINRT_EBO LicenseInformation :
-    Windows::ApplicationModel::Store::ILicenseInformation
-{
-    LicenseInformation(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ListingInformation :
-    Windows::ApplicationModel::Store::IListingInformation,
-    impl::require<ListingInformation, Windows::ApplicationModel::Store::IListingInformation2>
-{
-    ListingInformation(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProductLicense :
-    Windows::ApplicationModel::Store::IProductLicense,
-    impl::require<ProductLicense, Windows::ApplicationModel::Store::IProductLicenseWithFulfillment>
-{
-    ProductLicense(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProductListing :
-    Windows::ApplicationModel::Store::IProductListing,
-    impl::require<ProductListing, Windows::ApplicationModel::Store::IProductListing2, Windows::ApplicationModel::Store::IProductListingWithMetadata>
-{
-    ProductListing(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProductPurchaseDisplayProperties :
-    Windows::ApplicationModel::Store::IProductPurchaseDisplayProperties
-{
-    ProductPurchaseDisplayProperties(std::nullptr_t) noexcept {}
-    ProductPurchaseDisplayProperties();
-    ProductPurchaseDisplayProperties(param::hstring const& name);
-};
-
-struct WINRT_EBO PurchaseResults :
-    Windows::ApplicationModel::Store::IPurchaseResults
-{
-    PurchaseResults(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UnfulfilledConsumable :
-    Windows::ApplicationModel::Store::IUnfulfilledConsumable
-{
-    UnfulfilledConsumable(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

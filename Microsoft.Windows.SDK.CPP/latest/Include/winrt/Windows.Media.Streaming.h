@@ -1,6 +1,6 @@
 /* Header file automatically generated from windows.media.streaming.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -164,11 +164,11 @@
 #endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
@@ -236,11 +236,11 @@
 #endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
 
 #if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
+#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 
 #if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
@@ -280,7 +280,8 @@ namespace ABI {
                 interface IConnectionStatusHandler;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler ABI::Windows::Media::Streaming::IConnectionStatusHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler_FWD_DEFINED__
@@ -294,7 +295,8 @@ namespace ABI {
                 interface IDeviceControllerFinderHandler;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler ABI::Windows::Media::Streaming::IDeviceControllerFinderHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler_FWD_DEFINED__
@@ -308,7 +310,8 @@ namespace ABI {
                 interface IRenderingParametersUpdateHandler;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler ABI::Windows::Media::Streaming::IRenderingParametersUpdateHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler_FWD_DEFINED__
@@ -322,7 +325,8 @@ namespace ABI {
                 interface ITransportParametersUpdateHandler;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler ABI::Windows::Media::Streaming::ITransportParametersUpdateHandler
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler_FWD_DEFINED__
@@ -336,7 +340,8 @@ namespace ABI {
                 interface IActiveBasicDevice;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice ABI::Windows::Media::Streaming::IActiveBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice_FWD_DEFINED__
@@ -350,7 +355,8 @@ namespace ABI {
                 interface IActiveBasicDeviceStatics;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics ABI::Windows::Media::Streaming::IActiveBasicDeviceStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics_FWD_DEFINED__
@@ -364,7 +370,8 @@ namespace ABI {
                 interface IBasicDevice;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice ABI::Windows::Media::Streaming::IBasicDevice
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_FWD_DEFINED__
@@ -378,7 +385,8 @@ namespace ABI {
                 interface IDeviceController;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceController ABI::Windows::Media::Streaming::IDeviceController
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceController_FWD_DEFINED__
@@ -392,7 +400,8 @@ namespace ABI {
                 interface IDeviceIcon;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon ABI::Windows::Media::Streaming::IDeviceIcon
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon_FWD_DEFINED__
@@ -406,7 +415,8 @@ namespace ABI {
                 interface IDevicePair;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIDevicePair ABI::Windows::Media::Streaming::IDevicePair
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIDevicePair_FWD_DEFINED__
@@ -420,7 +430,8 @@ namespace ABI {
                 interface IMediaRenderer;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer ABI::Windows::Media::Streaming::IMediaRenderer
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_FWD_DEFINED__
@@ -434,7 +445,8 @@ namespace ABI {
                 interface IMediaRendererActionInformation;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation ABI::Windows::Media::Streaming::IMediaRendererActionInformation
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation_FWD_DEFINED__
@@ -448,7 +460,8 @@ namespace ABI {
                 interface IMediaRendererFactory;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory ABI::Windows::Media::Streaming::IMediaRendererFactory
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory_FWD_DEFINED__
@@ -462,7 +475,8 @@ namespace ABI {
                 interface IStreamSelectorStatics;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics ABI::Windows::Media::Streaming::IStreamSelectorStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics_FWD_DEFINED__
@@ -476,7 +490,8 @@ namespace ABI {
                 interface ITransportParameters;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CStreaming_CITransportParameters ABI::Windows::Media::Streaming::ITransportParameters
 
 #endif // ____x_ABI_CWindows_CMedia_CStreaming_CITransportParameters_FWD_DEFINED__
@@ -620,7 +635,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #ifndef DEF___FIIterator_1_Windows__CMedia__CStreaming__CPlaySpeed_USE
@@ -876,7 +892,8 @@ namespace ABI {
                 class ActiveBasicDevice;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -949,7 +966,8 @@ namespace ABI {
                 class DevicePair;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -1022,7 +1040,8 @@ namespace ABI {
                 class MediaRenderer;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #if WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
@@ -1096,7 +1115,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CPositionInformation_USE
@@ -1165,7 +1185,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 #ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CStreaming__CTransportInformation_USE
@@ -1467,7 +1488,8 @@ namespace ABI {
                 interface IRandomAccessStreamWithContentType;
             } /* Streams */
         } /* Storage */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType ABI::Windows::Storage::Streams::IRandomAccessStreamWithContentType
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType_FWD_DEFINED__
@@ -1545,7 +1567,8 @@ namespace ABI {
                 interface IPropertySet;
             } /* Collections */
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CCollections_CIPropertySet ABI::Windows::Foundation::Collections::IPropertySet
 
 #endif // ____x_ABI_CWindows_CFoundation_CCollections_CIPropertySet_FWD_DEFINED__
@@ -1722,7 +1745,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1733,7 +1757,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1744,7 +1769,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1755,7 +1781,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1766,7 +1793,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1777,7 +1805,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1788,7 +1817,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1799,7 +1829,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1810,7 +1841,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 
@@ -1835,7 +1867,8 @@ namespace ABI {
                 class BasicDevice;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 namespace ABI {
@@ -1845,7 +1878,8 @@ namespace ABI {
                 class CreateMediaRendererOperation;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 namespace ABI {
@@ -1855,7 +1889,8 @@ namespace ABI {
                 class DeviceController;
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 
 
@@ -1894,7 +1929,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1925,7 +1961,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1958,7 +1995,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -1987,7 +2025,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2014,7 +2053,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2042,7 +2082,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2069,7 +2110,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2096,7 +2138,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2124,7 +2167,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_MEDIA_STREAMING_STREAMINGCONTRACT_VERSION >= 0x10000
 
 
@@ -2159,7 +2203,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIConnectionStatusHandler_INTERFACE_DEFINED__) */
@@ -2198,7 +2243,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceControllerFinderHandler_INTERFACE_DEFINED__) */
@@ -2236,7 +2282,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIRenderingParametersUpdateHandler_INTERFACE_DEFINED__) */
@@ -2274,7 +2321,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CITransportParametersUpdateHandler_INTERFACE_DEFINED__) */
@@ -2364,7 +2412,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDevice_INTERFACE_DEFINED__) */
@@ -2422,7 +2471,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIActiveBasicDeviceStatics_INTERFACE_DEFINED__) */
@@ -2521,7 +2571,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIBasicDevice_INTERFACE_DEFINED__) */
@@ -2579,7 +2630,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceController;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceController_INTERFACE_DEFINED__) */
@@ -2626,7 +2678,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDeviceIcon_INTERFACE_DEFINED__) */
@@ -2667,7 +2720,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIDevicePair;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIDevicePair_INTERFACE_DEFINED__) */
@@ -2796,7 +2850,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRenderer_INTERFACE_DEFINED__) */
@@ -2855,7 +2910,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererActionInformation_INTERFACE_DEFINED__) */
@@ -2898,7 +2954,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIMediaRendererFactory_INTERFACE_DEFINED__) */
@@ -2953,7 +3010,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CIStreamSelectorStatics_INTERFACE_DEFINED__) */
@@ -2997,7 +3055,8 @@ namespace ABI {
                 
             } /* Streaming */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CStreaming_CITransportParameters;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CStreaming_CITransportParameters_INTERFACE_DEFINED__) */

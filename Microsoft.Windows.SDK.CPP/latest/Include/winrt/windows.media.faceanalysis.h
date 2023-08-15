@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.media.faceanalysis.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
 
 #if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
 #define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -276,7 +124,8 @@ namespace ABI {
                 interface IDetectedFace;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace ABI::Windows::Media::FaceAnalysis::IDetectedFace
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_FWD_DEFINED__
@@ -290,7 +139,8 @@ namespace ABI {
                 interface IFaceDetector;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector ABI::Windows::Media::FaceAnalysis::IFaceDetector
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_FWD_DEFINED__
@@ -304,7 +154,8 @@ namespace ABI {
                 interface IFaceDetectorStatics;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics ABI::Windows::Media::FaceAnalysis::IFaceDetectorStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_FWD_DEFINED__
@@ -318,7 +169,8 @@ namespace ABI {
                 interface IFaceTracker;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker ABI::Windows::Media::FaceAnalysis::IFaceTracker
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_FWD_DEFINED__
@@ -332,7 +184,8 @@ namespace ABI {
                 interface IFaceTrackerStatics;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics ABI::Windows::Media::FaceAnalysis::IFaceTrackerStatics
 
 #endif // ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_FWD_DEFINED__
@@ -347,8 +200,8 @@ namespace ABI {
                 class DetectedFace;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -358,11 +211,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("a0cf090e-0340-531f-898b-c21eafb9f4ae"))
-IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>> 
+IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.FaceAnalysis.DetectedFace>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Media.FaceAnalysis.DetectedFace>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -370,17 +223,12 @@ IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterator_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
-//#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -390,11 +238,11 @@ typedef IIterator<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterator
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("25347323-3556-5cbb-9855-2b5856437f4d"))
-IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>> 
+IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.FaceAnalysis.DetectedFace>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Media.FaceAnalysis.DetectedFace>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -402,17 +250,12 @@ IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IIterable_impl<ABI
 // correct parameterized interface specialization.
 typedef IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
-//#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -422,11 +265,11 @@ typedef IIterable<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIIterable
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("39ef4411-0618-5b8d-8ea2-81c637f823f8"))
-IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>> 
+IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.FaceAnalysis.DetectedFace>"; 
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Media.FaceAnalysis.DetectedFace>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -434,17 +277,12 @@ IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVectorView_impl
 // correct parameterized interface specialization.
 typedef IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
-//#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -454,11 +292,11 @@ typedef IVectorView<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIVector
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("0dfd8e09-73f2-505c-a796-a8f031b4ede0"))
-IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>> 
+IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::DetectedFace*, ABI::Windows::Media::FaceAnalysis::IDetectedFace*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>"; 
+        return L"Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -466,49 +304,12 @@ IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> : IVector_impl<ABI::Wi
 // correct parameterized interface specialization.
 typedef IVector<ABI::Windows::Media::FaceAnalysis::DetectedFace*> __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
-//#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE
-#define DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("b0a53153-2015-58b3-9dd0-bdf291b856b2"))
-IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : IAsyncOperationCompletedHandler_impl<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
-#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
-//#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -518,11 +319,11 @@ typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnaly
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("37f1d7dc-a1a4-5a94-b33b-74205a65a1ed"))
-IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : IAsyncOperation_impl<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> 
+IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : IAsyncOperation_impl<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -530,14 +331,37 @@ IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : I
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
 #define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
-//#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVector<ABI::Windows::Media::FaceAnalysis::IDetectedFace*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE
+#define DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("b0a53153-2015-58b3-9dd0-bdf291b856b2"))
+IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> : IAsyncOperationCompletedHandler_impl<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVector`1<Windows.Media.FaceAnalysis.DetectedFace>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace*> __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t;
+#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -548,40 +372,8 @@ namespace ABI {
                 class FaceDetector;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("3224aec6-e785-5066-976f-79dd081b75a9"))
-IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceDetector*, ABI::Windows::Media::FaceAnalysis::IFaceDetector*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.FaceAnalysis.FaceDetector>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -591,11 +383,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceD
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("c0141cd2-7a65-514c-bfc4-b49e991f03eb"))
-IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceDetector*, ABI::Windows::Media::FaceAnalysis::IFaceDetector*>> 
+IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceDetector*, ABI::Windows::Media::FaceAnalysis::IFaceDetector*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceDetector>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceDetector>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -603,14 +395,37 @@ IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperat
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceDetector*> __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
-//#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceDetector*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("3224aec6-e785-5066-976f-79dd081b75a9"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceDetector*, ABI::Windows::Media::FaceAnalysis::IFaceDetector*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.FaceAnalysis.FaceDetector>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceDetector*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -621,40 +436,8 @@ namespace ABI {
                 class FaceTracker;
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("57d5163d-9e80-59d2-9366-d2b5248b2724"))
-IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceTracker*, ABI::Windows::Media::FaceAnalysis::IFaceTracker*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.FaceAnalysis.FaceTracker>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -664,11 +447,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceT
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("7f32c680-e37e-539a-8993-2abbea71afda"))
-IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceTracker*, ABI::Windows::Media::FaceAnalysis::IFaceTracker*>> 
+IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceTracker*, ABI::Windows::Media::FaceAnalysis::IFaceTracker*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceTracker>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Media.FaceAnalysis.FaceTracker>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -676,14 +459,37 @@ IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperati
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Media::FaceAnalysis::FaceTracker*> __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t;
 #define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
-//#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Media::FaceAnalysis::IFaceTracker*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("57d5163d-9e80-59d2-9366-d2b5248b2724"))
+IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Media::FaceAnalysis::FaceTracker*, ABI::Windows::Media::FaceAnalysis::IFaceTracker*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Media.FaceAnalysis.FaceTracker>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Media::FaceAnalysis::FaceTracker*> __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -691,11 +497,13 @@ namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Imaging {
-                enum BitmapPixelFormat : int;
+                typedef enum BitmapPixelFormat : int BitmapPixelFormat;
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
 #define DEF___FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
@@ -703,11 +511,11 @@ namespace ABI {
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("7fc2e293-1084-5d45-b8b8-93e10692bcc8"))
-IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterator_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> 
+IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterator_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Graphics.Imaging.BitmapPixelFormat>"; 
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Graphics.Imaging.BitmapPixelFormat>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -715,17 +523,14 @@ IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterator_i
 // correct parameterized interface specialization.
 typedef IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
-//#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
 #define DEF___FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
@@ -733,11 +538,11 @@ typedef IIterator<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FII
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("e924d9ed-a13e-5bdb-9ed8-65a1474dc274"))
-IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterable_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> 
+IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterable_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Graphics.Imaging.BitmapPixelFormat>"; 
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Graphics.Imaging.BitmapPixelFormat>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -745,17 +550,14 @@ IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IIterable_i
 // correct parameterized interface specialization.
 typedef IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
-//#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #ifndef DEF___FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
 #define DEF___FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE
@@ -763,11 +565,11 @@ typedef IIterable<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FII
 namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
 template <>
 struct __declspec(uuid("76ac4bc2-c19c-559c-b287-1694c0dc3a0d"))
-IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IVectorView_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> 
+IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IVectorView_impl<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat>"; 
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Graphics.Imaging.BitmapPixelFormat>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -775,53 +577,32 @@ IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> : IVectorVi
 // correct parameterized interface specialization.
 typedef IVectorView<enum ABI::Windows::Graphics::Imaging::BitmapPixelFormat> __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t;
 #define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
-//#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Graphics::Imaging::BitmapPixelFormat>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_USE */
 
-
-
-
-
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Imaging {
-                
                 typedef struct BitmapBounds BitmapBounds;
-                
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Graphics {
             namespace Imaging {
-                
-                typedef enum BitmapPixelFormat : int BitmapPixelFormat;
-                
-            } /* Imaging */
-        } /* Graphics */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Graphics {
-            namespace Imaging {
-                
                 typedef struct BitmapSize BitmapSize;
-                
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -830,7 +611,8 @@ namespace ABI {
                 class SoftwareBitmap;
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -841,21 +623,19 @@ namespace ABI {
                 interface ISoftwareBitmap;
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
         namespace Media {
             class VideoFrame;
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
@@ -864,29 +644,11 @@ namespace ABI {
         namespace Media {
             interface IVideoFrame;
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CMedia_CIVideoFrame ABI::Windows::Media::IVideoFrame
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -894,9 +656,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.DetectedFace
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -907,27 +667,24 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace FaceAnalysis {
-                /* [object, uuid("8200D454-66BC-34DF-9410-E89400195414"), exclusiveto, contract] */
-                MIDL_INTERFACE("8200D454-66BC-34DF-9410-E89400195414")
+                MIDL_INTERFACE("8200d454-66bc-34df-9410-e89400195414")
                 IDetectedFace : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_FaceBox(
-                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Imaging::BitmapBounds * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_FaceBox(
+                        ABI::Windows::Graphics::Imaging::BitmapBounds* returnValue
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDetectedFace=_uuidof(IDetectedFace);
-                
+                extern MIDL_CONST_ID IID& IID_IDetectedFace = _uuidof(IDetectedFace);
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -935,9 +692,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceDetector
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -948,45 +703,42 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace FaceAnalysis {
-                /* [object, uuid("16B672DC-FE6F-3117-8D95-C3F04D51630C"), exclusiveto, contract] */
-                MIDL_INTERFACE("16B672DC-FE6F-3117-8D95-C3F04D51630C")
+                MIDL_INTERFACE("16b672dc-fe6f-3117-8d95-c3f04d51630c")
                 IFaceDetector : public IInspectable
                 {
                 public:
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE DetectFacesAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Imaging::ISoftwareBitmap * image,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE DetectFacesAsync(
+                        ABI::Windows::Graphics::Imaging::ISoftwareBitmap* image,
+                        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE DetectFacesWithSearchAreaAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Graphics::Imaging::ISoftwareBitmap * image,
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapBounds searchArea,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE DetectFacesWithSearchAreaAsync(
+                        ABI::Windows::Graphics::Imaging::ISoftwareBitmap* image,
+                        ABI::Windows::Graphics::Imaging::BitmapBounds searchArea,
+                        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinDetectableFaceSize(
-                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Imaging::BitmapSize * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_MinDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize* returnValue
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MinDetectableFaceSize(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapSize value
+                    virtual HRESULT STDMETHODCALLTYPE put_MinDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxDetectableFaceSize(
-                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Imaging::BitmapSize * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_MaxDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize* returnValue
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MaxDetectableFaceSize(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapSize value
+                    virtual HRESULT STDMETHODCALLTYPE put_MaxDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFaceDetector=_uuidof(IFaceDetector);
-                
+                extern MIDL_CONST_ID IID& IID_IFaceDetector = _uuidof(IFaceDetector);
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -994,9 +746,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceDetector
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1007,37 +757,34 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace FaceAnalysis {
-                /* [object, uuid("BC042D67-9047-33F6-881B-6746C1B218B8"), exclusiveto, contract] */
-                MIDL_INTERFACE("BC042D67-9047-33F6-881B-6746C1B218B8")
+                MIDL_INTERFACE("bc042d67-9047-33f6-881b-6746c1b218b8")
                 IFaceDetectorStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * * returnValue
+                        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector** returnValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetSupportedBitmapPixelFormats(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * * result
+                        __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsBitmapPixelFormatSupported(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
+                        boolean* result
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out ::boolean * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
+                        boolean* returnValue
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFaceDetectorStatics=_uuidof(IFaceDetectorStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IFaceDetectorStatics = _uuidof(IFaceDetectorStatics);
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1045,9 +792,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStati
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceTracker
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1058,40 +803,37 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace FaceAnalysis {
-                /* [object, uuid("6BA67D8C-A841-4420-93E6-2420A1884FCF"), exclusiveto, contract] */
-                MIDL_INTERFACE("6BA67D8C-A841-4420-93E6-2420A1884FCF")
+                MIDL_INTERFACE("6ba67d8c-a841-4420-93e6-2420a1884fcf")
                 IFaceTracker : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE ProcessNextFrameAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Media::IVideoFrame * videoFrame,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
+                        ABI::Windows::Media::IVideoFrame* videoFrame,
+                        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MinDetectableFaceSize(
-                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Imaging::BitmapSize * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_MinDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize* returnValue
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MinDetectableFaceSize(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapSize value
+                    virtual HRESULT STDMETHODCALLTYPE put_MinDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_MaxDetectableFaceSize(
-                        /* [retval, out] */__RPC__out ABI::Windows::Graphics::Imaging::BitmapSize * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_MaxDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize* returnValue
                         ) = 0;
-                    /* [propput] */virtual HRESULT STDMETHODCALLTYPE put_MaxDetectableFaceSize(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapSize value
+                    virtual HRESULT STDMETHODCALLTYPE put_MaxDetectableFaceSize(
+                        ABI::Windows::Graphics::Imaging::BitmapSize value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFaceTracker=_uuidof(IFaceTracker);
-                
+                extern MIDL_CONST_ID IID& IID_IFaceTracker = _uuidof(IFaceTracker);
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1099,9 +841,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceTracker
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1112,44 +852,40 @@ namespace ABI {
     namespace Windows {
         namespace Media {
             namespace FaceAnalysis {
-                /* [object, uuid("E9629198-1801-3FA5-932E-31D767AF6C4D"), exclusiveto, contract] */
-                MIDL_INTERFACE("E9629198-1801-3FA5-932E-31D767AF6C4D")
+                MIDL_INTERFACE("e9629198-1801-3fa5-932e-31d767af6c4d")
                 IFaceTrackerStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE CreateAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * * returnValue
+                        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker** returnValue
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetSupportedBitmapPixelFormats(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * * result
+                        __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsBitmapPixelFormatSupported(
-                        /* [in] */ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        ABI::Windows::Graphics::Imaging::BitmapPixelFormat bitmapPixelFormat,
+                        boolean* result
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
-                        /* [retval, out] */__RPC__out ::boolean * returnValue
+                    virtual HRESULT STDMETHODCALLTYPE get_IsSupported(
+                        boolean* returnValue
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFaceTrackerStatics=_uuidof(IFaceTrackerStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IFaceTrackerStatics = _uuidof(IFaceTrackerStatics);
             } /* FaceAnalysis */
         } /* Media */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.FaceAnalysis.DetectedFace
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.FaceAnalysis.IDetectedFace ** Default Interface **
@@ -1160,20 +896,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatic
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_DetectedFace_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_DetectedFace_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_DetectedFace[] = L"Windows.Media.FaceAnalysis.DetectedFace";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.FaceAnalysis.FaceDetector
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.FaceAnalysis.IFaceDetectorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1187,20 +920,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceDetector_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceDetector_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_FaceDetector[] = L"Windows.Media.FaceAnalysis.FaceDetector";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.FaceAnalysis.FaceTracker
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.FaceAnalysis.IFaceTrackerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1214,15 +944,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceTracker_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceTracker_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_FaceTracker[] = L"Windows.Media.FaceAnalysis.FaceTracker";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -1273,80 +999,73 @@ typedef struct __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
 interface __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
@@ -1357,70 +1076,60 @@ typedef interface __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace _
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
 
-typedef  struct __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
+typedef struct __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIIterator_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
 interface __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
@@ -1435,103 +1144,77 @@ typedef struct __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtb
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [in] */ __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
 interface __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
@@ -1546,185 +1229,120 @@ typedef struct __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-            /* [in] */ __RPC__in REFIID riid,
-            /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__deref_out_opt __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int index,
-        /* [retval][out] */ __RPC__deref_out_opt __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *item);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-        __RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [retval][out] */ __RPC__out unsigned int *size);
-
-    HRESULT ( STDMETHODCALLTYPE *GetView )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__deref_out_opt __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace **view);
-
-    HRESULT ( STDMETHODCALLTYPE *IndexOf )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * item,
-        /* [out] */ __RPC__out unsigned int *index,
-        /* [retval][out] */ __RPC__out boolean *found);
-
-    HRESULT ( STDMETHODCALLTYPE *SetAt )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * item);
-
-    HRESULT ( STDMETHODCALLTYPE *InsertAt )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int index,
-        /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * item);
-
-    HRESULT ( STDMETHODCALLTYPE *RemoveAt )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [in] */ unsigned int index);
-    HRESULT ( STDMETHODCALLTYPE *Append )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [in] */ __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * item);
-    HRESULT ( STDMETHODCALLTYPE *RemoveAtEnd )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    HRESULT ( STDMETHODCALLTYPE *Clear )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int startIndex,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    HRESULT ( STDMETHODCALLTYPE *ReplaceAll )(__RPC__in __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ unsigned int count,
-        /* [size_is][in] */ __RPC__in_ecount_full(count) __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * *value);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIVectorView_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 index,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** items,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace** items);
 
     END_INTERFACE
 } __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
 interface __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetView(This, result) \
+    ((This)->lpVtbl->GetView(This, result))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_SetAt(This, index, value) \
+    ((This)->lpVtbl->SetAt(This, index, value))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetView(This,view)	\
-    ( (This)->lpVtbl -> GetView(This,view) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_InsertAt(This, index, value) \
+    ((This)->lpVtbl->InsertAt(This, index, value))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_RemoveAt(This, index) \
+    ((This)->lpVtbl->RemoveAt(This, index))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_SetAt(This,index,item)	\
-    ( (This)->lpVtbl -> SetAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Append(This, value) \
+    ((This)->lpVtbl->Append(This, value))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_InsertAt(This,index,item)	\
-    ( (This)->lpVtbl -> InsertAt(This,index,item) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_RemoveAtEnd(This) \
+    ((This)->lpVtbl->RemoveAtEnd(This))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_RemoveAt(This,index)	\
-    ( (This)->lpVtbl -> RemoveAt(This,index) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Clear(This) \
+    ((This)->lpVtbl->Clear(This))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Append(This,item)	\
-    ( (This)->lpVtbl -> Append(This,item) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_RemoveAtEnd(This)	\
-    ( (This)->lpVtbl -> RemoveAtEnd(This) ) 
-
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Clear(This)	\
-    ( (This)->lpVtbl -> Clear(This) ) 
-
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_ReplaceAll(This,count,value)	\
-    ( (This)->lpVtbl -> ReplaceAll(This,count,value) ) 
+#define __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_ReplaceAll(This, itemsLength, items) \
+    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
 
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
 
 typedef interface __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
-
-typedef struct __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
@@ -1738,108 +1356,118 @@ EXTERN_C const IID IID___FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceA
 typedef struct __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * This, /* [retval][out] */ __RPC__out __FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * *results);
     END_INTERFACE
 } __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
 interface __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__
+#if !defined(____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* This,
+        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl;
+} __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector
+interface __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFaceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__
-
+#endif // ____FIAsyncOperationCompletedHandler_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__)
@@ -1853,108 +1481,118 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFac
 typedef struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl;
 
 interface __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* This,
+        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetectorVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__
-
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceDetector_INTERFACE_DEFINED__
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__)
@@ -1968,59 +1606,120 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFac
 typedef struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl;
 
 interface __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
-
 #endif // ____FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat;
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* This,
+        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTrackerVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CMedia__CFaceAnalysis__CFaceTracker_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
 
@@ -2033,80 +1732,75 @@ typedef struct __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVt
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat* items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl;
 
 interface __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__)
 #define ____FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
 
@@ -2115,70 +1809,62 @@ typedef interface __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelForma
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat;
 
-typedef  struct __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl
+typedef struct __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        __FIIterator_1_Windows__CGraphics__CImaging__CBitmapPixelFormat** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl;
 
 interface __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterable_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
 
@@ -2191,112 +1877,79 @@ typedef struct __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        UINT32 index,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat* items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-            /* [in] */ enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl;
 
 interface __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormatVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat_INTERFACE_DEFINED__
-
-
-
-
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 typedef struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds __x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds;
-
-
-typedef enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat;
-
 
 typedef struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize;
 
@@ -2306,34 +1959,11 @@ typedef interface __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap __x_ABI_C
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 
-
-
-
-
 #ifndef ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 #define ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CMedia_CIVideoFrame __x_ABI_CWindows_CMedia_CIVideoFrame;
 
 #endif // ____x_ABI_CWindows_CMedia_CIVideoFrame_FWD_DEFINED__
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -2341,92 +1971,68 @@ typedef interface __x_ABI_CWindows_CMedia_CIVideoFrame __x_ABI_CWindows_CMedia_C
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.DetectedFace
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_FaceAnalysis_IDetectedFace[] = L"Windows.Media.FaceAnalysis.IDetectedFace";
-/* [object, uuid("8200D454-66BC-34DF-9410-E89400195414"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFaceVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_FaceBox)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds* returnValue);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_FaceBox )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds * returnValue
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFaceVtbl;
 
 interface __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFaceVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFaceVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_get_FaceBox(This,returnValue) \
-    ( (This)->lpVtbl->get_FaceBox(This,returnValue) )
-
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_get_FaceBox(This, returnValue) \
+    ((This)->lpVtbl->get_FaceBox(This, returnValue))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2434,130 +2040,96 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIDetectedFace;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceDetector
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_FaceAnalysis_IFaceDetector[] = L"Windows.Media.FaceAnalysis.IFaceDetector";
-/* [object, uuid("16B672DC-FE6F-3117-8D95-C3F04D51630C"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* DetectFacesAsync)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap* image,
+        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue);
+    HRESULT (STDMETHODCALLTYPE* DetectFacesWithSearchAreaAsync)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap* image,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds searchArea,
+        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue);
+    HRESULT (STDMETHODCALLTYPE* get_MinDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize* returnValue);
+    HRESULT (STDMETHODCALLTYPE* put_MinDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize* returnValue);
+    HRESULT (STDMETHODCALLTYPE* put_MaxDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [overload] */HRESULT ( STDMETHODCALLTYPE *DetectFacesAsync )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap * image,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *DetectFacesWithSearchAreaAsync )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap * image,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapBounds searchArea,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MinDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize * returnValue
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MinDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize * returnValue
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MaxDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorVtbl;
 
 interface __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_DetectFacesAsync(This,image,returnValue) \
-    ( (This)->lpVtbl->DetectFacesAsync(This,image,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_DetectFacesAsync(This, image, returnValue) \
+    ((This)->lpVtbl->DetectFacesAsync(This, image, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_DetectFacesWithSearchAreaAsync(This,image,searchArea,returnValue) \
-    ( (This)->lpVtbl->DetectFacesWithSearchAreaAsync(This,image,searchArea,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_DetectFacesWithSearchAreaAsync(This, image, searchArea, returnValue) \
+    ((This)->lpVtbl->DetectFacesWithSearchAreaAsync(This, image, searchArea, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_get_MinDetectableFaceSize(This,returnValue) \
-    ( (This)->lpVtbl->get_MinDetectableFaceSize(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_get_MinDetectableFaceSize(This, returnValue) \
+    ((This)->lpVtbl->get_MinDetectableFaceSize(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_put_MinDetectableFaceSize(This,value) \
-    ( (This)->lpVtbl->put_MinDetectableFaceSize(This,value) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_put_MinDetectableFaceSize(This, value) \
+    ((This)->lpVtbl->put_MinDetectableFaceSize(This, value))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_get_MaxDetectableFaceSize(This,returnValue) \
-    ( (This)->lpVtbl->get_MaxDetectableFaceSize(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_get_MaxDetectableFaceSize(This, returnValue) \
+    ((This)->lpVtbl->get_MaxDetectableFaceSize(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_put_MaxDetectableFaceSize(This,value) \
-    ( (This)->lpVtbl->put_MaxDetectableFaceSize(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_put_MaxDetectableFaceSize(This, value) \
+    ((This)->lpVtbl->put_MaxDetectableFaceSize(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2565,114 +2137,84 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetector;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceDetector
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_FaceAnalysis_IFaceDetectorStatics[] = L"Windows.Media.FaceAnalysis.IFaceDetectorStatics";
-/* [object, uuid("BC042D67-9047-33F6-881B-6746C1B218B8"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateAsync)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector** returnValue);
+    HRESULT (STDMETHODCALLTYPE* GetSupportedBitmapPixelFormats)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat** result);
+    HRESULT (STDMETHODCALLTYPE* IsBitmapPixelFormatSupported)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat bitmapPixelFormat,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics* This,
+        boolean* returnValue);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *CreateAsync )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceDetector * * returnValue
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetSupportedBitmapPixelFormats )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsBitmapPixelFormatSupported )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat bitmapPixelFormat,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSupported )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics * This,
-        /* [retval, out] */__RPC__out boolean * returnValue
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStaticsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_CreateAsync(This,returnValue) \
-    ( (This)->lpVtbl->CreateAsync(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_CreateAsync(This, returnValue) \
+    ((This)->lpVtbl->CreateAsync(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetSupportedBitmapPixelFormats(This,result) \
-    ( (This)->lpVtbl->GetSupportedBitmapPixelFormats(This,result) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_GetSupportedBitmapPixelFormats(This, result) \
+    ((This)->lpVtbl->GetSupportedBitmapPixelFormats(This, result))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_IsBitmapPixelFormatSupported(This,bitmapPixelFormat,result) \
-    ( (This)->lpVtbl->IsBitmapPixelFormatSupported(This,bitmapPixelFormat,result) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_IsBitmapPixelFormatSupported(This, bitmapPixelFormat, result) \
+    ((This)->lpVtbl->IsBitmapPixelFormatSupported(This, bitmapPixelFormat, result))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_get_IsSupported(This,returnValue) \
-    ( (This)->lpVtbl->get_IsSupported(This,returnValue) )
-
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_get_IsSupported(This, returnValue) \
+    ((This)->lpVtbl->get_IsSupported(This, returnValue))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2680,121 +2222,89 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceDetectorStati
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceTracker
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_FaceAnalysis_IFaceTracker[] = L"Windows.Media.FaceAnalysis.IFaceTracker";
-/* [object, uuid("6BA67D8C-A841-4420-93E6-2420A1884FCF"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* ProcessNextFrameAsync)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        __x_ABI_CWindows_CMedia_CIVideoFrame* videoFrame,
+        __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace** returnValue);
+    HRESULT (STDMETHODCALLTYPE* get_MinDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize* returnValue);
+    HRESULT (STDMETHODCALLTYPE* put_MinDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize* returnValue);
+    HRESULT (STDMETHODCALLTYPE* put_MaxDetectableFaceSize)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker* This,
+        struct __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *ProcessNextFrameAsync )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CMedia_CIVideoFrame * videoFrame,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVector_1_Windows__CMedia__CFaceAnalysis__CDetectedFace * * returnValue
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MinDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize * returnValue
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MinDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_MaxDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGraphics_CImaging_CBitmapSize * returnValue
-        );
-    /* [propput] */HRESULT ( STDMETHODCALLTYPE *put_MaxDetectableFaceSize )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapSize value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerVtbl;
 
 interface __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_ProcessNextFrameAsync(This,videoFrame,returnValue) \
-    ( (This)->lpVtbl->ProcessNextFrameAsync(This,videoFrame,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_ProcessNextFrameAsync(This, videoFrame, returnValue) \
+    ((This)->lpVtbl->ProcessNextFrameAsync(This, videoFrame, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_get_MinDetectableFaceSize(This,returnValue) \
-    ( (This)->lpVtbl->get_MinDetectableFaceSize(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_get_MinDetectableFaceSize(This, returnValue) \
+    ((This)->lpVtbl->get_MinDetectableFaceSize(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_put_MinDetectableFaceSize(This,value) \
-    ( (This)->lpVtbl->put_MinDetectableFaceSize(This,value) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_put_MinDetectableFaceSize(This, value) \
+    ((This)->lpVtbl->put_MinDetectableFaceSize(This, value))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_get_MaxDetectableFaceSize(This,returnValue) \
-    ( (This)->lpVtbl->get_MaxDetectableFaceSize(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_get_MaxDetectableFaceSize(This, returnValue) \
+    ((This)->lpVtbl->get_MaxDetectableFaceSize(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_put_MaxDetectableFaceSize(This,value) \
-    ( (This)->lpVtbl->put_MaxDetectableFaceSize(This,value) )
-
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_put_MaxDetectableFaceSize(This, value) \
+    ((This)->lpVtbl->put_MaxDetectableFaceSize(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2802,121 +2312,90 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTracker;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Media.FaceAnalysis.FaceTracker
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_FaceAnalysis_IFaceTrackerStatics[] = L"Windows.Media.FaceAnalysis.IFaceTrackerStatics";
-/* [object, uuid("E9629198-1801-3FA5-932E-31D767AF6C4D"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateAsync)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker** returnValue);
+    HRESULT (STDMETHODCALLTYPE* GetSupportedBitmapPixelFormats)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat** result);
+    HRESULT (STDMETHODCALLTYPE* IsBitmapPixelFormatSupported)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        enum __x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat bitmapPixelFormat,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(__x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics* This,
+        boolean* returnValue);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *CreateAsync )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CMedia__CFaceAnalysis__CFaceTracker * * returnValue
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetSupportedBitmapPixelFormats )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CGraphics__CImaging__CBitmapPixelFormat * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsBitmapPixelFormatSupported )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-        /* [in] */__x_ABI_CWindows_CGraphics_CImaging_CBitmapPixelFormat bitmapPixelFormat,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSupported )(
-        __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics * This,
-        /* [retval, out] */__RPC__out boolean * returnValue
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStaticsVtbl;
 
 interface __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_CreateAsync(This,returnValue) \
-    ( (This)->lpVtbl->CreateAsync(This,returnValue) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_CreateAsync(This, returnValue) \
+    ((This)->lpVtbl->CreateAsync(This, returnValue))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetSupportedBitmapPixelFormats(This,result) \
-    ( (This)->lpVtbl->GetSupportedBitmapPixelFormats(This,result) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_GetSupportedBitmapPixelFormats(This, result) \
+    ((This)->lpVtbl->GetSupportedBitmapPixelFormats(This, result))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_IsBitmapPixelFormatSupported(This,bitmapPixelFormat,result) \
-    ( (This)->lpVtbl->IsBitmapPixelFormatSupported(This,bitmapPixelFormat,result) )
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_IsBitmapPixelFormatSupported(This, bitmapPixelFormat, result) \
+    ((This)->lpVtbl->IsBitmapPixelFormatSupported(This, bitmapPixelFormat, result))
 
-#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_get_IsSupported(This,returnValue) \
-    ( (This)->lpVtbl->get_IsSupported(This,returnValue) )
-
+#define __x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_get_IsSupported(This, returnValue) \
+    ((This)->lpVtbl->get_IsSupported(This, returnValue))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Media.FaceAnalysis.DetectedFace
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Media.FaceAnalysis.IDetectedFace ** Default Interface **
@@ -2927,20 +2406,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CFaceAnalysis_CIFaceTrackerStatic
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_DetectedFace_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_DetectedFace_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_DetectedFace[] = L"Windows.Media.FaceAnalysis.DetectedFace";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.FaceAnalysis.FaceDetector
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.FaceAnalysis.IFaceDetectorStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2954,20 +2430,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceDetector_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceDetector_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_FaceDetector[] = L"Windows.Media.FaceAnalysis.FaceDetector";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Media.FaceAnalysis.FaceTracker
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.FaceAnalysis.IFaceTrackerStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2981,15 +2454,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceTracker_DEFINED
 #define RUNTIMECLASS_Windows_Media_FaceAnalysis_FaceTracker_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_FaceAnalysis_FaceTracker[] = L"Windows.Media.FaceAnalysis.FaceTracker";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

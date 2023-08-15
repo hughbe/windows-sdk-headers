@@ -1,88 +1,70 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
-#include "winrt/impl/Windows.UI.1.h"
+#ifndef WINRT_Windows_UI_Text_2_H
+#define WINRT_Windows_UI_Text_2_H
 #include "winrt/impl/Windows.UI.Text.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Text {
-
-struct FontWeight
+namespace winrt::Windows::UI::Text
 {
-    uint16_t Weight;
-};
-
-inline bool operator==(FontWeight const& left, FontWeight const& right) noexcept
-{
-    return left.Weight == right.Weight;
+    struct FontWeight
+    {
+        uint16_t Weight;
+    };
+    inline bool operator==(FontWeight const& left, FontWeight const& right) noexcept
+    {
+        return left.Weight == right.Weight;
+    }
+    inline bool operator!=(FontWeight const& left, FontWeight const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) ContentLinkInfo : Windows::UI::Text::IContentLinkInfo
+    {
+        ContentLinkInfo(std::nullptr_t) noexcept {}
+        ContentLinkInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::IContentLinkInfo(ptr, take_ownership_from_abi) {}
+        ContentLinkInfo();
+    };
+    struct __declspec(empty_bases) FontWeights : Windows::UI::Text::IFontWeights
+    {
+        FontWeights(std::nullptr_t) noexcept {}
+        FontWeights(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::IFontWeights(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto Black();
+        [[nodiscard]] static auto Bold();
+        [[nodiscard]] static auto ExtraBlack();
+        [[nodiscard]] static auto ExtraBold();
+        [[nodiscard]] static auto ExtraLight();
+        [[nodiscard]] static auto Light();
+        [[nodiscard]] static auto Medium();
+        [[nodiscard]] static auto Normal();
+        [[nodiscard]] static auto SemiBold();
+        [[nodiscard]] static auto SemiLight();
+        [[nodiscard]] static auto Thin();
+    };
+    struct __declspec(empty_bases) RichEditTextDocument : Windows::UI::Text::ITextDocument,
+        impl::require<RichEditTextDocument, Windows::UI::Text::ITextDocument2, Windows::UI::Text::ITextDocument3, Windows::UI::Text::ITextDocument4>
+    {
+        RichEditTextDocument(std::nullptr_t) noexcept {}
+        RichEditTextDocument(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::ITextDocument(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) RichEditTextRange : Windows::UI::Text::ITextRange,
+        impl::require<RichEditTextRange, Windows::UI::Text::IRichEditTextRange>
+    {
+        RichEditTextRange(std::nullptr_t) noexcept {}
+        RichEditTextRange(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Text::ITextRange(ptr, take_ownership_from_abi) {}
+    };
+    struct TextConstants
+    {
+        TextConstants() = delete;
+        [[nodiscard]] static auto AutoColor();
+        [[nodiscard]] static auto MinUnitCount();
+        [[nodiscard]] static auto MaxUnitCount();
+        [[nodiscard]] static auto UndefinedColor();
+        [[nodiscard]] static auto UndefinedFloatValue();
+        [[nodiscard]] static auto UndefinedInt32Value();
+        [[nodiscard]] static auto UndefinedFontStretch();
+        [[nodiscard]] static auto UndefinedFontStyle();
+    };
 }
-
-inline bool operator!=(FontWeight const& left, FontWeight const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI::Text {
-
-struct WINRT_EBO ContentLinkInfo :
-    Windows::UI::Text::IContentLinkInfo
-{
-    ContentLinkInfo(std::nullptr_t) noexcept {}
-    ContentLinkInfo();
-};
-
-struct WINRT_EBO FontWeights :
-    Windows::UI::Text::IFontWeights
-{
-    FontWeights(std::nullptr_t) noexcept {}
-    static Windows::UI::Text::FontWeight Black();
-    static Windows::UI::Text::FontWeight Bold();
-    static Windows::UI::Text::FontWeight ExtraBlack();
-    static Windows::UI::Text::FontWeight ExtraBold();
-    static Windows::UI::Text::FontWeight ExtraLight();
-    static Windows::UI::Text::FontWeight Light();
-    static Windows::UI::Text::FontWeight Medium();
-    static Windows::UI::Text::FontWeight Normal();
-    static Windows::UI::Text::FontWeight SemiBold();
-    static Windows::UI::Text::FontWeight SemiLight();
-    static Windows::UI::Text::FontWeight Thin();
-};
-
-struct WINRT_EBO RichEditTextDocument :
-    Windows::UI::Text::ITextDocument,
-    impl::require<RichEditTextDocument, Windows::UI::Text::ITextDocument2, Windows::UI::Text::ITextDocument3>
-{
-    RichEditTextDocument(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO RichEditTextRange :
-    Windows::UI::Text::ITextRange,
-    impl::require<RichEditTextRange, Windows::UI::Text::IRichEditTextRange>
-{
-    RichEditTextRange(std::nullptr_t) noexcept {}
-};
-
-struct TextConstants
-{
-    TextConstants() = delete;
-    static Windows::UI::Color AutoColor();
-    static int32_t MinUnitCount();
-    static int32_t MaxUnitCount();
-    static Windows::UI::Color UndefinedColor();
-    static float UndefinedFloatValue();
-    static int32_t UndefinedInt32Value();
-    static Windows::UI::Text::FontStretch UndefinedFontStretch();
-    static Windows::UI::Text::FontStyle UndefinedFontStyle();
-};
-
-}
+#endif

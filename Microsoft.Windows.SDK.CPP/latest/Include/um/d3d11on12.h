@@ -57,6 +57,13 @@ typedef interface ID3D11On12Device1 ID3D11On12Device1;
 #endif 	/* __ID3D11On12Device1_FWD_DEFINED__ */
 
 
+#ifndef __ID3D11On12Device2_FWD_DEFINED__
+#define __ID3D11On12Device2_FWD_DEFINED__
+typedef interface ID3D11On12Device2 ID3D11On12Device2;
+
+#endif 	/* __ID3D11On12Device2_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "oaidl.h"
 #include "ocidl.h"
@@ -376,17 +383,157 @@ EXTERN_C const IID IID_ID3D11On12Device1;
 #endif 	/* __ID3D11On12Device1_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_d3d11on12_0000_0002 */
+#ifndef __ID3D11On12Device2_INTERFACE_DEFINED__
+#define __ID3D11On12Device2_INTERFACE_DEFINED__
+
+/* interface ID3D11On12Device2 */
+/* [unique][local][object][uuid] */ 
+
+
+EXTERN_C const IID IID_ID3D11On12Device2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("dc90f331-4740-43fa-866e-67f12cb58223")
+    ID3D11On12Device2 : public ID3D11On12Device1
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE UnwrapUnderlyingResource( 
+            _In_  ID3D11Resource *pResource11,
+            _In_  ID3D12CommandQueue *pCommandQueue,
+            REFIID riid,
+            _COM_Outptr_  void **ppvResource12) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE ReturnUnderlyingResource( 
+            _In_  ID3D11Resource *pResource11,
+            UINT NumSync,
+            _In_reads_(NumSync)   UINT64 *pSignalValues,
+            _In_reads_(NumSync)   ID3D12Fence **ppFences) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ID3D11On12Device2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            ID3D11On12Device2 * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            ID3D11On12Device2 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            ID3D11On12Device2 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *CreateWrappedResource )( 
+            ID3D11On12Device2 * This,
+            _In_  IUnknown *pResource12,
+            _In_  const D3D11_RESOURCE_FLAGS *pFlags11,
+            D3D12_RESOURCE_STATES InState,
+            D3D12_RESOURCE_STATES OutState,
+            REFIID riid,
+            _COM_Outptr_opt_  void **ppResource11);
+        
+        void ( STDMETHODCALLTYPE *ReleaseWrappedResources )( 
+            ID3D11On12Device2 * This,
+            _In_reads_( NumResources )  ID3D11Resource *const *ppResources,
+            UINT NumResources);
+        
+        void ( STDMETHODCALLTYPE *AcquireWrappedResources )( 
+            ID3D11On12Device2 * This,
+            _In_reads_( NumResources )  ID3D11Resource *const *ppResources,
+            UINT NumResources);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetD3D12Device )( 
+            ID3D11On12Device2 * This,
+            REFIID riid,
+            _COM_Outptr_  void **ppvDevice);
+        
+        HRESULT ( STDMETHODCALLTYPE *UnwrapUnderlyingResource )( 
+            ID3D11On12Device2 * This,
+            _In_  ID3D11Resource *pResource11,
+            _In_  ID3D12CommandQueue *pCommandQueue,
+            REFIID riid,
+            _COM_Outptr_  void **ppvResource12);
+        
+        HRESULT ( STDMETHODCALLTYPE *ReturnUnderlyingResource )( 
+            ID3D11On12Device2 * This,
+            _In_  ID3D11Resource *pResource11,
+            UINT NumSync,
+            _In_reads_(NumSync)   UINT64 *pSignalValues,
+            _In_reads_(NumSync)   ID3D12Fence **ppFences);
+        
+        END_INTERFACE
+    } ID3D11On12Device2Vtbl;
+
+    interface ID3D11On12Device2
+    {
+        CONST_VTBL struct ID3D11On12Device2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ID3D11On12Device2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ID3D11On12Device2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ID3D11On12Device2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ID3D11On12Device2_CreateWrappedResource(This,pResource12,pFlags11,InState,OutState,riid,ppResource11)	\
+    ( (This)->lpVtbl -> CreateWrappedResource(This,pResource12,pFlags11,InState,OutState,riid,ppResource11) ) 
+
+#define ID3D11On12Device2_ReleaseWrappedResources(This,ppResources,NumResources)	\
+    ( (This)->lpVtbl -> ReleaseWrappedResources(This,ppResources,NumResources) ) 
+
+#define ID3D11On12Device2_AcquireWrappedResources(This,ppResources,NumResources)	\
+    ( (This)->lpVtbl -> AcquireWrappedResources(This,ppResources,NumResources) ) 
+
+
+#define ID3D11On12Device2_GetD3D12Device(This,riid,ppvDevice)	\
+    ( (This)->lpVtbl -> GetD3D12Device(This,riid,ppvDevice) ) 
+
+
+#define ID3D11On12Device2_UnwrapUnderlyingResource(This,pResource11,pCommandQueue,riid,ppvResource12)	\
+    ( (This)->lpVtbl -> UnwrapUnderlyingResource(This,pResource11,pCommandQueue,riid,ppvResource12) ) 
+
+#define ID3D11On12Device2_ReturnUnderlyingResource(This,pResource11,NumSync,pSignalValues,ppFences)	\
+    ( (This)->lpVtbl -> ReturnUnderlyingResource(This,pResource11,NumSync,pSignalValues,ppFences) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ID3D11On12Device2_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_d3d11on12_0000_0003 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #pragma endregion
 DEFINE_GUID(IID_ID3D11On12Device,0x85611e73,0x70a9,0x490e,0x96,0x14,0xa9,0xe3,0x02,0x77,0x79,0x04);
 DEFINE_GUID(IID_ID3D11On12Device1,0xbdb64df4,0xea2f,0x4c70,0xb8,0x61,0xaa,0xab,0x12,0x58,0xbb,0x5d);
+DEFINE_GUID(IID_ID3D11On12Device2,0xdc90f331,0x4740,0x43fa,0x86,0x6e,0x67,0xf1,0x2c,0xb5,0x82,0x23);
 
 
-extern RPC_IF_HANDLE __MIDL_itf_d3d11on12_0000_0002_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_d3d11on12_0000_0002_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d11on12_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_d3d11on12_0000_0003_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -784,7 +784,7 @@ inline XMVECTOR XM_CALLCONV XMQuaternionRotationMatrix
     // z^2 >= w^2 equivalent to r11 + r00 <= 0
     XMVECTOR r11pr00 = vaddq_f32(r11, r00);
     XMVECTOR z2gew2 = vcleq_f32(r11pr00, g_XMZero);
-    
+
     // x^2 + y^2 >= z^2 + w^2 equivalent to r22 <= 0
     XMVECTOR x2py2gez2pw2 = vcleq_f32(r22, g_XMZero);
 
@@ -1258,7 +1258,7 @@ inline XMFLOAT4* XM_CALLCONV XMPlaneTransformStream
 (
     XMFLOAT4*       pOutputStream,
     size_t          OutputStride,
-    const XMFLOAT4* pInputStream,    
+    const XMFLOAT4* pInputStream,
     size_t          InputStride,
     size_t          PlaneCount,
     FXMMATRIX       M
@@ -1554,12 +1554,12 @@ inline XMVECTOR XM_CALLCONV XMColorRGBToHSL( FXMVECTOR rgb )
         if ( XMVector3Greater( l, g_XMOneHalf ) )
         {
             // d / (2-max-min)
-            s = XMVectorDivide( d, XMVectorSubtract( g_XMTwo, d2 ) ); 
+            s = XMVectorDivide( d, XMVectorSubtract( g_XMTwo, d2 ) );
         }
         else
         {
             // d / (max+min)
-            s = XMVectorDivide( d, d2 ); 
+            s = XMVectorDivide( d, d2 );
         }
 
         if ( XMVector3Equal( r, max ) )
@@ -1599,7 +1599,7 @@ inline XMVECTOR XM_CALLCONV XMColorHue2Clr( FXMVECTOR p, FXMVECTOR q, FXMVECTOR 
 {
     static const XMVECTORF32 oneSixth = { { { 1.0f / 6.0f, 1.0f / 6.0f, 1.0f / 6.0f, 1.0f / 6.0f } } };
     static const XMVECTORF32 twoThirds = { { { 2.0f / 3.0f, 2.0f / 3.0f, 2.0f / 3.0f, 2.0f / 3.0f } } };
-    
+
     XMVECTOR t = h;
 
     if ( XMVector3Less( t, g_XMZero ) )
@@ -1842,7 +1842,7 @@ inline XMVECTOR XM_CALLCONV XMColorYUVToRGB_HD( FXMVECTOR yuv )
 {
     static const XMVECTORF32 Scale1 = { { { 0.0f, -0.2153f, 2.1324f, 0.0f } } };
     static const XMVECTORF32 Scale2 = { { { 1.2803f, -0.3806f, 0.0f, 0.0f } } };
-        
+
     XMMATRIX M( g_XMOne, Scale1, Scale2, g_XMZero );
     XMVECTOR clr = XMVector3Transform( yuv, M );
 
@@ -1977,7 +1977,11 @@ inline bool XMVerifyCPUSupport()
 {
 #if defined(_XM_SSE_INTRINSICS_) && !defined(_XM_NO_INTRINSICS_)
     int CPUInfo[4] = { -1 };
+#ifdef __clang__
+    __cpuid(0, CPUInfo[0], CPUInfo[1], CPUInfo[2], CPUInfo[3]);
+#else
     __cpuid(CPUInfo, 0);
+#endif
 
 #ifdef __AVX2__
     if (CPUInfo[0] < 7)
@@ -1987,7 +1991,11 @@ inline bool XMVerifyCPUSupport()
         return false;
 #endif
 
+#ifdef __clang__
+    __cpuid(1, CPUInfo[0], CPUInfo[1], CPUInfo[2], CPUInfo[3]);
+#else
     __cpuid(CPUInfo, 1);
+#endif
 
 #if defined(__AVX2__) || defined(_XM_AVX2_INTRINSICS_)
     // The compiler can emit FMA3 instructions even without explicit intrinsics use
@@ -2010,7 +2018,7 @@ inline bool XMVerifyCPUSupport()
         return false; // No SSE3/SSE4.1 support
 #elif defined(_XM_SSE3_INTRINSICS_)
     if (!(CPUInfo[2] & 0x1))
-        return false; // No SSE3 support  
+        return false; // No SSE3 support
 #endif
 
     // The x64 processor model requires SSE2 support, but no harm in checking
@@ -2018,7 +2026,11 @@ inline bool XMVerifyCPUSupport()
         return false; // No SSE2/SSE support
 
 #if defined(__AVX2__) || defined(_XM_AVX2_INTRINSICS_)
+#ifdef __clang__
+    __cpuid_count(7, 0, CPUInfo[0], CPUInfo[1], CPUInfo[2], CPUInfo[3]);
+#else
     __cpuidex(CPUInfo, 7, 0);
+#endif
     if (!(CPUInfo[1] & 0x20))
         return false; // No AVX2 support
 #endif
@@ -2093,7 +2105,7 @@ inline XMVECTOR XM_CALLCONV XMFresnelTerm
     // Calc G-C and G+C
     XMVECTOR GAddC = _mm_add_ps(G,CosIncidentAngle);
     XMVECTOR GSubC = _mm_sub_ps(G,CosIncidentAngle);
-    // Perform the term (0.5f *(g - c)^2) / (g + c)^2 
+    // Perform the term (0.5f *(g - c)^2) / (g + c)^2
     XMVECTOR vResult = _mm_mul_ps(GSubC,GSubC);
     vTemp = _mm_mul_ps(GAddC,GAddC);
     vResult = _mm_mul_ps(vResult,g_XMOneHalf);

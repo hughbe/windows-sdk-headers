@@ -107,6 +107,8 @@ namespace Windows
 
             interface IDataPackage3;
 
+            interface IDataPackage4;
+
             interface IDataPackagePropertySet;
 
             interface IDataPackagePropertySet2;
@@ -413,18 +415,18 @@ namespace Windows
             [uuid(61EBF5C7-EFEA-4346-9554-981D7E198FFE)]
             interface IDataPackage : IInspectable
             {
-                HRESULT GetView([out] [retval] Windows.ApplicationModel.DataTransfer.DataPackageView** value);
+                HRESULT GetView([out] [retval] Windows.ApplicationModel.DataTransfer.DataPackageView** result);
                 [propget] HRESULT Properties([out] [retval] Windows.ApplicationModel.DataTransfer.DataPackagePropertySet** value);
                 [propget] HRESULT RequestedOperation([out] [retval] Windows.ApplicationModel.DataTransfer.DataPackageOperation* value);
                 [propput] HRESULT RequestedOperation([in] Windows.ApplicationModel.DataTransfer.DataPackageOperation value);
-                [eventadd] HRESULT OperationCompleted([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs*>* handler, [out] [retval] EventRegistrationToken* eventCookie);
-                [eventremove] HRESULT OperationCompleted([in] EventRegistrationToken eventCookie);
-                [eventadd] HRESULT Destroyed([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* eventCookie);
-                [eventremove] HRESULT Destroyed([in] EventRegistrationToken eventCookie);
+                [eventadd] HRESULT OperationCompleted([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, Windows.ApplicationModel.DataTransfer.OperationCompletedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT OperationCompleted([in] EventRegistrationToken token);
+                [eventadd] HRESULT Destroyed([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Destroyed([in] EventRegistrationToken token);
                 HRESULT SetData([in] HSTRING formatId, [in] IInspectable* value);
                 HRESULT SetDataProvider([in] HSTRING formatId, [in] Windows.ApplicationModel.DataTransfer.DataProviderHandler* delayRenderer);
                 HRESULT SetText([in] HSTRING value);
-                [deprecated("SetUri may be altered or unavailable for releases after Windows Phone 'OSVersion' (TBD). Instead, use SetWebLink or SetApplicationLink.", deprecate, Windows.Foundation.UniversalApiContract, 1.0)] HRESULT SetUri([in] Windows.Foundation.Uri* value);
+                [deprecated("SetUri may be altered or unavailable for releases after Windows Phone 'OSVersion' (TBD).Instead, use SetWebLink or SetApplicationLink.", deprecate, Windows.Foundation.UniversalApiContract, 1.0)] HRESULT SetUri([in] Windows.Foundation.Uri* value);
                 HRESULT SetHtmlFormat([in] HSTRING value);
                 [propget] HRESULT ResourceMap([out] [retval] Windows.Foundation.Collections.IMap<HSTRING, Windows.Storage.Streams.RandomAccessStreamReference*>** value);
                 HRESULT SetRtf([in] HSTRING value);
@@ -449,6 +451,15 @@ namespace Windows
             {
                 [eventadd] HRESULT ShareCompleted([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, Windows.ApplicationModel.DataTransfer.ShareCompletedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
                 [eventremove] HRESULT ShareCompleted([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.ApplicationModel.DataTransfer.DataPackage)]
+            [uuid(13A24EC8-9382-536F-852A-3045E1B29A3B)]
+            interface IDataPackage4 : IInspectable
+            {
+                [eventadd] HRESULT ShareCanceled([in] Windows.Foundation.TypedEventHandler<Windows.ApplicationModel.DataTransfer.DataPackage*, IInspectable*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ShareCanceled([in] EventRegistrationToken token);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -879,11 +890,13 @@ namespace Windows
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
+            [threading(both)]
             runtimeclass DataPackage
             {
                 [default] interface Windows.ApplicationModel.DataTransfer.IDataPackage;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.ApplicationModel.DataTransfer.IDataPackage2;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.ApplicationModel.DataTransfer.IDataPackage3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.ApplicationModel.DataTransfer.IDataPackage4;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]

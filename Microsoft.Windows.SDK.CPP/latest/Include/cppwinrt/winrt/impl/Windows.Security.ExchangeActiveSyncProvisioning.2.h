@@ -1,41 +1,31 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Security_ExchangeActiveSyncProvisioning_2_H
+#define WINRT_Windows_Security_ExchangeActiveSyncProvisioning_2_H
 #include "winrt/impl/Windows.Security.ExchangeActiveSyncProvisioning.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning {
-
-struct WINRT_EBO EasClientDeviceInformation :
-    Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation,
-    impl::require<EasClientDeviceInformation, Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
+namespace winrt::Windows::Security::ExchangeActiveSyncProvisioning
 {
-    EasClientDeviceInformation(std::nullptr_t) noexcept {}
-    EasClientDeviceInformation();
-};
-
-struct WINRT_EBO EasClientSecurityPolicy :
-    Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy
-{
-    EasClientSecurityPolicy(std::nullptr_t) noexcept {}
-    EasClientSecurityPolicy();
-};
-
-struct WINRT_EBO EasComplianceResults :
-    Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults,
-    impl::require<EasComplianceResults, Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
-{
-    EasComplianceResults(std::nullptr_t) noexcept {}
-};
-
+    struct __declspec(empty_bases) EasClientDeviceInformation : Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation,
+        impl::require<EasClientDeviceInformation, Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation2>
+    {
+        EasClientDeviceInformation(std::nullptr_t) noexcept {}
+        EasClientDeviceInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::ExchangeActiveSyncProvisioning::IEasClientDeviceInformation(ptr, take_ownership_from_abi) {}
+        EasClientDeviceInformation();
+    };
+    struct __declspec(empty_bases) EasClientSecurityPolicy : Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy
+    {
+        EasClientSecurityPolicy(std::nullptr_t) noexcept {}
+        EasClientSecurityPolicy(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::ExchangeActiveSyncProvisioning::IEasClientSecurityPolicy(ptr, take_ownership_from_abi) {}
+        EasClientSecurityPolicy();
+    };
+    struct __declspec(empty_bases) EasComplianceResults : Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults,
+        impl::require<EasComplianceResults, Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults2>
+    {
+        EasComplianceResults(std::nullptr_t) noexcept {}
+        EasComplianceResults(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Security::ExchangeActiveSyncProvisioning::IEasComplianceResults(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

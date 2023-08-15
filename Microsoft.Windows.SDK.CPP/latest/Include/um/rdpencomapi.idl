@@ -187,7 +187,8 @@ typedef enum {
 
 typedef enum {
     CHANNEL_FLAGS_LEGACY       = 0x01,
-    CHANNEL_FLAGS_UNCOMPRESSED = 0x02
+    CHANNEL_FLAGS_UNCOMPRESSED = 0x02,
+    CHANNEL_FLAGS_DYNAMIC      = 0x04
 } CHANNEL_FLAGS;
 
 typedef enum {
@@ -1894,6 +1895,15 @@ library RDPCOMAPILib
             [in] CTRL_LEVEL RequestedLevel,
             [in] long ReasonCode
             );
+
+        [
+            id(DISPID_RDPSRAPI_EVENT_ON_VIRTUAL_CHANNEL_JOIN)
+        ]
+        void OnChannelBound(
+            [in] IUnknown* pChannel,
+            [in] long      lAttendeeId
+            );
+
     }; // _IRDPSessionEvents
 
     // Any types not mentioned explicitly in an interface method must be

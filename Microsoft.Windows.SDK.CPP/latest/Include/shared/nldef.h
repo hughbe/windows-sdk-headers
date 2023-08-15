@@ -263,6 +263,34 @@ typedef enum _NL_INTERFACE_NETWORK_CATEGORY_STATE {
 } NL_INTERFACE_NETWORK_CATEGORY_STATE,
 *PNL_INTERFACE_NETWORK_CATEGORY_STATE;
 
+typedef enum _NL_NETWORK_CONNECTIVITY_LEVEL_HINT {
+    NetworkConnectivityLevelHintUnknown = 0,
+    NetworkConnectivityLevelHintNone,
+    NetworkConnectivityLevelHintLocalAccess,
+    NetworkConnectivityLevelHintInternetAccess,
+    NetworkConnectivityLevelHintConstrainedInternetAccess,
+    NetworkConnectivityLevelHintHidden,
+} NL_NETWORK_CONNECTIVITY_LEVEL_HINT;
+
+typedef enum _NL_NETWORK_CONNECTIVITY_COST_HINT {
+    NetworkConnectivityCostHintUnknown = 0,
+    NetworkConnectivityCostHintUnrestricted,
+    NetworkConnectivityCostHintFixed,
+    NetworkConnectivityCostHintVariable,
+} NL_NETWORK_CONNECTIVITY_COST_HINT;
+
+typedef struct _NL_NETWORK_CONNECTIVITY_HINT {
+    NL_NETWORK_CONNECTIVITY_LEVEL_HINT ConnectivityLevel;
+
+    //
+    // Fields reflecting cost factors.
+    //
+    NL_NETWORK_CONNECTIVITY_COST_HINT ConnectivityCost;
+    BOOLEAN ApproachingDataLimit;
+    BOOLEAN OverDataLimit;
+    BOOLEAN Roaming;
+} NL_NETWORK_CONNECTIVITY_HINT;
+
 #define NET_IF_CURRENT_SESSION ((ULONG)-1)
 
 typedef struct _NL_BANDWIDTH_INFORMATION {

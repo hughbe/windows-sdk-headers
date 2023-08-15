@@ -2350,10 +2350,7 @@ DEFINE_GUID(
     0x93, 0xda, 0xe8, 0xc3, 0x3f, 0xc9, 0x23, 0xc7
 );
 
-//
-// TODO: This needs to be changed to NTDDI version for 19H1 when it is defined.
-// #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-//
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 // 335a3e90-84aa-42f5-9e6f-59309536a44c
 DEFINE_GUID(
@@ -2382,7 +2379,7 @@ DEFINE_GUID(
     0x80, 0xd8, 0x5c, 0xa4, 0x56, 0x96, 0x2d, 0xe3
 );
 
-// #endif
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
@@ -4993,7 +4990,7 @@ FwpmNetEventSubscribe3(
    _Out_ HANDLE* eventsHandle
    );
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3) // BSAIG:TODO: Change to NTDDI_WIN10_RS4 once it becomes available.
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_RS4)
 
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS5) //NTDDI_WIN10_RS5
 

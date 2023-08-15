@@ -13,6 +13,7 @@ import "Windows.Foundation.idl";
 import "Windows.Devices.Haptics.idl";
 import "Windows.Devices.Input.idl";
 import "Windows.Storage.Streams.idl";
+import "Windows.System.idl";
 import "Windows.UI.Core.idl";
 
 // Forward Declare
@@ -48,6 +49,8 @@ namespace Windows
 
         typedef struct Rect Rect;
 
+        typedef struct TimeSpan TimeSpan;
+
         apicontract UniversalApiContract;
 
         runtimeclass Uri;
@@ -61,6 +64,13 @@ namespace Windows
         {
             runtimeclass RandomAccessStreamReference;
         }
+    }
+}
+namespace Windows
+{
+    namespace System
+    {
+        runtimeclass DispatcherQueue;
     }
 }
 namespace Windows
@@ -111,7 +121,11 @@ namespace Windows
 
             interface ICrossSlidingEventArgs;
 
+            interface ICrossSlidingEventArgs2;
+
             interface IDraggingEventArgs;
+
+            interface IDraggingEventArgs2;
 
             interface IEdgeGesture;
 
@@ -121,7 +135,11 @@ namespace Windows
 
             interface IGestureRecognizer;
 
+            interface IGestureRecognizer2;
+
             interface IHoldingEventArgs;
+
+            interface IHoldingEventArgs2;
 
             interface IInputActivationListener;
 
@@ -133,11 +151,19 @@ namespace Windows
 
             interface IManipulationCompletedEventArgs;
 
+            interface IManipulationCompletedEventArgs2;
+
             interface IManipulationInertiaStartingEventArgs;
+
+            interface IManipulationInertiaStartingEventArgs2;
 
             interface IManipulationStartedEventArgs;
 
+            interface IManipulationStartedEventArgs2;
+
             interface IManipulationUpdatedEventArgs;
+
+            interface IManipulationUpdatedEventArgs2;
 
             interface IMouseWheelParameters;
 
@@ -209,7 +235,21 @@ namespace Windows
 
             interface IRightTappedEventArgs;
 
+            interface IRightTappedEventArgs2;
+
+            interface ISystemButtonEventController;
+
+            interface ISystemButtonEventControllerStatics;
+
+            interface ISystemFunctionButtonEventArgs;
+
+            interface ISystemFunctionLockChangedEventArgs;
+
+            interface ISystemFunctionLockIndicatorChangedEventArgs;
+
             interface ITappedEventArgs;
+
+            interface ITappedEventArgs2;
 
             runtimeclass AttachableInputObject;
 
@@ -276,6 +316,14 @@ namespace Windows
             runtimeclass RadialControllerScreenContactStartedEventArgs;
 
             runtimeclass RightTappedEventArgs;
+
+            runtimeclass SystemButtonEventController;
+
+            runtimeclass SystemFunctionButtonEventArgs;
+
+            runtimeclass SystemFunctionLockChangedEventArgs;
+
+            runtimeclass SystemFunctionLockIndicatorChangedEventArgs;
 
             runtimeclass TappedEventArgs;
         }
@@ -354,6 +402,12 @@ namespace Windows
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialController*, Windows.UI.Input.RadialControllerScreenContactStartedEventArgs*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.RadialControllerMenuItem*, IInspectable*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionButtonEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionLockChangedEventArgs*>;
+
+                interface Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs*>;
             }
         }
     }
@@ -535,6 +589,14 @@ namespace Windows
                 [propget] HRESULT CrossSlidingState([out] [retval] Windows.UI.Input.CrossSlidingState* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.CrossSlidingEventArgs)]
+            [uuid(EEFB7D48-C070-59F3-8DAB-BCAF621D8687)]
+            interface ICrossSlidingEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Input.DraggingEventArgs)]
             [uuid(1C905384-083C-4BD3-B559-179CDDEB33EC)]
@@ -543,6 +605,14 @@ namespace Windows
                 [propget] HRESULT PointerDeviceType([out] [retval] Windows.Devices.Input.PointerDeviceType* value);
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
                 [propget] HRESULT DraggingState([out] [retval] Windows.UI.Input.DraggingState* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.DraggingEventArgs)]
+            [uuid(71EFDBF9-382A-55CA-B4B9-008123C1BF1A)]
+            interface IDraggingEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -612,31 +682,54 @@ namespace Windows
                 [propget] HRESULT AutoProcessInertia([out] [retval] boolean* value);
                 [propput] HRESULT AutoProcessInertia([in] boolean value);
                 [propget] HRESULT MouseWheelParameters([out] [retval] Windows.UI.Input.MouseWheelParameters** value);
-                HRESULT CanBeDoubleTap([in] Windows.UI.Input.PointerPoint* value, [out] [retval] boolean* canBeDoubleTap);
+                HRESULT CanBeDoubleTap([in] Windows.UI.Input.PointerPoint* value, [out] [retval] boolean* result);
                 HRESULT ProcessDownEvent([in] Windows.UI.Input.PointerPoint* value);
                 HRESULT ProcessMoveEvents([in] Windows.Foundation.Collections.IVector<Windows.UI.Input.PointerPoint*>* value);
                 HRESULT ProcessUpEvent([in] Windows.UI.Input.PointerPoint* value);
                 HRESULT ProcessMouseWheelEvent([in] Windows.UI.Input.PointerPoint* value, [in] boolean isShiftKeyDown, [in] boolean isControlKeyDown);
                 HRESULT ProcessInertia();
                 HRESULT CompleteGesture();
-                [eventadd] HRESULT Tapped([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.TappedEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT Tapped([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT RightTapped([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.RightTappedEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT RightTapped([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT Holding([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.HoldingEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT Holding([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT Dragging([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.DraggingEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT Dragging([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT ManipulationStarted([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationStartedEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT ManipulationStarted([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT ManipulationUpdated([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationUpdatedEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT ManipulationUpdated([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT ManipulationInertiaStarting([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationInertiaStartingEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT ManipulationInertiaStarting([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT ManipulationCompleted([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationCompletedEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT ManipulationCompleted([in] EventRegistrationToken cookie);
-                [eventadd] HRESULT CrossSliding([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.CrossSlidingEventArgs*>* handler, [out] [retval] EventRegistrationToken* pCookie);
-                [eventremove] HRESULT CrossSliding([in] EventRegistrationToken cookie);
+                [eventadd] HRESULT Tapped([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.TappedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Tapped([in] EventRegistrationToken token);
+                [eventadd] HRESULT RightTapped([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.RightTappedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT RightTapped([in] EventRegistrationToken token);
+                [eventadd] HRESULT Holding([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.HoldingEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Holding([in] EventRegistrationToken token);
+                [eventadd] HRESULT Dragging([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.DraggingEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT Dragging([in] EventRegistrationToken token);
+                [eventadd] HRESULT ManipulationStarted([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationStartedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ManipulationStarted([in] EventRegistrationToken token);
+                [eventadd] HRESULT ManipulationUpdated([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationUpdatedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ManipulationUpdated([in] EventRegistrationToken token);
+                [eventadd] HRESULT ManipulationInertiaStarting([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationInertiaStartingEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ManipulationInertiaStarting([in] EventRegistrationToken token);
+                [eventadd] HRESULT ManipulationCompleted([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.ManipulationCompletedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ManipulationCompleted([in] EventRegistrationToken token);
+                [eventadd] HRESULT CrossSliding([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.GestureRecognizer*, Windows.UI.Input.CrossSlidingEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT CrossSliding([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.GestureRecognizer)]
+            [uuid(D646097F-6EF7-5746-8BA8-8FF2206E6F3B)]
+            interface IGestureRecognizer2 : IInspectable
+            {
+                [propget] HRESULT TapMinContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT TapMinContactCount([in] UINT32 value);
+                [propget] HRESULT TapMaxContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT TapMaxContactCount([in] UINT32 value);
+                [propget] HRESULT HoldMinContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT HoldMinContactCount([in] UINT32 value);
+                [propget] HRESULT HoldMaxContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT HoldMaxContactCount([in] UINT32 value);
+                [propget] HRESULT HoldRadius([out] [retval] FLOAT* value);
+                [propput] HRESULT HoldRadius([in] FLOAT value);
+                [propget] HRESULT HoldStartDelay([out] [retval] Windows.Foundation.TimeSpan* value);
+                [propput] HRESULT HoldStartDelay([in] Windows.Foundation.TimeSpan value);
+                [propget] HRESULT TranslationMinContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT TranslationMinContactCount([in] UINT32 value);
+                [propget] HRESULT TranslationMaxContactCount([out] [retval] UINT32* value);
+                [propput] HRESULT TranslationMaxContactCount([in] UINT32 value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -647,6 +740,15 @@ namespace Windows
                 [propget] HRESULT PointerDeviceType([out] [retval] Windows.Devices.Input.PointerDeviceType* value);
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
                 [propget] HRESULT HoldingState([out] [retval] Windows.UI.Input.HoldingState* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.HoldingEventArgs)]
+            [uuid(141DA9EA-4C79-5674-AFEA-493FDEB91F19)]
+            interface IHoldingEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+                [propget] HRESULT CurrentContactCount([out] [retval] UINT32* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
@@ -699,6 +801,15 @@ namespace Windows
                 [propget] HRESULT Velocities([out] [retval] Windows.UI.Input.ManipulationVelocities* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.ManipulationCompletedEventArgs)]
+            [uuid(F0C0DCE7-30A9-5B96-886F-6560A85E4757)]
+            interface IManipulationCompletedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+                [propget] HRESULT CurrentContactCount([out] [retval] UINT32* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Input.ManipulationInertiaStartingEventArgs)]
             [uuid(DD37A898-26BF-467A-9CE5-CCF3FB11371E)]
@@ -711,6 +822,14 @@ namespace Windows
                 [propget] HRESULT Velocities([out] [retval] Windows.UI.Input.ManipulationVelocities* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.ManipulationInertiaStartingEventArgs)]
+            [uuid(C25409B8-F9FA-5A45-BD97-DCBBB2201860)]
+            interface IManipulationInertiaStartingEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Input.ManipulationStartedEventArgs)]
             [uuid(DDEC873E-CFCE-4932-8C1D-3C3D011A34C0)]
@@ -719,6 +838,14 @@ namespace Windows
                 [propget] HRESULT PointerDeviceType([out] [retval] Windows.Devices.Input.PointerDeviceType* value);
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
                 [propget] HRESULT Cumulative([out] [retval] Windows.UI.Input.ManipulationDelta* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.ManipulationStartedEventArgs)]
+            [uuid(2DA3DB4E-E583-5055-AFAA-16FD986531A6)]
+            interface IManipulationStartedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -731,6 +858,15 @@ namespace Windows
                 [propget] HRESULT Delta([out] [retval] Windows.UI.Input.ManipulationDelta* value);
                 [propget] HRESULT Cumulative([out] [retval] Windows.UI.Input.ManipulationDelta* value);
                 [propget] HRESULT Velocities([out] [retval] Windows.UI.Input.ManipulationVelocities* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.ManipulationUpdatedEventArgs)]
+            [uuid(F3DFB96A-3306-5903-A1C5-FF9757A8689E)]
+            interface IManipulationUpdatedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+                [propget] HRESULT CurrentContactCount([out] [retval] UINT32* value);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1111,6 +1247,69 @@ namespace Windows
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.RightTappedEventArgs)]
+            [uuid(61C7B7BB-9F57-5857-A33C-C58C3DFA959E)]
+            interface IRightTappedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.SystemButtonEventController)]
+            [uuid(59B893A9-73BC-52B5-BA41-82511B2CB46C)]
+            interface ISystemButtonEventController : IInspectable
+            {
+                [eventadd] HRESULT SystemFunctionButtonPressed([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionButtonEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT SystemFunctionButtonPressed([in] EventRegistrationToken token);
+                [eventadd] HRESULT SystemFunctionButtonReleased([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionButtonEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT SystemFunctionButtonReleased([in] EventRegistrationToken token);
+                [eventadd] HRESULT SystemFunctionLockChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionLockChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT SystemFunctionLockChanged([in] EventRegistrationToken token);
+                [eventadd] HRESULT SystemFunctionLockIndicatorChanged([in] Windows.Foundation.TypedEventHandler<Windows.UI.Input.SystemButtonEventController*, Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT SystemFunctionLockIndicatorChanged([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.SystemButtonEventController)]
+            [uuid(632FB07B-20BD-5E15-AF4A-00DBF2064FFA)]
+            interface ISystemButtonEventControllerStatics : IInspectable
+            {
+                HRESULT CreateForDispatcherQueue([in] Windows.System.DispatcherQueue* queue, [out] [retval] Windows.UI.Input.SystemButtonEventController** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.SystemFunctionButtonEventArgs)]
+            [uuid(4833896F-80D1-5DD6-92A7-62A508FFEF5A)]
+            interface ISystemFunctionButtonEventArgs : IInspectable
+            {
+                [propget] HRESULT Timestamp([out] [retval] UINT64* value);
+                [propget] HRESULT Handled([out] [retval] boolean* value);
+                [propput] HRESULT Handled([in] boolean value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.SystemFunctionLockChangedEventArgs)]
+            [uuid(CD040608-FCF9-585C-BEAB-F1D2EAF364AB)]
+            interface ISystemFunctionLockChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT Timestamp([out] [retval] UINT64* value);
+                [propget] HRESULT IsLocked([out] [retval] boolean* value);
+                [propget] HRESULT Handled([out] [retval] boolean* value);
+                [propput] HRESULT Handled([in] boolean value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.SystemFunctionLockIndicatorChangedEventArgs)]
+            [uuid(B212B94E-7A6F-58AE-B304-BAE61D0371B9)]
+            interface ISystemFunctionLockIndicatorChangedEventArgs : IInspectable
+            {
+                [propget] HRESULT Timestamp([out] [retval] UINT64* value);
+                [propget] HRESULT IsIndicatorOn([out] [retval] boolean* value);
+                [propget] HRESULT Handled([out] [retval] boolean* value);
+                [propput] HRESULT Handled([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.UI.Input.TappedEventArgs)]
             [uuid(CFA126E4-253A-4C3C-953B-395C37AED309)]
@@ -1119,6 +1318,14 @@ namespace Windows
                 [propget] HRESULT PointerDeviceType([out] [retval] Windows.Devices.Input.PointerDeviceType* value);
                 [propget] HRESULT Position([out] [retval] Windows.Foundation.Point* value);
                 [propget] HRESULT TapCount([out] [retval] UINT32* value);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.UI.Input.TappedEventArgs)]
+            [uuid(294388F2-177E-51D5-BE56-EE0866FA968C)]
+            interface ITappedEventArgs2 : IInspectable
+            {
+                [propget] HRESULT ContactCount([out] [retval] UINT32* value);
             }
 
             [composable(Windows.UI.Input.IAttachableInputObjectFactory, public, Windows.Foundation.UniversalApiContract, 8.0)]
@@ -1136,6 +1343,7 @@ namespace Windows
             runtimeclass CrossSlidingEventArgs
             {
                 [default] interface Windows.UI.Input.ICrossSlidingEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.ICrossSlidingEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1143,6 +1351,7 @@ namespace Windows
             runtimeclass DraggingEventArgs
             {
                 [default] interface Windows.UI.Input.IDraggingEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IDraggingEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1164,9 +1373,11 @@ namespace Windows
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(none)]
+            [threading(both)]
             runtimeclass GestureRecognizer
             {
                 [default] interface Windows.UI.Input.IGestureRecognizer;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IGestureRecognizer2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1174,6 +1385,7 @@ namespace Windows
             runtimeclass HoldingEventArgs
             {
                 [default] interface Windows.UI.Input.IHoldingEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IHoldingEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 8.0)]
@@ -1204,6 +1416,7 @@ namespace Windows
             runtimeclass ManipulationCompletedEventArgs
             {
                 [default] interface Windows.UI.Input.IManipulationCompletedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IManipulationCompletedEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1211,6 +1424,7 @@ namespace Windows
             runtimeclass ManipulationInertiaStartingEventArgs
             {
                 [default] interface Windows.UI.Input.IManipulationInertiaStartingEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IManipulationInertiaStartingEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1218,6 +1432,7 @@ namespace Windows
             runtimeclass ManipulationStartedEventArgs
             {
                 [default] interface Windows.UI.Input.IManipulationStartedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IManipulationStartedEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1225,6 +1440,7 @@ namespace Windows
             runtimeclass ManipulationUpdatedEventArgs
             {
                 [default] interface Windows.UI.Input.IManipulationUpdatedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IManipulationUpdatedEventArgs2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1373,6 +1589,37 @@ namespace Windows
             runtimeclass RightTappedEventArgs
             {
                 [default] interface Windows.UI.Input.IRightTappedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.IRightTappedEventArgs2;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            [static(Windows.UI.Input.ISystemButtonEventControllerStatics, Windows.Foundation.UniversalApiContract, 10.0)]
+            [threading(both)]
+            runtimeclass SystemButtonEventController : Windows.UI.Input.AttachableInputObject
+            {
+                [default] interface Windows.UI.Input.ISystemButtonEventController;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass SystemFunctionButtonEventArgs
+            {
+                [default] interface Windows.UI.Input.ISystemFunctionButtonEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass SystemFunctionLockChangedEventArgs
+            {
+                [default] interface Windows.UI.Input.ISystemFunctionLockChangedEventArgs;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass SystemFunctionLockIndicatorChangedEventArgs
+            {
+                [default] interface Windows.UI.Input.ISystemFunctionLockIndicatorChangedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1380,6 +1627,7 @@ namespace Windows
             runtimeclass TappedEventArgs
             {
                 [default] interface Windows.UI.Input.ITappedEventArgs;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.ITappedEventArgs2;
             }
         }
     }

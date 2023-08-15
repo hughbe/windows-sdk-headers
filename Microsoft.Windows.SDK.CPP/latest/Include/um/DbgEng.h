@@ -438,6 +438,14 @@ typedef struct _DEBUG_CACHED_SYMBOL_INFO
     ULONG Arg3;
 } DEBUG_CACHED_SYMBOL_INFO, *PDEBUG_CACHED_SYMBOL_INFO;
 
+typedef struct _PROCESS_NAME_ENTRY
+{
+    ULONG ProcessId;
+    ULONG NameOffset;  // offset for the process name string.
+    ULONG NameSize;    // ProcessName will always be NULL terminated, NameSize is for struct align and safeguard.
+    ULONG NextEntry;   // offset for next entry, 0 if the last.
+} PROCESS_NAME_ENTRY, *PPROCESS_NAME_ENTRY;
+
 //
 // Request requests.
 //
@@ -6580,7 +6588,10 @@ DECLARE_INTERFACE_(IDebugOutputStream, IUnknown)
 // It will disable saving dumps during debugging
 // Can be set only (no reset once it is set)
 #define DEBUG_ENGOPT_DEBUGGING_SENSITIVE_DATA    0x00400000
-#define DEBUG_ENGOPT_ALL                         0x004FFFFF
+// When opening .cab or .zip files, if there is a trace (.run file), open
+// it instead of any other dump files in the archive.
+#define DEBUG_ENGOPT_PREFER_TRACE_FILES          0x00800000
+#define DEBUG_ENGOPT_ALL                         0x00EFFFFF
 
 // General unspecified ID constant.
 #define DEBUG_ANY_ID 0xffffffff
@@ -6906,6 +6917,18 @@ typedef struct _DEBUG_LAST_EVENT_INFO_SYSTEM_ERROR
     ULONG Error;
     ULONG Level;
 } DEBUG_LAST_EVENT_INFO_SYSTEM_ERROR, *PDEBUG_LAST_EVENT_INFO_SYSTEM_ERROR;
+
+typedef struct _DEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION
+{
+    ULONG Kind;
+    ULONG DataSize;
+    ULONG64 Address;
+
+    //
+    // (Kind) Specific Data... (e.g.: an EXCEPTION_RECORD64 or another definition given by
+    //                                a specific platform service)
+    //
+} DEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION, *PDEBUG_LAST_EVENT_INFO_SERVICE_EXCEPTION;
 
 // DEBUG_VALUE types.
 #define DEBUG_VALUE_INVALID      0
@@ -17092,6 +17115,7 @@ DECLARE_INTERFACE_(IDebugDataSpaces4, IUnknown)
 #define DEBUG_EVENT_CHANGE_DEBUGGEE_STATE   0x00000400
 #define DEBUG_EVENT_CHANGE_ENGINE_STATE     0x00000800
 #define DEBUG_EVENT_CHANGE_SYMBOL_STATE     0x00001000
+#define DEBUG_EVENT_SERVICE_EXCEPTION       0x00002000
 
 // SessionStatus flags.
 // A debuggee has been discovered for the session.

@@ -77,7 +77,7 @@ BOOL WINAPI sndPlaySound(LPCSTR pszSound, UINT fuSound);
 #define SND_ALIAS_ID    0x00110000L /* alias is a predefined ID */
 #define SND_FILENAME    0x00020000L /* name is file name */
 #define SND_RESOURCE    0x00040004L /* name is resource name or atom */
-#if (WINVER >= 0x0400)
+#if(WINVER >= 0x0400)
 #define SND_PURGE           0x0040  /* purge non-static events for task */
 #define SND_APPLICATION     0x0080  /* look for application specific association */
 #endif /* WINVER >= 0x0400 */

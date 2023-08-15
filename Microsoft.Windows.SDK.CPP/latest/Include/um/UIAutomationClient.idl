@@ -94,7 +94,6 @@ struct ExtendedProperty {
     BSTR PropertyValue;
 };
 
-
 typedef void * UIA_HWND;
 
 [
@@ -369,7 +368,7 @@ library UIAutomationClient
     }
 
     [dllname("<no entry points>")]
-    module UIA_TextAttributeIds 
+    module UIA_TextAttributeIds
     {
         const long UIA_AnimationStyleAttributeId             = 40000;
         const long UIA_BackgroundColorAttributeId            = 40001;
@@ -490,7 +489,7 @@ library UIAutomationClient
         const long AnnotationType_DataValidationError    = 60021;
         const long AnnotationType_CircularReferenceError = 60022;
         const long AnnotationType_Mathematics            = 60023;
-
+        const long AnnotationType_Sensitive              = 60024;
     };
 
     [dllname("<no entry points>")]
@@ -616,7 +615,7 @@ library UIAutomationClient
             [out, retval] int * childCount );
 
         HRESULT GetChildrenAsNativeArray (
-            [out, size_is( ,*childArrayCount)] IUIAutomationCondition *** childArray,
+            [out, size_is(, *childArrayCount)] IUIAutomationCondition *** childArray,
             [out] int * childArrayCount );
 
         HRESULT GetChildren (
@@ -629,7 +628,7 @@ library UIAutomationClient
     [object, uuid(f528b657-847b-498c-8896-d52b565407a1), pointer_default(unique)]
     interface IUIAutomationNotCondition : IUIAutomationCondition
     {
-        HRESULT GetChild(
+        HRESULT GetChild (
             [out, retval] IUIAutomationCondition ** condition );
     }
 

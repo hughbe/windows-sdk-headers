@@ -1,44 +1,35 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_System_Diagnostics_TraceReporting_2_H
+#define WINRT_Windows_System_Diagnostics_TraceReporting_2_H
+#include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.System.Diagnostics.TraceReporting.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::Diagnostics::TraceReporting {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::System::Diagnostics::TraceReporting {
-
-struct PlatformDiagnosticActions
+namespace winrt::Windows::System::Diagnostics::TraceReporting
 {
-    PlatformDiagnosticActions() = delete;
-    static bool IsScenarioEnabled(winrt::guid const& scenarioId);
-    static bool TryEscalateScenario(winrt::guid const& scenarioId, Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType const& escalationType, param::hstring const& outputDirectory, bool timestampOutputDirectory, bool forceEscalationUpload, param::map_view<hstring, hstring> const& triggers);
-    static Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState DownloadLatestSettingsForNamespace(param::hstring const& partner, param::hstring const& feature, bool isScenarioNamespace, bool downloadOverCostedNetwork, bool downloadOverBattery);
-    static Windows::Foundation::Collections::IVectorView<winrt::guid> GetActiveScenarioList();
-    static Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticActionState ForceUpload(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies const& latency, bool uploadOverCostedNetwork, bool uploadOverBattery);
-    static Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotState IsTraceRunning(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType, winrt::guid const& scenarioId, uint64_t traceProfileHash);
-    static Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceRuntimeInfo GetActiveTraceRuntime(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType);
-    static Windows::Foundation::Collections::IVectorView<Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceInfo> GetKnownTraceList(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType);
-};
-
-struct WINRT_EBO PlatformDiagnosticTraceInfo :
-    Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo
-{
-    PlatformDiagnosticTraceInfo(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PlatformDiagnosticTraceRuntimeInfo :
-    Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo
-{
-    PlatformDiagnosticTraceRuntimeInfo(std::nullptr_t) noexcept {}
-};
-
+    struct PlatformDiagnosticActions
+    {
+        PlatformDiagnosticActions() = delete;
+        static auto IsScenarioEnabled(winrt::guid const& scenarioId);
+        static auto TryEscalateScenario(winrt::guid const& scenarioId, Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEscalationType const& escalationType, param::hstring const& outputDirectory, bool timestampOutputDirectory, bool forceEscalationUpload, param::map_view<hstring, hstring> const& triggers);
+        static auto DownloadLatestSettingsForNamespace(param::hstring const& partner, param::hstring const& feature, bool isScenarioNamespace, bool downloadOverCostedNetwork, bool downloadOverBattery);
+        static auto GetActiveScenarioList();
+        static auto ForceUpload(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticEventBufferLatencies const& latency, bool uploadOverCostedNetwork, bool uploadOverBattery);
+        static auto IsTraceRunning(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType, winrt::guid const& scenarioId, uint64_t traceProfileHash);
+        static auto GetActiveTraceRuntime(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType);
+        static auto GetKnownTraceList(Windows::System::Diagnostics::TraceReporting::PlatformDiagnosticTraceSlotType const& slotType);
+    };
+    struct __declspec(empty_bases) PlatformDiagnosticTraceInfo : Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo
+    {
+        PlatformDiagnosticTraceInfo(std::nullptr_t) noexcept {}
+        PlatformDiagnosticTraceInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PlatformDiagnosticTraceRuntimeInfo : Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo
+    {
+        PlatformDiagnosticTraceRuntimeInfo(std::nullptr_t) noexcept {}
+        PlatformDiagnosticTraceRuntimeInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Diagnostics::TraceReporting::IPlatformDiagnosticTraceRuntimeInfo(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

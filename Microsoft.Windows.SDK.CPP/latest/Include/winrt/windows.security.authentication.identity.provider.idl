@@ -156,6 +156,7 @@ namespace Windows
                 namespace Provider
                 {
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationMessage is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorAuthenticationMessage
                     {
                         Invalid                   = 0,
@@ -199,6 +200,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationScenario is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorAuthenticationScenario
                     {
                         SignIn           = 0,
@@ -206,6 +208,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStage is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorAuthenticationStage
                     {
                         NotStarted                 = 0,
@@ -222,6 +225,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStatus is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorAuthenticationStatus
                     {
                         Failed                     = 0,
@@ -232,6 +236,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorDeviceCapabilities is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [flags]
                     enum SecondaryAuthenticationFactorDeviceCapabilities
                     {
@@ -248,6 +253,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorDeviceFindScope is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorDeviceFindScope
                     {
                         User     = 0,
@@ -281,6 +287,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorFinishAuthenticationStatus is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorFinishAuthenticationStatus
                     {
                         Failed       = 0,
@@ -289,6 +296,7 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistrationStatus is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     enum SecondaryAuthenticationFactorRegistrationStatus
                     {
                         Failed           = 0,
@@ -299,58 +307,64 @@ namespace Windows
                     };
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication)]
                     [uuid(020A16E5-6A25-40A3-8C00-50A023F619D1)]
                     interface ISecondaryAuthenticationFactorAuthentication : IInspectable
                     {
-                        [propget] HRESULT ServiceAuthenticationHmac([out] [retval] Windows.Storage.Streams.IBuffer** value);
-                        [propget] HRESULT SessionNonce([out] [retval] Windows.Storage.Streams.IBuffer** value);
-                        [propget] HRESULT DeviceNonce([out] [retval] Windows.Storage.Streams.IBuffer** value);
-                        [propget] HRESULT DeviceConfigurationData([out] [retval] Windows.Storage.Streams.IBuffer** value);
-                        HRESULT FinishAuthenticationAsync([in] Windows.Storage.Streams.IBuffer* deviceHmac, [in] Windows.Storage.Streams.IBuffer* sessionHmac, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus>** result);
-                        HRESULT AbortAuthenticationAsync([in] HSTRING errorLogMessage, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT ServiceAuthenticationHmac([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT SessionNonce([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceNonce([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceConfigurationData([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT FinishAuthenticationAsync([in] Windows.Storage.Streams.IBuffer* deviceHmac, [in] Windows.Storage.Streams.IBuffer* sessionHmac, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorFinishAuthenticationStatus>** result);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT AbortAuthenticationAsync([in] HSTRING errorLogMessage, [out] [retval] Windows.Foundation.IAsyncAction** result);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult)]
                     [uuid(9CBB5987-EF6D-4BC2-BF49-4617515A0F9A)]
                     interface ISecondaryAuthenticationFactorAuthenticationResult : IInspectable
                     {
-                        [propget] HRESULT Status([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus* value);
-                        [propget] HRESULT Authentication([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Status([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStatus* value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Authentication([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs)]
                     [uuid(D4A5EE56-7291-4073-BC1F-CCB8F5AFDF96)]
                     interface ISecondaryAuthenticationFactorAuthenticationStageChangedEventArgs : IInspectable
                     {
-                        [propget] HRESULT StageInfo([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo** value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT StageInfo([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo)]
                     [uuid(56FEC28B-E8AA-4C0F-8E4C-A559E73ADD88)]
                     interface ISecondaryAuthenticationFactorAuthenticationStageInfo : IInspectable
                     {
-                        [propget] HRESULT Stage([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage* value);
-                        [propget] HRESULT Scenario([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario* value);
-                        [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Stage([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStage* value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Scenario([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationScenario* value);
+                        [deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceId([out] [retval] HSTRING* value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthentication)]
                     [uuid(3F582656-28F8-4E0F-AE8C-5898B9AE2469)]
                     interface ISecondaryAuthenticationFactorAuthenticationStatics : IInspectable
                     {
-                        HRESULT ShowNotificationMessageAsync([in] HSTRING deviceName, [in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage message, [out] [retval] Windows.Foundation.IAsyncAction** result);
-                        HRESULT StartAuthenticationAsync([in] HSTRING deviceId, [in] Windows.Storage.Streams.IBuffer* serviceAuthenticationNonce, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult*>** operation);
-                        [eventadd] HRESULT AuthenticationStageChanged([in] Windows.Foundation.EventHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
-                        [eventremove] HRESULT AuthenticationStageChanged([in] EventRegistrationToken token);
-                        HRESULT GetAuthenticationStageInfoAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo*>** result);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT ShowNotificationMessageAsync([in] HSTRING deviceName, [in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationMessage message, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT StartAuthenticationAsync([in] HSTRING deviceId, [in] Windows.Storage.Streams.IBuffer* serviceAuthenticationNonce, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationResult*>** operation);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [eventadd] HRESULT AuthenticationStageChanged([in] Windows.Foundation.EventHandler<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [eventremove] HRESULT AuthenticationStageChanged([in] EventRegistrationToken token);
+                        [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT GetAuthenticationStageInfoAsync([out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorAuthenticationStageInfo*>** result);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)]
+                    [deprecated("SecondaryAuthenticationFactorDevicePresenceMonitoringRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration)]
                     [uuid(90499A19-7EF2-4523-951C-A417A24ACF93)]
                     interface ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics : IInspectable
@@ -362,17 +376,19 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo)]
                     [uuid(1E2BA861-8533-4FCE-839B-ECB72410AC14)]
                     interface ISecondaryAuthenticationFactorInfo : IInspectable
                     {
-                        [propget] HRESULT DeviceId([out] [retval] HSTRING* deviceId);
-                        [propget] HRESULT DeviceFriendlyName([out] [retval] HSTRING* value);
-                        [propget] HRESULT DeviceModelNumber([out] [retval] HSTRING* value);
-                        [propget] HRESULT DeviceConfigurationData([out] [retval] Windows.Storage.Streams.IBuffer** value);
+                        [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceId([out] [retval] HSTRING* deviceId);
+                        [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceFriendlyName([out] [retval] HSTRING* value);
+                        [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceModelNumber([out] [retval] HSTRING* value);
+                        [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT DeviceConfigurationData([out] [retval] Windows.Storage.Streams.IBuffer** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 4.0)]
+                    [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo)]
                     [uuid(14D981A3-FC26-4FF7-ABC3-48E82A512A0A)]
                     interface ISecondaryAuthenticationFactorInfo2 : IInspectable
@@ -385,35 +401,39 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration)]
                     [uuid(9F4CBBB4-8CBA-48B0-840D-DBB22A54C678)]
                     interface ISecondaryAuthenticationFactorRegistration : IInspectable
                     {
-                        HRESULT FinishRegisteringDeviceAsync([in] Windows.Storage.Streams.IBuffer* deviceConfigurationData, [out] [retval] Windows.Foundation.IAsyncAction** result);
-                        HRESULT AbortRegisteringDeviceAsync([in] HSTRING errorLogMessage, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT FinishRegisteringDeviceAsync([in] Windows.Storage.Streams.IBuffer* deviceConfigurationData, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT AbortRegisteringDeviceAsync([in] HSTRING errorLogMessage, [out] [retval] Windows.Foundation.IAsyncAction** result);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult)]
                     [uuid(A4FE35F0-ADE3-4981-AF6B-EC195921682A)]
                     interface ISecondaryAuthenticationFactorRegistrationResult : IInspectable
                     {
-                        [propget] HRESULT Status([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus* value);
-                        [propget] HRESULT Registration([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration** value);
+                        [deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Status([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationStatus* value);
+                        [deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] [propget] HRESULT Registration([out] [retval] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration** value);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [exclusiveto(Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistration)]
                     [uuid(1ADF0F65-E3B7-4155-997F-B756EF65BEBA)]
                     interface ISecondaryAuthenticationFactorRegistrationStatics : IInspectable
                     {
-                        HRESULT RequestStartRegisteringDeviceAsync([in] HSTRING deviceId, [in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities capabilities, [in] HSTRING deviceFriendlyName, [in] HSTRING deviceModelNumber, [in] Windows.Storage.Streams.IBuffer* deviceKey, [in] Windows.Storage.Streams.IBuffer* mutualAuthenticationKey, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult*>** operation);
-                        HRESULT FindAllRegisteredDeviceInfoAsync([in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope queryType, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo*>*>** deviceInfoList);
-                        HRESULT UnregisterDeviceAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncAction** result);
-                        HRESULT UpdateDeviceConfigurationDataAsync([in] HSTRING deviceId, [in] Windows.Storage.Streams.IBuffer* deviceConfigurationData, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT RequestStartRegisteringDeviceAsync([in] HSTRING deviceId, [in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceCapabilities capabilities, [in] HSTRING deviceFriendlyName, [in] HSTRING deviceModelNumber, [in] Windows.Storage.Streams.IBuffer* deviceKey, [in] Windows.Storage.Streams.IBuffer* mutualAuthenticationKey, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorRegistrationResult*>** operation);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT FindAllRegisteredDeviceInfoAsync([in] Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorDeviceFindScope queryType, [out] [retval] Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Security.Authentication.Identity.Provider.SecondaryAuthenticationFactorInfo*>*>** deviceInfoList);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT UnregisterDeviceAsync([in] HSTRING deviceId, [out] [retval] Windows.Foundation.IAsyncAction** result);
+                        [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)] HRESULT UpdateDeviceConfigurationDataAsync([in] HSTRING deviceId, [in] Windows.Storage.Streams.IBuffer* deviceConfigurationData, [out] [retval] Windows.Foundation.IAsyncAction** result);
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthentication is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [static(Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorAuthenticationStatics, Windows.Foundation.UniversalApiContract, 3.0)]
                     [threading(both)]
@@ -423,6 +443,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [threading(both)]
                     runtimeclass SecondaryAuthenticationFactorAuthenticationResult
@@ -431,6 +452,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [threading(both)]
                     runtimeclass SecondaryAuthenticationFactorAuthenticationStageChangedEventArgs
@@ -439,6 +461,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorAuthenticationStageInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [threading(both)]
                     runtimeclass SecondaryAuthenticationFactorAuthenticationStageInfo
@@ -447,6 +470,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorInfo is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [threading(both)]
                     runtimeclass SecondaryAuthenticationFactorInfo
@@ -456,6 +480,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistration is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [static(Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorDevicePresenceMonitoringRegistrationStatics, Windows.Foundation.UniversalApiContract, 4.0)]
                     [static(Windows.Security.Authentication.Identity.Provider.ISecondaryAuthenticationFactorRegistrationStatics, Windows.Foundation.UniversalApiContract, 3.0)]
@@ -466,6 +491,7 @@ namespace Windows
                     }
 
                     [contract(Windows.Foundation.UniversalApiContract, 3.0)]
+                    [deprecated("SecondaryAuthenticationFactorRegistrationResult is deprecated and might not work on all platforms. For more info, see MSDN.", deprecate, Windows.Foundation.UniversalApiContract, 10.0)]
                     [marshaling_behavior(agile)]
                     [threading(both)]
                     runtimeclass SecondaryAuthenticationFactorRegistrationResult

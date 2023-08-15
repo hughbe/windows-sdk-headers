@@ -1,8 +1,8 @@
-/********************************************************
-*                                                       *
-*   Copyright (C) 2010 Microsoft. All rights reserved.  *
-*                                                       *
-********************************************************/
+/***************************************************
+*                                                  *
+*   Copyright (C) Microsoft. All rights reserved.  *
+*                                                  *
+***************************************************/
 //
 // API Set Contract:
 //
@@ -13,12 +13,6 @@
 //    This header file provides API function signatures and
 //    corollary type declarations for the Windows AppModel
 //    Runtime component.
-//
-//    Windows-internals clients of the AppModel Runtime
-//    should include this header from $(BASE_INC_PATH) and
-//    link against the component's API set import library
-//    api-ms-win-appmodel-runtime-1.lib published in
-//    $(BASE_LIB_VPATH).
 //
 ////
 
@@ -80,12 +74,6 @@ typedef struct PACKAGE_ID {
 } PACKAGE_ID;
 
 #include <poppack.h>
-
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-#pragma endregion
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 // Identity Functions
 
@@ -227,7 +215,13 @@ typedef enum PackagePathType
 {
     PackagePathType_Install = 0,
     PackagePathType_Mutable = 1,
-    PackagePathType_Effective = 2
+    PackagePathType_Effective = 2,
+
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+    PackagePathType_MachineExternal = 3,
+    PackagePathType_UserExternal = 4,
+    PackagePathType_EffectiveExternal = 5
+#endif
 } PackagePathType;
 
 WINBASEAPI
@@ -317,13 +311,7 @@ GetApplicationUserModelIdFromToken(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-#pragma endregion
-
 /* ---------------------------------------------------------------- */
-
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 // Verification Functions
 
@@ -472,13 +460,7 @@ ParseApplicationUserModelId(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-#pragma endregion
-
 /* ---------------------------------------------------------------- */
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
 // Lookup Functions
 
@@ -538,15 +520,9 @@ GetStagedPackageOrigin(
     );
 
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
-#pragma endregion
-
 /* ---------------------------------------------------------------- */
 
 // Package Constants
-
-#pragma region Application Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 
 #define PACKAGE_PROPERTY_FRAMEWORK          0x00000001
 #define PACKAGE_PROPERTY_RESOURCE           0x00000002
@@ -562,12 +538,10 @@ GetStagedPackageOrigin(
 #define PACKAGE_FILTER_OPTIONAL             0x00020000
 #define PACKAGE_PROPERTY_IS_IN_RELATED_SET  0x00040000
 #define PACKAGE_FILTER_IS_IN_RELATED_SET    PACKAGE_PROPERTY_IS_IN_RELATED_SET
-
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
-#pragma endregion
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#define PACKAGE_PROPERTY_STATIC             0x00080000
+#define PACKAGE_FILTER_STATIC               PACKAGE_PROPERTY_STATIC
+#define PACKAGE_PROPERTY_DYNAMIC            0x00100000
+#define PACKAGE_FILTER_DYNAMIC              PACKAGE_PROPERTY_DYNAMIC
 
 #if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WINBLUE)
 #pragma deprecated("PACKAGE_FILTER_ALL_LOADED")
@@ -823,7 +797,7 @@ GetPackageInfo2(
 
 #endif // NTDDI_VERSION >= NTDDI_WIN10_19H1
 
-#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
 #pragma endregion
 
 #if defined(__cplusplus)

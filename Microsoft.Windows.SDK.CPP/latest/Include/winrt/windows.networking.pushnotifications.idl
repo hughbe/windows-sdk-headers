@@ -75,17 +75,25 @@ namespace Windows
 
             interface IPushNotificationChannelManagerStatics3;
 
+            interface IPushNotificationChannelManagerStatics4;
+
+            interface IPushNotificationChannelsRevokedEventArgs;
+
             interface IPushNotificationReceivedEventArgs;
 
             interface IRawNotification;
 
             interface IRawNotification2;
 
+            interface IRawNotification3;
+
             runtimeclass PushNotificationChannel;
 
             runtimeclass PushNotificationChannelManager;
 
             runtimeclass PushNotificationChannelManagerForUser;
+
+            runtimeclass PushNotificationChannelsRevokedEventArgs;
 
             runtimeclass PushNotificationReceivedEventArgs;
 
@@ -103,6 +111,8 @@ namespace Windows
         {
             declare
             {
+                interface Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs*>;
+
                 interface Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel*>;
 
                 interface Windows.Foundation.TypedEventHandler<Windows.Networking.PushNotifications.PushNotificationChannel*, Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs*>;
@@ -186,6 +196,22 @@ namespace Windows
                 HRESULT GetDefault([out] [retval] Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser** result);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.PushNotifications.PushNotificationChannelManager)]
+            [uuid(BC540EFB-7820-5A5B-9C01-B4757F774025)]
+            interface IPushNotificationChannelManagerStatics4 : IInspectable
+            {
+                [eventadd] HRESULT ChannelsRevoked([in] Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                [eventremove] HRESULT ChannelsRevoked([in] EventRegistrationToken token);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs)]
+            [uuid(20E1A24C-1A34-5BEB-AAE2-40C232C8C140)]
+            interface IPushNotificationChannelsRevokedEventArgs : IInspectable
+            {
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs)]
             [uuid(D1065E0C-36CD-484C-B935-0A99B753CF00)]
@@ -217,6 +243,14 @@ namespace Windows
                 [propget] HRESULT ChannelId([out] [retval] HSTRING* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.PushNotifications.RawNotification)]
+            [uuid(62737DDE-8A73-424C-AB44-5635F40A96E5)]
+            interface IRawNotification3 : IInspectable
+            {
+                [propget] HRESULT ContentBytes([out] [retval] Windows.Storage.Streams.IBuffer** value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [marshaling_behavior(agile)]
             runtimeclass PushNotificationChannel
@@ -229,6 +263,7 @@ namespace Windows
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2, Windows.Foundation.UniversalApiContract, 3.0)]
             [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3, Windows.Foundation.UniversalApiContract, 4.0)]
+            [static(Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4, Windows.Foundation.UniversalApiContract, 10.0)]
             [threading(mta)]
             runtimeclass PushNotificationChannelManager
             {
@@ -240,6 +275,13 @@ namespace Windows
             {
                 [default] interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser2;
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [marshaling_behavior(agile)]
+            runtimeclass PushNotificationChannelsRevokedEventArgs
+            {
+                [default] interface Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -255,6 +297,7 @@ namespace Windows
             {
                 [default] interface Windows.Networking.PushNotifications.IRawNotification;
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)] interface Windows.Networking.PushNotifications.IRawNotification2;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Networking.PushNotifications.IRawNotification3;
             }
         }
     }

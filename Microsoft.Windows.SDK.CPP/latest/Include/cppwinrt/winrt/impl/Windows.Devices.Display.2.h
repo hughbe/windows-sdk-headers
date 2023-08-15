@@ -1,29 +1,21 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Graphics.1.h"
+#ifndef WINRT_Windows_Devices_Display_2_H
+#define WINRT_Windows_Devices_Display_2_H
 #include "winrt/impl/Windows.Devices.Display.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Display {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Display {
-
-struct WINRT_EBO DisplayMonitor :
-    Windows::Devices::Display::IDisplayMonitor
+namespace winrt::Windows::Devices::Display
 {
-    DisplayMonitor(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Display::DisplayMonitor> FromInterfaceIdAsync(param::hstring const& deviceInterfaceId);
-};
-
+    struct __declspec(empty_bases) DisplayMonitor : Windows::Devices::Display::IDisplayMonitor,
+        impl::require<DisplayMonitor, Windows::Devices::Display::IDisplayMonitor2>
+    {
+        DisplayMonitor(std::nullptr_t) noexcept {}
+        DisplayMonitor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Display::IDisplayMonitor(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto FromInterfaceIdAsync(param::hstring const& deviceInterfaceId);
+    };
 }
+#endif

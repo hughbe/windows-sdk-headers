@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.applicationmodel.preview.inkworkspace.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,169 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
 #if !defined(WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION)
 #define WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION)
 
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -279,7 +123,8 @@ namespace ABI {
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManager
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_FWD_DEFINED__
@@ -295,12 +140,15 @@ namespace ABI {
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManagerStatics
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
+// Collection interface definitions
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 namespace ABI {
@@ -308,13 +156,11 @@ namespace ABI {
         namespace Foundation {
             interface IAsyncAction;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -323,7 +169,8 @@ namespace ABI {
                 class SoftwareBitmap;
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -334,17 +181,11 @@ namespace ABI {
                 interface ISoftwareBitmap;
             } /* Imaging */
         } /* Graphics */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap ABI::Windows::Graphics::Imaging::ISoftwareBitmap
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
-
-
-
-
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -355,14 +196,8 @@ namespace ABI {
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -370,9 +205,7 @@ namespace ABI {
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
- *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
@@ -384,29 +217,26 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Preview {
                 namespace InkWorkspace {
-                    /* [object, uuid("FE0A7990-5E59-4BB7-8A63-7D218CD96300"), exclusiveto, contract] */
-                    MIDL_INTERFACE("FE0A7990-5E59-4BB7-8A63-7D218CD96300")
+                    MIDL_INTERFACE("fe0a7990-5e59-4bb7-8a63-7d218cd96300")
                     IInkWorkspaceHostedAppManager : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE SetThumbnailAsync(
-                            /* [in] */__RPC__in_opt ABI::Windows::Graphics::Imaging::ISoftwareBitmap * bitmap,
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * action
+                            ABI::Windows::Graphics::Imaging::ISoftwareBitmap* bitmap,
+                            ABI::Windows::Foundation::IAsyncAction** action
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IInkWorkspaceHostedAppManager=_uuidof(IInkWorkspaceHostedAppManager);
-                    
+                    extern MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManager = _uuidof(IInkWorkspaceHostedAppManager);
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -414,9 +244,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
- *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
@@ -428,35 +256,31 @@ namespace ABI {
         namespace ApplicationModel {
             namespace Preview {
                 namespace InkWorkspace {
-                    /* [object, uuid("CBFD8CC5-A162-4BC4-84EE-E8716D5233C5"), exclusiveto, contract] */
-                    MIDL_INTERFACE("CBFD8CC5-A162-4BC4-84EE-E8716D5233C5")
+                    MIDL_INTERFACE("cbfd8cc5-a162-4bc4-84ee-e8716d5233c5")
                     IInkWorkspaceHostedAppManagerStatics : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE GetForCurrentApp(
-                            /* [retval, out] */__RPC__deref_out_opt ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManager * * current
+                            ABI::Windows::ApplicationModel::Preview::InkWorkspace::IInkWorkspaceHostedAppManager** current
                             ) = 0;
-                        
                     };
 
-                    extern MIDL_CONST_ID IID & IID_IInkWorkspaceHostedAppManagerStatics=_uuidof(IInkWorkspaceHostedAppManagerStatics);
-                    
+                    extern MIDL_CONST_ID IID& IID_IInkWorkspaceHostedAppManagerStatics = _uuidof(IInkWorkspaceHostedAppManagerStatics);
                 } /* InkWorkspace */
             } /* Preview */
         } /* ApplicationModel */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics interface starting with version 1.0 of the Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract API contract
@@ -470,16 +294,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager[] = L"Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager";
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -495,14 +314,15 @@ typedef interface __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIIn
 
 #endif // ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
+
+// Collection interface definitions
+
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CFoundation_CIAsyncAction __x_ABI_CWindows_CFoundation_CIAsyncAction;
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
-
-
-
 
 #ifndef ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 #define ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
@@ -510,113 +330,75 @@ typedef interface __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap __x_ABI_C
 
 #endif // ____x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap_FWD_DEFINED__
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
  *
  * Interface Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
- *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Preview_InkWorkspace_IInkWorkspaceHostedAppManager[] = L"Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManager";
-/* [object, uuid("FE0A7990-5E59-4BB7-8A63-7D218CD96300"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SetThumbnailAsync)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager* This,
+        __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap* bitmap,
+        __x_ABI_CWindows_CFoundation_CIAsyncAction** action);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *SetThumbnailAsync )(
-        __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CGraphics_CImaging_CISoftwareBitmap * bitmap,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIAsyncAction * * action
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_SetThumbnailAsync(This,bitmap,action) \
-    ( (This)->lpVtbl->SetThumbnailAsync(This,bitmap,action) )
-
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_SetThumbnailAsync(This, bitmap, action) \
+    ((This)->lpVtbl->SetThumbnailAsync(This, bitmap, action))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -624,99 +406,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
- *
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_ApplicationModel_Preview_InkWorkspace_IInkWorkspaceHostedAppManagerStatics[] = L"Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics";
-/* [object, uuid("CBFD8CC5-A162-4BC4-84EE-E8716D5233C5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetForCurrentApp)(__x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics* This,
+        __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager** current);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetForCurrentApp )(
-        __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManager * * current
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetForCurrentApp(This,current) \
-    ( (This)->lpVtbl->GetForCurrentApp(This,current) )
-
+#define __x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_GetForCurrentApp(This, current) \
+    ((This)->lpVtbl->GetForCurrentApp(This, current))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace_CIInkWorkspaceHostedAppManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager
  *
  * Introduced to Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.ApplicationModel.Preview.InkWorkspace.IInkWorkspaceHostedAppManagerStatics interface starting with version 1.0 of the Windows.ApplicationModel.Preview.InkWorkspace.PreviewInkWorkspaceContract API contract
@@ -730,16 +487,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CApplicationModel_CPreview_CInkWorkspace
  *
  */
 #if WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager_DEFINED
 #define RUNTIMECLASS_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_ApplicationModel_Preview_InkWorkspace_InkWorkspaceHostedAppManager[] = L"Windows.ApplicationModel.Preview.InkWorkspace.InkWorkspaceHostedAppManager";
 #endif
 #endif // WINDOWS_APPLICATIONMODEL_PREVIEW_INKWORKSPACE_PREVIEWINKWORKSPACECONTRACT_VERSION >= 0x10000
-
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

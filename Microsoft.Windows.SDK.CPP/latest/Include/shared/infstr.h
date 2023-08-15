@@ -207,6 +207,8 @@
 #define INFSTR_KEY_STARTNAME            TEXT("StartName")
 #define INFSTR_KEY_SECURITY             TEXT("Security")
 #define INFSTR_KEY_DESCRIPTION          TEXT("Description")
+#define INFSTR_KEY_SERVICESIDTYPE       TEXT("ServiceSidType")
+#define INFSTR_KEY_DELAYEDAUTOSTART     TEXT("DelayedAutoStart")
 
 //
 // Used for Triggers within a Service section.

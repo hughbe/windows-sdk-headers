@@ -18,29 +18,29 @@ EXTERN_C_START
 
 typedef enum _NET_PACKET_LAYER2_TYPE
 {
-    NET_PACKET_LAYER2_TYPE_UNSPECIFIED                  = 0,
-    NET_PACKET_LAYER2_TYPE_NULL                         = 1,
-    NET_PACKET_LAYER2_TYPE_ETHERNET                     = 2,
+    NetPacketLayer2TypeUnspecified,
+    NetPacketLayer2TypeNull,
+    NetPacketLayer2TypeEthernet,
 } NET_PACKET_LAYER2_TYPE;
 
 typedef enum _NET_PACKET_LAYER3_TYPE
 {
-    NET_PACKET_LAYER3_TYPE_UNSPECIFIED                  = 0,
-    NET_PACKET_LAYER3_TYPE_IPV4_UNSPECIFIED_OPTIONS     = 1,
-    NET_PACKET_LAYER3_TYPE_IPV4_WITH_OPTIONS            = 2,
-    NET_PACKET_LAYER3_TYPE_IPV4_NO_OPTIONS              = 3,
-    NET_PACKET_LAYER3_TYPE_IPV6_UNSPECIFIED_EXTENSIONS  = 4,
-    NET_PACKET_LAYER3_TYPE_IPV6_WITH_EXTENSIONS         = 5,
-    NET_PACKET_LAYER3_TYPE_IPV6_NO_EXTENSIONS           = 6,
+    NetPacketLayer3TypeUnspecified,
+    NetPacketLayer3TypeIPv4UnspecifiedOptions,
+    NetPacketLayer3TypeIPv4WithOptions,
+    NetPacketLayer3TypeIPv4NoOptions,
+    NetPacketLayer3TypeIPv6UnspecifiedExtensions,
+    NetPacketLayer3TypeIPv6WithExtensions,
+    NetPacketLayer3TypeIPv6NoExtensions,
 } NET_PACKET_LAYER3_TYPE;
 
 typedef enum _NET_PACKET_LAYER4_TYPE
 {
-    NET_PACKET_LAYER4_TYPE_UNSPECIFIED                  = 0,
-    NET_PACKET_LAYER4_TYPE_TCP                          = 1,
-    NET_PACKET_LAYER4_TYPE_UDP                          = 2,
-    NET_PACKET_LAYER4_TYPE_IP_NOT_FRAGMENTED            = 3,
-    NET_PACKET_LAYER4_TYPE_IP_FRAGMENT                  = 4,
+    NetPacketLayer4TypeUnspecified,
+    NetPacketLayer4TypeTcp,
+    NetPacketLayer4TypeUdp,
+    NetPacketLayer4TypeIPFragment,
+    NetPacketLayer4TypeIPNotFragment,
 } NET_PACKET_LAYER4_TYPE;
 
 #include <pshpack1.h>
@@ -75,15 +75,10 @@ typedef struct _NET_PACKET_LAYOUT
 
 C_ASSERT(sizeof(NET_PACKET_LAYOUT) == 5);
 
-#define NET_PACKET_ALIGNMENT_BYTES 16
-
-typedef struct DECLSPEC_ALIGN(NET_PACKET_ALIGNMENT_BYTES) _NET_PACKET
+typedef struct _NET_PACKET
 {
     UINT32
         FragmentIndex;
-
-    UINT32
-        Reserved0;
 
     UINT16
         FragmentCount;
@@ -102,7 +97,7 @@ typedef struct DECLSPEC_ALIGN(NET_PACKET_ALIGNMENT_BYTES) _NET_PACKET
 
 } NET_PACKET;
 
-C_ASSERT(sizeof(NET_PACKET) == 16);
+C_ASSERT(sizeof(NET_PACKET) == 12);
 
 #pragma warning(pop)
 
@@ -112,9 +107,9 @@ NetPacketIsIpv4(
     const NET_PACKET * packet
 )
 {
-    return (packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV4_NO_OPTIONS ||
-        packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV4_UNSPECIFIED_OPTIONS ||
-        packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV4_WITH_OPTIONS);
+    return (packet->Layout.Layer3Type == NetPacketLayer3TypeIPv4NoOptions ||
+        packet->Layout.Layer3Type == NetPacketLayer3TypeIPv4UnspecifiedOptions ||
+        packet->Layout.Layer3Type == NetPacketLayer3TypeIPv4WithOptions);
 }
 
 inline
@@ -123,9 +118,9 @@ NetPacketIsIpv6(
     const NET_PACKET * packet
 )
 {
-    return (packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV6_NO_EXTENSIONS ||
-        packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV6_UNSPECIFIED_EXTENSIONS ||
-        packet->Layout.Layer3Type == NET_PACKET_LAYER3_TYPE_IPV6_WITH_EXTENSIONS);
+    return (packet->Layout.Layer3Type == NetPacketLayer3TypeIPv6NoExtensions ||
+        packet->Layout.Layer3Type == NetPacketLayer3TypeIPv6UnspecifiedExtensions ||
+        packet->Layout.Layer3Type == NetPacketLayer3TypeIPv6WithExtensions);
 }
 
 inline

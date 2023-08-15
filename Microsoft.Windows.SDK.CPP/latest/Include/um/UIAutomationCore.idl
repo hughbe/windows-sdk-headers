@@ -389,7 +389,6 @@ struct UiaChangeInfo
     VARIANT extraInfo;
 };
 
-
 [
     uuid(930299ce-9965-4dec-b0f4-a54848d4b667),
     lcid(0),

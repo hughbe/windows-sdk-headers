@@ -13,8 +13,8 @@ Module Name:
 
 Abstract:
 
-    Defines the interfaces, IOCTL codes and data structures for the GNSS device driver 
-    
+    Defines the interfaces, IOCTL codes and data structures for the GNSS device driver
+
 Environment:
 
     User mode or Kernel mode
@@ -33,7 +33,10 @@ Environment:
 #pragma warning(disable:4201)  // Disable compiler warning C4201: nameless struct/union
 
 //
-// Current DDK Version (Major):     Version 4
+// Current DDK Version (Major):     Version 5
+//
+// Changes from  Version 4 (requires GNSS Driver to compile with this version of the DDK header):
+//                                          - Added service indicator in GNSS_SUPL_VERSION interface
 //
 // Changes from  Version 3 (requires GNSS Driver to compile with this version of the DDK header):
 //                                          - Added breadcrumbing interface
@@ -53,6 +56,7 @@ Environment:
 // Previous DDK Versions :          Version 1
 //                                  Version 2
 //                                  Version 3
+//                                  Version 4
 //
 
 //
@@ -63,6 +67,7 @@ Environment:
 #define GNSS_DRIVER_VERSION_2 2
 #define GNSS_DRIVER_VERSION_3 3
 #define GNSS_DRIVER_VERSION_4 4
+#define GNSS_DRIVER_VERSION_5 5
 
 //
 // Define GNSS IOCTL Codes
@@ -129,7 +134,7 @@ DEFINE_GUID(GUID_DEVINTERFACE_GNSS,
 #define    MAX_SERVER_URL_NAME   260
 
 //
-// Define minimum number of geofences supported to be able to use native Geofencing. 
+// Define minimum number of geofences supported to be able to use native Geofencing.
 //
 //
 
@@ -159,8 +164,18 @@ typedef struct
 {
   ULONG MajorVersion;
   ULONG MinorVersion;
-    
-} GNSS_SUPL_VERSION, *PGNSS_SUPL_VERSION; 
+} GNSS_SUPL_VERSION, *PGNSS_SUPL_VERSION;
+
+//
+//Define structure for SUPL version 2
+//
+
+typedef struct
+{
+  ULONG MajorVersion;
+  ULONG MinorVersion;
+  ULONG ServiceIndicator;
+} GNSS_SUPL_VERSION_2, *PGNSS_SUPL_VERSION_2;
 
 //
 // Data structure for Driver Capabilities
@@ -169,9 +184,9 @@ typedef struct
 typedef struct
 {
     ULONG   Size ;
-    
+
     // The version number of this structure is the DDK version against which the GNSS Driver is developed
-    
+
     ULONG   Version ;
 
     // Session Management
@@ -179,7 +194,7 @@ typedef struct
     BOOL    SupportMultipleFixSessions ;
     BOOL    SupportMultipleAppSessions ;
 
-    // AGNSS 
+    // AGNSS
     BOOL    RequireAGnssInjection ;
     ULONG   AgnssFormatSupported ;
     ULONG   AgnssFormatPreferred ;
@@ -204,19 +219,19 @@ typedef struct
     BOOL    Reserved6 ;
     BOOL    Reserved7 ;
 
-    // SUPL/CP 
+    // SUPL/CP
 
     BOOL    SupportCpLocation;
     BOOL    SupportUplV2;
     BOOL    SupportSuplV1;
     BOOL    SupportSuplV2;
-    GNSS_SUPL_VERSION  SupportedSuplVersion;
+    GNSS_SUPL_VERSION  SupportedSuplVersion; // Location adapter does not refer to this SUPL version provided by GNSS driver today
 
     // Geofence Parameters
     // Only valid when GeofencingSupport field is non-zero
 
     ULONG   MaxGeofencesSupported;
-    
+
     // SUPL Parameter
     BOOL    SupportMultipleSuplRootCert;
 
@@ -260,11 +275,12 @@ typedef enum
     GNSS_ForceOperationMode           = 0x04,
     GNSS_ResetEngine                  = 0x09,
     GNSS_ClearAgnssData               = 0x0A,
-    GNSS_SetSuplVersion               = 0x0C,
+    GNSS_SetSuplVersion               = 0x0C, //GNSS_SUPL_VERSION
     GNSS_SetNMEALogging               = 0x0D,
     GNSS_SetUplServerAccessInterval   = 0x0E,
     GNSS_SetNiTimeoutInterval         = 0x0F,
     GNSS_ResetGeofencesTracking       = 0x10,
+    GNSS_SetSuplVersion2              = 0x11, //GNSS_SUPL_VERSION_2
     GNSS_CustomCommand                = 0x0100,
 } GNSS_DRIVERCOMMAND_TYPE ;
 
@@ -294,7 +310,7 @@ typedef struct
 #define GNSS_SATELLITE_BEIDOU       0x04
 #define GNSS_SATELLITE_GALILEO      0x08
 
-// 
+//
 // Define Operation Mode
 //
 
@@ -306,7 +322,7 @@ typedef struct
 #define GNSS_OPERMODE_AFLT         0x10
 #define GNSS_OPERMODE_OTDOA        0x20
 
-// 
+//
 // Define known values for GNSS_SetNMEALogging
 //
 
@@ -391,9 +407,9 @@ typedef struct
 
     // Fix quality preferences
 
-    ULONG               HorizontalAccuracy ; 
-    ULONG               HorizontalConfidence ; 
-    
+    ULONG               HorizontalAccuracy ;
+    ULONG               HorizontalConfidence ;
+
     //  Reserved Fields
     ULONG               Reserved[9] ;
 
@@ -439,7 +455,7 @@ typedef struct
 //
 
 
-typedef struct 
+typedef struct
 {
     ULONG       Size ;
     ULONG       Version ;
@@ -456,12 +472,12 @@ typedef struct
 // Define data structure for accuracy-related fix data
 //
 
-typedef struct 
+typedef struct
 {
     ULONG   Size ;
     ULONG   Version ;
 
-    ULONG   HorizontalAccuracy ; 
+    ULONG   HorizontalAccuracy ;
     ULONG   HorizontalErrorMajorAxis ;
     ULONG   HorizontalErrorMinorAxis ;
     ULONG   HorizontalErrorAngle ;
@@ -469,14 +485,14 @@ typedef struct
     ULONG   AltitudeAccuracy ;                 // DO NOT USE: will be removed in a future version
     ULONG   SpeedAccuracy ;                    // DO NOT USE: will be removed in a future version
 
-    ULONG   HorizontalConfidence ;             
+    ULONG   HorizontalConfidence ;
     ULONG   HeadingConfidence ;                // DO NOT USE: will be removed in a future version
     ULONG   AltitudeConfidence ;               // DO NOT USE: will be removed in a future version
     ULONG   SpeedConfidence ;                  // DO NOT USE: will be removed in a future version
 
     float PositionDilutionOfPrecision;
     float HorizontalDilutionOfPrecision;
-    float VerticalDilutionOfPrecision;    
+    float VerticalDilutionOfPrecision;
 
 } GNSS_FIXDATA_ACCURACY, *PGNSS_FIXDATA_ACCURACY;
 
@@ -484,7 +500,7 @@ typedef struct
 // Define data structure for satellite information
 //
 
-typedef struct 
+typedef struct
 {
     ULONG   SatelliteId ;
     BOOL    UsedInPositiong ;
@@ -499,7 +515,7 @@ typedef struct
 
 #define    GNSS_MAXSATELLITE    64
 
-typedef struct 
+typedef struct
 {
     ULONG       Size ;
     ULONG       Version ;
@@ -514,7 +530,7 @@ typedef struct
 // Define data structure for fix data
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -525,7 +541,7 @@ typedef struct
     NTSTATUS                FixStatus ;
 
     ULONG                   FixLevelOfDetails ;
-    
+
     GNSS_FIXDATA_BASIC      BasicData ;
     GNSS_FIXDATA_ACCURACY   AccuracyData ;
     GNSS_FIXDATA_SATELLITE  SatelliteData ;
@@ -558,7 +574,7 @@ typedef struct
 // The alert information for when the breadcrumbing buffer has reached a level at which OS read
 // operations should be performed.
 //
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -601,10 +617,10 @@ typedef struct
     ULONG NumCrumbs;
     union
     {
-        GNSS_BREADCRUMB_V1 v1[50]; 
+        GNSS_BREADCRUMB_V1 v1[50];
     };
 
-} GNSS_BREADCRUMB_LIST, *PGNSS_BREADCRUMB_LIST; 
+} GNSS_BREADCRUMB_LIST, *PGNSS_BREADCRUMB_LIST;
 
 //
 // Define the level of Geofence support by the Driver
@@ -645,7 +661,7 @@ typedef struct
     ULONG   Version ;
 
     GNSS_GEOREGIONTYPE  GeoRegionType ;
-    
+
     union
     {
         GNSS_GEOREGION_CIRCLE   Circle ;
@@ -675,24 +691,24 @@ typedef enum
 // Define data structure for Geofence Create parameters
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                       Size ;
     ULONG                       Version ;
 
     ULONG                       AlertTypes ;        // Bit-mask to indicate the Geofence alert types (GNSS_GEOFENCEALERTTYPE_xxxx)
     GNSS_GEOFENCE_STATE         InitialState ;      // Initial State of the Geofence, as seen by HLOS
-    
+
     GNSS_GEOREGION              Boundary ;          // The Geofence boundary
 
     BYTE                        Unused[512] ;
 } GNSS_GEOFENCE_CREATE_PARAM, *PGNSS_GEOFENCE_CREATE_PARAM;
 
 //
-// Define data structure for Create Geofence Response 
+// Define data structure for Create Geofence Response
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -701,7 +717,7 @@ typedef struct
     ULONG                   GeofenceID ;
 
     BYTE                    Unused[512] ;
-    
+
 } GNSS_GEOFENCE_CREATE_RESPONSE, *PGNSS_GEOFENCE_CREATE_RESPONSE;
 
 
@@ -709,13 +725,13 @@ typedef struct
 // Define data structure for Geofence Delete parameters
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
 
     ULONG                   GeofenceID ;
-    
+
     BYTE                    Unused[512] ;
 } GNSS_GEOFENCE_DELETE_PARAM, *PGNSS_GEOFENCE_DELETE_PARAM;
 
@@ -723,14 +739,14 @@ typedef struct
 // Define data structure for Geofence Alert Data
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
 
     ULONG                   GeofenceID ;
     GNSS_GEOFENCE_STATE     GeofenceState ;
-    
+
     GNSS_FIXDATA_BASIC      FixBasicData ;
     GNSS_FIXDATA_ACCURACY   FixAccuracyData ;
 
@@ -741,7 +757,7 @@ typedef struct
 // Define data structure for Tracking Status of all Geofences
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -799,7 +815,7 @@ typedef struct
     ULONG           Version ;
 
     CHAR            NmeaSentences[256] ;
-    
+
 } GNSS_NMEA_DATA, *PGNSS_NMEA_DATA ;
 
 
@@ -836,7 +852,7 @@ typedef enum
 {
     GNSS_NI_SUPL            = 0x01,
     GNSS_NI_CP              = 0x02,
-    GNSS_NI_V2UPL           = 0x03,    
+    GNSS_NI_V2UPL           = 0x03,
 } GNSS_NI_PLANE_TYPE  ;
 
 //
@@ -856,8 +872,8 @@ typedef enum {
   GNSS_NI_NoNotifyNoVerify                    = 0x01,
   GNSS_NI_NotifyOnly                          = 0x02,
   GNSS_NI_NotifyVerifyDefaultAllow            = 0x03,
-  GNSS_NI_NotifyVerifyDefaultNotAllow         = 0x04,    
-  GNSS_NI_PrivacyOverride                     = 0x05                         
+  GNSS_NI_NotifyVerifyDefaultNotAllow         = 0x04,
+  GNSS_NI_PrivacyOverride                     = 0x05
 } GNSS_NI_NOTIFICATION_TYPE;
 
 //
@@ -872,8 +888,8 @@ typedef struct
     WCHAR                   RequestorId[MAX_PATH];
     WCHAR                   ClientName[MAX_PATH];
     CHAR                    SuplNiUrl[MAX_SERVER_URL_NAME];
-    
-} GNSS_SUPL_NI_INFO, *PGNSS_SUPL_NI_INFO ; 
+
+} GNSS_SUPL_NI_INFO, *PGNSS_SUPL_NI_INFO ;
 
 //
 // Define data structure for CP NI info
@@ -886,8 +902,8 @@ typedef struct
 
     WCHAR                   RequestorId[MAX_PATH];
     WCHAR                   NotificationText[MAX_PATH];
-    
-} GNSS_CP_NI_INFO, *PGNSS_CP_NI_INFO ; 
+
+} GNSS_CP_NI_INFO, *PGNSS_CP_NI_INFO ;
 
 //
 // Define data structure for V2UPL NI info
@@ -899,8 +915,8 @@ typedef struct
     ULONG                   Version ;
 
     WCHAR                   RequestorId[MAX_PATH];
-   
-} GNSS_V2UPL_NI_INFO, *PGNSS_V2UPL_NI_INFO ; 
+
+} GNSS_V2UPL_NI_INFO, *PGNSS_V2UPL_NI_INFO ;
 
 
 //
@@ -919,15 +935,15 @@ typedef struct
     GNSS_NI_PLANE_TYPE          RequestPlaneType;
     union
     {
-       GNSS_SUPL_NI_INFO        SuplNiInfo;  
+       GNSS_SUPL_NI_INFO        SuplNiInfo;
        GNSS_CP_NI_INFO          CpNiInfo;
        GNSS_V2UPL_NI_INFO       V2UplNiInfo;
     };
     ULONG                       ResponseTimeInSec;
 
     BOOL                        EmergencyLocation;
-    
-} GNSS_NI_REQUEST_PARAM, *PGNSS_NI_REQUEST_PARAM ; 
+
+} GNSS_NI_REQUEST_PARAM, *PGNSS_NI_REQUEST_PARAM ;
 
 //
 // Define the data requested by the driver
@@ -955,7 +971,7 @@ typedef struct
 // Define data structure for GNSS events
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                           Size ;
     ULONG                           Version ;
@@ -968,7 +984,7 @@ typedef struct
     {
         GNSS_FIXDATA                FixData ;
         GNSS_AGNSS_REQUEST_PARAM    AgnssRequest ;
-        GNSS_NI_REQUEST_PARAM       NiRequest;        
+        GNSS_NI_REQUEST_PARAM       NiRequest;
         GNSS_ERRORINFO              ErrorInformation ;
         GNSS_NMEA_DATA              NmeaData;
         GNSS_GEOFENCE_ALERT_DATA    GeofenceAlertData ;
@@ -985,7 +1001,7 @@ typedef struct
 // Define data structure for AGNSS time injection
 //
 
-typedef struct 
+typedef struct
 {
     ULONG           Size ;
     ULONG           Version ;
@@ -999,7 +1015,7 @@ typedef struct
 // Define data structure for AGNSS position injection
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -1015,7 +1031,7 @@ typedef struct
 // Define data structure for AGNSS Blob injection
 //
 
-typedef struct 
+typedef struct
 {
     ULONG           Size ;
     ULONG           Version ;
@@ -1032,7 +1048,7 @@ typedef struct
 // Define data structure for AGNSS injection
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                           Size ;
     ULONG                           Version ;
@@ -1057,7 +1073,7 @@ typedef struct
 // Define data structure for SUPL H-SLP
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                           Size ;
     ULONG                           Version ;
@@ -1067,8 +1083,8 @@ typedef struct
     ULONG                           Reserved;
 
     BYTE                            Unused[512] ;
-    
-} GNSS_SUPL_HSLP_CONFIG, *PGNSS_SUPL_HSLP_CONFIG; 
+
+} GNSS_SUPL_HSLP_CONFIG, *PGNSS_SUPL_HSLP_CONFIG;
 
 //
 // Define actions for SUPL certs
@@ -1085,7 +1101,7 @@ typedef enum
 // Define data structure for SUPL Certs
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                           Size ;
     ULONG                           Version ;
@@ -1094,16 +1110,16 @@ typedef struct
     CHAR                            SuplCertName[MAX_PATH] ;
     ULONG                           CertSize;
     BYTE                            Unused[512] ;
-    
+
     BYTE                            CertData[ANYSIZE_ARRAY] ;
 
-} GNSS_SUPL_CERT_CONFIG, *PGNSS_SUPL_CERT_CONFIG; 
+} GNSS_SUPL_CERT_CONFIG, *PGNSS_SUPL_CERT_CONFIG;
 
 //
 // Define data structure for V2UPL Config
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                    Size ;
     ULONG                    Version ;
@@ -1112,7 +1128,7 @@ typedef struct
     CHAR                     PDE[MAX_SERVER_URL_NAME] ;
     BYTE                     ApplicationTypeIndicator_MR ;
 
-    BYTE                     Unused[512] ;    
+    BYTE                     Unused[512] ;
 
 } GNSS_V2UPL_CONFIG, *PGNSS_V2UPL_CONFIG;
 
@@ -1132,7 +1148,7 @@ typedef enum
 // Define data structure for NI user response.
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                           Size ;
     ULONG                           Version ;
@@ -1140,14 +1156,14 @@ typedef struct
     ULONG                           RequestId;
     GNSS_NI_USER_RESPONSE           UserResponse;
 
-} GNSS_NI_RESPONSE, *PGNSS_NI_RESPONSE; 
+} GNSS_NI_RESPONSE, *PGNSS_NI_RESPONSE;
 
 
 //
 // Define data structure for IOCTL_GNSS_EXECUTE_CWTEST
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -1157,14 +1173,14 @@ typedef struct
     double                  Frequency ;
     BYTE                    Unused[512] ;
 
-} GNSS_CWTESTDATA, *PGNSS_CWTESTDATA; 
+} GNSS_CWTESTDATA, *PGNSS_CWTESTDATA;
 
 
 //
 // Define data structures for IOCTL_GNSS_EXECUTE_SELFTEST
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                    Size ;
     ULONG                    Version ;
@@ -1173,10 +1189,10 @@ typedef struct
     BYTE                     Unused[512] ;
     ULONG                    InBufLen ;
     BYTE                     InBuffer[ANYSIZE_ARRAY];
-    
-} GNSS_SELFTESTCONFIG, *PGNSS_SELFTESTCONFIG; 
 
-typedef struct 
+} GNSS_SELFTESTCONFIG, *PGNSS_SELFTESTCONFIG;
+
+typedef struct
 {
     ULONG                    Size ;
     ULONG                    Version ;
@@ -1187,14 +1203,14 @@ typedef struct
     BYTE                     Unused[512] ;
     ULONG                    OutBufLen ;
     BYTE                     OutBuffer[ANYSIZE_ARRAY] ;
-    
-} GNSS_SELFTESTRESULT, *PGNSS_SELFTESTRESULT; 
+
+} GNSS_SELFTESTRESULT, *PGNSS_SELFTESTRESULT;
 
 //
 // Define data structure for IOCTL_GNSS_GET_CHIPSETINFO
 //
 
-typedef struct 
+typedef struct
 {
     ULONG                   Size ;
     ULONG                   Version ;
@@ -1204,7 +1220,7 @@ typedef struct
     WCHAR                   FirmwareVersion[20] ;
     BYTE                    Unused[512] ;
 
-} GNSS_CHIPSETINFO, *PGNSS_CHIPSETINFO; 
+} GNSS_CHIPSETINFO, *PGNSS_CHIPSETINFO;
 
 
 // Restore the previous setting for C4201 compiler warning

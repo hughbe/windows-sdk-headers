@@ -1859,6 +1859,27 @@ typedef interface IShellIconOverlayIdentifier IShellIconOverlayIdentifier;
 #endif 	/* __IShellIconOverlayIdentifier_FWD_DEFINED__ */
 
 
+#ifndef __IBannerNotificationHandler_FWD_DEFINED__
+#define __IBannerNotificationHandler_FWD_DEFINED__
+typedef interface IBannerNotificationHandler IBannerNotificationHandler;
+
+#endif 	/* __IBannerNotificationHandler_FWD_DEFINED__ */
+
+
+#ifndef __ISortColumnArray_FWD_DEFINED__
+#define __ISortColumnArray_FWD_DEFINED__
+typedef interface ISortColumnArray ISortColumnArray;
+
+#endif 	/* __ISortColumnArray_FWD_DEFINED__ */
+
+
+#ifndef __IPropertyKeyStore_FWD_DEFINED__
+#define __IPropertyKeyStore_FWD_DEFINED__
+typedef interface IPropertyKeyStore IPropertyKeyStore;
+
+#endif 	/* __IPropertyKeyStore_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "objidl.h"
 #include "shtypes.h"
@@ -4088,6 +4109,7 @@ EXTERN_C const IID IID_IObjectWithFolderEnumMode;
 #define STR_PARSE_AND_CREATE_ITEM    L"ParseAndCreateItem"
 #define STR_PROPERTYBAG_PARAM   L"SHBindCtxPropertyBag"
 #define STR_ENUM_ITEMS_FLAGS    L"SHCONTF"
+#define STR_STORAGEITEM_CREATION_FLAGS    L"SHGETSTORAGEITEM"
 
 
 
@@ -27726,7 +27748,8 @@ enum AHTYPE
         AHTYPE_MACHINEDEFAULT	= 0x20,
         AHTYPE_PROGID	= 0x40,
         AHTYPE_APPLICATION	= 0x80,
-        AHTYPE_CLASS_APPLICATION	= 0x100
+        AHTYPE_CLASS_APPLICATION	= 0x100,
+        AHTYPE_ANY_PROGID	= 0x200
     } 	AHTYPE;
 
 DEFINE_ENUM_FLAG_OPERATORS(AHTYPE)
@@ -30992,7 +31015,6 @@ EXTERN_C const IID IID_IContactManagerInterop;
 /* [local] */ 
 
 #endif // NTDDI_WINBLUE
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 
 
 extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0188_v0_0_c_ifspec;
@@ -31111,11 +31133,378 @@ EXTERN_C const IID IID_IShellIconOverlayIdentifier;
 
 #define ISIOI_ICONFILE   0x00000001
 #define ISIOI_ICONINDEX  0x00000002
-#pragma endregion
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)
 
 
 extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0189_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0189_v0_0_s_ifspec;
+
+#ifndef __IBannerNotificationHandler_INTERFACE_DEFINED__
+#define __IBannerNotificationHandler_INTERFACE_DEFINED__
+
+/* interface IBannerNotificationHandler */
+/* [unique][uuid][object] */ 
+
+typedef /* [v1_enum] */ 
+enum BANNER_NOTIFICATION_EVENT
+    {
+        BNE_Rendered	= 0,
+        BNE_Hovered	= ( BNE_Rendered + 1 ) ,
+        BNE_Closed	= ( BNE_Hovered + 1 ) ,
+        BNE_Dismissed	= ( BNE_Closed + 1 ) ,
+        BNE_Button1Clicked	= ( BNE_Dismissed + 1 ) ,
+        BNE_Button2Clicked	= ( BNE_Button1Clicked + 1 ) 
+    } 	BANNER_NOTIFICATION_EVENT;
+
+typedef struct BANNER_NOTIFICATION
+    {
+    BANNER_NOTIFICATION_EVENT event;
+    LPCWSTR providerIdentity;
+    LPCWSTR contentId;
+    } 	BANNER_NOTIFICATION;
+
+
+EXTERN_C const IID IID_IBannerNotificationHandler;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("8d7b2ba7-db05-46a8-823c-d2b6de08ee91")
+    IBannerNotificationHandler : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE OnBannerEvent( 
+            /* [in] */ __RPC__in const BANNER_NOTIFICATION *notification) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IBannerNotificationHandlerVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IBannerNotificationHandler * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IBannerNotificationHandler * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IBannerNotificationHandler * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *OnBannerEvent )( 
+            __RPC__in IBannerNotificationHandler * This,
+            /* [in] */ __RPC__in const BANNER_NOTIFICATION *notification);
+        
+        END_INTERFACE
+    } IBannerNotificationHandlerVtbl;
+
+    interface IBannerNotificationHandler
+    {
+        CONST_VTBL struct IBannerNotificationHandlerVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IBannerNotificationHandler_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IBannerNotificationHandler_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IBannerNotificationHandler_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IBannerNotificationHandler_OnBannerEvent(This,notification)	\
+    ( (This)->lpVtbl -> OnBannerEvent(This,notification) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IBannerNotificationHandler_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_shobjidl_core_0000_0190 */
+/* [local] */ 
+
+#endif // NTDDI_WIN10_RS4
+#if (NTDDI_VERSION >= NTDDI_VISTA)
+/* [v1_enum] */ 
+enum SORT_ORDER_TYPE
+    {
+        SOT_DEFAULT	= 0,
+        SOT_IGNORE_FOLDERNESS	= 1
+    } ;
+
+
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0190_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0190_v0_0_s_ifspec;
+
+#ifndef __ISortColumnArray_INTERFACE_DEFINED__
+#define __ISortColumnArray_INTERFACE_DEFINED__
+
+/* interface ISortColumnArray */
+/* [unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_ISortColumnArray;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("6dfc60fb-f2e9-459b-beb5-288f1a7c7d54")
+    ISortColumnArray : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetCount( 
+            /* [out] */ __RPC__out UINT *columnCount) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetAt( 
+            /* [in] */ UINT index,
+            /* [out] */ __RPC__out SORTCOLUMN *sortcolumn) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetSortType( 
+            /* [out] */ __RPC__out enum SORT_ORDER_TYPE *type) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct ISortColumnArrayVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in ISortColumnArray * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in ISortColumnArray * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in ISortColumnArray * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetCount )( 
+            __RPC__in ISortColumnArray * This,
+            /* [out] */ __RPC__out UINT *columnCount);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetAt )( 
+            __RPC__in ISortColumnArray * This,
+            /* [in] */ UINT index,
+            /* [out] */ __RPC__out SORTCOLUMN *sortcolumn);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetSortType )( 
+            __RPC__in ISortColumnArray * This,
+            /* [out] */ __RPC__out enum SORT_ORDER_TYPE *type);
+        
+        END_INTERFACE
+    } ISortColumnArrayVtbl;
+
+    interface ISortColumnArray
+    {
+        CONST_VTBL struct ISortColumnArrayVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define ISortColumnArray_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define ISortColumnArray_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define ISortColumnArray_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define ISortColumnArray_GetCount(This,columnCount)	\
+    ( (This)->lpVtbl -> GetCount(This,columnCount) ) 
+
+#define ISortColumnArray_GetAt(This,index,sortcolumn)	\
+    ( (This)->lpVtbl -> GetAt(This,index,sortcolumn) ) 
+
+#define ISortColumnArray_GetSortType(This,type)	\
+    ( (This)->lpVtbl -> GetSortType(This,type) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __ISortColumnArray_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_shobjidl_core_0000_0191 */
+/* [local] */ 
+
+#endif // (NTDDI_VERSION >= NTDDI_VISTA)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0191_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0191_v0_0_s_ifspec;
+
+#ifndef __IPropertyKeyStore_INTERFACE_DEFINED__
+#define __IPropertyKeyStore_INTERFACE_DEFINED__
+
+/* interface IPropertyKeyStore */
+/* [unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IPropertyKeyStore;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("75BD59AA-F23B-4963-ABA4-0B355752A91B")
+    IPropertyKeyStore : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetKeyCount( 
+            /* [out] */ __RPC__out int *keyCount) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetKeyAt( 
+            /* [in] */ int index,
+            /* [out] */ __RPC__out PROPERTYKEY *pkey) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE AppendKey( 
+            /* [in] */ __RPC__in REFPROPERTYKEY key) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE DeleteKey( 
+            /* [in] */ int index) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE IsKeyInStore( 
+            /* [in] */ __RPC__in REFPROPERTYKEY key) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE RemoveKey( 
+            /* [in] */ __RPC__in REFPROPERTYKEY key) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IPropertyKeyStoreVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IPropertyKeyStore * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IPropertyKeyStore * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetKeyCount )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [out] */ __RPC__out int *keyCount);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetKeyAt )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ int index,
+            /* [out] */ __RPC__out PROPERTYKEY *pkey);
+        
+        HRESULT ( STDMETHODCALLTYPE *AppendKey )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ __RPC__in REFPROPERTYKEY key);
+        
+        HRESULT ( STDMETHODCALLTYPE *DeleteKey )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ int index);
+        
+        HRESULT ( STDMETHODCALLTYPE *IsKeyInStore )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ __RPC__in REFPROPERTYKEY key);
+        
+        HRESULT ( STDMETHODCALLTYPE *RemoveKey )( 
+            __RPC__in IPropertyKeyStore * This,
+            /* [in] */ __RPC__in REFPROPERTYKEY key);
+        
+        END_INTERFACE
+    } IPropertyKeyStoreVtbl;
+
+    interface IPropertyKeyStore
+    {
+        CONST_VTBL struct IPropertyKeyStoreVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IPropertyKeyStore_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IPropertyKeyStore_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IPropertyKeyStore_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IPropertyKeyStore_GetKeyCount(This,keyCount)	\
+    ( (This)->lpVtbl -> GetKeyCount(This,keyCount) ) 
+
+#define IPropertyKeyStore_GetKeyAt(This,index,pkey)	\
+    ( (This)->lpVtbl -> GetKeyAt(This,index,pkey) ) 
+
+#define IPropertyKeyStore_AppendKey(This,key)	\
+    ( (This)->lpVtbl -> AppendKey(This,key) ) 
+
+#define IPropertyKeyStore_DeleteKey(This,index)	\
+    ( (This)->lpVtbl -> DeleteKey(This,index) ) 
+
+#define IPropertyKeyStore_IsKeyInStore(This,key)	\
+    ( (This)->lpVtbl -> IsKeyInStore(This,key) ) 
+
+#define IPropertyKeyStore_RemoveKey(This,key)	\
+    ( (This)->lpVtbl -> RemoveKey(This,key) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IPropertyKeyStore_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_shobjidl_core_0000_0192 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0192_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_shobjidl_core_0000_0192_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

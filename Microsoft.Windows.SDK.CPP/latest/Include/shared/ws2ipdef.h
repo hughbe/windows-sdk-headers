@@ -169,8 +169,10 @@ typedef enum _PMTUD_STATE {
 #define IP_MTU                    73 // Get path MTU.
 #define IP_NRT_INTERFACE          74 // Set NRT interface constraint (outbound).
 #define IP_RECVERR                75 // Receive ICMP errors.
+#define IP_USER_MTU               76 // Set/get app defined upper bound IP layer MTU.
 
 #define IP_UNSPECIFIED_TYPE_OF_SERVICE -1
+#define IP_UNSPECIFIED_USER_MTU MAXULONG
 
 #define IPV6_ADDRESS_BITS RTL_BITS_OF(IN6_ADDR)
 
@@ -514,7 +516,7 @@ IN6_IS_ADDR_GLOBAL(CONST IN6_ADDR *a)
     // This is a cheap way of excluding v4-compatible,
     // v4-mapped, loopback, multicast, link-local, site-local.
     //
-    ULONG High = (a->s6_bytes[0] & 0xf0);
+    ULONG High = (a->s6_bytes[0] & 0xf0u);
     return (BOOLEAN)((High != 0) && (High != 0xf0));
 }
 
@@ -804,6 +806,7 @@ typedef struct ip_msfilter {
 #define IPV6_MTU                    72 // Get path MTU.
 #define IPV6_NRT_INTERFACE          74 // Set NRT interface constraint (outbound).
 #define IPV6_RECVERR                75 // Receive ICMPv6 errors.
+#define IPV6_USER_MTU               76 // Set/get app defined upper bound IP layer MTU.
 
 #define IP_UNSPECIFIED_HOP_LIMIT -1
 
@@ -967,6 +970,37 @@ typedef struct in_recverr {
 #define TCP_KEEPCNT              16
 #define TCP_KEEPIDLE             TCP_KEEPALIVE
 #define TCP_KEEPINTVL            17
+#define TCP_FAIL_CONNECT_ON_ICMP_ERROR 18
+#define TCP_ICMP_ERROR_INFO      19
+
+//
+// Structure for TCP_ICMP_ERROR_INFO option.
+//
+typedef struct icmp_error_info {
+    SOCKADDR_INET srcaddress;
+    IPPROTO protocol;
+    UINT8 type;
+    UINT8 code;
+} ICMP_ERROR_INFO, *PICMP_ERROR_INFO;
+
+
+//
+// Options to use with [gs]etsockopt at the IPPROTO_UDP level.
+// UDP_NOCHECKSUM is defined in ws2tcpip.h for historical reasons.
+// UDP_CHECKSUM_COVERAGE is defined in ws2tcpip.h for historical reasons.
+//
+
+//      UDP_NOCHECKSUM              1
+#define UDP_SEND_MSG_SIZE           2
+#define UDP_RECV_MAX_COALESCED_SIZE 3
+//      UDP_CHECKSUM_COVERAGE       20
+
+//
+// Control message types at the IPPROTO_UDP level.
+//
+
+#define UDP_COALESCED_INFO          3
+
 
 #ifdef _PREFAST_
 #pragma prefast(pop)

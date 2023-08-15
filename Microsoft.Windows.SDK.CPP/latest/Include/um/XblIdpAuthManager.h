@@ -53,6 +53,13 @@ typedef interface IXblIdpAuthTokenResult IXblIdpAuthTokenResult;
 #endif 	/* __IXblIdpAuthTokenResult_FWD_DEFINED__ */
 
 
+#ifndef __IXblIdpAuthTokenResult2_FWD_DEFINED__
+#define __IXblIdpAuthTokenResult2_FWD_DEFINED__
+typedef interface IXblIdpAuthTokenResult2 IXblIdpAuthTokenResult2;
+
+#endif 	/* __IXblIdpAuthTokenResult2_FWD_DEFINED__ */
+
+
 #ifndef __XblIdpAuthManager_FWD_DEFINED__
 #define __XblIdpAuthManager_FWD_DEFINED__
 
@@ -537,7 +544,107 @@ EXTERN_C const IID IID_IXblIdpAuthTokenResult;
 #endif 	/* __IXblIdpAuthTokenResult_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_xblidpauthmanager_0000_0002 */
+#ifndef __IXblIdpAuthTokenResult2_INTERFACE_DEFINED__
+#define __IXblIdpAuthTokenResult2_INTERFACE_DEFINED__
+
+/* interface IXblIdpAuthTokenResult2 */
+/* [unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IXblIdpAuthTokenResult2;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("75d760b0-60b9-412d-994f-26b2cd5f7812")
+    IXblIdpAuthTokenResult2 : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetModernGamertag( 
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetModernGamertagSuffix( 
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetUniqueModernGamertag( 
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IXblIdpAuthTokenResult2Vtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetModernGamertag )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This,
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetModernGamertagSuffix )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This,
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetUniqueModernGamertag )( 
+            __RPC__in IXblIdpAuthTokenResult2 * This,
+            /* [string][retval][out] */ __RPC__deref_out_opt_string LPWSTR *value);
+        
+        END_INTERFACE
+    } IXblIdpAuthTokenResult2Vtbl;
+
+    interface IXblIdpAuthTokenResult2
+    {
+        CONST_VTBL struct IXblIdpAuthTokenResult2Vtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IXblIdpAuthTokenResult2_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IXblIdpAuthTokenResult2_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IXblIdpAuthTokenResult2_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IXblIdpAuthTokenResult2_GetModernGamertag(This,value)	\
+    ( (This)->lpVtbl -> GetModernGamertag(This,value) ) 
+
+#define IXblIdpAuthTokenResult2_GetModernGamertagSuffix(This,value)	\
+    ( (This)->lpVtbl -> GetModernGamertagSuffix(This,value) ) 
+
+#define IXblIdpAuthTokenResult2_GetUniqueModernGamertag(This,value)	\
+    ( (This)->lpVtbl -> GetUniqueModernGamertag(This,value) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IXblIdpAuthTokenResult2_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_xblidpauthmanager_0000_0003 */
 /* [local] */ 
 
 #ifdef __cplusplus
@@ -547,10 +654,10 @@ XblIdpAuthManager;
 #endif
 
 
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0002_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0002_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0003_v0_0_s_ifspec;
 
-/* interface __MIDL_itf_xblidpauthmanager_0000_0003 */
+/* interface __MIDL_itf_xblidpauthmanager_0000_0004 */
 /* [local] */ 
 
 #ifdef __cplusplus
@@ -560,18 +667,18 @@ XblIdpAuthTokenResult;
 #endif
 
 
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0003_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0003_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0004_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0004_v0_0_s_ifspec;
 
-/* interface __MIDL_itf_xblidpauthmanager_0000_0004 */
+/* interface __MIDL_itf_xblidpauthmanager_0000_0005 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0004_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0004_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0005_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_xblidpauthmanager_0000_0005_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

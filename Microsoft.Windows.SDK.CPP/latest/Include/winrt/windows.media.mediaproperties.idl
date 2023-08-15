@@ -127,11 +127,15 @@ namespace Windows
 
             interface IMediaEncodingSubtypesStatics5;
 
+            interface IMediaEncodingSubtypesStatics6;
+
             interface IMediaRatio;
 
             interface IMpeg2ProfileIdsStatics;
 
             interface ITimedMetadataEncodingProperties;
+
+            interface ITimedMetadataEncodingPropertiesStatics;
 
             interface IVideoEncodingProperties;
 
@@ -592,6 +596,17 @@ namespace Windows
                 [propget] HRESULT Heif([out] [retval] HSTRING* value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.MediaProperties.MediaEncodingSubtypes)]
+            [uuid(A1252973-A984-5912-93BB-54E7E569E053)]
+            interface IMediaEncodingSubtypesStatics6 : IInspectable
+            {
+                [propget] HRESULT Pgs([out] [retval] HSTRING* value);
+                [propget] HRESULT Srt([out] [retval] HSTRING* value);
+                [propget] HRESULT Ssa([out] [retval] HSTRING* value);
+                [propget] HRESULT VobSub([out] [retval] HSTRING* value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Media.MediaProperties.MediaRatio)]
             [uuid(D2D0FEE5-8929-401D-AC78-7D357E378163)]
@@ -623,6 +638,17 @@ namespace Windows
                 HRESULT SetFormatUserData([in] UINT32 __valueSize, [in] [size_is(__valueSize)] BYTE* value);
                 HRESULT GetFormatUserData([out] UINT32* __valueSize, [out] [size_is(, *__valueSize)] BYTE** value);
                 HRESULT Copy([out] [retval] Windows.Media.MediaProperties.TimedMetadataEncodingProperties** result);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Media.MediaProperties.TimedMetadataEncodingProperties)]
+            [uuid(6629BB67-6E55-5643-89A0-7A7E8D85B52C)]
+            interface ITimedMetadataEncodingPropertiesStatics : IInspectable
+            {
+                HRESULT CreatePgs([out] [retval] Windows.Media.MediaProperties.TimedMetadataEncodingProperties** result);
+                HRESULT CreateSrt([out] [retval] Windows.Media.MediaProperties.TimedMetadataEncodingProperties** result);
+                HRESULT CreateSsa([in] UINT32 __formatUserDataSize, [in] [size_is(__formatUserDataSize)] BYTE* formatUserData, [out] [retval] Windows.Media.MediaProperties.TimedMetadataEncodingProperties** result);
+                HRESULT CreateVobSub([in] UINT32 __formatUserDataSize, [in] [size_is(__formatUserDataSize)] BYTE* formatUserData, [out] [retval] Windows.Media.MediaProperties.TimedMetadataEncodingProperties** result);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -764,6 +790,7 @@ namespace Windows
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3, Windows.Foundation.UniversalApiContract, 4.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4, Windows.Foundation.UniversalApiContract, 6.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5, Windows.Foundation.UniversalApiContract, 7.0)]
+            [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6, Windows.Foundation.UniversalApiContract, 10.0)]
             [threading(both)]
             runtimeclass MediaEncodingSubtypes
             {
@@ -798,6 +825,7 @@ namespace Windows
             [activatable(Windows.Foundation.UniversalApiContract, 6.0)]
             [contract(Windows.Foundation.UniversalApiContract, 6.0)]
             [marshaling_behavior(agile)]
+            [static(Windows.Media.MediaProperties.ITimedMetadataEncodingPropertiesStatics, Windows.Foundation.UniversalApiContract, 10.0)]
             [threading(both)]
             runtimeclass TimedMetadataEncodingProperties
             {

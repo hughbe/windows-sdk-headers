@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.system.userprofile.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,152 +87,20 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
 
 #if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
 #define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
 
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
 #if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
+#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x70000
 #endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
 
 #if !defined(WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION)
@@ -246,18 +110,6 @@
 #if !defined(WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION)
 #define WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION 0x10000
 #endif // defined(WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -286,7 +138,8 @@ namespace ABI {
                 interface IAdvertisingManagerForUser;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser ABI::Windows::System::UserProfile::IAdvertisingManagerForUser
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_FWD_DEFINED__
@@ -300,7 +153,8 @@ namespace ABI {
                 interface IAdvertisingManagerStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics ABI::Windows::System::UserProfile::IAdvertisingManagerStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_FWD_DEFINED__
@@ -314,7 +168,8 @@ namespace ABI {
                 interface IAdvertisingManagerStatics2;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 ABI::Windows::System::UserProfile::IAdvertisingManagerStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_FWD_DEFINED__
@@ -328,7 +183,8 @@ namespace ABI {
                 interface IAssignedAccessSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings ABI::Windows::System::UserProfile::IAssignedAccessSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_FWD_DEFINED__
@@ -342,7 +198,8 @@ namespace ABI {
                 interface IAssignedAccessSettingsStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics ABI::Windows::System::UserProfile::IAssignedAccessSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_FWD_DEFINED__
@@ -356,7 +213,8 @@ namespace ABI {
                 interface IDiagnosticsSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings ABI::Windows::System::UserProfile::IDiagnosticsSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_FWD_DEFINED__
@@ -370,7 +228,8 @@ namespace ABI {
                 interface IDiagnosticsSettingsStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics ABI::Windows::System::UserProfile::IDiagnosticsSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_FWD_DEFINED__
@@ -384,7 +243,8 @@ namespace ABI {
                 interface IFirstSignInSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings ABI::Windows::System::UserProfile::IFirstSignInSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_FWD_DEFINED__
@@ -398,7 +258,8 @@ namespace ABI {
                 interface IFirstSignInSettingsStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics ABI::Windows::System::UserProfile::IFirstSignInSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_FWD_DEFINED__
@@ -412,7 +273,8 @@ namespace ABI {
                 interface IGlobalizationPreferencesForUser;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser ABI::Windows::System::UserProfile::IGlobalizationPreferencesForUser
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_FWD_DEFINED__
@@ -426,7 +288,8 @@ namespace ABI {
                 interface IGlobalizationPreferencesStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_FWD_DEFINED__
@@ -440,7 +303,8 @@ namespace ABI {
                 interface IGlobalizationPreferencesStatics2;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics2
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_FWD_DEFINED__
@@ -454,7 +318,8 @@ namespace ABI {
                 interface IGlobalizationPreferencesStatics3;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 ABI::Windows::System::UserProfile::IGlobalizationPreferencesStatics3
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_FWD_DEFINED__
@@ -468,7 +333,8 @@ namespace ABI {
                 interface ILockScreenImageFeedStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics ABI::Windows::System::UserProfile::ILockScreenImageFeedStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_FWD_DEFINED__
@@ -482,7 +348,8 @@ namespace ABI {
                 interface ILockScreenStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics ABI::Windows::System::UserProfile::ILockScreenStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_FWD_DEFINED__
@@ -496,7 +363,8 @@ namespace ABI {
                 interface IUserInformationStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics ABI::Windows::System::UserProfile::IUserInformationStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_FWD_DEFINED__
@@ -510,7 +378,8 @@ namespace ABI {
                 interface IUserProfilePersonalizationSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettings
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_FWD_DEFINED__
@@ -524,7 +393,8 @@ namespace ABI {
                 interface IUserProfilePersonalizationSettingsStatics;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettingsStatics
 
 #endif // ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_FWD_DEFINED__
@@ -532,406 +402,54 @@ namespace ABI {
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
-namespace ABI {
-    namespace Windows {
-        namespace System {
-            namespace UserProfile {
-                enum SetAccountPictureResult : int;
-            } /* UserProfile */
-        } /* System */
-    } /* Windows */} /* ABI */
 
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
+#ifndef DEF___FIAsyncOperation_1_boolean_USE
+#define DEF___FIAsyncOperation_1_boolean_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("603f3e31-7a51-518c-9280-c188ea4213d8"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> 
+struct __declspec(uuid("cdb5efb3-5788-509d-9be1-71ccb8a3362a"))
+IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.System.UserProfile.SetAccountPictureResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Boolean>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
+#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetAccountPictureResult>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetAccountPictureResult>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE */
+#endif /* DEF___FIAsyncOperation_1_boolean_USE */
 
 
 
-
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("6809e406-6d3b-5164-8f32-b845b0781405"))
-IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> : IAsyncOperation_impl<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> 
+struct __declspec(uuid("c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a"))
+IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Boolean>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
+#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetAccountPictureResult>
-//#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetAccountPictureResult>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace System {
-            namespace UserProfile {
-                enum SetImageFeedResult : int;
-            } /* UserProfile */
-        } /* System */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("f214731a-1305-5b44-932c-af9a1e4d78c9"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImageFeedResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::System::UserProfile::SetImageFeedResult> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.System.UserProfile.SetImageFeedResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetImageFeedResult>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::System::UserProfile::SetImageFeedResult>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE */
-
-
-
-
-
-#ifndef DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
-#define DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("5361bfc9-0740-544a-9797-1ffe5e73c54e"))
-IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> : IAsyncOperation_impl<enum ABI::Windows::System::UserProfile::SetImageFeedResult> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetImageFeedResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetImageFeedResult>
-//#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::System::UserProfile::SetImageFeedResult>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE */
-
-
-
-
-
-#ifndef DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#define DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("09335560-6c6b-5a26-9348-97b781132b20"))
-IKeyValuePair<HSTRING,IInspectable*> : IKeyValuePair_impl<HSTRING,IInspectable*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, Object>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IKeyValuePair<HSTRING,IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
-#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
-//#define __FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE */
-
-
-
-
-
-#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("5db5fa32-707c-5849-a06b-91c8eb9d10e8"))
-IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
-//#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
-
-
-
-
-
-#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("fe2f3d47-5d47-5499-8374-430c7cda0204"))
-IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_IInspectable*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
-//#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Foundation::Collections::IKeyValuePair<HSTRING,IInspectable*>*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
-
-
-
-
-
-#ifndef DEF___FIMapView_2_HSTRING_IInspectable_USE
-#define DEF___FIMapView_2_HSTRING_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("bb78502a-f79d-54fa-92c9-90c5039fdf7e"))
-IMapView<HSTRING,IInspectable*> : IMapView_impl<HSTRING,IInspectable*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IMapView`2<String, Object>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IMapView<HSTRING,IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
-#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
-//#define __FIMapView_2_HSTRING_IInspectable_t ABI::Windows::Foundation::Collections::IMapView<HSTRING,IInspectable*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIMapView_2_HSTRING_IInspectable_USE */
-
-
-
-
-#ifndef DEF___FIIterator_1_HSTRING_USE
-#define DEF___FIIterator_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
-IIterator<HSTRING> : IIterator_impl<HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
-#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::IIterator<HSTRING>
-//#define __FIIterator_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterator<HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIIterable_1_HSTRING_USE
-#define DEF___FIIterable_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
-IIterable<HSTRING> : IIterable_impl<HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
-#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::IIterable<HSTRING>
-//#define __FIIterable_1_HSTRING_t ABI::Windows::Foundation::Collections::IIterable<HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_HSTRING_USE */
-
-
-
-
-#ifndef DEF___FIVectorView_1_HSTRING_USE
-#define DEF___FIVectorView_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
-IVectorView<HSTRING> : IVectorView_impl<HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
-#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
-//#define __FIVectorView_1_HSTRING_t ABI::Windows::Foundation::Collections::IVectorView<HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_HSTRING_USE */
-
-
-
-
-
-#ifndef DEF___FIEventHandler_1_IInspectable_USE
-#define DEF___FIEventHandler_1_IInspectable_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("c50898f6-c536-5f47-8583-8b2c2438a13b"))
-IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.EventHandler`1<Object>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
-#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::IEventHandler<IInspectable*>
-//#define __FIEventHandler_1_IInspectable_t ABI::Windows::Foundation::IEventHandler<IInspectable*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIEventHandler_1_IInspectable_USE */
-
-
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("b79a741f-7fb5-50ae-9e99-911201ec3d41"))
-IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<HSTRING> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<String>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
-#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
-//#define __FIAsyncOperationCompletedHandler_1_HSTRING_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<HSTRING>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE */
-
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_boolean_USE */
 
 
 
@@ -941,11 +459,11 @@ typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHand
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("3e1fe603-f897-5263-b328-0806426b8a79"))
-IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING> 
+IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<String>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<String>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -953,14 +471,35 @@ IAsyncOperation<HSTRING> : IAsyncOperation_impl<HSTRING>
 // correct parameterized interface specialization.
 typedef IAsyncOperation<HSTRING> __FIAsyncOperation_1_HSTRING_t;
 #define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperation_1_HSTRING_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_HSTRING ABI::Windows::Foundation::IAsyncOperation<HSTRING>
-//#define __FIAsyncOperation_1_HSTRING_t ABI::Windows::Foundation::IAsyncOperation<HSTRING>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_HSTRING_USE */
 
+
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("b79a741f-7fb5-50ae-9e99-911201ec3d41"))
+IAsyncOperationCompletedHandler<HSTRING> : IAsyncOperationCompletedHandler_impl<HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<HSTRING> __FIAsyncOperationCompletedHandler_1_HSTRING_t;
+#define __FIAsyncOperationCompletedHandler_1_HSTRING ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_HSTRING_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_HSTRING_USE */
 
 
 namespace ABI {
@@ -968,7 +507,8 @@ namespace ABI {
         namespace Foundation {
             class Uri;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -977,43 +517,11 @@ namespace ABI {
         namespace Foundation {
             interface IUriRuntimeClass;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIUriRuntimeClass ABI::Windows::Foundation::IUriRuntimeClass
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("ad46f1cc-2bb0-585c-9885-03c2780d4d58"))
-IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Foundation::Uri*, ABI::Windows::Foundation::IUriRuntimeClass*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Uri>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IUriRuntimeClass*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::IUriRuntimeClass*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1023,11 +531,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyn
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("641cb9dd-a28d-59e2-b8db-a227eda6cf2e"))
-IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Foundation::Uri*, ABI::Windows::Foundation::IUriRuntimeClass*>> 
+IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Foundation::Uri*, ABI::Windows::Foundation::IUriRuntimeClass*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Uri>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -1035,75 +543,366 @@ IAsyncOperation<ABI::Windows::Foundation::Uri*> : IAsyncOperation_impl<ABI::Wind
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Foundation::Uri*> __FIAsyncOperation_1_Windows__CFoundation__CUri_t;
 #define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CFoundation__CUri_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CFoundation__CUri ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IUriRuntimeClass*>
-//#define __FIAsyncOperation_1_Windows__CFoundation__CUri_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::IUriRuntimeClass*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CFoundation__CUri_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("ad46f1cc-2bb0-585c-9885-03c2780d4d58"))
+IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Foundation::Uri*, ABI::Windows::Foundation::IUriRuntimeClass*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Uri>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Uri*> __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace UserProfile {
+                typedef enum SetAccountPictureResult : int SetAccountPictureResult;
+            } /* UserProfile */
+        } /* System */
+    } /* Windows */
+} /* ABI */
 
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_boolean_USE
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("c1d3d1a2-ae17-5a5f-b5a2-bdcc8844889a"))
-IAsyncOperationCompletedHandler<bool> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>> 
+struct __declspec(uuid("6809e406-6d3b-5164-8f32-b845b0781405"))
+IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> : IAsyncOperation_impl<enum ABI::Windows::System::UserProfile::SetAccountPictureResult>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Boolean>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetAccountPictureResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<bool> __FIAsyncOperationCompletedHandler_1_boolean_t;
-#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_boolean_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_boolean ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
-//#define __FIAsyncOperationCompletedHandler_1_boolean_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<boolean>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_boolean_USE */
+#endif /* DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE */
 
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
-#ifndef DEF___FIAsyncOperation_1_boolean_USE
-#define DEF___FIAsyncOperation_1_boolean_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("cdb5efb3-5788-509d-9be1-71ccb8a3362a"))
-IAsyncOperation<bool> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<bool, boolean>> 
+struct __declspec(uuid("603f3e31-7a51-518c-9280-c188ea4213d8"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::System::UserProfile::SetAccountPictureResult>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Boolean>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.System.UserProfile.SetAccountPictureResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperation<bool> __FIAsyncOperation_1_boolean_t;
-#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::__FIAsyncOperation_1_boolean_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetAccountPictureResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_boolean ABI::Windows::Foundation::IAsyncOperation<boolean>
-//#define __FIAsyncOperation_1_boolean_t ABI::Windows::Foundation::IAsyncOperation<boolean>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperation_1_boolean_USE */
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_USE */
+
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace UserProfile {
+                typedef enum SetImageFeedResult : int SetImageFeedResult;
+            } /* UserProfile */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
+#define DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("5361bfc9-0740-544a-9797-1ffe5e73c54e"))
+IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> : IAsyncOperation_impl<enum ABI::Windows::System::UserProfile::SetImageFeedResult>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.System.UserProfile.SetImageFeedResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperation<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE */
+
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("f214731a-1305-5b44-932c-af9a1e4d78c9"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImageFeedResult> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::System::UserProfile::SetImageFeedResult>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.System.UserProfile.SetImageFeedResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::System::UserProfile::SetImageFeedResult> __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_USE */
+
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+
+#ifndef DEF___FIIterator_1_HSTRING_USE
+#define DEF___FIIterator_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("8c304ebb-6615-50a4-8829-879ecd443236"))
+IIterator<HSTRING> : IIterator_impl<HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<HSTRING> __FIIterator_1_HSTRING_t;
+#define __FIIterator_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterator_1_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_HSTRING_USE */
 
 
 
+#ifndef DEF___FIIterable_1_HSTRING_USE
+#define DEF___FIIterable_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e2fcc7c1-3bfc-5a0b-b2b0-72e769d1cb7e"))
+IIterable<HSTRING> : IIterable_impl<HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<HSTRING> __FIIterable_1_HSTRING_t;
+#define __FIIterable_1_HSTRING ABI::Windows::Foundation::Collections::__FIIterable_1_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_HSTRING_USE */
+
+
+
+#ifndef DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("09335560-6c6b-5a26-9348-97b781132b20"))
+IKeyValuePair<HSTRING, IInspectable*> : IKeyValuePair_impl<HSTRING, IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IKeyValuePair`2<String, Object>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IKeyValuePair<HSTRING, IInspectable*> __FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIKeyValuePair_2_HSTRING_IInspectable_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+#ifndef DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("5db5fa32-707c-5849-a06b-91c8eb9d10e8"))
+IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterator_impl<__FIKeyValuePair_2_HSTRING_IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+#ifndef DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#define DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("fe2f3d47-5d47-5499-8374-430c7cda0204"))
+IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> : IIterable_impl<__FIKeyValuePair_2_HSTRING_IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<__FIKeyValuePair_2_HSTRING_IInspectable*> __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t;
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_USE */
+
+
+
+#ifndef DEF___FIMapView_2_HSTRING_IInspectable_USE
+#define DEF___FIMapView_2_HSTRING_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("bb78502a-f79d-54fa-92c9-90c5039fdf7e"))
+IMapView<HSTRING, IInspectable*> : IMapView_impl<HSTRING, IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IMapView`2<String, Object>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IMapView<HSTRING, IInspectable*> __FIMapView_2_HSTRING_IInspectable_t;
+#define __FIMapView_2_HSTRING_IInspectable ABI::Windows::Foundation::Collections::__FIMapView_2_HSTRING_IInspectable_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIMapView_2_HSTRING_IInspectable_USE */
+
+
+
+#ifndef DEF___FIVectorView_1_HSTRING_USE
+#define DEF___FIVectorView_1_HSTRING_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("2f13c006-a03a-5f69-b090-75a43e33423e"))
+IVectorView<HSTRING> : IVectorView_impl<HSTRING>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<String>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<HSTRING> __FIVectorView_1_HSTRING_t;
+#define __FIVectorView_1_HSTRING ABI::Windows::Foundation::Collections::__FIVectorView_1_HSTRING_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_HSTRING_USE */
+
+
+
+#ifndef DEF___FIEventHandler_1_IInspectable_USE
+#define DEF___FIEventHandler_1_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("c50898f6-c536-5f47-8583-8b2c2438a13b"))
+IEventHandler<IInspectable*> : IEventHandler_impl<IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.EventHandler`1<Object>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IEventHandler<IInspectable*> __FIEventHandler_1_IInspectable_t;
+#define __FIEventHandler_1_IInspectable ABI::Windows::Foundation::__FIEventHandler_1_IInspectable_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIEventHandler_1_IInspectable_USE */
 
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1113,26 +912,19 @@ namespace ABI {
         namespace Foundation {
             interface IAsyncAction;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 
-
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Globalization {
-            
             typedef enum DayOfWeek : int DayOfWeek;
-            
         } /* Globalization */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -1141,21 +933,19 @@ namespace ABI {
         namespace Storage {
             interface IStorageFile;
         } /* Storage */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CStorage_CIStorageFile ABI::Windows::Storage::IStorageFile
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
-
 
 namespace ABI {
     namespace Windows {
         namespace Storage {
             class StorageFile;
         } /* Storage */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
@@ -1166,21 +956,19 @@ namespace ABI {
                 interface IRandomAccessStream;
             } /* Streams */
         } /* Storage */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream ABI::Windows::Storage::Streams::IRandomAccessStream
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
         namespace System {
             class User;
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -1189,67 +977,21 @@ namespace ABI {
         namespace System {
             interface IUser;
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSystem_CIUser ABI::Windows::System::IUser
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 
-
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                
                 typedef enum AccountPictureKind : int AccountPictureKind;
-                
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace System {
-            namespace UserProfile {
-                
-                typedef enum SetAccountPictureResult : int SetAccountPictureResult;
-                
-            } /* UserProfile */
-        } /* System */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace System {
-            namespace UserProfile {
-                
-                typedef enum SetImageFeedResult : int SetImageFeedResult;
-                
-            } /* UserProfile */
-        } /* System */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1258,8 +1000,8 @@ namespace ABI {
                 class AdvertisingManagerForUser;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1268,8 +1010,8 @@ namespace ABI {
                 class AssignedAccessSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1278,8 +1020,8 @@ namespace ABI {
                 class DiagnosticsSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1288,9 +1030,8 @@ namespace ABI {
                 class FirstSignInSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1299,10 +1040,8 @@ namespace ABI {
                 class GlobalizationPreferencesForUser;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1311,18 +1050,8 @@ namespace ABI {
                 class UserProfilePersonalizationSettings;
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -1330,31 +1059,27 @@ namespace ABI {
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [v1_enum, deprecated, contract] */
-                enum 
-                #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                enum
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 AccountPictureKind : int
                 {
                     AccountPictureKind_SmallImage = 0,
                     AccountPictureKind_LargeImage = 1,
                     AccountPictureKind_Video = 2,
                 };
-                
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1362,19 +1087,16 @@ namespace ABI {
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [v1_enum, deprecated, contract] */
-                enum 
-                #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                enum
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 SetAccountPictureResult : int
                 {
                     SetAccountPictureResult_Success = 0,
@@ -1384,12 +1106,11 @@ namespace ABI {
                     SetAccountPictureResult_FileSizeError = 4,
                     SetAccountPictureResult_Failure = 5,
                 };
-                
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1397,27 +1118,23 @@ namespace ABI {
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [v1_enum, contract] */
                 enum SetImageFeedResult : int
                 {
                     SetImageFeedResult_Success = 0,
                     SetImageFeedResult_ChangeDisabled = 1,
                     SetImageFeedResult_UserCanceled = 2,
                 };
-                
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1425,9 +1142,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManagerForUser
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1438,30 +1153,27 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("928BF3D0-CF7C-4AB0-A7DC-6DC5BCD44252"), exclusiveto, contract] */
-                MIDL_INTERFACE("928BF3D0-CF7C-4AB0-A7DC-6DC5BCD44252")
+                MIDL_INTERFACE("928bf3d0-cf7c-4ab0-a7dc-6dc5bcd44252")
                 IAdvertisingManagerForUser : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdvertisingId(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_AdvertisingId(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_User(
+                        ABI::Windows::System::IUser** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IAdvertisingManagerForUser=_uuidof(IAdvertisingManagerForUser);
-                
+                extern MIDL_CONST_ID IID& IID_IAdvertisingManagerForUser = _uuidof(IAdvertisingManagerForUser);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1469,9 +1181,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1482,27 +1192,24 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("ADD3468C-A273-48CB-B346-3544522D5581"), exclusiveto, contract] */
-                MIDL_INTERFACE("ADD3468C-A273-48CB-B346-3544522D5581")
+                MIDL_INTERFACE("add3468c-a273-48cb-b346-3544522d5581")
                 IAdvertisingManagerStatics : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AdvertisingId(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_AdvertisingId(
+                        HSTRING* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IAdvertisingManagerStatics=_uuidof(IAdvertisingManagerStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IAdvertisingManagerStatics = _uuidof(IAdvertisingManagerStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1510,9 +1217,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
@@ -1523,28 +1228,25 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("DD0947AF-1A6D-46B0-95BC-F3F9D6BEB9FB"), exclusiveto, contract] */
-                MIDL_INTERFACE("DD0947AF-1A6D-46B0-95BC-F3F9D6BEB9FB")
+                MIDL_INTERFACE("dd0947af-1a6d-46b0-95bc-f3f9d6beb9fb")
                 IAdvertisingManagerStatics2 : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetForUser(
-                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IAdvertisingManagerForUser * * value
+                        ABI::Windows::System::IUser* user,
+                        ABI::Windows::System::UserProfile::IAdvertisingManagerForUser** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IAdvertisingManagerStatics2=_uuidof(IAdvertisingManagerStatics2);
-                
+                extern MIDL_CONST_ID IID& IID_IAdvertisingManagerStatics2 = _uuidof(IAdvertisingManagerStatics2);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -1552,9 +1254,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AssignedAccessSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1565,33 +1265,30 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("1BC57F1C-E971-5757-B8E0-512F8B8C46D2"), exclusiveto, contract] */
-                MIDL_INTERFACE("1BC57F1C-E971-5757-B8E0-512F8B8C46D2")
+                MIDL_INTERFACE("1bc57f1c-e971-5757-b8e0-512f8b8c46d2")
                 IAssignedAccessSettings : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_IsEnabled(
+                        boolean* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsSingleAppKioskMode(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_IsSingleAppKioskMode(
+                        boolean* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_User(
+                        ABI::Windows::System::IUser** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IAssignedAccessSettings=_uuidof(IAssignedAccessSettings);
-                
+                extern MIDL_CONST_ID IID& IID_IAssignedAccessSettings = _uuidof(IAssignedAccessSettings);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1599,9 +1296,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AssignedAccessSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
@@ -1612,31 +1307,28 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("34A81D0D-8A29-5EF3-A7BE-618E6AC3BD01"), exclusiveto, contract] */
-                MIDL_INTERFACE("34A81D0D-8A29-5EF3-A7BE-618E6AC3BD01")
+                MIDL_INTERFACE("34a81d0d-8a29-5ef3-a7be-618e6ac3bd01")
                 IAssignedAccessSettingsStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IAssignedAccessSettings * * result
+                        ABI::Windows::System::UserProfile::IAssignedAccessSettings** result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetForUser(
-                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IAssignedAccessSettings * * result
+                        ABI::Windows::System::IUser* user,
+                        ABI::Windows::System::UserProfile::IAssignedAccessSettings** result
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IAssignedAccessSettingsStatics=_uuidof(IAssignedAccessSettingsStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IAssignedAccessSettingsStatics = _uuidof(IAssignedAccessSettingsStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -1644,9 +1336,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.DiagnosticsSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1657,30 +1347,27 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("E5E9ECCD-2711-44E0-973C-491D78048D24"), exclusiveto, contract] */
-                MIDL_INTERFACE("E5E9ECCD-2711-44E0-973C-491D78048D24")
+                MIDL_INTERFACE("e5e9eccd-2711-44e0-973c-491d78048d24")
                 IDiagnosticsSettings : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_CanUseDiagnosticsToTailorExperiences(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_CanUseDiagnosticsToTailorExperiences(
+                        boolean* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_User(
+                        ABI::Windows::System::IUser** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDiagnosticsSettings=_uuidof(IDiagnosticsSettings);
-                
+                extern MIDL_CONST_ID IID& IID_IDiagnosticsSettings = _uuidof(IDiagnosticsSettings);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1688,9 +1375,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.DiagnosticsSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
@@ -1701,31 +1386,28 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("72D2E80F-5390-4793-990B-3CCC7D6AC9C8"), exclusiveto, contract] */
-                MIDL_INTERFACE("72D2E80F-5390-4793-990B-3CCC7D6AC9C8")
+                MIDL_INTERFACE("72d2e80f-5390-4793-990b-3ccc7d6ac9c8")
                 IDiagnosticsSettingsStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IDiagnosticsSettings * * value
+                        ABI::Windows::System::UserProfile::IDiagnosticsSettings** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetForUser(
-                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IDiagnosticsSettings * * value
+                        ABI::Windows::System::IUser* user,
+                        ABI::Windows::System::UserProfile::IDiagnosticsSettings** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IDiagnosticsSettingsStatics=_uuidof(IDiagnosticsSettingsStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IDiagnosticsSettingsStatics = _uuidof(IDiagnosticsSettingsStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -1733,14 +1415,11 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.FirstSignInSettings
  *
- *
  * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMapView_2_HSTRING,IInspectable
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
- *
+ *     Windows.Foundation.Collections.IMapView`2<String, Object>
+ *     Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1751,24 +1430,21 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("3E945153-3A5E-452E-A601-F5BAAD2A4870"), exclusiveto, contract] */
-                MIDL_INTERFACE("3E945153-3A5E-452E-A601-F5BAAD2A4870")
+                MIDL_INTERFACE("3e945153-3a5e-452e-a601-f5baad2a4870")
                 IFirstSignInSettings : public IInspectable
                 {
                 public:
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFirstSignInSettings=_uuidof(IFirstSignInSettings);
-                
+                extern MIDL_CONST_ID IID& IID_IFirstSignInSettings = _uuidof(IFirstSignInSettings);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1776,9 +1452,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.FirstSignInSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1789,27 +1463,24 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("1CE18F0F-1C41-4EA0-B7A2-6F0C1C7E8438"), exclusiveto, contract] */
-                MIDL_INTERFACE("1CE18F0F-1C41-4EA0-B7A2-6F0C1C7E8438")
+                MIDL_INTERFACE("1ce18f0f-1c41-4ea0-b7a2-6f0c1c7e8438")
                 IFirstSignInSettingsStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetDefault(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IFirstSignInSettings * * result
+                        ABI::Windows::System::UserProfile::IFirstSignInSettings** result
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IFirstSignInSettingsStatics=_uuidof(IFirstSignInSettingsStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IFirstSignInSettingsStatics = _uuidof(IFirstSignInSettingsStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1817,9 +1488,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferencesForUser
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1830,45 +1499,42 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("150F0795-4F6E-40BA-A010-E27D81BDA7F5"), exclusiveto, contract] */
-                MIDL_INTERFACE("150F0795-4F6E-40BA-A010-E27D81BDA7F5")
+                MIDL_INTERFACE("150f0795-4f6e-40ba-a010-e27d81bda7f5")
                 IGlobalizationPreferencesForUser : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_User(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::IUser * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_User(
+                        ABI::Windows::System::IUser** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Calendars(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Calendars(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Clocks(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Clocks(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Currencies(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Currencies(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Languages(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Languages(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HomeGeographicRegion(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_HomeGeographicRegion(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WeekStartsOn(
-                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::DayOfWeek * value
+                    virtual HRESULT STDMETHODCALLTYPE get_WeekStartsOn(
+                        ABI::Windows::Globalization::DayOfWeek* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesForUser=_uuidof(IGlobalizationPreferencesForUser);
-                
+                extern MIDL_CONST_ID IID& IID_IGlobalizationPreferencesForUser = _uuidof(IGlobalizationPreferencesForUser);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 
 /*
  *
@@ -1876,9 +1542,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1889,42 +1553,39 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("01BF4326-ED37-4E96-B0E9-C1340D1EA158"), exclusiveto, contract] */
-                MIDL_INTERFACE("01BF4326-ED37-4E96-B0E9-C1340D1EA158")
+                MIDL_INTERFACE("01bf4326-ed37-4e96-b0e9-c1340d1ea158")
                 IGlobalizationPreferencesStatics : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Calendars(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Calendars(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Clocks(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Clocks(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Currencies(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Currencies(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Languages(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Languages(
+                        __FIVectorView_1_HSTRING** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_HomeGeographicRegion(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_HomeGeographicRegion(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_WeekStartsOn(
-                        /* [retval, out] */__RPC__out ABI::Windows::Globalization::DayOfWeek * value
+                    virtual HRESULT STDMETHODCALLTYPE get_WeekStartsOn(
+                        ABI::Windows::Globalization::DayOfWeek* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics=_uuidof(IGlobalizationPreferencesStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IGlobalizationPreferencesStatics = _uuidof(IGlobalizationPreferencesStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1932,9 +1593,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1945,32 +1604,29 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("FCCE85F1-4300-4CD0-9CAC-1A8E7B7E18F4"), exclusiveto, contract] */
-                MIDL_INTERFACE("FCCE85F1-4300-4CD0-9CAC-1A8E7B7E18F4")
+                MIDL_INTERFACE("fcce85f1-4300-4cd0-9cac-1a8e7b7e18f4")
                 IGlobalizationPreferencesStatics2 : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE TrySetHomeGeographicRegion(
-                        /* [in] */__RPC__in HSTRING region,
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        HSTRING region,
+                        boolean* result
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetLanguages(
-                        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * languageTags,
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        __FIIterable_1_HSTRING* languageTags,
+                        boolean* result
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics2=_uuidof(IGlobalizationPreferencesStatics2);
-                
+                extern MIDL_CONST_ID IID& IID_IGlobalizationPreferencesStatics2 = _uuidof(IGlobalizationPreferencesStatics2);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -1978,9 +1634,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
@@ -1991,28 +1645,25 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("1E059733-35F5-40D8-B9E8-AEF3EF856FCE"), exclusiveto, contract] */
-                MIDL_INTERFACE("1E059733-35F5-40D8-B9E8-AEF3EF856FCE")
+                MIDL_INTERFACE("1e059733-35f5-40d8-b9e8-aef3ef856fce")
                 IGlobalizationPreferencesStatics3 : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetForUser(
-                        /* [in] */__RPC__in_opt ABI::Windows::System::IUser * user,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IGlobalizationPreferencesForUser * * value
+                        ABI::Windows::System::IUser* user,
+                        ABI::Windows::System::UserProfile::IGlobalizationPreferencesForUser** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IGlobalizationPreferencesStatics3=_uuidof(IGlobalizationPreferencesStatics3);
-                
+                extern MIDL_CONST_ID IID& IID_IGlobalizationPreferencesStatics3 = _uuidof(IGlobalizationPreferencesStatics3);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 
 /*
  *
@@ -2020,9 +1671,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.LockScreen
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
@@ -2033,31 +1682,28 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("2C0D73F6-03A9-41A6-9B01-495251FF51D5"), exclusiveto, contract] */
-                MIDL_INTERFACE("2C0D73F6-03A9-41A6-9B01-495251FF51D5")
+                MIDL_INTERFACE("2c0d73f6-03a9-41a6-9b01-495251ff51d5")
                 ILockScreenImageFeedStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE RequestSetImageFeedAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Foundation::IUriRuntimeClass * syndicationFeedUri,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * * value
+                        ABI::Windows::Foundation::IUriRuntimeClass* syndicationFeedUri,
+                        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TryRemoveImageFeed(
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        boolean* result
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_ILockScreenImageFeedStatics=_uuidof(ILockScreenImageFeedStatics);
-                
+                extern MIDL_CONST_ID IID& IID_ILockScreenImageFeedStatics = _uuidof(ILockScreenImageFeedStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2065,9 +1711,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFe
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.LockScreen
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
@@ -2078,38 +1722,35 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("3EE9D3AD-B607-40AE-B426-7631D9821269"), exclusiveto, contract] */
-                MIDL_INTERFACE("3EE9D3AD-B607-40AE-B426-7631D9821269")
+                MIDL_INTERFACE("3ee9d3ad-b607-40ae-b426-7631d9821269")
                 ILockScreenStatics : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_OriginalImageFile(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IUriRuntimeClass * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_OriginalImageFile(
+                        ABI::Windows::Foundation::IUriRuntimeClass** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetImageStream(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::Streams::IRandomAccessStream * * value
+                        ABI::Windows::Storage::Streams::IRandomAccessStream** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetImageFileAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * value,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * Operation
+                        ABI::Windows::Storage::IStorageFile* value,
+                        ABI::Windows::Foundation::IAsyncAction** Operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE SetImageStreamAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * value,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * Operation
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* value,
+                        ABI::Windows::Foundation::IAsyncAction** Operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_ILockScreenStatics=_uuidof(ILockScreenStatics);
-                
+                extern MIDL_CONST_ID IID& IID_ILockScreenStatics = _uuidof(ILockScreenStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2117,9 +1758,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserInformation
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
@@ -2130,143 +1769,124 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("77F3A910-48FA-489C-934E-2AE85BA8F772"), exclusiveto, deprecated, contract] */
-                MIDL_INTERFACE("77F3A910-48FA-489C-934E-2AE85BA8F772")
-                
-                #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                MIDL_INTERFACE("77f3a910-48fa-489c-934e-2ae85ba8f772")
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                 IUserInformationStatics : public IInspectable
                 {
                 public:
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_AccountPictureChangeEnabled(
-                        /* [retval, out] */__RPC__out ::boolean * value
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE get_AccountPictureChangeEnabled(
+                        boolean* value
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [propget, deprecated] */virtual HRESULT STDMETHODCALLTYPE get_NameAccessAllowed(
-                        /* [retval, out] */__RPC__out ::boolean * value
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE get_NameAccessAllowed(
+                        boolean* value
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetAccountPicture(
-                        /* [in] */ABI::Windows::System::UserProfile::AccountPictureKind kind,
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Storage::IStorageFile * * storageFile
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetAccountPicture(
+                        ABI::Windows::System::UserProfile::AccountPictureKind kind,
+                        ABI::Windows::Storage::IStorageFile** storageFile
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE SetAccountPictureAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * image,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE SetAccountPictureAsync(
+                        ABI::Windows::Storage::IStorageFile* image,
+                        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE SetAccountPicturesAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * smallImage,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * largeImage,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * video,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE SetAccountPicturesAsync(
+                        ABI::Windows::Storage::IStorageFile* smallImage,
+                        ABI::Windows::Storage::IStorageFile* largeImage,
+                        ABI::Windows::Storage::IStorageFile* video,
+                        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE SetAccountPictureFromStreamAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * image,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE SetAccountPictureFromStreamAsync(
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* image,
+                        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE SetAccountPicturesFromStreamsAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * smallImage,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * largeImage,
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::Streams::IRandomAccessStream * video,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE SetAccountPicturesFromStreamsAsync(
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* smallImage,
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* largeImage,
+                        ABI::Windows::Storage::Streams::IRandomAccessStream* video,
+                        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [eventadd, deprecated] */virtual HRESULT STDMETHODCALLTYPE add_AccountPictureChanged(
-                        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * changeHandler,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * token
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE add_AccountPictureChanged(
+                        __FIEventHandler_1_IInspectable* changeHandler,
+                        EventRegistrationToken* token
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [eventremove, deprecated] */virtual HRESULT STDMETHODCALLTYPE remove_AccountPictureChanged(
-                        /* [in] */EventRegistrationToken token
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE remove_AccountPictureChanged(
+                        EventRegistrationToken token
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetDisplayNameAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetDisplayNameAsync(
+                        __FIAsyncOperation_1_HSTRING** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetFirstNameAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetFirstNameAsync(
+                        __FIAsyncOperation_1_HSTRING** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetLastNameAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetLastNameAsync(
+                        __FIAsyncOperation_1_HSTRING** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetPrincipalNameAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetPrincipalNameAsync(
+                        __FIAsyncOperation_1_HSTRING** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetSessionInitiationProtocolUriAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CFoundation__CUri * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetSessionInitiationProtocolUriAsync(
+                        __FIAsyncOperation_1_Windows__CFoundation__CUri** operation
                         ) = 0;
-                    
-                    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
                     DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-                    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-                    /* [deprecated] */virtual HRESULT STDMETHODCALLTYPE GetDomainNameAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+                    virtual HRESULT STDMETHODCALLTYPE GetDomainNameAsync(
+                        __FIAsyncOperation_1_HSTRING** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IUserInformationStatics=_uuidof(IUserInformationStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IUserInformationStatics = _uuidof(IUserInformationStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2274,9 +1894,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationSt
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserProfilePersonalizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2287,32 +1905,29 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("8CEDDAB4-7998-46D5-8DD3-184F1C5F9AB9"), exclusiveto, contract] */
-                MIDL_INTERFACE("8CEDDAB4-7998-46D5-8DD3-184F1C5F9AB9")
+                MIDL_INTERFACE("8ceddab4-7998-46d5-8dd3-184f1c5f9ab9")
                 IUserProfilePersonalizationSettings : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE TrySetLockScreenImageAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * imageFile,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
+                        ABI::Windows::Storage::IStorageFile* imageFile,
+                        __FIAsyncOperation_1_boolean** operation
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE TrySetWallpaperImageAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Storage::IStorageFile * imageFile,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
+                        ABI::Windows::Storage::IStorageFile* imageFile,
+                        __FIAsyncOperation_1_boolean** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IUserProfilePersonalizationSettings=_uuidof(IUserProfilePersonalizationSettings);
-                
+                extern MIDL_CONST_ID IID& IID_IUserProfilePersonalizationSettings = _uuidof(IUserProfilePersonalizationSettings);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -2320,9 +1935,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePerson
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserProfilePersonalizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -2333,37 +1946,33 @@ namespace ABI {
     namespace Windows {
         namespace System {
             namespace UserProfile {
-                /* [object, uuid("91ACB841-5037-454B-9883-BB772D08DD16"), exclusiveto, contract] */
-                MIDL_INTERFACE("91ACB841-5037-454B-9883-BB772D08DD16")
+                MIDL_INTERFACE("91acb841-5037-454b-9883-bb772d08dd16")
                 IUserProfilePersonalizationSettingsStatics : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Current(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettings * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Current(
+                        ABI::Windows::System::UserProfile::IUserProfilePersonalizationSettings** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE IsSupported(
-                        /* [retval, out] */__RPC__out ::boolean * result
+                        boolean* result
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IUserProfilePersonalizationSettingsStatics=_uuidof(IUserProfilePersonalizationSettingsStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IUserProfilePersonalizationSettingsStatics = _uuidof(IUserProfilePersonalizationSettingsStatics);
             } /* UserProfile */
         } /* System */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.System.UserProfile.AdvertisingManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IAdvertisingManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2379,13 +1988,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.AdvertisingManagerForUser
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IAdvertisingManagerForUser ** Default Interface **
@@ -2396,20 +2003,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_AdvertisingManagerForUser_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_AdvertisingManagerForUser_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_AdvertisingManagerForUser[] = L"Windows.System.UserProfile.AdvertisingManagerForUser";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.System.UserProfile.AssignedAccessSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IAssignedAccessSettingsStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2423,20 +2027,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_AssignedAccessSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_AssignedAccessSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_AssignedAccessSettings[] = L"Windows.System.UserProfile.AssignedAccessSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
-
 /*
  *
  * Class Windows.System.UserProfile.DiagnosticsSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IDiagnosticsSettingsStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2450,13 +2051,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_DiagnosticsSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_DiagnosticsSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_DiagnosticsSettings[] = L"Windows.System.UserProfile.DiagnosticsSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -2464,14 +2063,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IFirstSignInSettingsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IFirstSignInSettings ** Default Interface **
- *    Windows.Foundation.Collections.IMapView_2_HSTRING,IInspectable
- *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
+ *    Windows.Foundation.Collections.IMapView`2<String, Object>
+ *    Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -2479,20 +2077,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_FirstSignInSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_FirstSignInSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_FirstSignInSettings[] = L"Windows.System.UserProfile.FirstSignInSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.GlobalizationPreferences
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IGlobalizationPreferencesStatics3 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2509,13 +2104,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.GlobalizationPreferencesForUser
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IGlobalizationPreferencesForUser ** Default Interface **
@@ -2526,20 +2119,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_GlobalizationPreferencesForUser_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_GlobalizationPreferencesForUser_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_GlobalizationPreferencesForUser[] = L"Windows.System.UserProfile.GlobalizationPreferencesForUser";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
-
 /*
  *
  * Class Windows.System.UserProfile.LockScreen
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.ILockScreenStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
@@ -2553,13 +2143,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.UserInformation
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IUserInformationStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileContract API contract
@@ -2568,7 +2156,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_UserInformation_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_UserInformation_DEFINED
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
@@ -2576,13 +2163,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.UserProfilePersonalizationSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -2596,15 +2181,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_UserProfilePersonalizationSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_UserProfilePersonalizationSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_UserProfilePersonalizationSettings[] = L"Windows.System.UserProfile.UserProfilePersonalizationSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2719,879 +2300,129 @@ typedef interface __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonaliza
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
-enum __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult;
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
+typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
+
+#if !defined(____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
+EXTERN_C const IID IID___FIAsyncOperation_1_boolean;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl
+typedef struct __FIAsyncOperation_1_booleanVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
-
-
-enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult;
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
-#define ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FIKeyValuePair_2_HSTRING_IInspectable __FIKeyValuePair_2_HSTRING_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_IInspectable;
-
-typedef struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This,
-            /* [out] */ __RPC__out ULONG *iidCount,
-            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Key )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out HSTRING *key);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Value )(__RPC__in __FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
-    END_INTERFACE
-} __FIKeyValuePair_2_HSTRING_IInspectableVtbl;
-
-interface __FIKeyValuePair_2_HSTRING_IInspectable
-{
-    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Key(This,key)	\
-    ( (This)->lpVtbl -> get_Key(This,key) ) 
-
-#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Value(This,value)	\
-    ( (This)->lpVtbl -> get_Value(This,value) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
-#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
-
-typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out __FIKeyValuePair_2_HSTRING_IInspectable * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __FIKeyValuePair_2_HSTRING_IInspectable * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_boolean* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_boolean* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_boolean* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_boolean* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_boolean* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_boolean* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_boolean* This,
+        __FIAsyncOperationCompletedHandler_1_boolean* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_boolean* This,
+        __FIAsyncOperationCompletedHandler_1_boolean** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_boolean* This,
+        boolean* result);
 
     END_INTERFACE
-} __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+} __FIAsyncOperation_1_booleanVtbl;
 
-interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable
+interface __FIAsyncOperation_1_boolean
 {
-    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_booleanVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIAsyncOperation_1_boolean_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperation_1_boolean_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperation_1_boolean_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIAsyncOperation_1_boolean_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIAsyncOperation_1_boolean_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIAsyncOperation_1_boolean_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIAsyncOperation_1_boolean_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
 
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_boolean_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIAsyncOperation_1_boolean_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
 
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
 
-#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+#if !defined(____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
 
-
-
-#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
-#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_boolean;
 
-typedef  struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_booleanVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_boolean* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_boolean* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_boolean* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_boolean* This,
+        __FIAsyncOperation_1_boolean* asyncInfo,
+        AsyncStatus asyncStatus);
 
     END_INTERFACE
-} __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+} __FIAsyncOperationCompletedHandler_1_booleanVtbl;
 
-interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
+interface __FIAsyncOperationCompletedHandler_1_boolean
 {
-    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_booleanVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIAsyncOperationCompletedHandler_1_boolean_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
 
 #endif /* COBJMACROS */
 
-
-#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
-#define ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FIMapView_2_HSTRING_IInspectable __FIMapView_2_HSTRING_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIMapView_2_HSTRING_IInspectable;
-
-typedef struct __FIMapView_2_HSTRING_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *Lookup )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,
-        /* [in] */ __RPC__in HSTRING key,
-        /* [retval][out] */ __RPC__deref_out_opt IInspectable * *value);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [retval][out] */ __RPC__out unsigned int *size);
-    HRESULT ( STDMETHODCALLTYPE *HasKey )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This, /* [in] */ __RPC__in HSTRING key, /* [retval][out] */ __RPC__out boolean *found);
-    HRESULT ( STDMETHODCALLTYPE *Split )(__RPC__in __FIMapView_2_HSTRING_IInspectable * This,/* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **firstPartition,
-        /* [out] */ __RPC__deref_out_opt __FIMapView_2_HSTRING_IInspectable **secondPartition);
-    END_INTERFACE
-} __FIMapView_2_HSTRING_IInspectableVtbl;
-
-interface __FIMapView_2_HSTRING_IInspectable
-{
-    CONST_VTBL struct __FIMapView_2_HSTRING_IInspectableVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIMapView_2_HSTRING_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIMapView_2_HSTRING_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIMapView_2_HSTRING_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIMapView_2_HSTRING_IInspectable_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIMapView_2_HSTRING_IInspectable_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIMapView_2_HSTRING_IInspectable_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIMapView_2_HSTRING_IInspectable_Lookup(This,key,value)	\
-    ( (This)->lpVtbl -> Lookup(This,key,value) ) 
-#define __FIMapView_2_HSTRING_IInspectable_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-#define __FIMapView_2_HSTRING_IInspectable_HasKey(This,key,found)	\
-    ( (This)->lpVtbl -> HasKey(This,key,found) ) 
-#define __FIMapView_2_HSTRING_IInspectable_Split(This,firstPartition,secondPartition)	\
-    ( (This)->lpVtbl -> Split(This,firstPartition,secondPartition) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
-
-
-#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_HSTRING;
-
-typedef struct __FIIterator_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_HSTRING * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_HSTRING * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_HSTRING * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_HSTRINGVtbl;
-
-interface __FIIterator_1_HSTRING
-{
-    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_HSTRING_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_HSTRING_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_HSTRING_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_HSTRING;
-
-typedef  struct __FIIterable_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_HSTRING * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_HSTRING **first);
-
-    END_INTERFACE
-} __FIIterable_1_HSTRINGVtbl;
-
-interface __FIIterable_1_HSTRING
-{
-    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_HSTRING_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
-
-
-#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIVectorView_1_HSTRING;
-
-typedef struct __FIVectorView_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_HSTRING * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_HSTRING * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out HSTRING *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ HSTRING item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_HSTRING * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) HSTRING *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
-} __FIVectorView_1_HSTRINGVtbl;
-
-interface __FIVectorView_1_HSTRING
-{
-    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIVectorView_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIVectorView_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIVectorView_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIVectorView_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIVectorView_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIVectorView_1_HSTRING_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_HSTRING_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_HSTRING_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_HSTRING_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-
-#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__)
-#define ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
-
-typedef interface __FIEventHandler_1_IInspectable __FIEventHandler_1_IInspectable;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIEventHandler_1_IInspectable;
-
-typedef struct __FIEventHandler_1_IInspectableVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIEventHandler_1_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIEventHandler_1_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIEventHandler_1_IInspectable * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIEventHandler_1_IInspectable * This,/* [in] */ __RPC__in_opt IInspectable *sender,/* [in] */ __RPC__in_opt IInspectable * *e);
-    END_INTERFACE
-} __FIEventHandler_1_IInspectableVtbl;
-
-interface __FIEventHandler_1_IInspectable
-{
-    CONST_VTBL struct __FIEventHandler_1_IInspectableVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIEventHandler_1_IInspectable_QueryInterface(This,riid,ppvObject)	\
-        ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIEventHandler_1_IInspectable_AddRef(This)	\
-        ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIEventHandler_1_IInspectable_Release(This)	\
-        ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIEventHandler_1_IInspectable_Invoke(This,sender,e)	\
-        ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
-
-
-#if !defined(____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__
+#endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
 
 typedef interface __FIAsyncOperationCompletedHandler_1_HSTRING __FIAsyncOperationCompletedHandler_1_HSTRING;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_HSTRING;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_HSTRING __FIAsyncOperation_1_HSTRING;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_HSTRING * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_HSTRING * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_HSTRING *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_HSTRING
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_HSTRING_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__
-
 
 #if !defined(____FIAsyncOperation_1_HSTRING_INTERFACE_DEFINED__)
 #define ____FIAsyncOperation_1_HSTRING_INTERFACE_DEFINED__
@@ -3604,56 +2435,113 @@ EXTERN_C const IID IID___FIAsyncOperation_1_HSTRING;
 typedef struct __FIAsyncOperation_1_HSTRINGVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_HSTRING * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_HSTRING * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_HSTRING * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_HSTRING * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_HSTRING * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_HSTRING * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_HSTRING* This,
+        __FIAsyncOperationCompletedHandler_1_HSTRING* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_HSTRING* This,
+        __FIAsyncOperationCompletedHandler_1_HSTRING** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_HSTRING* This,
+        HSTRING* result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_HSTRING * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_HSTRING *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_HSTRING * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_HSTRING **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_HSTRING * This, /* [retval][out] */ __RPC__out HSTRING *results);
     END_INTERFACE
 } __FIAsyncOperation_1_HSTRINGVtbl;
 
 interface __FIAsyncOperation_1_HSTRING
 {
-    CONST_VTBL struct __FIAsyncOperation_1_HSTRINGVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_HSTRINGVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_HSTRING_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_HSTRING_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_HSTRING_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_HSTRING_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_HSTRING_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_HSTRING_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_HSTRING_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_HSTRING_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_HSTRING_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_HSTRING_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_HSTRING_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_HSTRING_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
-
 
 #endif // ____FIAsyncOperation_1_HSTRING_INTERFACE_DEFINED__
 
+#if !defined(____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_HSTRING __FIAsyncOperationCompletedHandler_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_HSTRING;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_HSTRING* This,
+        __FIAsyncOperation_1_HSTRING* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_HSTRING
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_HSTRING_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_HSTRING_INTERFACE_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -3661,56 +2549,7 @@ typedef interface __x_ABI_CWindows_CFoundation_CIUriRuntimeClass __x_ABI_CWindow
 
 #endif // ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__
-
 typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CFoundation__CUri __FIAsyncOperation_1_Windows__CFoundation__CUri;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CFoundation__CUri *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIAsyncOperation_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__)
@@ -3724,167 +2563,931 @@ EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CFoundation__CUri;
 typedef struct __FIAsyncOperation_1_Windows__CFoundation__CUriVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CFoundation__CUri* This,
+        __x_ABI_CWindows_CFoundation_CIUriRuntimeClass** result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CFoundation__CUri * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * *results);
     END_INTERFACE
 } __FIAsyncOperation_1_Windows__CFoundation__CUriVtbl;
 
 interface __FIAsyncOperation_1_Windows__CFoundation__CUri
 {
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CFoundation__CUriVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CFoundation__CUriVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CFoundation__CUri_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
-
 
 #endif // ____FIAsyncOperation_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#if !defined(____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperationCompletedHandler_1_boolean __FIAsyncOperationCompletedHandler_1_boolean;
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_boolean;
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri;
 
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_booleanVtbl
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri* This,
+        __FIAsyncOperation_1_Windows__CFoundation__CUri* asyncInfo,
+        AsyncStatus asyncStatus);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_boolean * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_boolean *asyncInfo, /* [in] */ AsyncStatus status);
     END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_booleanVtbl;
+} __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl;
 
-interface __FIAsyncOperationCompletedHandler_1_boolean
+interface __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri
 {
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_booleanVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUriVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_boolean_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_boolean_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_boolean_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperationCompletedHandler_1_boolean_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
+#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CFoundation__CUri_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#endif // ____FIAsyncOperationCompletedHandler_1_boolean_INTERFACE_DEFINED__
+typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult;
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
 
-#if !defined(____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
 
-typedef interface __FIAsyncOperation_1_boolean __FIAsyncOperation_1_boolean;
+typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
 
 //  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_boolean;
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
 
-typedef struct __FIAsyncOperation_1_booleanVtbl
+typedef struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_boolean * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_boolean * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_boolean * This);
 
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_boolean * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        enum __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult* result);
 
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_boolean *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_boolean **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_boolean * This, /* [retval][out] */ __RPC__out boolean *results);
     END_INTERFACE
-} __FIAsyncOperation_1_booleanVtbl;
+} __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl;
 
-interface __FIAsyncOperation_1_boolean
+interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult
 {
-    CONST_VTBL struct __FIAsyncOperation_1_booleanVtbl *lpVtbl;
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FIAsyncOperation_1_boolean_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_boolean_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_boolean_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
 
-#define __FIAsyncOperation_1_boolean_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_boolean_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_boolean_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIAsyncOperation_1_boolean_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_boolean_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_boolean_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
 #endif /* COBJMACROS */
 
+#endif // ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-#endif // ____FIAsyncOperation_1_boolean_INTERFACE_DEFINED__
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
 
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
 
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* This,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult_INTERFACE_DEFINED__
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult;
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
+
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult* result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* This,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CSystem__CUserProfile__CSetImageFeedResult_INTERFACE_DEFINED__
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
+
+#if !defined(____FIIterator_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_HSTRING __FIIterator_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_HSTRING;
+
+typedef struct __FIIterator_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_HSTRING* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_HSTRING* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_HSTRING* This,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_HSTRINGVtbl;
+
+interface __FIIterator_1_HSTRING
+{
+    CONST_VTBL struct __FIIterator_1_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_HSTRING_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_HSTRING_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_HSTRING_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_HSTRING_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIIterable_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_HSTRING __FIIterable_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_HSTRING;
+
+typedef struct __FIIterable_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_HSTRING* This,
+        __FIIterator_1_HSTRING** result);
+
+    END_INTERFACE
+} __FIIterable_1_HSTRINGVtbl;
+
+interface __FIIterable_1_HSTRING
+{
+    CONST_VTBL struct __FIIterable_1_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_HSTRING_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIKeyValuePair_2_HSTRING_IInspectable __FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIKeyValuePair_2_HSTRING_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIKeyValuePair_2_HSTRING_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Key)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Value)(__FIKeyValuePair_2_HSTRING_IInspectable* This,
+        IInspectable** result);
+
+    END_INTERFACE
+} __FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Key(This, result) \
+    ((This)->lpVtbl->get_Key(This, result))
+
+#define __FIKeyValuePair_2_HSTRING_IInspectable_get_Value(This, result) \
+    ((This)->lpVtbl->get_Value(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+#if !defined(____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        __FIKeyValuePair_2_HSTRING_IInspectable** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        UINT32 itemsLength,
+        __FIKeyValuePair_2_HSTRING_IInspectable** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+#if !defined(____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable;
+
+typedef struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable* This,
+        __FIIterator_1___FIKeyValuePair_2_HSTRING_IInspectable** result);
+
+    END_INTERFACE
+} __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl;
+
+interface __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1___FIKeyValuePair_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIMapView_2_HSTRING_IInspectable __FIMapView_2_HSTRING_IInspectable;
+
+#if !defined(____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__)
+#define ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIMapView_2_HSTRING_IInspectable __FIMapView_2_HSTRING_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIMapView_2_HSTRING_IInspectable;
+
+typedef struct __FIMapView_2_HSTRING_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIMapView_2_HSTRING_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIMapView_2_HSTRING_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIMapView_2_HSTRING_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIMapView_2_HSTRING_IInspectable* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIMapView_2_HSTRING_IInspectable* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIMapView_2_HSTRING_IInspectable* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Lookup)(__FIMapView_2_HSTRING_IInspectable* This,
+        HSTRING key,
+        IInspectable** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIMapView_2_HSTRING_IInspectable* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* HasKey)(__FIMapView_2_HSTRING_IInspectable* This,
+        HSTRING key,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* Split)(__FIMapView_2_HSTRING_IInspectable* This,
+        __FIMapView_2_HSTRING_IInspectable** first,
+        __FIMapView_2_HSTRING_IInspectable** second);
+
+    END_INTERFACE
+} __FIMapView_2_HSTRING_IInspectableVtbl;
+
+interface __FIMapView_2_HSTRING_IInspectable
+{
+    CONST_VTBL struct __FIMapView_2_HSTRING_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIMapView_2_HSTRING_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIMapView_2_HSTRING_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIMapView_2_HSTRING_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIMapView_2_HSTRING_IInspectable_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIMapView_2_HSTRING_IInspectable_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIMapView_2_HSTRING_IInspectable_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIMapView_2_HSTRING_IInspectable_Lookup(This, key, result) \
+    ((This)->lpVtbl->Lookup(This, key, result))
+
+#define __FIMapView_2_HSTRING_IInspectable_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIMapView_2_HSTRING_IInspectable_HasKey(This, key, result) \
+    ((This)->lpVtbl->HasKey(This, key, result))
+
+#define __FIMapView_2_HSTRING_IInspectable_Split(This, first, second) \
+    ((This)->lpVtbl->Split(This, first, second))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIMapView_2_HSTRING_IInspectable_INTERFACE_DEFINED__
+
+#if !defined(____FIVectorView_1_HSTRING_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_HSTRING __FIVectorView_1_HSTRING;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_HSTRING;
+
+typedef struct __FIVectorView_1_HSTRINGVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_HSTRING* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_HSTRING* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_HSTRING* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_HSTRING* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_HSTRING* This,
+        UINT32 index,
+        HSTRING* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_HSTRING* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_HSTRING* This,
+        HSTRING value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_HSTRING* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        HSTRING* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_HSTRINGVtbl;
+
+interface __FIVectorView_1_HSTRING
+{
+    CONST_VTBL struct __FIVectorView_1_HSTRINGVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_HSTRING_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_HSTRING_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_HSTRING_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_HSTRING_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_HSTRING_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_HSTRING_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_HSTRING_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_HSTRING_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_HSTRING_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_HSTRING_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_HSTRING_INTERFACE_DEFINED__
+
+#if !defined(____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__)
+#define ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FIEventHandler_1_IInspectable __FIEventHandler_1_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIEventHandler_1_IInspectable;
+
+typedef struct __FIEventHandler_1_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIEventHandler_1_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIEventHandler_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIEventHandler_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIEventHandler_1_IInspectable* This,
+        IInspectable* sender,
+        IInspectable* args);
+
+    END_INTERFACE
+} __FIEventHandler_1_IInspectableVtbl;
+
+interface __FIEventHandler_1_IInspectable
+{
+    CONST_VTBL struct __FIEventHandler_1_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIEventHandler_1_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIEventHandler_1_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIEventHandler_1_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIEventHandler_1_IInspectable_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIEventHandler_1_IInspectable_INTERFACE_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -3892,15 +3495,7 @@ typedef interface __x_ABI_CWindows_CFoundation_CIAsyncAction __x_ABI_CWindows_CF
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 
-
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CGlobalization_CDayOfWeek __x_ABI_CWindows_CGlobalization_CDayOfWeek;
-
-
 
 #ifndef ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
@@ -3908,19 +3503,11 @@ typedef interface __x_ABI_CWindows_CStorage_CIStorageFile __x_ABI_CWindows_CStor
 
 #endif // ____x_ABI_CWindows_CStorage_CIStorageFile_FWD_DEFINED__
 
-
-
-
-
 #ifndef ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 #define ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream;
 
 #endif // ____x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
@@ -3928,57 +3515,7 @@ typedef interface __x_ABI_CWindows_CSystem_CIUser __x_ABI_CWindows_CSystem_CIUse
 
 #endif // ____x_ABI_CWindows_CSystem_CIUser_FWD_DEFINED__
 
-
-
-
-
-
-
 typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CAccountPictureKind __x_ABI_CWindows_CSystem_CUserProfile_CAccountPictureKind;
-
-
-typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult;
-
-
-typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -3986,12 +3523,9 @@ typedef enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult __x_ABI_C
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-/* [v1_enum, deprecated, contract] */
-enum 
+enum
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
@@ -4003,19 +3537,15 @@ __x_ABI_CWindows_CSystem_CUserProfile_CAccountPictureKind
 };
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.System.UserProfile.SetAccountPictureResult
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-/* [v1_enum, deprecated, contract] */
-enum 
+enum
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
@@ -4030,18 +3560,14 @@ __x_ABI_CWindows_CSystem_CUserProfile_CSetAccountPictureResult
 };
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.System.UserProfile.SetImageFeedResult
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult
 {
     SetImageFeedResult_Success = 0,
@@ -4050,106 +3576,79 @@ enum __x_ABI_CWindows_CSystem_CUserProfile_CSetImageFeedResult
 };
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Interface Windows.System.UserProfile.IAdvertisingManagerForUser
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManagerForUser
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IAdvertisingManagerForUser[] = L"Windows.System.UserProfile.IAdvertisingManagerForUser";
-/* [object, uuid("928BF3D0-CF7C-4AB0-A7DC-6DC5BCD44252"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUserVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AdvertisingId)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_User)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser* This,
+        __x_ABI_CWindows_CSystem_CIUser** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AdvertisingId )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUserVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUserVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUserVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_get_AdvertisingId(This,value) \
-    ( (This)->lpVtbl->get_AdvertisingId(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_get_AdvertisingId(This, value) \
+    ((This)->lpVtbl->get_AdvertisingId(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_get_User(This,value) \
-    ( (This)->lpVtbl->get_User(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_get_User(This, value) \
+    ((This)->lpVtbl->get_User(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -4157,92 +3656,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IAdvertisingManagerStatics[] = L"Windows.System.UserProfile.IAdvertisingManagerStatics";
-/* [object, uuid("ADD3468C-A273-48CB-B346-3544522D5581"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AdvertisingId)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics* This,
+        HSTRING* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AdvertisingId )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_get_AdvertisingId(This,value) \
-    ( (This)->lpVtbl->get_AdvertisingId(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_get_AdvertisingId(This, value) \
+    ((This)->lpVtbl->get_AdvertisingId(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4250,93 +3725,69 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AdvertisingManager
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IAdvertisingManagerStatics2[] = L"Windows.System.UserProfile.IAdvertisingManagerStatics2";
-/* [object, uuid("DD0947AF-1A6D-46B0-95BC-F3F9D6BEB9FB"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetForUser)(__x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetForUser )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerForUser * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2Vtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetForUser(This,user,value) \
-    ( (This)->lpVtbl->GetForUser(This,user,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_GetForUser(This, user, value) \
+    ((This)->lpVtbl->GetForUser(This, user, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManagerStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 
 /*
  *
@@ -4344,106 +3795,78 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAdvertisingManage
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AssignedAccessSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IAssignedAccessSettings[] = L"Windows.System.UserProfile.IAssignedAccessSettings";
-/* [object, uuid("1BC57F1C-E971-5757-B8E0-512F8B8C46D2"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsEnabled)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_IsSingleAppKioskMode)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_User)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings* This,
+        __x_ABI_CWindows_CSystem_CIUser** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsEnabled )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsSingleAppKioskMode )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_IsEnabled(This,value) \
-    ( (This)->lpVtbl->get_IsEnabled(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_IsEnabled(This, value) \
+    ((This)->lpVtbl->get_IsEnabled(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_IsSingleAppKioskMode(This,value) \
-    ( (This)->lpVtbl->get_IsSingleAppKioskMode(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_IsSingleAppKioskMode(This, value) \
+    ((This)->lpVtbl->get_IsSingleAppKioskMode(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_User(This,value) \
-    ( (This)->lpVtbl->get_User(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_get_User(This, value) \
+    ((This)->lpVtbl->get_User(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -4451,100 +3874,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.AssignedAccessSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IAssignedAccessSettingsStatics[] = L"Windows.System.UserProfile.IAssignedAccessSettingsStatics";
-/* [object, uuid("34A81D0D-8A29-5EF3-A7BE-618E6AC3BD01"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings** result);
+    HRESULT (STDMETHODCALLTYPE* GetForUser)(__x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetDefault )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetForUser )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettings * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetDefault(This,result) \
-    ( (This)->lpVtbl->GetDefault(This,result) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetDefault(This, result) \
+    ((This)->lpVtbl->GetDefault(This, result))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetForUser(This,user,result) \
-    ( (This)->lpVtbl->GetForUser(This,user,result) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_GetForUser(This, user, result) \
+    ((This)->lpVtbl->GetForUser(This, user, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 
 /*
  *
@@ -4552,99 +3949,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIAssignedAccessSet
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.DiagnosticsSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IDiagnosticsSettings[] = L"Windows.System.UserProfile.IDiagnosticsSettings";
-/* [object, uuid("E5E9ECCD-2711-44E0-973C-491D78048D24"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CanUseDiagnosticsToTailorExperiences)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        boolean* value);
+    HRESULT (STDMETHODCALLTYPE* get_User)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings* This,
+        __x_ABI_CWindows_CSystem_CIUser** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_CanUseDiagnosticsToTailorExperiences )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_get_CanUseDiagnosticsToTailorExperiences(This,value) \
-    ( (This)->lpVtbl->get_CanUseDiagnosticsToTailorExperiences(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_get_CanUseDiagnosticsToTailorExperiences(This, value) \
+    ((This)->lpVtbl->get_CanUseDiagnosticsToTailorExperiences(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_get_User(This,value) \
-    ( (This)->lpVtbl->get_User(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_get_User(This, value) \
+    ((This)->lpVtbl->get_User(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4652,100 +4023,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.DiagnosticsSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IDiagnosticsSettingsStatics[] = L"Windows.System.UserProfile.IDiagnosticsSettingsStatics";
-/* [object, uuid("72D2E80F-5390-4793-990B-3CCC7D6AC9C8"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings** value);
+    HRESULT (STDMETHODCALLTYPE* GetForUser)(__x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetDefault )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetForUser )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettings * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetDefault(This,value) \
-    ( (This)->lpVtbl->GetDefault(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetDefault(This, value) \
+    ((This)->lpVtbl->GetDefault(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetForUser(This,user,value) \
-    ( (This)->lpVtbl->GetForUser(This,user,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_GetForUser(This, user, value) \
+    ((This)->lpVtbl->GetForUser(This, user, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -4753,90 +4098,67 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIDiagnosticsSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.FirstSignInSettings
  *
- *
  * Any object which implements this interface must also implement the following interfaces:
- *     Windows.Foundation.Collections.IMapView_2_HSTRING,IInspectable
- *     Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
- *
+ *     Windows.Foundation.Collections.IMapView`2<String, Object>
+ *     Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IFirstSignInSettings[] = L"Windows.System.UserProfile.IFirstSignInSettings";
-/* [object, uuid("3E945153-3A5E-452E-A601-F5BAAD2A4870"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings* This,
+        TrustLevel* trustLevel);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-END_INTERFACE
-    
+    END_INTERFACE
 } __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4844,92 +4166,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.FirstSignInSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IFirstSignInSettingsStatics[] = L"Windows.System.UserProfile.IFirstSignInSettingsStatics";
-/* [object, uuid("1CE18F0F-1C41-4EA0-B7A2-6F0C1C7E8438"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(__x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings** result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetDefault )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettings * * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetDefault(This,result) \
-    ( (This)->lpVtbl->GetDefault(This,result) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_GetDefault(This, result) \
+    ((This)->lpVtbl->GetDefault(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4937,134 +4235,98 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIFirstSignInSettin
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferencesForUser
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IGlobalizationPreferencesForUser[] = L"Windows.System.UserProfile.IGlobalizationPreferencesForUser";
-/* [object, uuid("150F0795-4F6E-40BA-A010-E27D81BDA7F5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUserVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_User)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        __x_ABI_CWindows_CSystem_CIUser** value);
+    HRESULT (STDMETHODCALLTYPE* get_Calendars)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Clocks)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Currencies)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Languages)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_HomeGeographicRegion)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_WeekStartsOn)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser* This,
+        enum __x_ABI_CWindows_CGlobalization_CDayOfWeek* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_User )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CIUser * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Calendars )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Clocks )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Currencies )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Languages )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HomeGeographicRegion )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_WeekStartsOn )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CDayOfWeek * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUserVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUserVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUserVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_User(This,value) \
-    ( (This)->lpVtbl->get_User(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_User(This, value) \
+    ((This)->lpVtbl->get_User(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Calendars(This,value) \
-    ( (This)->lpVtbl->get_Calendars(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Calendars(This, value) \
+    ((This)->lpVtbl->get_Calendars(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Clocks(This,value) \
-    ( (This)->lpVtbl->get_Clocks(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Clocks(This, value) \
+    ((This)->lpVtbl->get_Clocks(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Currencies(This,value) \
-    ( (This)->lpVtbl->get_Currencies(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Currencies(This, value) \
+    ((This)->lpVtbl->get_Currencies(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Languages(This,value) \
-    ( (This)->lpVtbl->get_Languages(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_Languages(This, value) \
+    ((This)->lpVtbl->get_Languages(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_HomeGeographicRegion(This,value) \
-    ( (This)->lpVtbl->get_HomeGeographicRegion(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_HomeGeographicRegion(This, value) \
+    ((This)->lpVtbl->get_HomeGeographicRegion(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_WeekStartsOn(This,value) \
-    ( (This)->lpVtbl->get_WeekStartsOn(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_get_WeekStartsOn(This, value) \
+    ((This)->lpVtbl->get_WeekStartsOn(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 
 /*
  *
@@ -5072,127 +4334,93 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IGlobalizationPreferencesStatics[] = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics";
-/* [object, uuid("01BF4326-ED37-4E96-B0E9-C1340D1EA158"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Calendars)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Clocks)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Currencies)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_Languages)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        __FIVectorView_1_HSTRING** value);
+    HRESULT (STDMETHODCALLTYPE* get_HomeGeographicRegion)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_WeekStartsOn)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics* This,
+        enum __x_ABI_CWindows_CGlobalization_CDayOfWeek* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Calendars )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Clocks )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Currencies )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Languages )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_HSTRING * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_HomeGeographicRegion )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_WeekStartsOn )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CGlobalization_CDayOfWeek * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Calendars(This,value) \
-    ( (This)->lpVtbl->get_Calendars(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Calendars(This, value) \
+    ((This)->lpVtbl->get_Calendars(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Clocks(This,value) \
-    ( (This)->lpVtbl->get_Clocks(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Clocks(This, value) \
+    ((This)->lpVtbl->get_Clocks(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Currencies(This,value) \
-    ( (This)->lpVtbl->get_Currencies(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Currencies(This, value) \
+    ((This)->lpVtbl->get_Currencies(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Languages(This,value) \
-    ( (This)->lpVtbl->get_Languages(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_Languages(This, value) \
+    ((This)->lpVtbl->get_Languages(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_HomeGeographicRegion(This,value) \
-    ( (This)->lpVtbl->get_HomeGeographicRegion(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_HomeGeographicRegion(This, value) \
+    ((This)->lpVtbl->get_HomeGeographicRegion(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_WeekStartsOn(This,value) \
-    ( (This)->lpVtbl->get_WeekStartsOn(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_get_WeekStartsOn(This, value) \
+    ((This)->lpVtbl->get_WeekStartsOn(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5200,101 +4428,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IGlobalizationPreferencesStatics2[] = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics2";
-/* [object, uuid("FCCE85F1-4300-4CD0-9CAC-1A8E7B7E18F4"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* TrySetHomeGeographicRegion)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        HSTRING region,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* TrySetLanguages)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2* This,
+        __FIIterable_1_HSTRING* languageTags,
+        boolean* result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *TrySetHomeGeographicRegion )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-        /* [in] */__RPC__in HSTRING region,
-        /* [retval, out] */__RPC__out boolean * result
-        );
-    HRESULT ( STDMETHODCALLTYPE *TrySetLanguages )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2 * This,
-        /* [in] */__RPC__in_opt __FIIterable_1_HSTRING * languageTags,
-        /* [retval, out] */__RPC__out boolean * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2Vtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_TrySetHomeGeographicRegion(This,region,result) \
-    ( (This)->lpVtbl->TrySetHomeGeographicRegion(This,region,result) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_TrySetHomeGeographicRegion(This, region, result) \
+    ((This)->lpVtbl->TrySetHomeGeographicRegion(This, region, result))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_TrySetLanguages(This,languageTags,result) \
-    ( (This)->lpVtbl->TrySetLanguages(This,languageTags,result) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_TrySetLanguages(This, languageTags, result) \
+    ((This)->lpVtbl->TrySetLanguages(This, languageTags, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -5302,93 +4504,69 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.GlobalizationPreferences
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IGlobalizationPreferencesStatics3[] = L"Windows.System.UserProfile.IGlobalizationPreferencesStatics3";
-/* [object, uuid("1E059733-35F5-40D8-B9E8-AEF3EF856FCE"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetForUser)(__x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3* This,
+        __x_ABI_CWindows_CSystem_CIUser* user,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetForUser )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSystem_CIUser * user,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesForUser * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3Vtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetForUser(This,user,value) \
-    ( (This)->lpVtbl->GetForUser(This,user,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_GetForUser(This, user, value) \
+    ((This)->lpVtbl->GetForUser(This, user, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPreferencesStatics3_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 
 /*
  *
@@ -5396,100 +4574,74 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIGlobalizationPref
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.LockScreen
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_ILockScreenImageFeedStatics[] = L"Windows.System.UserProfile.ILockScreenImageFeedStatics";
-/* [object, uuid("2C0D73F6-03A9-41A6-9B01-495251FF51D5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* RequestSetImageFeedAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        __x_ABI_CWindows_CFoundation_CIUriRuntimeClass* syndicationFeedUri,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult** value);
+    HRESULT (STDMETHODCALLTYPE* TryRemoveImageFeed)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics* This,
+        boolean* result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *RequestSetImageFeedAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * syndicationFeedUri,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetImageFeedResult * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *TryRemoveImageFeed )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics * This,
-        /* [retval, out] */__RPC__out boolean * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_RequestSetImageFeedAsync(This,syndicationFeedUri,value) \
-    ( (This)->lpVtbl->RequestSetImageFeedAsync(This,syndicationFeedUri,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_RequestSetImageFeedAsync(This, syndicationFeedUri, value) \
+    ((This)->lpVtbl->RequestSetImageFeedAsync(This, syndicationFeedUri, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_TryRemoveImageFeed(This,result) \
-    ( (This)->lpVtbl->TryRemoveImageFeed(This,result) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_TryRemoveImageFeed(This, result) \
+    ((This)->lpVtbl->TryRemoveImageFeed(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFeedStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5497,115 +4649,85 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenImageFe
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.LockScreen
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_ILockScreenStatics[] = L"Windows.System.UserProfile.ILockScreenStatics";
-/* [object, uuid("3EE9D3AD-B607-40AE-B426-7631D9821269"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_OriginalImageFile)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        __x_ABI_CWindows_CFoundation_CIUriRuntimeClass** value);
+    HRESULT (STDMETHODCALLTYPE* GetImageStream)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream** value);
+    HRESULT (STDMETHODCALLTYPE* SetImageFileAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* value,
+        __x_ABI_CWindows_CFoundation_CIAsyncAction** Operation);
+    HRESULT (STDMETHODCALLTYPE* SetImageStreamAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* value,
+        __x_ABI_CWindows_CFoundation_CIAsyncAction** Operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_OriginalImageFile )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIUriRuntimeClass * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetImageStream )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetImageFileAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * value,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIAsyncAction * * Operation
-        );
-    HRESULT ( STDMETHODCALLTYPE *SetImageStreamAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * value,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIAsyncAction * * Operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_get_OriginalImageFile(This,value) \
-    ( (This)->lpVtbl->get_OriginalImageFile(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_get_OriginalImageFile(This, value) \
+    ((This)->lpVtbl->get_OriginalImageFile(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetImageStream(This,value) \
-    ( (This)->lpVtbl->GetImageStream(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_GetImageStream(This, value) \
+    ((This)->lpVtbl->GetImageStream(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_SetImageFileAsync(This,value,Operation) \
-    ( (This)->lpVtbl->SetImageFileAsync(This,value,Operation) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_SetImageFileAsync(This, value, Operation) \
+    ((This)->lpVtbl->SetImageFileAsync(This, value, Operation))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_SetImageStreamAsync(This,value,Operation) \
-    ( (This)->lpVtbl->SetImageStreamAsync(This,value,Operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_SetImageStreamAsync(This, value, Operation) \
+    ((This)->lpVtbl->SetImageStreamAsync(This, value, Operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5613,324 +4735,242 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CILockScreenStatics
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserInformation
- *
  *
  */
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IUserInformationStatics[] = L"Windows.System.UserProfile.IUserInformationStatics";
-/* [object, uuid("77F3A910-48FA-489C-934E-2AE85BA8F772"), exclusiveto, deprecated, contract] */
-typedef struct 
+typedef struct
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        TrustLevel* trustLevel);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* get_AccountPictureChangeEnabled)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        boolean* value);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* get_NameAccessAllowed)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        boolean* value);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetAccountPicture)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        enum __x_ABI_CWindows_CSystem_CUserProfile_CAccountPictureKind kind,
+        __x_ABI_CWindows_CStorage_CIStorageFile** storageFile);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* SetAccountPictureAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* image,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* SetAccountPicturesAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* smallImage,
+        __x_ABI_CWindows_CStorage_CIStorageFile* largeImage,
+        __x_ABI_CWindows_CStorage_CIStorageFile* video,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* SetAccountPictureFromStreamAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* image,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* SetAccountPicturesFromStreamsAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* smallImage,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* largeImage,
+        __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream* video,
+        __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* add_AccountPictureChanged)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIEventHandler_1_IInspectable* changeHandler,
+        EventRegistrationToken* token);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* remove_AccountPictureChanged)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        EventRegistrationToken token);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetDisplayNameAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_HSTRING** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetFirstNameAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_HSTRING** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetLastNameAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_HSTRING** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetPrincipalNameAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_HSTRING** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetSessionInitiationProtocolUriAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_Windows__CFoundation__CUri** operation);
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    HRESULT (STDMETHODCALLTYPE* GetDomainNameAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics* This,
+        __FIAsyncOperation_1_HSTRING** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_AccountPictureChangeEnabled )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [propget, deprecated] */HRESULT ( STDMETHODCALLTYPE *get_NameAccessAllowed )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetAccountPicture )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__x_ABI_CWindows_CSystem_CUserProfile_CAccountPictureKind kind,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CStorage_CIStorageFile * * storageFile
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *SetAccountPictureAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * image,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *SetAccountPicturesAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * smallImage,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * largeImage,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * video,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *SetAccountPictureFromStreamAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * image,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *SetAccountPicturesFromStreamsAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * smallImage,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * largeImage,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CStreams_CIRandomAccessStream * video,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CSystem__CUserProfile__CSetAccountPictureResult * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [eventadd, deprecated] */HRESULT ( STDMETHODCALLTYPE *add_AccountPictureChanged )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */__RPC__in_opt __FIEventHandler_1_IInspectable * changeHandler,
-        /* [retval, out] */__RPC__out EventRegistrationToken * token
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [eventremove, deprecated] */HRESULT ( STDMETHODCALLTYPE *remove_AccountPictureChanged )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [in] */EventRegistrationToken token
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetDisplayNameAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetFirstNameAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetLastNameAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetPrincipalNameAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetSessionInitiationProtocolUriAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CFoundation__CUri * * operation
-        );
-    
-    #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-    #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-    /* [deprecated] */HRESULT ( STDMETHODCALLTYPE *GetDomainNameAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_HSTRING * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
-
-
-#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
-#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_get_AccountPictureChangeEnabled(This,value) \
-    ( (This)->lpVtbl->get_AccountPictureChangeEnabled(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_get_NameAccessAllowed(This,value) \
-    ( (This)->lpVtbl->get_NameAccessAllowed(This,value) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_get_AccountPictureChangeEnabled(This, value) \
+    ((This)->lpVtbl->get_AccountPictureChangeEnabled(This, value))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetAccountPicture(This,kind,storageFile) \
-    ( (This)->lpVtbl->GetAccountPicture(This,kind,storageFile) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_get_NameAccessAllowed(This, value) \
+    ((This)->lpVtbl->get_NameAccessAllowed(This, value))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPictureAsync(This,image,operation) \
-    ( (This)->lpVtbl->SetAccountPictureAsync(This,image,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetAccountPicture(This, kind, storageFile) \
+    ((This)->lpVtbl->GetAccountPicture(This, kind, storageFile))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPicturesAsync(This,smallImage,largeImage,video,operation) \
-    ( (This)->lpVtbl->SetAccountPicturesAsync(This,smallImage,largeImage,video,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPictureAsync(This, image, operation) \
+    ((This)->lpVtbl->SetAccountPictureAsync(This, image, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPictureFromStreamAsync(This,image,operation) \
-    ( (This)->lpVtbl->SetAccountPictureFromStreamAsync(This,image,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPicturesAsync(This, smallImage, largeImage, video, operation) \
+    ((This)->lpVtbl->SetAccountPicturesAsync(This, smallImage, largeImage, video, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPicturesFromStreamsAsync(This,smallImage,largeImage,video,operation) \
-    ( (This)->lpVtbl->SetAccountPicturesFromStreamsAsync(This,smallImage,largeImage,video,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPictureFromStreamAsync(This, image, operation) \
+    ((This)->lpVtbl->SetAccountPictureFromStreamAsync(This, image, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_add_AccountPictureChanged(This,changeHandler,token) \
-    ( (This)->lpVtbl->add_AccountPictureChanged(This,changeHandler,token) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_SetAccountPicturesFromStreamsAsync(This, smallImage, largeImage, video, operation) \
+    ((This)->lpVtbl->SetAccountPicturesFromStreamsAsync(This, smallImage, largeImage, video, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_remove_AccountPictureChanged(This,token) \
-    ( (This)->lpVtbl->remove_AccountPictureChanged(This,token) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_add_AccountPictureChanged(This, changeHandler, token) \
+    ((This)->lpVtbl->add_AccountPictureChanged(This, changeHandler, token))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetDisplayNameAsync(This,operation) \
-    ( (This)->lpVtbl->GetDisplayNameAsync(This,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_remove_AccountPictureChanged(This, token) \
+    ((This)->lpVtbl->remove_AccountPictureChanged(This, token))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetFirstNameAsync(This,operation) \
-    ( (This)->lpVtbl->GetFirstNameAsync(This,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetDisplayNameAsync(This, operation) \
+    ((This)->lpVtbl->GetDisplayNameAsync(This, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetLastNameAsync(This,operation) \
-    ( (This)->lpVtbl->GetLastNameAsync(This,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetFirstNameAsync(This, operation) \
+    ((This)->lpVtbl->GetFirstNameAsync(This, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetPrincipalNameAsync(This,operation) \
-    ( (This)->lpVtbl->GetPrincipalNameAsync(This,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetLastNameAsync(This, operation) \
+    ((This)->lpVtbl->GetLastNameAsync(This, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetSessionInitiationProtocolUriAsync(This,operation) \
-    ( (This)->lpVtbl->GetSessionInitiationProtocolUriAsync(This,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetPrincipalNameAsync(This, operation) \
+    ((This)->lpVtbl->GetPrincipalNameAsync(This, operation))
 
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetDomainNameAsync(This,operation) \
-    ( (This)->lpVtbl->GetDomainNameAsync(This,operation) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetSessionInitiationProtocolUriAsync(This, operation) \
+    ((This)->lpVtbl->GetSessionInitiationProtocolUriAsync(This, operation))
 
+#if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+    DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
+#endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_GetDomainNameAsync(This, operation) \
+    ((This)->lpVtbl->GetDomainNameAsync(This, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -5938,101 +4978,75 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserInformationSt
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserProfilePersonalizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IUserProfilePersonalizationSettings[] = L"Windows.System.UserProfile.IUserProfilePersonalizationSettings";
-/* [object, uuid("8CEDDAB4-7998-46D5-8DD3-184F1C5F9AB9"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* TrySetLockScreenImageAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* imageFile,
+        __FIAsyncOperation_1_boolean** operation);
+    HRESULT (STDMETHODCALLTYPE* TrySetWallpaperImageAsync)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings* This,
+        __x_ABI_CWindows_CStorage_CIStorageFile* imageFile,
+        __FIAsyncOperation_1_boolean** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *TrySetLockScreenImageAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * imageFile,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
-        );
-    HRESULT ( STDMETHODCALLTYPE *TrySetWallpaperImageAsync )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CStorage_CIStorageFile * imageFile,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_boolean * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_TrySetLockScreenImageAsync(This,imageFile,operation) \
-    ( (This)->lpVtbl->TrySetLockScreenImageAsync(This,imageFile,operation) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_TrySetLockScreenImageAsync(This, imageFile, operation) \
+    ((This)->lpVtbl->TrySetLockScreenImageAsync(This, imageFile, operation))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_TrySetWallpaperImageAsync(This,imageFile,operation) \
-    ( (This)->lpVtbl->TrySetWallpaperImageAsync(This,imageFile,operation) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_TrySetWallpaperImageAsync(This, imageFile, operation) \
+    ((This)->lpVtbl->TrySetWallpaperImageAsync(This, imageFile, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -6040,106 +5054,79 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePerson
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.System.UserProfile.UserProfilePersonalizationSettings
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_UserProfile_IUserProfilePersonalizationSettingsStatics[] = L"Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics";
-/* [object, uuid("91ACB841-5037-454B-9883-BB772D08DD16"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings** value);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics* This,
+        boolean* result);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Current )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettings * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *IsSupported )(
-        __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics * This,
-        /* [retval, out] */__RPC__out boolean * result
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStaticsVtbl;
 
 interface __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_get_Current(This,value) \
-    ( (This)->lpVtbl->get_Current(This,value) )
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_get_Current(This, value) \
+    ((This)->lpVtbl->get_Current(This, value))
 
-#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_IsSupported(This,result) \
-    ( (This)->lpVtbl->IsSupported(This,result) )
-
+#define __x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_IsSupported(This, result) \
+    ((This)->lpVtbl->IsSupported(This, result))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics;
 #endif /* !defined(____x_ABI_CWindows_CSystem_CUserProfile_CIUserProfilePersonalizationSettingsStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.System.UserProfile.AdvertisingManager
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IAdvertisingManagerStatics2 interface starting with version 3.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6155,13 +5142,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.AdvertisingManagerForUser
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 3.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IAdvertisingManagerForUser ** Default Interface **
@@ -6172,20 +5157,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_AdvertisingManagerForUser_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_AdvertisingManagerForUser_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_AdvertisingManagerForUser[] = L"Windows.System.UserProfile.AdvertisingManagerForUser";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
 
-
 /*
  *
  * Class Windows.System.UserProfile.AssignedAccessSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 7.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IAssignedAccessSettingsStatics interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6199,20 +5181,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_AssignedAccessSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_AssignedAccessSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_AssignedAccessSettings[] = L"Windows.System.UserProfile.AssignedAccessSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
 
-
 /*
  *
  * Class Windows.System.UserProfile.DiagnosticsSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 4.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IDiagnosticsSettingsStatics interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6226,13 +5205,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_DiagnosticsSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_DiagnosticsSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_DiagnosticsSettings[] = L"Windows.System.UserProfile.DiagnosticsSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x40000
-
 
 /*
  *
@@ -6240,14 +5217,13 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IFirstSignInSettingsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IFirstSignInSettings ** Default Interface **
- *    Windows.Foundation.Collections.IMapView_2_HSTRING,IInspectable
- *    Windows.Foundation.Collections.IIterable_1___FIKeyValuePair_2_HSTRING_IInspectable
+ *    Windows.Foundation.Collections.IMapView`2<String, Object>
+ *    Windows.Foundation.Collections.IIterable`1<Windows.Foundation.Collections.IKeyValuePair`2<String, Object>>
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -6255,20 +5231,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_FirstSignInSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_FirstSignInSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_FirstSignInSettings[] = L"Windows.System.UserProfile.FirstSignInSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.GlobalizationPreferences
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IGlobalizationPreferencesStatics3 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6285,13 +5258,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.GlobalizationPreferencesForUser
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 6.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.System.UserProfile.IGlobalizationPreferencesForUser ** Default Interface **
@@ -6302,20 +5273,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_GlobalizationPreferencesForUser_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_GlobalizationPreferencesForUser_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_GlobalizationPreferencesForUser[] = L"Windows.System.UserProfile.GlobalizationPreferencesForUser";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x60000
 
-
 /*
  *
  * Class Windows.System.UserProfile.LockScreen
  *
  * Introduced to Windows.System.UserProfile.UserProfileLockScreenContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.ILockScreenStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileLockScreenContract API contract
@@ -6329,13 +5297,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILELOCKSCREENCONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.UserInformation
  *
  * Introduced to Windows.System.UserProfile.UserProfileContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IUserInformationStatics interface starting with version 1.0 of the Windows.System.UserProfile.UserProfileContract API contract
@@ -6344,7 +5310,6 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_UserInformation_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_UserInformation_DEFINED
-
 #if WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
 DEPRECATED("Use User instead of UserInformation. For more info, see MSDN.")
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x20000
@@ -6352,13 +5317,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_SYSTEM_USERPROFILE_USERPROFILECONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.System.UserProfile.UserProfilePersonalizationSettings
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.System.UserProfile.IUserProfilePersonalizationSettingsStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -6372,15 +5335,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_System_UserProfile_UserProfilePersonalizationSettings_DEFINED
 #define RUNTIMECLASS_Windows_System_UserProfile_UserProfilePersonalizationSettings_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_UserProfile_UserProfilePersonalizationSettings[] = L"Windows.System.UserProfile.UserProfilePersonalizationSettings";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

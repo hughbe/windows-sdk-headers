@@ -1,78 +1,59 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Graphics.Printing.1.h"
-#include "winrt/impl/Windows.Storage.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Devices_Scanners_2_H
+#define WINRT_Windows_Devices_Scanners_2_H
 #include "winrt/impl/Windows.Devices.Scanners.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Scanners {
-
-struct ImageScannerResolution
+namespace winrt::Windows::Devices::Scanners
 {
-    float DpiX;
-    float DpiY;
-};
-
-inline bool operator==(ImageScannerResolution const& left, ImageScannerResolution const& right) noexcept
-{
-    return left.DpiX == right.DpiX && left.DpiY == right.DpiY;
+    struct ImageScannerResolution
+    {
+        float DpiX;
+        float DpiY;
+    };
+    inline bool operator==(ImageScannerResolution const& left, ImageScannerResolution const& right) noexcept
+    {
+        return left.DpiX == right.DpiX && left.DpiY == right.DpiY;
+    }
+    inline bool operator!=(ImageScannerResolution const& left, ImageScannerResolution const& right) noexcept
+    {
+        return !(left == right);
+    }
+    struct __declspec(empty_bases) ImageScanner : Windows::Devices::Scanners::IImageScanner
+    {
+        ImageScanner(std::nullptr_t) noexcept {}
+        ImageScanner(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScanner(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector();
+    };
+    struct __declspec(empty_bases) ImageScannerAutoConfiguration : Windows::Devices::Scanners::IImageScannerFormatConfiguration
+    {
+        ImageScannerAutoConfiguration(std::nullptr_t) noexcept {}
+        ImageScannerAutoConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScannerFormatConfiguration(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ImageScannerFeederConfiguration : Windows::Devices::Scanners::IImageScannerFormatConfiguration,
+        impl::require<ImageScannerFeederConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration, Windows::Devices::Scanners::IImageScannerFeederConfiguration>
+    {
+        ImageScannerFeederConfiguration(std::nullptr_t) noexcept {}
+        ImageScannerFeederConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScannerFormatConfiguration(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ImageScannerFlatbedConfiguration : Windows::Devices::Scanners::IImageScannerFormatConfiguration,
+        impl::require<ImageScannerFlatbedConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
+    {
+        ImageScannerFlatbedConfiguration(std::nullptr_t) noexcept {}
+        ImageScannerFlatbedConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScannerFormatConfiguration(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ImageScannerPreviewResult : Windows::Devices::Scanners::IImageScannerPreviewResult
+    {
+        ImageScannerPreviewResult(std::nullptr_t) noexcept {}
+        ImageScannerPreviewResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScannerPreviewResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ImageScannerScanResult : Windows::Devices::Scanners::IImageScannerScanResult
+    {
+        ImageScannerScanResult(std::nullptr_t) noexcept {}
+        ImageScannerScanResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Scanners::IImageScannerScanResult(ptr, take_ownership_from_abi) {}
+    };
 }
-
-inline bool operator!=(ImageScannerResolution const& left, ImageScannerResolution const& right) noexcept
-{
-    return !(left == right);
-}
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Scanners {
-
-struct WINRT_EBO ImageScanner :
-    Windows::Devices::Scanners::IImageScanner
-{
-    ImageScanner(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Scanners::ImageScanner> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector();
-};
-
-struct WINRT_EBO ImageScannerAutoConfiguration :
-    Windows::Devices::Scanners::IImageScannerFormatConfiguration
-{
-    ImageScannerAutoConfiguration(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ImageScannerFeederConfiguration :
-    Windows::Devices::Scanners::IImageScannerFormatConfiguration,
-    impl::require<ImageScannerFeederConfiguration, Windows::Devices::Scanners::IImageScannerFeederConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-{
-    ImageScannerFeederConfiguration(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ImageScannerFlatbedConfiguration :
-    Windows::Devices::Scanners::IImageScannerFormatConfiguration,
-    impl::require<ImageScannerFlatbedConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-{
-    ImageScannerFlatbedConfiguration(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ImageScannerPreviewResult :
-    Windows::Devices::Scanners::IImageScannerPreviewResult
-{
-    ImageScannerPreviewResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ImageScannerScanResult :
-    Windows::Devices::Scanners::IImageScannerScanResult
-{
-    ImageScannerScanResult(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

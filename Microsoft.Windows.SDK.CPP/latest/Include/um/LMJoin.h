@@ -420,6 +420,12 @@ NetRequestProvisioningPackageInstall(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+#pragma region Desktop Family or Application Family
+#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP)
+
 #if(_WIN32_WINNT >= _WIN32_WINNT_WIN10)
 
 HRESULT
@@ -437,7 +443,7 @@ NetFreeAadJoinInformation(
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WIN10)
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_APP) */
 #pragma endregion
 
 #pragma region Desktop Family or OneCore Family or Application Family

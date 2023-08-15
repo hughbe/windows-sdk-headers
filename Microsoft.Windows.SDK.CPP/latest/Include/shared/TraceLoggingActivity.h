@@ -212,27 +212,27 @@ The START and STOP events always use the activity's keyword and level.
 #define TraceLoggingWriteStart(activity, name, ...) \
     __pragma(warning(push)) __pragma(warning(disable:4127)) \
     do { \
-        _TlgActivityDecl(activity) \
-        static const UINT64 _TlgActivity_Keyword = _TlgActivityRef(activity).Keyword;\
-        static const UINT8 _TlgActivity_Level = _TlgActivityRef(activity).Level;\
-        _TLG_CASSERT( \
-            _TlgActivity_Keyword == (_TlgActivity_Keyword _TLG_FOREACH(_TlgKeywordVal, __VA_ARGS__)), \
+        _tlgActivityDecl(activity) \
+        static const UINT64 _tlgActivity_Keyword = _tlgActivityRef(activity).Keyword;\
+        static const UINT8 _tlgActivity_Level = _tlgActivityRef(activity).Level;\
+        static_assert( \
+            _tlgActivity_Keyword == (_tlgActivity_Keyword _tlg_FOREACH(_tlgKeywordVal, __VA_ARGS__)), \
             "Do not use TraceLoggingKeyword in TraceLoggingWriteStart. Keywords for START events are " \
             "specified in the activity type, e.g. TraceLoggingActivity<Provider,Keyword,Level>."); \
-        _TLG_CASSERT( \
-            _TlgActivity_Level == (_TlgActivity_Level _TLG_FOREACH(_TlgLevelVal, __VA_ARGS__)), \
+        static_assert( \
+            _tlgActivity_Level == (_tlgActivity_Level _tlg_FOREACH(_tlgLevelVal, __VA_ARGS__)), \
             "Do not use TraceLoggingLevel in TraceLoggingWriteStart. The Level for START events is " \
             "specified in the activity type, e.g. TraceLoggingActivity<Provider,Keyword,Level>."); \
-        _TlgActivityRef(activity).zInternalStart(); \
+        _tlgActivityRef(activity).zInternalStart(); \
         TraceLoggingWriteActivity( \
-            _TlgActivityRef(activity).Provider(), \
+            _tlgActivityRef(activity).Provider(), \
             (name), \
-            _TlgActivityRef(activity).Id(), \
-            _TlgActivityRef(activity).zInternalRelatedId(), \
+            _tlgActivityRef(activity).Id(), \
+            _tlgActivityRef(activity).zInternalRelatedId(), \
             TraceLoggingOpcode(1 /* WINEVENT_OPCODE_START */), \
-            TraceLoggingKeyword(_TlgActivity_Keyword), \
-            TraceLoggingLevel(_TlgActivity_Level), \
-            TraceLoggingDescription("~^" _TLG_PASTE(L, _TLG_STRINGIZE(activity)) L"^~"), \
+            TraceLoggingKeyword(_tlgActivity_Keyword), \
+            TraceLoggingLevel(_tlgActivity_Level), \
+            TraceLoggingDescription("~^" _tlg_LSTRINGIZE(activity) L"^~"), \
             __VA_ARGS__); \
     } while(0) \
     __pragma(warning(pop)) \
@@ -256,27 +256,27 @@ event will be logged from the destructor.
 #define TraceLoggingWriteStop(activity, name, ...) \
     __pragma(warning(push)) __pragma(warning(disable:4127)) \
     do { \
-        _TlgActivityDecl(activity) \
-        static const UINT64 _TlgActivity_Keyword = _TlgActivityRef(activity).Keyword;\
-        static const UINT8 _TlgActivity_Level = _TlgActivityRef(activity).Level;\
-        _TLG_CASSERT( \
-            _TlgActivity_Keyword == (_TlgActivity_Keyword _TLG_FOREACH(_TlgKeywordVal, __VA_ARGS__)), \
+        _tlgActivityDecl(activity) \
+        static const UINT64 _tlgActivity_Keyword = _tlgActivityRef(activity).Keyword;\
+        static const UINT8 _tlgActivity_Level = _tlgActivityRef(activity).Level;\
+        static_assert( \
+            _tlgActivity_Keyword == (_tlgActivity_Keyword _tlg_FOREACH(_tlgKeywordVal, __VA_ARGS__)), \
             "Do not use TraceLoggingKeyword in TraceLoggingWriteStop. Keywords for STOP events are " \
             "specified in the activity type, e.g. TraceLoggingActivity<Provider,Keyword,Level>."); \
-        _TLG_CASSERT( \
-            _TlgActivity_Level == (_TlgActivity_Level _TLG_FOREACH(_TlgLevelVal, __VA_ARGS__)), \
+        static_assert( \
+            _tlgActivity_Level == (_tlgActivity_Level _tlg_FOREACH(_tlgLevelVal, __VA_ARGS__)), \
             "Do not use TraceLoggingLevel in TraceLoggingWriteStop. The Level for STOP events is " \
             "specified in the activity type, e.g. TraceLoggingActivity<Provider,Keyword,Level>."); \
-        _TlgActivityRef(activity).zInternalStop(); \
+        _tlgActivityRef(activity).zInternalStop(); \
         TraceLoggingWriteActivity( \
-            _TlgActivityRef(activity).Provider(), \
+            _tlgActivityRef(activity).Provider(), \
             (name), \
-            _TlgActivityRef(activity).Id(), \
+            _tlgActivityRef(activity).Id(), \
             NULL, \
             TraceLoggingOpcode(2 /* WINEVENT_OPCODE_STOP */),\
-            TraceLoggingKeyword(_TlgActivity_Keyword),\
-            TraceLoggingLevel(_TlgActivity_Level),\
-            TraceLoggingDescription("~^" _TLG_PASTE(L, _TLG_STRINGIZE(activity)) L"^~"),\
+            TraceLoggingKeyword(_tlgActivity_Keyword),\
+            TraceLoggingLevel(_tlgActivity_Level),\
+            TraceLoggingDescription("~^" _tlg_LSTRINGIZE(activity) L"^~"),\
             __VA_ARGS__); \
     } while(0) \
     __pragma(warning(pop)) \
@@ -300,11 +300,11 @@ will default to none (0).
 #define TraceLoggingWriteTagged(activity, name, ...) \
     __pragma(warning(push)) __pragma(warning(disable:4127)) \
     do { \
-        _TlgActivityDecl(activity) \
+        _tlgActivityDecl(activity) \
         TraceLoggingWriteActivity( \
-            _TlgActivityRef(activity).Provider(), \
+            _tlgActivityRef(activity).Provider(), \
             (name), \
-            _TlgActivityRef(activity).Id(), \
+            _tlgActivityRef(activity).Id(), \
             NULL, \
             __VA_ARGS__); \
     } while(0) \
@@ -330,12 +330,12 @@ will default to none (0).
 #define TraceLoggingWriteTaggedIfStarted(activity, name, ...) \
     __pragma(warning(push)) __pragma(warning(disable:4127)) \
     do { \
-        _TlgActivityDecl(activity) \
-        if (_TlgActivityRef(activity).IsStarted()) { \
+        _tlgActivityDecl(activity) \
+        if (_tlgActivityRef(activity).IsStarted()) { \
         TraceLoggingWriteActivity( \
-            _TlgActivityRef(activity).Provider(), \
+            _tlgActivityRef(activity).Provider(), \
             (name), \
-            _TlgActivityRef(activity).Id(), \
+            _tlgActivityRef(activity).Id(), \
             NULL, \
             __VA_ARGS__); \
         } \
@@ -360,10 +360,10 @@ errors and exceptions.
 #define TraceLoggingFunction(providerHandle, ...)\
     TraceLoggingThreadActivity< \
         providerHandle, \
-        0 _TLG_FOREACH(_TlgKeywordVal, __VA_ARGS__), \
-        5 _TLG_FOREACH(_TlgLevelVal, __VA_ARGS__)> \
-        _TlgFnActivity; \
-    TraceLoggingWriteStart(_TlgFnActivity, _TlgThisFunctionName, __VA_ARGS__)
+        0 _tlg_FOREACH(_tlgKeywordVal, __VA_ARGS__), \
+        5 _tlg_FOREACH(_tlgLevelVal, __VA_ARGS__)> \
+        _tlgFnActivity; \
+    TraceLoggingWriteStart(_tlgFnActivity, _tlgThisFunctionName, __VA_ARGS__)
 
 #pragma endregion
 
@@ -374,9 +374,9 @@ Private implementation macros. For internal use only.
 Avoid IntelliSense errors about __FUNCTION__ only being valid within a function.
 */
 #ifdef __INTELLISENSE__
-#define _TlgThisFunctionName "ThisFunctionName"
+#define _tlgThisFunctionName "ThisFunctionName"
 #else
-#define _TlgThisFunctionName __FUNCTION__
+#define _tlgThisFunctionName __FUNCTION__
 #endif
 
 /*
@@ -385,11 +385,11 @@ If the auto keyword is available, we can avoid referencing the activity
 parameter more than once.
 */
 #if defined(_MSC_VER) && (_MSC_VER >= 1600)
-#define _TlgActivityDecl(activity) auto& _TlgActivity(activity);
-#define _TlgActivityRef(activity) _TlgActivity
+#define _tlgActivityDecl(activity) auto& _tlgActivity(activity);
+#define _tlgActivityRef(activity) _tlgActivity
 #else
-#define _TlgActivityDecl(activity)
-#define _TlgActivityRef(activity) (activity)
+#define _tlgActivityDecl(activity)
+#define _tlgActivityRef(activity) (activity)
 #endif
 
 /*
@@ -397,7 +397,7 @@ Private implementation function. For internal use only.
 Separate function to minimize code bloat by consolidating the auto-stop events.
 */
 template<UINT64 keyword, UINT8 level>
-void _TlgWriteActivityAutoStop(
+void _tlgWriteActivityAutoStop(
     TraceLoggingHProvider provider,
     _In_ GUID const* pActivityId)
 {
@@ -414,7 +414,7 @@ void _TlgWriteActivityAutoStop(
 /*
 Private implementation function. For internal use only.
 */
-inline bool _TlgGuidIsZero(GUID const& g)
+inline bool _tlgGuidIsZero(GUID const& g)
 {
     INT32 const* p = reinterpret_cast<INT32 const*>(&g);
     return
@@ -427,7 +427,7 @@ inline bool _TlgGuidIsZero(GUID const& g)
 /*
 Private implementation function. For internal use only.
 */
-inline bool _TlgGuidEqual(GUID const& g1, GUID const& g2)
+inline bool _tlgGuidEqual(GUID const& g1, GUID const& g2)
 {
     INT32 const* p1 = reinterpret_cast<INT32 const*>(&g1);
     INT32 const* p2 = reinterpret_cast<INT32 const*>(&g2);
@@ -476,7 +476,7 @@ protected:
         if (m_State == Started)
         {
             zInternalStop();
-            _TlgWriteActivityAutoStop<keyword, level>(
+            _tlgWriteActivityAutoStop<keyword, level>(
                 static_cast<DerivedTy*>(this)->Provider(),
                 &m_Id);
         }
@@ -499,7 +499,7 @@ protected:
 
     _TlgActivityBase& operator=(_TlgActivityBase&& rhs)
     {
-        _TLG_ASSERT(m_State == Created, "Move-assign to newly created activities only");
+        _tlg_ASSERT(m_State == Created, "Move-assign to newly created activities only");
         m_State = rhs.m_State;
         m_HasRelatedId = rhs.m_HasRelatedId;
         m_Id = rhs.m_Id;
@@ -516,8 +516,8 @@ protected:
     */
     void SetRelatedId(const GUID& relatedActivityId)
     {
-        _TLG_ASSERT(m_State == Created, "_TlgActivityBase::SetRelatedId called from invalid state.");
-        _TLG_ASSERT(!m_HasRelatedId, "_TlgActivityBase::RelatedActivity was already set.");
+        _tlg_ASSERT(m_State == Created, "_TlgActivityBase::SetRelatedId called from invalid state.");
+        _tlg_ASSERT(!m_HasRelatedId, "_TlgActivityBase::RelatedActivity was already set.");
         m_CapturedRelatedId = relatedActivityId;
         m_HasRelatedId = true;
     }
@@ -529,7 +529,7 @@ protected:
     */
     _Ret_opt_ const GUID* GetRelatedId() const
     {
-        return m_HasRelatedId && !_TlgGuidIsZero(m_CapturedRelatedId) ? &m_CapturedRelatedId : NULL;
+        return m_HasRelatedId && !_tlgGuidIsZero(m_CapturedRelatedId) ? &m_CapturedRelatedId : NULL;
     }
 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
@@ -540,8 +540,8 @@ protected:
     */
     void PushThreadActivityId()
     {
-        _TLG_ASSERT(m_State == Created, "_TlgActivityBase::PushThreadActivityId called from invalid state.");
-        _TLG_ASSERT(!m_HasRelatedId, "_TlgActivityBase::RelatedActivity was already set.");
+        _tlg_ASSERT(m_State == Created, "_TlgActivityBase::PushThreadActivityId called from invalid state.");
+        _tlg_ASSERT(!m_HasRelatedId, "_TlgActivityBase::RelatedActivity was already set.");
         m_CapturedRelatedId = m_Id;
         ::EventActivityIdControl(EVENT_ACTIVITY_CTRL_GET_SET_ID, &m_CapturedRelatedId);
         m_HasRelatedId = true;
@@ -553,7 +553,7 @@ protected:
     */
     void PopThreadActivityId()
     {
-        _TLG_ASSERT(m_State == Started, "_TlgActivityBase::PopThreadActivityId called from invalid state.");
+        _tlg_ASSERT(m_State == Started, "_TlgActivityBase::PopThreadActivityId called from invalid state.");
         if (m_HasRelatedId)
         {
             ::EventActivityIdControl(EVENT_ACTIVITY_CTRL_GET_SET_ID, &m_CapturedRelatedId);
@@ -598,7 +598,7 @@ protected:
             Note that this example solution is sufficient only in cases where
             the code in question does not throw exceptions.
             */
-            _TLG_ASSERT(_TlgGuidEqual(m_Id, m_CapturedRelatedId), "_TlgActivityBase: current id does not match set id!");
+            _tlg_ASSERT(_tlgGuidEqual(m_Id, m_CapturedRelatedId), "_TlgActivityBase: current id does not match set id!");
         }
     }
 
@@ -621,8 +621,8 @@ public:
     */
     _Ret_ const GUID* Id() const
     {
-        _TLG_ASSERT(m_State >= Started, "TraceLoggingActivity::Id() called from invalid state");
-        _TLG_ASSERT(m_State != Destroyed, "TraceLoggingActivity::Id() called after destruction");
+        _tlg_ASSERT(m_State >= Started, "TraceLoggingActivity::Id() called from invalid state");
+        _tlg_ASSERT(m_State != Destroyed, "TraceLoggingActivity::Id() called after destruction");
         return &m_Id;
     }
 
@@ -642,7 +642,7 @@ public:
     */
     _Ret_opt_ const GUID* zInternalRelatedId() const
     {
-        _TLG_ASSERT(m_State == Started, "TraceLoggingWriteStart race condition");
+        _tlg_ASSERT(m_State == Started, "TraceLoggingWriteStart race condition");
         return GetRelatedId();
     }
 
@@ -652,7 +652,7 @@ public:
     */
     void zInternalStart()
     {
-        _TLG_ASSERT(m_State == Created, "TraceLoggingWriteStart called from invalid state.");
+        _tlg_ASSERT(m_State == Created, "TraceLoggingWriteStart called from invalid state.");
 
         DerivedTy* pDerived = static_cast<DerivedTy*>(this);
         if (TraceLoggingProviderEnabled(pDerived->Provider(), level, keyword))
@@ -675,7 +675,7 @@ public:
     */
     void zInternalStop()
     {
-        _TLG_ASSERT(m_State == Started, "TraceLoggingWriteStop called from invalid state");
+        _tlg_ASSERT(m_State == Started, "TraceLoggingWriteStop called from invalid state");
 
         DerivedTy* pDerived = static_cast<DerivedTy*>(this);
         pDerived->OnStopped();
@@ -776,7 +776,7 @@ public:
     */
     void SetRelatedActivityId(_In_ const GUID* relatedActivityId)
     {
-        _TLG_ASSERT(relatedActivityId != NULL, "TraceLoggingActivity SetRelatedActivity called with NULL id.");
+        _tlg_ASSERT(relatedActivityId != NULL, "TraceLoggingActivity SetRelatedActivity called with NULL id.");
         BaseTy::SetRelatedId(*relatedActivityId);
     }
 };
@@ -863,7 +863,7 @@ public:
     ~TraceLoggingThreadActivityIdSetter()
     {
         ::EventActivityIdControl(EVENT_ACTIVITY_CTRL_GET_SET_ID, &m_SavedActivityId);
-        _TLG_ASSERT(_TlgGuidEqual(m_ActivityId, m_SavedActivityId), "TraceLoggingThreadActivityIdSetter current id does not match set id!");
+        _tlg_ASSERT(_tlgGuidEqual(m_ActivityId, m_SavedActivityId), "TraceLoggingThreadActivityIdSetter current id does not match set id!");
     }
 };
 

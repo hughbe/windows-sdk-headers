@@ -18,6 +18,19 @@ PerceptionDeviceCreateFactory(
     _In_ REFIID riid,
     _Outptr_ LPVOID* ppFactory);
 
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+// Inject an alternate PerceptionDeviceCreateFactory implementation.
+// The original implementation is restored when PerceptionDeviceSetCreateFactoryOverride is
+// called with createFactoryOverride = null.
+EXTERN_C
+HRESULT
+WINAPI
+PerceptionDeviceSetCreateFactoryOverride(
+    _In_opt_ decltype(PerceptionDeviceCreateFactory) * createFactoryOverride);
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
+
 #include <PerceptionDeviceCore.h>
 #include <unknwn.h>
 
@@ -38,6 +51,11 @@ struct IPerceptionDeviceStateStreamReader;
 struct IPerceptionDevicePropertyListener;
 struct IPerceptionDeviceRootObjectWatcher;
 
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+struct IPerceptionDevicePropertyListener2;
+struct IPerceptionDeviceRootObjectWatcher2;
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
+
 MIDL_INTERFACE("{81A9D645-1D04-4778-8AF0-83FA08A9D9B7}")
 IPerceptionDevicePropertyChangedEventArgs : public IUnknown
 {
@@ -53,6 +71,25 @@ IPerceptionDevicePropertyChangedHandler : public IUnknown
         _In_ IPerceptionDevicePropertyListener* sender,
         _In_ IPerceptionDevicePropertyChangedEventArgs* eventArgs) = 0;
 };
+
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{AF436745-6E52-441D-AAA5-C34C715DA7AE}")
+IPerceptionDevicePropertyListenerAbortedEventArgs : public IUnknown
+{
+    STDMETHOD_(void, GetErrorCode)(
+        _Out_ HRESULT* errorCode) = 0;
+};
+
+MIDL_INTERFACE("{A5082165-2B1A-4C4E-A0D0-3D3D6C4091C5}")
+IPerceptionDevicePropertyListenerAbortedHandler : public IUnknown
+{
+    STDMETHOD(Invoke)(
+        _In_ IPerceptionDevicePropertyListener2 * sender,
+        _In_ IPerceptionDevicePropertyListenerAbortedEventArgs* eventArgs) = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 
 MIDL_INTERFACE("{0E2FAE1E-C75C-4530-91B9-8F264540F8CC}")
 IPerceptionDevicePropertyListener : public IUnknown
@@ -84,6 +121,22 @@ IPerceptionDevicePropertyListener : public IUnknown
     //! Returned reference is only valid as long as a strong reference is held to the listener.
     STDMETHOD_(REFGUID, GetPropertyId)() = 0;
 };
+
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{CDB274FA-C769-4D05-A5FC-DD96976482F8}")
+IPerceptionDevicePropertyListener2 : public IPerceptionDevicePropertyListener
+{
+    //! Set the property listener aborted handler.
+    //! The callback may be called any time after calling Start().
+    //! The aborted handler is called if an internal property request fails. When an internal io
+    //! request fails after the listener has been started, the error is surfaced via the aborted
+    //! handler and the listener is stopped.
+    STDMETHOD(SetAbortedHandler)(
+        _In_ IPerceptionDevicePropertyListenerAbortedHandler* handler) = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 
 MIDL_INTERFACE("{C8F21EB1-9411-4516-A8A1-B778CF767287}")
 IPerceptionDevice : public IUnknown
@@ -200,6 +253,18 @@ IPerceptionDeviceRootObjectRemovedHandler : public IUnknown
         _In_ IPerceptionDeviceRootObjectRemovedEventArgs* args) = 0;
 };
 
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{C76DB9E8-7B26-4FD6-A9E9-607E361C0C9B}")
+IPerceptionDeviceRootObjectWatcherEnumerationCompletedHandler : public IUnknown
+{
+    STDMETHOD(Invoke)(
+        _In_ IPerceptionDeviceRootObjectWatcher2 * sender,
+        _In_ IUnknown * args /* will be nullptr */) = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
+
 MIDL_INTERFACE("{2F22B1BD-7431-4452-92D6-D31557570F33}")
 IPerceptionDeviceRootObjectWatcher : public IUnknown
 {
@@ -221,6 +286,21 @@ IPerceptionDeviceRootObjectWatcher : public IUnknown
     //! Callbacks will not be raised after Stop returns.
     STDMETHOD(Stop)() = 0;
 };
+
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{B7531E32-01AC-4E0D-B721-AFF625D6A254}")
+IPerceptionDeviceRootObjectWatcher2 : public IPerceptionDeviceRootObjectWatcher
+{
+    //! Sets the enumeration completed callback.
+    //! The callback may be called any time after Start() is called.
+    //! Indicates that initial (pre-existing) object enumeration has finished.
+    //! Object removals may occur after the enumeration completed callback has been called.
+    STDMETHOD(SetEnumerationCompletedHandler)(
+        _In_ IPerceptionDeviceRootObjectWatcherEnumerationCompletedHandler * handler) = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 
 MIDL_INTERFACE("{5FB106F4-A5C7-43C8-A723-232B4456DC6C}")
 IPerceptionDevicePayloadDescriptor : public IUnknown
@@ -284,6 +364,28 @@ IPerceptionDeviceObjectSubscription : public IUnknown
     STDMETHOD_(UINT, GetSubscriptionFlags)() = 0;
 };
 
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{9BEAB621-6DCC-4DBB-AE35-C4BBC4103E74}")
+IPerceptionDeviceRootObject : public IUnknown
+{
+    STDMETHOD_(__success(true) void, GetDevice)(_COM_Outptr_ IPerceptionDevice** device) = 0;
+    STDMETHOD_(REFGUID, GetPropertyId)() = 0;
+    STDMETHOD_(REFGUID, GetObjectId)() = 0;
+};
+
+MIDL_INTERFACE("{65DE0349-748E-4F8A-986F-EE2AC41CFDAA}")
+IPerceptionDeviceRootObjectCollection : public IUnknown
+{
+    //! Number of root objects in the collection.
+    STDMETHOD_(UINT, GetCount)() = 0;
+
+    //! Pointer to the first element in an array of pointers to IPerceptionDeviceRootObject.
+    STDMETHOD_(_Ret_opt_count_x_(GetCount()) IPerceptionDeviceRootObject * const *, GetData)() = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
+
 MIDL_INTERFACE("{33D7A5EC-A087-4C8B-8167-67C0D6016FDB}")
 IPerceptionDeviceFactory : public IUnknown
 {
@@ -334,6 +436,31 @@ IPerceptionDeviceFactory : public IUnknown
         PerceptionDeviceOptions deviceOptions,
         _COM_Outptr_ IPerceptionDeviceRootObjectWatcher** ppWatcher) = 0;
 };
+
+#if NTDDI_VERSION >= NTDDI_WIN10_VB
+
+MIDL_INTERFACE("{3F6591AE-70EC-4290-9035-760CDCECBE04}")
+IPerceptionDeviceFactory2 : public IPerceptionDeviceFactory
+{
+    //! Check if any devices exist that support any of the given root object property ids.
+    //! IsRootObjectSupported will return true if a root object is found, even if it is not accessible.
+    STDMETHOD(IsRootObjectSupported)(
+        UINT propertyIdCount,
+        _In_reads_(propertyIdCount) const GUID* propertyIds,
+        _Out_ bool* isSupported) = 0;
+
+    //! Enumerate all existing objects on devices that support any of the given set of property ids.
+    //! Only one object will be returned per each device. Like the RootObjectWatcher, objects that
+    //! correspond with the front-most property id are prioritized.
+    //! Inaccessible objects are silently excluded from the set of root objects that is returned.
+    STDMETHOD(FindAllRootObjects)(
+        UINT propertyIdCount,
+        _In_reads_(propertyIdCount) const GUID * propertyIds,
+        PerceptionDeviceOptions deviceOptions,
+        _COM_Outptr_ IPerceptionDeviceRootObjectCollection** ppRootObjectCollection) = 0;
+};
+
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */

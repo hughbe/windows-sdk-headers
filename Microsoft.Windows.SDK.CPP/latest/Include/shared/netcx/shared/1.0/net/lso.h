@@ -11,13 +11,13 @@
 EXTERN_C_START
 
 inline
-NET_PACKET_LARGE_SEND_SEGMENTATION *
-NetExtensionGetPacketLargeSendSegmentation(
+NET_PACKET_LSO *
+NetExtensionGetPacketLso(
     NET_EXTENSION const * Extension,
     UINT32 Index
 )
 {
-    return (NET_PACKET_LARGE_SEND_SEGMENTATION *)NetExtensionGetData(Extension, Index);
+    return (NET_PACKET_LSO *)NetExtensionGetData(Extension, Index);
 }
 
 EXTERN_C_END

@@ -171,6 +171,8 @@ namespace Windows
 
             interface IDownloadOperation4;
 
+            interface IDownloadOperation5;
+
             interface IResponseInformation;
 
             interface IUnconstrainedTransferRequestResult;
@@ -180,6 +182,8 @@ namespace Windows
             interface IUploadOperation2;
 
             interface IUploadOperation3;
+
+            interface IUploadOperation4;
 
             runtimeclass BackgroundDownloader;
 
@@ -661,6 +665,15 @@ namespace Windows
                 HRESULT MakeCurrentInTransferGroup();
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.BackgroundTransfer.DownloadOperation)]
+            [uuid(A699A86F-5590-463A-B8D6-1E491A2760A5)]
+            interface IDownloadOperation5 : IInspectable
+            {
+                HRESULT SetRequestHeader([in] HSTRING headerName, [in] HSTRING headerValue);
+                HRESULT RemoveRequestHeader([in] HSTRING headerName);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Networking.BackgroundTransfer.ResponseInformation)]
             [uuid(F8BB9A12-F713-4792-8B68-D9D297F91D2E)]
@@ -708,6 +721,15 @@ namespace Windows
             interface IUploadOperation3 : IInspectable
             {
                 HRESULT MakeCurrentInTransferGroup();
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.BackgroundTransfer.UploadOperation)]
+            [uuid(50EDEF31-FAC5-41EE-B030-DC77CAEE9FAA)]
+            interface IUploadOperation4 : IInspectable
+            {
+                HRESULT SetRequestHeader([in] HSTRING headerName, [in] HSTRING headerValue);
+                HRESULT RemoveRequestHeader([in] HSTRING headerName);
             }
 
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -812,6 +834,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Networking.BackgroundTransfer.IDownloadOperation2;
                 [contract(Windows.Foundation.UniversalApiContract, 5.0)] interface Windows.Networking.BackgroundTransfer.IDownloadOperation3;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Networking.BackgroundTransfer.IDownloadOperation4;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Networking.BackgroundTransfer.IDownloadOperation5;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -839,6 +862,7 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Networking.BackgroundTransfer.IBackgroundTransferOperationPriority;
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)] interface Windows.Networking.BackgroundTransfer.IUploadOperation2;
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Networking.BackgroundTransfer.IUploadOperation3;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Networking.BackgroundTransfer.IUploadOperation4;
             }
         }
     }

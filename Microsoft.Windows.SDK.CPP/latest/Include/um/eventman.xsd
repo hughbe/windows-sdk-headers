@@ -1,4 +1,4 @@
-<xs:schema targetNamespace="http://schemas.microsoft.com/win/2004/08/events" elementFormDefault="qualified" xmlns:man="http://schemas.microsoft.com/win/2004/08/events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+﻿<xs:schema targetNamespace="http://schemas.microsoft.com/win/2004/08/events" elementFormDefault="qualified" xmlns:man="http://schemas.microsoft.com/win/2004/08/events" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:simpleType name="GUIDType">
     <xs:annotation>
       <xs:documentation>

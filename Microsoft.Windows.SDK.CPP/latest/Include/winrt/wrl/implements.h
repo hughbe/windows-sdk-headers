@@ -154,7 +154,7 @@ extern "C"
 __declspec(selectany) __declspec(allocate("minATL$__a")) const CreatorMap* __pobjectentryfirst = nullptr;
 // Section m divides COM objects from WinRT objects
 // - sections between a and m we store COM object info
-// - sections between m+1 and z we store WinRT object info 
+// - sections between m+1 and z we store WinRT object info
 __declspec(selectany) __declspec(allocate("minATL$__m")) const CreatorMap* __pobjectentrymid = nullptr;
 __declspec(selectany) __declspec(allocate("minATL$__z")) const CreatorMap* __pobjectentrylast = nullptr;
 }
@@ -248,7 +248,7 @@ __declspec(selectany) ModuleBase *ModuleBase::module_ = nullptr;
 
 #pragma region helper types
 // Empty struct used as default template parameter
-class Nil 
+class Nil
 {
 };
 
@@ -274,7 +274,7 @@ class RuntimeClassBase
 {
 };
 
-// RuntimeClassBaseT provides helper methods for QI and getting IIDs 
+// RuntimeClassBaseT provides helper methods for QI and getting IIDs
 template <unsigned int RuntimeClassTypeT>
 class RuntimeClassBaseT : private RuntimeClassBase
 {
@@ -298,8 +298,8 @@ protected:
             static_cast<IUnknown*>(*ppvObject)->AddRef();
             return S_OK;
         }
-        
-        HRESULT hr = implements->CanCastTo(riid, ppvObject, &isRefDelegated);        
+
+        HRESULT hr = implements->CanCastTo(riid, ppvObject, &isRefDelegated);
         if (SUCCEEDED(hr) && !isRefDelegated)
         {
             static_cast<IUnknown*>(*ppvObject)->AddRef();
@@ -312,7 +312,7 @@ protected:
     }
     template<typename T>
     static HRESULT GetImplementedIIDS(
-        _In_ T* implements,            
+        _In_ T* implements,
         _Out_ ULONG *iidCount,
         _When_(*iidCount == 0, _At_(*iids, _Post_null_))
         _When_(*iidCount > 0, _At_(*iids, _Post_notnull_))
@@ -388,13 +388,13 @@ struct VerifyInterfaceHelper<WinRtClassicComMix, I, doStrictCheck, false>
 #ifdef __WRL_STRICT__
         // Make sure that your interfaces inherit from IUnknown and are not IUnknown and/or IInspectable
         // except when IInspectable is the first template parameter
-        static_assert(__is_base_of(IUnknown, I) && 
+        static_assert(__is_base_of(IUnknown, I) &&
             (doStrictCheck ? !(IsSame<IInspectable, I>::value || IsSame<IUnknown, I>::value) : __is_base_of(IInspectable, I)),
                 "'I' has to derive from 'IUnknown' and must not be IUnknown and/or IInspectable.");
 #else
         static_assert(__is_base_of(IUnknown, I), "'I' has to derive from 'IUnknown'.");
 #endif
-    }    
+    }
 };
 
 // Specialization for WinRt interface
@@ -407,8 +407,8 @@ struct VerifyInterfaceHelper<WinRt, I, doStrictCheck, false>
         // IWeakReferenceSource is exception for WinRt and can be used however it cannot be first templated interface
         // Make sure that your interfaces inherit from IInspectable and are not IInspectable
         // The IInspectable is allowed only on RuntimeClass as first template parameter
-        static_assert((__is_base_of(IWeakReferenceSource, I) && doStrictCheck) || 
-            (__is_base_of(IInspectable, I) && !(doStrictCheck && IsSame<IInspectable, I>::value)), 
+        static_assert((__is_base_of(IWeakReferenceSource, I) && doStrictCheck) ||
+            (__is_base_of(IInspectable, I) && !(doStrictCheck && IsSame<IInspectable, I>::value)),
                 "'I' has to derive from 'IWeakReferenceSource' or 'IInspectable' and must not be IInspectable");
 #else
         // IWeakReference and IWeakReferneceSource are exceptions for WinRT
@@ -447,7 +447,7 @@ struct VerifyInterfaceHelper<type, I, false, true>
         static_assert(I::ClassFlags::value == type || type == WinRtClassicComMix,
             "Implements class must have the same and/or compatible flags configuration."
                 "If you use WRL::FtmBase it cannot be specified as first template parameter on RuntimeClass");
-            
+
         // Besides make sure that the first interface on Implements meet flags requirement
         VerifyInterfaceHelper<type, I::FirstInterface, false>::Verify();
 #endif
@@ -458,7 +458,7 @@ struct VerifyInterfaceHelper<type, I, false, true>
 template<typename I0>
 struct __declspec(novtable) InterfaceTraits
 {
-    typedef I0 Base;    
+    typedef I0 Base;
     static const unsigned long IidCount = 1;
 
     template<unsigned int ClassType>
@@ -597,12 +597,12 @@ inline Details::ModuleBase* GetModuleBase() throw()
 }
 
 // ChainInterfaces - template allows specifying a derived COM interface along with its class hierarchy to allow QI for the base interfaces
-template <typename I0, typename I1, typename I2 = Details::Nil, typename I3 = Details::Nil, 
+template <typename I0, typename I1, typename I2 = Details::Nil, typename I3 = Details::Nil,
         typename I4 = Details::Nil, typename I5 = Details::Nil, typename I6 = Details::Nil,
         typename I7 = Details::Nil, typename I8 = Details::Nil, typename I9 = Details::Nil>
 struct ChainInterfaces : I0
 {
-protected:    
+protected:
     template<unsigned int ClassType>
     static void Verify() throw()
     {
@@ -649,8 +649,8 @@ protected:
         return Details::InterfaceTraits<I0>::CastToUnknown(this);
     }
 
-    static const unsigned long IidCount = 
-        Details::InterfaceTraits<I0>::IidCount + 
+    static const unsigned long IidCount =
+        Details::InterfaceTraits<I0>::IidCount +
         Details::InterfaceTraits<I1>::IidCount +
         Details::InterfaceTraits<I2>::IidCount +
         Details::InterfaceTraits<I3>::IidCount +
@@ -676,14 +676,14 @@ protected:
     }
 };
 
-template <typename DerivedType, typename BaseType, bool hasImplements, typename I1, typename I2, typename I3, 
+template <typename DerivedType, typename BaseType, bool hasImplements, typename I1, typename I2, typename I3,
         typename I4, typename I5, typename I6,
         typename I7, typename I8, typename I9>
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>
 {
     static_assert(!hasImplements, "Cannot use ChainInterfaces<MixIn<...>> to Mix a class implementing interfaces using \"Implements\"");
 
-protected:    
+protected:
     template<unsigned int ClassType>
     static void Verify() throw()
     {
@@ -731,7 +731,7 @@ protected:
     // struct MyRuntimeClass : RuntimeClass<IInspectable, ChainInterfaces<MixIn<MyRuntimeClass,MyIndependentImplementation>, IFoo, IBar>, MyIndependentImplementation  {}
     IUnknown* CastToUnknown() throw() = delete;
 
-    static const unsigned long IidCount = 
+    static const unsigned long IidCount =
         Details::InterfaceTraits<I1>::IidCount +
         Details::InterfaceTraits<I2>::IidCount +
         Details::InterfaceTraits<I3>::IidCount +
@@ -762,7 +762,7 @@ namespace Details
 #pragma region Implements helper templates
 
 // Helper template used by Implements. This template traverses a list of interfaces and adds them as base class and information
-// to enable QI. doStrictCheck is typically false only for the first interface, allowing IInspectable to be explicitly specified 
+// to enable QI. doStrictCheck is typically false only for the first interface, allowing IInspectable to be explicitly specified
 // only as the first interface.
 template <typename RuntimeClassFlagsT, bool doStrictCheck, typename ...TInterfaces>
 struct __declspec(novtable) ImplementsHelper;
@@ -869,7 +869,7 @@ protected:
 };
 
 
-// Selector is used to "tag" base interfaces to be used in casting, since a runtime class may indirectly derive from 
+// Selector is used to "tag" base interfaces to be used in casting, since a runtime class may indirectly derive from
 // the same interface or Implements<> template multiple times
 template <typename base, typename disciminator>
 struct  __declspec(novtable) Selector : public base
@@ -919,7 +919,7 @@ protected:
     }
 };
 
-// CloakedIid instance. Since the first "real" interface should be checked against doStrictCheck, 
+// CloakedIid instance. Since the first "real" interface should be checked against doStrictCheck,
 // pass this through unchanged. Two specializations for cloaked prevent the need to use the Selector
 // used in the Implements<> case. The same can't be done there because some type ambiguities are unavoidable.
 template <typename RuntimeClassFlagsT, bool doStrictCheck, typename I0, typename I1, typename ...TInterfaces>
@@ -1008,7 +1008,7 @@ struct __declspec(novtable) ImplementsHelper<RuntimeClassFlagsT, doStrictCheck>
     template <unsigned int RuntimeClassTypeT> friend class RuntimeClassBaseT;
 
 protected:
-    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;    
+    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;
 
     HRESULT CanCastTo(_In_ REFIID /*riid*/, _Outptr_ void ** /*ppv*/, bool * /*pRefDelegated*/ = nullptr) throw()
     {
@@ -1037,13 +1037,13 @@ struct __declspec(novtable) ImplementsHelper<RuntimeClassFlagsT, doStrictCheck, 
     template <unsigned int RuntimeClassTypeT> friend class RuntimeClassBaseT;
 
 protected:
-    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;    
+    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;
     typedef typename AdjustImplements<RuntimeClassFlagsT, true, TInterfaces...>::Type BaseType;
 
     HRESULT CanCastTo(REFIID riid, _Outptr_ void **ppv, bool *pRefDelegated = nullptr) throw()
     {
         ChainInterfaces<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>::template Verify<RuntimeClassFlagsT::value>();
-        
+
         HRESULT hr = ChainInterfaces<C0, C1, C2, C3, C4, C5, C6, C7, C8, C9>::CanCastTo(riid, ppv);
         if (FAILED(hr))
         {
@@ -1088,14 +1088,14 @@ protected:
     HRESULT CanCastTo(REFIID riid, _Outptr_ void **ppv, bool *pRefDelegated = nullptr) throw()
     {
         VerifyInterfaceHelper<RuntimeClassFlagsT::value & WinRtClassicComMix, BaseMixInType, doStrictCheck>::Verify();
-        
+
         HRESULT hr = static_cast<BaseMixInType*>(static_cast<DerivedType*>(this))->CanCastTo(riid, ppv);
         if (FAILED(hr))
         {
             hr = BaseType::CanCastTo(riid, ppv, pRefDelegated);
         }
 
-        return hr;            
+        return hr;
     }
 
     IUnknown* CastToUnknown() throw()
@@ -1310,7 +1310,7 @@ protected:
 
     typedef typename Details::AdjustImplements<RuntimeClassFlags<flags>, true, I0, TInterfaces...>::Type BaseType;
     template <typename RuntimeClassFlagsT, bool doStrictCheck, typename ...TInterfaces> friend struct Details::ImplementsHelper;
-    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;    
+    template <unsigned int RuntimeClassTypeT> friend class Details::RuntimeClassBaseT;
 
     HRESULT CanCastTo(REFIID riid, _Outptr_ void **ppv) throw()
     {
@@ -1333,16 +1333,16 @@ protected:
     }
 };
 
-class FtmBase : 
-    public Implements< 
-        ::Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>, 
+class FtmBase :
+    public Implements<
+        ::Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,
         ::Microsoft::WRL::CloakedIid< ::IMarshal> >,
     // Inheriting from FtmBaseMarker allows using FtmBase on classes configured with RuntimeClassFlags<WinRt> (Default configuration)
     private ::Microsoft::WRL::Details::FtmBaseMarker
 {
     // defining type 'Super' for other compilers since '__super' is a VC++-specific language extension
-    using Super = Implements< 
-      ::Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>, 
+    using Super = Implements<
+      ::Microsoft::WRL::RuntimeClassFlags<WinRtClassicComMix>,
       ::Microsoft::WRL::CloakedIid< ::IMarshal> >;
 protected:
     template <typename RuntimeClassFlagsT, bool doStrictCheck, typename ...TInterfaces> friend struct Details::ImplementsHelper;
@@ -1352,7 +1352,7 @@ protected:
         // Prefer InlineIsEqualGUID over other forms since it's better perf on 4-byte aligned data, which is almost always the case.
         if (InlineIsEqualGUID(riid, __uuidof(::IAgileObject)))
         {
-            
+
             *ppv = Super::CastToUnknown();
             return S_OK;
         }
@@ -1478,7 +1478,7 @@ public:
     }
 
 protected:
-    PerfCountersBase() throw() : 
+    PerfCountersBase() throw() :
         addRefCount_(0),
         releaseCount_(0),
         queryInterfaceCount_(0)
@@ -1511,7 +1511,7 @@ private:
 
 #define UnknownIncrementReference InterlockedIncrement
 #define UnknownDecrementReference InterlockedDecrement
-#define UnknownBarrierAfterInterlock() 
+#define UnknownBarrierAfterInterlock()
 #define UnknownInterlockedCompareExchangePointer InterlockedCompareExchangePointer
 #define UnknownInterlockedCompareExchangePointerForIncrement InterlockedCompareExchangePointer
 #define UnknownInterlockedCompareExchangePointerForRelease InterlockedCompareExchangePointer
@@ -1551,7 +1551,7 @@ template <class RuntimeClassFlagsT, bool implementsWeakReferenceSource, bool imp
 class __declspec(novtable) RuntimeClassImpl;
 
 #pragma warning(push)
-// PREFast cannot see through template instantiation for AsIID() 
+// PREFast cannot see through template instantiation for AsIID()
 #pragma warning(disable: 6388)
 
 template <class RuntimeClassFlagsT, bool implementsWeakReferenceSource, bool implementsFtmBase, typename ...TInterfaces>
@@ -1580,7 +1580,7 @@ public:
         return InternalAddRef();
     }
 
-    STDMETHOD_(ULONG, Release)()    
+    STDMETHOD_(ULONG, Release)()
     {
         ULONG ref = InternalRelease();
         if (ref == 0)
@@ -1602,7 +1602,7 @@ protected:
 
     RuntimeClassImpl() throw() : refcount_(1)
     {
-    }    
+    }
 
     virtual ~RuntimeClassImpl() throw()
     {
@@ -1708,7 +1708,7 @@ public:
         return InternalAddRef();
     }
 
-    STDMETHOD_(ULONG, Release)()    
+    STDMETHOD_(ULONG, Release)()
     {
         ULONG ref = InternalRelease();
         if (ref == 0)
@@ -1748,7 +1748,7 @@ public:
         return E_NOTIMPL;
     }
 
-    STDMETHOD(GetTrustLevel)(_Out_ TrustLevel*)
+    STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel*)
     {
         __WRL_ASSERT__(false && "Use InspectableClass macro to set runtime class name and trust level.");
 
@@ -1862,9 +1862,9 @@ public:
 //    2. If it is, it is an encoded pointer to the weak reference
 //    3. If it is not, it is the actual reference count
 // To yield the encoded pointer
-//    1. Test the value for negative 
+//    1. Test the value for negative
 //    2. If it is, shift the value to the left and cast it to a WeakReferenceImpl*
-// 
+//
 const UINT_PTR EncodeWeakReferencePointerFlag = static_cast<UINT_PTR>(1) << ((sizeof(UINT_PTR) * 8) - 1);
 
 union ReferenceCountOrWeakReferencePointer
@@ -2039,7 +2039,7 @@ public:
         return E_NOTIMPL;
     }
 
-    STDMETHOD(GetTrustLevel)(_Out_ TrustLevel*)
+    STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel*)
     {
         __WRL_ASSERT__(false && "Use InspectableClass macro to set runtime class name and trust level.");
 #if (NTDDI_VERSION >= NTDDI_WINBLUE)
@@ -2114,9 +2114,9 @@ template <
 >
 class RuntimeClass;
 
-    
+
 template <
-    typename RuntimeClassFlagsT, 
+    typename RuntimeClassFlagsT,
     bool implementsWeakReferenceSource,
     bool implementsInspectable,
     bool implementsFtmBase,
@@ -2139,7 +2139,7 @@ protected:
 // It inherits from Details::RuntimeClass that provides helper methods for reference counting and
 // collecting IIDs
 template <typename ...TInterfaces>
-class RuntimeClass : 
+class RuntimeClass :
     public Details::RuntimeClassImpl<DETAILS_RTCLASS_FLAGS_ARGUMENTS(RuntimeClassFlags<WinRt>), TInterfaces...>
 {
     RuntimeClass(const RuntimeClass&);
@@ -2166,8 +2166,8 @@ template <unsigned int classFlags, typename ...TInterfaces>
 class RuntimeClass<RuntimeClassFlags<classFlags>, TInterfaces...> :
     public Details::RuntimeClassImpl<DETAILS_RTCLASS_FLAGS_ARGUMENTS(RuntimeClassFlags<classFlags>), TInterfaces...>
 {
-    RuntimeClass(const RuntimeClass&);    
-    RuntimeClass& operator=(const RuntimeClass&);    
+    RuntimeClass(const RuntimeClass&);
+    RuntimeClass& operator=(const RuntimeClass&);
 protected:
     HRESULT CustomQueryInterface(REFIID /*riid*/, _Outptr_result_nullonfailure_ void** /*ppvObject*/, _Out_ bool *handled)
     {
@@ -2188,8 +2188,8 @@ public:
 
 namespace Details
 {
-//Weak reference implementation
-    class WeakReferenceImpl sealed:
+    // Weak reference implementation
+    class WeakReferenceImpl final :
         public ::Microsoft::WRL::RuntimeClass<RuntimeClassFlags<ClassicCom>, IWeakReference>,
         public StrongReference
     {
@@ -2206,8 +2206,8 @@ namespace Details
     {
     }
 
-    STDMETHOD(Resolve)(REFIID riid, _Outptr_result_maybenull_ _Result_nullonfailure_ IInspectable **ppvObject)    
-    {            
+    STDMETHOD(Resolve)(REFIID riid, _Outptr_result_maybenull_ _Result_nullonfailure_ IInspectable **ppvObject)
+    {
         *ppvObject = nullptr;
 
         for(;;)
@@ -2222,7 +2222,7 @@ namespace Details
             if (::_InterlockedCompareExchange(&this->strongRefCount_, ref + 1, ref) == ref)
             {
 #ifdef _PERF_COUNTERS
-                // This artificially manipulates the strong ref count via AddRef to account for the resolve 
+                // This artificially manipulates the strong ref count via AddRef to account for the resolve
                 // interlocked operation above when tallying reference counting operations.
                 unknown_->AddRef();
                 ::_InterlockedDecrement(&this->strongRefCount_);
@@ -2230,7 +2230,7 @@ namespace Details
                 break;
             }
         }
-            
+
         HRESULT hr = unknown_->QueryInterface(riid, reinterpret_cast<void**>(ppvObject));
         unknown_->Release();
         return hr;
@@ -2362,7 +2362,7 @@ HRESULT RuntimeClassImpl<RuntimeClassFlagsT, true, true, false, I0, TInterfaces.
     {
         return E_OUTOFMEMORY;
     }
-    
+
     encodedWeakRef = EncodeWeakReferencePointer(weakRef);
 
     for (;;)
@@ -2384,7 +2384,7 @@ HRESULT RuntimeClassImpl<RuntimeClassFlagsT, true, true, false, I0, TInterfaces.
         }
         else if (IsValueAPointerToWeakReference(previousValue))
         {
-            // Another thread beat this call to create the weak reference. 
+            // Another thread beat this call to create the weak reference.
 
             delete weakRef;
 
@@ -2484,7 +2484,7 @@ HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** result, TArgs&&... a
 
 template <typename T, typename I, typename ...TArgs>
 HRESULT MakeAndInitialize(_Inout_ ComPtrRef<ComPtr<I>> ppvObject, TArgs&&... args)
-{    
+{
     return MakeAndInitialize<T>(ppvObject.ReleaseAndGetAddressOf(), Details::Forward<TArgs>(args)...);
 }
 
@@ -2514,7 +2514,7 @@ namespace Details
             static_assert(!__is_base_of(IActivationFactory, RuntimeClassT), "Incorrect usage of IActivationFactory interface. Make sure that your RuntimeClass doesn't implement IActivationFactory interface use ::Windows::WRL::ActivationFactory instead or 'InspectableClass' macro is not used on ::Windows::WRL::ActivationFactory"); \
             return runtimeClassName; \
         } \
-        static TrustLevel STDMETHODCALLTYPE InternalGetTrustLevel() throw() \
+        static ::TrustLevel STDMETHODCALLTYPE InternalGetTrustLevel() throw() \
         { \
             return trustLevel; \
         } \
@@ -2529,7 +2529,7 @@ namespace Details
             } \
             return hr; \
         } \
-        STDMETHOD(GetTrustLevel)(_Out_ TrustLevel* trustLvl) \
+        STDMETHOD(GetTrustLevel)(_Out_ ::TrustLevel* trustLvl) \
         { \
             *trustLvl = trustLevel; \
             return S_OK; \
@@ -2544,7 +2544,7 @@ namespace Details
         STDMETHOD(QueryInterface)(REFIID riid, _Outptr_result_nullonfailure_ void **ppvObject) \
         { \
             bool handled = false; \
-            HRESULT hr = CustomQueryInterface(riid, ppvObject, &handled); \
+            HRESULT hr = this->CustomQueryInterface(riid, ppvObject, &handled); \
             if (FAILED(hr) || handled) return hr; \
             return RuntimeClassT::QueryInterface(riid, ppvObject); \
         } \
@@ -2584,7 +2584,7 @@ namespace Details
 
 #ifndef WrlCreatorMapIncludePragma
 #define WrlCreatorMapIncludePragma(className)  static_assert(false, "It's required to include 'wrl/module.h' to be able to use 'WrlCreatorMapIncludePragma' macro");
-#endif    
+#endif
 
 #ifndef ActivatableClassWithFactoryEx
 #define ActivatableClassWithFactoryEx(className, factory, groupId)  static_assert(false, "It's required to include 'wrl/module.h' to be able to use 'ActivatableClassWithFactoryEx' macro");
@@ -2628,7 +2628,7 @@ namespace Details
 
 #undef UnknownIncrementReference
 #undef UnknownDecrementReference
-#undef UnknownBarrierAfterInterlock 
+#undef UnknownBarrierAfterInterlock
 #undef UnknownInterlockedCompareExchangePointer
 #undef UnknownInterlockedCompareExchangePointerForIncrement
 #undef UnknownInterlockedCompareExchangePointerForRelease

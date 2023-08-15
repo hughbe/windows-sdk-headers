@@ -227,7 +227,7 @@ DEFINE_GUID(BTH_LE_ATT_BLUETOOTH_BASE_GUID,                 0x00000000, 0x0000, 
 // MTU
 //
 #define BTHLEENUM_ATT_MTU_MIN                       (23)
-#define BTHLEENUM_ATT_MTU_MAX                       (MAX_USHORT)
+#define BTHLEENUM_ATT_MTU_MAX                       (0xFFFF)
 #define BTHLEENUM_ATT_MTU_DEFAULT                   (BTHLEENUM_ATT_MTU_MIN)
 #define BTHLEENUM_ATT_MTU_INITIAL_NEGOTIATION       (525)
 

@@ -205,7 +205,7 @@ enum __SAL_YesNo {_SAL_notpresent, _SAL_no, _SAL_maybe, _SAL_yes, _SAL_default};
 
 #endif
 
-#if defined(BUILD_WINDOWS) && !_USE_ATTRIBUTES_FOR_SAL
+#if defined(UNDOCKED_WINDOWS_UCRT) && !_USE_ATTRIBUTES_FOR_SAL
 #define _SAL1_Source_(Name, args, annotes) _SA_annotes3(SAL_name, #Name, "", "1") _GrouP_(annotes _SAL_nop_impl_)
 #define _SAL1_1_Source_(Name, args, annotes) _SA_annotes3(SAL_name, #Name, "", "1.1") _GrouP_(annotes _SAL_nop_impl_)
 #define _SAL1_2_Source_(Name, args, annotes) _SA_annotes3(SAL_name, #Name, "", "1.2") _GrouP_(annotes _SAL_nop_impl_)
@@ -2901,7 +2901,7 @@ of each annotation, see the advanced annotations section.
 
 #ifdef _PREFAST_ // [
 __inline __nothrow
-void __AnalysisAssumeNullterminated(_Post_ _Null_terminated_ void *p);
+void __AnalysisAssumeNullterminated(_Post_ _Null_terminated_ const void *p);
 
 #define _Analysis_assume_nullterminated_(x) __AnalysisAssumeNullterminated(x)
 

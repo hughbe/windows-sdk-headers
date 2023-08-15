@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.data.html.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,33 +87,13 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -140,30 +116,22 @@ namespace ABI {
                 interface IHtmlUtilities;
             } /* Html */
         } /* Data */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities ABI::Windows::Data::Html::IHtmlUtilities
 
 #endif // ____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C++)
 
-
-
-
-
-
-
-
-
-
+// Collection interface definitions
 /*
  *
  * Interface Windows.Data.Html.IHtmlUtilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Data.Html.HtmlUtilities
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -174,35 +142,31 @@ namespace ABI {
     namespace Windows {
         namespace Data {
             namespace Html {
-                /* [object, uuid("FEC00ADD-2399-4FAC-B5A7-05E9ACD7181D"), exclusiveto, contract] */
-                MIDL_INTERFACE("FEC00ADD-2399-4FAC-B5A7-05E9ACD7181D")
+                MIDL_INTERFACE("fec00add-2399-4fac-b5a7-05e9acd7181d")
                 IHtmlUtilities : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE ConvertToText(
-                        /* [in] */__RPC__in HSTRING html,
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * text
+                        HSTRING html,
+                        HSTRING* text
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IHtmlUtilities=_uuidof(IHtmlUtilities);
-                
+                extern MIDL_CONST_ID IID& IID_IHtmlUtilities = _uuidof(IHtmlUtilities);
             } /* Html */
         } /* Data */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CHtml_CIHtmlUtilities;
 #endif /* !defined(____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Data.Html.HtmlUtilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Data.Html.IHtmlUtilities interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -218,9 +182,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CData_CHtml_CIHtmlUtilities;
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Data_Html_HtmlUtilities[] = L"Windows.Data.Html.HtmlUtilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -230,14 +191,9 @@ typedef interface __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities __x_ABI_CWindows_
 
 #endif // ____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_FWD_DEFINED__
 
+// Parameterized interface forward declarations (C)
 
-
-
-
-
-
-
-
+// Collection interface definitions
 
 /*
  *
@@ -245,100 +201,75 @@ typedef interface __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities __x_ABI_CWindows_
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Data.Html.HtmlUtilities
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Data_Html_IHtmlUtilities[] = L"Windows.Data.Html.IHtmlUtilities";
-/* [object, uuid("FEC00ADD-2399-4FAC-B5A7-05E9ACD7181D"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CData_CHtml_CIHtmlUtilitiesVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* ConvertToText)(__x_ABI_CWindows_CData_CHtml_CIHtmlUtilities* This,
+        HSTRING html,
+        HSTRING* text);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *ConvertToText )(
-        __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities * This,
-        /* [in] */__RPC__in HSTRING html,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * text
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CData_CHtml_CIHtmlUtilitiesVtbl;
 
 interface __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities
 {
-    CONST_VTBL struct __x_ABI_CWindows_CData_CHtml_CIHtmlUtilitiesVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CData_CHtml_CIHtmlUtilitiesVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_ConvertToText(This,html,text) \
-    ( (This)->lpVtbl->ConvertToText(This,html,text) )
-
+#define __x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_ConvertToText(This, html, text) \
+    ((This)->lpVtbl->ConvertToText(This, html, text))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CData_CHtml_CIHtmlUtilities;
 #endif /* !defined(____x_ABI_CWindows_CData_CHtml_CIHtmlUtilities_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
  * Class Windows.Data.Html.HtmlUtilities
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Data.Html.IHtmlUtilities interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -354,9 +285,6 @@ EXTERN_C const IID IID___x_ABI_CWindows_CData_CHtml_CIHtmlUtilities;
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Data_Html_HtmlUtilities[] = L"Windows.Data.Html.HtmlUtilities";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

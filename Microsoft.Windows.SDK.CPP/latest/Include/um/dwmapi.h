@@ -54,6 +54,7 @@ enum DWMWINDOWATTRIBUTE
     DWMWA_CLOAK,                        // [set] Cloak or uncloak the window
     DWMWA_CLOAKED,                      // [get] Gets the cloaked state of the window
     DWMWA_FREEZE_REPRESENTATION,        // [set] BOOL, Force this window to freeze the thumbnail without live update
+    DWMWA_PASSIVE_UPDATE_MODE,          // [set] BOOL, Updates the window only when desktop composition runs for other reasons
     DWMWA_LAST
 };
 

@@ -12,7 +12,7 @@ EXTERN_C_START
 #pragma warning(disable:4214) // nonstandard extension used: bit field types other than int
 #pragma warning(disable:4201) // nonstandard extension used: nameless struct/union
 
-typedef struct _NET_PACKET_LARGE_SEND_SEGMENTATION
+typedef struct _NET_PACKET_LSO
 {
     union {
         struct {
@@ -22,18 +22,17 @@ typedef struct _NET_PACKET_LARGE_SEND_SEGMENTATION
                 Reserved0 : 12;
         } TCP;
     } DUMMYUNIONNAME;
-} NET_PACKET_LARGE_SEND_SEGMENTATION;
+} NET_PACKET_LSO;
 
-C_ASSERT(sizeof(NET_PACKET_LARGE_SEND_SEGMENTATION) == 4);
+C_ASSERT(sizeof(NET_PACKET_LSO) == 4);
 
 #pragma warning(pop)
 
 EXTERN_C_END
 
 
-#define NET_PACKET_EXTENSION_LSO_NAME L"ms_packetlargesendsegmentation"
-#define NET_PACKET_EXTENSION_LSO_VERSION_1 1
-#define NET_PACKET_EXTENSION_LSO_VERSION_1_SIZE sizeof(NET_PACKET_LARGE_SEND_SEGMENTATION)
+#define NET_PACKET_EXTENSION_LSO_NAME L"ms_packet_lso"
+#define NET_PACKET_EXTENSION_LSO_VERSION_1 1U
 
 #endif // WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
 #pragma endregion

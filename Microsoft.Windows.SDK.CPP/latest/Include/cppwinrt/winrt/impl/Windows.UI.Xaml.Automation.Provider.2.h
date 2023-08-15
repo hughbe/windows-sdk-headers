@@ -1,32 +1,20 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.1.h"
-#include "winrt/impl/Windows.UI.Xaml.Automation.1.h"
-#include "winrt/impl/Windows.UI.Xaml.Automation.Peers.1.h"
-#include "winrt/impl/Windows.UI.Xaml.Automation.Text.1.h"
+#ifndef WINRT_Windows_UI_Xaml_Automation_Provider_2_H
+#define WINRT_Windows_UI_Xaml_Automation_Provider_2_H
 #include "winrt/impl/Windows.UI.Xaml.1.h"
 #include "winrt/impl/Windows.UI.Xaml.Automation.Provider.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Provider {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI::Xaml::Automation::Provider {
-
-struct WINRT_EBO IRawElementProviderSimple :
-    Windows::UI::Xaml::Automation::Provider::IIRawElementProviderSimple,
-    impl::base<IRawElementProviderSimple, Windows::UI::Xaml::DependencyObject>,
-    impl::require<IRawElementProviderSimple, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+namespace winrt::Windows::UI::Xaml::Automation::Provider
 {
-    IRawElementProviderSimple(std::nullptr_t) noexcept {}
-};
-
+    struct __declspec(empty_bases) IRawElementProviderSimple : Windows::UI::Xaml::Automation::Provider::IIRawElementProviderSimple,
+        impl::base<IRawElementProviderSimple, Windows::UI::Xaml::DependencyObject>,
+        impl::require<IRawElementProviderSimple, Windows::UI::Xaml::IDependencyObject, Windows::UI::Xaml::IDependencyObject2>
+    {
+        IRawElementProviderSimple(std::nullptr_t) noexcept {}
+        IRawElementProviderSimple(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Xaml::Automation::Provider::IIRawElementProviderSimple(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

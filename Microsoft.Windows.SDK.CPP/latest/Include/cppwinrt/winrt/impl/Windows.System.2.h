@@ -1,413 +1,355 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.1.h"
+#ifndef WINRT_Windows_System_2_H
+#define WINRT_Windows_System_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Foundation.Collections.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
-#include "winrt/impl/Windows.Storage.Search.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
-#include "winrt/impl/Windows.System.Diagnostics.1.h"
 #include "winrt/impl/Windows.System.RemoteSystems.1.h"
-#include "winrt/impl/Windows.UI.Popups.1.h"
-#include "winrt/impl/Windows.UI.ViewManagement.1.h"
 #include "winrt/impl/Windows.System.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::System {
-
-struct DispatcherQueueHandler : Windows::Foundation::IUnknown
+namespace winrt::Windows::System
 {
-    DispatcherQueueHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> DispatcherQueueHandler(L lambda);
-    template <typename F> DispatcherQueueHandler(F* function);
-    template <typename O, typename M> DispatcherQueueHandler(O* object, M method);
-    template <typename O, typename M> DispatcherQueueHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> DispatcherQueueHandler(weak_ref<O>&& object, M method);
-    void operator()() const;
-};
-
+    struct DispatcherQueueHandler : Windows::Foundation::IUnknown
+    {
+        DispatcherQueueHandler(std::nullptr_t = nullptr) noexcept {}
+        DispatcherQueueHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> DispatcherQueueHandler(L lambda);
+        template <typename F> DispatcherQueueHandler(F* function);
+        template <typename O, typename M> DispatcherQueueHandler(O* object, M method);
+        template <typename O, typename M> DispatcherQueueHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> DispatcherQueueHandler(weak_ref<O>&& object, M method);
+        auto operator()() const;
+    };
+    struct __declspec(empty_bases) AppActivationResult : Windows::System::IAppActivationResult
+    {
+        AppActivationResult(std::nullptr_t) noexcept {}
+        AppActivationResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppActivationResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppDiagnosticInfo : Windows::System::IAppDiagnosticInfo,
+        impl::require<AppDiagnosticInfo, Windows::System::IAppDiagnosticInfo2, Windows::System::IAppDiagnosticInfo3>
+    {
+        AppDiagnosticInfo(std::nullptr_t) noexcept {}
+        AppDiagnosticInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppDiagnosticInfo(ptr, take_ownership_from_abi) {}
+        static auto RequestInfoAsync();
+        static auto CreateWatcher();
+        static auto RequestAccessAsync();
+        static auto RequestInfoForPackageAsync(param::hstring const& packageFamilyName);
+        static auto RequestInfoForAppAsync();
+        static auto RequestInfoForAppAsync(param::hstring const& appUserModelId);
+    };
+    struct __declspec(empty_bases) AppDiagnosticInfoWatcher : Windows::System::IAppDiagnosticInfoWatcher
+    {
+        AppDiagnosticInfoWatcher(std::nullptr_t) noexcept {}
+        AppDiagnosticInfoWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppDiagnosticInfoWatcher(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppDiagnosticInfoWatcherEventArgs : Windows::System::IAppDiagnosticInfoWatcherEventArgs
+    {
+        AppDiagnosticInfoWatcherEventArgs(std::nullptr_t) noexcept {}
+        AppDiagnosticInfoWatcherEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppDiagnosticInfoWatcherEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppExecutionStateChangeResult : Windows::System::IAppExecutionStateChangeResult
+    {
+        AppExecutionStateChangeResult(std::nullptr_t) noexcept {}
+        AppExecutionStateChangeResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppExecutionStateChangeResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppMemoryReport : Windows::System::IAppMemoryReport,
+        impl::require<AppMemoryReport, Windows::System::IAppMemoryReport2>
+    {
+        AppMemoryReport(std::nullptr_t) noexcept {}
+        AppMemoryReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppMemoryReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppMemoryUsageLimitChangingEventArgs : Windows::System::IAppMemoryUsageLimitChangingEventArgs
+    {
+        AppMemoryUsageLimitChangingEventArgs(std::nullptr_t) noexcept {}
+        AppMemoryUsageLimitChangingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppMemoryUsageLimitChangingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupBackgroundTaskReport : Windows::System::IAppResourceGroupBackgroundTaskReport
+    {
+        AppResourceGroupBackgroundTaskReport(std::nullptr_t) noexcept {}
+        AppResourceGroupBackgroundTaskReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupBackgroundTaskReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupInfo : Windows::System::IAppResourceGroupInfo,
+        impl::require<AppResourceGroupInfo, Windows::System::IAppResourceGroupInfo2>
+    {
+        AppResourceGroupInfo(std::nullptr_t) noexcept {}
+        AppResourceGroupInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupInfoWatcher : Windows::System::IAppResourceGroupInfoWatcher
+    {
+        AppResourceGroupInfoWatcher(std::nullptr_t) noexcept {}
+        AppResourceGroupInfoWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupInfoWatcher(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupInfoWatcherEventArgs : Windows::System::IAppResourceGroupInfoWatcherEventArgs
+    {
+        AppResourceGroupInfoWatcherEventArgs(std::nullptr_t) noexcept {}
+        AppResourceGroupInfoWatcherEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupInfoWatcherEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupInfoWatcherExecutionStateChangedEventArgs : Windows::System::IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
+    {
+        AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(std::nullptr_t) noexcept {}
+        AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupMemoryReport : Windows::System::IAppResourceGroupMemoryReport
+    {
+        AppResourceGroupMemoryReport(std::nullptr_t) noexcept {}
+        AppResourceGroupMemoryReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupMemoryReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppResourceGroupStateReport : Windows::System::IAppResourceGroupStateReport
+    {
+        AppResourceGroupStateReport(std::nullptr_t) noexcept {}
+        AppResourceGroupStateReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppResourceGroupStateReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppUriHandlerHost : Windows::System::IAppUriHandlerHost
+    {
+        AppUriHandlerHost(std::nullptr_t) noexcept {}
+        AppUriHandlerHost(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerHost(ptr, take_ownership_from_abi) {}
+        AppUriHandlerHost();
+        AppUriHandlerHost(param::hstring const& name);
+    };
+    struct __declspec(empty_bases) AppUriHandlerRegistration : Windows::System::IAppUriHandlerRegistration
+    {
+        AppUriHandlerRegistration(std::nullptr_t) noexcept {}
+        AppUriHandlerRegistration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerRegistration(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppUriHandlerRegistrationManager : Windows::System::IAppUriHandlerRegistrationManager
+    {
+        AppUriHandlerRegistrationManager(std::nullptr_t) noexcept {}
+        AppUriHandlerRegistrationManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IAppUriHandlerRegistrationManager(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto GetForUser(Windows::System::User const& user);
+    };
+    struct DateTimeSettings
+    {
+        DateTimeSettings() = delete;
+        static auto SetSystemDateTime(Windows::Foundation::DateTime const& utcDateTime);
+    };
+    struct __declspec(empty_bases) DispatcherQueue : Windows::System::IDispatcherQueue,
+        impl::require<DispatcherQueue, Windows::System::IDispatcherQueue2>
+    {
+        DispatcherQueue(std::nullptr_t) noexcept {}
+        DispatcherQueue(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IDispatcherQueue(ptr, take_ownership_from_abi) {}
+        static auto GetForCurrentThread();
+    };
+    struct __declspec(empty_bases) DispatcherQueueController : Windows::System::IDispatcherQueueController
+    {
+        DispatcherQueueController(std::nullptr_t) noexcept {}
+        DispatcherQueueController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IDispatcherQueueController(ptr, take_ownership_from_abi) {}
+        static auto CreateOnDedicatedThread();
+    };
+    struct __declspec(empty_bases) DispatcherQueueShutdownStartingEventArgs : Windows::System::IDispatcherQueueShutdownStartingEventArgs
+    {
+        DispatcherQueueShutdownStartingEventArgs(std::nullptr_t) noexcept {}
+        DispatcherQueueShutdownStartingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IDispatcherQueueShutdownStartingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) DispatcherQueueTimer : Windows::System::IDispatcherQueueTimer
+    {
+        DispatcherQueueTimer(std::nullptr_t) noexcept {}
+        DispatcherQueueTimer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IDispatcherQueueTimer(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) FolderLauncherOptions : Windows::System::IFolderLauncherOptions,
+        impl::require<FolderLauncherOptions, Windows::System::ILauncherViewOptions>
+    {
+        FolderLauncherOptions(std::nullptr_t) noexcept {}
+        FolderLauncherOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IFolderLauncherOptions(ptr, take_ownership_from_abi) {}
+        FolderLauncherOptions();
+    };
+    struct KnownUserProperties
+    {
+        KnownUserProperties() = delete;
+        [[nodiscard]] static auto DisplayName();
+        [[nodiscard]] static auto FirstName();
+        [[nodiscard]] static auto LastName();
+        [[nodiscard]] static auto ProviderName();
+        [[nodiscard]] static auto AccountName();
+        [[nodiscard]] static auto GuestHost();
+        [[nodiscard]] static auto PrincipalName();
+        [[nodiscard]] static auto DomainName();
+        [[nodiscard]] static auto SessionInitiationProtocolUri();
+    };
+    struct __declspec(empty_bases) LaunchUriResult : Windows::System::ILaunchUriResult
+    {
+        LaunchUriResult(std::nullptr_t) noexcept {}
+        LaunchUriResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::ILaunchUriResult(ptr, take_ownership_from_abi) {}
+    };
+    struct Launcher
+    {
+        Launcher() = delete;
+        static auto LaunchFileAsync(Windows::Storage::IStorageFile const& file);
+        static auto LaunchFileAsync(Windows::Storage::IStorageFile const& file, Windows::System::LauncherOptions const& options);
+        static auto LaunchUriAsync(Windows::Foundation::Uri const& uri);
+        static auto LaunchUriAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
+        static auto LaunchUriForResultsAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
+        static auto LaunchUriForResultsAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
+        static auto LaunchUriAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
+        static auto QueryUriSupportAsync(Windows::Foundation::Uri const& uri, Windows::System::LaunchQuerySupportType const& launchQuerySupportType);
+        static auto QueryUriSupportAsync(Windows::Foundation::Uri const& uri, Windows::System::LaunchQuerySupportType const& launchQuerySupportType, param::hstring const& packageFamilyName);
+        static auto QueryFileSupportAsync(Windows::Storage::StorageFile const& file);
+        static auto QueryFileSupportAsync(Windows::Storage::StorageFile const& file, param::hstring const& packageFamilyName);
+        static auto FindUriSchemeHandlersAsync(param::hstring const& scheme);
+        static auto FindUriSchemeHandlersAsync(param::hstring const& scheme, Windows::System::LaunchQuerySupportType const& launchQuerySupportType);
+        static auto FindFileHandlersAsync(param::hstring const& extension);
+        static auto LaunchFolderAsync(Windows::Storage::IStorageFolder const& folder);
+        static auto LaunchFolderAsync(Windows::Storage::IStorageFolder const& folder, Windows::System::FolderLauncherOptions const& options);
+        static auto QueryAppUriSupportAsync(Windows::Foundation::Uri const& uri);
+        static auto QueryAppUriSupportAsync(Windows::Foundation::Uri const& uri, param::hstring const& packageFamilyName);
+        static auto FindAppUriHandlersAsync(Windows::Foundation::Uri const& uri);
+        static auto LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri);
+        static auto LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
+        static auto LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
+        static auto LaunchUriForResultsForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
+        static auto LaunchUriForResultsForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
+        static auto LaunchFolderPathAsync(param::hstring const& path);
+        static auto LaunchFolderPathAsync(param::hstring const& path, Windows::System::FolderLauncherOptions const& options);
+        static auto LaunchFolderPathForUserAsync(Windows::System::User const& user, param::hstring const& path);
+        static auto LaunchFolderPathForUserAsync(Windows::System::User const& user, param::hstring const& path, Windows::System::FolderLauncherOptions const& options);
+    };
+    struct __declspec(empty_bases) LauncherOptions : Windows::System::ILauncherOptions,
+        impl::require<LauncherOptions, Windows::System::ILauncherOptions2, Windows::System::ILauncherOptions3, Windows::System::ILauncherOptions4, Windows::System::ILauncherViewOptions>
+    {
+        LauncherOptions(std::nullptr_t) noexcept {}
+        LauncherOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::ILauncherOptions(ptr, take_ownership_from_abi) {}
+        LauncherOptions();
+    };
+    struct __declspec(empty_bases) LauncherUIOptions : Windows::System::ILauncherUIOptions
+    {
+        LauncherUIOptions(std::nullptr_t) noexcept {}
+        LauncherUIOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::ILauncherUIOptions(ptr, take_ownership_from_abi) {}
+    };
+    struct MemoryManager
+    {
+        MemoryManager() = delete;
+        [[nodiscard]] static auto AppMemoryUsage();
+        [[nodiscard]] static auto AppMemoryUsageLimit();
+        [[nodiscard]] static auto AppMemoryUsageLevel();
+        static auto AppMemoryUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        using AppMemoryUsageIncreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageIncreased>;
+        static AppMemoryUsageIncreased_revoker AppMemoryUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        static auto AppMemoryUsageIncreased(winrt::event_token const& token);
+        static auto AppMemoryUsageDecreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        using AppMemoryUsageDecreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageDecreased>;
+        static AppMemoryUsageDecreased_revoker AppMemoryUsageDecreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
+        static auto AppMemoryUsageDecreased(winrt::event_token const& token);
+        static auto AppMemoryUsageLimitChanging(Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
+        using AppMemoryUsageLimitChanging_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageLimitChanging>;
+        static AppMemoryUsageLimitChanging_revoker AppMemoryUsageLimitChanging(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
+        static auto AppMemoryUsageLimitChanging(winrt::event_token const& token);
+        static auto GetAppMemoryReport();
+        static auto GetProcessMemoryReport();
+        static auto TrySetAppMemoryUsageLimit(uint64_t value);
+        [[nodiscard]] static auto ExpectedAppMemoryUsageLimit();
+    };
+    struct ProcessLauncher
+    {
+        ProcessLauncher() = delete;
+        static auto RunToCompletionAsync(param::hstring const& fileName, param::hstring const& args);
+        static auto RunToCompletionAsync(param::hstring const& fileName, param::hstring const& args, Windows::System::ProcessLauncherOptions const& options);
+    };
+    struct __declspec(empty_bases) ProcessLauncherOptions : Windows::System::IProcessLauncherOptions
+    {
+        ProcessLauncherOptions(std::nullptr_t) noexcept {}
+        ProcessLauncherOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IProcessLauncherOptions(ptr, take_ownership_from_abi) {}
+        ProcessLauncherOptions();
+    };
+    struct __declspec(empty_bases) ProcessLauncherResult : Windows::System::IProcessLauncherResult
+    {
+        ProcessLauncherResult(std::nullptr_t) noexcept {}
+        ProcessLauncherResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IProcessLauncherResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProcessMemoryReport : Windows::System::IProcessMemoryReport
+    {
+        ProcessMemoryReport(std::nullptr_t) noexcept {}
+        ProcessMemoryReport(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IProcessMemoryReport(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProtocolForResultsOperation : Windows::System::IProtocolForResultsOperation
+    {
+        ProtocolForResultsOperation(std::nullptr_t) noexcept {}
+        ProtocolForResultsOperation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IProtocolForResultsOperation(ptr, take_ownership_from_abi) {}
+    };
+    struct RemoteLauncher
+    {
+        RemoteLauncher() = delete;
+        static auto LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri);
+        static auto LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri, Windows::System::RemoteLauncherOptions const& options);
+        static auto LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri, Windows::System::RemoteLauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
+    };
+    struct __declspec(empty_bases) RemoteLauncherOptions : Windows::System::IRemoteLauncherOptions
+    {
+        RemoteLauncherOptions(std::nullptr_t) noexcept {}
+        RemoteLauncherOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IRemoteLauncherOptions(ptr, take_ownership_from_abi) {}
+        RemoteLauncherOptions();
+    };
+    struct ShutdownManager
+    {
+        ShutdownManager() = delete;
+        static auto BeginShutdown(Windows::System::ShutdownKind const& shutdownKind, Windows::Foundation::TimeSpan const& timeout);
+        static auto CancelShutdown();
+        static auto IsPowerStateSupported(Windows::System::PowerState const& powerState);
+        static auto EnterPowerState(Windows::System::PowerState const& powerState);
+        static auto EnterPowerState(Windows::System::PowerState const& powerState, Windows::Foundation::TimeSpan const& wakeUpAfter);
+    };
+    struct TimeZoneSettings
+    {
+        TimeZoneSettings() = delete;
+        [[nodiscard]] static auto CurrentTimeZoneDisplayName();
+        [[nodiscard]] static auto SupportedTimeZoneDisplayNames();
+        [[nodiscard]] static auto CanChangeTimeZone();
+        static auto ChangeTimeZoneByDisplayName(param::hstring const& timeZoneDisplayName);
+        static auto AutoUpdateTimeZoneAsync(Windows::Foundation::TimeSpan const& timeout);
+    };
+    struct __declspec(empty_bases) User : Windows::System::IUser
+    {
+        User(std::nullptr_t) noexcept {}
+        User(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUser(ptr, take_ownership_from_abi) {}
+        static auto CreateWatcher();
+        static auto FindAllAsync();
+        static auto FindAllAsync(Windows::System::UserType const& type);
+        static auto FindAllAsync(Windows::System::UserType const& type, Windows::System::UserAuthenticationStatus const& status);
+        static auto GetFromId(param::hstring const& nonRoamableId);
+    };
+    struct __declspec(empty_bases) UserAuthenticationStatusChangeDeferral : Windows::System::IUserAuthenticationStatusChangeDeferral
+    {
+        UserAuthenticationStatusChangeDeferral(std::nullptr_t) noexcept {}
+        UserAuthenticationStatusChangeDeferral(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserAuthenticationStatusChangeDeferral(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UserAuthenticationStatusChangingEventArgs : Windows::System::IUserAuthenticationStatusChangingEventArgs
+    {
+        UserAuthenticationStatusChangingEventArgs(std::nullptr_t) noexcept {}
+        UserAuthenticationStatusChangingEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserAuthenticationStatusChangingEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UserChangedEventArgs : Windows::System::IUserChangedEventArgs,
+        impl::require<UserChangedEventArgs, Windows::System::IUserChangedEventArgs2>
+    {
+        UserChangedEventArgs(std::nullptr_t) noexcept {}
+        UserChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct UserDeviceAssociation
+    {
+        UserDeviceAssociation() = delete;
+        static auto FindUserFromDeviceId(param::hstring const& deviceId);
+        static auto UserDeviceAssociationChanged(Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
+        using UserDeviceAssociationChanged_revoker = impl::factory_event_revoker<Windows::System::IUserDeviceAssociationStatics, &impl::abi_t<Windows::System::IUserDeviceAssociationStatics>::remove_UserDeviceAssociationChanged>;
+        static UserDeviceAssociationChanged_revoker UserDeviceAssociationChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
+        static auto UserDeviceAssociationChanged(winrt::event_token const& token);
+    };
+    struct __declspec(empty_bases) UserDeviceAssociationChangedEventArgs : Windows::System::IUserDeviceAssociationChangedEventArgs
+    {
+        UserDeviceAssociationChangedEventArgs(std::nullptr_t) noexcept {}
+        UserDeviceAssociationChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserDeviceAssociationChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) UserPicker : Windows::System::IUserPicker
+    {
+        UserPicker(std::nullptr_t) noexcept {}
+        UserPicker(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserPicker(ptr, take_ownership_from_abi) {}
+        UserPicker();
+        static auto IsSupported();
+    };
+    struct __declspec(empty_bases) UserWatcher : Windows::System::IUserWatcher
+    {
+        UserWatcher(std::nullptr_t) noexcept {}
+        UserWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::IUserWatcher(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::System {
-
-struct WINRT_EBO AppActivationResult :
-    Windows::System::IAppActivationResult
-{
-    AppActivationResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppDiagnosticInfo :
-    Windows::System::IAppDiagnosticInfo,
-    impl::require<AppDiagnosticInfo, Windows::System::IAppDiagnosticInfo2, Windows::System::IAppDiagnosticInfo3>
-{
-    AppDiagnosticInfo(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::System::AppDiagnosticInfo>> RequestInfoAsync();
-    static Windows::System::AppDiagnosticInfoWatcher CreateWatcher();
-    static Windows::Foundation::IAsyncOperation<Windows::System::DiagnosticAccessStatus> RequestAccessAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::System::AppDiagnosticInfo>> RequestInfoForPackageAsync(param::hstring const& packageFamilyName);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::System::AppDiagnosticInfo>> RequestInfoForAppAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVector<Windows::System::AppDiagnosticInfo>> RequestInfoForAppAsync(param::hstring const& appUserModelId);
-};
-
-struct WINRT_EBO AppDiagnosticInfoWatcher :
-    Windows::System::IAppDiagnosticInfoWatcher
-{
-    AppDiagnosticInfoWatcher(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppDiagnosticInfoWatcherEventArgs :
-    Windows::System::IAppDiagnosticInfoWatcherEventArgs
-{
-    AppDiagnosticInfoWatcherEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppExecutionStateChangeResult :
-    Windows::System::IAppExecutionStateChangeResult
-{
-    AppExecutionStateChangeResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppMemoryReport :
-    Windows::System::IAppMemoryReport,
-    impl::require<AppMemoryReport, Windows::System::IAppMemoryReport2>
-{
-    AppMemoryReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppMemoryUsageLimitChangingEventArgs :
-    Windows::System::IAppMemoryUsageLimitChangingEventArgs
-{
-    AppMemoryUsageLimitChangingEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupBackgroundTaskReport :
-    Windows::System::IAppResourceGroupBackgroundTaskReport
-{
-    AppResourceGroupBackgroundTaskReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupInfo :
-    Windows::System::IAppResourceGroupInfo,
-    impl::require<AppResourceGroupInfo, Windows::System::IAppResourceGroupInfo2>
-{
-    AppResourceGroupInfo(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupInfoWatcher :
-    Windows::System::IAppResourceGroupInfoWatcher
-{
-    AppResourceGroupInfoWatcher(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupInfoWatcherEventArgs :
-    Windows::System::IAppResourceGroupInfoWatcherEventArgs
-{
-    AppResourceGroupInfoWatcherEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupInfoWatcherExecutionStateChangedEventArgs :
-    Windows::System::IAppResourceGroupInfoWatcherExecutionStateChangedEventArgs
-{
-    AppResourceGroupInfoWatcherExecutionStateChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupMemoryReport :
-    Windows::System::IAppResourceGroupMemoryReport
-{
-    AppResourceGroupMemoryReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppResourceGroupStateReport :
-    Windows::System::IAppResourceGroupStateReport
-{
-    AppResourceGroupStateReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppUriHandlerHost :
-    Windows::System::IAppUriHandlerHost
-{
-    AppUriHandlerHost(std::nullptr_t) noexcept {}
-    AppUriHandlerHost();
-    AppUriHandlerHost(param::hstring const& name);
-};
-
-struct WINRT_EBO AppUriHandlerRegistration :
-    Windows::System::IAppUriHandlerRegistration
-{
-    AppUriHandlerRegistration(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppUriHandlerRegistrationManager :
-    Windows::System::IAppUriHandlerRegistrationManager
-{
-    AppUriHandlerRegistrationManager(std::nullptr_t) noexcept {}
-    static Windows::System::AppUriHandlerRegistrationManager GetDefault();
-    static Windows::System::AppUriHandlerRegistrationManager GetForUser(Windows::System::User const& user);
-};
-
-struct DateTimeSettings
-{
-    DateTimeSettings() = delete;
-    static void SetSystemDateTime(Windows::Foundation::DateTime const& utcDateTime);
-};
-
-struct WINRT_EBO DispatcherQueue :
-    Windows::System::IDispatcherQueue,
-    impl::require<DispatcherQueue, Windows::System::IDispatcherQueue2>
-{
-    DispatcherQueue(std::nullptr_t) noexcept {}
-    static Windows::System::DispatcherQueue GetForCurrentThread();
-};
-
-struct WINRT_EBO DispatcherQueueController :
-    Windows::System::IDispatcherQueueController
-{
-    DispatcherQueueController(std::nullptr_t) noexcept {}
-    static Windows::System::DispatcherQueueController CreateOnDedicatedThread();
-};
-
-struct WINRT_EBO DispatcherQueueShutdownStartingEventArgs :
-    Windows::System::IDispatcherQueueShutdownStartingEventArgs
-{
-    DispatcherQueueShutdownStartingEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO DispatcherQueueTimer :
-    Windows::System::IDispatcherQueueTimer
-{
-    DispatcherQueueTimer(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO FolderLauncherOptions :
-    Windows::System::IFolderLauncherOptions,
-    impl::require<FolderLauncherOptions, Windows::System::ILauncherViewOptions>
-{
-    FolderLauncherOptions(std::nullptr_t) noexcept {}
-    FolderLauncherOptions();
-};
-
-struct KnownUserProperties
-{
-    KnownUserProperties() = delete;
-    static hstring DisplayName();
-    static hstring FirstName();
-    static hstring LastName();
-    static hstring ProviderName();
-    static hstring AccountName();
-    static hstring GuestHost();
-    static hstring PrincipalName();
-    static hstring DomainName();
-    static hstring SessionInitiationProtocolUri();
-};
-
-struct WINRT_EBO LaunchUriResult :
-    Windows::System::ILaunchUriResult
-{
-    LaunchUriResult(std::nullptr_t) noexcept {}
-};
-
-struct Launcher
-{
-    Launcher() = delete;
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFileAsync(Windows::Storage::IStorageFile const& file);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFileAsync(Windows::Storage::IStorageFile const& file, Windows::System::LauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchUriAsync(Windows::Foundation::Uri const& uri);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchUriAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriResult> LaunchUriForResultsAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriResult> LaunchUriForResultsAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchUriAsync(Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryUriSupportAsync(Windows::Foundation::Uri const& uri, Windows::System::LaunchQuerySupportType const& launchQuerySupportType);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryUriSupportAsync(Windows::Foundation::Uri const& uri, Windows::System::LaunchQuerySupportType const& launchQuerySupportType, param::hstring const& packageFamilyName);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryFileSupportAsync(Windows::Storage::StorageFile const& file);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryFileSupportAsync(Windows::Storage::StorageFile const& file, param::hstring const& packageFamilyName);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::AppInfo>> FindUriSchemeHandlersAsync(param::hstring const& scheme);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::AppInfo>> FindUriSchemeHandlersAsync(param::hstring const& scheme, Windows::System::LaunchQuerySupportType const& launchQuerySupportType);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::AppInfo>> FindFileHandlersAsync(param::hstring const& extension);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderAsync(Windows::Storage::IStorageFolder const& folder);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderAsync(Windows::Storage::IStorageFolder const& folder, Windows::System::FolderLauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryAppUriSupportAsync(Windows::Foundation::Uri const& uri);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchQuerySupportStatus> QueryAppUriSupportAsync(Windows::Foundation::Uri const& uri, param::hstring const& packageFamilyName);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::ApplicationModel::AppInfo>> FindAppUriHandlersAsync(Windows::Foundation::Uri const& uri);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriStatus> LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriStatus> LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriStatus> LaunchUriForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriResult> LaunchUriForResultsForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::LaunchUriResult> LaunchUriForResultsForUserAsync(Windows::System::User const& user, Windows::Foundation::Uri const& uri, Windows::System::LauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderPathAsync(param::hstring const& path);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderPathAsync(param::hstring const& path, Windows::System::FolderLauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderPathForUserAsync(Windows::System::User const& user, param::hstring const& path);
-    static Windows::Foundation::IAsyncOperation<bool> LaunchFolderPathForUserAsync(Windows::System::User const& user, param::hstring const& path, Windows::System::FolderLauncherOptions const& options);
-};
-
-struct WINRT_EBO LauncherOptions :
-    Windows::System::ILauncherOptions,
-    impl::require<LauncherOptions, Windows::System::ILauncherOptions2, Windows::System::ILauncherOptions3, Windows::System::ILauncherOptions4, Windows::System::ILauncherViewOptions>
-{
-    LauncherOptions(std::nullptr_t) noexcept {}
-    LauncherOptions();
-};
-
-struct WINRT_EBO LauncherUIOptions :
-    Windows::System::ILauncherUIOptions
-{
-    LauncherUIOptions(std::nullptr_t) noexcept {}
-};
-
-struct MemoryManager
-{
-    MemoryManager() = delete;
-    static uint64_t AppMemoryUsage();
-    static uint64_t AppMemoryUsageLimit();
-    static Windows::System::AppMemoryUsageLevel AppMemoryUsageLevel();
-    static winrt::event_token AppMemoryUsageIncreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    using AppMemoryUsageIncreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageIncreased>;
-    static AppMemoryUsageIncreased_revoker AppMemoryUsageIncreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    static void AppMemoryUsageIncreased(winrt::event_token const& token);
-    static winrt::event_token AppMemoryUsageDecreased(Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    using AppMemoryUsageDecreased_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageDecreased>;
-    static AppMemoryUsageDecreased_revoker AppMemoryUsageDecreased(auto_revoke_t, Windows::Foundation::EventHandler<Windows::Foundation::IInspectable> const& handler);
-    static void AppMemoryUsageDecreased(winrt::event_token const& token);
-    static winrt::event_token AppMemoryUsageLimitChanging(Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
-    using AppMemoryUsageLimitChanging_revoker = impl::factory_event_revoker<Windows::System::IMemoryManagerStatics, &impl::abi_t<Windows::System::IMemoryManagerStatics>::remove_AppMemoryUsageLimitChanging>;
-    static AppMemoryUsageLimitChanging_revoker AppMemoryUsageLimitChanging(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::AppMemoryUsageLimitChangingEventArgs> const& handler);
-    static void AppMemoryUsageLimitChanging(winrt::event_token const& token);
-    static Windows::System::AppMemoryReport GetAppMemoryReport();
-    static Windows::System::ProcessMemoryReport GetProcessMemoryReport();
-    static bool TrySetAppMemoryUsageLimit(uint64_t value);
-    static uint64_t ExpectedAppMemoryUsageLimit();
-};
-
-struct ProcessLauncher
-{
-    ProcessLauncher() = delete;
-    static Windows::Foundation::IAsyncOperation<Windows::System::ProcessLauncherResult> RunToCompletionAsync(param::hstring const& fileName, param::hstring const& args);
-    static Windows::Foundation::IAsyncOperation<Windows::System::ProcessLauncherResult> RunToCompletionAsync(param::hstring const& fileName, param::hstring const& args, Windows::System::ProcessLauncherOptions const& options);
-};
-
-struct WINRT_EBO ProcessLauncherOptions :
-    Windows::System::IProcessLauncherOptions
-{
-    ProcessLauncherOptions(std::nullptr_t) noexcept {}
-    ProcessLauncherOptions();
-};
-
-struct WINRT_EBO ProcessLauncherResult :
-    Windows::System::IProcessLauncherResult
-{
-    ProcessLauncherResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProcessMemoryReport :
-    Windows::System::IProcessMemoryReport
-{
-    ProcessMemoryReport(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProtocolForResultsOperation :
-    Windows::System::IProtocolForResultsOperation
-{
-    ProtocolForResultsOperation(std::nullptr_t) noexcept {}
-};
-
-struct RemoteLauncher
-{
-    RemoteLauncher() = delete;
-    static Windows::Foundation::IAsyncOperation<Windows::System::RemoteLaunchUriStatus> LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri);
-    static Windows::Foundation::IAsyncOperation<Windows::System::RemoteLaunchUriStatus> LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri, Windows::System::RemoteLauncherOptions const& options);
-    static Windows::Foundation::IAsyncOperation<Windows::System::RemoteLaunchUriStatus> LaunchUriAsync(Windows::System::RemoteSystems::RemoteSystemConnectionRequest const& remoteSystemConnectionRequest, Windows::Foundation::Uri const& uri, Windows::System::RemoteLauncherOptions const& options, Windows::Foundation::Collections::ValueSet const& inputData);
-};
-
-struct WINRT_EBO RemoteLauncherOptions :
-    Windows::System::IRemoteLauncherOptions
-{
-    RemoteLauncherOptions(std::nullptr_t) noexcept {}
-    RemoteLauncherOptions();
-};
-
-struct ShutdownManager
-{
-    ShutdownManager() = delete;
-    static void BeginShutdown(Windows::System::ShutdownKind const& shutdownKind, Windows::Foundation::TimeSpan const& timeout);
-    static void CancelShutdown();
-    static bool IsPowerStateSupported(Windows::System::PowerState const& powerState);
-    static void EnterPowerState(Windows::System::PowerState const& powerState);
-    static void EnterPowerState(Windows::System::PowerState const& powerState, Windows::Foundation::TimeSpan const& wakeUpAfter);
-};
-
-struct TimeZoneSettings
-{
-    TimeZoneSettings() = delete;
-    static hstring CurrentTimeZoneDisplayName();
-    static Windows::Foundation::Collections::IVectorView<hstring> SupportedTimeZoneDisplayNames();
-    static bool CanChangeTimeZone();
-    static void ChangeTimeZoneByDisplayName(param::hstring const& timeZoneDisplayName);
-    static Windows::Foundation::IAsyncOperation<Windows::System::AutoUpdateTimeZoneStatus> AutoUpdateTimeZoneAsync(Windows::Foundation::TimeSpan const& timeout);
-};
-
-struct WINRT_EBO User :
-    Windows::System::IUser
-{
-    User(std::nullptr_t) noexcept {}
-    static Windows::System::UserWatcher CreateWatcher();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::System::User>> FindAllAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::System::User>> FindAllAsync(Windows::System::UserType const& type);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::System::User>> FindAllAsync(Windows::System::UserType const& type, Windows::System::UserAuthenticationStatus const& status);
-    static Windows::System::User GetFromId(param::hstring const& nonRoamableId);
-};
-
-struct WINRT_EBO UserAuthenticationStatusChangeDeferral :
-    Windows::System::IUserAuthenticationStatusChangeDeferral
-{
-    UserAuthenticationStatusChangeDeferral(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UserAuthenticationStatusChangingEventArgs :
-    Windows::System::IUserAuthenticationStatusChangingEventArgs
-{
-    UserAuthenticationStatusChangingEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UserChangedEventArgs :
-    Windows::System::IUserChangedEventArgs
-{
-    UserChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct UserDeviceAssociation
-{
-    UserDeviceAssociation() = delete;
-    static Windows::System::User FindUserFromDeviceId(param::hstring const& deviceId);
-    static winrt::event_token UserDeviceAssociationChanged(Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
-    using UserDeviceAssociationChanged_revoker = impl::factory_event_revoker<Windows::System::IUserDeviceAssociationStatics, &impl::abi_t<Windows::System::IUserDeviceAssociationStatics>::remove_UserDeviceAssociationChanged>;
-    static UserDeviceAssociationChanged_revoker UserDeviceAssociationChanged(auto_revoke_t, Windows::Foundation::EventHandler<Windows::System::UserDeviceAssociationChangedEventArgs> const& handler);
-    static void UserDeviceAssociationChanged(winrt::event_token const& token);
-};
-
-struct WINRT_EBO UserDeviceAssociationChangedEventArgs :
-    Windows::System::IUserDeviceAssociationChangedEventArgs
-{
-    UserDeviceAssociationChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO UserPicker :
-    Windows::System::IUserPicker
-{
-    UserPicker(std::nullptr_t) noexcept {}
-    UserPicker();
-    static bool IsSupported();
-};
-
-struct WINRT_EBO UserWatcher :
-    Windows::System::IUserWatcher
-{
-    UserWatcher(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

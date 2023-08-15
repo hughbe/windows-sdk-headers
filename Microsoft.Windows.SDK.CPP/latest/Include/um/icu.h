@@ -30,6 +30,9 @@
 // bytestriebuilder.h
 // No supported content
 
+// caniter.h
+// No supported content
+
 // casemap.h
 // No supported content
 
@@ -66,6 +69,9 @@
 // idna.h
 // No supported content
 
+// localebuilder.h
+// No supported content
+
 // localpointer.h
 // No supported content
 
@@ -73,6 +79,9 @@
 // No supported content
 
 // locid.h
+// No supported content
+
+// messagepattern.h
 // No supported content
 
 // normalizer2.h
@@ -106,6 +115,9 @@
 // No supported content
 
 // stringpiece.h
+// No supported content
+
+// stringtriebuilder.h
 // No supported content
 
 // symtable.h
@@ -168,15 +180,6 @@
  * @stable ICU 2.4
  */
 
-/**
- * If this switch is defined, ICU will attempt to load a header file named "uconfig_local.h"
- * prior to determining default settings for uconfig variables.
- *
- * @internal ICU 4.0
- */
-#if defined(UCONFIG_USE_LOCAL)
-#include "uconfig_local.h"
-#endif
 
 /**
  * \def U_DEBUG
@@ -482,6 +485,7 @@
 #   define UCONFIG_MSGPAT_DEFAULT_APOSTROPHE_MODE UMSGPAT_APOS_DOUBLE_OPTIONAL
 #endif
 
+
 /* i18n library switches ---------------------------------------------------- */
 
 /**
@@ -544,17 +548,6 @@
 #   define UCONFIG_HAVE_PARSEALLINPUT 1
 #endif
 
-
-/**
- * \def UCONFIG_FORMAT_FASTPATHS_49
- * This switch turns on other formatting fastpaths. Binary incompatible in object DecimalFormat and DecimalFormatSymbols
- *
- * @internal
- */
-#ifndef UCONFIG_FORMAT_FASTPATHS_49
-#   define UCONFIG_FORMAT_FASTPATHS_49 1
-#endif
-
 /**
  * \def UCONFIG_NO_FILTERED_BREAK_ITERATION
  * This switch turns off filtered break iteration code.
@@ -592,6 +585,9 @@
 // No supported content
 
 // unistr.h
+// No supported content
+
+// uobject.h
 // No supported content
 
 // urename.h
@@ -801,20 +797,6 @@
 #   define U_PLATFORM U_PF_OS400
 #else
 #   define U_PLATFORM U_PF_UNKNOWN
-#endif
-
-/**
- * \def UPRV_INCOMPLETE_CPP11_SUPPORT
- * This switch turns off ICU 60 NumberFormatter code.
- * By default, this switch is enabled on AIX and z/OS,
- * which have poor C++11 support.
- *
- * NOTE: This switch is intended to be temporary; see #13393.
- *
- * @internal
- */
-#ifndef UPRV_INCOMPLETE_CPP11_SUPPORT
-#   define UPRV_INCOMPLETE_CPP11_SUPPORT (U_PLATFORM == U_PF_AIX || U_PLATFORM == U_PF_OS390 || U_PLATFORM == U_PF_SOLARIS )
 #endif
 
 /**
@@ -1390,7 +1372,7 @@ namespace std {
 #elif defined(U_STATIC_IMPLEMENTATION)
 #   define U_EXPORT
 #elif defined(_MSC_VER) || (__has_declspec_attribute(dllexport) && __has_declspec_attribute(dllimport))
-#    define U_EXPORT __declspec(dllexport)
+#   define U_EXPORT __declspec(dllexport)
 #elif defined(__GNUC__)
 #   define U_EXPORT __attribute__((visibility("default")))
 #elif (defined(__SUNPRO_CC) && __SUNPRO_CC >= 0x550) \
@@ -1398,8 +1380,6 @@ namespace std {
 #   define U_EXPORT __global
 /*#elif defined(__HP_aCC) || defined(__HP_cc)
 #   define U_EXPORT __declspec(dllexport)*/
-#elif defined(_MSC_VER)
-#   define U_EXPORT __declspec(dllexport)
 #else
 #   define U_EXPORT
 #endif
@@ -1739,39 +1719,6 @@ typedef unsigned int uint32_t;
 /** This is used to declare a function as an internal ICU C API  */
 #define U_INTERNAL U_CAPI
 
-/**
- * \def U_OVERRIDE
- * Defined to the C++11 "override" keyword if available.
- * Denotes a class or member which is an override of the base class.
- * May result in an error if it applied to something not an override.
- * @internal
- */
-
-/**
- * \def U_FINAL
- * Defined to the C++11 "final" keyword if available.
- * Denotes a class or member which may not be overridden in subclasses.
- * May result in an error if subclasses attempt to override.
- * @internal
- */
-
-#if U_CPLUSPLUS_VERSION >= 11
-/* C++11 */
-#ifndef U_OVERRIDE
-#define U_OVERRIDE override
-#endif
-#if !defined(U_FINAL) || defined(U_IN_DOXYGEN)
-#define U_FINAL final
-#endif
-#else
-/* not C++11 - define to nothing */
-#ifndef U_OVERRIDE
-#define U_OVERRIDE
-#endif
-#ifndef U_FINAL
-#define U_FINAL
-#endif
-#endif
 
 /*==========================================================================*/
 /* limits for int32_t etc., like in POSIX inttypes.h                        */
@@ -1927,6 +1874,8 @@ typedef int8_t UBool;
 #else
 # define U_CHAR16_IS_TYPEDEF 0
 #endif
+
+
 /**
  * \var UChar
  *
@@ -2961,6 +2910,56 @@ utf8_back1SafeBody(const uint8_t *s, int32_t start, int32_t i);
     } \
 }
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+/**
+ * If the string ends with a UTF-8 byte sequence that is valid so far
+ * but incomplete, then reduce the length of the string to end before
+ * the lead byte of that incomplete sequence.
+ * For example, if the string ends with E1 80, the length is reduced by 2.
+ *
+ * In all other cases (the string ends with a complete sequence, or it is not
+ * possible for any further trail byte to extend the trailing sequence)
+ * the length remains unchanged.
+ *
+ * Useful for processing text split across multiple buffers
+ * (save the incomplete sequence for later)
+ * and for optimizing iteration
+ * (check for string length only once per character).
+ *
+ * "Safe" macro, checks for illegal sequences and for string boundaries.
+ * Unlike U8_SET_CP_START(), this macro never reads s[length].
+ *
+ * (In UTF-16, simply check for U16_IS_LEAD(last code unit).)
+ *
+ * @param s const uint8_t * string
+ * @param start int32_t starting string offset (usually 0)
+ * @param length int32_t string length (usually start<=length)
+ * @see U8_SET_CP_START
+ * @stable ICU 61
+ */
+#define U8_TRUNCATE_IF_INCOMPLETE(s, start, length) \
+    if((length)>(start)) { \
+        uint8_t __b1=s[(length)-1]; \
+        if(U8_IS_SINGLE(__b1)) { \
+            /* common ASCII character */ \
+        } else if(U8_IS_LEAD(__b1)) { \
+            --(length); \
+        } else if(U8_IS_TRAIL(__b1) && ((length)-2)>=(start)) { \
+            uint8_t __b2=s[(length)-2]; \
+            if(0xe0<=__b2 && __b2<=0xf4) { \
+                if(__b2<0xf0 ? U8_IS_VALID_LEAD3_AND_T1(__b2, __b1) : \
+                        U8_IS_VALID_LEAD4_AND_T1(__b2, __b1)) { \
+                    (length)-=2; \
+                } \
+            } else if(U8_IS_TRAIL(__b2) && ((length)-3)>=(start)) { \
+                uint8_t __b3=s[(length)-3]; \
+                if(0xf0<=__b3 && __b3<=0xf4 && U8_IS_VALID_LEAD4_AND_T1(__b3, __b2)) { \
+                    (length)-=3; \
+                } \
+            } \
+        } \
+    }
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 /* definitions with backward iteration -------------------------------------- */
 
@@ -5185,88 +5184,6 @@ U_CFUNC U_IMPORT const uint8_t utf8_countTrailBytes[];    /* U_IMPORT2? */ /*U_I
  */
 typedef uint8_t UVersionInfo[U_MAX_VERSION_LENGTH];
 
-/*===========================================================================*/
-/* C++ namespace if supported. Versioned unless versioning is disabled.      */
-/*===========================================================================*/
-
-/**
- * \def U_NAMESPACE_BEGIN
- * This is used to begin a declaration of a public ICU C++ API.
- * When not compiling for C++, it does nothing.
- * When compiling for C++, it begins an extern "C++" linkage block (to protect
- * against cases in which an external client includes ICU header files inside
- * an extern "C" linkage block).
- *
- * It also begins a versioned-ICU-namespace block.
- * @stable ICU 2.4
- */
-
-/**
- * \def U_NAMESPACE_END
- * This is used to end a declaration of a public ICU C++ API.
- * When not compiling for C++, it does nothing.
- * When compiling for C++, it ends the extern "C++" block begun by
- * U_NAMESPACE_BEGIN.
- *
- * It also ends the versioned-ICU-namespace block begun by U_NAMESPACE_BEGIN.
- * @stable ICU 2.4
- */
-
-/**
- * \def U_NAMESPACE_USE
- * This is used to specify that the rest of the code uses the
- * public ICU C++ API namespace.
- * This is invoked by default; we recommend that you turn it off:
- * See the "Recommended Build Options" section of the ICU4C readme
- * (http://source.icu-project.org/repos/icu/icu/trunk/readme.html#RecBuild)
- * @stable ICU 2.4
- */
-
-/**
- * \def U_NAMESPACE_QUALIFIER
- * This is used to qualify that a function or class is part of
- * the public ICU C++ API namespace.
- *
- * This macro is unnecessary since ICU 49 requires namespace support.
- * You can just use "icu::" instead.
- * @stable ICU 2.4
- */
-
-/* Define C++ namespace symbols. */
-#ifdef __cplusplus
-#   if U_DISABLE_RENAMING
-#       define U_ICU_NAMESPACE icu
-        namespace U_ICU_NAMESPACE { }
-#   else
-#       define U_ICU_NAMESPACE U_ICU_ENTRY_POINT_RENAME(icu)
-        namespace U_ICU_NAMESPACE { }
-        namespace icu = U_ICU_NAMESPACE;
-#   endif
-
-#   define U_NAMESPACE_BEGIN extern "C++" { namespace U_ICU_NAMESPACE {
-#   define U_NAMESPACE_END } }
-#   define U_NAMESPACE_USE using namespace U_ICU_NAMESPACE;
-#   define U_NAMESPACE_QUALIFIER U_ICU_NAMESPACE::
-
-#   ifndef U_USING_ICU_NAMESPACE
-#       if defined(U_COMBINED_IMPLEMENTATION) || defined(U_COMMON_IMPLEMENTATION) || \
-                defined(U_I18N_IMPLEMENTATION) || defined(U_IO_IMPLEMENTATION) || \
-                defined(U_LAYOUTEX_IMPLEMENTATION) || defined(U_TOOLUTIL_IMPLEMENTATION)
-#           define U_USING_ICU_NAMESPACE 0
-#       else
-#           define U_USING_ICU_NAMESPACE 0
-#       endif
-#   endif
-
-#   if U_USING_ICU_NAMESPACE
-        U_NAMESPACE_USE
-#   endif
-#else
-#   define U_NAMESPACE_BEGIN
-#   define U_NAMESPACE_END
-#   define U_NAMESPACE_USE
-#   define U_NAMESPACE_QUALIFIER
-#endif
 
 /*===========================================================================*/
 /* General version helper functions. Definitions in putil.c                  */
@@ -5409,68 +5326,6 @@ u_getVersion(UVersionInfo versionArray);
 #endif
 
 /** @} */
-
-/*===========================================================================*/
-/* ICUDATA naming scheme                                                     */
-/*===========================================================================*/
-
-/**
- * \def U_ICUDATA_TYPE_LETTER
- *
- * This is a platform-dependent string containing one letter:
- * - b for big-endian, ASCII-family platforms
- * - l for little-endian, ASCII-family platforms
- * - e for big-endian, EBCDIC-family platforms
- * This letter is part of the common data file name.
- * @stable ICU 2.0
- */
-
-/**
- * \def U_ICUDATA_TYPE_LITLETTER
- * The non-string form of U_ICUDATA_TYPE_LETTER
- * @stable ICU 2.0
- */
-#if U_CHARSET_FAMILY
-#   if U_IS_BIG_ENDIAN
-   /* EBCDIC - should always be BE */
-#     define U_ICUDATA_TYPE_LETTER "e"
-#     define U_ICUDATA_TYPE_LITLETTER e
-#   else
-#     error "Don't know what to do with little endian EBCDIC!"
-#     define U_ICUDATA_TYPE_LETTER "x"
-#     define U_ICUDATA_TYPE_LITLETTER x
-#   endif
-#else
-#   if U_IS_BIG_ENDIAN
-      /* Big-endian ASCII */
-#     define U_ICUDATA_TYPE_LETTER "b"
-#     define U_ICUDATA_TYPE_LITLETTER b
-#   else
-      /* Little-endian ASCII */
-#     define U_ICUDATA_TYPE_LETTER "l"
-#     define U_ICUDATA_TYPE_LITLETTER l
-#   endif
-#endif
-
-/**
- * A single string literal containing the icudata stub name. i.e. 'icudt18e' for
- * ICU 1.8.x on EBCDIC, etc..
- * @stable ICU 2.0
- */
-#define U_ICUDATA_NAME    "icudt" U_ICU_VERSION_SHORT U_ICUDATA_TYPE_LETTER
-
-/**
- *  U_ICU_ENTRY_POINT is the name of the DLL entry point to the ICU data library.
- *    Defined as a literal, not a string.
- *    Tricky Preprocessor use - ## operator replaces macro parameters with the literal string
- *                              from the corresponding macro invocation, _before_ other macro substitutions.
- *                              Need a nested \#defines to get the actual version numbers rather than
- *                              the literal text U_ICU_VERSION_MAJOR_NUM into the name.
- *                              The net result will be something of the form
- *                                  \#define U_ICU_ENTRY_POINT icudt19_dat
- * @stable ICU 2.4
- */
-#define U_ICUDATA_ENTRY_POINT  U_DEF2_ICUDATA_ENTRY_POINT(U_ICU_VERSION_MAJOR_NUM,U_LIB_SUFFIX_C_NAME)
 
 
 /**
@@ -5820,7 +5675,10 @@ typedef enum UErrorCode {
     U_DEFAULT_KEYWORD_MISSING,        /**< Missing DEFAULT rule in plural rules */
     U_DECIMAL_NUMBER_SYNTAX_ERROR,    /**< Decimal number syntax error */
     U_FORMAT_INEXACT_ERROR,           /**< Cannot format a number exactly and rounding mode is ROUND_UNNECESSARY @stable ICU 4.8 */
-
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+    U_NUMBER_ARG_OUTOFBOUNDS_ERROR,   /**< The argument to a NumberFormatter helper method was out of bounds; the bounds are usually 0 to 999. @stable ICU 61 */
+    U_NUMBER_SKELETON_SYNTAX_ERROR,   /**< The number skeleton passed to C++ NumberFormatter or C UNumberFormatter was invalid or contained a syntax error. @stable ICU 62 */
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
     /*
      * Error codes in the range 0x10200 0x102ff are reserved for BreakIterator.
      */
@@ -7336,6 +7194,17 @@ typedef enum UScriptCode {
       USCRIPT_OLD_SOGDIAN                   = 184,/* Sogo */
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+      /** @stable ICU 64 */
+      USCRIPT_ELYMAIC                       = 185,/* Elym */
+      /** @stable ICU 64 */
+      USCRIPT_NYIAKENG_PUACHUE_HMONG        = 186,/* Hmnp */
+      /** @stable ICU 64 */
+      USCRIPT_NANDINAGARI                   = 187,/* Nand */
+      /** @stable ICU 64 */
+      USCRIPT_WANCHO                        = 188,/* Wcho */
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
+
 } UScriptCode;
 
 /**
@@ -7689,103 +7558,6 @@ U_CDECL_END
 
 #endif
 
-// uobject.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-******************************************************************************
-*
-*   Copyright (C) 2002-2012, International Business Machines
-*   Corporation and others.  All Rights Reserved.
-*
-******************************************************************************
-*   file name:  uobject.h
-*   encoding:   UTF-8
-*   tab size:   8 (not used)
-*   indentation:4
-*
-*   created on: 2002jun26
-*   created by: Markus W. Scherer
-*/
-
-#ifndef __UOBJECT_H__
-#define __UOBJECT_H__
-
-
-/**
- * \file
- * \brief C++ API: Common ICU base class UObject.
- */
-
-/**
- * @{
- * \def U_NO_THROW
- *         Define this to define the throw() specification so
- *                 certain functions do not throw any exceptions
- *
- *         UMemory operator new methods should have the throw() specification 
- *         appended to them, so that the compiler adds the additional NULL check 
- *         before calling constructors. Without, if <code>operator new</code> returns NULL the 
- *         constructor is still called, and if the constructor references member 
- *         data, (which it typically does), the result is a segmentation violation.
- *
- * @stable ICU 4.2
- */
-#ifndef U_NO_THROW
-#define U_NO_THROW throw()
-#endif
-
-/** @} */
-
-/*===========================================================================*/
-/* UClassID-based RTTI */
-/*===========================================================================*/
-
-/**
- * UClassID is used to identify classes without using the compiler's RTTI.
- * This was used before C++ compilers consistently supported RTTI.
- * ICU 4.6 requires compiler RTTI to be turned on.
- *
- * Each class hierarchy which needs
- * to implement polymorphic clone() or operator==() defines two methods,
- * described in detail below.  UClassID values can be compared using
- * operator==(). Nothing else should be done with them.
- *
- * \par
- * In class hierarchies that implement "poor man's RTTI",
- * each concrete subclass implements getDynamicClassID() in the same way:
- *
- * \code
- *      class Derived {
- *      public:
- *          virtual UClassID getDynamicClassID() const
- *            { return Derived::getStaticClassID(); }
- *      }
- * \endcode
- *
- * Each concrete class implements getStaticClassID() as well, which allows
- * clients to test for a specific type.
- *
- * \code
- *      class Derived {
- *      public:
- *          static UClassID U_EXPORT2 getStaticClassID();
- *      private:
- *          static char fgClassID;
- *      }
- *
- *      // In Derived.cpp:
- *      UClassID Derived::getStaticClassID()
- *        { return (UClassID)&Derived::fgClassID; }
- *      char Derived::fgClassID = 0; // Value is irrelevant
- * \endcode
- * @stable ICU 2.0
- */
-typedef void* UClassID;
-
-
-#endif
-
 // umisc.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
@@ -7846,118 +7618,6 @@ typedef const void* URegistryKey;
 #endif
 
 U_CDECL_END
-
-#endif
-
-// ulistformatter.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*****************************************************************************************
-* Copyright (C) 2015-2016, International Business Machines
-* Corporation and others. All Rights Reserved.
-*****************************************************************************************
-*/
-
-#ifndef ULISTFORMATTER_H
-#define ULISTFORMATTER_H
-
-
-#if !UCONFIG_NO_FORMATTING
-
-
-/**
- * \file
- * \brief C API: Format a list in a locale-appropriate way.
- *
- * A UListFormatter is used to format a list of items in a locale-appropriate way, 
- * using data from CLDR.
- * Example: Input data ["Alice", "Bob", "Charlie", "Delta"] will be formatted
- * as "Alice, Bob, Charlie, and Delta" in English.
- */
-
-/**
- * Opaque UListFormatter object for use in C
- * @stable ICU 55
- */
-struct UListFormatter;
-typedef struct UListFormatter UListFormatter;  /**< C typedef for struct UListFormatter. @stable ICU 55 */
-
-/**
- * Open a new UListFormatter object using the rules for a given locale.
- * @param locale
- *            The locale whose rules should be used; may be NULL for
- *            default locale.
- * @param status
- *            A pointer to a standard ICU UErrorCode (input/output parameter).
- *            Its input value must pass the U_SUCCESS() test, or else the
- *            function returns immediately. The caller should check its output
- *            value with U_FAILURE(), or use with function chaining (see User
- *            Guide for details).
- * @return
- *            A pointer to a UListFormatter object for the specified locale,
- *            or NULL if an error occurred.
- * @stable ICU 55
- */
-U_CAPI UListFormatter* U_EXPORT2
-ulistfmt_open(const char*  locale,
-              UErrorCode*  status);
-
-/**
- * Close a UListFormatter object. Once closed it may no longer be used.
- * @param listfmt
- *            The UListFormatter object to close.
- * @stable ICU 55
- */
-U_CAPI void U_EXPORT2
-ulistfmt_close(UListFormatter *listfmt);
-
-
-
-/**
- * Formats a list of strings using the conventions established for the
- * UListFormatter object.
- * @param listfmt
- *            The UListFormatter object specifying the list conventions.
- * @param strings
- *            An array of pointers to UChar strings; the array length is
- *            specified by stringCount. Must be non-NULL if stringCount > 0.
- * @param stringLengths
- *            An array of string lengths corresponding to the strings[]
- *            parameter; any individual length value may be negative to indicate
- *            that the corresponding strings[] entry is 0-terminated, or
- *            stringLengths itself may be NULL if all of the strings are
- *            0-terminated. If non-NULL, the stringLengths array must have
- *            stringCount entries.
- * @param stringCount
- *            the number of entries in strings[], and the number of entries
- *            in the stringLengths array if it is not NULL. Must be >= 0.
- * @param result
- *            A pointer to a buffer to receive the formatted list.
- * @param resultCapacity
- *            The maximum size of result.
- * @param status
- *            A pointer to a standard ICU UErrorCode (input/output parameter).
- *            Its input value must pass the U_SUCCESS() test, or else the
- *            function returns immediately. The caller should check its output
- *            value with U_FAILURE(), or use with function chaining (see User
- *            Guide for details).
- * @return
- *            The total buffer size needed; if greater than resultLength, the
- *            output was truncated. May be <=0 if unable to determine the
- *            total buffer size needed (e.g. for illegal arguments).
- * @stable ICU 55
- */
-U_CAPI int32_t U_EXPORT2
-ulistfmt_format(const UListFormatter* listfmt,
-                const UChar* const strings[],
-                const int32_t *    stringLengths,
-                int32_t            stringCount,
-                UChar*             result,
-                int32_t            resultCapacity,
-                UErrorCode*        status);
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
 
 #endif
 
@@ -8764,8 +8424,6 @@ uenum_reset(UEnumeration* en, UErrorCode* status);
 U_STABLE UEnumeration* U_EXPORT2
 uenum_openUCharStringsEnumeration(const UChar* const strings[], int32_t count,
                                  UErrorCode* ec);
-
-/* Note:  next function is not hidden as draft, as it is used internally (it was formerly an internal function). */
 
 /**
  * Given an array of const char* strings (invariant chars only), return a UEnumeration.  String pointers from 0..count-1 must not be null.
@@ -11284,7 +10942,19 @@ typedef enum UCurrNameStyle {
      * currency, such as "US Dollar" for USD.
      * @stable ICU 2.6
      */
-    UCURR_LONG_NAME
+    UCURR_LONG_NAME,
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+    /**
+     * Selector for getName() indicating the narrow currency symbol.
+     * The narrow currency symbol is similar to the regular currency
+     * symbol, but it always takes the shortest form: for example,
+     * "$" instead of "US$" for USD in en-CA.
+     *
+     * @stable ICU 61
+     */
+    UCURR_NARROW_SYMBOL_NAME
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 } UCurrNameStyle;
 
@@ -11377,6 +11047,13 @@ ucurr_getPluralName(const UChar* currency,
  * Returns the number of the number of fraction digits that should
  * be displayed for the given currency.
  * This is equivalent to ucurr_getDefaultFractionDigitsForUsage(currency,UCURR_USAGE_STANDARD,ec);
+ *
+ * Important: The number of fraction digits for a given currency is NOT
+ * guaranteed to be constant across versions of ICU or CLDR. For example,
+ * do NOT use this value as a mechanism for deciding the magnitude used
+ * to store currency values in a database. You should use this value for
+ * display purposes only.
+ *
  * @param currency null-terminated 3-letter ISO 4217 code
  * @param ec input-output error code
  * @return a non-negative number of fraction digits to be
@@ -11390,6 +11067,13 @@ ucurr_getDefaultFractionDigits(const UChar* currency,
 /**
  * Returns the number of the number of fraction digits that should
  * be displayed for the given currency with usage.
+ *
+ * Important: The number of fraction digits for a given currency is NOT
+ * guaranteed to be constant across versions of ICU or CLDR. For example,
+ * do NOT use this value as a mechanism for deciding the magnitude used
+ * to store currency values in a database. You should use this value for
+ * display purposes only.
+ *
  * @param currency null-terminated 3-letter ISO 4217 code
  * @param usage enum usage for the currency
  * @param ec input-output error code
@@ -11478,7 +11162,7 @@ typedef enum UCurrCurrencyType {
  * Provides a UEnumeration object for listing ISO-4217 codes.
  * @param currType You can use one of several UCurrCurrencyType values for this
  *      variable. You can also | (or) them together to get a specific list of
- *      currencies. Most people will want to use the (UCURR_CURRENCY|UCURR_NON_DEPRECATED) value to
+ *      currencies. Most people will want to use the (UCURR_COMMON|UCURR_NON_DEPRECATED) value to
  *      get a list of current currencies.
  * @param pErrorCode Error code
  * @stable ICU 3.2
@@ -12131,10 +11815,8 @@ U_STABLE void U_EXPORT2 UCNV_TO_U_CALLBACK_ESCAPE (
  * conversion APIs are not used.
  *
  * @see ucnv_getUnicodeSet
- * @stable ICU 2.6
+ * @stable ICU 2.4
  */
-struct USet;
-/** @stable ICU 2.6 */
 typedef struct USet USet;
 
 #endif
@@ -14388,15 +14070,9 @@ typedef void  U_CALLCONV UMemFreeFn (const void *context, void *mem);
  *  @stable ICU 2.8
  *  @system
  */
-#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-U_STABLE void U_EXPORT2 
-u_setMemoryFunctions(const void *context, UMemAllocFn * U_CALLCONV_FPTR a, UMemReallocFn * U_CALLCONV_FPTR r, UMemFreeFn * U_CALLCONV_FPTR f, 
-                    UErrorCode *status);
-#elif (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 U_STABLE void U_EXPORT2 
 u_setMemoryFunctions(const void *context, UMemAllocFn * a, UMemReallocFn * r, UMemFreeFn * f, 
                     UErrorCode *status);
-#endif
 U_CDECL_END
 
 #endif  /* U_HIDE_SYSTEM_API */
@@ -14562,64 +14238,6 @@ U_CDECL_END
 
 #endif /*UCAT_H*/
 /*eof*/
-
-// stringtriebuilder.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-*   Copyright (C) 2010-2012,2014, International Business Machines
-*   Corporation and others.  All Rights Reserved.
-*******************************************************************************
-*   file name:  stringtriebuilder.h
-*   encoding:   UTF-8
-*   tab size:   8 (not used)
-*   indentation:4
-*
-*   created on: 2010dec24
-*   created by: Markus W. Scherer
-*/
-
-#ifndef __STRINGTRIEBUILDER_H__
-#define __STRINGTRIEBUILDER_H__
-
-
-/**
- * \file
- * \brief C++ API: Builder API for trie builders
- */
-
-// Forward declaration.
-/// \cond
-struct UHashtable;
-typedef struct UHashtable UHashtable;
-/// \endcond
-
-/**
- * Build options for BytesTrieBuilder and CharsTrieBuilder.
- * @stable ICU 4.8
- */
-enum UStringTrieBuildOption {
-    /**
-     * Builds a trie quickly.
-     * @stable ICU 4.8
-     */
-    USTRINGTRIE_BUILD_FAST,
-    /**
-     * Builds a trie more slowly, attempting to generate
-     * a shorter but equivalent serialization.
-     * This build option also uses more memory.
-     *
-     * This option can be effective when many integer values are the same
-     * and string/byte sequence suffixes can be shared.
-     * Runtime speed is not expected to improve.
-     * @stable ICU 4.8
-     */
-    USTRINGTRIE_BUILD_SMALL
-};
-
-
-#endif  // __STRINGTRIEBUILDER_H__
 
 // stringoptions.h
 // Copyright (C) 2017 and later: Unicode, Inc. and others.
@@ -14844,21 +14462,26 @@ enum UStringTrieBuildOption {
 #ifndef UCHAR_H
 #define UCHAR_H
 
+
+#if !defined(USET_DEFINED) && !defined(U_IN_DOXYGEN)
+
+#define USET_DEFINED
+
+/**
+ * USet is the C API type corresponding to C++ class UnicodeSet.
+ * It is forward-declared here to avoid including unicode/uset.h file if related
+ * APIs are not used.
+ *
+ * @see ucnv_getUnicodeSet
+ * @stable ICU 2.4
+ */
+typedef struct USet USet;
+
+#endif
+
+
 U_CDECL_BEGIN
 
-/*==========================================================================*/
-/* Unicode version number                                                   */
-/*==========================================================================*/
-/**
- * Unicode version number, default for the current ICU version.
- * The actual Unicode Character Database (UCD) data is stored in uprops.dat
- * and may be generated from UCD files from a different Unicode version.
- * Call u_getUnicodeVersion to get the actual Unicode version of the data.
- *
- * @see u_getUnicodeVersion
- * @stable ICU 2.0
- */
-#define U_UNICODE_VERSION "11.0"
 
 /**
  * \file
@@ -16498,6 +16121,29 @@ enum UBlockCode {
     /** @stable ICU 62 */
     UBLOCK_SOGDIAN = 291, /*[10F30]*/
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+    // New blocks in Unicode 12.0
+
+    /** @stable ICU 64 */
+    UBLOCK_EGYPTIAN_HIEROGLYPH_FORMAT_CONTROLS = 292, /*[13430]*/
+    /** @stable ICU 64 */
+    UBLOCK_ELYMAIC = 293, /*[10FE0]*/
+    /** @stable ICU 64 */
+    UBLOCK_NANDINAGARI = 294, /*[119A0]*/
+    /** @stable ICU 64 */
+    UBLOCK_NYIAKENG_PUACHUE_HMONG = 295, /*[1E100]*/
+    /** @stable ICU 64 */
+    UBLOCK_OTTOMAN_SIYAQ_NUMBERS = 296, /*[1ED00]*/
+    /** @stable ICU 64 */
+    UBLOCK_SMALL_KANA_EXTENSION = 297, /*[1B130]*/
+    /** @stable ICU 64 */
+    UBLOCK_SYMBOLS_AND_PICTOGRAPHS_EXTENDED_A = 298, /*[1FA70]*/
+    /** @stable ICU 64 */
+    UBLOCK_TAMIL_SUPPLEMENT = 299, /*[11FC0]*/
+    /** @stable ICU 64 */
+    UBLOCK_WANCHO = 300, /*[1E2C0]*/
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
     /** @stable ICU 2.0 */
     UBLOCK_INVALID_CODE=-1
@@ -22499,6 +22145,15 @@ struct UText {
 U_STABLE UText * U_EXPORT2
 utext_setup(UText *ut, int32_t extraSpace, UErrorCode *status);
 
+// do not use #ifndef U_HIDE_INTERNAL_API around the following!
+/**
+  * @internal
+  *  Value used to help identify correctly initialized UText structs.
+  *  Note:  must be publicly visible so that UTEXT_INITIALIZER can access it.
+  */
+enum {
+    UTEXT_MAGIC = 0x345ad82c
+};
 
 /**
  * initializer to be used with local (stack) instances of a UText
@@ -22567,6 +22222,20 @@ U_CDECL_END
 #ifndef __USET_H__
 #define __USET_H__
 
+
+#ifndef USET_DEFINED
+
+#ifndef U_IN_DOXYGEN
+#define USET_DEFINED
+#endif
+/**
+ * USet is the C API type corresponding to C++ class UnicodeSet.
+ * Use the uset_* API to manipulate.  Create with
+ * uset_open*, and destroy with uset_close.
+ * @stable ICU 2.4
+ */
+typedef struct USet USet;
+#endif
 
 /**
  * Bitmask values to be passed to uset_openPatternOptions() or
@@ -28101,307 +27770,6 @@ ubrk_getBinaryRules(UBreakIterator *bi,
 
 #endif
 
-// messagepattern.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-*   Copyright (C) 2011-2013, International Business Machines
-*   Corporation and others.  All Rights Reserved.
-*******************************************************************************
-*   file name:  messagepattern.h
-*   encoding:   UTF-8
-*   tab size:   8 (not used)
-*   indentation:4
-*
-*   created on: 2011mar14
-*   created by: Markus W. Scherer
-*/
-
-#ifndef __MESSAGEPATTERN_H__
-#define __MESSAGEPATTERN_H__
-
-/**
- * \file
- * \brief C++ API: MessagePattern class: Parses and represents ICU MessageFormat patterns.
- */
-
-
-#if !UCONFIG_NO_FORMATTING
-
-
-/**
- * Mode for when an apostrophe starts quoted literal text for MessageFormat output.
- * The default is DOUBLE_OPTIONAL unless overridden via uconfig.h
- * (UCONFIG_MSGPAT_DEFAULT_APOSTROPHE_MODE).
- * <p>
- * A pair of adjacent apostrophes always results in a single apostrophe in the output,
- * even when the pair is between two single, text-quoting apostrophes.
- * <p>
- * The following table shows examples of desired MessageFormat.format() output
- * with the pattern strings that yield that output.
- * <p>
- * <table>
- *   <tr>
- *     <th>Desired output</th>
- *     <th>DOUBLE_OPTIONAL</th>
- *     <th>DOUBLE_REQUIRED</th>
- *   </tr>
- *   <tr>
- *     <td>I see {many}</td>
- *     <td>I see '{many}'</td>
- *     <td>(same)</td>
- *   </tr>
- *   <tr>
- *     <td>I said {'Wow!'}</td>
- *     <td>I said '{''Wow!''}'</td>
- *     <td>(same)</td>
- *   </tr>
- *   <tr>
- *     <td>I don't know</td>
- *     <td>I don't know OR<br> I don''t know</td>
- *     <td>I don''t know</td>
- *   </tr>
- * </table>
- * @stable ICU 4.8
- * @see UCONFIG_MSGPAT_DEFAULT_APOSTROPHE_MODE
- */
-enum UMessagePatternApostropheMode {
-    /**
-     * A literal apostrophe is represented by
-     * either a single or a double apostrophe pattern character.
-     * Within a MessageFormat pattern, a single apostrophe only starts quoted literal text
-     * if it immediately precedes a curly brace {},
-     * or a pipe symbol | if inside a choice format,
-     * or a pound symbol # if inside a plural format.
-     * <p>
-     * This is the default behavior starting with ICU 4.8.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_APOS_DOUBLE_OPTIONAL,
-    /**
-     * A literal apostrophe must be represented by
-     * a double apostrophe pattern character.
-     * A single apostrophe always starts quoted literal text.
-     * <p>
-     * This is the behavior of ICU 4.6 and earlier, and of the JDK.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_APOS_DOUBLE_REQUIRED
-};
-/**
- * @stable ICU 4.8
- */
-typedef enum UMessagePatternApostropheMode UMessagePatternApostropheMode;
-
-/**
- * MessagePattern::Part type constants.
- * @stable ICU 4.8
- */
-enum UMessagePatternPartType {
-    /**
-     * Start of a message pattern (main or nested).
-     * The length is 0 for the top-level message
-     * and for a choice argument sub-message, otherwise 1 for the '{'.
-     * The value indicates the nesting level, starting with 0 for the main message.
-     * <p>
-     * There is always a later MSG_LIMIT part.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_MSG_START,
-    /**
-     * End of a message pattern (main or nested).
-     * The length is 0 for the top-level message and
-     * the last sub-message of a choice argument,
-     * otherwise 1 for the '}' or (in a choice argument style) the '|'.
-     * The value indicates the nesting level, starting with 0 for the main message.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_MSG_LIMIT,
-    /**
-     * Indicates a substring of the pattern string which is to be skipped when formatting.
-     * For example, an apostrophe that begins or ends quoted text
-     * would be indicated with such a part.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_SKIP_SYNTAX,
-    /**
-     * Indicates that a syntax character needs to be inserted for auto-quoting.
-     * The length is 0.
-     * The value is the character code of the insertion character. (U+0027=APOSTROPHE)
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_INSERT_CHAR,
-    /**
-     * Indicates a syntactic (non-escaped) # symbol in a plural variant.
-     * When formatting, replace this part's substring with the
-     * (value-offset) for the plural argument value.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_REPLACE_NUMBER,
-    /**
-     * Start of an argument.
-     * The length is 1 for the '{'.
-     * The value is the ordinal value of the ArgType. Use getArgType().
-     * <p>
-     * This part is followed by either an ARG_NUMBER or ARG_NAME,
-     * followed by optional argument sub-parts (see UMessagePatternArgType constants)
-     * and finally an ARG_LIMIT part.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_START,
-    /**
-     * End of an argument.
-     * The length is 1 for the '}'.
-     * The value is the ordinal value of the ArgType. Use getArgType().
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_LIMIT,
-    /**
-     * The argument number, provided by the value.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_NUMBER,
-    /**
-     * The argument name.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_NAME,
-    /**
-     * The argument type.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_TYPE,
-    /**
-     * The argument style text.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_STYLE,
-    /**
-     * A selector substring in a "complex" argument style.
-     * The value is undefined and currently always 0.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_SELECTOR,
-    /**
-     * An integer value, for example the offset or an explicit selector value
-     * in a PluralFormat style.
-     * The part value is the integer value.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_INT,
-    /**
-     * A numeric value, for example the offset or an explicit selector value
-     * in a PluralFormat style.
-     * The part value is an index into an internal array of numeric values;
-     * use getNumericValue().
-     * @stable ICU 4.8
-     */
-    UMSGPAT_PART_TYPE_ARG_DOUBLE
-};
-/**
- * @stable ICU 4.8
- */
-typedef enum UMessagePatternPartType UMessagePatternPartType;
-
-/**
- * Argument type constants.
- * Returned by Part.getArgType() for ARG_START and ARG_LIMIT parts.
- *
- * Messages nested inside an argument are each delimited by MSG_START and MSG_LIMIT,
- * with a nesting level one greater than the surrounding message.
- * @stable ICU 4.8
- */
-enum UMessagePatternArgType {
-    /**
-     * The argument has no specified type.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_TYPE_NONE,
-    /**
-     * The argument has a "simple" type which is provided by the ARG_TYPE part.
-     * An ARG_STYLE part might follow that.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_TYPE_SIMPLE,
-    /**
-     * The argument is a ChoiceFormat with one or more
-     * ((ARG_INT | ARG_DOUBLE), ARG_SELECTOR, message) tuples.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_TYPE_CHOICE,
-    /**
-     * The argument is a cardinal-number PluralFormat with an optional ARG_INT or ARG_DOUBLE offset
-     * (e.g., offset:1)
-     * and one or more (ARG_SELECTOR [explicit-value] message) tuples.
-     * If the selector has an explicit value (e.g., =2), then
-     * that value is provided by the ARG_INT or ARG_DOUBLE part preceding the message.
-     * Otherwise the message immediately follows the ARG_SELECTOR.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_TYPE_PLURAL,
-    /**
-     * The argument is a SelectFormat with one or more (ARG_SELECTOR, message) pairs.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_TYPE_SELECT,
-    /**
-     * The argument is an ordinal-number PluralFormat
-     * with the same style parts sequence and semantics as UMSGPAT_ARG_TYPE_PLURAL.
-     * @stable ICU 50
-     */
-    UMSGPAT_ARG_TYPE_SELECTORDINAL
-};
-/**
- * @stable ICU 4.8
- */
-typedef enum UMessagePatternArgType UMessagePatternArgType;
-
-/**
- * \def UMSGPAT_ARG_TYPE_HAS_PLURAL_STYLE
- * Returns TRUE if the argument type has a plural style part sequence and semantics,
- * for example UMSGPAT_ARG_TYPE_PLURAL and UMSGPAT_ARG_TYPE_SELECTORDINAL.
- * @stable ICU 50
- */
-#define UMSGPAT_ARG_TYPE_HAS_PLURAL_STYLE(argType) \
-    ((argType)==UMSGPAT_ARG_TYPE_PLURAL || (argType)==UMSGPAT_ARG_TYPE_SELECTORDINAL)
-
-enum {
-    /**
-     * Return value from MessagePattern.validateArgumentName() for when
-     * the string is a valid "pattern identifier" but not a number.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_NAME_NOT_NUMBER=-1,
-
-    /**
-     * Return value from MessagePattern.validateArgumentName() for when
-     * the string is invalid.
-     * It might not be a valid "pattern identifier",
-     * or it have only ASCII digits but there is a leading zero or the number is too large.
-     * @stable ICU 4.8
-     */
-    UMSGPAT_ARG_NAME_NOT_VALID=-2
-};
-
-/**
- * Special value that is returned by getNumericValue(Part) when no
- * numeric value is defined for a part.
- * @see MessagePattern.getNumericValue()
- * @stable ICU 4.8
- */
-#define UMSGPAT_NO_NUMERIC_VALUE ((double)(-123456789))
-
-
-#endif  // !UCONFIG_NO_FORMATTING
-
-#endif  // __MESSAGEPATTERN_H__
-
 // icudataver.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
@@ -28446,112 +27814,8 @@ U_STABLE void U_EXPORT2 u_getDataVersion(UVersionInfo dataVersionFillin, UErrorC
 
 #endif
 
-// caniter.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
- *******************************************************************************
- * Copyright (C) 1996-2014, International Business Machines Corporation and
- * others. All Rights Reserved.
- *******************************************************************************
- */
-
-#ifndef CANITER_H
-#define CANITER_H
-
-
-#if !UCONFIG_NO_NORMALIZATION
-
-
-/**
- * \file
- * \brief C++ API: Canonical Iterator
- */
- 
-/** Should permutation skip characters with combining class zero
- *  Should be either TRUE or FALSE. This is a compile time option
- *  @stable ICU 2.4
- */
-#ifndef CANITER_SKIP_ZEROES
-#define CANITER_SKIP_ZEROES TRUE
-#endif
-
-
-#endif /* #if !UCONFIG_NO_NORMALIZATION */
-
-#endif
-
 // alphaindex.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-*
-*   Copyright (C) 2011-2014 International Business Machines
-*   Corporation and others.  All Rights Reserved.
-*
-*******************************************************************************
-*/
-
-#ifndef INDEXCHARS_H
-#define INDEXCHARS_H
-
-
-#if !UCONFIG_NO_COLLATION
-
-/**
- * \file
- * \brief C++ API: Index Characters
- */
-
-U_CDECL_BEGIN
-
-/**
- * Constants for Alphabetic Index Label Types.
- * The form of these enum constants anticipates having a plain C API
- * for Alphabetic Indexes that will also use them.
- * @stable ICU 4.8
- */
-typedef enum UAlphabeticIndexLabelType {
-    /**
-     *  Normal Label, typically the starting letter of the names
-     *  in the bucket with this label.
-     * @stable ICU 4.8
-     */
-    U_ALPHAINDEX_NORMAL    = 0,
-
-    /**
-     * Undeflow Label.  The bucket with this label contains names
-     * in scripts that sort before any of the bucket labels in this index.
-     * @stable ICU 4.8
-     */
-    U_ALPHAINDEX_UNDERFLOW = 1,
-
-    /**
-     * Inflow Label.  The bucket with this label contains names
-     * in scripts that sort between two of the bucket labels in this index.
-     * Inflow labels are created when an index contains normal labels for
-     * multiple scripts, and skips other scripts that sort between some of the
-     * included scripts.
-     * @stable ICU 4.8
-     */
-    U_ALPHAINDEX_INFLOW    = 2,
-
-    /**
-     * Overflow Label. Te bucket with this label contains names in scripts
-     * that sort after all of the bucket labels in this index.
-     * @stable ICU 4.8
-     */
-    U_ALPHAINDEX_OVERFLOW  = 3
-} UAlphabeticIndexLabelType;
-
-
-struct UHashtable;
-U_CDECL_END
-
-
-#endif  // !UCONFIG_NO_COLLATION
-#endif
+// No supported content
 
 // basictz.h
 // No supported content
@@ -28613,6 +27877,9 @@ U_CDECL_END
 // format.h
 // No supported content
 
+// formattedvalue.h
+// No supported content
+
 // fpositer.h
 // No supported content
 
@@ -28625,10 +27892,16 @@ U_CDECL_END
 // listformatter.h
 // No supported content
 
+// measfmt.h
+// No supported content
+
 // measunit.h
 // No supported content
 
 // measure.h
+// No supported content
+
+// msgfmt.h
 // No supported content
 
 // nounit.h
@@ -28644,48 +27917,16 @@ U_CDECL_END
 // No supported content
 
 // numsys.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 2010-2014, International Business Machines Corporation and
-* others. All Rights Reserved.
-*******************************************************************************
-*
-*
-* File NUMSYS.H
-*
-* Modification History:*
-*   Date        Name        Description
-*
-********************************************************************************
-*/
+// No supported content
 
-#ifndef NUMSYS
-#define NUMSYS
+// plurfmt.h
+// No supported content
 
+// plurrule.h
+// No supported content
 
-/**
- * \def NUMSYS_NAME_CAPACITY
- * Size of a numbering system name.
- * @internal
- */
-#define NUMSYS_NAME_CAPACITY 8
-
-
-/**
- * \file
- * \brief C++ API: NumberingSystem object
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif // _NUMSYS
+// rbnf.h
+// No supported content
 
 // rbtz.h
 // No supported content
@@ -28696,42 +27937,17 @@ U_CDECL_END
 // region.h
 // No supported content
 
+// reldatefmt.h
+// No supported content
+
 // scientificnumberformatter.h
 // No supported content
 
+// search.h
+// No supported content
+
 // selfmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/********************************************************************
- * COPYRIGHT:
- * Copyright (c) 1997-2011, International Business Machines Corporation and
- * others. All Rights Reserved.
- * Copyright (C) 2010 , Yahoo! Inc.
- ********************************************************************
- *
- * File SELFMT.H
- *
- * Modification History:
- *
- *   Date        Name        Description
- *   11/11/09    kirtig      Finished first cut of implementation.
- ********************************************************************/
-
-#ifndef SELFMT
-#define SELFMT
-
-
-/**
- * \file
- * \brief C++ API: SelectFormat object
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif // _SELFMT
+// No supported content
 
 // simpletz.h
 // No supported content
@@ -28763,331 +27979,11 @@ U_CDECL_END
 // translit.h
 // No supported content
 
-// tznames.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 2011-2016, International Business Machines Corporation and
-* others. All Rights Reserved.
-*******************************************************************************
-*/
-#ifndef __TZNAMES_H
-#define __TZNAMES_H
-
-/**
- * \file
- * \brief C++ API: TimeZoneNames
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-U_CDECL_BEGIN
-
-/**
- * Constants for time zone display name types.
- * @stable ICU 50
- */
-typedef enum UTimeZoneNameType {
-    /**
-     * Unknown display name type.
-     * @stable ICU 50
-     */
-    UTZNM_UNKNOWN           = 0x00,
-    /**
-     * Long display name, such as "Eastern Time".
-     * @stable ICU 50
-     */
-    UTZNM_LONG_GENERIC      = 0x01,
-    /**
-     * Long display name for standard time, such as "Eastern Standard Time".
-     * @stable ICU 50
-     */
-    UTZNM_LONG_STANDARD     = 0x02,
-    /**
-     * Long display name for daylight saving time, such as "Eastern Daylight Time".
-     * @stable ICU 50
-     */
-    UTZNM_LONG_DAYLIGHT     = 0x04,
-    /**
-     * Short display name, such as "ET".
-     * @stable ICU 50
-     */
-    UTZNM_SHORT_GENERIC     = 0x08,
-    /**
-     * Short display name for standard time, such as "EST".
-     * @stable ICU 50
-     */
-    UTZNM_SHORT_STANDARD    = 0x10,
-    /**
-     * Short display name for daylight saving time, such as "EDT".
-     * @stable ICU 50
-     */
-    UTZNM_SHORT_DAYLIGHT    = 0x20,
-    /**
-     * Exemplar location name, such as "Los Angeles".
-     * @stable ICU 51
-     */
-    UTZNM_EXEMPLAR_LOCATION = 0x40
-} UTimeZoneNameType;
-
-U_CDECL_END
-
-
-#endif
-#endif
-
 // tzfmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 2011-2015, International Business Machines Corporation and
-* others. All Rights Reserved.
-*******************************************************************************
-*/
-#ifndef __TZFMT_H
-#define __TZFMT_H
+// No supported content
 
-/**
- * \file
- * \brief C++ API: TimeZoneFormat
- */
-
-
-#if !UCONFIG_NO_FORMATTING
-
-
-U_CDECL_BEGIN
-/**
- * Constants for time zone display format style used by format/parse APIs
- * in TimeZoneFormat.
- * @stable ICU 50
- */
-typedef enum UTimeZoneFormatStyle {
-    /**
-     * Generic location format, such as "United States Time (New York)", "Italy Time"
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_GENERIC_LOCATION,
-    /**
-     * Generic long non-location format, such as "Eastern Time".
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_GENERIC_LONG,
-    /**
-     * Generic short non-location format, such as "ET".
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_GENERIC_SHORT,
-    /**
-     * Specific long format, such as "Eastern Standard Time".
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_SPECIFIC_LONG,
-    /**
-     * Specific short format, such as "EST", "PDT".
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_SPECIFIC_SHORT,
-    /**
-     * Localized GMT offset format, such as "GMT-05:00", "UTC+0100"
-     * @stable ICU 50
-     */
-    UTZFMT_STYLE_LOCALIZED_GMT,
-    /**
-     * Short localized GMT offset format, such as "GMT-5", "UTC+1:30"
-     * This style is equivalent to the LDML date format pattern "O".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_LOCALIZED_GMT_SHORT,
-    /**
-     * Short ISO 8601 local time difference (basic format) or the UTC indicator.
-     * For example, "-05", "+0530", and "Z"(UTC).
-     * This style is equivalent to the LDML date format pattern "X".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_SHORT,
-    /**
-     * Short ISO 8601 locale time difference (basic format).
-     * For example, "-05" and "+0530".
-     * This style is equivalent to the LDML date format pattern "x".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_LOCAL_SHORT,
-    /**
-     * Fixed width ISO 8601 local time difference (basic format) or the UTC indicator.
-     * For example, "-0500", "+0530", and "Z"(UTC).
-     * This style is equivalent to the LDML date format pattern "XX".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_FIXED,
-    /**
-     * Fixed width ISO 8601 local time difference (basic format).
-     * For example, "-0500" and "+0530".
-     * This style is equivalent to the LDML date format pattern "xx".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_LOCAL_FIXED,
-    /**
-     * ISO 8601 local time difference (basic format) with optional seconds field, or the UTC indicator.
-     * For example, "-0500", "+052538", and "Z"(UTC).
-     * This style is equivalent to the LDML date format pattern "XXXX".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_FULL,
-    /**
-     * ISO 8601 local time difference (basic format) with optional seconds field.
-     * For example, "-0500" and "+052538".
-     * This style is equivalent to the LDML date format pattern "xxxx".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_BASIC_LOCAL_FULL,
-    /**
-     * Fixed width ISO 8601 local time difference (extended format) or the UTC indicator.
-     * For example, "-05:00", "+05:30", and "Z"(UTC).
-     * This style is equivalent to the LDML date format pattern "XXX".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_EXTENDED_FIXED,
-    /**
-     * Fixed width ISO 8601 local time difference (extended format).
-     * For example, "-05:00" and "+05:30".
-     * This style is equivalent to the LDML date format pattern "xxx" and "ZZZZZ".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_EXTENDED_LOCAL_FIXED,
-    /**
-     * ISO 8601 local time difference (extended format) with optional seconds field, or the UTC indicator.
-     * For example, "-05:00", "+05:25:38", and "Z"(UTC).
-     * This style is equivalent to the LDML date format pattern "XXXXX".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_EXTENDED_FULL,
-    /**
-     * ISO 8601 local time difference (extended format) with optional seconds field.
-     * For example, "-05:00" and "+05:25:38".
-     * This style is equivalent to the LDML date format pattern "xxxxx".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ISO_EXTENDED_LOCAL_FULL,
-    /**
-     * Time Zone ID, such as "America/Los_Angeles".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ZONE_ID,
-    /**
-     * Short Time Zone ID (BCP 47 Unicode location extension, time zone type value), such as "uslax".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_ZONE_ID_SHORT,
-    /**
-     * Exemplar location, such as "Los Angeles" and "Paris".
-     * @stable ICU 51
-     */
-    UTZFMT_STYLE_EXEMPLAR_LOCATION
-} UTimeZoneFormatStyle;
-
-/**
- * Constants for GMT offset pattern types.
- * @stable ICU 50
- */
-typedef enum UTimeZoneFormatGMTOffsetPatternType {
-    /**
-     * Positive offset with hours and minutes fields
-     * @stable ICU 50
-     */
-    UTZFMT_PAT_POSITIVE_HM,
-    /**
-     * Positive offset with hours, minutes and seconds fields
-     * @stable ICU 50
-     */
-    UTZFMT_PAT_POSITIVE_HMS,
-    /**
-     * Negative offset with hours and minutes fields
-     * @stable ICU 50
-     */
-    UTZFMT_PAT_NEGATIVE_HM,
-    /**
-     * Negative offset with hours, minutes and seconds fields
-     * @stable ICU 50
-     */
-    UTZFMT_PAT_NEGATIVE_HMS,
-    /**
-     * Positive offset with hours field
-     * @stable ICU 51
-     */
-    UTZFMT_PAT_POSITIVE_H,
-    /**
-     * Negative offset with hours field
-     * @stable ICU 51
-     */
-    UTZFMT_PAT_NEGATIVE_H,
-
-    /* The following cannot be #ifndef U_HIDE_INTERNAL_API, needed for other .h declarations */
-    /**
-     * Number of UTimeZoneFormatGMTOffsetPatternType types.
-     * @internal
-     */
-    UTZFMT_PAT_COUNT = 6
-} UTimeZoneFormatGMTOffsetPatternType;
-
-/**
- * Constants for time types used by TimeZoneFormat APIs for
- * receiving time type (standard time, daylight time or unknown).
- * @stable ICU 50
- */
-typedef enum UTimeZoneFormatTimeType {
-    /**
-     * Unknown
-     * @stable ICU 50
-     */
-    UTZFMT_TIME_TYPE_UNKNOWN,
-    /**
-     * Standard time
-     * @stable ICU 50
-     */
-    UTZFMT_TIME_TYPE_STANDARD,
-    /**
-     * Daylight saving time
-     * @stable ICU 50
-     */
-    UTZFMT_TIME_TYPE_DAYLIGHT
-} UTimeZoneFormatTimeType;
-
-/**
- * Constants for parse option flags, used for specifying optional parse behavior.
- * @stable ICU 50
- */
-typedef enum UTimeZoneFormatParseOption {
-    /**
-     * No option.
-     * @stable ICU 50
-     */
-    UTZFMT_PARSE_OPTION_NONE        = 0x00,
-    /**
-     * When a time zone display name is not found within a set of display names
-     * used for the specified style, look for the name from display names used
-     * by other styles.
-     * @stable ICU 50
-     */
-    UTZFMT_PARSE_OPTION_ALL_STYLES  = 0x01,
-     /**
-      * When parsing a time zone display name in \link UTZFMT_STYLE_SPECIFIC_SHORT \endlink,
-      * look for the IANA tz database compatible zone abbreviations in addition
-      * to the localized names coming from the icu::TimeZoneNames currently
-      * used by the icu::TimeZoneFormat.
-      * @stable ICU 54
-      */
-    UTZFMT_PARSE_OPTION_TZ_DATABASE_ABBREVIATIONS = 0x02
-} UTimeZoneFormatParseOption;
-
-U_CDECL_END
-
-
-#endif /* !UCONFIG_NO_FORMATTING */
-#endif
+// tznames.h
+// No supported content
 
 // tzrule.h
 // No supported content
@@ -29199,7 +28095,7 @@ U_CDECL_END
  * <p>
  * <strong>Note:</strong> for some non-Gregorian calendars, different
  * fields may be necessary for complete disambiguation. For example, a full
- * specification of the historial Arabic astronomical calendar requires year,
+ * specification of the historical Arabic astronomical calendar requires year,
  * month, day-of-month <em>and</em> day-of-week in some cases.
  *
  * <p>
@@ -29240,13 +28136,18 @@ U_CDECL_END
  * abdication is scheduled ahead of time, the new era name might not be
  * announced until just before the date. In such case, ICU4C may include
  * a start date of future era without actual era name, but not enabled
- * by default.
+ * by default. ICU4C users who want to test the behavior of the future era
+ * can enable the tentative era by:
+ * <ul>
+ * <li>Environment variable <code>ICU_ENABLE_TENTATIVE_ERA=true</code>.</li>
+ * </ul>
  *
  * @stable ICU 2.0
  */
 
 /**
  * The time zone ID reserved for unknown time zone.
+ * It behaves like the GMT/UTC time zone but has the special ID "Etc/Unknown".
  * @stable ICU 4.8
  */
 #define UCAL_UNKNOWN_ZONE_ID "Etc/Unknown"
@@ -29710,8 +28611,13 @@ ucal_openCountryTimeZones(const char* country, UErrorCode* ec);
 
 /**
  * Return the default time zone. The default is determined initially
- * by querying the host operating system. It may be changed with
- * ucal_setDefaultTimeZone() or with the C++ TimeZone API.
+ * by querying the host operating system. If the host system detection
+ * routines fail, or if they specify a TimeZone or TimeZone offset
+ * which is not recognized, then the special TimeZone "Etc/Unknown"
+ * is returned.
+ * 
+ * The default may be changed with `ucal_setDefaultTimeZone()` or with
+ * the C++ TimeZone API, `TimeZone::adoptDefault(TimeZone*)`.
  *
  * @param result A buffer to receive the result, or NULL
  *
@@ -29721,7 +28627,9 @@ ucal_openCountryTimeZones(const char* country, UErrorCode* ec);
  *
  * @return The result string length, not including the terminating
  * null
- *
+ * 
+ * @see #UCAL_UNKNOWN_ZONE_ID
+ * 
  * @stable ICU 2.6
  */
 U_STABLE int32_t U_EXPORT2
@@ -32496,173 +31404,6 @@ ucsdet_enableInputFilter(UCharsetDetector *ucsd, UBool filter);
 
 
 
-// udateintervalformat.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*****************************************************************************************
-* Copyright (C) 2010-2012,2015 International Business Machines
-* Corporation and others. All Rights Reserved.
-*****************************************************************************************
-*/
-
-#ifndef UDATEINTERVALFORMAT_H
-#define UDATEINTERVALFORMAT_H
-
-
-#if !UCONFIG_NO_FORMATTING
-
-
-/**
- * \file
- * \brief C API: Format a date interval.
- *
- * A UDateIntervalFormat is used to format the range between two UDate values
- * in a locale-sensitive way, using a skeleton that specifies the precision and
- * completeness of the information to show. If the range smaller than the resolution
- * specified by the skeleton, a single date format will be produced. If the range
- * is larger than the format specified by the skeleton, a locale-specific fallback
- * will be used to format the items missing from the skeleton.
- *
- * For example, if the range is 2010-03-04 07:56 - 2010-03-04 19:56 (12 hours)
- * - The skeleton jm will produce
- *   for en_US, "7:56 AM - 7:56 PM"
- *   for en_GB, "7:56 - 19:56"
- * - The skeleton MMMd will produce
- *   for en_US, "Mar 4"
- *   for en_GB, "4 Mar"
- * If the range is 2010-03-04 07:56 - 2010-03-08 16:11 (4 days, 8 hours, 15 minutes)
- * - The skeleton jm will produce
- *   for en_US, "3/4/2010 7:56 AM - 3/8/2010 4:11 PM"
- *   for en_GB, "4/3/2010 7:56 - 8/3/2010 16:11"
- * - The skeleton MMMd will produce
- *   for en_US, "Mar 4-8"
- *   for en_GB, "4-8 Mar"
- * 
- * Note:  the "-" characters in the above sample output will actually be
- * Unicode 2013, EN_DASH, in all but the last example.
- *
- * Note, in ICU 4.4 the standard skeletons for which date interval format data
- * is usually available are as follows; best results will be obtained by using
- * skeletons from this set, or those formed by combining these standard skeletons
- * (note that for these skeletons, the length of digit field such as d, y, or
- * M vs MM is irrelevant (but for non-digit fields such as MMM vs MMMM it is
- * relevant). Note that a skeleton involving h or H generally explicitly requests
- * that time style (12- or 24-hour time respectively). For a skeleton that
- * requests the locale's default time style (h or H), use 'j' instead of h or H.
- *   h, H, hm, Hm,
- *   hv, Hv, hmv, Hmv,
- *   d,
- *   M, MMM, MMMM,
- *   Md, MMMd,
- *   MEd, MMMEd,
- *   y,
- *   yM, yMMM, yMMMM,
- *   yMd, yMMMd,
- *   yMEd, yMMMEd
- *
- * Locales for which ICU 4.4 seems to have a reasonable amount of this data
- * include:
- *   af, am, ar, be, bg, bn, ca, cs, da, de (_AT), el, en (_AU,_CA,_GB,_IE,_IN...),
- *   eo, es (_AR,_CL,_CO,...,_US) et, fa, fi, fo, fr (_BE,_CH,_CA), fur, gsw, he,
- *   hr, hu, hy, is, it (_CH), ja, kk, km, ko, lt, lv, mk, ml, mt, nb, nl )_BE),
- *   nn, pl, pt (_PT), rm, ro, ru (_UA), sk, sl, so, sq, sr, sr_Latn, sv, th, to,
- *   tr, uk, ur, vi, zh (_SG), zh_Hant (_HK,_MO)
- */
-
-/**
- * Opaque UDateIntervalFormat object for use in C programs.
- * @stable ICU 4.8
- */
-struct UDateIntervalFormat;
-typedef struct UDateIntervalFormat UDateIntervalFormat;  /**< C typedef for struct UDateIntervalFormat. @stable ICU 4.8 */
-
-/**
- * Open a new UDateIntervalFormat object using the predefined rules for a
- * given locale plus a specified skeleton.
- * @param locale
- *            The locale for whose rules should be used; may be NULL for
- *            default locale.
- * @param skeleton
- *            A pattern containing only the fields desired for the interval
- *            format, for example "Hm", "yMMMd", or "yMMMEdHm".
- * @param skeletonLength
- *            The length of skeleton; may be -1 if the skeleton is zero-terminated.
- * @param tzID
- *            A timezone ID specifying the timezone to use. If 0, use the default
- *            timezone.
- * @param tzIDLength
- *            The length of tzID, or -1 if null-terminated. If 0, use the default
- *            timezone.
- * @param status
- *            A pointer to a UErrorCode to receive any errors.
- * @return
- *            A pointer to a UDateIntervalFormat object for the specified locale,
- *            or NULL if an error occurred.
- * @stable ICU 4.8
- */
-U_STABLE UDateIntervalFormat* U_EXPORT2
-udtitvfmt_open(const char*  locale,
-              const UChar* skeleton,
-              int32_t      skeletonLength,
-              const UChar* tzID,
-              int32_t      tzIDLength,
-              UErrorCode*  status);
-
-/**
- * Close a UDateIntervalFormat object. Once closed it may no longer be used.
- * @param formatter
- *            The UDateIntervalFormat object to close.
- * @stable ICU 4.8
- */
-U_STABLE void U_EXPORT2
-udtitvfmt_close(UDateIntervalFormat *formatter);
-
-
-
-
-/**
- * Formats a date/time range using the conventions established for the
- * UDateIntervalFormat object.
- * @param formatter
- *            The UDateIntervalFormat object specifying the format conventions.
- * @param fromDate
- *            The starting point of the range.
- * @param toDate
- *            The ending point of the range.
- * @param result
- *            A pointer to a buffer to receive the formatted range.
- * @param resultCapacity
- *            The maximum size of result.
- * @param position
- *            A pointer to a UFieldPosition. On input, position->field is read.
- *            On output, position->beginIndex and position->endIndex indicate
- *            the beginning and ending indices of field number position->field,
- *            if such a field exists. This parameter may be NULL, in which case
- *            no field position data is returned.
- *            There may be multiple instances of a given field type in an
- *            interval format; in this case the position indices refer to the
- *            first instance.
- * @param status
- *            A pointer to a UErrorCode to receive any errors.
- * @return
- *            The total buffer size needed; if greater than resultLength, the
- *            output was truncated.
- * @stable ICU 4.8
- */
-U_STABLE int32_t U_EXPORT2
-udtitvfmt_format(const UDateIntervalFormat* formatter,
-                UDate           fromDate,
-                UDate           toDate,
-                UChar*          result,
-                int32_t         resultCapacity,
-                UFieldPosition* position,
-                UErrorCode*     status);
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif
-
 // udatpg.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
@@ -32758,6 +31499,20 @@ typedef enum UDateTimePatternField {
     UDATPG_FIELD_COUNT
 } UDateTimePatternField;
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+/**
+ * Field display name width constants for udatpg_getFieldDisplayName().
+ * @stable ICU 61
+ */
+typedef enum UDateTimePGDisplayWidth {
+    /** @stable ICU 61 */
+    UDATPG_WIDE,
+    /** @stable ICU 61 */
+    UDATPG_ABBREVIATED,
+    /** @stable ICU 61 */
+    UDATPG_NARROW
+} UDateTimePGDisplayWidth;
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 /**
  * Masks to control forcing the length of specified fields in the returned
@@ -33058,6 +31813,39 @@ udatpg_getAppendItemName(const UDateTimePatternGenerator *dtpg,
                          UDateTimePatternField field,
                          int32_t *pLength);
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+/**
+ * The general interface to get a display name for a particular date/time field,
+ * in one of several possible display widths.
+ *
+ * @param dtpg
+ *          A pointer to the UDateTimePatternGenerator object with the localized
+ *          display names.
+ * @param field
+ *          The desired UDateTimePatternField, such as UDATPG_ERA_FIELD.
+ * @param width
+ *          The desired UDateTimePGDisplayWidth, such as UDATPG_ABBREVIATED.
+ * @param fieldName
+ *          A pointer to a buffer to receive the NULL-terminated display name. If the name
+ *          fits into fieldName but cannot be  NULL-terminated (length == capacity) then
+ *          the error code is set to U_STRING_NOT_TERMINATED_WARNING. If the name doesn't
+ *          fit into fieldName then the error code is set to U_BUFFER_OVERFLOW_ERROR.
+ * @param capacity
+ *          The size of fieldName (in UChars).
+ * @param pErrorCode
+ *          A pointer to a UErrorCode to receive any errors
+ * @return
+ *         The full length of the name; if greater than capacity, fieldName contains a
+ *         truncated result.
+ * @stable ICU 61
+ */
+U_STABLE int32_t U_EXPORT2
+udatpg_getFieldDisplayName(const UDateTimePatternGenerator *dtpg,
+                           UDateTimePatternField field,
+                           UDateTimePGDisplayWidth width,
+                           UChar *fieldName, int32_t capacity,
+                           UErrorCode *pErrorCode);
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 /**
  * The DateTimeFormat is a message format pattern used to compose date and
@@ -33606,6 +32394,182 @@ ufmt_getDecNumChars(UFormattable *fmt, int32_t *len, UErrorCode *status);
 
 #endif
 
+// uformattedvalue.h
+// No supported content
+
+// udateintervalformat.h
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html
+/*
+*****************************************************************************************
+* Copyright (C) 2010-2012,2015 International Business Machines
+* Corporation and others. All Rights Reserved.
+*****************************************************************************************
+*/
+
+#ifndef UDATEINTERVALFORMAT_H
+#define UDATEINTERVALFORMAT_H
+
+
+#if !UCONFIG_NO_FORMATTING
+
+
+/**
+ * \file
+ * \brief C API: Format a date interval.
+ *
+ * A UDateIntervalFormat is used to format the range between two UDate values
+ * in a locale-sensitive way, using a skeleton that specifies the precision and
+ * completeness of the information to show. If the range smaller than the resolution
+ * specified by the skeleton, a single date format will be produced. If the range
+ * is larger than the format specified by the skeleton, a locale-specific fallback
+ * will be used to format the items missing from the skeleton.
+ *
+ * For example, if the range is 2010-03-04 07:56 - 2010-03-04 19:56 (12 hours)
+ * - The skeleton jm will produce
+ *   for en_US, "7:56 AM - 7:56 PM"
+ *   for en_GB, "7:56 - 19:56"
+ * - The skeleton MMMd will produce
+ *   for en_US, "Mar 4"
+ *   for en_GB, "4 Mar"
+ * If the range is 2010-03-04 07:56 - 2010-03-08 16:11 (4 days, 8 hours, 15 minutes)
+ * - The skeleton jm will produce
+ *   for en_US, "3/4/2010 7:56 AM - 3/8/2010 4:11 PM"
+ *   for en_GB, "4/3/2010 7:56 - 8/3/2010 16:11"
+ * - The skeleton MMMd will produce
+ *   for en_US, "Mar 4-8"
+ *   for en_GB, "4-8 Mar"
+ * 
+ * Note:  the "-" characters in the above sample output will actually be
+ * Unicode 2013, EN_DASH, in all but the last example.
+ *
+ * Note, in ICU 4.4 the standard skeletons for which date interval format data
+ * is usually available are as follows; best results will be obtained by using
+ * skeletons from this set, or those formed by combining these standard skeletons
+ * (note that for these skeletons, the length of digit field such as d, y, or
+ * M vs MM is irrelevant (but for non-digit fields such as MMM vs MMMM it is
+ * relevant). Note that a skeleton involving h or H generally explicitly requests
+ * that time style (12- or 24-hour time respectively). For a skeleton that
+ * requests the locale's default time style (h or H), use 'j' instead of h or H.
+ *   h, H, hm, Hm,
+ *   hv, Hv, hmv, Hmv,
+ *   d,
+ *   M, MMM, MMMM,
+ *   Md, MMMd,
+ *   MEd, MMMEd,
+ *   y,
+ *   yM, yMMM, yMMMM,
+ *   yMd, yMMMd,
+ *   yMEd, yMMMEd
+ *
+ * Locales for which ICU 4.4 seems to have a reasonable amount of this data
+ * include:
+ *   af, am, ar, be, bg, bn, ca, cs, da, de (_AT), el, en (_AU,_CA,_GB,_IE,_IN...),
+ *   eo, es (_AR,_CL,_CO,...,_US) et, fa, fi, fo, fr (_BE,_CH,_CA), fur, gsw, he,
+ *   hr, hu, hy, is, it (_CH), ja, kk, km, ko, lt, lv, mk, ml, mt, nb, nl )_BE),
+ *   nn, pl, pt (_PT), rm, ro, ru (_UA), sk, sl, so, sq, sr, sr_Latn, sv, th, to,
+ *   tr, uk, ur, vi, zh (_SG), zh_Hant (_HK,_MO)
+ */
+
+/**
+ * Opaque UDateIntervalFormat object for use in C programs.
+ * @stable ICU 4.8
+ */
+struct UDateIntervalFormat;
+typedef struct UDateIntervalFormat UDateIntervalFormat;  /**< C typedef for struct UDateIntervalFormat. @stable ICU 4.8 */
+
+
+/**
+ * Open a new UDateIntervalFormat object using the predefined rules for a
+ * given locale plus a specified skeleton.
+ * @param locale
+ *            The locale for whose rules should be used; may be NULL for
+ *            default locale.
+ * @param skeleton
+ *            A pattern containing only the fields desired for the interval
+ *            format, for example "Hm", "yMMMd", or "yMMMEdHm".
+ * @param skeletonLength
+ *            The length of skeleton; may be -1 if the skeleton is zero-terminated.
+ * @param tzID
+ *            A timezone ID specifying the timezone to use. If 0, use the default
+ *            timezone.
+ * @param tzIDLength
+ *            The length of tzID, or -1 if null-terminated. If 0, use the default
+ *            timezone.
+ * @param status
+ *            A pointer to a UErrorCode to receive any errors.
+ * @return
+ *            A pointer to a UDateIntervalFormat object for the specified locale,
+ *            or NULL if an error occurred.
+ * @stable ICU 4.8
+ */
+U_STABLE UDateIntervalFormat* U_EXPORT2
+udtitvfmt_open(const char*  locale,
+              const UChar* skeleton,
+              int32_t      skeletonLength,
+              const UChar* tzID,
+              int32_t      tzIDLength,
+              UErrorCode*  status);
+
+/**
+ * Close a UDateIntervalFormat object. Once closed it may no longer be used.
+ * @param formatter
+ *            The UDateIntervalFormat object to close.
+ * @stable ICU 4.8
+ */
+U_STABLE void U_EXPORT2
+udtitvfmt_close(UDateIntervalFormat *formatter);
+
+
+
+
+
+
+/**
+ * Formats a date/time range using the conventions established for the
+ * UDateIntervalFormat object.
+ * @param formatter
+ *            The UDateIntervalFormat object specifying the format conventions.
+ * @param fromDate
+ *            The starting point of the range.
+ * @param toDate
+ *            The ending point of the range.
+ * @param result
+ *            A pointer to a buffer to receive the formatted range.
+ * @param resultCapacity
+ *            The maximum size of result.
+ * @param position
+ *            A pointer to a UFieldPosition. On input, position->field is read.
+ *            On output, position->beginIndex and position->endIndex indicate
+ *            the beginning and ending indices of field number position->field,
+ *            if such a field exists. This parameter may be NULL, in which case
+ *            no field position data is returned.
+ *            There may be multiple instances of a given field type in an
+ *            interval format; in this case the position indices refer to the
+ *            first instance.
+ * @param status
+ *            A pointer to a UErrorCode to receive any errors.
+ * @return
+ *            The total buffer size needed; if greater than resultLength, the
+ *            output was truncated.
+ * @stable ICU 4.8
+ */
+U_STABLE int32_t U_EXPORT2
+udtitvfmt_format(const UDateIntervalFormat* formatter,
+                UDate           fromDate,
+                UDate           toDate,
+                UChar*          result,
+                int32_t         resultCapacity,
+                UFieldPosition* position,
+                UErrorCode*     status);
+
+
+
+
+#endif /* #if !UCONFIG_NO_FORMATTING */
+
+#endif
+
 // ugender.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
@@ -33685,6 +32649,122 @@ ugender_getInstance(const char *locale, UErrorCode *status);
  */
 U_STABLE UGender U_EXPORT2
 ugender_getListGender(const UGenderInfo* genderInfo, const UGender *genders, int32_t size, UErrorCode *status);
+
+#endif /* #if !UCONFIG_NO_FORMATTING */
+
+#endif
+
+// ulistformatter.h
+// Copyright (C) 2016 and later: Unicode, Inc. and others.
+// License & terms of use: http://www.unicode.org/copyright.html
+/*
+*****************************************************************************************
+* Copyright (C) 2015-2016, International Business Machines
+* Corporation and others. All Rights Reserved.
+*****************************************************************************************
+*/
+
+#ifndef ULISTFORMATTER_H
+#define ULISTFORMATTER_H
+
+
+#if !UCONFIG_NO_FORMATTING
+
+
+/**
+ * \file
+ * \brief C API: Format a list in a locale-appropriate way.
+ *
+ * A UListFormatter is used to format a list of items in a locale-appropriate way, 
+ * using data from CLDR.
+ * Example: Input data ["Alice", "Bob", "Charlie", "Delta"] will be formatted
+ * as "Alice, Bob, Charlie, and Delta" in English.
+ */
+
+/**
+ * Opaque UListFormatter object for use in C
+ * @stable ICU 55
+ */
+struct UListFormatter;
+typedef struct UListFormatter UListFormatter;  /**< C typedef for struct UListFormatter. @stable ICU 55 */
+
+
+
+/**
+ * Open a new UListFormatter object using the rules for a given locale.
+ * @param locale
+ *            The locale whose rules should be used; may be NULL for
+ *            default locale.
+ * @param status
+ *            A pointer to a standard ICU UErrorCode (input/output parameter).
+ *            Its input value must pass the U_SUCCESS() test, or else the
+ *            function returns immediately. The caller should check its output
+ *            value with U_FAILURE(), or use with function chaining (see User
+ *            Guide for details).
+ * @return
+ *            A pointer to a UListFormatter object for the specified locale,
+ *            or NULL if an error occurred.
+ * @stable ICU 55
+ */
+U_CAPI UListFormatter* U_EXPORT2
+ulistfmt_open(const char*  locale,
+              UErrorCode*  status);
+
+/**
+ * Close a UListFormatter object. Once closed it may no longer be used.
+ * @param listfmt
+ *            The UListFormatter object to close.
+ * @stable ICU 55
+ */
+U_CAPI void U_EXPORT2
+ulistfmt_close(UListFormatter *listfmt);
+
+
+
+
+/**
+ * Formats a list of strings using the conventions established for the
+ * UListFormatter object.
+ * @param listfmt
+ *            The UListFormatter object specifying the list conventions.
+ * @param strings
+ *            An array of pointers to UChar strings; the array length is
+ *            specified by stringCount. Must be non-NULL if stringCount > 0.
+ * @param stringLengths
+ *            An array of string lengths corresponding to the strings[]
+ *            parameter; any individual length value may be negative to indicate
+ *            that the corresponding strings[] entry is 0-terminated, or
+ *            stringLengths itself may be NULL if all of the strings are
+ *            0-terminated. If non-NULL, the stringLengths array must have
+ *            stringCount entries.
+ * @param stringCount
+ *            the number of entries in strings[], and the number of entries
+ *            in the stringLengths array if it is not NULL. Must be >= 0.
+ * @param result
+ *            A pointer to a buffer to receive the formatted list.
+ * @param resultCapacity
+ *            The maximum size of result.
+ * @param status
+ *            A pointer to a standard ICU UErrorCode (input/output parameter).
+ *            Its input value must pass the U_SUCCESS() test, or else the
+ *            function returns immediately. The caller should check its output
+ *            value with U_FAILURE(), or use with function chaining (see User
+ *            Guide for details).
+ * @return
+ *            The total buffer size needed; if greater than resultLength, the
+ *            output was truncated. May be <=0 if unable to determine the
+ *            total buffer size needed (e.g. for illegal arguments).
+ * @stable ICU 55
+ */
+U_CAPI int32_t U_EXPORT2
+ulistfmt_format(const UListFormatter* listfmt,
+                const UChar* const strings[],
+                const int32_t *    stringLengths,
+                int32_t            stringCount,
+                UChar*             result,
+                int32_t            resultCapacity,
+                UErrorCode*        status);
+
 
 #endif /* #if !UCONFIG_NO_FORMATTING */
 
@@ -34908,6 +33988,7 @@ typedef enum UNumberFormatFields {
     UNUM_PERMILL_FIELD,
     /** @stable ICU 49 */
     UNUM_SIGN_FIELD,
+
 } UNumberFormatFields;
 
 
@@ -34928,7 +34009,7 @@ typedef enum UNumberFormatFields {
  * respectively.
  *
  * <p><strong>NOTE::</strong> New users with are strongly encouraged to
- * use unumf_openWithSkeletonAndLocale instead of unum_open.
+ * use unumf_openForSkeletonAndLocale instead of unum_open.
  *
  * @param pattern A pattern specifying the format to use. 
  * This parameter is ignored unless the style is
@@ -35523,6 +34604,7 @@ typedef enum UNumberFormatAttribute {
    * @stable ICU 51 */
   UNUM_SCALE = 21,
 
+
   /** 
    * if this attribute is set to 0, it is set to UNUM_CURRENCY_STANDARD purpose,
    * otherwise it is UNUM_CURRENCY_CASH purpose
@@ -35531,11 +34613,6 @@ typedef enum UNumberFormatAttribute {
    */
   UNUM_CURRENCY_USAGE = 23,
 
-  /* The following cannot be #ifndef U_HIDE_INTERNAL_API, needed in .h file variable declararions */
-  /** One below the first bitfield-boolean item.
-   * All items after this one are stored in boolean form.
-   * @internal */
-  UNUM_MAX_NONBOOLEAN_ATTRIBUTE = 0x0FFF,
 
   /** If 1, specifies that if setting the "max integer digits" attribute would truncate a value, set an error status rather than silently truncating.
    * For example,  formatting the value 1234 with 4 max int digits would succeed, but formatting 12345 would fail. There is no effect on parsing.
@@ -35561,26 +34638,8 @@ typedef enum UNumberFormatAttribute {
    */
   UNUM_PARSE_DECIMAL_MARK_REQUIRED = 0x1002,
 
-  /* The following cannot be #ifndef U_HIDE_INTERNAL_API, needed in .h file variable declararions */
-  /** Limit of boolean attributes.
-   * @internal */
-  UNUM_LIMIT_BOOLEAN_ATTRIBUTE = 0x1003,
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
-  /**
-   * Whether parsing is sensitive to case (lowercase/uppercase).
-   * TODO: Add to the test suite.
-   * @internal This API is a technical preview. It may change in an upcoming release.
-   */
-  UNUM_PARSE_CASE_SENSITIVE = 0x1004,
 
-  /**
-   * Formatting: whether to show the plus sign on non-negative numbers.
-   * TODO: Add to the test suite.
-   * @internal This API is a technical preview. It may change in an upcoming release.
-   */
-  UNUM_SIGN_ALWAYS_SHOWN = 0x1005,
-#endif // (NTDDI_VERSION >= NTDDI_WIN10_19H1)
 } UNumberFormatAttribute;
 
 /**
@@ -36385,6 +35444,7 @@ typedef enum UDateFormatStyle {
 #define UDAT_ABBR_UTC_TZ "ZZZZ"
 
 /* deprecated skeleton constants */
+
 
 
 /**
@@ -37430,77 +36490,320 @@ udat_getContext(const UDateFormat* fmt, UDisplayContextType type, UErrorCode* st
 
 #endif
 
-// measfmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+// unumberformatter.h
+// Copyright (C) 2018 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
-/*
-**********************************************************************
-* Copyright (c) 2004-2016, International Business Machines
-* Corporation and others.  All Rights Reserved.
-**********************************************************************
-* Author: Alan Liu
-* Created: April 20, 2004
-* Since: ICU 3.0
-**********************************************************************
-*/
-#ifndef MEASUREFORMAT_H
-#define MEASUREFORMAT_H
 
 
 #if !UCONFIG_NO_FORMATTING
+#ifndef __UNUMBERFORMATTER_H__
+#define __UNUMBERFORMATTER_H__
+
+
+
+/**
+ * \file
+ * \brief C-compatible API for localized number formatting; not recommended for C++.
+ *
+ * This is the C-compatible version of the NumberFormatter API introduced in ICU 60. C++ users should
+ * include unicode/numberformatter.h and use the proper C++ APIs.
+ *
+ * The C API accepts a number skeleton string for specifying the settings for formatting, which covers a
+ * very large subset of all possible number formatting features. For more information on number skeleton
+ * strings, see unicode/numberformatter.h.
+ *
+ * When using UNumberFormatter, which is treated as immutable, the results are exported to a mutable
+ * UFormattedNumber object, which you subsequently use for populating your string buffer or iterating over
+ * the fields.
+ *
+ * Example code:
+ * <pre>
+ * // Setup:
+ * UErrorCode ec = U_ZERO_ERROR;
+ * UNumberFormatter* uformatter = unumf_openForSkeletonAndLocale(u"precision-integer", -1, "en", &ec);
+ * UFormattedNumber* uresult = unumf_openResult(&ec);
+ * if (U_FAILURE(ec)) { return; }
+ *
+ * // Format a double:
+ * unumf_formatDouble(uformatter, 5142.3, uresult, &ec);
+ * if (U_FAILURE(ec)) { return; }
+ *
+ * // Export the string to a malloc'd buffer:
+ * int32_t len = unumf_resultToString(uresult, NULL, 0, &ec);
+ * // at this point, ec == U_BUFFER_OVERFLOW_ERROR
+ * ec = U_ZERO_ERROR;
+ * UChar* buffer = (UChar*) malloc((len+1)*sizeof(UChar));
+ * unumf_resultToString(uresult, buffer, len+1, &ec);
+ * if (U_FAILURE(ec)) { return; }
+ * // buffer should equal "5,142"
+ *
+ * // Cleanup:
+ * unumf_close(uformatter);
+ * unumf_closeResult(uresult);
+ * free(buffer);
+ * </pre>
+ *
+ * If you are a C++ user linking against the C libraries, you can use the LocalPointer versions of these
+ * APIs. The following example uses LocalPointer with the decimal number and field position APIs:
+ *
+ * <pre>
+ * // Setup:
+ * LocalUNumberFormatterPointer uformatter(unumf_openForSkeletonAndLocale(u"percent", -1, "en", &ec));
+ * LocalUFormattedNumberPointer uresult(unumf_openResult(&ec));
+ * if (U_FAILURE(ec)) { return; }
+ *
+ * // Format a decimal number:
+ * unumf_formatDecimal(uformatter.getAlias(), "9.87E-3", -1, uresult.getAlias(), &ec);
+ * if (U_FAILURE(ec)) { return; }
+ *
+ * // Get the location of the percent sign:
+ * UFieldPosition ufpos = {UNUM_PERCENT_FIELD, 0, 0};
+ * unumf_resultNextFieldPosition(uresult.getAlias(), &ufpos, &ec);
+ * // ufpos should contain beginIndex=7 and endIndex=8 since the string is "0.00987%"
+ *
+ * // No need to do any cleanup since we are using LocalPointer.
+ * </pre>
+ */
+
+
+
+
+
+
+struct UNumberFormatter;
+/**
+ * C-compatible version of icu::number::LocalizedNumberFormatter.
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @stable ICU 62
+ */
+typedef struct UNumberFormatter UNumberFormatter;
+
+struct UFormattedNumber;
+/**
+ * C-compatible version of icu::number::FormattedNumber.
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @stable ICU 62
+ */
+typedef struct UFormattedNumber UFormattedNumber;
 
 
 /**
- * \file 
- * \brief C++ API: Compatibility APIs for measure formatting.
+ * Creates a new UNumberFormatter for the given skeleton string and locale. This is currently the only
+ * method for creating a new UNumberFormatter.
+ *
+ * Objects of type UNumberFormatter returned by this method are threadsafe.
+ *
+ * For more details on skeleton strings, see the documentation in numberformatter.h. For more details on
+ * the usage of this API, see the documentation at the top of unumberformatter.h.
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @param skeleton The skeleton string, like u"percent precision-integer"
+ * @param skeletonLen The number of UChars in the skeleton string, or -1 it it is NUL-terminated.
+ * @param locale The NUL-terminated locale ID.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
  */
+U_STABLE UNumberFormatter* U_EXPORT2
+unumf_openForSkeletonAndLocale(const UChar* skeleton, int32_t skeletonLen, const char* locale,
+                               UErrorCode* ec);
+
+
+
 
 /**
- * Constants for various widths.
- * There are 4 widths: Wide, Short, Narrow, Numeric.
- * For example, for English, when formatting "3 hours"
- * Wide is "3 hours"; short is "3 hrs"; narrow is "3h";
- * formatting "3 hours 17 minutes" as numeric give "3:17"
- * @stable ICU 53
+ * Creates an object to hold the result of a UNumberFormatter
+ * operation. The object can be used repeatedly; it is cleared whenever
+ * passed to a format function.
+ *
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
  */
-enum UMeasureFormatWidth {
-
-    // Wide, short, and narrow must be first and in this order.
-    /**
-     * Spell out measure units.
-     * @stable ICU 53 
-     */
-    UMEASFMT_WIDTH_WIDE,
- 
-    /**
-     * Abbreviate measure units.
-     * @stable ICU 53
-     */
-    UMEASFMT_WIDTH_SHORT,
-
-    /**
-     * Use symbols for measure units when possible.
-     * @stable ICU 53
-     */
-    UMEASFMT_WIDTH_NARROW,
-
-    /**
-     * Completely omit measure units when possible. For example, format
-     * '5 hours, 37 minutes' as '5:37'
-     * @stable ICU 53
-     */
-    UMEASFMT_WIDTH_NUMERIC,
-
-};
-/** @stable ICU 53 */
-typedef enum UMeasureFormatWidth UMeasureFormatWidth; 
+U_STABLE UFormattedNumber* U_EXPORT2
+unumf_openResult(UErrorCode* ec);
 
 
-#endif // #if !UCONFIG_NO_FORMATTING
-#endif // #ifndef MEASUREFORMAT_H
+/**
+ * Uses a UNumberFormatter to format an integer to a UFormattedNumber. A string, field position, and other
+ * information can be retrieved from the UFormattedNumber.
+ *
+ * The UNumberFormatter can be shared between threads. Each thread should have its own local
+ * UFormattedNumber, however, for storing the result of the formatting operation.
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @param uformatter A formatter object created by unumf_openForSkeletonAndLocale or similar.
+ * @param value The number to be formatted.
+ * @param uresult The object that will be mutated to store the result; see unumf_openResult.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_formatInt(const UNumberFormatter* uformatter, int64_t value, UFormattedNumber* uresult,
+                UErrorCode* ec);
 
-// unumberformatter.h
-// No supported content
+
+/**
+ * Uses a UNumberFormatter to format a double to a UFormattedNumber. A string, field position, and other
+ * information can be retrieved from the UFormattedNumber.
+ *
+ * The UNumberFormatter can be shared between threads. Each thread should have its own local
+ * UFormattedNumber, however, for storing the result of the formatting operation.
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @param uformatter A formatter object created by unumf_openForSkeletonAndLocale or similar.
+ * @param value The number to be formatted.
+ * @param uresult The object that will be mutated to store the result; see unumf_openResult.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_formatDouble(const UNumberFormatter* uformatter, double value, UFormattedNumber* uresult,
+                   UErrorCode* ec);
+
+
+/**
+ * Uses a UNumberFormatter to format a decimal number to a UFormattedNumber. A string, field position, and
+ * other information can be retrieved from the UFormattedNumber.
+ *
+ * The UNumberFormatter can be shared between threads. Each thread should have its own local
+ * UFormattedNumber, however, for storing the result of the formatting operation.
+ *
+ * The syntax of the unformatted number is a "numeric string" as defined in the Decimal Arithmetic
+ * Specification, available at http://speleotrove.com/decimal
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @param uformatter A formatter object created by unumf_openForSkeletonAndLocale or similar.
+ * @param value The numeric string to be formatted.
+ * @param valueLen The length of the numeric string, or -1 if it is NUL-terminated.
+ * @param uresult The object that will be mutated to store the result; see unumf_openResult.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_formatDecimal(const UNumberFormatter* uformatter, const char* value, int32_t valueLen,
+                    UFormattedNumber* uresult, UErrorCode* ec);
+
+
+
+/**
+ * Extracts the result number string out of a UFormattedNumber to a UChar buffer if possible.
+ * If bufferCapacity is greater than the required length, a terminating NUL is written.
+ * If bufferCapacity is less than the required length, an error code is set.
+ *
+ * Also see ufmtval_getString, which returns a NUL-terminated string:
+ *
+ *     int32_t len;
+ *     const UChar* str = ufmtval_getString(unumf_resultAsValue(uresult, &ec), &len, &ec);
+ *
+ * NOTE: This is a C-compatible API; C++ users should build against numberformatter.h instead.
+ *
+ * @param uresult The object containing the formatted number.
+ * @param buffer Where to save the string output.
+ * @param bufferCapacity The number of UChars available in the buffer.
+ * @param ec Set if an error occurs.
+ * @return The required length.
+ * @stable ICU 62
+ */
+U_STABLE int32_t U_EXPORT2
+unumf_resultToString(const UFormattedNumber* uresult, UChar* buffer, int32_t bufferCapacity,
+                     UErrorCode* ec);
+
+
+/**
+ * Determines the start and end indices of the next occurrence of the given <em>field</em> in the
+ * output string. This allows you to determine the locations of, for example, the integer part,
+ * fraction part, or symbols.
+ *
+ * This is a simpler but less powerful alternative to {@link ufmtval_nextPosition}.
+ *
+ * If a field occurs just once, calling this method will find that occurrence and return it. If a
+ * field occurs multiple times, this method may be called repeatedly with the following pattern:
+ *
+ * <pre>
+ * UFieldPosition ufpos = {UNUM_GROUPING_SEPARATOR_FIELD, 0, 0};
+ * while (unumf_resultNextFieldPosition(uresult, ufpos, &ec)) {
+ *   // do something with ufpos.
+ * }
+ * </pre>
+ *
+ * This method is useful if you know which field to query. If you want all available field position
+ * information, use unumf_resultGetAllFieldPositions().
+ *
+ * NOTE: All fields of the UFieldPosition must be initialized before calling this method.
+ *
+ * @param uresult The object containing the formatted number.
+ * @param ufpos
+ *            Input+output variable. On input, the "field" property determines which field to look up,
+ *            and the "endIndex" property determines where to begin the search. On output, the
+ *            "beginIndex" field is set to the beginning of the first occurrence of the field after the
+ *            input "endIndex", and "endIndex" is set to the end of that occurrence of the field
+ *            (exclusive index). If a field position is not found, the FieldPosition is not changed and
+ *            the method returns FALSE.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
+ */
+U_STABLE UBool U_EXPORT2
+unumf_resultNextFieldPosition(const UFormattedNumber* uresult, UFieldPosition* ufpos, UErrorCode* ec);
+
+
+/**
+ * Populates the given iterator with all fields in the formatted output string. This allows you to
+ * determine the locations of the integer part, fraction part, and sign.
+ *
+ * This is an alternative to the more powerful {@link ufmtval_nextPosition} API.
+ *
+ * If you need information on only one field, use {@link ufmtval_nextPosition} or
+ * {@link unumf_resultNextFieldPosition}.
+ *
+ * @param uresult The object containing the formatted number.
+ * @param ufpositer
+ *         A pointer to a UFieldPositionIterator created by {@link #ufieldpositer_open}. Iteration
+ *         information already present in the UFieldPositionIterator is deleted, and the iterator is reset
+ *         to apply to the fields in the formatted string created by this function call. The field values
+ *         and indexes returned by {@link #ufieldpositer_next} represent fields denoted by
+ *         the UNumberFormatFields enum. Fields are not returned in a guaranteed order. Fields cannot
+ *         overlap, but they may nest. For example, 1234 could format as "1,234" which might consist of a
+ *         grouping separator field for ',' and an integer field encompassing the entire string.
+ * @param ec Set if an error occurs.
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_resultGetAllFieldPositions(const UFormattedNumber* uresult, UFieldPositionIterator* ufpositer,
+                                 UErrorCode* ec);
+
+
+/**
+ * Releases the UNumberFormatter created by unumf_openForSkeletonAndLocale().
+ *
+ * @param uformatter An object created by unumf_openForSkeletonAndLocale().
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_close(UNumberFormatter* uformatter);
+
+
+/**
+ * Releases the UFormattedNumber created by unumf_openResult().
+ *
+ * @param uresult An object created by unumf_openResult().
+ * @stable ICU 62
+ */
+U_STABLE void U_EXPORT2
+unumf_closeResult(UFormattedNumber* uresult);
+
+
+
+#endif //__UNUMBERFORMATTER_H__
+#endif /* #if !UCONFIG_NO_FORMATTING */
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 // unumsys.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
@@ -37592,6 +36895,7 @@ unumsys_close(UNumberingSystem *unumsys);
 /**
  * Returns an enumeration over the names of all of the predefined numbering systems known
  * to ICU.
+ * The numbering system names will be in alphabetical (invariant) order.
  * @param status    A pointer to a UErrorCode to receive any errors.
  * @return          A pointer to a UEnumeration that must be closed with uenum_close(),
  *                  or NULL if an error occurred.
@@ -37674,6 +36978,9 @@ unumsys_getDescription(const UNumberingSystem *unumsys, UChar *result,
 
 #if !UCONFIG_NO_FORMATTING
 
+
+// Forward-declaration
+struct UFormattedNumber;
 
 /**
  * \file
@@ -37762,14 +37069,15 @@ uplrules_close(UPluralRules *uplrules);
 
 
 /**
- * Given a number, returns the keyword of the first rule that
+ * Given a floating-point number, returns the keyword of the first rule that
  * applies to the number, according to the supplied UPluralRules object.
  * @param uplrules The UPluralRules object specifying the rules.
  * @param number The number for which the rule has to be determined.
- * @param keyword The keyword of the rule that applies to number.
- * @param capacity The capacity of keyword.
+ * @param keyword An output buffer to write the keyword of the rule that
+ *         applies to number.
+ * @param capacity The capacity of the keyword buffer.
  * @param status A pointer to a UErrorCode to receive any errors.
- * @return The length of keyword.
+ * @return The length of the keyword.
  * @stable ICU 4.8
  */
 U_CAPI int32_t U_EXPORT2
@@ -37797,160 +37105,6 @@ uplrules_getKeywords(const UPluralRules *uplrules,
 #endif /* #if !UCONFIG_NO_FORMATTING */
 
 #endif
-
-// rbnf.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 1997-2015, International Business Machines Corporation and others.
-* All Rights Reserved.
-*******************************************************************************
-*/
-
-#ifndef RBNF_H
-#define RBNF_H
-
-
-/**
- * \file
- * \brief C++ API: Rule Based Number Format
- */
-
-/**
- * \def U_HAVE_RBNF
- * This will be 0 if RBNF support is not included in ICU
- * and 1 if it is.
- *
- * @stable ICU 2.4
- */
-#if UCONFIG_NO_FORMATTING
-#define U_HAVE_RBNF 0
-#else
-#define U_HAVE_RBNF 1
-
-
-
-/* U_HAVE_RBNF */
-#endif
-
-/* RBNF_H */
-#endif
-
-// plurrule.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 2008-2015, International Business Machines Corporation and
-* others. All Rights Reserved.
-*******************************************************************************
-*
-*
-* File PLURRULE.H
-*
-* Modification History:*
-*   Date        Name        Description
-*
-********************************************************************************
-*/
-
-#ifndef PLURRULE
-#define PLURRULE
-
-
-/**
- * \file
- * \brief C++ API: PluralRules object
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-/**
- * Value returned by PluralRules::getUniqueKeywordValue() when there is no
- * unique value to return.
- * @stable ICU 4.8
- */
-#define UPLRULES_NO_UNIQUE_VALUE ((double)-0.00123456777)
-
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif // _PLURRULE
-
-// plurfmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*******************************************************************************
-* Copyright (C) 2007-2014, International Business Machines Corporation and
-* others. All Rights Reserved.
-*******************************************************************************
-*
-
-* File PLURFMT.H
-********************************************************************************
-*/
-
-#ifndef PLURFMT
-#define PLURFMT
-
-
-/**
- * \file
- * \brief C++ API: PluralFormat object
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif // _PLURFMT
-
-// msgfmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-* Copyright (C) 2007-2013, International Business Machines Corporation and
-* others. All Rights Reserved.
-********************************************************************************
-*
-* File MSGFMT.H
-*
-* Modification History:
-*
-*   Date        Name        Description
-*   02/19/97    aliu        Converted from java.
-*   03/20/97    helena      Finished first cut of implementation.
-*   07/22/98    stephen     Removed operator!= (defined in Format)
-*   08/19/2002  srl         Removing Javaisms
-*******************************************************************************/
-
-#ifndef MSGFMT_H
-#define MSGFMT_H
-
-
-/**
- * \file
- * \brief C++ API: Formats messages in a language-neutral way.
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-
-U_CDECL_BEGIN
-// Forward declaration.
-struct UHashtable;
-typedef struct UHashtable UHashtable; /**< @internal */
-U_CDECL_END
-
-
-#endif /* #if !UCONFIG_NO_FORMATTING */
-
-#endif // _MSGFMT
 
 // uregex.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
@@ -38112,6 +37266,7 @@ uregex_openUText(UText          *pattern,
                  UParseError    *pe,
                  UErrorCode     *status);
 
+#if !UCONFIG_NO_CONVERSION
 /**
   *  Open (compile) an ICU regular expression.  The resulting regular expression
   *   handle can then be used to perform various matching operations.
@@ -38135,7 +37290,6 @@ uregex_openUText(UText          *pattern,
   *
   * @stable ICU 3.0
   */
-#if !UCONFIG_NO_CONVERSION
 U_STABLE URegularExpression * U_EXPORT2
 uregex_openC( const char           *pattern,
                     uint32_t        flags,
@@ -39944,6 +39098,8 @@ typedef enum URelativeDateTimeUnit {
     UDAT_REL_UNIT_SATURDAY,
 } URelativeDateTimeUnit;
 
+
+
 /**
  * Opaque URelativeDateTimeFormatter object for use in C programs.
  * @stable ICU 57
@@ -40001,6 +39157,8 @@ U_STABLE void U_EXPORT2
 ureldatefmt_close(URelativeDateTimeFormatter *reldatefmt);
 
 
+
+
 /**
  * Format a combination of URelativeDateTimeUnit and numeric
  * offset using a numeric style, e.g. "1 week ago", "in 1 week",
@@ -40037,6 +39195,7 @@ ureldatefmt_formatNumeric( const URelativeDateTimeFormatter* reldatefmt,
                     int32_t               resultCapacity,
                     UErrorCode*           status);
 
+
 /**
  * Format a combination of URelativeDateTimeUnit and numeric offset
  * using a text style if possible, e.g. "last week", "this week",
@@ -40072,6 +39231,7 @@ ureldatefmt_format( const URelativeDateTimeFormatter* reldatefmt,
                     UChar*                result,
                     int32_t               resultCapacity,
                     UErrorCode*           status);
+
 
 /**
  * Combines a relative date string and a time string in this object's
@@ -40115,217 +39275,6 @@ ureldatefmt_combineDateAndTime( const URelativeDateTimeFormatter* reldatefmt,
 #endif /* !UCONFIG_NO_FORMATTING && !UCONFIG_NO_BREAK_ITERATION */
 
 #endif
-
-// reldatefmt.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-*****************************************************************************
-* Copyright (C) 2014-2016, International Business Machines Corporation and
-* others.
-* All Rights Reserved.
-*****************************************************************************
-*
-* File RELDATEFMT.H
-*****************************************************************************
-*/
-
-#ifndef __RELDATEFMT_H
-#define __RELDATEFMT_H
-
-
-/**
- * \file
- * \brief C++ API: Formats relative dates such as "1 day ago" or "tomorrow"
- */
-
-#if !UCONFIG_NO_FORMATTING
-
-/**
- * Represents the unit for formatting a relative date. e.g "in 5 days"
- * or "in 3 months"
- * @stable ICU 53
- */
-typedef enum UDateRelativeUnit {
-
-    /**
-     * Seconds
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_SECONDS,
-
-    /**
-     * Minutes
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_MINUTES,
-
-    /**
-     * Hours
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_HOURS,
-
-    /**
-     * Days
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_DAYS,
-
-    /**
-     * Weeks
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_WEEKS,
-
-    /**
-     * Months
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_MONTHS,
-
-    /**
-     * Years
-     * @stable ICU 53
-     */
-    UDAT_RELATIVE_YEARS,
-
-} UDateRelativeUnit;
-
-/**
- * Represents an absolute unit.
- * @stable ICU 53
- */
-typedef enum UDateAbsoluteUnit {
-
-    // Days of week have to remain together and in order from Sunday to
-    // Saturday.
-    /**
-     * Sunday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_SUNDAY,
-
-    /**
-     * Monday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_MONDAY,
-
-    /**
-     * Tuesday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_TUESDAY,
-
-    /**
-     * Wednesday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_WEDNESDAY,
-
-    /**
-     * Thursday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_THURSDAY,
-
-    /**
-     * Friday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_FRIDAY,
-
-    /**
-     * Saturday
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_SATURDAY,
-
-    /**
-     * Day
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_DAY,
-
-    /**
-     * Week
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_WEEK,
-
-    /**
-     * Month
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_MONTH,
-
-    /**
-     * Year
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_YEAR,
-
-    /**
-     * Now
-     * @stable ICU 53
-     */
-    UDAT_ABSOLUTE_NOW,
-
-
-} UDateAbsoluteUnit;
-
-/**
- * Represents a direction for an absolute unit e.g "Next Tuesday"
- * or "Last Tuesday"
- * @stable ICU 53
- */
-typedef enum UDateDirection {
-
-    /**
-     * Two before. Not fully supported in every locale.
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_LAST_2,
-
-    /**
-     * Last
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_LAST,
-
-    /**
-     * This
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_THIS,
-
-    /**
-     * Next
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_NEXT,
-
-    /**
-     * Two after. Not fully supported in every locale.
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_NEXT_2,
-
-    /**
-     * Plain, which means the absence of a qualifier.
-     * @stable ICU 53
-     */
-    UDAT_DIRECTION_PLAIN,
-
-} UDateDirection;
-
-#if !UCONFIG_NO_BREAK_ITERATION
-
-
-#endif /* !UCONFIG_NO_BREAK_ITERATION */
-#endif /* !UCONFIG_NO_FORMATTING */
-#endif /* __RELDATEFMT_H */
 
 // usearch.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
@@ -41044,45 +39993,6 @@ U_STABLE void U_EXPORT2 usearch_reset(UStringSearch *strsrch);
 
 #endif
 
-// search.h
-// Copyright (C) 2016 and later: Unicode, Inc. and others.
-// License & terms of use: http://www.unicode.org/copyright.html
-/*
-**********************************************************************
-*   Copyright (C) 2001-2011 IBM and others. All rights reserved.
-**********************************************************************
-*   Date        Name        Description
-*  03/22/2000   helena      Creation.
-**********************************************************************
-*/
-
-#ifndef SEARCH_H
-#define SEARCH_H
-
-
-/**
- * \file 
- * \brief C++ API: SearchIterator object.
- */
- 
-#if !UCONFIG_NO_COLLATION && !UCONFIG_NO_BREAK_ITERATION
-
-
-/**
-* @stable ICU 2.0
-*/
-struct USearch;
-/**
-* @stable ICU 2.0
-*/
-typedef struct USearch USearch;
-
-
-#endif /* #if !UCONFIG_NO_COLLATION */
-
-#endif
-
-
 // uspoof.h
 // Copyright (C) 2016 and later: Unicode, Inc. and others.
 // License & terms of use: http://www.unicode.org/copyright.html
@@ -41431,6 +40341,8 @@ typedef struct USearch USearch;
  * @stable ICU 4.6
  */
 
+U_CDECL_BEGIN
+
 struct USpoofChecker;
 /**
  * @stable ICU 4.2
@@ -41707,7 +40619,6 @@ uspoof_openFromSource(const char *confusables,  int32_t confusablesLen,
 U_STABLE void U_EXPORT2
 uspoof_close(USpoofChecker *sc);
 
-
 /**
  * Clone a Spoof Checker.  The clone will be set to perform the same checks
  *   as the original source.
@@ -41916,8 +40827,6 @@ U_STABLE const USet * U_EXPORT2
 uspoof_getAllowedChars(const USpoofChecker *sc, UErrorCode *status);
 
 
-
-
 /**
  * Check the specified string for possible security issues.
  * The text to be checked will typically be an identifier of some sort.
@@ -42067,7 +40976,6 @@ uspoof_check2UTF8(const USpoofChecker *sc,
     USpoofCheckResult* checkResult,
     UErrorCode *status);
 
-
 /**
  * Create a USpoofCheckResult, used by the {@link uspoof_check2} class of functions to return
  * information about the identifier.  Information includes:
@@ -42098,7 +41006,6 @@ uspoof_openCheckResult(UErrorCode *status);
  */
 U_STABLE void U_EXPORT2
 uspoof_closeCheckResult(USpoofCheckResult *checkResult);
-
 
 /**
  * Indicates which of the spoof check(s) have failed. The value is a bitwise OR of the constants for the tests
@@ -42230,8 +41137,6 @@ uspoof_areConfusableUTF8(const USpoofChecker *sc,
 
 
 
-
-
 /**
  *  Get the "skeleton" for an identifier.
  *  Skeletons are a transformation of the input identifier;
@@ -42310,7 +41215,6 @@ uspoof_getSkeletonUTF8(const USpoofChecker *sc,
                        char *dest, int32_t destCapacity,
                        UErrorCode *status);
 
-
 /**
   * Get the set of Candidate Characters for Inclusion in Identifiers, as defined
   * in http://unicode.org/Public/security/latest/xidmodifications.txt
@@ -42341,7 +41245,6 @@ uspoof_getInclusionSet(UErrorCode *status);
 U_STABLE const USet * U_EXPORT2
 uspoof_getRecommendedSet(UErrorCode *status);
 
-
 /**
  * Serialize the data for a spoof detector into a chunk of memory.
  * The flattened spoof detection tables can later be used to efficiently
@@ -42369,8 +41272,10 @@ uspoof_serialize(USpoofChecker *sc,
                  void *data, int32_t capacity,
                  UErrorCode *status);
 
+U_CDECL_END
 
-#endif
+
+#endif /* UCONFIG_NO_NORMALIZATION */
 
 #endif   /* USPOOF_H */
 
@@ -43219,7 +42124,7 @@ utrans_transIncremental(const UTransliterator* trans,
                         UTransPosition* pos,
                         UErrorCode* status);
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS5)
-						
+
 /**
  * Transliterate a segment of a UChar* string.  The string is passed
  * in in a UChar* buffer.  The string is modified in place.  If the

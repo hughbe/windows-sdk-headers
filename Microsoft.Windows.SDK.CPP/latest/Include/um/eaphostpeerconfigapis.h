@@ -130,14 +130,14 @@ DWORD WINAPI EapHostPeerQueryUserBlobFromCredentialInputFields(
                 // pointer to DWORD that receives the size of credential blob, if supplicant passes in
                 // non-zero size and non-NULL data below, EAPHost will just attempt to Update
                 // the blob with passed in values (if method supports) instead of creating a new one.
-                IN OUT DWORD *pdwUserBlobSize,
+                _Inout_ DWORD *pdwUserBlobSize,
                 // Pointer that receives the credential blob that can be used in authentication.
                 // For incoming data caller should always allocate this memory using LocalAlloc()
                 // Caller should free the memory using EapHostPeerFreeMemory.
-                IN OUT _Inout_
-                       _At_(*ppbUserBlob, 
-                            _When_(*ppbUserBlob != NULL, _Pre_writable_size_(*pdwUserBlobSize))
-                            _Post_readable_size_(*pdwUserBlobSize))
+                _Inout_
+                _At_(*ppbUserBlob, 
+                    _When_(*ppbUserBlob != NULL, _Pre_writable_size_(*pdwUserBlobSize))
+                    _Post_readable_size_(*pdwUserBlobSize))
                 BYTE **ppbUserBlob,
                 // In case of error, API fills ppEapError if possible. Caller should free ppEapError using EapHostPeerFreeErrorMemory
                 OUT EAP_ERROR** ppEapError

@@ -1,19 +1,19 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.0.h"
+#ifndef WINRT_Windows_Media_ClosedCaptioning_1_H
+#define WINRT_Windows_Media_ClosedCaptioning_1_H
 #include "winrt/impl/Windows.Media.ClosedCaptioning.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::ClosedCaptioning {
-
-struct WINRT_EBO IClosedCaptionPropertiesStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IClosedCaptionPropertiesStatics>
+namespace winrt::Windows::Media::ClosedCaptioning
 {
-    IClosedCaptionPropertiesStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IClosedCaptionPropertiesStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IClosedCaptionPropertiesStatics>
+    {
+        IClosedCaptionPropertiesStatics(std::nullptr_t = nullptr) noexcept {}
+        IClosedCaptionPropertiesStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

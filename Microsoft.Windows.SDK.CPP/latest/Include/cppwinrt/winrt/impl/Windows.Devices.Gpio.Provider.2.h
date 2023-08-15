@@ -1,26 +1,18 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Devices_Gpio_Provider_2_H
+#define WINRT_Windows_Devices_Gpio_Provider_2_H
 #include "winrt/impl/Windows.Devices.Gpio.Provider.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Gpio::Provider {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Gpio::Provider {
-
-struct WINRT_EBO GpioPinProviderValueChangedEventArgs :
-    Windows::Devices::Gpio::Provider::IGpioPinProviderValueChangedEventArgs
+namespace winrt::Windows::Devices::Gpio::Provider
 {
-    GpioPinProviderValueChangedEventArgs(std::nullptr_t) noexcept {}
-    GpioPinProviderValueChangedEventArgs(Windows::Devices::Gpio::Provider::ProviderGpioPinEdge const& edge);
-};
-
+    struct __declspec(empty_bases) GpioPinProviderValueChangedEventArgs : Windows::Devices::Gpio::Provider::IGpioPinProviderValueChangedEventArgs
+    {
+        GpioPinProviderValueChangedEventArgs(std::nullptr_t) noexcept {}
+        GpioPinProviderValueChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Gpio::Provider::IGpioPinProviderValueChangedEventArgs(ptr, take_ownership_from_abi) {}
+        GpioPinProviderValueChangedEventArgs(Windows::Devices::Gpio::Provider::ProviderGpioPinEdge const& edge);
+    };
 }
+#endif

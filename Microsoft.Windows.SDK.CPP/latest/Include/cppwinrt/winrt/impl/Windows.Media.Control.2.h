@@ -1,88 +1,68 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Media.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Media_Control_2_H
+#define WINRT_Windows_Media_Control_2_H
 #include "winrt/impl/Windows.Media.Control.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::Control {
-
+namespace winrt::Windows::Media::Control
+{
+    struct __declspec(empty_bases) CurrentSessionChangedEventArgs : Windows::Media::Control::ICurrentSessionChangedEventArgs
+    {
+        CurrentSessionChangedEventArgs(std::nullptr_t) noexcept {}
+        CurrentSessionChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::ICurrentSessionChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSession : Windows::Media::Control::IGlobalSystemMediaTransportControlsSession
+    {
+        GlobalSystemMediaTransportControlsSession(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSession(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSession(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSessionManager : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionManager
+    {
+        GlobalSystemMediaTransportControlsSessionManager(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSessionManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionManager(ptr, take_ownership_from_abi) {}
+        static auto RequestAsync();
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSessionMediaProperties : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionMediaProperties
+    {
+        GlobalSystemMediaTransportControlsSessionMediaProperties(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSessionMediaProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionMediaProperties(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSessionPlaybackControls : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackControls
+    {
+        GlobalSystemMediaTransportControlsSessionPlaybackControls(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSessionPlaybackControls(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackControls(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSessionPlaybackInfo : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackInfo
+    {
+        GlobalSystemMediaTransportControlsSessionPlaybackInfo(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSessionPlaybackInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GlobalSystemMediaTransportControlsSessionTimelineProperties : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionTimelineProperties
+    {
+        GlobalSystemMediaTransportControlsSessionTimelineProperties(std::nullptr_t) noexcept {}
+        GlobalSystemMediaTransportControlsSessionTimelineProperties(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionTimelineProperties(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MediaPropertiesChangedEventArgs : Windows::Media::Control::IMediaPropertiesChangedEventArgs
+    {
+        MediaPropertiesChangedEventArgs(std::nullptr_t) noexcept {}
+        MediaPropertiesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IMediaPropertiesChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PlaybackInfoChangedEventArgs : Windows::Media::Control::IPlaybackInfoChangedEventArgs
+    {
+        PlaybackInfoChangedEventArgs(std::nullptr_t) noexcept {}
+        PlaybackInfoChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::IPlaybackInfoChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SessionsChangedEventArgs : Windows::Media::Control::ISessionsChangedEventArgs
+    {
+        SessionsChangedEventArgs(std::nullptr_t) noexcept {}
+        SessionsChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::ISessionsChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) TimelinePropertiesChangedEventArgs : Windows::Media::Control::ITimelinePropertiesChangedEventArgs
+    {
+        TimelinePropertiesChangedEventArgs(std::nullptr_t) noexcept {}
+        TimelinePropertiesChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Control::ITimelinePropertiesChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Media::Control {
-
-struct WINRT_EBO CurrentSessionChangedEventArgs :
-    Windows::Media::Control::ICurrentSessionChangedEventArgs
-{
-    CurrentSessionChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSession :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSession
-{
-    GlobalSystemMediaTransportControlsSession(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSessionManager :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionManager
-{
-    GlobalSystemMediaTransportControlsSessionManager(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Control::GlobalSystemMediaTransportControlsSessionManager> RequestAsync();
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSessionMediaProperties :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionMediaProperties
-{
-    GlobalSystemMediaTransportControlsSessionMediaProperties(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSessionPlaybackControls :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackControls
-{
-    GlobalSystemMediaTransportControlsSessionPlaybackControls(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSessionPlaybackInfo :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionPlaybackInfo
-{
-    GlobalSystemMediaTransportControlsSessionPlaybackInfo(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GlobalSystemMediaTransportControlsSessionTimelineProperties :
-    Windows::Media::Control::IGlobalSystemMediaTransportControlsSessionTimelineProperties
-{
-    GlobalSystemMediaTransportControlsSessionTimelineProperties(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MediaPropertiesChangedEventArgs :
-    Windows::Media::Control::IMediaPropertiesChangedEventArgs
-{
-    MediaPropertiesChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PlaybackInfoChangedEventArgs :
-    Windows::Media::Control::IPlaybackInfoChangedEventArgs
-{
-    PlaybackInfoChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SessionsChangedEventArgs :
-    Windows::Media::Control::ISessionsChangedEventArgs
-{
-    SessionsChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO TimelinePropertiesChangedEventArgs :
-    Windows::Media::Control::ITimelinePropertiesChangedEventArgs
-{
-    TimelinePropertiesChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

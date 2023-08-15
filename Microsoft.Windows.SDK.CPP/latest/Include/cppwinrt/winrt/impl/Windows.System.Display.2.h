@@ -1,26 +1,18 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_System_Display_2_H
+#define WINRT_Windows_System_Display_2_H
 #include "winrt/impl/Windows.System.Display.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::Display {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::System::Display {
-
-struct WINRT_EBO DisplayRequest :
-    Windows::System::Display::IDisplayRequest
+namespace winrt::Windows::System::Display
 {
-    DisplayRequest(std::nullptr_t) noexcept {}
-    DisplayRequest();
-};
-
+    struct __declspec(empty_bases) DisplayRequest : Windows::System::Display::IDisplayRequest
+    {
+        DisplayRequest(std::nullptr_t) noexcept {}
+        DisplayRequest(void* ptr, take_ownership_from_abi_t) noexcept : Windows::System::Display::IDisplayRequest(ptr, take_ownership_from_abi) {}
+        DisplayRequest();
+    };
 }
+#endif

@@ -1,34 +1,33 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.Wallet.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_ApplicationModel_Wallet_System_1_H
+#define WINRT_Windows_ApplicationModel_Wallet_System_1_H
 #include "winrt/impl/Windows.ApplicationModel.Wallet.System.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Wallet::System {
-
-struct WINRT_EBO IWalletItemSystemStore :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWalletItemSystemStore>
+namespace winrt::Windows::ApplicationModel::Wallet::System
 {
-    IWalletItemSystemStore(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWalletItemSystemStore2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWalletItemSystemStore2>
-{
-    IWalletItemSystemStore2(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWalletManagerSystemStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWalletManagerSystemStatics>
-{
-    IWalletManagerSystemStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IWalletItemSystemStore :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWalletItemSystemStore>
+    {
+        IWalletItemSystemStore(std::nullptr_t = nullptr) noexcept {}
+        IWalletItemSystemStore(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWalletItemSystemStore2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWalletItemSystemStore2>
+    {
+        IWalletItemSystemStore2(std::nullptr_t = nullptr) noexcept {}
+        IWalletItemSystemStore2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWalletManagerSystemStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWalletManagerSystemStatics>
+    {
+        IWalletManagerSystemStatics(std::nullptr_t = nullptr) noexcept {}
+        IWalletManagerSystemStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

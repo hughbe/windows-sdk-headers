@@ -1,27 +1,20 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_ApplicationModel_UserActivities_Core_2_H
+#define WINRT_Windows_ApplicationModel_UserActivities_Core_2_H
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.1.h"
+#include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.ApplicationModel.UserActivities.Core.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities::Core {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::UserActivities::Core {
-
-struct CoreUserActivityManager
+namespace winrt::Windows::ApplicationModel::UserActivities::Core
 {
-    CoreUserActivityManager() = delete;
-    static Windows::ApplicationModel::UserActivities::UserActivitySession CreateUserActivitySessionInBackground(Windows::ApplicationModel::UserActivities::UserActivity const& activity);
-    static Windows::Foundation::IAsyncAction DeleteUserActivitySessionsInTimeRangeAsync(Windows::ApplicationModel::UserActivities::UserActivityChannel const& channel, Windows::Foundation::DateTime const& startTime, Windows::Foundation::DateTime const& endTime);
-};
-
+    struct CoreUserActivityManager
+    {
+        CoreUserActivityManager() = delete;
+        static auto CreateUserActivitySessionInBackground(Windows::ApplicationModel::UserActivities::UserActivity const& activity);
+        static auto DeleteUserActivitySessionsInTimeRangeAsync(Windows::ApplicationModel::UserActivities::UserActivityChannel const& channel, Windows::Foundation::DateTime const& startTime, Windows::Foundation::DateTime const& endTime);
+    };
 }
+#endif

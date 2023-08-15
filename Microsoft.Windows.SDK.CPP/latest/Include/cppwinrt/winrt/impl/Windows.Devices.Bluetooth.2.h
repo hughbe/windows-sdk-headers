@@ -1,166 +1,144 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Bluetooth.GenericAttributeProfile.1.h"
-#include "winrt/impl/Windows.Devices.Bluetooth.Rfcomm.1.h"
-#include "winrt/impl/Windows.Devices.Enumeration.1.h"
-#include "winrt/impl/Windows.Devices.Radios.1.h"
-#include "winrt/impl/Windows.Networking.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Devices_Bluetooth_2_H
+#define WINRT_Windows_Devices_Bluetooth_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
+#include "winrt/impl/Windows.Networking.1.h"
 #include "winrt/impl/Windows.Devices.Bluetooth.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth {
-
+namespace winrt::Windows::Devices::Bluetooth
+{
+    struct __declspec(empty_bases) BluetoothAdapter : Windows::Devices::Bluetooth::IBluetoothAdapter,
+        impl::require<BluetoothAdapter, Windows::Devices::Bluetooth::IBluetoothAdapter2, Windows::Devices::Bluetooth::IBluetoothAdapter3>
+    {
+        BluetoothAdapter(std::nullptr_t) noexcept {}
+        BluetoothAdapter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothAdapter(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDefaultAsync();
+    };
+    struct __declspec(empty_bases) BluetoothClassOfDevice : Windows::Devices::Bluetooth::IBluetoothClassOfDevice
+    {
+        BluetoothClassOfDevice(std::nullptr_t) noexcept {}
+        BluetoothClassOfDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothClassOfDevice(ptr, take_ownership_from_abi) {}
+        static auto FromRawValue(uint32_t rawValue);
+        static auto FromParts(Windows::Devices::Bluetooth::BluetoothMajorClass const& majorClass, Windows::Devices::Bluetooth::BluetoothMinorClass const& minorClass, Windows::Devices::Bluetooth::BluetoothServiceCapabilities const& serviceCapabilities);
+    };
+    struct __declspec(empty_bases) BluetoothDevice : Windows::Devices::Bluetooth::IBluetoothDevice,
+        impl::require<BluetoothDevice, Windows::Foundation::IClosable, Windows::Devices::Bluetooth::IBluetoothDevice2, Windows::Devices::Bluetooth::IBluetoothDevice3, Windows::Devices::Bluetooth::IBluetoothDevice4, Windows::Devices::Bluetooth::IBluetoothDevice5>
+    {
+        BluetoothDevice(std::nullptr_t) noexcept {}
+        BluetoothDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothDevice(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto FromHostNameAsync(Windows::Networking::HostName const& hostName);
+        static auto FromBluetoothAddressAsync(uint64_t address);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelectorFromPairingState(bool pairingState);
+        static auto GetDeviceSelectorFromConnectionStatus(Windows::Devices::Bluetooth::BluetoothConnectionStatus const& connectionStatus);
+        static auto GetDeviceSelectorFromDeviceName(param::hstring const& deviceName);
+        static auto GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress);
+        static auto GetDeviceSelectorFromClassOfDevice(Windows::Devices::Bluetooth::BluetoothClassOfDevice const& classOfDevice);
+    };
+    struct __declspec(empty_bases) BluetoothDeviceId : Windows::Devices::Bluetooth::IBluetoothDeviceId
+    {
+        BluetoothDeviceId(std::nullptr_t) noexcept {}
+        BluetoothDeviceId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothDeviceId(ptr, take_ownership_from_abi) {}
+        static auto FromId(param::hstring const& deviceId);
+    };
+    struct __declspec(empty_bases) BluetoothLEAppearance : Windows::Devices::Bluetooth::IBluetoothLEAppearance
+    {
+        BluetoothLEAppearance(std::nullptr_t) noexcept {}
+        BluetoothLEAppearance(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEAppearance(ptr, take_ownership_from_abi) {}
+        static auto FromRawValue(uint16_t rawValue);
+        static auto FromParts(uint16_t appearanceCategory, uint16_t appearanceSubCategory);
+    };
+    struct BluetoothLEAppearanceCategories
+    {
+        BluetoothLEAppearanceCategories() = delete;
+        [[nodiscard]] static auto Uncategorized();
+        [[nodiscard]] static auto Phone();
+        [[nodiscard]] static auto Computer();
+        [[nodiscard]] static auto Watch();
+        [[nodiscard]] static auto Clock();
+        [[nodiscard]] static auto Display();
+        [[nodiscard]] static auto RemoteControl();
+        [[nodiscard]] static auto EyeGlasses();
+        [[nodiscard]] static auto Tag();
+        [[nodiscard]] static auto Keyring();
+        [[nodiscard]] static auto MediaPlayer();
+        [[nodiscard]] static auto BarcodeScanner();
+        [[nodiscard]] static auto Thermometer();
+        [[nodiscard]] static auto HeartRate();
+        [[nodiscard]] static auto BloodPressure();
+        [[nodiscard]] static auto HumanInterfaceDevice();
+        [[nodiscard]] static auto GlucoseMeter();
+        [[nodiscard]] static auto RunningWalking();
+        [[nodiscard]] static auto Cycling();
+        [[nodiscard]] static auto PulseOximeter();
+        [[nodiscard]] static auto WeightScale();
+        [[nodiscard]] static auto OutdoorSportActivity();
+    };
+    struct BluetoothLEAppearanceSubcategories
+    {
+        BluetoothLEAppearanceSubcategories() = delete;
+        [[nodiscard]] static auto Generic();
+        [[nodiscard]] static auto SportsWatch();
+        [[nodiscard]] static auto ThermometerEar();
+        [[nodiscard]] static auto HeartRateBelt();
+        [[nodiscard]] static auto BloodPressureArm();
+        [[nodiscard]] static auto BloodPressureWrist();
+        [[nodiscard]] static auto Keyboard();
+        [[nodiscard]] static auto Mouse();
+        [[nodiscard]] static auto Joystick();
+        [[nodiscard]] static auto Gamepad();
+        [[nodiscard]] static auto DigitizerTablet();
+        [[nodiscard]] static auto CardReader();
+        [[nodiscard]] static auto DigitalPen();
+        [[nodiscard]] static auto BarcodeScanner();
+        [[nodiscard]] static auto RunningWalkingInShoe();
+        [[nodiscard]] static auto RunningWalkingOnShoe();
+        [[nodiscard]] static auto RunningWalkingOnHip();
+        [[nodiscard]] static auto CyclingComputer();
+        [[nodiscard]] static auto CyclingSpeedSensor();
+        [[nodiscard]] static auto CyclingCadenceSensor();
+        [[nodiscard]] static auto CyclingPowerSensor();
+        [[nodiscard]] static auto CyclingSpeedCadenceSensor();
+        [[nodiscard]] static auto OximeterFingertip();
+        [[nodiscard]] static auto OximeterWristWorn();
+        [[nodiscard]] static auto LocationDisplay();
+        [[nodiscard]] static auto LocationNavigationDisplay();
+        [[nodiscard]] static auto LocationPod();
+        [[nodiscard]] static auto LocationNavigationPod();
+    };
+    struct __declspec(empty_bases) BluetoothLEDevice : Windows::Devices::Bluetooth::IBluetoothLEDevice,
+        impl::require<BluetoothLEDevice, Windows::Foundation::IClosable, Windows::Devices::Bluetooth::IBluetoothLEDevice2, Windows::Devices::Bluetooth::IBluetoothLEDevice3, Windows::Devices::Bluetooth::IBluetoothLEDevice4, Windows::Devices::Bluetooth::IBluetoothLEDevice5>
+    {
+        BluetoothLEDevice(std::nullptr_t) noexcept {}
+        BluetoothLEDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothLEDevice(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto FromBluetoothAddressAsync(uint64_t bluetoothAddress);
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelectorFromPairingState(bool pairingState);
+        static auto GetDeviceSelectorFromConnectionStatus(Windows::Devices::Bluetooth::BluetoothConnectionStatus const& connectionStatus);
+        static auto GetDeviceSelectorFromDeviceName(param::hstring const& deviceName);
+        static auto GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress);
+        static auto GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
+        static auto GetDeviceSelectorFromAppearance(Windows::Devices::Bluetooth::BluetoothLEAppearance const& appearance);
+        static auto FromBluetoothAddressAsync(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
+    };
+    struct __declspec(empty_bases) BluetoothSignalStrengthFilter : Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter
+    {
+        BluetoothSignalStrengthFilter(std::nullptr_t) noexcept {}
+        BluetoothSignalStrengthFilter(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter(ptr, take_ownership_from_abi) {}
+        BluetoothSignalStrengthFilter();
+    };
+    struct BluetoothUuidHelper
+    {
+        BluetoothUuidHelper() = delete;
+        static auto FromShortId(uint32_t shortId);
+        static auto TryGetShortId(winrt::guid const& uuid);
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth {
-
-struct WINRT_EBO BluetoothAdapter :
-    Windows::Devices::Bluetooth::IBluetoothAdapter,
-    impl::require<BluetoothAdapter, Windows::Devices::Bluetooth::IBluetoothAdapter2>
-{
-    BluetoothAdapter(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothAdapter> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothAdapter> GetDefaultAsync();
-};
-
-struct WINRT_EBO BluetoothClassOfDevice :
-    Windows::Devices::Bluetooth::IBluetoothClassOfDevice
-{
-    BluetoothClassOfDevice(std::nullptr_t) noexcept {}
-    static Windows::Devices::Bluetooth::BluetoothClassOfDevice FromRawValue(uint32_t rawValue);
-    static Windows::Devices::Bluetooth::BluetoothClassOfDevice FromParts(Windows::Devices::Bluetooth::BluetoothMajorClass const& majorClass, Windows::Devices::Bluetooth::BluetoothMinorClass const& minorClass, Windows::Devices::Bluetooth::BluetoothServiceCapabilities const& serviceCapabilities);
-};
-
-struct WINRT_EBO BluetoothDevice :
-    Windows::Devices::Bluetooth::IBluetoothDevice,
-    impl::require<BluetoothDevice, Windows::Devices::Bluetooth::IBluetoothDevice2, Windows::Devices::Bluetooth::IBluetoothDevice3, Windows::Devices::Bluetooth::IBluetoothDevice4, Windows::Devices::Bluetooth::IBluetoothDevice5, Windows::Foundation::IClosable>
-{
-    BluetoothDevice(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothDevice> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothDevice> FromHostNameAsync(Windows::Networking::HostName const& hostName);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothDevice> FromBluetoothAddressAsync(uint64_t address);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelectorFromPairingState(bool pairingState);
-    static hstring GetDeviceSelectorFromConnectionStatus(Windows::Devices::Bluetooth::BluetoothConnectionStatus const& connectionStatus);
-    static hstring GetDeviceSelectorFromDeviceName(param::hstring const& deviceName);
-    static hstring GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress);
-    static hstring GetDeviceSelectorFromClassOfDevice(Windows::Devices::Bluetooth::BluetoothClassOfDevice const& classOfDevice);
-};
-
-struct WINRT_EBO BluetoothDeviceId :
-    Windows::Devices::Bluetooth::IBluetoothDeviceId
-{
-    BluetoothDeviceId(std::nullptr_t) noexcept {}
-    static Windows::Devices::Bluetooth::BluetoothDeviceId FromId(param::hstring const& deviceId);
-};
-
-struct WINRT_EBO BluetoothLEAppearance :
-    Windows::Devices::Bluetooth::IBluetoothLEAppearance
-{
-    BluetoothLEAppearance(std::nullptr_t) noexcept {}
-    static Windows::Devices::Bluetooth::BluetoothLEAppearance FromRawValue(uint16_t rawValue);
-    static Windows::Devices::Bluetooth::BluetoothLEAppearance FromParts(uint16_t appearanceCategory, uint16_t appearanceSubCategory);
-};
-
-struct BluetoothLEAppearanceCategories
-{
-    BluetoothLEAppearanceCategories() = delete;
-    static uint16_t Uncategorized();
-    static uint16_t Phone();
-    static uint16_t Computer();
-    static uint16_t Watch();
-    static uint16_t Clock();
-    static uint16_t Display();
-    static uint16_t RemoteControl();
-    static uint16_t EyeGlasses();
-    static uint16_t Tag();
-    static uint16_t Keyring();
-    static uint16_t MediaPlayer();
-    static uint16_t BarcodeScanner();
-    static uint16_t Thermometer();
-    static uint16_t HeartRate();
-    static uint16_t BloodPressure();
-    static uint16_t HumanInterfaceDevice();
-    static uint16_t GlucoseMeter();
-    static uint16_t RunningWalking();
-    static uint16_t Cycling();
-    static uint16_t PulseOximeter();
-    static uint16_t WeightScale();
-    static uint16_t OutdoorSportActivity();
-};
-
-struct BluetoothLEAppearanceSubcategories
-{
-    BluetoothLEAppearanceSubcategories() = delete;
-    static uint16_t Generic();
-    static uint16_t SportsWatch();
-    static uint16_t ThermometerEar();
-    static uint16_t HeartRateBelt();
-    static uint16_t BloodPressureArm();
-    static uint16_t BloodPressureWrist();
-    static uint16_t Keyboard();
-    static uint16_t Mouse();
-    static uint16_t Joystick();
-    static uint16_t Gamepad();
-    static uint16_t DigitizerTablet();
-    static uint16_t CardReader();
-    static uint16_t DigitalPen();
-    static uint16_t BarcodeScanner();
-    static uint16_t RunningWalkingInShoe();
-    static uint16_t RunningWalkingOnShoe();
-    static uint16_t RunningWalkingOnHip();
-    static uint16_t CyclingComputer();
-    static uint16_t CyclingSpeedSensor();
-    static uint16_t CyclingCadenceSensor();
-    static uint16_t CyclingPowerSensor();
-    static uint16_t CyclingSpeedCadenceSensor();
-    static uint16_t OximeterFingertip();
-    static uint16_t OximeterWristWorn();
-    static uint16_t LocationDisplay();
-    static uint16_t LocationNavigationDisplay();
-    static uint16_t LocationPod();
-    static uint16_t LocationNavigationPod();
-};
-
-struct WINRT_EBO BluetoothLEDevice :
-    Windows::Devices::Bluetooth::IBluetoothLEDevice,
-    impl::require<BluetoothLEDevice, Windows::Devices::Bluetooth::IBluetoothLEDevice2, Windows::Devices::Bluetooth::IBluetoothLEDevice3, Windows::Devices::Bluetooth::IBluetoothLEDevice4, Windows::Devices::Bluetooth::IBluetoothLEDevice5, Windows::Foundation::IClosable>
-{
-    BluetoothLEDevice(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothLEDevice> FromIdAsync(param::hstring const& deviceId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothLEDevice> FromBluetoothAddressAsync(uint64_t bluetoothAddress);
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelectorFromPairingState(bool pairingState);
-    static hstring GetDeviceSelectorFromConnectionStatus(Windows::Devices::Bluetooth::BluetoothConnectionStatus const& connectionStatus);
-    static hstring GetDeviceSelectorFromDeviceName(param::hstring const& deviceName);
-    static hstring GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress);
-    static hstring GetDeviceSelectorFromBluetoothAddress(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
-    static hstring GetDeviceSelectorFromAppearance(Windows::Devices::Bluetooth::BluetoothLEAppearance const& appearance);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::BluetoothLEDevice> FromBluetoothAddressAsync(uint64_t bluetoothAddress, Windows::Devices::Bluetooth::BluetoothAddressType const& bluetoothAddressType);
-};
-
-struct WINRT_EBO BluetoothSignalStrengthFilter :
-    Windows::Devices::Bluetooth::IBluetoothSignalStrengthFilter
-{
-    BluetoothSignalStrengthFilter(std::nullptr_t) noexcept {}
-    BluetoothSignalStrengthFilter();
-};
-
-struct BluetoothUuidHelper
-{
-    BluetoothUuidHelper() = delete;
-    static winrt::guid FromShortId(uint32_t shortId);
-    static Windows::Foundation::IReference<uint32_t> TryGetShortId(winrt::guid const& uuid);
-};
-
-}
+#endif

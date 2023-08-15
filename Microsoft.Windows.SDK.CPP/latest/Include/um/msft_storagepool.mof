@@ -701,6 +701,12 @@ class MSFT_StoragePool : MSFT_StorageObject {
         [In]
         UInt64 ReadCacheSize,
 
+        [In]
+        Boolean IsManualAttach,
+
+        [In]
+        Boolean AddToCluster,
+
         [Out, EmbeddedInstance("MSFT_VirtualDisk")]
         String CreatedVirtualDisk,
 

@@ -1,69 +1,61 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.DataTransfer.0.h"
-#include "winrt/impl/Windows.Foundation.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
-#include "winrt/impl/Windows.System.0.h"
-#include "winrt/impl/Windows.UI.0.h"
-#include "winrt/impl/Windows.UI.Core.0.h"
-#include "winrt/impl/Windows.Web.0.h"
-#include "winrt/impl/Windows.Web.Http.0.h"
-#include "winrt/impl/Windows.Web.UI.0.h"
+#ifndef WINRT_Windows_Web_UI_Interop_1_H
+#define WINRT_Windows_Web_UI_Interop_1_H
 #include "winrt/impl/Windows.Web.UI.Interop.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Web::UI::Interop {
-
-struct WINRT_EBO IWebViewControlAcceleratorKeyPressedEventArgs :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlAcceleratorKeyPressedEventArgs>
+namespace winrt::Windows::Web::UI::Interop
 {
-    IWebViewControlAcceleratorKeyPressedEventArgs(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlMoveFocusRequestedEventArgs :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlMoveFocusRequestedEventArgs>
-{
-    IWebViewControlMoveFocusRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlProcess :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlProcess>
-{
-    IWebViewControlProcess(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlProcessFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlProcessFactory>
-{
-    IWebViewControlProcessFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlProcessOptions :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlProcessOptions>
-{
-    IWebViewControlProcessOptions(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlSite :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlSite>
-{
-    IWebViewControlSite(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IWebViewControlSite2 :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IWebViewControlSite2>
-{
-    IWebViewControlSite2(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IWebViewControlAcceleratorKeyPressedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlAcceleratorKeyPressedEventArgs>
+    {
+        IWebViewControlAcceleratorKeyPressedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlAcceleratorKeyPressedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlMoveFocusRequestedEventArgs :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlMoveFocusRequestedEventArgs>
+    {
+        IWebViewControlMoveFocusRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlMoveFocusRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlProcess :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlProcess>
+    {
+        IWebViewControlProcess(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlProcess(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlProcessFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlProcessFactory>
+    {
+        IWebViewControlProcessFactory(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlProcessFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlProcessOptions :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlProcessOptions>
+    {
+        IWebViewControlProcessOptions(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlProcessOptions(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlSite :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlSite>
+    {
+        IWebViewControlSite(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlSite(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IWebViewControlSite2 :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IWebViewControlSite2>
+    {
+        IWebViewControlSite2(std::nullptr_t = nullptr) noexcept {}
+        IWebViewControlSite2(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

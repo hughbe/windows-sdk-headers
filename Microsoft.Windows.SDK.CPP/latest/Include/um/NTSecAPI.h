@@ -2487,6 +2487,12 @@ typedef PLSA_TRUST_INFORMATION PTRUSTED_DOMAIN_INFORMATION_BASIC;
 #define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION 0x00000200  // do not forward TGT to the other side of the trust which is not part of this enterprise
 #define TRUST_ATTRIBUTE_PIM_TRUST                     0x00000400  // Outgoing trust to a PIM forest.
 #endif
+#if (_WIN32_WINNT >= 0x0603)
+// Forward the TGT to the other side of the trust which is not part of this enterprise
+// This flag has the opposite meaning of TRUST_ATTRIBUTE_CROSS_ORGANIZATION_NO_TGT_DELEGATION which is now deprecated.
+// Note: setting TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION is not recommended from a security standpoint.
+#define TRUST_ATTRIBUTE_CROSS_ORGANIZATION_ENABLE_TGT_DELEGATION 0x00000800
+#endif
 // Trust attributes 0x00000040 through 0x00200000 are reserved for future use
 #else
 // Trust attributes 0x00000010 through 0x00200000 are reserved for future use
@@ -3760,6 +3766,7 @@ typedef struct _MSV1_0_LM20_LOGON_PROFILE {
 #define MSV1_0_CRED_VERSION_V3          4
 #define MSV1_0_CRED_VERSION_IUM         0xffff0001
 #define MSV1_0_CRED_VERSION_REMOTE      0xffff0002
+#define MSV1_0_CRED_VERSION_ARSO        0xffff0003
 #define MSV1_0_CRED_VERSION_RESERVED_1  0xfffffffe
 #define MSV1_0_CRED_VERSION_INVALID     0xffffffff
 
@@ -4133,11 +4140,6 @@ RtlDecryptMemory(
 
 #define KERB_ETYPE_AES128_CTS_HMAC_SHA1_96_PLAIN    -148
 #define KERB_ETYPE_AES256_CTS_HMAC_SHA1_96_PLAIN    -149
-
-//
-// Microsoft-specific value for sending the NTOWF back to the client via AS_REP.
-//
-#define KERB_ETYPE_NTLM_HASH                        -150
 
 //
 // Pkinit encryption types

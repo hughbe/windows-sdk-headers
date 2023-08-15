@@ -1,140 +1,124 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Networking_Proximity_2_H
+#define WINRT_Windows_Networking_Proximity_2_H
 #include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.Networking.1.h"
-#include "winrt/impl/Windows.Networking.Sockets.1.h"
 #include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Networking.Proximity.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Networking::Proximity {
-
-struct DeviceArrivedEventHandler : Windows::Foundation::IUnknown
+namespace winrt::Windows::Networking::Proximity
 {
-    DeviceArrivedEventHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> DeviceArrivedEventHandler(L lambda);
-    template <typename F> DeviceArrivedEventHandler(F* function);
-    template <typename O, typename M> DeviceArrivedEventHandler(O* object, M method);
-    template <typename O, typename M> DeviceArrivedEventHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> DeviceArrivedEventHandler(weak_ref<O>&& object, M method);
-    void operator()(Windows::Networking::Proximity::ProximityDevice const& sender) const;
-};
-
-struct DeviceDepartedEventHandler : Windows::Foundation::IUnknown
-{
-    DeviceDepartedEventHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> DeviceDepartedEventHandler(L lambda);
-    template <typename F> DeviceDepartedEventHandler(F* function);
-    template <typename O, typename M> DeviceDepartedEventHandler(O* object, M method);
-    template <typename O, typename M> DeviceDepartedEventHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> DeviceDepartedEventHandler(weak_ref<O>&& object, M method);
-    void operator()(Windows::Networking::Proximity::ProximityDevice const& sender) const;
-};
-
-struct MessageReceivedHandler : Windows::Foundation::IUnknown
-{
-    MessageReceivedHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> MessageReceivedHandler(L lambda);
-    template <typename F> MessageReceivedHandler(F* function);
-    template <typename O, typename M> MessageReceivedHandler(O* object, M method);
-    template <typename O, typename M> MessageReceivedHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> MessageReceivedHandler(weak_ref<O>&& object, M method);
-    void operator()(Windows::Networking::Proximity::ProximityDevice const& sender, Windows::Networking::Proximity::ProximityMessage const& message) const;
-};
-
-struct MessageTransmittedHandler : Windows::Foundation::IUnknown
-{
-    MessageTransmittedHandler(std::nullptr_t = nullptr) noexcept {}
-    template <typename L> MessageTransmittedHandler(L lambda);
-    template <typename F> MessageTransmittedHandler(F* function);
-    template <typename O, typename M> MessageTransmittedHandler(O* object, M method);
-    template <typename O, typename M> MessageTransmittedHandler(com_ptr<O>&& object, M method);
-    template <typename O, typename M> MessageTransmittedHandler(weak_ref<O>&& object, M method);
-    void operator()(Windows::Networking::Proximity::ProximityDevice const& sender, int64_t messageId) const;
-};
-
+    struct DeviceArrivedEventHandler : Windows::Foundation::IUnknown
+    {
+        DeviceArrivedEventHandler(std::nullptr_t = nullptr) noexcept {}
+        DeviceArrivedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> DeviceArrivedEventHandler(L lambda);
+        template <typename F> DeviceArrivedEventHandler(F* function);
+        template <typename O, typename M> DeviceArrivedEventHandler(O* object, M method);
+        template <typename O, typename M> DeviceArrivedEventHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> DeviceArrivedEventHandler(weak_ref<O>&& object, M method);
+        auto operator()(Windows::Networking::Proximity::ProximityDevice const& sender) const;
+    };
+    struct DeviceDepartedEventHandler : Windows::Foundation::IUnknown
+    {
+        DeviceDepartedEventHandler(std::nullptr_t = nullptr) noexcept {}
+        DeviceDepartedEventHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> DeviceDepartedEventHandler(L lambda);
+        template <typename F> DeviceDepartedEventHandler(F* function);
+        template <typename O, typename M> DeviceDepartedEventHandler(O* object, M method);
+        template <typename O, typename M> DeviceDepartedEventHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> DeviceDepartedEventHandler(weak_ref<O>&& object, M method);
+        auto operator()(Windows::Networking::Proximity::ProximityDevice const& sender) const;
+    };
+    struct MessageReceivedHandler : Windows::Foundation::IUnknown
+    {
+        MessageReceivedHandler(std::nullptr_t = nullptr) noexcept {}
+        MessageReceivedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> MessageReceivedHandler(L lambda);
+        template <typename F> MessageReceivedHandler(F* function);
+        template <typename O, typename M> MessageReceivedHandler(O* object, M method);
+        template <typename O, typename M> MessageReceivedHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> MessageReceivedHandler(weak_ref<O>&& object, M method);
+        auto operator()(Windows::Networking::Proximity::ProximityDevice const& sender, Windows::Networking::Proximity::ProximityMessage const& message) const;
+    };
+    struct MessageTransmittedHandler : Windows::Foundation::IUnknown
+    {
+        MessageTransmittedHandler(std::nullptr_t = nullptr) noexcept {}
+        MessageTransmittedHandler(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IUnknown(ptr, take_ownership_from_abi) {}
+        template <typename L> MessageTransmittedHandler(L lambda);
+        template <typename F> MessageTransmittedHandler(F* function);
+        template <typename O, typename M> MessageTransmittedHandler(O* object, M method);
+        template <typename O, typename M> MessageTransmittedHandler(com_ptr<O>&& object, M method);
+        template <typename O, typename M> MessageTransmittedHandler(weak_ref<O>&& object, M method);
+        auto operator()(Windows::Networking::Proximity::ProximityDevice const& sender, int64_t messageId) const;
+    };
+    struct __declspec(empty_bases) ConnectionRequestedEventArgs : Windows::Networking::Proximity::IConnectionRequestedEventArgs
+    {
+        ConnectionRequestedEventArgs(std::nullptr_t) noexcept {}
+        ConnectionRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::IConnectionRequestedEventArgs(ptr, take_ownership_from_abi) {}
+    };
+    struct PeerFinder
+    {
+        PeerFinder() = delete;
+        [[nodiscard]] static auto AllowBluetooth();
+        static auto AllowBluetooth(bool value);
+        [[nodiscard]] static auto AllowInfrastructure();
+        static auto AllowInfrastructure(bool value);
+        [[nodiscard]] static auto AllowWiFiDirect();
+        static auto AllowWiFiDirect(bool value);
+        [[nodiscard]] static auto DisplayName();
+        static auto DisplayName(param::hstring const& value);
+        [[nodiscard]] static auto SupportedDiscoveryTypes();
+        [[nodiscard]] static auto AlternateIdentities();
+        static auto Start();
+        static auto Start(param::hstring const& peerMessage);
+        static auto Stop();
+        static auto TriggeredConnectionStateChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs> const& handler);
+        using TriggeredConnectionStateChanged_revoker = impl::factory_event_revoker<Windows::Networking::Proximity::IPeerFinderStatics, &impl::abi_t<Windows::Networking::Proximity::IPeerFinderStatics>::remove_TriggeredConnectionStateChanged>;
+        static TriggeredConnectionStateChanged_revoker TriggeredConnectionStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs> const& handler);
+        static auto TriggeredConnectionStateChanged(winrt::event_token const& cookie);
+        static auto ConnectionRequested(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::ConnectionRequestedEventArgs> const& handler);
+        using ConnectionRequested_revoker = impl::factory_event_revoker<Windows::Networking::Proximity::IPeerFinderStatics, &impl::abi_t<Windows::Networking::Proximity::IPeerFinderStatics>::remove_ConnectionRequested>;
+        static ConnectionRequested_revoker ConnectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::ConnectionRequestedEventArgs> const& handler);
+        static auto ConnectionRequested(winrt::event_token const& cookie);
+        static auto FindAllPeersAsync();
+        static auto ConnectAsync(Windows::Networking::Proximity::PeerInformation const& peerInformation);
+        [[nodiscard]] static auto Role();
+        static auto Role(Windows::Networking::Proximity::PeerRole const& value);
+        [[nodiscard]] static auto DiscoveryData();
+        static auto DiscoveryData(Windows::Storage::Streams::IBuffer const& value);
+        static auto CreateWatcher();
+    };
+    struct __declspec(empty_bases) PeerInformation : Windows::Networking::Proximity::IPeerInformation,
+        impl::require<PeerInformation, Windows::Networking::Proximity::IPeerInformation3, Windows::Networking::Proximity::IPeerInformationWithHostAndService>
+    {
+        PeerInformation(std::nullptr_t) noexcept {}
+        PeerInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::IPeerInformation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) PeerWatcher : Windows::Networking::Proximity::IPeerWatcher
+    {
+        PeerWatcher(std::nullptr_t) noexcept {}
+        PeerWatcher(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::IPeerWatcher(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ProximityDevice : Windows::Networking::Proximity::IProximityDevice
+    {
+        ProximityDevice(std::nullptr_t) noexcept {}
+        ProximityDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::IProximityDevice(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto GetDefault();
+        static auto FromId(param::hstring const& deviceId);
+    };
+    struct __declspec(empty_bases) ProximityMessage : Windows::Networking::Proximity::IProximityMessage
+    {
+        ProximityMessage(std::nullptr_t) noexcept {}
+        ProximityMessage(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::IProximityMessage(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) TriggeredConnectionStateChangedEventArgs : Windows::Networking::Proximity::ITriggeredConnectionStateChangedEventArgs
+    {
+        TriggeredConnectionStateChangedEventArgs(std::nullptr_t) noexcept {}
+        TriggeredConnectionStateChangedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Networking::Proximity::ITriggeredConnectionStateChangedEventArgs(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Networking::Proximity {
-
-struct WINRT_EBO ConnectionRequestedEventArgs :
-    Windows::Networking::Proximity::IConnectionRequestedEventArgs
-{
-    ConnectionRequestedEventArgs(std::nullptr_t) noexcept {}
-};
-
-struct PeerFinder
-{
-    PeerFinder() = delete;
-    static bool AllowBluetooth();
-    static void AllowBluetooth(bool value);
-    static bool AllowInfrastructure();
-    static void AllowInfrastructure(bool value);
-    static bool AllowWiFiDirect();
-    static void AllowWiFiDirect(bool value);
-    static hstring DisplayName();
-    static void DisplayName(param::hstring const& value);
-    static Windows::Networking::Proximity::PeerDiscoveryTypes SupportedDiscoveryTypes();
-    static Windows::Foundation::Collections::IMap<hstring, hstring> AlternateIdentities();
-    static void Start();
-    static void Start(param::hstring const& peerMessage);
-    static void Stop();
-    static winrt::event_token TriggeredConnectionStateChanged(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs> const& handler);
-    using TriggeredConnectionStateChanged_revoker = impl::factory_event_revoker<Windows::Networking::Proximity::IPeerFinderStatics, &impl::abi_t<Windows::Networking::Proximity::IPeerFinderStatics>::remove_TriggeredConnectionStateChanged>;
-    static TriggeredConnectionStateChanged_revoker TriggeredConnectionStateChanged(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::TriggeredConnectionStateChangedEventArgs> const& handler);
-    static void TriggeredConnectionStateChanged(winrt::event_token const& cookie);
-    static winrt::event_token ConnectionRequested(Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::ConnectionRequestedEventArgs> const& handler);
-    using ConnectionRequested_revoker = impl::factory_event_revoker<Windows::Networking::Proximity::IPeerFinderStatics, &impl::abi_t<Windows::Networking::Proximity::IPeerFinderStatics>::remove_ConnectionRequested>;
-    static ConnectionRequested_revoker ConnectionRequested(auto_revoke_t, Windows::Foundation::TypedEventHandler<Windows::Foundation::IInspectable, Windows::Networking::Proximity::ConnectionRequestedEventArgs> const& handler);
-    static void ConnectionRequested(winrt::event_token const& cookie);
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Networking::Proximity::PeerInformation>> FindAllPeersAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Networking::Sockets::StreamSocket> ConnectAsync(Windows::Networking::Proximity::PeerInformation const& peerInformation);
-    static Windows::Networking::Proximity::PeerRole Role();
-    static void Role(Windows::Networking::Proximity::PeerRole const& value);
-    static Windows::Storage::Streams::IBuffer DiscoveryData();
-    static void DiscoveryData(Windows::Storage::Streams::IBuffer const& value);
-    static Windows::Networking::Proximity::PeerWatcher CreateWatcher();
-};
-
-struct WINRT_EBO PeerInformation :
-    Windows::Networking::Proximity::IPeerInformation,
-    impl::require<PeerInformation, Windows::Networking::Proximity::IPeerInformation3, Windows::Networking::Proximity::IPeerInformationWithHostAndService>
-{
-    PeerInformation(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO PeerWatcher :
-    Windows::Networking::Proximity::IPeerWatcher
-{
-    PeerWatcher(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO ProximityDevice :
-    Windows::Networking::Proximity::IProximityDevice
-{
-    ProximityDevice(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static Windows::Networking::Proximity::ProximityDevice GetDefault();
-    static Windows::Networking::Proximity::ProximityDevice FromId(param::hstring const& deviceId);
-};
-
-struct WINRT_EBO ProximityMessage :
-    Windows::Networking::Proximity::IProximityMessage
-{
-    ProximityMessage(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO TriggeredConnectionStateChangedEventArgs :
-    Windows::Networking::Proximity::ITriggeredConnectionStateChangedEventArgs
-{
-    TriggeredConnectionStateChangedEventArgs(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

@@ -750,6 +750,7 @@ STDAPI SetAccessForIEAppContainer(
 #define INET_E_RESERVED_2                            _HRESULT_TYPEDEF_(0x800C001FL)      
 #define INET_E_RESERVED_3                            _HRESULT_TYPEDEF_(0x800C0020L)      
 #define INET_E_RESERVED_4                            _HRESULT_TYPEDEF_(0x800C0021L)      
+#define INET_E_RESERVED_5                            _HRESULT_TYPEDEF_(0x800C0022L)      
 #define INET_E_ERROR_FIRST                           _HRESULT_TYPEDEF_(0x800C0002L)      
 #define INET_E_CODE_DOWNLOAD_DECLINED                _HRESULT_TYPEDEF_(0x800C0100L)      
 #define INET_E_RESULT_DISPATCHED                     _HRESULT_TYPEDEF_(0x800C0200L)      

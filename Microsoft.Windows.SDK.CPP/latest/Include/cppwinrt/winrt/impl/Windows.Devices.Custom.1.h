@@ -1,47 +1,47 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_Devices_Custom_1_H
+#define WINRT_Windows_Devices_Custom_1_H
 #include "winrt/impl/Windows.Devices.Custom.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Custom {
-
-struct WINRT_EBO ICustomDevice :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICustomDevice>
+namespace winrt::Windows::Devices::Custom
 {
-    ICustomDevice(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO ICustomDeviceStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICustomDeviceStatics>
-{
-    ICustomDeviceStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IIOControlCode :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IIOControlCode>
-{
-    IIOControlCode(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IIOControlCodeFactory :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IIOControlCodeFactory>
-{
-    IIOControlCodeFactory(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IKnownDeviceTypesStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IKnownDeviceTypesStatics>
-{
-    IKnownDeviceTypesStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ICustomDevice :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICustomDevice>
+    {
+        ICustomDevice(std::nullptr_t = nullptr) noexcept {}
+        ICustomDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) ICustomDeviceStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICustomDeviceStatics>
+    {
+        ICustomDeviceStatics(std::nullptr_t = nullptr) noexcept {}
+        ICustomDeviceStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IIOControlCode :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IIOControlCode>
+    {
+        IIOControlCode(std::nullptr_t = nullptr) noexcept {}
+        IIOControlCode(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IIOControlCodeFactory :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IIOControlCodeFactory>
+    {
+        IIOControlCodeFactory(std::nullptr_t = nullptr) noexcept {}
+        IIOControlCodeFactory(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IKnownDeviceTypesStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IKnownDeviceTypesStatics>
+    {
+        IKnownDeviceTypesStatics(std::nullptr_t = nullptr) noexcept {}
+        IKnownDeviceTypesStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

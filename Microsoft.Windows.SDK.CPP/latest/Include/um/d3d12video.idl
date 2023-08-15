@@ -67,6 +67,17 @@ typedef enum D3D12_FEATURE_VIDEO
     D3D12_FEATURE_VIDEO_FEATURE_AREA_SUPPORT = 19,   
     D3D12_FEATURE_VIDEO_MOTION_ESTIMATOR = 20, 
     D3D12_FEATURE_VIDEO_MOTION_ESTIMATOR_SIZE = 21,
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMAND_COUNT = 22, 
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMANDS = 23, 
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMAND_PARAMETER_COUNT = 24,
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMAND_PARAMETERS = 25, 
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMAND_SUPPORT = 26, 
+    D3D12_FEATURE_VIDEO_EXTENSION_COMMAND_SIZE = 27, 
+    D3D12_FEATURE_VIDEO_DECODE_PROTECTED_RESOURCES = 28,
+    D3D12_FEATURE_VIDEO_PROCESS_PROTECTED_RESOURCES = 29,
+    D3D12_FEATURE_VIDEO_MOTION_ESTIMATOR_PROTECTED_RESOURCES = 30,
+    D3D12_FEATURE_VIDEO_DECODER_HEAP_SIZE1 = 31,
+    D3D12_FEATURE_VIDEO_PROCESSOR_SIZE1 = 32,
 
 } D3D12_FEATURE_VIDEO;
 
@@ -276,6 +287,7 @@ typedef enum D3D12_VIDEO_DECODE_STATUS
     D3D12_VIDEO_DECODE_STATUS_CONTINUE = 1,
     D3D12_VIDEO_DECODE_STATUS_CONTINUE_SKIP_DISPLAY = 2,
     D3D12_VIDEO_DECODE_STATUS_RESTART = 3,
+    D3D12_VIDEO_DECODE_STATUS_RATE_EXCEEDED = 4,
 } D3D12_VIDEO_DECODE_STATUS;
 
 typedef enum D3D12_VIDEO_DECODE_ARGUMENT_TYPE
@@ -433,12 +445,6 @@ typedef struct D3D12_QUERY_DATA_VIDEO_DECODE_STATISTICS
     DXGI_RATIONAL FrameRate;
     UINT BitRate;
 } D3D12_QUERY_DATA_VIDEO_DECODE_STATISTICS;
-
-typedef struct D3D12_VIDEO_DECODE_SUB_SAMPLE_MAPPING_BLOCK
-{
-    UINT   ClearSize;
-    UINT   EncryptedSize;
-} D3D12_VIDEO_DECODE_SUB_SAMPLE_MAPPING_BLOCK;
 
 typedef struct D3D12_VIDEO_DECODE_FRAME_ARGUMENT
 {
@@ -1103,6 +1109,298 @@ interface ID3D12VideoEncodeCommandList
         );
 }
 
+typedef enum D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS
+{
+    D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAG_NONE                  = 0x0,
+    D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAG_SUPPORTED             = 0x1,
+
+} D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS;
+cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS );")
+
+// D3D12_FEATURE_VIDEO_DECODE_PROTECTED_RESOURCES
+typedef struct D3D12_FEATURE_DATA_VIDEO_DECODE_PROTECTED_RESOURCES
+{
+    UINT NodeIndex;                                                                 // input
+    D3D12_VIDEO_DECODE_CONFIGURATION Configuration;                                 // input
+    D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS SupportFlags;                      // output
+} D3D12_FEATURE_DATA_VIDEO_DECODE_PROTECTED_RESOURCES;
+
+// D3D12_FEATURE_VIDEO_PROCESS_PROTECTED_RESOURCES
+typedef struct D3D12_FEATURE_DATA_VIDEO_PROCESS_PROTECTED_RESOURCES
+{
+    UINT NodeIndex;                                                                 // input
+    D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS SupportFlags;                      // output
+} D3D12_FEATURE_DATA_VIDEO_PROCESS_PROTECTED_RESOURCES;
+
+// D3D12_FEATURE_VIDEO_MOTION_ESTIMATOR_PROTECTED_RESOURCES
+typedef struct D3D12_FEATURE_DATA_VIDEO_MOTION_ESTIMATOR_PROTECTED_RESOURCES
+{
+    UINT NodeIndex;                                                                 // input
+    D3D12_VIDEO_PROTECTED_RESOURCE_SUPPORT_FLAGS SupportFlags;                      // output
+} D3D12_FEATURE_DATA_VIDEO_MOTION_ESTIMATOR_PROTECTED_RESOURCES;
+
+//D3D12_FEATURE_VIDEO_DECODER_HEAP_SIZE1
+typedef struct D3D12_FEATURE_DATA_VIDEO_DECODER_HEAP_SIZE1
+{
+    D3D12_VIDEO_DECODER_HEAP_DESC VideoDecoderHeapDesc;         // input
+    BOOL Protected;                                             // input
+    UINT64 MemoryPoolL0Size;                                    // output
+    UINT64 MemoryPoolL1Size;                                    // output
+} D3D12_FEATURE_DATA_VIDEO_DECODER_HEAP_SIZE1;
+
+// D3D12_FEATURE_VIDEO_PROCESSOR_SIZE1
+typedef struct D3D12_FEATURE_DATA_VIDEO_PROCESSOR_SIZE1
+{
+    UINT NodeMask;
+    const D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC* pOutputStreamDesc;    // input
+    UINT NumInputStreamDescs;                                           // input
+    const D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC *pInputStreamDescs;     // input
+    BOOL Protected;                                                     // input
+    UINT64 MemoryPoolL0Size;                                            // output
+    UINT64 MemoryPoolL1Size;                                            // output
+} D3D12_FEATURE_DATA_VIDEO_PROCESSOR_SIZE1;
+
+typedef enum D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE
+{
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_CREATION = 0,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_INITIALIZATION = 1,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_EXECUTION = 2,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_CAPS_INPUT = 3,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_CAPS_OUTPUT = 4,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_DEVICE_EXECUTE_INPUT = 5,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE_DEVICE_EXECUTE_OUTPUT = 6,
+} D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE;
+
+typedef enum D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE
+{
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_UINT8 = 0, 
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_UINT16 = 1,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_UINT32 = 2,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_UINT64 = 3, 
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_SINT8 = 4, 
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_SINT16 = 5,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_SINT32 = 6,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_SINT64 = 7,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_FLOAT = 8,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_DOUBLE = 9,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE_RESOURCE = 10,
+} D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE;
+
+typedef enum D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAGS
+{
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAG_NONE = 0x00000000,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAG_READ = 0x00000001,
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAG_WRITE = 0x00000002
+} D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAGS;
+
+cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAGS );")
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_COUNT
+{
+    UINT NodeIndex;        // in
+    UINT CommandCount;    // out
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_COUNT;
+
+typedef struct D3D12_VIDEO_EXTENSION_COMMAND_INFO
+{
+    GUID CommandId;
+    LPCWSTR Name;
+    D3D12_COMMAND_LIST_SUPPORT_FLAGS CommandListSupportFlags;
+} D3D12_VIDEO_EXTENSION_COMMAND_INFO;
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMANDS
+{
+    UINT NodeIndex;
+    UINT CommandCount;
+    [annotation("_Field_size_full_(CommandCount)")] D3D12_VIDEO_EXTENSION_COMMAND_INFO* pCommandInfos;
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMANDS;
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_PARAMETER_COUNT
+{
+    GUID CommandId;                                          // in
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE Stage;     // in
+    UINT ParameterCount;                                     // out
+    UINT ParameterPacking;                                   // out
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_PARAMETER_COUNT;
+
+typedef struct D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_INFO
+{
+    LPCWSTR Name;
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_TYPE Type;
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_FLAGS Flags;
+} D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_INFO;
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_PARAMETERS
+{
+    GUID CommandId;  // in
+    D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_STAGE Stage;  // in
+    UINT ParameterCount; // in
+    [annotation("_Field_size_full_(ParameterCount)")] D3D12_VIDEO_EXTENSION_COMMAND_PARAMETER_INFO* pParameterInfos; // out
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_PARAMETERS;
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_SUPPORT
+{
+    UINT NodeIndex;
+    GUID CommandId;
+    [annotation("_Field_size_bytes_full_opt_(InputDataSizeInBytes)")] const void *pInputData;
+    SIZE_T InputDataSizeInBytes;
+    [annotation("_Field_size_bytes_full_opt_(OutputDataSizeInBytes)")] void *pOutputData;
+    SIZE_T OutputDataSizeInBytes;
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_SUPPORT;
+
+typedef struct D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_SIZE
+{
+    UINT NodeIndex;
+    GUID CommandId;
+    [annotation("_Field_size_bytes_full_(CreationParametersDataSizeInBytes)")] const void* pCreationParameters;
+    SIZE_T CreationParametersSizeInBytes;
+    UINT64 MemoryPoolL0Size;                                            // output
+    UINT64 MemoryPoolL1Size;                                            // output
+} D3D12_FEATURE_DATA_VIDEO_EXTENSION_COMMAND_SIZE;
+
+typedef struct D3D12_VIDEO_EXTENSION_COMMAND_DESC
+{
+    UINT NodeMask;
+    GUID CommandId;
+} D3D12_VIDEO_EXTENSION_COMMAND_DESC;
+
+[uuid(79A2E5FB-CCD2-469A-9FDE-195D10951F7E), object, local, pointer_default(unique)]
+interface ID3D12VideoDecoder1
+    : ID3D12VideoDecoder
+{
+    HRESULT GetProtectedResourceSession(
+        [in] REFIID riid, // Expected: ID3D12ProtectedResourceSession
+        [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppProtectedSession);
+}
+
+[uuid(DA1D98C5-539F-41B2-BF6B-1198A03B6D26), object, local, pointer_default(unique)]
+interface ID3D12VideoDecoderHeap1
+    : ID3D12VideoDecoderHeap
+{
+    HRESULT GetProtectedResourceSession(
+        [in] REFIID riid, // Expected: ID3D12ProtectedResourceSession
+        [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppProtectedSession);
+}
+
+[uuid(F3CFE615-553F-425C-86D8-EE8C1B1FB01C), object, local, pointer_default(unique)]
+interface ID3D12VideoProcessor1
+    : ID3D12VideoProcessor
+{
+    HRESULT GetProtectedResourceSession(
+        [in] REFIID riid, // Expected: ID3D12ProtectedResourceSession
+        [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppProtectedSession);
+}
+
+[uuid(554E41E8-AE8E-4A8C-B7D2-5B4F274A30E4), object, local, pointer_default(unique)]
+interface ID3D12VideoExtensionCommand
+    : ID3D12Pageable
+{
+    D3D12_VIDEO_EXTENSION_COMMAND_DESC GetDesc();
+
+    HRESULT GetProtectedResourceSession(
+        [in] REFIID riid, // Expected: ID3D12ProtectedResourceSession
+        [out, iid_is(riid), annotation("_COM_Outptr_opt_")] void** ppProtectedSession);
+}
+
+[uuid(F019AC49-F838-4A95-9B17-579437C8F513), object, local, pointer_default(unique)]
+interface ID3D12VideoDevice2
+    : ID3D12VideoDevice1
+{
+    HRESULT CreateVideoDecoder1(
+        [annotation("_In_")] const D3D12_VIDEO_DECODER_DESC* pDesc,
+        [annotation("_In_opt_")] ID3D12ProtectedResourceSession *pProtectedResourceSession,
+        [annotation("_In_")] REFIID riid, // Expected: IID_ID3D12VideoDecoder1, 
+        [out, iid_is(riid), annotation("_COM_Outptr_")] void** ppVideoDecoder
+        );
+
+    HRESULT CreateVideoDecoderHeap1(
+        [annotation("_In_")] const D3D12_VIDEO_DECODER_HEAP_DESC* pVideoDecoderHeapDesc,
+        [annotation("_In_opt_")] ID3D12ProtectedResourceSession *pProtectedResourceSession,
+        [annotation("_In_")] REFIID riid, // Expected: IID_ID3D12VideoDecoderHeap1, 
+        [out, iid_is(riid), annotation("_COM_Outptr_")] void** ppVideoDecoderHeap
+        );
+
+    HRESULT CreateVideoProcessor1(
+        UINT NodeMask,
+        [annotation("_In_")] const D3D12_VIDEO_PROCESS_OUTPUT_STREAM_DESC* pOutputStreamDesc,
+        UINT NumInputStreamDescs,
+        [annotation("_In_reads_(NumInputStreamDescs)")]const D3D12_VIDEO_PROCESS_INPUT_STREAM_DESC *pInputStreamDescs,
+        [annotation("_In_opt_")] ID3D12ProtectedResourceSession *pProtectedResourceSession,
+        [annotation("_In_")] REFIID riid, // Expected: IID_ID3D12VideoProcessor1, 
+        [out, iid_is(riid), annotation("_COM_Outptr_")] void **ppVideoProcessor
+        );
+
+    HRESULT CreateVideoExtensionCommand(
+        [annotation("_In_")] const D3D12_VIDEO_EXTENSION_COMMAND_DESC* pDesc,        
+        [annotation("_In_reads_bytes_(CreationParametersDataSizeInBytes)")] const void* pCreationParameters, 
+        SIZE_T CreationParametersDataSizeInBytes,
+        [annotation("_In_opt_")] ID3D12ProtectedResourceSession* pProtectedResourceSession,
+        [annotation("_In_")] REFIID riid, // Expected: IID_ID3D12VideoExtensionCommand, 
+        [annotation("_COM_Outptr_")] void** ppVideoExtensionCommand);
+
+    HRESULT ExecuteExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(ExecutionParametersSizeInBytes)")] const void *pExecutionParameters, 
+        SIZE_T ExecutionParametersSizeInBytes,
+        [annotation("_Out_writes_bytes_(OutputDataSizeInBytes)")] void *pOutputData,
+        SIZE_T OutputDataSizeInBytes
+        );
+}
+
+[uuid(6e120880-c114-4153-8036-d247051e1729), object, local, pointer_default(unique)]
+interface ID3D12VideoDecodeCommandList2
+    : ID3D12VideoDecodeCommandList1
+{
+    void SetProtectedResourceSession(
+        [annotation("_In_opt_")]ID3D12ProtectedResourceSession *pProtectedResourceSession
+        );
+
+    void InitializeExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(InitializationParametersSizeInBytes)")] const void *pInitializationParameters, 
+        SIZE_T InitializationParametersSizeInBytes);
+
+    void ExecuteExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(ExecutionParametersSizeInBytes)")] const void *pExecutionParameters, 
+        SIZE_T ExecutionParametersSizeInBytes);
+}
+
+[uuid(db525ae4-6ad6-473c-baa7-59b2e37082e4), object, local, pointer_default(unique)]
+interface ID3D12VideoProcessCommandList2
+    : ID3D12VideoProcessCommandList1
+{
+    
+    void SetProtectedResourceSession(
+        [annotation("_In_opt_")]ID3D12ProtectedResourceSession *pProtectedResourceSession
+        );
+
+    void InitializeExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(InitializationParametersSizeInBytes)")] const void *pInitializationParameters, 
+        SIZE_T InitializationParametersSizeInBytes);
+
+    void ExecuteExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(ExecutionParametersSizeInBytes)")] const void *pExecutionParameters, 
+        SIZE_T ExecutionParametersSizeInBytes);
+}
+
+[uuid(94971eca-2bdb-4769-88cf-3675ea757ebc), object, local, pointer_default(unique)]
+interface ID3D12VideoEncodeCommandList1
+    : ID3D12VideoEncodeCommandList
+{
+    void InitializeExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(InitializationParametersSizeInBytes)")] const void *pInitializationParameters, 
+        SIZE_T InitializationParametersSizeInBytes);
+
+    void ExecuteExtensionCommand(
+        [annotation("_In_")] ID3D12VideoExtensionCommand* pExtensionCommand,
+        [annotation("_In_reads_bytes_(ExecutionParametersSizeInBytes)")] const void *pExecutionParameters, 
+        SIZE_T ExecutionParametersSizeInBytes);
+}
+
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_MPEG2, 0xee27417f, 0x5e28, 0x4e65, 0xbe, 0xea, 0x1d, 0x26, 0xb5, 0x08, 0xad, 0xc9); ")
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_MPEG1_AND_MPEG2, 0x86695f12, 0x340e, 0x4f04, 0x9f, 0xd3, 0x92, 0x53, 0xdd, 0x32, 0x74, 0x60); ")
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_H264, 0x1b81be68, 0xa0c7, 0x11d3, 0xb9, 0x84, 0x00, 0xc0, 0x4f, 0x2e, 0x73, 0xc5);")
@@ -1118,6 +1416,11 @@ cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_HEVC_MAIN10, 0x107af0e0, 0xef1
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_VP9, 0x463707f8, 0xa1d0, 0x4585, 0x87, 0x6d, 0x83, 0xaa, 0x6d, 0x60, 0xb8, 0x9e);")
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_VP9_10BIT_PROFILE2, 0xa4c749ef, 0x6ecf, 0x48aa, 0x84, 0x48, 0x50, 0xa7, 0xa1, 0x16, 0x5f, 0xf7);")
 cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_VP8, 0x90b899ea, 0x3a62, 0x4705, 0x88, 0xb3, 0x8d, 0xf0, 0x4b, 0x27, 0x44, 0xe7);")
+cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_AV1_PROFILE0, 0xb8be4ccb, 0xcf53, 0x46ba, 0x8d, 0x59, 0xd6, 0xb8, 0xa6, 0xda, 0x5d, 0x2a);")
+cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_AV1_PROFILE1, 0x6936ff0f, 0x45b1, 0x4163, 0x9c, 0xc1, 0x64, 0x6e, 0xf6, 0x94, 0x61, 0x08);")
+cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_AV1_PROFILE2, 0x0c5f2aa1, 0xe541, 0x4089, 0xbb, 0x7b, 0x98, 0x11, 0x0a, 0x19, 0xd7, 0xc8);")
+cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_AV1_12BIT_PROFILE2, 0x17127009, 0xa00f, 0x4ce1, 0x99, 0x4e, 0xbf, 0x40, 0x81, 0xf6, 0xf3, 0xf0);")
+cpp_quote("DEFINE_GUID(D3D12_VIDEO_DECODE_PROFILE_AV1_12BIT_PROFILE2_420, 0x2d80bed6, 0x9cac, 0x4835, 0x9e, 0x91, 0x32, 0x7b, 0xbc, 0x4f, 0x9e, 0xe8);")
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
@@ -1134,3 +1437,11 @@ cpp_quote( "DEFINE_GUID(IID_ID3D12VideoMotionEstimator,0x33FDAE0E,0x098B,0x428F,
 cpp_quote( "DEFINE_GUID(IID_ID3D12VideoMotionVectorHeap,0x5BE17987,0x743A,0x4061,0x83,0x4B,0x23,0xD2,0x2D,0xAE,0xA5,0x05);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12VideoDevice1,0x981611AD,0xA144,0x4C83,0x98,0x90,0xF3,0x0E,0x26,0xD6,0x58,0xAB);" )
 cpp_quote( "DEFINE_GUID(IID_ID3D12VideoEncodeCommandList,0x8455293A,0x0CBD,0x4831,0x9B,0x39,0xFB,0xDB,0xAB,0x72,0x47,0x23);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoDecoder1,0x79A2E5FB,0xCCD2,0x469A,0x9F,0xDE,0x19,0x5D,0x10,0x95,0x1F,0x7E);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoDecoderHeap1,0xDA1D98C5,0x539F,0x41B2,0xBF,0x6B,0x11,0x98,0xA0,0x3B,0x6D,0x26);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoProcessor1,0xF3CFE615,0x553F,0x425C,0x86,0xD8,0xEE,0x8C,0x1B,0x1F,0xB0,0x1C);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoExtensionCommand,0x554E41E8,0xAE8E,0x4A8C,0xB7,0xD2,0x5B,0x4F,0x27,0x4A,0x30,0xE4);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoDevice2,0xF019AC49,0xF838,0x4A95,0x9B,0x17,0x57,0x94,0x37,0xC8,0xF5,0x13);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoDecodeCommandList2,0x6e120880,0xc114,0x4153,0x80,0x36,0xd2,0x47,0x05,0x1e,0x17,0x29);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoProcessCommandList2,0xdb525ae4,0x6ad6,0x473c,0xba,0xa7,0x59,0xb2,0xe3,0x70,0x82,0xe4);" )
+cpp_quote( "DEFINE_GUID(IID_ID3D12VideoEncodeCommandList1,0x94971eca,0x2bdb,0x4769,0x88,0xcf,0x36,0x75,0xea,0x75,0x7e,0xbc);" )

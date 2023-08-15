@@ -772,7 +772,8 @@ typedef /* [public][public] */
 enum __MIDL___MIDL_itf_rdpencomapi_0000_0000_0004
     {
         CHANNEL_FLAGS_LEGACY	= 0x1,
-        CHANNEL_FLAGS_UNCOMPRESSED	= 0x2
+        CHANNEL_FLAGS_UNCOMPRESSED	= 0x2,
+        CHANNEL_FLAGS_DYNAMIC	= 0x4
     } 	CHANNEL_FLAGS;
 
 typedef /* [public][public][public] */ 

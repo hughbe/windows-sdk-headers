@@ -15,6 +15,12 @@
 
 EXTERN_C_START
 
+typedef enum _NET_EXTENSION_TYPE
+{
+    NetExtensionTypePacket = 1,
+    NetExtensionTypeFragment,
+} NET_EXTENSION_TYPE;
+
 typedef struct _NET_EXTENSION
 {
     void *

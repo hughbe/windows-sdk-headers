@@ -1,5 +1,4 @@
-
-<instrumentationManifest
+﻿<instrumentationManifest
     xmlns="http://schemas.microsoft.com/win/2004/08/events"
     xmlns:win="http://manifests.microsoft.com/win/2004/08/windows/events"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.microsoft.com/win/2004/08/events eventman.xsd"

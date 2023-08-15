@@ -46,6 +46,7 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_4    0x9006
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_5    0xA00B
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_6    0xB004
+#define DXGKDDI_INTERFACE_VERSION_WDDM2_7    0xC004
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -63,11 +64,12 @@
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_3) ||   \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_4) ||   \
              ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_5) ||   \
-             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_6)      \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_6) ||   \
+             ((version) == DXGKDDI_INTERFACE_VERSION_WDDM2_7)      \
             )
 
 #if !defined(DXGKDDI_INTERFACE_VERSION)
-#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_6
+#define DXGKDDI_INTERFACE_VERSION           DXGKDDI_INTERFACE_VERSION_WDDM2_7
 #endif // !defined(DXGKDDI_INTERFACE_VERSION)
 
 #define D3D_UMD_INTERFACE_VERSION_VISTA      0x000C
@@ -112,11 +114,15 @@
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_6_4     0xB003
 #define D3D_UMD_INTERFACE_VERSION_WDDM2_6       D3D_UMD_INTERFACE_VERSION_WDDM2_6_4
 
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_7_1     0xC000
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_7_2     0xC001
+#define D3D_UMD_INTERFACE_VERSION_WDDM2_7       D3D_UMD_INTERFACE_VERSION_WDDM2_7_2
+
 // Components which depend on D3D_UMD_INTERFACE_VERSION need to be updated, static assert validation present.
 // Search for D3D_UMD_INTERFACE_VERSION across all depots to ensure all dependencies are updated.
 
 #if !defined(D3D_UMD_INTERFACE_VERSION)
-#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_6
+#define D3D_UMD_INTERFACE_VERSION           D3D_UMD_INTERFACE_VERSION_WDDM2_7
 #endif // !defined(D3D_UMD_INTERFACE_VERSION)
 
 //
@@ -594,7 +600,9 @@ typedef struct _D3DDDI_CREATEHWQUEUEFLAGS
         struct
         {
             UINT    DisableGpuTimeout   : 1;      // 0x00000001
-            UINT    Reserved            :31;      // 0xFFFFFFFE
+            UINT    NoBroadcastSignal   : 1;      // 0x00000002
+            UINT    NoBroadcastWait     : 1;      // 0x00000004
+            UINT    Reserved            :29;      // 0xFFFFFFF8
         };
         UINT Value;
     };

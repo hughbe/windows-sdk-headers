@@ -374,17 +374,17 @@ typedef PSP_ORIGINAL_FILE_INFO_A PSP_ORIGINAL_FILE_INFO;
 // Setup callback notification routine type
 //
 typedef UINT (CALLBACK* PSP_FILE_CALLBACK_A)(
-    IN PVOID Context,
-    IN UINT Notification,
-    IN UINT_PTR Param1,
-    IN UINT_PTR Param2
+    _In_ PVOID Context,
+    _In_ UINT Notification,
+    _In_ UINT_PTR Param1,
+    _In_ UINT_PTR Param2
     );
 
 typedef UINT (CALLBACK* PSP_FILE_CALLBACK_W)(
-    IN PVOID Context,
-    IN UINT Notification,
-    IN UINT_PTR Param1,
-    IN UINT_PTR Param2
+    _In_ PVOID Context,
+    _In_ UINT Notification,
+    _In_ UINT_PTR Param1,
+    _In_ UINT_PTR Param2
     );
 
 #ifdef UNICODE
@@ -474,7 +474,7 @@ typedef UINT (CALLBACK* PSP_FILE_CALLBACK_W)(
 #define COPYFLG_NO_OVERWRITE            0x00000010  // do not copy if file exists on target
 #define COPYFLG_NO_VERSION_DIALOG       0x00000020  // do not copy if target is newer
 #define COPYFLG_OVERWRITE_OLDER_ONLY    0x00000040  // leave target alone if version same as source
-#define COPYFLG_PROTECTED_WINDOWS_DRIVER_FILE 0x00000100    // a Windows driver file to be 
+#define COPYFLG_PROTECTED_WINDOWS_DRIVER_FILE 0x00000100    // a Windows driver file to be
                             // protected as other Windows system files
 
 #define COPYFLG_REPLACEONLY             0x00000400  // copy only if file exists on target
@@ -1199,9 +1199,9 @@ typedef PSP_SELECTDEVICE_PARAMS_A PSP_SELECTDEVICE_PARAMS;
 // Callback routine for giving progress notification during detection
 //
 typedef BOOL (CALLBACK* PDETECT_PROGRESS_NOTIFY)(
-     IN PVOID ProgressNotifyParam,
-     IN DWORD DetectComplete
-     );
+    _In_ PVOID ProgressNotifyParam,
+    _In_ DWORD DetectComplete
+    );
 
 // where:
 //     ProgressNotifyParam - value supplied by caller requesting detection.
@@ -1615,7 +1615,7 @@ typedef struct _SP_DRVINSTALL_PARAMS {
 
 #if _SETUPAPI_VER >= _WIN32_WINNT_LONGHORN
 #define DNF_INSTALLEDDRIVER       0x00040000  // This driver node is currently installed on the device.
-#define DNF_ALWAYSEXCLUDEFROMLIST 0x00080000  // If set, this driver is not even displayed in 
+#define DNF_ALWAYSEXCLUDEFROMLIST 0x00080000  // If set, this driver is not even displayed in
                                               // alternative platform either.
 #define DNF_INBOX_DRIVER          0x00100000  // This driver node came from an INF that shipped with Windows.
 #endif // _SETUPAPI_VER >= _WIN32_WINNT_LONGHORN
@@ -1714,10 +1714,10 @@ typedef struct _SP_DRVINSTALL_PARAMS {
 // Setup callback routine for comparing detection signatures
 //
 typedef DWORD (CALLBACK* PSP_DETSIG_CMPPROC)(
-    IN HDEVINFO         DeviceInfoSet,
-    IN PSP_DEVINFO_DATA NewDeviceData,
-    IN PSP_DEVINFO_DATA ExistingDeviceData,
-    IN PVOID            CompareContext      OPTIONAL
+    _In_ HDEVINFO         DeviceInfoSet,
+    _In_ PSP_DEVINFO_DATA NewDeviceData,
+    _In_ PSP_DEVINFO_DATA ExistingDeviceData,
+    _In_opt_ PVOID            CompareContext
     );
 
 
@@ -1962,7 +1962,7 @@ WINAPI
 SetupGetInfInformationA(
     _In_ LPCVOID InfSpec,
     _In_ DWORD SearchControl,
-    _Out_writes_bytes_to_opt_(ReturnBufferSize, *RequiredSize) PSP_INF_INFORMATION ReturnBuffer, 
+    _Out_writes_bytes_to_opt_(ReturnBufferSize, *RequiredSize) PSP_INF_INFORMATION ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
     _Out_opt_ PDWORD RequiredSize
     );
@@ -2003,7 +2003,7 @@ SetupQueryInfFileInformationA(
     _In_ UINT InfIndex,
     _Out_writes_opt_(ReturnBufferSize) PSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
-    _Out_opt_ PDWORD RequiredSize 
+    _Out_opt_ PDWORD RequiredSize
     );
 
 WINSETUPAPI
@@ -2091,7 +2091,7 @@ SetupGetInfDriverStoreLocationA(
     _In_ PCSTR FileName,
     _In_opt_ PSP_ALTPLATFORM_INFO AlternatePlatformInfo,
     _In_opt_ PCSTR LocaleName,
-    _Out_writes_(ReturnBufferSize) PSTR ReturnBuffer, 
+    _Out_writes_(ReturnBufferSize) PSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
     _Out_opt_ PDWORD RequiredSize
     );
@@ -2101,7 +2101,7 @@ BOOL
 WINAPI
 SetupGetInfDriverStoreLocationW(
     _In_ PCWSTR FileName,
-    _In_opt_ PSP_ALTPLATFORM_INFO AlternatePlatformInfo,    
+    _In_opt_ PSP_ALTPLATFORM_INFO AlternatePlatformInfo,
     _In_opt_ PCWSTR LocaleName,
     _Out_writes_(ReturnBufferSize) PWSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
@@ -2149,7 +2149,7 @@ WINAPI
 SetupGetInfFileListA(
     _In_opt_ PCSTR DirectoryPath,
     _In_ DWORD InfStyle,
-    _Out_writes_opt_(ReturnBufferSize) PSTR ReturnBuffer, 
+    _Out_writes_opt_(ReturnBufferSize) PSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
     _Out_opt_ PDWORD RequiredSize
     );
@@ -2439,7 +2439,7 @@ SetupGetMultiSzFieldA(
     _In_ DWORD FieldIndex,
     _Out_writes_opt_(ReturnBufferSize) PSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
-    _Out_opt_ LPDWORD RequiredSize 
+    _Out_opt_ LPDWORD RequiredSize
     );
 
 WINSETUPAPI
@@ -2450,7 +2450,7 @@ SetupGetMultiSzFieldW(
     _In_ DWORD FieldIndex,
     _Out_writes_opt_(ReturnBufferSize) PWSTR ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
-    _Out_opt_ LPDWORD RequiredSize 
+    _Out_opt_ LPDWORD RequiredSize
     );
 
 #ifdef UNICODE
@@ -2468,7 +2468,7 @@ SetupGetBinaryField(
     _In_ DWORD FieldIndex,
     _Out_writes_bytes_to_opt_(ReturnBufferSize, *RequiredSize) PBYTE ReturnBuffer,
     _In_ DWORD ReturnBufferSize,
-    _Out_opt_ LPDWORD RequiredSize 
+    _Out_opt_ LPDWORD RequiredSize
     );
 
 //
@@ -2523,7 +2523,7 @@ SetupGetFileCompressionInfoExA(
     _In_ PCSTR SourceFileName,
     _In_reads_opt_(ActualSourceFileNameBufferLen) PSTR ActualSourceFileNameBuffer,
     _In_ DWORD ActualSourceFileNameBufferLen,
-    _Out_opt_ PDWORD RequiredBufferLen, 
+    _Out_opt_ PDWORD RequiredBufferLen,
     _Out_ PDWORD SourceFileSize,
     _Out_ PDWORD TargetFileSize,
     _Out_ PUINT CompressionType
@@ -3026,8 +3026,8 @@ BOOL
 WINAPI
 SetupSetDirectoryIdA(
     _In_ HINF InfHandle,
-    _In_ DWORD Id, 
-    _In_opt_ PCSTR Directory 
+    _In_ DWORD Id,
+    _In_opt_ PCSTR Directory
     );
 
 WINSETUPAPI
@@ -3035,8 +3035,8 @@ BOOL
 WINAPI
 SetupSetDirectoryIdW(
     _In_ HINF InfHandle,
-    _In_ DWORD Id, 
-    _In_opt_ PCWSTR Directory 
+    _In_ DWORD Id,
+    _In_opt_ PCWSTR Directory
     );
 
 #ifdef UNICODE
@@ -3051,8 +3051,8 @@ BOOL
 WINAPI
 SetupSetDirectoryIdExA(
     _In_ HINF InfHandle,
-    _In_ DWORD Id, 
-    _In_opt_ PCSTR Directory, 
+    _In_ DWORD Id,
+    _In_opt_ PCSTR Directory,
     _In_ DWORD Flags,
     _Reserved_ DWORD Reserved1,
     _Reserved_ PVOID Reserved2
@@ -3063,7 +3063,7 @@ BOOL
 WINAPI
 SetupSetDirectoryIdExW(
     _In_ HINF InfHandle,
-    _In_ DWORD Id, 
+    _In_ DWORD Id,
     _In_opt_ PCWSTR Directory,
     _In_ DWORD Flags,
     _Reserved_ DWORD Reserved1,
@@ -3336,13 +3336,13 @@ BOOL
 WINAPI
 SetupQueueCopyA(
     _In_ HSPFILEQ QueueHandle,
-    _In_opt_ PCSTR SourceRootPath, 
-    _In_opt_ PCSTR SourcePath, 
+    _In_opt_ PCSTR SourceRootPath,
+    _In_opt_ PCSTR SourcePath,
     _In_ PCSTR SourceFilename,
-    _In_opt_ PCSTR SourceDescription, 
-    _In_opt_ PCSTR SourceTagfile, 
+    _In_opt_ PCSTR SourceDescription,
+    _In_opt_ PCSTR SourceTagfile,
     _In_ PCSTR TargetDirectory,
-    _In_opt_ PCSTR TargetFilename, 
+    _In_opt_ PCSTR TargetFilename,
     _In_ DWORD CopyStyle
     );
 
@@ -3351,13 +3351,13 @@ BOOL
 WINAPI
 SetupQueueCopyW(
     _In_ HSPFILEQ QueueHandle,
-    _In_opt_ PCWSTR SourceRootPath, 
-    _In_opt_ PCWSTR SourcePath, 
+    _In_opt_ PCWSTR SourceRootPath,
+    _In_opt_ PCWSTR SourcePath,
     _In_ PCWSTR SourceFilename,
-    _In_opt_ PCWSTR SourceDescription, 
-    _In_opt_ PCWSTR SourceTagfile, 
+    _In_opt_ PCWSTR SourceDescription,
+    _In_opt_ PCWSTR SourceTagfile,
     _In_ PCWSTR TargetDirectory,
-    _In_opt_ PCWSTR TargetFilename, 
+    _In_opt_ PCWSTR TargetFilename,
     _In_ DWORD CopyStyle
     );
 
@@ -3520,7 +3520,7 @@ WINAPI
 SetupQueueRenameW(
     _In_ HSPFILEQ QueueHandle,
     _In_ PCWSTR SourcePath,
-    _In_opt_ PCWSTR SourceFilename, 
+    _In_opt_ PCWSTR SourceFilename,
     _In_opt_ PCWSTR TargetPath,
     _In_ PCWSTR TargetFilename
     );
@@ -3692,12 +3692,12 @@ SetupSetFileQueueFlags(
 #define SPQ_FLAG_FILES_MODIFIED    0x00000004  // If set, at least one file was
                                                // replaced by a different version
 
-#define SPQ_FLAG_DO_SHUFFLEMOVE    0x00000008  // If set then always do a shuffle move. A shuffle 
+#define SPQ_FLAG_DO_SHUFFLEMOVE    0x00000008  // If set then always do a shuffle move. A shuffle
                                                // move will first try to copy the source over the
                                                // destination file, but if the destination file is
-                                               // in use it will rename the destination file to a 
+                                               // in use it will rename the destination file to a
                                                // temp name and queue the temp name for deletion.
-                                               // It will then be free to copy the source to the 
+                                               // It will then be free to copy the source to the
                                                // destination name.  It is considered an error if
                                                // the destination file can't be renamed for some
                                                // reason.
@@ -4616,6 +4616,22 @@ SetupInstallFilesFromInfSectionW(
 
 #endif // _SETUPAPI_VER >= _WIN32_WINNT_WIN10
 
+#if _SETUPAPI_VER >= _WIN32_WINNT_WIN10
+//
+// (AddService) don't overwrite service SID type if it already exists
+//
+#define SPSVCINST_NOCLOBBER_SERVICESIDTYPE (0x00004000)
+
+#endif // _SETUPAPI_VER >= _WIN32_WINNT_WIN10
+
+#if _SETUPAPI_VER >= _WIN32_WINNT_WIN10
+//
+// (AddService) don't overwrite delayed auto start if it already exists
+//
+#define SPSVCINST_NOCLOBBER_DELAYEDAUTOSTART (0x00008000)
+
+#endif // _SETUPAPI_VER >= _WIN32_WINNT_WIN10
+
 WINSETUPAPI
 BOOL
 WINAPI
@@ -4851,10 +4867,10 @@ BOOL
 WINAPI
 SetupQueryFileLogW(
     _In_ HSPFILELOG FileLogHandle,
-    _In_opt_ PCWSTR LogSectionName, 
+    _In_opt_ PCWSTR LogSectionName,
     _In_ PCWSTR TargetFilename,
     _In_ SetupFileLogInfo DesiredInfo,
-    _Out_writes_opt_(ReturnBufferSize) PWSTR DataOut, 
+    _Out_writes_opt_(ReturnBufferSize) PWSTR DataOut,
     _In_ DWORD ReturnBufferSize,
     _Out_opt_ PDWORD RequiredSize
     );
@@ -4942,7 +4958,7 @@ SetupWriteTextLog(
     _In_ PCSTR MessageStr,
     ...
     );
-    
+
 WINSETUPAPI
 VOID
 WINAPI
@@ -4954,7 +4970,7 @@ SetupWriteTextLogError(
     _In_ PCSTR MessageStr,
     ...
     );
-    
+
 WINSETUPAPI
 VOID
 WINAPI
@@ -5076,8 +5092,8 @@ HDEVINFO
 WINAPI
 SetupDiCreateDeviceInfoListExW(
     _In_opt_ CONST GUID *ClassGuid,
-    _In_opt_ HWND hwndParent, 
-    _In_opt_ PCWSTR MachineName, 
+    _In_opt_ HWND hwndParent,
+    _In_opt_ PCWSTR MachineName,
     _Reserved_ PVOID Reserved
     );
 
@@ -5287,7 +5303,7 @@ SetupDiCreateDeviceInterfaceW(
     _In_ CONST GUID *InterfaceClassGuid,
     _In_opt_ PCWSTR ReferenceString,
     _In_ DWORD CreationFlags,
-    _Out_opt_ PSP_DEVICE_INTERFACE_DATA DeviceInterfaceData 
+    _Out_opt_ PSP_DEVICE_INTERFACE_DATA DeviceInterfaceData
     );
 
 #ifdef UNICODE
@@ -5402,7 +5418,7 @@ WINAPI
 SetupDiGetDeviceInterfaceDetailA(
     _In_ HDEVINFO DeviceInfoSet,
     _In_ PSP_DEVICE_INTERFACE_DATA DeviceInterfaceData,
-    _Inout_updates_bytes_to_opt_(DeviceInterfaceDetailDataSize, *RequiredSize) PSP_DEVICE_INTERFACE_DETAIL_DATA_A DeviceInterfaceDetailData, 
+    _Inout_updates_bytes_to_opt_(DeviceInterfaceDetailDataSize, *RequiredSize) PSP_DEVICE_INTERFACE_DETAIL_DATA_A DeviceInterfaceDetailData,
     _In_ DWORD DeviceInterfaceDetailDataSize,
     _Out_opt_ _Out_range_(>=, sizeof(SP_DEVICE_INTERFACE_DETAIL_DATA_A)) PDWORD RequiredSize,
     _Out_opt_ PSP_DEVINFO_DATA DeviceInfoData
@@ -5606,7 +5622,7 @@ SetupDiGetDriverInfoDetailA(
     _In_ HDEVINFO DeviceInfoSet,
     _In_opt_ PSP_DEVINFO_DATA DeviceInfoData,
     _In_ PSP_DRVINFO_DATA_A DriverInfoData,
-    _Inout_updates_bytes_opt_(DriverInfoDetailDataSize) PSP_DRVINFO_DETAIL_DATA_A DriverInfoDetailData, 
+    _Inout_updates_bytes_opt_(DriverInfoDetailDataSize) PSP_DRVINFO_DETAIL_DATA_A DriverInfoDetailData,
     _In_ DWORD DriverInfoDetailDataSize,
     _Out_opt_ PDWORD RequiredSize
     );
@@ -6568,10 +6584,10 @@ SetupDiGetDeviceRegistryPropertyA(
     _In_ HDEVINFO DeviceInfoSet,
     _In_ PSP_DEVINFO_DATA DeviceInfoData,
     _In_ DWORD Property,
-    _Out_opt_ PDWORD PropertyRegDataType, 
+    _Out_opt_ PDWORD PropertyRegDataType,
     _Out_writes_bytes_to_opt_(PropertyBufferSize, *RequiredSize) PBYTE PropertyBuffer,
     _In_ DWORD PropertyBufferSize,
-    _Out_opt_ PDWORD RequiredSize 
+    _Out_opt_ PDWORD RequiredSize
     );
 
 _Success_(return != FALSE)
@@ -6624,7 +6640,7 @@ SetupDiGetClassRegistryPropertyW(
     _Out_writes_bytes_to_(PropertyBufferSize, *RequiredSize) PBYTE PropertyBuffer,
     _In_ DWORD PropertyBufferSize,
     _Out_opt_ PDWORD RequiredSize,
-    _In_opt_ PCWSTR MachineName, 
+    _In_opt_ PCWSTR MachineName,
     _Reserved_ PVOID Reserved
     );
 
@@ -6672,7 +6688,7 @@ WINAPI
 SetupDiSetClassRegistryPropertyA(
     _In_ CONST GUID *ClassGuid,
     _In_ DWORD Property,
-    _In_reads_bytes_opt_(PropertyBufferSize) CONST BYTE *PropertyBuffer, 
+    _In_reads_bytes_opt_(PropertyBufferSize) CONST BYTE *PropertyBuffer,
     _In_ DWORD PropertyBufferSize,
     _In_opt_ PCSTR MachineName,
     _Reserved_ PVOID Reserved
@@ -6728,7 +6744,7 @@ BOOL
 WINAPI
 SetupDiGetClassInstallParamsA(
     _In_ HDEVINFO DeviceInfoSet,
-    _In_opt_ PSP_DEVINFO_DATA DeviceInfoData, 
+    _In_opt_ PSP_DEVINFO_DATA DeviceInfoData,
     _Out_writes_bytes_to_opt_(ClassInstallParamsSize, *RequiredSize) PSP_CLASSINSTALL_HEADER ClassInstallParams,
     _In_ DWORD ClassInstallParamsSize,
     _Out_opt_ PDWORD RequiredSize
@@ -6865,7 +6881,7 @@ WINAPI
 SetupDiLoadClassIcon(
     _In_ CONST GUID *ClassGuid,
     _Out_opt_ HICON *LargeIcon,
-    _Out_opt_ PINT MiniIconIndex 
+    _Out_opt_ PINT MiniIconIndex
     );
 
 #if _SETUPAPI_VER >= _WIN32_WINNT_LONGHORN
@@ -7376,7 +7392,7 @@ WINAPI
 SetupEnumInfSectionsA (
     _In_ HINF InfHandle,
     _In_ UINT Index,
-    _Out_writes_opt_(Size) PSTR Buffer, 
+    _Out_writes_opt_(Size) PSTR Buffer,
     _In_ UINT Size,
     _Out_opt_ UINT *SizeNeeded
     );
@@ -7387,7 +7403,7 @@ WINAPI
 SetupEnumInfSectionsW (
     _In_ HINF InfHandle,
     _In_ UINT Index,
-    _Out_writes_opt_(Size) PWSTR Buffer, 
+    _Out_writes_opt_(Size) PWSTR Buffer,
     _In_ UINT Size,
     _Out_opt_ UINT *SizeNeeded
     );
@@ -7453,15 +7469,15 @@ typedef PSP_INF_SIGNER_INFO_V2_A PSP_INF_SIGNER_INFO_V2;
 //
 // Driver signer scores (high order bit of the signing byte means unsigned)
 //
-#define SIGNERSCORE_UNKNOWN         0xFF000000  
-#define SIGNERSCORE_W9X_SUSPECT     0xC0000000  
-#define SIGNERSCORE_UNSIGNED        0x80000000  
-#define SIGNERSCORE_AUTHENTICODE    0x0F000000  
+#define SIGNERSCORE_UNKNOWN         0xFF000000
+#define SIGNERSCORE_W9X_SUSPECT     0xC0000000
+#define SIGNERSCORE_UNSIGNED        0x80000000
+#define SIGNERSCORE_AUTHENTICODE    0x0F000000
 #define SIGNERSCORE_WHQL            0x0D000005  // base WHQL.
-#define SIGNERSCORE_UNCLASSIFIED    0x0D000004  // UNCLASSIFIED == INBOX == STANDARD == PREMIUM when the SIGNERSCORE_MASK 
+#define SIGNERSCORE_UNCLASSIFIED    0x0D000004  // UNCLASSIFIED == INBOX == STANDARD == PREMIUM when the SIGNERSCORE_MASK
 #define SIGNERSCORE_INBOX           0x0D000003  // filter is applied.
-#define SIGNERSCORE_LOGO_STANDARD   0x0D000002  
-#define SIGNERSCORE_LOGO_PREMIUM    0x0D000001  
+#define SIGNERSCORE_LOGO_STANDARD   0x0D000002
+#define SIGNERSCORE_LOGO_PREMIUM    0x0D000001
 
 #define SIGNERSCORE_MASK            0xFF000000  // Mask out all but the upper BYTE which contains the ranking signer information
 #define SIGNERSCORE_SIGNED_MASK     0xF0000000  // Mask out only the upper nibble, which tells us if the package is signed or not.

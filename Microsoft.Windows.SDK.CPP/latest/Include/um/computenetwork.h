@@ -1,8 +1,6 @@
 // computenetwork.ext: ApiSet Contract for ext-ms-win-hyperv-computenetwork-l1
 // Copyright (c) Microsoft Corporation. All rights reserved.
 
-
-
 #pragma once
 
 #ifndef HCN_CLIENT_H
@@ -392,6 +390,7 @@ HcnUnregisterServiceCallback(
 #pragma endregion
 
 #endif
+
 
 #ifndef ext_ms_win_hyperv_computenetwork_l1_1_0_query_routines
 #define ext_ms_win_hyperv_computenetwork_l1_1_0_query_routines

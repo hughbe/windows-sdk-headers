@@ -1,7 +1,3 @@
-/* Header file automatically generated from windows.devices.wifi.idl */
-/*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
- */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
 
@@ -91,165 +87,17 @@
 
 //  API Contract Inclusion Definitions
 #if !defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_ACTIVATIONCAMERASETTINGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_CONTACTACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_ACTIVATION_WEBUISEARCHACTIVATEDEVENTSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_BACKGROUND_BACKGROUNDALARMAPPLICATIONCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_BACKGROUND_CALLSBACKGROUNDCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSVOIPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_LOCKSCREENCALLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_APPLICATIONMODEL_COMMUNICATIONBLOCKING_COMMUNICATIONBLOCKINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_FULLTRUSTAPPCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_SEARCH_SEARCHCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_APPLICATIONMODEL_STARTUPTASKCONTRACT_VERSION)
-
-#if !defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-#define WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_APPLICATIONMODEL_WALLET_WALLETCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-#define WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_DEVICES_PRINTERS_EXTENSIONS_EXTENSIONSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDBACKGROUNDTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_DEVICES_SMARTCARDS_SMARTCARDEMULATORCONTRACT_VERSION)
-
-#if !defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-#define WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_DEVICES_SMS_LEGACYSMSAPICONTRACT_VERSION)
-
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-
-#if !defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-#define WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GAMING_INPUT_GAMINGINPUTPREVIEWCONTRACT_VERSION)
-
-#if !defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-#define WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_GLOBALIZATION_GLOBALIZATIONJAPANESEPHONETICANALYZERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION 0x20000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPBROADCASTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION 0x40000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTURECONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_APPCAPTUREMETADATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_CAMERACAPTUREUICONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-#define WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_CAPTURE_GAMEBARCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_DEVICES_CALLCONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-#define WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_MEDIACONTROLCONTRACT_VERSION)
-
-#if !defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
-#define WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_MEDIA_PROTECTION_PROTECTIONRENEWALCONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
 #define WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION 0x20000
 #endif // defined(WINDOWS_NETWORKING_CONNECTIVITY_WWANCONTRACT_VERSION)
-
-#if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-#define WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONECONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONECONTRACT_VERSION)
-
-#if !defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-#define WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_PHONE_PHONEINTERNALCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-#define WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION 0x50000
-#endif // defined(WINDOWS_SECURITY_ENTERPRISEDATA_ENTERPRISEDATACONTRACT_VERSION)
-
-#if !defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-#define WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION 0x30000
-#endif // defined(WINDOWS_STORAGE_PROVIDER_CLOUDFILESCONTRACT_VERSION)
-
-#if !defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-#define WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION 0x60000
-#endif // defined(WINDOWS_SYSTEM_SYSTEMMANAGEMENTCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-#define WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_CORE_COREWINDOWDIALOGSCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-#define WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_VIEWMANAGEMENT_VIEWMANAGEMENTVIEWSCALINGCONTRACT_VERSION)
-
-#if !defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
-#define WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION 0x10000
-#endif // defined(WINDOWS_UI_WEBUI_CORE_WEBUICOMMANDBARCONTRACT_VERSION)
 
 #endif // defined(SPECIFIC_API_CONTRACT_DEFINITIONS)
 
@@ -276,7 +124,8 @@ namespace ABI {
                 interface IWiFiAdapter;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter ABI::Windows::Devices::WiFi::IWiFiAdapter
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_FWD_DEFINED__
@@ -290,7 +139,8 @@ namespace ABI {
                 interface IWiFiAdapter2;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 ABI::Windows::Devices::WiFi::IWiFiAdapter2
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_FWD_DEFINED__
@@ -304,7 +154,8 @@ namespace ABI {
                 interface IWiFiAdapterStatics;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics ABI::Windows::Devices::WiFi::IWiFiAdapterStatics
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FWD_DEFINED__
@@ -318,7 +169,8 @@ namespace ABI {
                 interface IWiFiAvailableNetwork;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_FWD_DEFINED__
@@ -332,7 +184,8 @@ namespace ABI {
                 interface IWiFiConnectionResult;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult ABI::Windows::Devices::WiFi::IWiFiConnectionResult
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_FWD_DEFINED__
@@ -346,7 +199,8 @@ namespace ABI {
                 interface IWiFiNetworkReport;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport ABI::Windows::Devices::WiFi::IWiFiNetworkReport
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_FWD_DEFINED__
@@ -360,7 +214,8 @@ namespace ABI {
                 interface IWiFiWpsConfigurationResult;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult
 
 #endif // ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_FWD_DEFINED__
@@ -372,349 +227,13 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                class WiFiAdapter;
+                typedef enum WiFiAccessStatus : int WiFiAccessStatus;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("144136c6-b502-5a52-90fc-22a09318f932"))
-IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiAdapter>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("e0bc76c4-8d0c-53fc-bcd4-228f47210ace"))
-IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiAdapter>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace WiFi {
-                class WiFiAvailableNetwork;
-            } /* WiFi */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("468677c4-ebb9-5196-836d-72faa9fe673e"))
-IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiAvailableNetwork>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("f17484ea-c71e-5d3e-b74c-3a0e61dd9c20"))
-IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiAvailableNetwork>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace WiFi {
-                enum WiFiWpsKind : int;
-            } /* WiFi */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("9b19593c-602d-57d9-a852-a48a8204ff42"))
-IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterator_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiWpsKind>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-//#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t ABI::Windows::Foundation::Collections::IIterator<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
-
-
-
-
-
-#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("41e16513-a8f2-55ed-9be4-5665167d49d7"))
-IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterable_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiWpsKind>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-//#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t ABI::Windows::Foundation::Collections::IIterable<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
-
-
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("670a3c41-ecc8-55c2-84d4-51864496a328"))
-IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("7c65d286-7285-5d63-bdea-5ef951bdf618"))
-IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAvailableNetwork>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-
-#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
-template <>
-struct __declspec(uuid("aae7e5e5-27f0-5b28-8c58-9039356d3dc7"))
-IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IVectorView_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiWpsKind>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
-/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-//#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::WiFiWpsKind>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
-
-
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace WiFi {
-                enum WiFiAccessStatus : int;
-            } /* WiFi */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("65e889ca-f6c9-5c75-bef9-05ab88a49a54"))
-IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiAccessStatus>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE */
-
-
-
-
 
 #ifndef DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
 #define DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
@@ -722,11 +241,11 @@ typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAc
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("f8c75a3a-739a-57aa-986d-1f7604d7e386"))
-IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOperation_impl<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> 
+IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOperation_impl<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAccessStatus>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAccessStatus>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -734,48 +253,49 @@ IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAccessStatus>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE */
 
-
-
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("35362f75-6aae-560d-b3d0-3fae9c7260a8"))
-IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>> 
+struct __declspec(uuid("65e889ca-f6c9-5c75-bef9-05ab88a49a54"))
+IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> : IAsyncOperationCompletedHandler_impl<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiAdapter>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiAccessStatus>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<enum ABI::Windows::Devices::WiFi::WiFiAccessStatus> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
-
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace WiFi {
+                class WiFiAdapter;
+            } /* WiFi */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -785,11 +305,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("1dcf739d-10b7-59e9-ab47-8b0277e20193"))
-IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>> 
+IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAdapter>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiAdapter>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -797,14 +317,37 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperation_imp
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiAdapter*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("35362f75-6aae-560d-b3d0-3fae9c7260a8"))
+IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiAdapter>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -815,40 +358,8 @@ namespace ABI {
                 class WiFiConnectionResult;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("f380eb8d-1e52-5350-a288-861c963a84f0"))
-IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiConnectionResult*, ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiConnectionResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -858,11 +369,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnect
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("ffa41f49-4c30-50d3-9549-e4f055b417b4"))
-IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiConnectionResult*, ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>> 
+IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiConnectionResult*, ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiConnectionResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -870,14 +381,37 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOper
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("f380eb8d-1e52-5350-a288-861c963a84f0"))
+IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiConnectionResult*, ABI::Windows::Devices::WiFi::IWiFiConnectionResult*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiConnectionResult>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiConnectionResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -888,40 +422,8 @@ namespace ABI {
                 class WiFiWpsConfigurationResult;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE
-#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE
-#if !defined(RO_NO_TEMPLATE_NAME)
-namespace ABI { namespace Windows { namespace Foundation {
-template <>
-struct __declspec(uuid("33fa345b-28cd-58a8-bcfc-be4cfd108e91"))
-IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*, ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>> 
-{
-    static const wchar_t* z_get_rc_name_impl() 
-    {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiWpsConfigurationResult>"; 
-    }
-};
-// Define a typedef for the parameterized interface specialization's mangled name.
-// This allows code which uses the mangled name for the parameterized interface to access the
-// correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t;
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
-
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
-//#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
-#endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE */
-
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
+    } /* Windows */
+} /* ABI */
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
@@ -931,11 +433,11 @@ typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConf
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("4b721d74-0289-583c-a81d-f3be03ea596d"))
-IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*, ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>> 
+IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsyncOperation_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*, ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiWpsConfigurationResult>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Devices.WiFi.WiFiWpsConfigurationResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -943,49 +445,120 @@ IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t;
 #define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
-//#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
-#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#ifndef DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE
+#define DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE
 #if !defined(RO_NO_TEMPLATE_NAME)
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
-struct __declspec(uuid("92902a07-2f18-56e9-87fb-24fe19f70688"))
-IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> 
+struct __declspec(uuid("33fa345b-28cd-58a8-bcfc-be4cfd108e91"))
+IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> : IAsyncOperationCompletedHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*, ABI::Windows::Devices::WiFi::IWiFiWpsConfigurationResult*>>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>>"; 
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Devices.WiFi.WiFiWpsConfigurationResult>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+typedef IAsyncOperationCompletedHandler<ABI::Windows::Devices::WiFi::WiFiWpsConfigurationResult*> __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t;
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
-//#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::IAsyncOperationCompletedHandler<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
-#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
+#endif /* DEF___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("144136c6-b502-5a52-90fc-22a09318f932"))
+IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiAdapter>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("e0bc76c4-8d0c-53fc-bcd4-228f47210ace"))
+IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiAdapter>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("670a3c41-ecc8-55c2-84d4-51864496a328"))
+IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAdapter*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -995,11 +568,11 @@ typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiF
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("3140802b-987c-5c56-a430-90fbc1898dda"))
-IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> 
+IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsyncOperation_impl<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>>"; 
+        return L"Windows.Foundation.IAsyncOperation`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
@@ -1007,18 +580,221 @@ IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsy
 // correct parameterized interface specialization.
 typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
 #define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
-//#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t ABI::Windows::Foundation::IAsyncOperation<ABI::Windows::Foundation::Collections::IVectorView<ABI::Windows::Devices::WiFi::IWiFiAdapter*>*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
 
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#define DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("92902a07-2f18-56e9-87fb-24fe19f70688"))
+IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> : IAsyncOperationCompletedHandler_impl<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.AsyncOperationCompletedHandler`1<Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAdapter>>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IAsyncOperationCompletedHandler<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*> __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t;
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter ABI::Windows::Foundation::__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_USE */
 
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace WiFi {
+                class WiFiAvailableNetwork;
+            } /* WiFi */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
 
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("468677c4-ebb9-5196-836d-72faa9fe673e"))
+IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiAvailableNetwork>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("f17484ea-c71e-5d3e-b74c-3a0e61dd9c20"))
+IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiAvailableNetwork>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+namespace ABI {
+    namespace Windows {
+        namespace Devices {
+            namespace WiFi {
+                typedef enum WiFiWpsKind : int WiFiWpsKind;
+            } /* WiFi */
+        } /* Devices */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#ifndef DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#define DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("9b19593c-602d-57d9-a852-a48a8204ff42"))
+IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterator_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.Devices.WiFi.WiFiWpsKind>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#ifndef DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#define DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("41e16513-a8f2-55ed-9be4-5665167d49d7"))
+IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IIterable_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.Devices.WiFi.WiFiWpsKind>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("7c65d286-7285-5d63-bdea-5ef951bdf618"))
+IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*, ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiAvailableNetwork>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::Devices::WiFi::WiFiAvailableNetwork*> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t;
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#ifndef DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#define DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("aae7e5e5-27f0-5b28-8c58-9039356d3dc7"))
+IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> : IVectorView_impl<enum ABI::Windows::Devices::WiFi::WiFiWpsKind>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.Devices.WiFi.WiFiWpsKind>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<enum ABI::Windows::Devices::WiFi::WiFiWpsKind> __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t;
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
@@ -1028,39 +804,32 @@ typedef IAsyncOperation<__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter*
 namespace ABI { namespace Windows { namespace Foundation {
 template <>
 struct __declspec(uuid("f6c02d1b-43e8-5fc8-8e8e-ee7b8094b683"))
-ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*,IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>,IInspectable*> 
+ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::Devices::WiFi::WiFiAdapter*, ABI::Windows::Devices::WiFi::IWiFiAdapter*>, IInspectable*>
 {
-    static const wchar_t* z_get_rc_name_impl() 
+    static const wchar_t* z_get_rc_name_impl()
     {
-        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFi.WiFiAdapter, Object>"; 
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.Devices.WiFi.WiFiAdapter, Object>";
     }
 };
 // Define a typedef for the parameterized interface specialization's mangled name.
 // This allows code which uses the mangled name for the parameterized interface to access the
 // correct parameterized interface specialization.
-typedef ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*,IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t;
+typedef ITypedEventHandler<ABI::Windows::Devices::WiFi::WiFiAdapter*, IInspectable*> __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t;
 #define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t
-/* Foundation */ } /* Windows */ } /* ABI */ } 
+/* Foundation */ } /* Windows */ } /* ABI */ }
 
-////  Define an alias for the C version of the interface for compatibility purposes.
-//#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*,IInspectable*>
-//#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_t ABI::Windows::Foundation::ITypedEventHandler<ABI::Windows::Devices::WiFi::IWiFiAdapter*,IInspectable*>
 #endif // !defined(RO_NO_TEMPLATE_NAME)
 #endif /* DEF___FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_USE */
 
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct DateTime DateTime;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
@@ -1069,23 +838,19 @@ namespace ABI {
         namespace Foundation {
             interface IAsyncAction;
         } /* Foundation */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CFoundation_CIAsyncAction ABI::Windows::Foundation::IAsyncAction
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 
-
 namespace ABI {
     namespace Windows {
         namespace Foundation {
-            
             typedef struct TimeSpan TimeSpan;
-            
         } /* Foundation */
-    } /* Windows */} /* ABI */
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1094,7 +859,8 @@ namespace ABI {
                 class NetworkAdapter;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -1105,11 +871,11 @@ namespace ABI {
                 interface INetworkAdapter;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter ABI::Windows::Networking::Connectivity::INetworkAdapter
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
-
 
 namespace ABI {
     namespace Windows {
@@ -1118,7 +884,8 @@ namespace ABI {
                 class NetworkSecuritySettings;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
@@ -1129,14 +896,11 @@ namespace ABI {
                 interface INetworkSecuritySettings;
             } /* Connectivity */
         } /* Networking */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings ABI::Windows::Networking::Connectivity::INetworkSecuritySettings
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
-
-
-
-
 
 namespace ABI {
     namespace Windows {
@@ -1145,7 +909,8 @@ namespace ABI {
                 class PasswordCredential;
             } /* Credentials */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -1156,112 +921,71 @@ namespace ABI {
                 interface IPasswordCredential;
             } /* Credentials */
         } /* Security */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #define __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential ABI::Windows::Security::Credentials::IPasswordCredential
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 
-
-
-
-
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
-                typedef enum WiFiAccessStatus : int WiFiAccessStatus;
-                
-            } /* WiFi */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace WiFi {
-                
                 typedef enum WiFiConnectionMethod : int WiFiConnectionMethod;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
                 typedef enum WiFiConnectionStatus : int WiFiConnectionStatus;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
                 typedef enum WiFiNetworkKind : int WiFiNetworkKind;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
                 typedef enum WiFiPhyKind : int WiFiPhyKind;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
                 typedef enum WiFiReconnectionKind : int WiFiReconnectionKind;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                
                 typedef enum WiFiWpsConfigurationStatus : int WiFiWpsConfigurationStatus;
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
-
-namespace ABI {
-    namespace Windows {
-        namespace Devices {
-            namespace WiFi {
-                
-                typedef enum WiFiWpsKind : int WiFiWpsKind;
-                
-            } /* WiFi */
-        } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 namespace ABI {
     namespace Windows {
@@ -1270,17 +994,8 @@ namespace ABI {
                 class WiFiNetworkReport;
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
-
-
-
-
-
-
-
-
-
-
+    } /* Windows */
+} /* ABI */
 
 /*
  *
@@ -1288,15 +1003,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiAccessStatus : int
                 {
                     WiFiAccessStatus_Unspecified = 0,
@@ -1304,12 +1016,11 @@ namespace ABI {
                     WiFiAccessStatus_DeniedByUser = 2,
                     WiFiAccessStatus_DeniedBySystem = 3,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1317,27 +1028,23 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiConnectionMethod : int
                 {
                     WiFiConnectionMethod_Default = 0,
                     WiFiConnectionMethod_WpsPin = 1,
                     WiFiConnectionMethod_WpsPushButton = 2,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -1345,15 +1052,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiConnectionStatus : int
                 {
                     WiFiConnectionStatus_UnspecifiedFailure = 0,
@@ -1364,12 +1068,11 @@ namespace ABI {
                     WiFiConnectionStatus_Timeout = 5,
                     WiFiConnectionStatus_UnsupportedAuthenticationProtocol = 6,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1377,27 +1080,23 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiNetworkKind : int
                 {
                     WiFiNetworkKind_Any = 0,
                     WiFiNetworkKind_Infrastructure = 1,
                     WiFiNetworkKind_Adhoc = 2,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1405,15 +1104,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiPhyKind : int
                 {
                     WiFiPhyKind_Unknown = 0,
@@ -1426,22 +1122,17 @@ namespace ABI {
                     WiFiPhyKind_HT = 7,
                     WiFiPhyKind_Vht = 8,
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                    
                     WiFiPhyKind_Dmg = 9,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-                    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-                    
                     WiFiPhyKind_HE = 10,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-                    
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1449,26 +1140,22 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiReconnectionKind : int
                 {
                     WiFiReconnectionKind_Automatic = 0,
                     WiFiReconnectionKind_Manual = 1,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1476,27 +1163,23 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiWpsConfigurationStatus : int
                 {
                     WiFiWpsConfigurationStatus_UnspecifiedFailure = 0,
                     WiFiWpsConfigurationStatus_Success = 1,
                     WiFiWpsConfigurationStatus_Timeout = 2,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -1504,15 +1187,12 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [v1_enum, contract] */
                 enum WiFiWpsKind : int
                 {
                     WiFiWpsKind_Unknown = 0,
@@ -1522,12 +1202,11 @@ namespace ABI {
                     WiFiWpsKind_Ethernet = 4,
                     WiFiWpsKind_Usb = 5,
                 };
-                
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -1535,9 +1214,7 @@ namespace ABI {
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1548,59 +1225,56 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("A6C4E423-3D75-43A4-B9DE-11E26B72D9B0"), exclusiveto, contract] */
-                MIDL_INTERFACE("A6C4E423-3D75-43A4-B9DE-11E26B72D9B0")
+                MIDL_INTERFACE("a6c4e423-3d75-43a4-b9de-11e26b72d9b0")
                 IWiFiAdapter : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkAdapter(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::Connectivity::INetworkAdapter * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_NetworkAdapter(
+                        ABI::Windows::Networking::Connectivity::INetworkAdapter** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE ScanAsync(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Foundation::IAsyncAction * * value
+                        ABI::Windows::Foundation::IAsyncAction** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkReport(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Devices::WiFi::IWiFiNetworkReport * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_NetworkReport(
+                        ABI::Windows::Devices::WiFi::IWiFiNetworkReport** value
                         ) = 0;
-                    /* [eventadd] */virtual HRESULT STDMETHODCALLTYPE add_AvailableNetworksChanged(
-                        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * args,
-                        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
+                    virtual HRESULT STDMETHODCALLTYPE add_AvailableNetworksChanged(
+                        __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* args,
+                        EventRegistrationToken* eventCookie
                         ) = 0;
-                    /* [eventremove] */virtual HRESULT STDMETHODCALLTYPE remove_AvailableNetworksChanged(
-                        /* [in] */EventRegistrationToken eventCookie
+                    virtual HRESULT STDMETHODCALLTYPE remove_AvailableNetworksChanged(
+                        EventRegistrationToken eventCookie
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE ConnectAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork * availableNetwork,
-                        /* [in] */ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
+                    virtual HRESULT STDMETHODCALLTYPE ConnectAsync(
+                        ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork* availableNetwork,
+                        ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork * availableNetwork,
-                        /* [in] */ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
-                        /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IPasswordCredential * passwordCredential,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
+                    virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAsync(
+                        ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork* availableNetwork,
+                        ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
+                        ABI::Windows::Security::Credentials::IPasswordCredential* passwordCredential,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAndSsidAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork * availableNetwork,
-                        /* [in] */ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
-                        /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IPasswordCredential * passwordCredential,
-                        /* [in] */__RPC__in HSTRING ssid,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
+                    virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAndSsidAsync(
+                        ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork* availableNetwork,
+                        ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
+                        ABI::Windows::Security::Credentials::IPasswordCredential* passwordCredential,
+                        HSTRING ssid,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE Disconnect(void) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiAdapter=_uuidof(IWiFiAdapter);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiAdapter = _uuidof(IWiFiAdapter);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1608,9 +1282,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1621,36 +1293,33 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("5BC4501D-81E4-453D-9430-1FCAFBADD6B6"), exclusiveto, contract] */
-                MIDL_INTERFACE("5BC4501D-81E4-453D-9430-1FCAFBADD6B6")
+                MIDL_INTERFACE("5bc4501d-81e4-453d-9430-1fcafbadd6b6")
                 IWiFiAdapter2 : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE GetWpsConfigurationAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork * availableNetwork,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * * operation
+                        ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork* availableNetwork,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult** operation
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(
-                        /* [in] */__RPC__in_opt ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork * availableNetwork,
-                        /* [in] */ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
-                        /* [in] */__RPC__in_opt ABI::Windows::Security::Credentials::IPasswordCredential * passwordCredential,
-                        /* [in] */__RPC__in HSTRING ssid,
-                        /* [in] */ABI::Windows::Devices::WiFi::WiFiConnectionMethod connectionMethod,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * operation
+                    virtual HRESULT STDMETHODCALLTYPE ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(
+                        ABI::Windows::Devices::WiFi::IWiFiAvailableNetwork* availableNetwork,
+                        ABI::Windows::Devices::WiFi::WiFiReconnectionKind reconnectionKind,
+                        ABI::Windows::Security::Credentials::IPasswordCredential* passwordCredential,
+                        HSTRING ssid,
+                        ABI::Windows::Devices::WiFi::WiFiConnectionMethod connectionMethod,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** operation
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiAdapter2=_uuidof(IWiFiAdapter2);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiAdapter2 = _uuidof(IWiFiAdapter2);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -1658,9 +1327,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1671,37 +1338,34 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("DA25FDDD-D24C-43E3-AABD-C4659F730F99"), exclusiveto, contract] */
-                MIDL_INTERFACE("DA25FDDD-D24C-43E3-AABD-C4659F730F99")
+                MIDL_INTERFACE("da25fddd-d24c-43e3-aabd-c4659f730f99")
                 IWiFiAdapterStatics : public IInspectable
                 {
                 public:
                     virtual HRESULT STDMETHODCALLTYPE FindAllAdaptersAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * * value
+                        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter** value
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE GetDeviceSelector(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * deviceSelector
+                        HSTRING* deviceSelector
                         ) = 0;
-                    /* [overload] */virtual HRESULT STDMETHODCALLTYPE FromIdAsync(
-                        /* [in] */__RPC__in HSTRING deviceId,
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * * asyncOp
+                    virtual HRESULT STDMETHODCALLTYPE FromIdAsync(
+                        HSTRING deviceId,
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter** asyncOp
                         ) = 0;
                     virtual HRESULT STDMETHODCALLTYPE RequestAccessAsync(
-                        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * * value
+                        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiAdapterStatics=_uuidof(IWiFiAdapterStatics);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiAdapterStatics = _uuidof(IWiFiAdapterStatics);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1709,9 +1373,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAvailableNetwork
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1722,57 +1384,54 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("26E96246-183E-4704-9826-71B4A2F0F668"), exclusiveto, contract] */
-                MIDL_INTERFACE("26E96246-183E-4704-9826-71B4A2F0F668")
+                MIDL_INTERFACE("26e96246-183e-4704-9826-71b4a2f0f668")
                 IWiFiAvailableNetwork : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Uptime(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Uptime(
+                        ABI::Windows::Foundation::TimeSpan* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Ssid(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Ssid(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Bssid(
-                        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Bssid(
+                        HSTRING* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ChannelCenterFrequencyInKilohertz(
-                        /* [retval, out] */__RPC__out INT32 * value
+                    virtual HRESULT STDMETHODCALLTYPE get_ChannelCenterFrequencyInKilohertz(
+                        INT32* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkRssiInDecibelMilliwatts(
-                        /* [retval, out] */__RPC__out DOUBLE * value
+                    virtual HRESULT STDMETHODCALLTYPE get_NetworkRssiInDecibelMilliwatts(
+                        DOUBLE* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SignalBars(
-                        /* [retval, out] */__RPC__out BYTE * value
+                    virtual HRESULT STDMETHODCALLTYPE get_SignalBars(
+                        BYTE* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_NetworkKind(
-                        /* [retval, out] */__RPC__out ABI::Windows::Devices::WiFi::WiFiNetworkKind * value
+                    virtual HRESULT STDMETHODCALLTYPE get_NetworkKind(
+                        ABI::Windows::Devices::WiFi::WiFiNetworkKind* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_PhyKind(
-                        /* [retval, out] */__RPC__out ABI::Windows::Devices::WiFi::WiFiPhyKind * value
+                    virtual HRESULT STDMETHODCALLTYPE get_PhyKind(
+                        ABI::Windows::Devices::WiFi::WiFiPhyKind* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SecuritySettings(
-                        /* [retval, out] */__RPC__deref_out_opt ABI::Windows::Networking::Connectivity::INetworkSecuritySettings * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_SecuritySettings(
+                        ABI::Windows::Networking::Connectivity::INetworkSecuritySettings** value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_BeaconInterval(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::TimeSpan * value
+                    virtual HRESULT STDMETHODCALLTYPE get_BeaconInterval(
+                        ABI::Windows::Foundation::TimeSpan* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_IsWiFiDirect(
-                        /* [retval, out] */__RPC__out ::boolean * value
+                    virtual HRESULT STDMETHODCALLTYPE get_IsWiFiDirect(
+                        boolean* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiAvailableNetwork=_uuidof(IWiFiAvailableNetwork);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiAvailableNetwork = _uuidof(IWiFiAvailableNetwork);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1780,9 +1439,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiConnectionResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1793,27 +1450,24 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("143BDFD9-C37D-40BE-A5C8-857BCE85A931"), exclusiveto, contract] */
-                MIDL_INTERFACE("143BDFD9-C37D-40BE-A5C8-857BCE85A931")
+                MIDL_INTERFACE("143bdfd9-c37d-40be-a5c8-857bce85a931")
                 IWiFiConnectionResult : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_ConnectionStatus(
-                        /* [retval, out] */__RPC__out ABI::Windows::Devices::WiFi::WiFiConnectionStatus * value
+                    virtual HRESULT STDMETHODCALLTYPE get_ConnectionStatus(
+                        ABI::Windows::Devices::WiFi::WiFiConnectionStatus* value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiConnectionResult=_uuidof(IWiFiConnectionResult);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiConnectionResult = _uuidof(IWiFiConnectionResult);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1821,9 +1475,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiNetworkReport
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
@@ -1834,30 +1486,27 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("9524DED2-5911-445E-8194-BE4F1A704895"), exclusiveto, contract] */
-                MIDL_INTERFACE("9524DED2-5911-445E-8194-BE4F1A704895")
+                MIDL_INTERFACE("9524ded2-5911-445e-8194-be4f1a704895")
                 IWiFiNetworkReport : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
-                        /* [retval, out] */__RPC__out ABI::Windows::Foundation::DateTime * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Timestamp(
+                        ABI::Windows::Foundation::DateTime* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_AvailableNetworks(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_AvailableNetworks(
+                        __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiNetworkReport=_uuidof(IWiFiNetworkReport);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiNetworkReport = _uuidof(IWiFiNetworkReport);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -1865,9 +1514,7 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiWpsConfigurationResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
@@ -1878,37 +1525,33 @@ namespace ABI {
     namespace Windows {
         namespace Devices {
             namespace WiFi {
-                /* [object, uuid("67B49871-17EE-42D1-B14F-5A11F1226FB5"), exclusiveto, contract] */
-                MIDL_INTERFACE("67B49871-17EE-42D1-B14F-5A11F1226FB5")
+                MIDL_INTERFACE("67b49871-17ee-42d1-b14f-5a11f1226fb5")
                 IWiFiWpsConfigurationResult : public IInspectable
                 {
                 public:
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_Status(
-                        /* [retval, out] */__RPC__out ABI::Windows::Devices::WiFi::WiFiWpsConfigurationStatus * value
+                    virtual HRESULT STDMETHODCALLTYPE get_Status(
+                        ABI::Windows::Devices::WiFi::WiFiWpsConfigurationStatus* value
                         ) = 0;
-                    /* [propget] */virtual HRESULT STDMETHODCALLTYPE get_SupportedWpsKinds(
-                        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * * value
+                    virtual HRESULT STDMETHODCALLTYPE get_SupportedWpsKinds(
+                        __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind** value
                         ) = 0;
-                    
                 };
 
-                extern MIDL_CONST_ID IID & IID_IWiFiWpsConfigurationResult=_uuidof(IWiFiWpsConfigurationResult);
-                
+                extern MIDL_CONST_ID IID& IID_IWiFiWpsConfigurationResult = _uuidof(IWiFiWpsConfigurationResult);
             } /* WiFi */
         } /* Devices */
-    } /* Windows */} /* ABI */
+    } /* Windows */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
  * Class Windows.Devices.WiFi.WiFiAdapter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.WiFi.IWiFiAdapterStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -1921,20 +1564,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationRes
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiAdapter_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiAdapter_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiAdapter[] = L"Windows.Devices.WiFi.WiFiAdapter";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiAvailableNetwork
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiAvailableNetwork ** Default Interface **
@@ -1943,20 +1583,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiAvailableNetwork_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiAvailableNetwork_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiAvailableNetwork[] = L"Windows.Devices.WiFi.WiFiAvailableNetwork";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiConnectionResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiConnectionResult ** Default Interface **
@@ -1965,20 +1602,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiConnectionResult_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiConnectionResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiConnectionResult[] = L"Windows.Devices.WiFi.WiFiConnectionResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiNetworkReport
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiNetworkReport ** Default Interface **
@@ -1987,20 +1621,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiNetworkReport_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiNetworkReport_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiNetworkReport[] = L"Windows.Devices.WiFi.WiFiNetworkReport";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiWpsConfigurationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiWpsConfigurationResult ** Default Interface **
@@ -2009,15 +1640,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiWpsConfigurationResult_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiWpsConfigurationResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiWpsConfigurationResult[] = L"Windows.Devices.WiFi.WiFiWpsConfigurationResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-
-
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -2067,6 +1694,508 @@ typedef interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult _
 
 // Collection interface definitions
 
+typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus;
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus* result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* This,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* This,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
+
+typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl;
+
+interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult
+{
+    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
+
+typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* This,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
 #define ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
@@ -2080,80 +2209,73 @@ typedef struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter** items,
+        UINT32* result);
 
     END_INTERFACE
 } __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
 
 interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter
 {
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
 
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
 #endif // ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
@@ -2164,390 +2286,60 @@ typedef interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIIter
 //  Declare the parameterized interface IID.
 EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter;
 
-typedef  struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
+typedef struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter **first);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAdapter** result);
 
     END_INTERFACE
 } __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
 
 interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter
 {
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
 
 #endif /* COBJMACROS */
-
 
 #endif // ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
-
-typedef struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl;
-
-interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
-
-typedef  struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl;
-
-interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind;
-#if !defined(____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__)
-#define ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
-
-typedef interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
-
-typedef struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Current )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind *current);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_HasCurrent )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *MoveNext )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [retval][out] */ __RPC__out boolean *hasCurrent);
-    HRESULT ( STDMETHODCALLTYPE *GetMany )(__RPC__in __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-        /* [in] */ unsigned int capacity,
-        /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind *items,
-        /* [retval][out] */ __RPC__out unsigned int *actual);
-
-    END_INTERFACE
-} __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl;
-
-interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind
-{
-    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl *lpVtbl;
-};
-
-
-
-#ifdef COBJMACROS
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_Current(This,current)	\
-    ( (This)->lpVtbl -> get_Current(This,current) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_HasCurrent(This,hasCurrent)	\
-    ( (This)->lpVtbl -> get_HasCurrent(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_MoveNext(This,hasCurrent)	\
-    ( (This)->lpVtbl -> MoveNext(This,hasCurrent) ) 
-
-#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetMany(This,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,capacity,items,actual) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__)
-#define ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
-
-typedef interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
-
-typedef  struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-                                           /* [out] */ __RPC__out ULONG *iidCount,
-                                           /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *First )(__RPC__in __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This, /* [retval][out] */ __RPC__deref_out_opt __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind **first);
-
-    END_INTERFACE
-} __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl;
-
-interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind
-{
-    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-
-#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_First(This,first)	\
-    ( (This)->lpVtbl -> First(This,first) ) 
-
-#endif /* COBJMACROS */
-
-
-#endif // ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
@@ -2562,103 +2354,494 @@ typedef struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        UINT32 index,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-            /* [in] */ __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
+#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter** result);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(__FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter** result);
+
+    END_INTERFACE
+} __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
+
+interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter
+{
+    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_put_Completed(This, handler) \
+    ((This)->lpVtbl->put_Completed(This, handler))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Completed(This, result) \
+    ((This)->lpVtbl->get_Completed(This, result))
+
+#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetResults(This, result) \
+    ((This)->lpVtbl->GetResults(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
+#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+
+typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
+
+typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* This,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter* asyncInfo,
+        AsyncStatus asyncStatus);
+
+    END_INTERFACE
+} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
+
+interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter
+{
+    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Invoke(This, asyncInfo, asyncStatus) \
+    ((This)->lpVtbl->Invoke(This, asyncInfo, asyncStatus))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
+
+typedef struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl;
+
+interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+#if !defined(____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork;
+
+typedef struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        __FIIterator_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl;
+
+interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
+
+typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind;
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+#if !defined(____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
+
+typedef struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind* result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind* items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl;
+
+interface __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
+#if !defined(____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind;
+
+typedef struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        __FIIterator_1_Windows__CDevices__CWiFi__CWiFiWpsKind** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl;
+
+interface __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__)
@@ -2673,104 +2856,79 @@ typedef struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkV
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        UINT32 index,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork** items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-            /* [in] */ __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetworkVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__)
 #define ____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
 
@@ -2783,674 +2941,77 @@ typedef struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl
 {
     BEGIN_INTERFACE
 
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        UINT32 index,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind* result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind* items,
+        UINT32* result);
 
-    ULONG ( STDMETHODCALLTYPE *AddRef )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-
-    ULONG ( STDMETHODCALLTYPE *Release )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )( __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-                                            /* [out] */ __RPC__out ULONG *iidCount,
-                                            /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-            /* [out] */ __RPC__deref_out_opt HSTRING *className);
-
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
-        __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-            /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    HRESULT ( STDMETHODCALLTYPE *GetAt )( 
-                                         __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-                                         /* [in] */ unsigned int index,
-                                         /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind *item);
-
-        /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Size )( 
-            __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-            /* [retval][out] */ __RPC__out unsigned int *size);
-
-        HRESULT ( STDMETHODCALLTYPE *IndexOf )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-            /* [in] */ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind item,
-            /* [out] */ __RPC__out unsigned int *index,
-            /* [retval][out] */ __RPC__out boolean *found);
-
-        HRESULT ( STDMETHODCALLTYPE *GetMany )( 
-                                               __RPC__in __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * This,
-            /* [in] */ unsigned int startIndex,
-            /* [in] */ unsigned int capacity,
-            /* [size_is][length_is][out] */ __RPC__out_ecount_part(capacity, *actual) enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind *items,
-            /* [retval][out] */ __RPC__out unsigned int *actual);
-
-        END_INTERFACE
+    END_INTERFACE
 } __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl;
 
 interface __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind
 {
-    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl *lpVtbl;
+    CONST_VTBL struct __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKindVtbl* lpVtbl;
 };
-
-
 
 #ifdef COBJMACROS
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
 
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetAt(This,index,item)	\
-    ( (This)->lpVtbl -> GetAt(This,index,item) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_get_Size(This,size)	\
-    ( (This)->lpVtbl -> get_Size(This,size) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_IndexOf(This,item,index,found)	\
-    ( (This)->lpVtbl -> IndexOf(This,item,index,found) ) 
-
-#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetMany(This,startIndex,capacity,items,actual)	\
-    ( (This)->lpVtbl -> GetMany(This,startIndex,capacity,items,actual) ) 
+#define __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
 
 #endif /* COBJMACROS */
-
-
 
 #endif // ____FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind_INTERFACE_DEFINED__
-
-
-enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus;
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
-
-
-
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus;
-
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAccessStatus **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * This, /* [retval][out] */ __RPC__out enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl;
-
-interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatusVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus_INTERFACE_DEFINED__
-
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiAdapter **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
-
-interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiConnectionResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-#if !defined(____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
-
-typedef struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-#if !defined(____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult;
-
-typedef struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * This, /* [retval][out] */ __RPC__out __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl;
-
-interface __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult
-{
-    CONST_VTBL struct __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResultVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
-#define ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-// Forward declare the async operation.
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-typedef struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
-{
-    BEGIN_INTERFACE
-
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,/* [in] */ __RPC__in_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter *asyncInfo, /* [in] */ AsyncStatus status);
-    END_INTERFACE
-} __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
-
-interface __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter
-{
-    CONST_VTBL struct __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Invoke(This,asyncInfo,status)	\
-    ( (This)->lpVtbl -> Invoke(This,asyncInfo,status) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-#if !defined(____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__)
-#define ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-typedef interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-//  Declare the parameterized interface IID.
-EXTERN_C const IID IID___FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter;
-
-typedef struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl
-{
-    BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This);
-
-    HRESULT ( STDMETHODCALLTYPE *GetIids )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This,
-        /* [out] */ __RPC__out ULONG *iidCount,
-        /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids);
-    HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__deref_out_opt HSTRING *className);
-    HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [out] */ __RPC__out TrustLevel *trustLevel);
-
-    /* [propput] */ HRESULT ( STDMETHODCALLTYPE *put_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [in] */ __RPC__in_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter *handler);
-    /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_Completed )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__deref_out_opt __FIAsyncOperationCompletedHandler_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter **handler);
-    HRESULT ( STDMETHODCALLTYPE *GetResults )(__RPC__in __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * This, /* [retval][out] */ __RPC__out __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * *results);
-    END_INTERFACE
-} __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl;
-
-interface __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter
-{
-    CONST_VTBL struct __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapterVtbl *lpVtbl;
-};
-
-#ifdef COBJMACROS
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetIids(This,iidCount,iids)	\
-    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetRuntimeClassName(This,className)	\
-    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetTrustLevel(This,trustLevel)	\
-    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
-
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_put_Completed(This,handler)	\
-    ( (This)->lpVtbl -> put_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_get_Completed(This,handler)	\
-    ( (This)->lpVtbl -> get_Completed(This,handler) ) 
-#define __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_GetResults(This,results)	\
-    ( (This)->lpVtbl -> GetResults(This,results) ) 
-#endif /* COBJMACROS */
-
-
-#endif // ____FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter_INTERFACE_DEFINED__
-
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_INTERFACE_DEFINED__)
@@ -3464,44 +3025,42 @@ EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAd
 typedef struct __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectableVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This,
-        /* [in] */ __RPC__in REFIID riid,
-        /* [annotation][iid_is][out] */ 
-        _COM_Outptr_  void **ppvObject);
-    ULONG ( STDMETHODCALLTYPE *AddRef )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This);
-    ULONG ( STDMETHODCALLTYPE *Release )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This);
 
-    HRESULT ( STDMETHODCALLTYPE *Invoke )(__RPC__in __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * This,/* [in] */ __RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * sender,/* [in] */ __RPC__in_opt IInspectable * e);
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* sender,
+        IInspectable* args);
+
     END_INTERFACE
 } __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectableVtbl;
 
 interface __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable
 {
-    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectableVtbl *lpVtbl;
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectableVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_QueryInterface(This,riid,ppvObject)	\
-    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
 
-#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_AddRef(This)	\
-    ( (This)->lpVtbl -> AddRef(This) ) 
+#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
-#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_Release(This)	\
-    ( (This)->lpVtbl -> Release(This) ) 
+#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
 
+#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
 
-#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_Invoke(This,sender,e)	\
-    ( (This)->lpVtbl -> Invoke(This,sender,e) ) 
+#define __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
 #endif /* COBJMACROS */
 
-
-
 #endif // ____FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable_INTERFACE_DEFINED__
-
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
-
 
 typedef struct __x_ABI_CWindows_CFoundation_CDateTime __x_ABI_CWindows_CFoundation_CDateTime;
 
@@ -3511,12 +3070,7 @@ typedef interface __x_ABI_CWindows_CFoundation_CIAsyncAction __x_ABI_CWindows_CF
 
 #endif // ____x_ABI_CWindows_CFoundation_CIAsyncAction_FWD_DEFINED__
 
-
-
 typedef struct __x_ABI_CWindows_CFoundation_CTimeSpan __x_ABI_CWindows_CFoundation_CTimeSpan;
-
-
-
 
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
@@ -3524,16 +3078,11 @@ typedef interface __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter __
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter_FWD_DEFINED__
 
-
 #ifndef ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
 #define ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
 typedef interface __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings;
 
 #endif // ____x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings_FWD_DEFINED__
-
-
-
-
 
 #ifndef ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 #define ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
@@ -3541,53 +3090,17 @@ typedef interface __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential _
 
 #endif // ____x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential_FWD_DEFINED__
 
-
-
-
-
-
-typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus;
-
-
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod;
-
 
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus;
 
-
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind;
-
 
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind;
 
-
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind;
 
-
 typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus;
-
-
-typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*
  *
@@ -3595,11 +3108,8 @@ typedef enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind __x_ABI_CWindows_CDevi
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus
 {
     WiFiAccessStatus_Unspecified = 0,
@@ -3609,18 +3119,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiAccessStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiConnectionMethod
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod
 {
     WiFiConnectionMethod_Default = 0,
@@ -3629,18 +3135,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiConnectionStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus
 {
     WiFiConnectionStatus_UnspecifiedFailure = 0,
@@ -3653,18 +3155,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiNetworkKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind
 {
     WiFiNetworkKind_Any = 0,
@@ -3673,18 +3171,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiPhyKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind
 {
     WiFiPhyKind_Unknown = 0,
@@ -3697,18 +3191,13 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind
     WiFiPhyKind_HT = 7,
     WiFiPhyKind_Vht = 8,
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
     WiFiPhyKind_Dmg = 9,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x30000
-    
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-    
     WiFiPhyKind_HE = 10,
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x70000
-    
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3716,11 +3205,8 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind
 {
     WiFiReconnectionKind_Automatic = 0,
@@ -3728,18 +3214,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiWpsConfigurationStatus
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus
 {
     WiFiWpsConfigurationStatus_UnspecifiedFailure = 0,
@@ -3748,18 +3230,14 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
-
 /*
  *
  * Struct Windows.Devices.WiFi.WiFiWpsKind
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  */
-
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-/* [v1_enum, contract] */
 enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind
 {
     WiFiWpsKind_Unknown = 0,
@@ -3771,164 +3249,123 @@ enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsKind
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 
-
 /*
  *
  * Interface Windows.Devices.WiFi.IWiFiAdapter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiAdapter[] = L"Windows.Devices.WiFi.IWiFiAdapter";
-/* [object, uuid("A6C4E423-3D75-43A4-B9DE-11E26B72D9B0"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_NetworkAdapter)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter** value);
+    HRESULT (STDMETHODCALLTYPE* ScanAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CFoundation_CIAsyncAction** value);
+    HRESULT (STDMETHODCALLTYPE* get_NetworkReport)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport** value);
+    HRESULT (STDMETHODCALLTYPE* add_AvailableNetworksChanged)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable* args,
+        EventRegistrationToken* eventCookie);
+    HRESULT (STDMETHODCALLTYPE* remove_AvailableNetworksChanged)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        EventRegistrationToken eventCookie);
+    HRESULT (STDMETHODCALLTYPE* ConnectAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* availableNetwork,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value);
+    HRESULT (STDMETHODCALLTYPE* ConnectWithPasswordCredentialAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* availableNetwork,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
+        __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential* passwordCredential,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value);
+    HRESULT (STDMETHODCALLTYPE* ConnectWithPasswordCredentialAndSsidAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* availableNetwork,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
+        __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential* passwordCredential,
+        HSTRING ssid,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** value);
+    HRESULT (STDMETHODCALLTYPE* Disconnect)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter* This);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NetworkAdapter )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkAdapter * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *ScanAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CFoundation_CIAsyncAction * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NetworkReport )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * * value
-        );
-    /* [eventadd] */HRESULT ( STDMETHODCALLTYPE *add_AvailableNetworksChanged )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [in] */__RPC__in_opt __FITypedEventHandler_2_Windows__CDevices__CWiFi__CWiFiAdapter_IInspectable * args,
-        /* [retval, out] */__RPC__out EventRegistrationToken * eventCookie
-        );
-    /* [eventremove] */HRESULT ( STDMETHODCALLTYPE *remove_AvailableNetworksChanged )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [in] */EventRegistrationToken eventCookie
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ConnectAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * availableNetwork,
-        /* [in] */__x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ConnectWithPasswordCredentialAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * availableNetwork,
-        /* [in] */__x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential * passwordCredential,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ConnectWithPasswordCredentialAndSsidAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * availableNetwork,
-        /* [in] */__x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential * passwordCredential,
-        /* [in] */__RPC__in HSTRING ssid,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *Disconnect )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter * This
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_get_NetworkAdapter(This,value) \
-    ( (This)->lpVtbl->get_NetworkAdapter(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_get_NetworkAdapter(This, value) \
+    ((This)->lpVtbl->get_NetworkAdapter(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ScanAsync(This,value) \
-    ( (This)->lpVtbl->ScanAsync(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ScanAsync(This, value) \
+    ((This)->lpVtbl->ScanAsync(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_get_NetworkReport(This,value) \
-    ( (This)->lpVtbl->get_NetworkReport(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_get_NetworkReport(This, value) \
+    ((This)->lpVtbl->get_NetworkReport(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_add_AvailableNetworksChanged(This,args,eventCookie) \
-    ( (This)->lpVtbl->add_AvailableNetworksChanged(This,args,eventCookie) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_add_AvailableNetworksChanged(This, args, eventCookie) \
+    ((This)->lpVtbl->add_AvailableNetworksChanged(This, args, eventCookie))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_remove_AvailableNetworksChanged(This,eventCookie) \
-    ( (This)->lpVtbl->remove_AvailableNetworksChanged(This,eventCookie) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_remove_AvailableNetworksChanged(This, eventCookie) \
+    ((This)->lpVtbl->remove_AvailableNetworksChanged(This, eventCookie))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectAsync(This,availableNetwork,reconnectionKind,value) \
-    ( (This)->lpVtbl->ConnectAsync(This,availableNetwork,reconnectionKind,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectAsync(This, availableNetwork, reconnectionKind, value) \
+    ((This)->lpVtbl->ConnectAsync(This, availableNetwork, reconnectionKind, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectWithPasswordCredentialAsync(This,availableNetwork,reconnectionKind,passwordCredential,value) \
-    ( (This)->lpVtbl->ConnectWithPasswordCredentialAsync(This,availableNetwork,reconnectionKind,passwordCredential,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectWithPasswordCredentialAsync(This, availableNetwork, reconnectionKind, passwordCredential, value) \
+    ((This)->lpVtbl->ConnectWithPasswordCredentialAsync(This, availableNetwork, reconnectionKind, passwordCredential, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectWithPasswordCredentialAndSsidAsync(This,availableNetwork,reconnectionKind,passwordCredential,ssid,value) \
-    ( (This)->lpVtbl->ConnectWithPasswordCredentialAndSsidAsync(This,availableNetwork,reconnectionKind,passwordCredential,ssid,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_ConnectWithPasswordCredentialAndSsidAsync(This, availableNetwork, reconnectionKind, passwordCredential, ssid, value) \
+    ((This)->lpVtbl->ConnectWithPasswordCredentialAndSsidAsync(This, availableNetwork, reconnectionKind, passwordCredential, ssid, value))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_Disconnect(This) \
-    ( (This)->lpVtbl->Disconnect(This) )
-
+    ((This)->lpVtbl->Disconnect(This))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -3936,105 +3373,79 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiAdapter2[] = L"Windows.Devices.WiFi.IWiFiAdapter2";
-/* [object, uuid("5BC4501D-81E4-453D-9430-1FCAFBADD6B6"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2Vtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetWpsConfigurationAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* availableNetwork,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult** operation);
+    HRESULT (STDMETHODCALLTYPE* ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2* This,
+        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* availableNetwork,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
+        __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential* passwordCredential,
+        HSTRING ssid,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod connectionMethod,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult** operation);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *GetWpsConfigurationAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * availableNetwork,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiWpsConfigurationResult * * operation
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2 * This,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * availableNetwork,
-        /* [in] */__x_ABI_CWindows_CDevices_CWiFi_CWiFiReconnectionKind reconnectionKind,
-        /* [in] */__RPC__in_opt __x_ABI_CWindows_CSecurity_CCredentials_CIPasswordCredential * passwordCredential,
-        /* [in] */__RPC__in HSTRING ssid,
-        /* [in] */__x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionMethod connectionMethod,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiConnectionResult * * operation
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2Vtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2Vtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2Vtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetWpsConfigurationAsync(This,availableNetwork,operation) \
-    ( (This)->lpVtbl->GetWpsConfigurationAsync(This,availableNetwork,operation) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_GetWpsConfigurationAsync(This, availableNetwork, operation) \
+    ((This)->lpVtbl->GetWpsConfigurationAsync(This, availableNetwork, operation))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(This,availableNetwork,reconnectionKind,passwordCredential,ssid,connectionMethod,operation) \
-    ( (This)->lpVtbl->ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(This,availableNetwork,reconnectionKind,passwordCredential,ssid,connectionMethod,operation) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(This, availableNetwork, reconnectionKind, passwordCredential, ssid, connectionMethod, operation) \
+    ((This)->lpVtbl->ConnectWithPasswordCredentialAndSsidAndConnectionMethodAsync(This, availableNetwork, reconnectionKind, passwordCredential, ssid, connectionMethod, operation))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
@@ -4042,114 +3453,84 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapter2;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAdapter
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiAdapterStatics[] = L"Windows.Devices.WiFi.IWiFiAdapterStatics";
-/* [object, uuid("DA25FDDD-D24C-43E3-AABD-C4659F730F99"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStaticsVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* FindAllAdaptersAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter** value);
+    HRESULT (STDMETHODCALLTYPE* GetDeviceSelector)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        HSTRING* deviceSelector);
+    HRESULT (STDMETHODCALLTYPE* FromIdAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        HSTRING deviceId,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter** asyncOp);
+    HRESULT (STDMETHODCALLTYPE* RequestAccessAsync)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics* This,
+        __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-HRESULT ( STDMETHODCALLTYPE *FindAllAdaptersAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1___FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAdapter * * value
-        );
-    HRESULT ( STDMETHODCALLTYPE *GetDeviceSelector )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * deviceSelector
-        );
-    /* [overload] */HRESULT ( STDMETHODCALLTYPE *FromIdAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-        /* [in] */__RPC__in HSTRING deviceId,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAdapter * * asyncOp
-        );
-    HRESULT ( STDMETHODCALLTYPE *RequestAccessAsync )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIAsyncOperation_1_Windows__CDevices__CWiFi__CWiFiAccessStatus * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStaticsVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStaticsVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStaticsVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FindAllAdaptersAsync(This,value) \
-    ( (This)->lpVtbl->FindAllAdaptersAsync(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FindAllAdaptersAsync(This, value) \
+    ((This)->lpVtbl->FindAllAdaptersAsync(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetDeviceSelector(This,deviceSelector) \
-    ( (This)->lpVtbl->GetDeviceSelector(This,deviceSelector) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_GetDeviceSelector(This, deviceSelector) \
+    ((This)->lpVtbl->GetDeviceSelector(This, deviceSelector))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FromIdAsync(This,deviceId,asyncOp) \
-    ( (This)->lpVtbl->FromIdAsync(This,deviceId,asyncOp) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_FromIdAsync(This, deviceId, asyncOp) \
+    ((This)->lpVtbl->FromIdAsync(This, deviceId, asyncOp))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_RequestAccessAsync(This,value) \
-    ( (This)->lpVtbl->RequestAccessAsync(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_RequestAccessAsync(This, value) \
+    ((This)->lpVtbl->RequestAccessAsync(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4157,162 +3538,118 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAdapterStatics;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiAvailableNetwork
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiAvailableNetwork[] = L"Windows.Devices.WiFi.IWiFiAvailableNetwork";
-/* [object, uuid("26E96246-183E-4704-9826-71B4A2F0F668"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetworkVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Uptime)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* get_Ssid)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Bssid)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_ChannelCenterFrequencyInKilohertz)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        INT32* value);
+    HRESULT (STDMETHODCALLTYPE* get_NetworkRssiInDecibelMilliwatts)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        DOUBLE* value);
+    HRESULT (STDMETHODCALLTYPE* get_SignalBars)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        BYTE* value);
+    HRESULT (STDMETHODCALLTYPE* get_NetworkKind)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind* value);
+    HRESULT (STDMETHODCALLTYPE* get_PhyKind)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind* value);
+    HRESULT (STDMETHODCALLTYPE* get_SecuritySettings)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings** value);
+    HRESULT (STDMETHODCALLTYPE* get_BeaconInterval)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        struct __x_ABI_CWindows_CFoundation_CTimeSpan* value);
+    HRESULT (STDMETHODCALLTYPE* get_IsWiFiDirect)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork* This,
+        boolean* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Uptime )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Ssid )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Bssid )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__deref_out_opt HSTRING * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ChannelCenterFrequencyInKilohertz )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out INT32 * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NetworkRssiInDecibelMilliwatts )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out DOUBLE * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SignalBars )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out BYTE * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_NetworkKind )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CWiFi_CWiFiNetworkKind * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_PhyKind )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CWiFi_CWiFiPhyKind * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SecuritySettings )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__deref_out_opt __x_ABI_CWindows_CNetworking_CConnectivity_CINetworkSecuritySettings * * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_BeaconInterval )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CTimeSpan * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_IsWiFiDirect )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork * This,
-        /* [retval, out] */__RPC__out boolean * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetworkVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetworkVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetworkVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Uptime(This,value) \
-    ( (This)->lpVtbl->get_Uptime(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Uptime(This, value) \
+    ((This)->lpVtbl->get_Uptime(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Ssid(This,value) \
-    ( (This)->lpVtbl->get_Ssid(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Ssid(This, value) \
+    ((This)->lpVtbl->get_Ssid(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Bssid(This,value) \
-    ( (This)->lpVtbl->get_Bssid(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_Bssid(This, value) \
+    ((This)->lpVtbl->get_Bssid(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_ChannelCenterFrequencyInKilohertz(This,value) \
-    ( (This)->lpVtbl->get_ChannelCenterFrequencyInKilohertz(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_ChannelCenterFrequencyInKilohertz(This, value) \
+    ((This)->lpVtbl->get_ChannelCenterFrequencyInKilohertz(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_NetworkRssiInDecibelMilliwatts(This,value) \
-    ( (This)->lpVtbl->get_NetworkRssiInDecibelMilliwatts(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_NetworkRssiInDecibelMilliwatts(This, value) \
+    ((This)->lpVtbl->get_NetworkRssiInDecibelMilliwatts(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_SignalBars(This,value) \
-    ( (This)->lpVtbl->get_SignalBars(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_SignalBars(This, value) \
+    ((This)->lpVtbl->get_SignalBars(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_NetworkKind(This,value) \
-    ( (This)->lpVtbl->get_NetworkKind(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_NetworkKind(This, value) \
+    ((This)->lpVtbl->get_NetworkKind(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_PhyKind(This,value) \
-    ( (This)->lpVtbl->get_PhyKind(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_PhyKind(This, value) \
+    ((This)->lpVtbl->get_PhyKind(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_SecuritySettings(This,value) \
-    ( (This)->lpVtbl->get_SecuritySettings(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_SecuritySettings(This, value) \
+    ((This)->lpVtbl->get_SecuritySettings(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_BeaconInterval(This,value) \
-    ( (This)->lpVtbl->get_BeaconInterval(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_BeaconInterval(This, value) \
+    ((This)->lpVtbl->get_BeaconInterval(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_IsWiFiDirect(This,value) \
-    ( (This)->lpVtbl->get_IsWiFiDirect(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_get_IsWiFiDirect(This, value) \
+    ((This)->lpVtbl->get_IsWiFiDirect(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4320,92 +3657,68 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiAvailableNetwork;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiConnectionResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiConnectionResult[] = L"Windows.Devices.WiFi.IWiFiConnectionResult";
-/* [object, uuid("143BDFD9-C37D-40BE-A5C8-857BCE85A931"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ConnectionStatus)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus* value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_ConnectionStatus )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CWiFi_CWiFiConnectionStatus * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResultVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_get_ConnectionStatus(This,value) \
-    ( (This)->lpVtbl->get_ConnectionStatus(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_get_ConnectionStatus(This, value) \
+    ((This)->lpVtbl->get_ConnectionStatus(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4413,99 +3726,73 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiConnectionResult;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiNetworkReport
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiNetworkReport[] = L"Windows.Devices.WiFi.IWiFiNetworkReport";
-/* [object, uuid("9524DED2-5911-445E-8194-BE4F1A704895"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReportVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Timestamp)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        struct __x_ABI_CWindows_CFoundation_CDateTime* value);
+    HRESULT (STDMETHODCALLTYPE* get_AvailableNetworks)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport* This,
+        __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Timestamp )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CFoundation_CDateTime * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_AvailableNetworks )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiAvailableNetwork * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReportVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReportVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReportVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_get_Timestamp(This,value) \
-    ( (This)->lpVtbl->get_Timestamp(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_get_Timestamp(This, value) \
+    ((This)->lpVtbl->get_Timestamp(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_get_AvailableNetworks(This,value) \
-    ( (This)->lpVtbl->get_AvailableNetworks(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_get_AvailableNetworks(This, value) \
+    ((This)->lpVtbl->get_AvailableNetworks(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 
 /*
  *
@@ -4513,106 +3800,79 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiNetworkReport;
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
  *
- *
  * Interface is a part of the implementation of type Windows.Devices.WiFi.WiFiWpsConfigurationResult
- *
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
 #if !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Devices_WiFi_IWiFiWpsConfigurationResult[] = L"Windows.Devices.WiFi.IWiFiWpsConfigurationResult";
-/* [object, uuid("67B49871-17EE-42D1-B14F-5A11F1226FB5"), exclusiveto, contract] */
 typedef struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResultVtbl
 {
     BEGIN_INTERFACE
-    HRESULT ( STDMETHODCALLTYPE *QueryInterface)(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-    /* [in] */ __RPC__in REFIID riid,
-    /* [annotation][iid_is][out] */
-    _COM_Outptr_  void **ppvObject
-    );
 
-ULONG ( STDMETHODCALLTYPE *AddRef )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This
-    );
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Status)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        enum __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus* value);
+    HRESULT (STDMETHODCALLTYPE* get_SupportedWpsKinds)(__x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult* This,
+        __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind** value);
 
-ULONG ( STDMETHODCALLTYPE *Release )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetIids )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-    /* [out] */ __RPC__out ULONG *iidCount,
-    /* [size_is][size_is][out] */ __RPC__deref_out_ecount_full_opt(*iidCount) IID **iids
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-    /* [out] */ __RPC__deref_out_opt HSTRING *className
-    );
-
-HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )(
-    __RPC__in __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-    /* [OUT ] */ __RPC__out TrustLevel *trustLevel
-    );
-/* [propget] */HRESULT ( STDMETHODCALLTYPE *get_Status )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-        /* [retval, out] */__RPC__out __x_ABI_CWindows_CDevices_CWiFi_CWiFiWpsConfigurationStatus * value
-        );
-    /* [propget] */HRESULT ( STDMETHODCALLTYPE *get_SupportedWpsKinds )(
-        __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult * This,
-        /* [retval, out] */__RPC__deref_out_opt __FIVectorView_1_Windows__CDevices__CWiFi__CWiFiWpsKind * * value
-        );
     END_INTERFACE
-    
 } __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResultVtbl;
 
 interface __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult
 {
-    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResultVtbl *lpVtbl;
+    CONST_VTBL struct __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResultVtbl* lpVtbl;
 };
 
 #ifdef COBJMACROS
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_QueryInterface(This,riid,ppvObject) \
-( (This)->lpVtbl->QueryInterface(This,riid,ppvObject) )
+
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_AddRef(This) \
-        ( (This)->lpVtbl->AddRef(This) )
+    ((This)->lpVtbl->AddRef(This))
 
 #define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_Release(This) \
-        ( (This)->lpVtbl->Release(This) )
+    ((This)->lpVtbl->Release(This))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetIids(This,iidCount,iids) \
-        ( (This)->lpVtbl->GetIids(This,iidCount,iids) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetRuntimeClassName(This,className) \
-        ( (This)->lpVtbl->GetRuntimeClassName(This,className) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetTrustLevel(This,trustLevel) \
-        ( (This)->lpVtbl->GetTrustLevel(This,trustLevel) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_get_Status(This,value) \
-    ( (This)->lpVtbl->get_Status(This,value) )
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_get_Status(This, value) \
+    ((This)->lpVtbl->get_Status(This, value))
 
-#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_get_SupportedWpsKinds(This,value) \
-    ( (This)->lpVtbl->get_SupportedWpsKinds(This,value) )
-
+#define __x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_get_SupportedWpsKinds(This, value) \
+    ((This)->lpVtbl->get_SupportedWpsKinds(This, value))
 
 #endif /* COBJMACROS */
-
 
 EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult;
 #endif /* !defined(____x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationResult_INTERFACE_DEFINED__) */
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 
 /*
  *
  * Class Windows.Devices.WiFi.WiFiAdapter
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Devices.WiFi.IWiFiAdapterStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
@@ -4625,20 +3885,17 @@ EXTERN_C const IID IID___x_ABI_CWindows_CDevices_CWiFi_CIWiFiWpsConfigurationRes
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiAdapter_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiAdapter_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiAdapter[] = L"Windows.Devices.WiFi.WiFiAdapter";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiAvailableNetwork
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiAvailableNetwork ** Default Interface **
@@ -4647,20 +3904,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiAvailableNetwork_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiAvailableNetwork_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiAvailableNetwork[] = L"Windows.Devices.WiFi.WiFiAvailableNetwork";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiConnectionResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiConnectionResult ** Default Interface **
@@ -4669,20 +3923,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiConnectionResult_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiConnectionResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiConnectionResult[] = L"Windows.Devices.WiFi.WiFiConnectionResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiNetworkReport
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 1.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiNetworkReport ** Default Interface **
@@ -4691,20 +3942,17 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiNetworkReport_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiNetworkReport_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiNetworkReport[] = L"Windows.Devices.WiFi.WiFiNetworkReport";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x10000
 
-
 /*
  *
  * Class Windows.Devices.WiFi.WiFiWpsConfigurationResult
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 5.0
- *
  *
  * Class implements the following interfaces:
  *    Windows.Devices.WiFi.IWiFiWpsConfigurationResult ** Default Interface **
@@ -4713,15 +3961,11 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
 #ifndef RUNTIMECLASS_Windows_Devices_WiFi_WiFiWpsConfigurationResult_DEFINED
 #define RUNTIMECLASS_Windows_Devices_WiFi_WiFiWpsConfigurationResult_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Devices_WiFi_WiFiWpsConfigurationResult[] = L"Windows.Devices.WiFi.WiFiWpsConfigurationResult";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x50000
-
-
-
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

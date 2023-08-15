@@ -2,7 +2,7 @@
 //
 // MIDL requires that certain types be defined before compiling WinRT types. WinRTBase.idl defines critical types which are needed for WinRT compilation.
 //
-// These types are actually defined in several other IDL files that are published in the SDK. For performance reasons, 
+// These types are actually defined in several other IDL files that are published in the SDK. For performance reasons,
 // we provide a shadow definition of the types. When the WinRTBase.h header file is included in a source file, we use the types
 // defined in the original IDL file.
 //
@@ -13,7 +13,7 @@ import "midlbase.idl";
 
 namespace Windows.Foundation.Metadata
 {
-    [attributeusage(target_runtimeclass, target_interface, target_struct, target_enum, target_delegate)]
+     [attributeusage(target_runtimeclass, target_interface, target_struct, target_enum, target_delegate)]
     [attributename("webhosthidden")]
     [version(0x06020000)]
     attribute WebHostHiddenAttribute
@@ -48,6 +48,13 @@ namespace Windows.Foundation.Metadata
     attribute CreateFromStringAttribute
     {
         HSTRING MethodName;
+    }
+
+    [attributeusage(target_method, target_property)]
+    [attributename("noexcept")]
+    [version(0x06020000)]
+    attribute NoExceptionAttribute
+    {
     }
 }
 

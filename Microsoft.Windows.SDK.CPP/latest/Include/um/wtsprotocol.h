@@ -186,6 +186,13 @@ typedef interface IWRdsWddmIddProps IWRdsWddmIddProps;
 #endif 	/* __IWRdsWddmIddProps_FWD_DEFINED__ */
 
 
+#ifndef __IWRdsProtocolConnectionSettings_FWD_DEFINED__
+#define __IWRdsProtocolConnectionSettings_FWD_DEFINED__
+typedef interface IWRdsProtocolConnectionSettings IWRdsProtocolConnectionSettings;
+
+#endif 	/* __IWRdsProtocolConnectionSettings_FWD_DEFINED__ */
+
+
 /* header files for imported files */
 #include "oaidl.h"
 #include "ocidl.h"
@@ -3050,12 +3057,115 @@ EXTERN_C const IID IID_IWRdsWddmIddProps;
 /* interface __MIDL_itf_wtsprotocol_0000_0021 */
 /* [local] */ 
 
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
+
 
 
 extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0021_v0_0_s_ifspec;
+
+#ifndef __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
+#define __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__
+
+/* interface IWRdsProtocolConnectionSettings */
+/* [unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IWRdsProtocolConnectionSettings;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("83FCF5D3-F6F4-EA94-9CD2-32F280E1E510")
+    IWRdsProtocolConnectionSettings : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE SetConnectionSetting( 
+            /* [in] */ GUID PropertyID,
+            /* [in] */ __RPC__in PWTS_PROPERTY_VALUE pPropertyEntriesIn) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetConnectionSetting( 
+            /* [in] */ GUID PropertyID,
+            /* [out] */ __RPC__out PWTS_PROPERTY_VALUE pPropertyEntriesOut) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IWRdsProtocolConnectionSettingsVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __RPC__in IWRdsProtocolConnectionSettings * This,
+            /* [in] */ __RPC__in REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __RPC__in IWRdsProtocolConnectionSettings * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __RPC__in IWRdsProtocolConnectionSettings * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *SetConnectionSetting )( 
+            __RPC__in IWRdsProtocolConnectionSettings * This,
+            /* [in] */ GUID PropertyID,
+            /* [in] */ __RPC__in PWTS_PROPERTY_VALUE pPropertyEntriesIn);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetConnectionSetting )( 
+            __RPC__in IWRdsProtocolConnectionSettings * This,
+            /* [in] */ GUID PropertyID,
+            /* [out] */ __RPC__out PWTS_PROPERTY_VALUE pPropertyEntriesOut);
+        
+        END_INTERFACE
+    } IWRdsProtocolConnectionSettingsVtbl;
+
+    interface IWRdsProtocolConnectionSettings
+    {
+        CONST_VTBL struct IWRdsProtocolConnectionSettingsVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IWRdsProtocolConnectionSettings_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IWRdsProtocolConnectionSettings_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IWRdsProtocolConnectionSettings_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IWRdsProtocolConnectionSettings_SetConnectionSetting(This,PropertyID,pPropertyEntriesIn)	\
+    ( (This)->lpVtbl -> SetConnectionSetting(This,PropertyID,pPropertyEntriesIn) ) 
+
+#define IWRdsProtocolConnectionSettings_GetConnectionSetting(This,PropertyID,pPropertyEntriesOut)	\
+    ( (This)->lpVtbl -> GetConnectionSetting(This,PropertyID,pPropertyEntriesOut) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IWRdsProtocolConnectionSettings_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_wtsprotocol_0000_0022 */
+/* [local] */ 
+
+#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
+#pragma endregion
+
+
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_wtsprotocol_0000_0022_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

@@ -1,28 +1,20 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Media_Playlists_2_H
+#define WINRT_Windows_Media_Playlists_2_H
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.Media.Playlists.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::Playlists {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Media::Playlists {
-
-struct WINRT_EBO Playlist :
-    Windows::Media::Playlists::IPlaylist
+namespace winrt::Windows::Media::Playlists
 {
-    Playlist(std::nullptr_t) noexcept {}
-    Playlist();
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Playlists::Playlist> LoadAsync(Windows::Storage::IStorageFile const& file);
-};
-
+    struct __declspec(empty_bases) Playlist : Windows::Media::Playlists::IPlaylist
+    {
+        Playlist(std::nullptr_t) noexcept {}
+        Playlist(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Playlists::IPlaylist(ptr, take_ownership_from_abi) {}
+        Playlist();
+        static auto LoadAsync(Windows::Storage::IStorageFile const& file);
+    };
 }
+#endif

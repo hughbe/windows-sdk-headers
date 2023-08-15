@@ -182,7 +182,6 @@ Abstract:
 #ifndef WINAPI_PARTITION_SYSTEM
 #define WINAPI_PARTITION_SYSTEM                                                \
   (WINAPI_FAMILY == WINAPI_FAMILY_SYSTEM ||                                    \
-   WINAPI_FAMILY == WINAPI_FAMILY_GAMES ||                                     \
    WINAPI_FAMILY == WINAPI_FAMILY_SERVER)
 #endif 
 

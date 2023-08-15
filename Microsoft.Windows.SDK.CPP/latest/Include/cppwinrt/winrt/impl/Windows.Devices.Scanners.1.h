@@ -1,65 +1,63 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Graphics.Printing.0.h"
-#include "winrt/impl/Windows.Storage.0.h"
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_Devices_Scanners_1_H
+#define WINRT_Windows_Devices_Scanners_1_H
 #include "winrt/impl/Windows.Devices.Scanners.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Scanners {
-
-struct WINRT_EBO IImageScanner :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScanner>
+namespace winrt::Windows::Devices::Scanners
 {
-    IImageScanner(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerFeederConfiguration :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerFeederConfiguration>,
-    impl::require<IImageScannerFeederConfiguration, Windows::Devices::Scanners::IImageScannerFormatConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
-{
-    IImageScannerFeederConfiguration(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerFormatConfiguration :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerFormatConfiguration>
-{
-    IImageScannerFormatConfiguration(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerPreviewResult :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerPreviewResult>
-{
-    IImageScannerPreviewResult(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerScanResult :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerScanResult>
-{
-    IImageScannerScanResult(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerSourceConfiguration :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerSourceConfiguration>,
-    impl::require<IImageScannerSourceConfiguration, Windows::Devices::Scanners::IImageScannerFormatConfiguration>
-{
-    IImageScannerSourceConfiguration(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IImageScannerStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IImageScannerStatics>
-{
-    IImageScannerStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IImageScanner :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScanner>
+    {
+        IImageScanner(std::nullptr_t = nullptr) noexcept {}
+        IImageScanner(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerFeederConfiguration :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerFeederConfiguration>,
+        impl::require<Windows::Devices::Scanners::IImageScannerFeederConfiguration, Windows::Devices::Scanners::IImageScannerFormatConfiguration, Windows::Devices::Scanners::IImageScannerSourceConfiguration>
+    {
+        IImageScannerFeederConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerFeederConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerFormatConfiguration :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerFormatConfiguration>
+    {
+        IImageScannerFormatConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerFormatConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerPreviewResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerPreviewResult>
+    {
+        IImageScannerPreviewResult(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerPreviewResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerScanResult :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerScanResult>
+    {
+        IImageScannerScanResult(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerScanResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerSourceConfiguration :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerSourceConfiguration>,
+        impl::require<Windows::Devices::Scanners::IImageScannerSourceConfiguration, Windows::Devices::Scanners::IImageScannerFormatConfiguration>
+    {
+        IImageScannerSourceConfiguration(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerSourceConfiguration(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IImageScannerStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IImageScannerStatics>
+    {
+        IImageScannerStatics(std::nullptr_t = nullptr) noexcept {}
+        IImageScannerStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

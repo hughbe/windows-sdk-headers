@@ -1,38 +1,28 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.1.h"
+#ifndef WINRT_Windows_ApplicationModel_Calls_Provider_2_H
+#define WINRT_Windows_ApplicationModel_Calls_Provider_2_H
 #include "winrt/impl/Windows.ApplicationModel.Calls.Provider.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Provider {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::ApplicationModel::Calls::Provider {
-
-struct WINRT_EBO PhoneCallOrigin :
-    Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin,
-    impl::require<PhoneCallOrigin, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin2, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin3>
+namespace winrt::Windows::ApplicationModel::Calls::Provider
 {
-    PhoneCallOrigin(std::nullptr_t) noexcept {}
-    PhoneCallOrigin();
-};
-
-struct PhoneCallOriginManager
-{
-    PhoneCallOriginManager() = delete;
-    static bool IsCurrentAppActiveCallOriginApp();
-    static void ShowPhoneCallOriginSettingsUI();
-    static void SetCallOrigin(winrt::guid const& requestId, Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin const& callOrigin);
-    static Windows::Foundation::IAsyncOperation<bool> RequestSetAsActiveCallOriginAppAsync();
-    static bool IsSupported();
-};
-
+    struct __declspec(empty_bases) PhoneCallOrigin : Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin,
+        impl::require<PhoneCallOrigin, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin2, Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin3>
+    {
+        PhoneCallOrigin(std::nullptr_t) noexcept {}
+        PhoneCallOrigin(void* ptr, take_ownership_from_abi_t) noexcept : Windows::ApplicationModel::Calls::Provider::IPhoneCallOrigin(ptr, take_ownership_from_abi) {}
+        PhoneCallOrigin();
+    };
+    struct PhoneCallOriginManager
+    {
+        PhoneCallOriginManager() = delete;
+        [[nodiscard]] static auto IsCurrentAppActiveCallOriginApp();
+        static auto ShowPhoneCallOriginSettingsUI();
+        static auto SetCallOrigin(winrt::guid const& requestId, Windows::ApplicationModel::Calls::Provider::PhoneCallOrigin const& callOrigin);
+        static auto RequestSetAsActiveCallOriginAppAsync();
+        [[nodiscard]] static auto IsSupported();
+    };
 }
+#endif

@@ -378,6 +378,7 @@ extern "C" {
 #define IOCTL_STORAGE_PERSISTENT_RESERVE_IN   CTL_CODE(IOCTL_STORAGE_BASE, 0x0406, METHOD_BUFFERED, FILE_READ_ACCESS)
 #define IOCTL_STORAGE_PERSISTENT_RESERVE_OUT  CTL_CODE(IOCTL_STORAGE_BASE, 0x0407, METHOD_BUFFERED, FILE_READ_ACCESS | FILE_WRITE_ACCESS)
 
+
 #define IOCTL_STORAGE_GET_DEVICE_NUMBER       CTL_CODE(IOCTL_STORAGE_BASE, 0x0420, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 //
@@ -532,6 +533,11 @@ extern "C" {
 // IOCTL_STORAGE_REMOVE_ELEMENT_AND_TRUNCATE IOCTL to remove and truncate element from device.
 //
 #define IOCTL_STORAGE_REMOVE_ELEMENT_AND_TRUNCATE    CTL_CODE(IOCTL_STORAGE_BASE, 0x0730, METHOD_BUFFERED, FILE_ANY_ACCESS)
+
+//
+// IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG IOCTL to get device internal status data.
+//
+#define IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG    CTL_CODE(IOCTL_STORAGE_BASE, 0x0731, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 
 //
@@ -711,6 +717,7 @@ typedef struct _STORAGE_DEVICE_NUMBER_EX {
 typedef struct _STORAGE_BUS_RESET_REQUEST {
     BYTE  PathId;
 } STORAGE_BUS_RESET_REQUEST, *PSTORAGE_BUS_RESET_REQUEST;
+
 
 //
 // Break reservation is sent to the Adapter/FDO with the given lun information.
@@ -1027,6 +1034,8 @@ typedef struct _STORAGE_FAILURE_PREDICTION_CONFIG {
 #define STORAGE_FAILURE_PREDICTION_CONFIG_V1 1
 
 // end_ntminitape
+
+
 
 //
 // Property Query Structures
@@ -3084,6 +3093,7 @@ typedef DWORD DEVICE_DATA_MANAGEMENT_SET_ACTION, DEVICE_DSM_ACTION;
 #define DeviceDsmAction_LostQuery               (0x0000001Au | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_GetFreeSpace            (0x0000001Bu | DeviceDsmActionFlag_NonDestructive)
 #define DeviceDsmAction_ConversionQuery         (0x0000001Cu | DeviceDsmActionFlag_NonDestructive)
+#define DeviceDsmAction_VdtSet                  (0x0000001Du)
 
 //
 // DEVICE_DSM_INPUT.Flags
@@ -4566,6 +4576,27 @@ typedef struct _DEVICE_DSM_CONVERSION_OUTPUT {
 
 ////////////////////////////////////////////////////////////////////////////////
 //
+// DeviceDsmAction_VdtSet
+//
+
+//
+// SingleRange    - No
+// ParameterBlock - No
+// Output         - No
+// OutputBlock    - No
+//
+
+#define DeviceDsmDefinition_VdtSet {DeviceDsmAction_VdtSet, \
+                                    FALSE,                  \
+                                    0,                      \
+                                    0,                      \
+                                    FALSE,                  \
+                                    0,                      \
+                                    0}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
 // Dsm helper routines
 //
 
@@ -5340,6 +5371,65 @@ typedef struct _REMOVE_ELEMENT_AND_TRUNCATE_REQUEST {
     DWORD Reserved;
 
 } REMOVE_ELEMENT_AND_TRUNCATE_REQUEST, *PREMOVE_ELEMENT_AND_TRUNCATE_REQUEST;
+
+//
+// IOCTL_STORAGE_GET_DEVICE_INTERNAL_LOG
+//
+// Input:
+//       GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST
+// Output:
+//       DEVICE_INTERNAL_STATUS_DATA
+//
+
+#define ERROR_HISTORY_DIRECTORY_ENTRY_DEFAULT_COUNT    8
+
+typedef enum _DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE {
+    DeviceInternalStatusDataRequestTypeUndefined = 0,
+    DeviceCurrentInternalStatusDataHeader,
+    DeviceCurrentInternalStatusData
+} DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE, *PDEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE;
+
+typedef enum _DEVICE_INTERNAL_STATUS_DATA_SET {
+    DeviceStatusDataSetUndefined = 0,
+    DeviceStatusDataSet1,
+    DeviceStatusDataSet2,
+    DeviceStatusDataSet3,
+    DeviceStatusDataSet4,
+    DeviceStatusDataSetMax
+} DEVICE_INTERNAL_STATUS_DATA_SET, *PDEVICE_INTERNAL_STATUS_DATA_SET;
+
+typedef struct _GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST {
+
+    DWORD Version;
+    DWORD Size;
+
+    DEVICE_INTERNAL_STATUS_DATA_REQUEST_TYPE RequestDataType;
+    DEVICE_INTERNAL_STATUS_DATA_SET RequestDataSet;
+
+} GET_DEVICE_INTERNAL_STATUS_DATA_REQUEST, *PGET_DEVICE_INTERNAL_STATUS_DATA_REQUEST;
+
+typedef struct _DEVICE_INTERNAL_STATUS_DATA {
+
+    // Size of this structure.
+    DWORD Version;
+
+    // Whole size of the structure and the associated data buffer.
+    DWORD Size;
+
+    DWORDLONG T10VendorId;
+
+    DWORD DataSet1Length;
+    DWORD DataSet2Length;
+    DWORD DataSet3Length;
+    DWORD DataSet4Length;
+
+    BYTE  StatusDataVersion;
+    BYTE  Reserved[3];
+    BYTE  ReasonIdentifier[128];
+    DWORD StatusDataLength;
+    BYTE  StatusData[ANYSIZE_ARRAY];
+
+} DEVICE_INTERNAL_STATUS_DATA, *PDEVICE_INTERNAL_STATUS_DATA;
 
 
 #pragma warning(push)
@@ -6122,8 +6212,12 @@ typedef struct _STORAGE_EVENT_NOTIFICATION {
 
 
 #define READ_COPY_NUMBER_KEY                    0x52434e00  // 'RCN'
+#define READ_COPY_NUMBER_BYPASS_CACHE_FLAG      0x00000100
 
-#define IsKeyReadCopyNumber(_k)                 (((_k) & 0xFFFFFF00) == READ_COPY_NUMBER_KEY)
+#define IsKeyReadCopyNumber(_k)                 (((_k) & 0xFFFFFE00) == READ_COPY_NUMBER_KEY)
+
+#define IsKeyReadCopyNumberBypassCache(_k)      ((_k) & READ_COPY_NUMBER_BYPASS_CACHE_FLAG)
+#define SetReadCopyNumberBypassCacheToKey(_k)   ((_k) |= READ_COPY_NUMBER_BYPASS_CACHE_FLAG)
 
 #define ReadCopyNumberToKey(_c)                 (READ_COPY_NUMBER_KEY | (BYTE )(_c))
 #define ReadCopyNumberFromKey(_k)               (BYTE )((_k) & 0x000000FF)
@@ -6457,6 +6551,7 @@ typedef struct _STORAGE_PROTOCOL_COMMAND {
 #define STORAGE_PROTOCOL_STATUS_BUSY                    0x5
 #define STORAGE_PROTOCOL_STATUS_DATA_OVERRUN            0x6
 #define STORAGE_PROTOCOL_STATUS_INSUFFICIENT_RESOURCES  0x7
+#define STORAGE_PROTOCOL_STATUS_THROTTLED_REQUEST       0x8
 
 #define STORAGE_PROTOCOL_STATUS_NOT_SUPPORTED           0xFF
 
@@ -7734,10 +7829,10 @@ typedef struct _SCM_PD_REINITIALIZE_MEDIA_OUTPUT {
 } SCM_PD_REINITIALIZE_MEDIA_OUTPUT, *PSCM_PD_REINITIALIZE_MEDIA_OUTPUT;
 
 
+#endif // NTDDI_WIN10_RS5
+
 #pragma warning(pop)
 
-
-#endif // NTDDI_WIN10_RS5
 
 #endif // _NTDDSCM_H_
 
@@ -8270,6 +8365,8 @@ typedef struct __WRAPPED__ _PARTITION_INFORMATION_GPT {
 //
 
 #define GPT_ATTRIBUTE_PLATFORM_REQUIRED             (0x0000000000000001)
+#define GPT_ATTRIBUTE_NO_BLOCK_IO_PROTOCOL          (0x0000000000000002)
+#define GPT_ATTRIBUTE_LEGACY_BIOS_BOOTABLE          (0x0000000000000004)
 
 //
 // The following are GPT partition attributes applicable when the
@@ -10416,7 +10513,12 @@ typedef struct {
     DWORD BytesPerCluster;
     LARGE_INTEGER MaximumSizeOfResidentFile;
 
-    LARGE_INTEGER Reserved[10];
+    WORD   FastTierDataFillRatio;               // between 0 and 10000
+    WORD   SlowTierDataFillRatio;               // between 0 and 10000
+
+    DWORD DestagesFastTierToSlowTierRate;       // in clusters per second
+
+    LARGE_INTEGER Reserved[9];
 
 } REFS_VOLUME_DATA_BUFFER, *PREFS_VOLUME_DATA_BUFFER;
 
@@ -13102,6 +13204,16 @@ typedef struct _FILE_FS_PERSISTENT_VOLUME_INFORMATION {
 
 #endif // #if (_WIN32_WINNT >= _WIN32_WINNT_WINTHRESHOLD)
 
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+
+//
+//  Always reallocate data writes
+//
+
+#define PERSISTENT_VOLUME_STATE_REALLOCATE_ALL_DATA_WRITES          (0x00000200)
+
+#endif // #if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
+
 //
 //==================== FSCTL_QUERY_FILE_SYSTEM_RECOGNITION ====================
 //
@@ -13754,6 +13866,8 @@ typedef enum _CSV_CONTROL_OP {
     CsvControlGetCsvFsMdsPathV2                  = 0x12,
     CsvControlDisableCaching                     = 0x13,
     CsvControlEnableCaching                      = 0x14,
+    CsvControlStartForceDFO                      = 0x15,
+    CsvControlStopForceDFO                       = 0x16,
 } CSV_CONTROL_OP, *PCSV_CONTROL_OP;
 
 typedef struct _CSV_CONTROL_PARAM {
@@ -14096,7 +14210,8 @@ typedef struct _FILE_LEVEL_TRIM_OUTPUT {
 #define QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION                    (0x00000080)
 
 //
-//  Have QueryFileLayout include information on DSC streams.
+//  Have QueryFileLayout include information (defined by DesiredStorageClass in StreamInformation)
+//  on DSC streams.
 //  This flag must be used in conjunction with QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION_FOR_DSC_ATTRIBUTE  (0x00000100)
@@ -14125,6 +14240,24 @@ typedef struct _FILE_LEVEL_TRIM_OUTPUT {
 //  This must be used in conjunction with QUERY_FILE_LAYOUT_INCLUDE_ONLY_FILES_WITH_SPECIFIC_ATTRIBUTES
 //
 #define QUERY_FILE_LAYOUT_INCLUDE_FILES_WITH_DSC_ATTRIBUTE              (0x00001000)
+
+//
+//  Have QueryFileLayout include information (defined by DataStream in StreamInformation) on $DATA streams.
+//  This flag must be used in conjunction with QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION
+//
+#define QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION_FOR_DATA_ATTRIBUTE (0x00002000)
+
+//
+//  Have QueryFileLayout include information (defined by Reparse in StreamInformation) on $REPARSE_POINT streams.
+//  This flag must be used in conjunction with QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION
+//
+#define QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION_FOR_REPARSE_ATTRIBUTE  (0x00004000)
+
+//
+//  Have QueryFileLayout include information (defined by Ea as in StreamInformation) on $EA streams.
+//  This flag must be used in conjunction with QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION
+//
+#define QUERY_FILE_LAYOUT_INCLUDE_STREAM_INFORMATION_FOR_EA_ATTRIBUTE   (0x00008000)
 
 typedef enum _QUERY_FILE_LAYOUT_FILTER_TYPE {
 
@@ -14945,8 +15078,16 @@ typedef _Struct_size_bytes_(Size) struct _FSCTL_QUERY_STORAGE_CLASSES_OUTPUT {
 #define FSCTL_QUERY_STORAGE_CLASSES_OUTPUT_VERSION          sizeof(FSCTL_QUERY_STORAGE_CLASSES_OUTPUT)
 
 //
-// This structure lists information on the stream.
+//  Below are flags used by the Reparse union type within STREAM_INFORMATION_ENTRY.
 //
+
+#define QUERY_FILE_LAYOUT_REPARSE_DATA_INVALID              (0x0001)  // invalid reparse data, corresponds to ERROR_INVALID_REPARSE_DATA
+#define QUERY_FILE_LAYOUT_REPARSE_TAG_INVALID               (0x0002)  // invalid reparse tag, corresponds to ERROR_REPARSE_TAG_INVALID
+
+//
+//  This structure lists information on the stream.
+//
+
 typedef struct _STREAM_INFORMATION_ENTRY {
 
     //
@@ -14984,6 +15125,92 @@ typedef struct _STREAM_INFORMATION_ENTRY {
             DWORD                            Flags;
 
         } DesiredStorageClass;
+
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+        struct _DataStream {
+
+            //
+            //  Total Length of STREAM_INFORMATION_ENTRY structure.
+            //
+
+            WORD        Length;
+
+            //
+            //  Flags (Reserved for future use)
+            //
+
+            WORD        Flags;
+
+            //
+            //  Reserved.
+            //
+
+            DWORD       Reserved;
+
+            //
+            //  The Vdl (Valid Data Length) of data stream.
+            //
+
+            DWORDLONG   Vdl;
+
+        } DataStream;
+
+        struct _Reparse {
+
+            //
+            //  Total Length of STREAM_INFORMATION_ENTRY structure.
+            //
+
+            WORD   Length;
+
+            //
+            //  Flags
+            //
+
+            WORD   Flags;
+
+            //
+            //  The size of Reparse data buffer.
+            //
+
+            DWORD ReparseDataSize;
+
+            //
+            //  Offset to reparse point data buffer (REPARSE_DATA_BUFFER or REPARSE_GUID_DATA_BUFFER).
+            //
+
+            DWORD ReparseDataOffset;
+
+        } Reparse;
+
+        struct _Ea {
+
+            //
+            //  Total Length of STREAM_INFORMATION_ENTRY structure.
+            //
+
+            WORD   Length;
+
+            //
+            //  Flags (Reserved for future use)
+            //
+
+            WORD   Flags;
+
+            //
+            //  The size of Ea.
+            //
+
+            DWORD EaSize;
+
+            //
+            //  Offset to EA (Extended Attributes) information buffer (FILE_FULL_EA_INFORMATION).
+            //
+
+            DWORD EaInformationOffset;
+
+        } Ea;
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
     } StreamInformation;
 
@@ -15108,13 +15335,16 @@ typedef struct _DUPLICATE_EXTENTS_DATA32 {
 
 #endif /* (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE) */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 
 //
 //=============== FSCTL_DUPLICATE_EXTENTS_TO_FILE_EX ==================
 //
 
 #define DUPLICATE_EXTENTS_DATA_EX_SOURCE_ATOMIC     0x00000001
+#if (NTDDI_VERSION >= NTDDI_WIN10_VB)
+#define DUPLICATE_EXTENTS_DATA_EX_ASYNC             0x00000002
+#endif // (NTDDI_VERSION >= NTDDI_WIN10_VB)
 
 typedef struct _DUPLICATE_EXTENTS_DATA_EX {
     SIZE_T Size;
@@ -15125,7 +15355,7 @@ typedef struct _DUPLICATE_EXTENTS_DATA_EX {
     DWORD Flags;
 } DUPLICATE_EXTENTS_DATA_EX, *PDUPLICATE_EXTENTS_DATA_EX;
 
-#if ((_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3) && defined(_WIN64))
+#if ((NTDDI_VERSION >= NTDDI_WIN10_RS3) && defined(_WIN64))
 
 //
 //  32/64 Bit thunking support structure
@@ -15140,9 +15370,9 @@ typedef struct _DUPLICATE_EXTENTS_DATA_EX32 {
     DWORD Flags;
 } DUPLICATE_EXTENTS_DATA_EX32, *PDUPLICATE_EXTENTS_DATA_EX32;
 
-#endif /* ((_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3) && defined(_WIN64)) */
+#endif /* ((NTDDI_VERSION >= NTDDI_WIN10_RS3) && defined(_WIN64)) */
 
-#endif /* (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS3) */
+#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS3) */
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS2)
 

@@ -1,19 +1,19 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Storage.Streams.0.h"
+#ifndef WINRT_Windows_Security_Cryptography_1_H
+#define WINRT_Windows_Security_Cryptography_1_H
 #include "winrt/impl/Windows.Security.Cryptography.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::Security::Cryptography {
-
-struct WINRT_EBO ICryptographicBufferStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<ICryptographicBufferStatics>
+namespace winrt::Windows::Security::Cryptography
 {
-    ICryptographicBufferStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) ICryptographicBufferStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<ICryptographicBufferStatics>
+    {
+        ICryptographicBufferStatics(std::nullptr_t = nullptr) noexcept {}
+        ICryptographicBufferStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

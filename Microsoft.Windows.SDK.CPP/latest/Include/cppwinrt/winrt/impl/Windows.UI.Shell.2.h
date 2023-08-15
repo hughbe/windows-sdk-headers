@@ -1,43 +1,30 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.ApplicationModel.Core.1.h"
-#include "winrt/impl/Windows.Foundation.1.h"
-#include "winrt/impl/Windows.UI.StartScreen.1.h"
+#ifndef WINRT_Windows_UI_Shell_2_H
+#define WINRT_Windows_UI_Shell_2_H
 #include "winrt/impl/Windows.UI.Shell.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Shell {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI::Shell {
-
-struct AdaptiveCardBuilder
+namespace winrt::Windows::UI::Shell
 {
-    AdaptiveCardBuilder() = delete;
-    static Windows::UI::Shell::IAdaptiveCard CreateAdaptiveCardFromJson(param::hstring const& value);
-};
-
-struct WINRT_EBO SecurityAppManager :
-    Windows::UI::Shell::ISecurityAppManager
-{
-    SecurityAppManager(std::nullptr_t) noexcept {}
-    SecurityAppManager();
-};
-
-struct WINRT_EBO TaskbarManager :
-    Windows::UI::Shell::ITaskbarManager,
-    impl::require<TaskbarManager, Windows::UI::Shell::ITaskbarManager2>
-{
-    TaskbarManager(std::nullptr_t) noexcept {}
-    static Windows::UI::Shell::TaskbarManager GetDefault();
-};
-
+    struct AdaptiveCardBuilder
+    {
+        AdaptiveCardBuilder() = delete;
+        static auto CreateAdaptiveCardFromJson(param::hstring const& value);
+    };
+    struct __declspec(empty_bases) SecurityAppManager : Windows::UI::Shell::ISecurityAppManager
+    {
+        SecurityAppManager(std::nullptr_t) noexcept {}
+        SecurityAppManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::ISecurityAppManager(ptr, take_ownership_from_abi) {}
+        SecurityAppManager();
+    };
+    struct __declspec(empty_bases) TaskbarManager : Windows::UI::Shell::ITaskbarManager,
+        impl::require<TaskbarManager, Windows::UI::Shell::ITaskbarManager2>
+    {
+        TaskbarManager(std::nullptr_t) noexcept {}
+        TaskbarManager(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Shell::ITaskbarManager(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+    };
 }
+#endif

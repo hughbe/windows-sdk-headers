@@ -152,6 +152,8 @@ namespace Windows
 
             typedef enum TetheringOperationalState TetheringOperationalState;
 
+            typedef enum TetheringWiFiBand TetheringWiFiBand;
+
             typedef enum UiccAccessCondition UiccAccessCondition;
 
             typedef enum UiccAppKind UiccAppKind;
@@ -330,6 +332,8 @@ namespace Windows
 
             interface INetworkOperatorTetheringAccessPointConfiguration;
 
+            interface INetworkOperatorTetheringAccessPointConfiguration2;
+
             interface INetworkOperatorTetheringClient;
 
             interface INetworkOperatorTetheringClientManager;
@@ -343,6 +347,8 @@ namespace Windows
             interface INetworkOperatorTetheringManagerStatics2;
 
             interface INetworkOperatorTetheringManagerStatics3;
+
+            interface INetworkOperatorTetheringManagerStatics4;
 
             interface INetworkOperatorTetheringOperationResult;
 
@@ -1012,6 +1018,14 @@ namespace Windows
                 On           = 1,
                 Off          = 2,
                 InTransition = 3
+            };
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            enum TetheringWiFiBand
+            {
+                Auto                  = 0,
+                TwoPointFourGigahertz = 1,
+                FiveGigahertz         = 2
             };
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1992,6 +2006,17 @@ namespace Windows
                 [propput] HRESULT Passphrase([in] HSTRING value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.NetworkOperatorTetheringAccessPointConfiguration)]
+            [uuid(B1809142-7238-59A0-928B-74AB46FD64B6)]
+            interface INetworkOperatorTetheringAccessPointConfiguration2 : IInspectable
+            {
+                HRESULT IsBandSupported([in] Windows.Networking.NetworkOperators.TetheringWiFiBand band, [out] [retval] boolean* result);
+                HRESULT IsBandSupportedAsync([in] Windows.Networking.NetworkOperators.TetheringWiFiBand band, [out] [retval] Windows.Foundation.IAsyncOperation<boolean>** operation);
+                [propget] HRESULT Band([out] [retval] Windows.Networking.NetworkOperators.TetheringWiFiBand* value);
+                [propput] HRESULT Band([in] Windows.Networking.NetworkOperators.TetheringWiFiBand value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Networking.NetworkOperators.NetworkOperatorTetheringClient)]
             [uuid(709D254C-595F-4847-BB30-646935542918)]
@@ -2055,6 +2080,18 @@ namespace Windows
             interface INetworkOperatorTetheringManagerStatics3 : IInspectable
             {
                 [overload("CreateFromConnectionProfile")] HRESULT CreateFromConnectionProfileWithTargetAdapter([in] Windows.Networking.Connectivity.ConnectionProfile* profile, [in] Windows.Networking.Connectivity.NetworkAdapter* adapter, [out] [retval] Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager** ppManager);
+            }
+
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+            [exclusiveto(Windows.Networking.NetworkOperators.NetworkOperatorTetheringManager)]
+            [uuid(B3B9F9D0-EBFF-46A4-A847-D663D8B0977E)]
+            interface INetworkOperatorTetheringManagerStatics4 : IInspectable
+            {
+                HRESULT IsNoConnectionsTimeoutEnabled([out] [retval] boolean* result);
+                HRESULT EnableNoConnectionsTimeout();
+                HRESULT EnableNoConnectionsTimeoutAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
+                HRESULT DisableNoConnectionsTimeout();
+                HRESULT DisableNoConnectionsTimeoutAsync([out] [retval] Windows.Foundation.IAsyncAction** operation);
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2645,6 +2682,7 @@ namespace Windows
             runtimeclass NetworkOperatorTetheringAccessPointConfiguration
             {
                 [default] interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration;
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Networking.NetworkOperators.INetworkOperatorTetheringAccessPointConfiguration2;
             }
 
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -2658,6 +2696,7 @@ namespace Windows
             [static(Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics3, Windows.Foundation.UniversalApiContract, 3.0)]
+            [static(Windows.Networking.NetworkOperators.INetworkOperatorTetheringManagerStatics4, Windows.Foundation.UniversalApiContract, 10.0)]
             [threading(both)]
             runtimeclass NetworkOperatorTetheringManager
             {

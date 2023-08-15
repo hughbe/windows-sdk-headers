@@ -262,8 +262,12 @@ struct AsyncCausalityOptionsHelper;
 template < typename TComplete, typename TOptions >
 struct AsyncCausalityOptionsHelper < true, TComplete, TOptions >
 {
-#ifdef BUILD_WINDOWS
-    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName),"Please add name to Asynchronous Operations for Better Diagnostics: http://winri/BreakingChanges/BreakingChangeForm/Index/1992");
+#if defined(BUILD_WINDOWS) || defined(WRL_REQUIRE_ASYNC_NAMES)
+
+    // Take reasonable steps to make the name unique. Suggest choosing a name that captures
+    // the return type, class name, and method name. Example:
+    // "Windows.Foundation.IAsyncAction MyNamespace.MyClass.DoSomethingAsync"
+    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName), "Please add name to Asynchronous Operations for Better Diagnostics");
 #endif
     static PCWSTR GetAsyncOperationName()
     {
@@ -287,8 +291,11 @@ struct AsyncCausalityOptionsHelper < true, TComplete, TOptions >
 template < typename TComplete, typename TOptions >
 struct AsyncCausalityOptionsHelper < false, TComplete, TOptions >
 {
-#ifdef BUILD_WINDOWS
-    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName),"Please add name to Asynchronous Operations for Better Diagnostics: http://winri/BreakingChanges/BreakingChangeForm/Index/1992");
+#if defined(BUILD_WINDOWS) || defined(WRL_REQUIRE_ASYNC_NAMES)
+    // Take reasonable steps to make the name unique. Suggest choosing a name that captures
+    // the return type, class name, and method name. Example:
+    // "Windows.Foundation.IAsyncAction MyNamespace.MyClass.DoSomethingAsync"
+    static_assert(!(__is_base_of(::ABI::Windows::Foundation::IAsyncActionCompletedHandler, TComplete) && !TOptions::hasCausalityOperationName), "Please add name to Asynchronous Operations for Better Diagnostics");
 #endif
     static PCWSTR GetAsyncOperationName()
     {
@@ -500,7 +507,7 @@ public:
     {
         HRESULT hr = S_OK;
         ComPtr< ::ABI::Windows::Foundation::IAsyncInfo > asyncInfo = this;
-        ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;
+        ComPtr<typename Details::DerefHelper<typename ProgressTraits::Arg1Type>::DerefType> operationInterface;
         if (progressDelegate_)
         {
             hr = asyncInfo.As(&operationInterface);

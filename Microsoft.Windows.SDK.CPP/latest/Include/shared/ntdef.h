@@ -257,6 +257,14 @@ Abstract:
 #endif
 #endif
 
+#ifndef DECLSPEC_RESTRICT
+#if (_MSC_VER >= 1915) && !defined(MIDL_PASS)
+#define DECLSPEC_RESTRICT   __declspec(restrict)
+#else
+#define DECLSPEC_RESTRICT
+#endif
+#endif
+
 #ifndef DECLSPEC_ALIGN
 #if (_MSC_VER >= 1300) && !defined(MIDL_PASS)
 #define DECLSPEC_ALIGN(x)   __declspec(align(x))
@@ -490,7 +498,7 @@ typedef void * POINTER_64 PVOID64;
 // Define API decoration for direct importing system DLL references.
 //
 
-#if !defined(_NTSYSTEM_)
+#if !defined(_NTSYSTEM_) && !defined(_NTHALLIB_)
 #define NTSYSAPI     DECLSPEC_IMPORT
 #define NTSYSCALLAPI DECLSPEC_IMPORT
 #else
@@ -1542,6 +1550,9 @@ typedef CSTRING *PCSTRING;
 typedef STRING CANSI_STRING;
 typedef PSTRING PCANSI_STRING;
 
+typedef STRING UTF8_STRING;
+typedef PSTRING PUTF8_STRING;
+
 //
 // Unicode strings are counted 16-bit character strings. If they are
 // NULL terminated, Length does not include trailing NULL.
@@ -2437,6 +2448,12 @@ typedef _Enum_is_bitflag_ enum _SUITE_TYPE {
 #define PRODUCT_IOTENTERPRISE                       0x000000BC
 #define PRODUCT_LITE                                0x000000BD
 #define PRODUCT_IOTENTERPRISES                      0x000000BF
+#define PRODUCT_XBOX_SYSTEMOS                       0x000000C0
+#define PRODUCT_XBOX_NATIVEOS                       0x000000C1
+#define PRODUCT_XBOX_GAMEOS                         0x000000C2
+#define PRODUCT_XBOX_ERAOS                          0x000000C3
+#define PRODUCT_XBOX_DURANGOHOSTOS                  0x000000C4
+#define PRODUCT_XBOX_SCARLETTHOSTOS                 0x000000C5
 
 #define PRODUCT_UNLICENSED                          0xABCDABCD
 

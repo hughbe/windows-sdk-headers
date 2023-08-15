@@ -199,6 +199,8 @@ namespace Windows
 
         typedef enum UserWatcherStatus UserWatcherStatus;
 
+        typedef enum UserWatcherUpdateKind UserWatcherUpdateKind;
+
         typedef enum VirtualKey VirtualKey;
 
         typedef enum VirtualKeyModifiers VirtualKeyModifiers;
@@ -337,6 +339,8 @@ namespace Windows
 
         interface IUserChangedEventArgs;
 
+        interface IUserChangedEventArgs2;
+
         interface IUserDeviceAssociationChangedEventArgs;
 
         interface IUserDeviceAssociationStatics;
@@ -460,6 +464,8 @@ namespace Windows
 
             interface Windows.Foundation.Collections.IIterable<Windows.System.User*>;
 
+            interface Windows.Foundation.Collections.IIterable<Windows.System.UserWatcherUpdateKind>;
+
             interface Windows.Foundation.Collections.IIterator<Windows.System.AppDiagnosticInfo*>;
 
             interface Windows.Foundation.Collections.IIterator<Windows.System.AppResourceGroupBackgroundTaskReport*>;
@@ -470,6 +476,8 @@ namespace Windows
 
             interface Windows.Foundation.Collections.IIterator<Windows.System.User*>;
 
+            interface Windows.Foundation.Collections.IIterator<Windows.System.UserWatcherUpdateKind>;
+
             interface Windows.Foundation.Collections.IVectorView<Windows.System.AppDiagnosticInfo*>;
 
             interface Windows.Foundation.Collections.IVectorView<Windows.System.AppResourceGroupBackgroundTaskReport*>;
@@ -479,6 +487,8 @@ namespace Windows
             interface Windows.Foundation.Collections.IVectorView<Windows.System.AppUriHandlerHost*>;
 
             interface Windows.Foundation.Collections.IVectorView<Windows.System.User*>;
+
+            interface Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind>;
 
             interface Windows.Foundation.Collections.IVector<Windows.System.AppDiagnosticInfo*>;
 
@@ -550,7 +560,7 @@ namespace Windows
 {
     namespace System
     {
-        [contractversion(6.0)]
+        [contractversion(7.0)]
         apicontract SystemManagementContract
         {
         }
@@ -742,6 +752,13 @@ namespace Windows
             Stopping             = 3,
             Stopped              = 4,
             Aborted              = 5
+        };
+
+        [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+        enum UserWatcherUpdateKind
+        {
+            Properties = 0,
+            Picture    = 1
         };
 
         [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -1663,6 +1680,14 @@ namespace Windows
             [propget] HRESULT User([out] [retval] Windows.System.User** value);
         }
 
+        [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+        [exclusiveto(Windows.System.UserChangedEventArgs)]
+        [uuid(6B2CCB44-6F01-560C-97AD-FC7F32EC581F)]
+        interface IUserChangedEventArgs2 : IInspectable
+        {
+            [propget] HRESULT ChangedPropertyKinds([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.System.UserWatcherUpdateKind>** value);
+        }
+
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]
         [exclusiveto(Windows.System.UserDeviceAssociationChangedEventArgs)]
         [uuid(BD1F6F6C-BB5D-4D7B-A5F0-C8CD11A38D42)]
@@ -2088,6 +2113,7 @@ namespace Windows
         runtimeclass UserChangedEventArgs
         {
             [default] interface Windows.System.IUserChangedEventArgs;
+            [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.System.IUserChangedEventArgs2;
         }
 
         [contract(Windows.Foundation.UniversalApiContract, 3.0)]

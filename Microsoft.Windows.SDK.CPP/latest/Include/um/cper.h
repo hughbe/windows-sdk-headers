@@ -231,7 +231,9 @@ typedef union _WHEA_ERROR_RECORD_HEADER_FLAGS {
         ULONG PreviousError:1;
         ULONG Simulated:1;
         ULONG DeviceDriver:1;
-        ULONG Reserved:28;
+        ULONG CriticalEvent:1;
+        ULONG PersistPfn:1;
+        ULONG Reserved:26;
     } DUMMYSTRUCTNAME;
     ULONG AsULONG;
 } WHEA_ERROR_RECORD_HEADER_FLAGS, *PWHEA_ERROR_RECORD_HEADER_FLAGS;
@@ -1073,6 +1075,14 @@ typedef struct _WHEA_PMEM_PAGE_RANGE {
     ULONG64 MarkedBadBitmap;
 } WHEA_PMEM_PAGE_RANGE, *PWHEA_PMEM_PAGE_RANGE;
 
+#define WHEA_PMEM_IS_PFN_ALREADY_MARKED_BAD(PageRange, TargetPfn) \
+    (((TargetPfn) - ((PageRange)->StartingPfn) < sizeof(ULONG64) * 8) && \
+     ((((PageRange)->MarkedBadBitmap) & (1ull << ((TargetPfn) - ((PageRange)->StartingPfn)))) != 0))
+
+#define WHEA_PMEM_IS_PAGE_RANGE_ALREADY_MARKED_BAD(PageRange) \
+    (((PageRange)->PageCount <= sizeof(ULONG64) * 8) && \
+     (((PageRange)->MarkedBadBitmap) == (ULONG64_MAX >> (sizeof(ULONG64) * 8 - (PageRange)->PageCount))))
+
 typedef struct _WHEA_PMEM_ERROR_SECTION {
     WHEA_PMEM_ERROR_SECTION_VALIDBITS ValidBits;
     UCHAR LocationInfo[WHEA_PMEM_ERROR_SECTION_LOCATION_INFO_SIZE];
@@ -1533,6 +1543,25 @@ typedef struct _WHEA_NMI_ERROR_SECTION {
     UCHAR Data[8];
     WHEA_NMI_ERROR_SECTION_FLAGS Flags;
 } WHEA_NMI_ERROR_SECTION, *PWHEA_NMI_ERROR_SECTION;
+
+//------------------------------------------------------ WHEA_MSR_DUMP_SECTION
+
+typedef struct _WHEA_MSR_DUMP_SECTION {
+    UCHAR MsrDumpBuffer;
+    ULONG MsrDumpLength;
+    UCHAR MsrDumpData[1];
+} WHEA_MSR_DUMP_SECTION, *PWHEA_MSR_DUMP_SECTION;
+
+//------------------------------------------------------ MU_TELEMETRY_SECTION
+
+typedef struct _MU_TELEMETRY_SECTION {
+  GUID ComponentID;
+  GUID SubComponentID;
+  UINT32 Reserved;
+  UINT32 ErrorStatusValue;
+  UINT64 AdditionalInfo1;
+  UINT64 AdditionalInfo2;
+} MU_TELEMETRY_SECTION, *PMU_TELEMETRY_SECTION;
 
 //------------------------------------------------------ WHEA_ARM_PROCESSOR_ERROR_SECTION
 

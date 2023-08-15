@@ -1,6 +1,6 @@
 /* Header file automatically generated from microsoft.diagnostics.appanalysis.idl */
 /*
- * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0226 
+ * File built with Microsoft(R) MIDLRT Compiler Engine Version 10.00.0229 
  */
 
 #pragma warning( disable: 4049 )  /* more than 64k source lines */
@@ -54,11 +54,11 @@
 #endif // defined(WINDOWS_APPLICATIONMODEL_CALLS_CALLSPHONECONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x30000
+#define WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION 0x40000
 #endif // defined(WINDOWS_FOUNDATION_FOUNDATIONCONTRACT_VERSION)
 
 #if !defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
-#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0x80000
+#define WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION 0xa0000
 #endif // defined(WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION)
 
 #if !defined(WINDOWS_NETWORKING_SOCKETS_CONTROLCHANNELTRIGGERCONTRACT_VERSION)
@@ -99,7 +99,8 @@ namespace ABI {
                 interface IEtwEvent;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEvent ABI::Microsoft::Diagnostics::AppAnalysis::IEtwEvent
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEvent_FWD_DEFINED__
@@ -113,7 +114,8 @@ namespace ABI {
                 interface IEtwEventFactory;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventFactory ABI::Microsoft::Diagnostics::AppAnalysis::IEtwEventFactory
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventFactory_FWD_DEFINED__
@@ -127,7 +129,8 @@ namespace ABI {
                 interface IEtwProvider;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProvider ABI::Microsoft::Diagnostics::AppAnalysis::IEtwProvider
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProvider_FWD_DEFINED__
@@ -141,7 +144,8 @@ namespace ABI {
                 interface IEtwProviderStatics;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProviderStatics ABI::Microsoft::Diagnostics::AppAnalysis::IEtwProviderStatics
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProviderStatics_FWD_DEFINED__
@@ -155,7 +159,8 @@ namespace ABI {
                 interface IEtwEventRecordCallback;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecordCallback ABI::Microsoft::Diagnostics::AppAnalysis::IEtwEventRecordCallback
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecordCallback_FWD_DEFINED__
@@ -169,7 +174,8 @@ namespace ABI {
                 interface IEtwEventWatcher;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventWatcher ABI::Microsoft::Diagnostics::AppAnalysis::IEtwEventWatcher
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventWatcher_FWD_DEFINED__
@@ -183,7 +189,8 @@ namespace ABI {
                 interface IEtwRule;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRule ABI::Microsoft::Diagnostics::AppAnalysis::IEtwRule
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRule_FWD_DEFINED__
@@ -197,7 +204,8 @@ namespace ABI {
                 interface IEtwRuleFactory;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRuleFactory ABI::Microsoft::Diagnostics::AppAnalysis::IEtwRuleFactory
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRuleFactory_FWD_DEFINED__
@@ -211,7 +219,8 @@ namespace ABI {
                 interface IResourceStringFactory;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringFactory ABI::Microsoft::Diagnostics::AppAnalysis::IResourceStringFactory
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringFactory_FWD_DEFINED__
@@ -225,7 +234,8 @@ namespace ABI {
                 interface IResourceString;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceString ABI::Microsoft::Diagnostics::AppAnalysis::IResourceString
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceString_FWD_DEFINED__
@@ -239,7 +249,8 @@ namespace ABI {
                 interface IResourceStringView;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringView ABI::Microsoft::Diagnostics::AppAnalysis::IResourceStringView
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringView_FWD_DEFINED__
@@ -253,7 +264,8 @@ namespace ABI {
                 interface IRule;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRule ABI::Microsoft::Diagnostics::AppAnalysis::IRule
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRule_FWD_DEFINED__
@@ -267,7 +279,8 @@ namespace ABI {
                 interface IEtwEventRecord;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecord ABI::Microsoft::Diagnostics::AppAnalysis::IEtwEventRecord
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecord_FWD_DEFINED__
@@ -281,7 +294,8 @@ namespace ABI {
                 interface IRuleTriggeredEventArgs;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgs ABI::Microsoft::Diagnostics::AppAnalysis::IRuleTriggeredEventArgs
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgs_FWD_DEFINED__
@@ -295,7 +309,8 @@ namespace ABI {
                 interface IRuleTriggeredEventArgsFactory;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 #define __x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgsFactory ABI::Microsoft::Diagnostics::AppAnalysis::IRuleTriggeredEventArgsFactory
 
 #endif // ____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgsFactory_FWD_DEFINED__
@@ -310,7 +325,8 @@ namespace ABI {
                 class EtwEvent;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -526,7 +542,8 @@ namespace ABI {
                 class RuleTriggeredEventArgs;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -565,7 +582,8 @@ namespace ABI {
                 class EtwRule;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -664,7 +682,8 @@ namespace ABI {
                 class EtwProvider;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -878,7 +897,8 @@ namespace ABI {
                 class ResourceString;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 namespace ABI {
@@ -888,7 +908,8 @@ namespace ABI {
                 class EtwEventRecord;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -900,7 +921,8 @@ namespace ABI {
                 class EtwEventWatcher;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -911,7 +933,8 @@ namespace ABI {
                 class EtwRuleSet;
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 
@@ -936,7 +959,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 /*
@@ -961,7 +985,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 /*
@@ -983,7 +1008,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 /*
@@ -1005,7 +1031,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 /*
@@ -1027,7 +1054,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 
 /*
@@ -1066,7 +1094,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEvent;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEvent_INTERFACE_DEFINED__) */
@@ -1105,7 +1134,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventFactory;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventFactory_INTERFACE_DEFINED__) */
@@ -1150,7 +1180,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProvider;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProvider_INTERFACE_DEFINED__) */
@@ -1193,7 +1224,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProviderStatics;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwProviderStatics_INTERFACE_DEFINED__) */
@@ -1225,7 +1257,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecordCallback;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecordCallback_INTERFACE_DEFINED__) */
@@ -1262,7 +1295,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventWatcher;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventWatcher_INTERFACE_DEFINED__) */
@@ -1303,7 +1337,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRule;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRule_INTERFACE_DEFINED__) */
@@ -1341,7 +1376,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRuleFactory;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwRuleFactory_INTERFACE_DEFINED__) */
@@ -1378,7 +1414,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringFactory;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringFactory_INTERFACE_DEFINED__) */
@@ -1425,7 +1462,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceString;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceString_INTERFACE_DEFINED__) */
@@ -1463,7 +1501,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringView;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIResourceStringView_INTERFACE_DEFINED__) */
@@ -1522,7 +1561,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRule;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRule_INTERFACE_DEFINED__) */
@@ -1602,7 +1642,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecord;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIEtwEventRecord_INTERFACE_DEFINED__) */
@@ -1668,7 +1709,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgs;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgs_INTERFACE_DEFINED__) */
@@ -1709,7 +1751,8 @@ namespace ABI {
                 
             } /* AppAnalysis */
         } /* Diagnostics */
-    } /* Microsoft */} /* ABI */
+    } /* Microsoft */
+} /* ABI */
 
 EXTERN_C const IID IID___x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgsFactory;
 #endif /* !defined(____x_ABI_CMicrosoft_CDiagnostics_CAppAnalysis_CIRuleTriggeredEventArgsFactory_INTERFACE_DEFINED__) */

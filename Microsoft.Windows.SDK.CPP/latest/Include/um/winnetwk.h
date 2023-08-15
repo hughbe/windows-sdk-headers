@@ -125,7 +125,6 @@ typedef NETRESOURCEA NETRESOURCE;
 typedef LPNETRESOURCEA LPNETRESOURCE;
 #endif // UNICODE
 
-
 //
 //  Network Connections.
 //
@@ -159,6 +158,7 @@ typedef LPNETRESOURCEA LPNETRESOURCE;
 #define CONNECT_REQUIRE_INTEGRITY       0x00004000
 #define CONNECT_REQUIRE_PRIVACY         0x00008000
 #define CONNECT_WRITE_THROUGH_SEMANTICS 0x00010000
+#define CONNECT_COMPRESS_NETWORK_TRAFFIC   0x00020000 
 
 #endif
 
@@ -227,6 +227,36 @@ WNetAddConnection3W(
 #else
 #define WNetAddConnection3  WNetAddConnection3A
 #endif // !UNICODE
+
+#if(_WIN32_WINNT >= _WIN32_WINNT_WIN10)
+_Check_return_
+DWORD APIENTRY
+WNetAddConnection4A(
+    _In_opt_ HWND           hwndOwner,
+    _In_     LPNETRESOURCEA lpNetResource,
+    _In_reads_bytes_(cbAuthBuffer) PVOID  pAuthBuffer,
+    _In_     DWORD          cbAuthBuffer,
+    _In_     DWORD          dwFlags,
+    _In_reads_bytes_(cbUseOptions)     PBYTE          lpUseOptions,
+    _In_     DWORD          cbUseOptions
+    );
+_Check_return_
+DWORD APIENTRY
+WNetAddConnection4W(
+    _In_opt_ HWND           hwndOwner,
+    _In_     LPNETRESOURCEW lpNetResource,
+    _In_reads_bytes_(cbAuthBuffer) PVOID  pAuthBuffer,
+    _In_     DWORD          cbAuthBuffer,
+    _In_     DWORD          dwFlags,
+    _In_reads_bytes_(cbUseOptions)     PBYTE          lpUseOptions,
+    _In_     DWORD          cbUseOptions
+    );
+#ifdef UNICODE
+#define WNetAddConnection4  WNetAddConnection4W
+#else
+#define WNetAddConnection4  WNetAddConnection4A
+#endif // !UNICODE
+#endif //(_WIN32_WINNT >= _WIN32_WINNT_WIN10)
 
 _Check_return_
 DWORD APIENTRY
@@ -349,6 +379,42 @@ WNetUseConnectionW(
 #define WNetUseConnection  WNetUseConnectionA
 #endif // !UNICODE
 #endif /* WINVER >= 0x0400 */
+
+#if(_WIN32_WINNT >= _WIN32_WINNT_WIN10)
+_Check_return_
+DWORD APIENTRY
+WNetUseConnection4A(
+    _In_opt_ HWND            hwndOwner,
+    _In_     LPNETRESOURCEA  lpNetResource,
+    _In_reads_bytes_opt_(cbAuthBuffer) PVOID  pAuthBuffer,
+    _In_     DWORD           cbAuthBuffer,
+    _In_     DWORD           dwFlags,
+    _In_reads_bytes_opt_(cbUseOptions)     PBYTE           lpUseOptions,
+    _In_     DWORD           cbUseOptions,
+    _Out_writes_opt_(*lpBufferSize) LPSTR lpAccessName,
+    _Inout_opt_ LPDWORD lpBufferSize,
+    _Out_opt_ LPDWORD   lpResult
+    );
+_Check_return_
+DWORD APIENTRY
+WNetUseConnection4W(
+    _In_opt_ HWND            hwndOwner,
+    _In_     LPNETRESOURCEW  lpNetResource,
+    _In_reads_bytes_opt_(cbAuthBuffer) PVOID  pAuthBuffer,
+    _In_     DWORD           cbAuthBuffer,
+    _In_     DWORD           dwFlags,
+    _In_reads_bytes_opt_(cbUseOptions)     PBYTE           lpUseOptions,
+    _In_     DWORD           cbUseOptions,
+    _Out_writes_opt_(*lpBufferSize) LPWSTR lpAccessName,
+    _Inout_opt_ LPDWORD lpBufferSize,
+    _Out_opt_ LPDWORD   lpResult
+    );
+#ifdef UNICODE
+#define WNetUseConnection4  WNetUseConnection4W
+#else
+#define WNetUseConnection4  WNetUseConnection4A
+#endif // !UNICODE
+#endif //(_WIN32_WINNT >= _WIN32_WINNT_WIN10)
 
 
 //

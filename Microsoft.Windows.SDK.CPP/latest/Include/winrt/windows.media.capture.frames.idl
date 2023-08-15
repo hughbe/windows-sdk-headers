@@ -20,6 +20,7 @@ import "Windows.Media.Devices.Core.idl";
 import "Windows.Media.MediaProperties.idl";
 import "Windows.Perception.Spatial.idl";
 import "Windows.Storage.Streams.idl";
+import "Windows.UI.WindowManagement.idl";
 
 // Forward Declare
 namespace Windows
@@ -29,6 +30,8 @@ namespace Windows
         namespace Enumeration
         {
             runtimeclass DeviceInformation;
+
+            typedef enum Panel Panel;
         }
     }
 }
@@ -163,6 +166,16 @@ namespace Windows
 }
 namespace Windows
 {
+    namespace UI
+    {
+        namespace WindowManagement
+        {
+            runtimeclass DisplayRegion;
+        }
+    }
+}
+namespace Windows
+{
     namespace Media
     {
         namespace Capture
@@ -224,6 +237,8 @@ namespace Windows
                 interface IMediaFrameSourceInfo;
 
                 interface IMediaFrameSourceInfo2;
+
+                interface IMediaFrameSourceInfo3;
 
                 interface IMultiSourceMediaFrameArrivedEventArgs;
 
@@ -648,6 +663,14 @@ namespace Windows
                     [propget] HRESULT VideoProfileMediaDescription([out] [retval] Windows.Foundation.Collections.IVectorView<Windows.Media.Capture.MediaCaptureVideoProfileMediaDescription*>** value);
                 }
 
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                [exclusiveto(Windows.Media.Capture.Frames.MediaFrameSourceInfo)]
+                [uuid(CA824AB6-66EA-5885-A2B6-26C0EEEC3C7B)]
+                interface IMediaFrameSourceInfo3 : IInspectable
+                {
+                    HRESULT GetRelativePanel([in] Windows.UI.WindowManagement.DisplayRegion* displayRegion, [out] [retval] Windows.Devices.Enumeration.Panel* result);
+                }
+
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]
                 [exclusiveto(Windows.Media.Capture.Frames.MultiSourceMediaFrameArrivedEventArgs)]
                 [uuid(63115E01-CF51-48FD-AAB0-6D693EB48127)]
@@ -834,6 +857,7 @@ namespace Windows
                 {
                     [default] interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo;
                     [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo2;
+                    [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.Media.Capture.Frames.IMediaFrameSourceInfo3;
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 4.0)]

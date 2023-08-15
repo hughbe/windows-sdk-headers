@@ -1,68 +1,53 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Devices_Bluetooth_Rfcomm_2_H
+#define WINRT_Windows_Devices_Bluetooth_Rfcomm_2_H
 #include "winrt/impl/Windows.Devices.Bluetooth.1.h"
-#include "winrt/impl/Windows.Devices.Enumeration.1.h"
-#include "winrt/impl/Windows.Networking.1.h"
-#include "winrt/impl/Windows.Networking.Sockets.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Bluetooth.Rfcomm.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Rfcomm {
-
+namespace winrt::Windows::Devices::Bluetooth::Rfcomm
+{
+    struct __declspec(empty_bases) RfcommDeviceService : Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService,
+        impl::require<RfcommDeviceService, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2, Windows::Foundation::IClosable, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3>
+    {
+        RfcommDeviceService(std::nullptr_t) noexcept {}
+        RfcommDeviceService(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService(ptr, take_ownership_from_abi) {}
+        static auto FromIdAsync(param::hstring const& deviceId);
+        static auto GetDeviceSelector(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
+        static auto GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice);
+        static auto GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode);
+        static auto GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
+        static auto GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode);
+    };
+    struct __declspec(empty_bases) RfcommDeviceServicesResult : Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult
+    {
+        RfcommDeviceServicesResult(std::nullptr_t) noexcept {}
+        RfcommDeviceServicesResult(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) RfcommServiceId : Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId
+    {
+        RfcommServiceId(std::nullptr_t) noexcept {}
+        RfcommServiceId(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId(ptr, take_ownership_from_abi) {}
+        static auto FromUuid(winrt::guid const& uuid);
+        static auto FromShortId(uint32_t shortId);
+        [[nodiscard]] static auto SerialPort();
+        [[nodiscard]] static auto ObexObjectPush();
+        [[nodiscard]] static auto ObexFileTransfer();
+        [[nodiscard]] static auto PhoneBookAccessPce();
+        [[nodiscard]] static auto PhoneBookAccessPse();
+        [[nodiscard]] static auto GenericFileTransfer();
+    };
+    struct __declspec(empty_bases) RfcommServiceProvider : Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider,
+        impl::require<RfcommServiceProvider, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
+    {
+        RfcommServiceProvider(std::nullptr_t) noexcept {}
+        RfcommServiceProvider(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider(ptr, take_ownership_from_abi) {}
+        using Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider::StartAdvertising;
+        using impl::consume_t<RfcommServiceProvider, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>::StartAdvertising;
+        static auto CreateAsync(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Rfcomm {
-
-struct WINRT_EBO RfcommDeviceService :
-    Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService,
-    impl::require<RfcommDeviceService, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService2, Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceService3, Windows::Foundation::IClosable>
-{
-    RfcommDeviceService(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::Rfcomm::RfcommDeviceService> FromIdAsync(param::hstring const& deviceId);
-    static hstring GetDeviceSelector(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
-    static hstring GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice);
-    static hstring GetDeviceSelectorForBluetoothDevice(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode);
-    static hstring GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
-    static hstring GetDeviceSelectorForBluetoothDeviceAndServiceId(Windows::Devices::Bluetooth::BluetoothDevice const& bluetoothDevice, Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId, Windows::Devices::Bluetooth::BluetoothCacheMode const& cacheMode);
-};
-
-struct WINRT_EBO RfcommDeviceServicesResult :
-    Windows::Devices::Bluetooth::Rfcomm::IRfcommDeviceServicesResult
-{
-    RfcommDeviceServicesResult(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO RfcommServiceId :
-    Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceId
-{
-    RfcommServiceId(std::nullptr_t) noexcept {}
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId FromUuid(winrt::guid const& uuid);
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId FromShortId(uint32_t shortId);
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId SerialPort();
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId ObexObjectPush();
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId ObexFileTransfer();
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId PhoneBookAccessPce();
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId PhoneBookAccessPse();
-    static Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId GenericFileTransfer();
-};
-
-struct WINRT_EBO RfcommServiceProvider :
-    Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider,
-    impl::require<RfcommServiceProvider, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>
-{
-    RfcommServiceProvider(std::nullptr_t) noexcept {}
-    using impl::consume_t<RfcommServiceProvider, Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider2>::StartAdvertising;
-    using Windows::Devices::Bluetooth::Rfcomm::IRfcommServiceProvider::StartAdvertising;
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Bluetooth::Rfcomm::RfcommServiceProvider> CreateAsync(Windows::Devices::Bluetooth::Rfcomm::RfcommServiceId const& serviceId);
-};
-
-}
+#endif

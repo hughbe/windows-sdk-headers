@@ -41,7 +41,8 @@ typedef enum tagUpdateAssessmentStatus
     UpdateAssessmentStatus_NotLatestPausedFeature,
     UpdateAssessmentStatus_NotLatestPausedQuality,
     UpdateAssessmentStatus_NotLatestManaged,
-    UpdateAssessmentStatus_NotLatestUnknown
+    UpdateAssessmentStatus_NotLatestUnknown,
+    UpdateAssessmentStatus_NotLatestTargetedVersion
 } UpdateAssessmentStatus;
 
 typedef struct tagUpdateAssessment

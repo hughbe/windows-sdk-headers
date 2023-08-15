@@ -179,7 +179,7 @@ typedef enum _GET_FILEEX_INFO_LEVELS {
     GetFileExMaxInfoLevel
 } GET_FILEEX_INFO_LEVELS;
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_LONGHORN)
+#if (NTDDI_VERSION >= NTDDI_LONGHORN)
 typedef enum _FILE_INFO_BY_HANDLE_CLASS {
     FileBasicInfo,
     FileStandardInfo,
@@ -197,19 +197,21 @@ typedef enum _FILE_INFO_BY_HANDLE_CLASS {
     FileRemoteProtocolInfo,
     FileFullDirectoryInfo,
     FileFullDirectoryRestartInfo,
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
+#if (NTDDI_VERSION >= NTDDI_WIN8)
     FileStorageInfo,
     FileAlignmentInfo,
     FileIdInfo,
     FileIdExtdDirectoryInfo,
     FileIdExtdDirectoryRestartInfo,
 #endif
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS1)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS1)
     FileDispositionInfoEx,
     FileRenameInfoEx,
 #endif
+#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)
     FileCaseSensitiveInfo,
     FileNormalizedNameInfo,
+#endif
     MaximumFileInfoByHandleClass
 } FILE_INFO_BY_HANDLE_CLASS, *PFILE_INFO_BY_HANDLE_CLASS;
 #endif

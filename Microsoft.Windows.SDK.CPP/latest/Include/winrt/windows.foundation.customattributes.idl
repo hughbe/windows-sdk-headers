@@ -42,4 +42,11 @@ namespace Windows.Foundation.Metadata
     {
         HSTRING MethodName;
     }
+
+    [attributeusage(target_method, target_property)]
+    [attributename("noexcept")]
+    [version(0x06020000)]
+    attribute NoExceptionAttribute
+    {
+    }
 }

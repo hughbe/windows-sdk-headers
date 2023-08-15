@@ -162,6 +162,11 @@ class MSFT_StorageSubSystem : MSFT_StorageObject {
         )]
     Boolean AutomaticClusteringEnabled;
 
+    [Read, Description(
+        "Denotes whether virtual disk repair is enabled on this subsystem."
+        )]
+    Boolean VirtualDiskRepairEnabled;
+
     [Read, Required, Description(
         "Denotes the minimum number of physical disks required for "
         "creating a storage pool on this subsystem."
@@ -1249,6 +1254,9 @@ class MSFT_StorageSubSystem : MSFT_StorageObject {
 
         [In]
         Boolean AutomaticClusteringEnabled,
+
+        [In]
+        Boolean VirtualDiskRepairEnabled,
 
         [In]
         UInt16 FaultDomainAwarenessDefault,

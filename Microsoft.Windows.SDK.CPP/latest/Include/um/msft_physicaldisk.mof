@@ -151,7 +151,7 @@ class MSFT_PhysicalDisk : MSFT_StorageFaultDomain {
             ),
         ValueMap {
             "0", "1", "2", "3", "4", "5",
-            "6", "7", "8", "9", "10",
+            "6", "7", "8", "9", "10", "11", "12",
             "..",
             "0x8000", "0x8001", "0x8002", "0x8003",
             "0x8004.."
@@ -159,8 +159,8 @@ class MSFT_PhysicalDisk : MSFT_StorageFaultDomain {
         Values {
             // 0 - 5
             "Unknown", "Other", "In a Pool", "Not Healthy", "Removable Media", "In Use by Cluster",
-            // 6 - 10
-            "Offline", "Insufficient Capacity", "Spare Disk", "Reserved by subsystem", "Starting",
+            // 6 - 12
+            "Offline", "Insufficient Capacity", "Spare Disk", "Reserved by subsystem", "Starting", "Partial SCM", "Discovery Disabled",
             // ..
             "Microsoft Reserved",
             // 0x8000 - 0x8003
@@ -261,6 +261,9 @@ class MSFT_PhysicalDisk : MSFT_StorageFaultDomain {
 
         [In]
         Boolean EnableIndication,
+
+        [In]
+        Boolean ValidateMaintenanceMode,
 
         [In]
         Boolean EnableMaintenanceMode,
@@ -518,10 +521,12 @@ class MSFT_PhysicalDisk : MSFT_StorageFaultDomain {
         [In]
         String StorageScaleUnitId,
 
+        [In]
+        Boolean IsHidden,
+
         [Out]
         String ExtendedStatus
         );
-
 
     //
     // Method: IsDeviceCacheEnabled

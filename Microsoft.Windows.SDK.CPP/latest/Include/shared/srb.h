@@ -16,6 +16,8 @@ Revision History:
 
 --*/
 
+//@[contract("ntoskrnl-srb"), comment("MVI_tracked - https://osgwiki.com/wiki/Microsoft_Virus_Initiative")];
+
 #ifndef _NTSRB_
 #define _NTSRB_
 
@@ -469,6 +471,7 @@ typedef struct _SCSI_SUPPORTED_CONTROL_TYPE_LIST {
 // SCSI I/O Request Block
 //
 
+//@[comment("MVI_tracked")]
 typedef struct _SCSI_REQUEST_BLOCK {
     USHORT Length;                  // offset 0
     UCHAR Function;                 // offset 2
@@ -769,6 +772,8 @@ typedef struct _SCSI_PNP_REQUEST_BLOCK {
 #define SRB_STATUS_ERROR_RECOVERY           0x23
 #define SRB_STATUS_NOT_POWERED              0x24
 #define SRB_STATUS_LINK_DOWN                0x25
+#define SRB_STATUS_INSUFFICIENT_RESOURCES   0x26
+#define SRB_STATUS_THROTTLED_REQUEST        0x27
 
 
 //

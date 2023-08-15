@@ -1,75 +1,55 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Devices.Bluetooth.1.h"
-#include "winrt/impl/Windows.Devices.Bluetooth.Advertisement.1.h"
-#include "winrt/impl/Windows.Devices.Bluetooth.GenericAttributeProfile.1.h"
-#include "winrt/impl/Windows.Devices.Bluetooth.Rfcomm.1.h"
-#include "winrt/impl/Windows.Networking.Sockets.1.h"
-#include "winrt/impl/Windows.Storage.Streams.1.h"
+#ifndef WINRT_Windows_Devices_Bluetooth_Background_2_H
+#define WINRT_Windows_Devices_Bluetooth_Background_2_H
 #include "winrt/impl/Windows.Devices.Bluetooth.Background.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Background {
-
+namespace winrt::Windows::Devices::Bluetooth::Background
+{
+    struct __declspec(empty_bases) BluetoothLEAdvertisementPublisherTriggerDetails : Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails,
+        impl::require<BluetoothLEAdvertisementPublisherTriggerDetails, Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails2>
+    {
+        BluetoothLEAdvertisementPublisherTriggerDetails(std::nullptr_t) noexcept {}
+        BluetoothLEAdvertisementPublisherTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) BluetoothLEAdvertisementWatcherTriggerDetails : Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementWatcherTriggerDetails
+    {
+        BluetoothLEAdvertisementWatcherTriggerDetails(std::nullptr_t) noexcept {}
+        BluetoothLEAdvertisementWatcherTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementWatcherTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GattCharacteristicNotificationTriggerDetails : Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails,
+        impl::require<GattCharacteristicNotificationTriggerDetails, Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails2>
+    {
+        GattCharacteristicNotificationTriggerDetails(std::nullptr_t) noexcept {}
+        GattCharacteristicNotificationTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) GattServiceProviderConnection : Windows::Devices::Bluetooth::Background::IGattServiceProviderConnection
+    {
+        GattServiceProviderConnection(std::nullptr_t) noexcept {}
+        GattServiceProviderConnection(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IGattServiceProviderConnection(ptr, take_ownership_from_abi) {}
+        [[nodiscard]] static auto AllServices();
+    };
+    struct __declspec(empty_bases) GattServiceProviderTriggerDetails : Windows::Devices::Bluetooth::Background::IGattServiceProviderTriggerDetails
+    {
+        GattServiceProviderTriggerDetails(std::nullptr_t) noexcept {}
+        GattServiceProviderTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IGattServiceProviderTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) RfcommConnectionTriggerDetails : Windows::Devices::Bluetooth::Background::IRfcommConnectionTriggerDetails
+    {
+        RfcommConnectionTriggerDetails(std::nullptr_t) noexcept {}
+        RfcommConnectionTriggerDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IRfcommConnectionTriggerDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) RfcommInboundConnectionInformation : Windows::Devices::Bluetooth::Background::IRfcommInboundConnectionInformation
+    {
+        RfcommInboundConnectionInformation(std::nullptr_t) noexcept {}
+        RfcommInboundConnectionInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IRfcommInboundConnectionInformation(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) RfcommOutboundConnectionInformation : Windows::Devices::Bluetooth::Background::IRfcommOutboundConnectionInformation
+    {
+        RfcommOutboundConnectionInformation(std::nullptr_t) noexcept {}
+        RfcommOutboundConnectionInformation(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Bluetooth::Background::IRfcommOutboundConnectionInformation(ptr, take_ownership_from_abi) {}
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Bluetooth::Background {
-
-struct WINRT_EBO BluetoothLEAdvertisementPublisherTriggerDetails :
-    Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementPublisherTriggerDetails
-{
-    BluetoothLEAdvertisementPublisherTriggerDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO BluetoothLEAdvertisementWatcherTriggerDetails :
-    Windows::Devices::Bluetooth::Background::IBluetoothLEAdvertisementWatcherTriggerDetails
-{
-    BluetoothLEAdvertisementWatcherTriggerDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GattCharacteristicNotificationTriggerDetails :
-    Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails,
-    impl::require<GattCharacteristicNotificationTriggerDetails, Windows::Devices::Bluetooth::Background::IGattCharacteristicNotificationTriggerDetails2>
-{
-    GattCharacteristicNotificationTriggerDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO GattServiceProviderConnection :
-    Windows::Devices::Bluetooth::Background::IGattServiceProviderConnection
-{
-    GattServiceProviderConnection(std::nullptr_t) noexcept {}
-    static Windows::Foundation::Collections::IMapView<hstring, Windows::Devices::Bluetooth::Background::GattServiceProviderConnection> AllServices();
-};
-
-struct WINRT_EBO GattServiceProviderTriggerDetails :
-    Windows::Devices::Bluetooth::Background::IGattServiceProviderTriggerDetails
-{
-    GattServiceProviderTriggerDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO RfcommConnectionTriggerDetails :
-    Windows::Devices::Bluetooth::Background::IRfcommConnectionTriggerDetails
-{
-    RfcommConnectionTriggerDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO RfcommInboundConnectionInformation :
-    Windows::Devices::Bluetooth::Background::IRfcommInboundConnectionInformation
-{
-    RfcommInboundConnectionInformation(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO RfcommOutboundConnectionInformation :
-    Windows::Devices::Bluetooth::Background::IRfcommOutboundConnectionInformation
-{
-    RfcommOutboundConnectionInformation(std::nullptr_t) noexcept {}
-};
-
-}
+#endif

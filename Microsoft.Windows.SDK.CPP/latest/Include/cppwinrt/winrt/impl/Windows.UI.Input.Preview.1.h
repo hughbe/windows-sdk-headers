@@ -1,20 +1,19 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.UI.Input.0.h"
-#include "winrt/impl/Windows.UI.WindowManagement.0.h"
+#ifndef WINRT_Windows_UI_Input_Preview_1_H
+#define WINRT_Windows_UI_Input_Preview_1_H
 #include "winrt/impl/Windows.UI.Input.Preview.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Input::Preview {
-
-struct WINRT_EBO IInputActivationListenerPreviewStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IInputActivationListenerPreviewStatics>
+namespace winrt::Windows::UI::Input::Preview
 {
-    IInputActivationListenerPreviewStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IInputActivationListenerPreviewStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IInputActivationListenerPreviewStatics>
+    {
+        IInputActivationListenerPreviewStatics(std::nullptr_t = nullptr) noexcept {}
+        IInputActivationListenerPreviewStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

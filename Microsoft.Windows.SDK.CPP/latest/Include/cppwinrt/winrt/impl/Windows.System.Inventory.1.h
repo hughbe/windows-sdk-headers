@@ -1,26 +1,26 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
-#include "winrt/impl/Windows.Foundation.0.h"
+#ifndef WINRT_Windows_System_Inventory_1_H
+#define WINRT_Windows_System_Inventory_1_H
 #include "winrt/impl/Windows.System.Inventory.0.h"
-
-WINRT_EXPORT namespace winrt::Windows::System::Inventory {
-
-struct WINRT_EBO IInstalledDesktopApp :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IInstalledDesktopApp>
+namespace winrt::Windows::System::Inventory
 {
-    IInstalledDesktopApp(std::nullptr_t = nullptr) noexcept {}
-};
-
-struct WINRT_EBO IInstalledDesktopAppStatics :
-    Windows::Foundation::IInspectable,
-    impl::consume_t<IInstalledDesktopAppStatics>
-{
-    IInstalledDesktopAppStatics(std::nullptr_t = nullptr) noexcept {}
-};
-
+    struct __declspec(empty_bases) IInstalledDesktopApp :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IInstalledDesktopApp>
+    {
+        IInstalledDesktopApp(std::nullptr_t = nullptr) noexcept {}
+        IInstalledDesktopApp(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IInstalledDesktopAppStatics :
+        Windows::Foundation::IInspectable,
+        impl::consume_t<IInstalledDesktopAppStatics>
+    {
+        IInstalledDesktopAppStatics(std::nullptr_t = nullptr) noexcept {}
+        IInstalledDesktopAppStatics(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

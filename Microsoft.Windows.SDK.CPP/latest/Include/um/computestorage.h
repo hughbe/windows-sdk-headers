@@ -6,8 +6,6 @@
   \brief API set contract for ext-ms-win-hyperv-computestorage-l1
 **/
 
-
-
 #pragma once
 
 #ifndef _HYPERV_COMPUTESTORAGE_H_

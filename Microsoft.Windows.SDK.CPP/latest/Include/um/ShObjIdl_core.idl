@@ -1029,6 +1029,11 @@ cpp_quote("#define STR_PROPERTYBAG_PARAM   L\"SHBindCtxPropertyBag\"")
 // This is stored as a DWORD in the STR_PROPERTYBAG_PARAM property bag.
 cpp_quote("#define STR_ENUM_ITEMS_FLAGS    L\"SHCONTF\"")
 
+// This bind context parameter enables passing the STORAGEITEM_CREATION_FLAGS value to
+// IShellItem::BindToHandler(..., BHID_StorageItem, ...).
+// This is stored as a DWORD in the STR_PROPERTYBAG_PARAM property bag.
+cpp_quote("#define STR_STORAGEITEM_CREATION_FLAGS    L\"SHGETSTORAGEITEM\"")
+
 interface IShellItem;
 
 [
@@ -8407,10 +8412,11 @@ typedef [v1_enum] enum AHTYPE
     AHTYPE_UNDEFINED            = 0x0000,   // default
     AHTYPE_USER_APPLICATION     = 0x0008,   // user created association (e.g. "Find on this PC" via Open With)
     AHTYPE_ANY_APPLICATION      = 0x0010,   // applications found under HKCR\Applications
-    AHTYPE_MACHINEDEFAULT       = 0x0020,   // association founder under HKCR\.ext
+    AHTYPE_MACHINEDEFAULT       = 0x0020,   // association found under HKCR\.ext
     AHTYPE_PROGID               = 0x0040,   // association with a registered progId
     AHTYPE_APPLICATION          = 0x0080,   // application found under HKCR\.ext\OpenWithList
     AHTYPE_CLASS_APPLICATION    = 0X0100,
+    AHTYPE_ANY_PROGID           = 0X0200,   // association with a registered progId for any (*) extension (modern apps)
 } AHTYPE;
 
 cpp_quote("DEFINE_ENUM_FLAG_OPERATORS(AHTYPE)")
@@ -9065,8 +9071,6 @@ interface IContactManagerInterop : IUnknown
 
 cpp_quote("#endif // NTDDI_WINBLUE")
 
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
-
 // IShellIconOverlayIdentifier
 //
 // Used to identify a file as a member of the group of files that have this specific
@@ -9118,6 +9122,72 @@ interface IShellIconOverlayIdentifier : IUnknown
 }
 cpp_quote("#define ISIOI_ICONFILE   0x00000001") // path is returned through pwszIconFile
 cpp_quote("#define ISIOI_ICONINDEX  0x00000002") // icon index in pwszIconFile is returned through pIndex
+
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
+[
+    object,
+    uuid(8d7b2ba7-db05-46a8-823c-d2b6de08ee91),
+    pointer_default(unique),
+]
+interface IBannerNotificationHandler : IUnknown
+{
+    typedef [v1_enum] enum BANNER_NOTIFICATION_EVENT
+    {
+        BNE_Rendered = 0,
+        BNE_Hovered,
+        BNE_Closed,      // Implicit close due to navigation
+        BNE_Dismissed,   // Explicit close by user using dismiss button
+        BNE_Button1Clicked,
+        BNE_Button2Clicked
+    } BANNER_NOTIFICATION_EVENT;
+
+    typedef struct BANNER_NOTIFICATION
+    {
+        BANNER_NOTIFICATION_EVENT event;
+        LPCWSTR providerIdentity;
+        LPCWSTR contentId;
+    } BANNER_NOTIFICATION;
+
+    HRESULT OnBannerEvent([in] BANNER_NOTIFICATION const* notification);
+}
+cpp_quote("#endif // NTDDI_WIN10_RS4")
+
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_VISTA)")
+[v1_enum] enum SORT_ORDER_TYPE
+{
+    SOT_DEFAULT             = 0,
+    SOT_IGNORE_FOLDERNESS   = 1,
+};
+
+[
+    object,
+    uuid(6dfc60fb-f2e9-459b-beb5-288f1a7c7d54),
+    pointer_default(unique),
+]
+interface ISortColumnArray : IUnknown
+{
+    HRESULT GetCount([out] UINT* columnCount);
+    HRESULT GetAt([in] UINT index, [out] SORTCOLUMN* sortcolumn);
+    HRESULT GetSortType([out] enum SORT_ORDER_TYPE* type);
+}
+cpp_quote("#endif // (NTDDI_VERSION >= NTDDI_VISTA)")
+
+[
+   object,
+   uuid(75BD59AA-F23B-4963-ABA4-0B355752A91B),
+   pointer_default(unique)
+]
+interface IPropertyKeyStore : IUnknown
+{
+    HRESULT GetKeyCount([out] int* keyCount);
+    HRESULT GetKeyAt([in] int index, [out] PROPERTYKEY* pkey);
+    HRESULT AppendKey([in] REFPROPERTYKEY key);
+    HRESULT DeleteKey([in] int index);
+    HRESULT IsKeyInStore([in] REFPROPERTYKEY key); // S_OK means yes, S_FALSE means no.
+    HRESULT RemoveKey([in] REFPROPERTYKEY key);
+}
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 
 #pragma endregion
 

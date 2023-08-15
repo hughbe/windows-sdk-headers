@@ -144,6 +144,8 @@ namespace Windows
 
                 interface IInkModelerAttributes;
 
+                interface IInkModelerAttributes2;
+
                 interface IInkPoint;
 
                 interface IInkPoint2;
@@ -533,6 +535,15 @@ namespace Windows
                     [propput] HRESULT PredictionTime([in] Windows.Foundation.TimeSpan value);
                     [propget] HRESULT ScalingFactor([out] [retval] FLOAT* value);
                     [propput] HRESULT ScalingFactor([in] FLOAT value);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 10.0)]
+                [exclusiveto(Windows.UI.Input.Inking.InkModelerAttributes)]
+                [uuid(86D1D09A-4EF8-5E25-B7BC-B65424F16BB3)]
+                interface IInkModelerAttributes2 : IInspectable
+                {
+                    [propget] HRESULT UseVelocityBasedPressure([out] [retval] boolean* value);
+                    [propput] HRESULT UseVelocityBasedPressure([in] boolean value);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 1.0)]
@@ -969,6 +980,7 @@ namespace Windows
                 runtimeclass InkModelerAttributes
                 {
                     [default] interface Windows.UI.Input.Inking.IInkModelerAttributes;
+                    [contract(Windows.Foundation.UniversalApiContract, 10.0)] interface Windows.UI.Input.Inking.IInkModelerAttributes2;
                 }
 
                 [activatable(Windows.UI.Input.Inking.IInkPointFactory, Windows.Foundation.UniversalApiContract, 1.0)]

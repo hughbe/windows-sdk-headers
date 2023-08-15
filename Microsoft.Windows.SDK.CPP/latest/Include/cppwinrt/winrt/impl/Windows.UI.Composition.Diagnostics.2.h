@@ -1,33 +1,24 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_UI_Composition_Diagnostics_2_H
+#define WINRT_Windows_UI_Composition_Diagnostics_2_H
 #include "winrt/impl/Windows.UI.Composition.1.h"
 #include "winrt/impl/Windows.UI.Composition.Diagnostics.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::UI::Composition::Diagnostics {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::UI::Composition::Diagnostics {
-
-struct WINRT_EBO CompositionDebugHeatMaps :
-    Windows::UI::Composition::Diagnostics::ICompositionDebugHeatMaps
+namespace winrt::Windows::UI::Composition::Diagnostics
 {
-    CompositionDebugHeatMaps(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO CompositionDebugSettings :
-    Windows::UI::Composition::Diagnostics::ICompositionDebugSettings
-{
-    CompositionDebugSettings(std::nullptr_t) noexcept {}
-    static Windows::UI::Composition::Diagnostics::CompositionDebugSettings TryGetSettings(Windows::UI::Composition::Compositor const& compositor);
-};
-
+    struct __declspec(empty_bases) CompositionDebugHeatMaps : Windows::UI::Composition::Diagnostics::ICompositionDebugHeatMaps
+    {
+        CompositionDebugHeatMaps(std::nullptr_t) noexcept {}
+        CompositionDebugHeatMaps(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Composition::Diagnostics::ICompositionDebugHeatMaps(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) CompositionDebugSettings : Windows::UI::Composition::Diagnostics::ICompositionDebugSettings
+    {
+        CompositionDebugSettings(std::nullptr_t) noexcept {}
+        CompositionDebugSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::UI::Composition::Diagnostics::ICompositionDebugSettings(ptr, take_ownership_from_abi) {}
+        static auto TryGetSettings(Windows::UI::Composition::Compositor const& compositor);
+    };
 }
+#endif

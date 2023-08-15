@@ -1490,33 +1490,6 @@ interface IAccessibilityDockingService : IUnknown
 cpp_quote("#endif // NTDDI_WIN8")
 
 cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_RS4)")
-[
-    object,
-    uuid(8d7b2ba7-db05-46a8-823c-d2b6de08ee91),
-    pointer_default(unique),
-]
-interface IBannerNotificationHandler : IUnknown
-{
-    typedef [v1_enum] enum BANNER_NOTIFICATION_EVENT
-    {
-        BNE_Rendered = 0,
-        BNE_Hovered,
-        BNE_Closed,      // Implicit close due to navigation
-        BNE_Dismissed,   // Explicit close by user using dismiss button
-        BNE_Button1Clicked,
-        BNE_Button2Clicked
-    } BANNER_NOTIFICATION_EVENT;
-
-    typedef struct BANNER_NOTIFICATION
-    {
-        BANNER_NOTIFICATION_EVENT event;
-        LPCWSTR providerIdentity;
-        LPCWSTR contentId;
-    } BANNER_NOTIFICATION;
-
-    HRESULT OnBannerEvent([in] BANNER_NOTIFICATION const* notification);
-}
-
 // StorageProviderBanners implements this interface.
 // Interface can obtained by instantiating StorageProviderBanners using CoCreateInstance with CLSID_StorageProviderBanners as an inproc server.
 [

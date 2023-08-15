@@ -14,7 +14,6 @@
 #pragma region Desktop Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
-
 #include <commctrl.h>
 #include <SpecStrings.h>
 
@@ -699,7 +698,7 @@ GetThemeTextMetrics(
 //  Theme background segment hit test flag (default). possible return values are:
 //  HTCLIENT: hit test succeeded in the middle background segment
 //  HTTOP, HTLEFT, HTTOPLEFT, etc:  // hit test succeeded in the the respective theme background segment.
-#define HTTB_BACKGROUNDSEG          0x00000000
+#define HTTB_BACKGROUNDSEG          0x00000000  
 //  Fixed border hit test option.  possible return values are:
 //  HTCLIENT: hit test succeeded in the middle background segment
 //  HTBORDER: hit test succeeded in any other background segment
@@ -707,7 +706,7 @@ GetThemeTextMetrics(
 //  Caption hit test option.  Possible return values are:
 //  HTCAPTION: hit test succeeded in the top, top left, or top right background segments
 //  HTNOWHERE or another return code, depending on absence or presence of accompanying flags, resp.
-#define HTTB_CAPTION                0x00000004
+#define HTTB_CAPTION                0x00000004  
 //  Resizing border hit test flags.  Possible return values are:
 //  HTCLIENT: hit test succeeded in middle background segment
 //  HTTOP, HTTOPLEFT, HTLEFT, HTRIGHT, etc:    hit test succeeded in the respective system resizing zone
@@ -1038,7 +1037,6 @@ typedef struct _MARGINS
     int cyTopHeight;      // height of top border that retains its size
     int cyBottomHeight;   // height of bottom border that retains its size
 } MARGINS, *PMARGINS;
-
 
 
 //-----------------------------------------------------------------------
@@ -1591,7 +1589,6 @@ typedef struct _WTA_OPTIONS
                                    WTNCA_NOSYSMENU | \
                                    WTNCA_NOMIRRORHELP)
 
-
 THEMEAPI
 SetWindowThemeAttribute(
     _In_ HWND hwnd,
@@ -1797,7 +1794,6 @@ typedef enum _BP_ANIMATIONSTYLE
     BPAS_SINE                 // Sinusoid fade animation
 } BP_ANIMATIONSTYLE;
 
-
 // BP_ANIMATIONPARAMS
 typedef struct _BP_ANIMATIONPARAMS
 {
@@ -1991,4 +1987,5 @@ GetThemeTransitionDuration(
 #pragma endregion
 
 #endif /* _UXTHEME_H_ */
+
 

@@ -248,8 +248,7 @@ typedef struct _SHARE_INFO_1501 {
     PSECURITY_DESCRIPTOR  shi1501_security_descriptor;
 } SHARE_INFO_1501, *PSHARE_INFO_1501, *LPSHARE_INFO_1501;
 
-typedef struct _SHARE_INFO_1503 
-{
+typedef struct _SHARE_INFO_1503 {
     GUID shi1503_sharefilter;
 } SHARE_INFO_1503, *PSHARE_INFO_1503, *LPSHARE_INFO_1503;
 
@@ -633,6 +632,26 @@ typedef struct _FILE_INFO_3 {
     LMSTR     fi3_pathname;
     LMSTR     fi3_username;
 } FILE_INFO_3, *PFILE_INFO_3, *LPFILE_INFO_3;
+
+//
+// Data Structures - Certificate
+//
+typedef enum _SERVER_CERTIFICATE_TYPE {
+QUIC
+} SERVER_CERTIFICATE_TYPE;
+
+typedef struct _SERVER_CERTIFICATE_INFO_0 {
+    LMSTR      srvci0_name;
+    LMSTR      srvci0_subject;
+    LMSTR      srvci0_issuer;
+    LMSTR      srvci0_thumbprint;
+    LMSTR      srvci0_friendlyname;
+    LMSTR      srvci0_notbefore;
+    LMSTR      srvci0_notafter;
+    LMSTR      srvci0_storelocation;
+    LMSTR      srvci0_storename;
+    DWORD      srvci0_type;
+} SERVER_CERTIFICATE_INFO_0, *PSERVER_CERTIFICATE_INFO_0, *LPSERVER_CERTIFICATE_INFO_0;
 
 //
 // Special Values and Constants - File

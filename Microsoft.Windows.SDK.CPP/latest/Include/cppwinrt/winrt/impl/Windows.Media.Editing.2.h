@@ -1,76 +1,60 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Media_Editing_2_H
+#define WINRT_Windows_Media_Editing_2_H
+#include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Graphics.DirectX.Direct3D11.1.h"
-#include "winrt/impl/Windows.Graphics.Imaging.1.h"
-#include "winrt/impl/Windows.Media.Core.1.h"
 #include "winrt/impl/Windows.Media.Effects.1.h"
-#include "winrt/impl/Windows.Media.MediaProperties.1.h"
-#include "winrt/impl/Windows.Media.Transcoding.1.h"
 #include "winrt/impl/Windows.Storage.1.h"
 #include "winrt/impl/Windows.UI.1.h"
 #include "winrt/impl/Windows.Media.Editing.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::Editing {
-
+namespace winrt::Windows::Media::Editing
+{
+    struct __declspec(empty_bases) BackgroundAudioTrack : Windows::Media::Editing::IBackgroundAudioTrack
+    {
+        BackgroundAudioTrack(std::nullptr_t) noexcept {}
+        BackgroundAudioTrack(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IBackgroundAudioTrack(ptr, take_ownership_from_abi) {}
+        static auto CreateFromEmbeddedAudioTrack(Windows::Media::Editing::EmbeddedAudioTrack const& embeddedAudioTrack);
+        static auto CreateFromFileAsync(Windows::Storage::IStorageFile const& file);
+    };
+    struct __declspec(empty_bases) EmbeddedAudioTrack : Windows::Media::Editing::IEmbeddedAudioTrack
+    {
+        EmbeddedAudioTrack(std::nullptr_t) noexcept {}
+        EmbeddedAudioTrack(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IEmbeddedAudioTrack(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) MediaClip : Windows::Media::Editing::IMediaClip
+    {
+        MediaClip(std::nullptr_t) noexcept {}
+        MediaClip(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaClip(ptr, take_ownership_from_abi) {}
+        static auto CreateFromColor(Windows::UI::Color const& color, Windows::Foundation::TimeSpan const& originalDuration);
+        static auto CreateFromFileAsync(Windows::Storage::IStorageFile const& file);
+        static auto CreateFromImageFileAsync(Windows::Storage::IStorageFile const& file, Windows::Foundation::TimeSpan const& originalDuration);
+        static auto CreateFromSurface(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Foundation::TimeSpan const& originalDuration);
+    };
+    struct __declspec(empty_bases) MediaComposition : Windows::Media::Editing::IMediaComposition,
+        impl::require<MediaComposition, Windows::Media::Editing::IMediaComposition2>
+    {
+        MediaComposition(std::nullptr_t) noexcept {}
+        MediaComposition(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaComposition(ptr, take_ownership_from_abi) {}
+        MediaComposition();
+        static auto LoadAsync(Windows::Storage::StorageFile const& file);
+    };
+    struct __declspec(empty_bases) MediaOverlay : Windows::Media::Editing::IMediaOverlay
+    {
+        MediaOverlay(std::nullptr_t) noexcept {}
+        MediaOverlay(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaOverlay(ptr, take_ownership_from_abi) {}
+        MediaOverlay(Windows::Media::Editing::MediaClip const& clip);
+        MediaOverlay(Windows::Media::Editing::MediaClip const& clip, Windows::Foundation::Rect const& position, double opacity);
+    };
+    struct __declspec(empty_bases) MediaOverlayLayer : Windows::Media::Editing::IMediaOverlayLayer
+    {
+        MediaOverlayLayer(std::nullptr_t) noexcept {}
+        MediaOverlayLayer(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::Editing::IMediaOverlayLayer(ptr, take_ownership_from_abi) {}
+        MediaOverlayLayer();
+        MediaOverlayLayer(Windows::Media::Effects::IVideoCompositorDefinition const& compositorDefinition);
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Media::Editing {
-
-struct WINRT_EBO BackgroundAudioTrack :
-    Windows::Media::Editing::IBackgroundAudioTrack
-{
-    BackgroundAudioTrack(std::nullptr_t) noexcept {}
-    static Windows::Media::Editing::BackgroundAudioTrack CreateFromEmbeddedAudioTrack(Windows::Media::Editing::EmbeddedAudioTrack const& embeddedAudioTrack);
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Editing::BackgroundAudioTrack> CreateFromFileAsync(Windows::Storage::IStorageFile const& file);
-};
-
-struct WINRT_EBO EmbeddedAudioTrack :
-    Windows::Media::Editing::IEmbeddedAudioTrack
-{
-    EmbeddedAudioTrack(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO MediaClip :
-    Windows::Media::Editing::IMediaClip
-{
-    MediaClip(std::nullptr_t) noexcept {}
-    static Windows::Media::Editing::MediaClip CreateFromColor(Windows::UI::Color const& color, Windows::Foundation::TimeSpan const& originalDuration);
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Editing::MediaClip> CreateFromFileAsync(Windows::Storage::IStorageFile const& file);
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Editing::MediaClip> CreateFromImageFileAsync(Windows::Storage::IStorageFile const& file, Windows::Foundation::TimeSpan const& originalDuration);
-    static Windows::Media::Editing::MediaClip CreateFromSurface(Windows::Graphics::DirectX::Direct3D11::IDirect3DSurface const& surface, Windows::Foundation::TimeSpan const& originalDuration);
-};
-
-struct WINRT_EBO MediaComposition :
-    Windows::Media::Editing::IMediaComposition,
-    impl::require<MediaComposition, Windows::Media::Editing::IMediaComposition2>
-{
-    MediaComposition(std::nullptr_t) noexcept {}
-    MediaComposition();
-    static Windows::Foundation::IAsyncOperation<Windows::Media::Editing::MediaComposition> LoadAsync(Windows::Storage::StorageFile const& file);
-};
-
-struct WINRT_EBO MediaOverlay :
-    Windows::Media::Editing::IMediaOverlay
-{
-    MediaOverlay(std::nullptr_t) noexcept {}
-    MediaOverlay(Windows::Media::Editing::MediaClip const& clip);
-    MediaOverlay(Windows::Media::Editing::MediaClip const& clip, Windows::Foundation::Rect const& position, double opacity);
-};
-
-struct WINRT_EBO MediaOverlayLayer :
-    Windows::Media::Editing::IMediaOverlayLayer
-{
-    MediaOverlayLayer(std::nullptr_t) noexcept {}
-    MediaOverlayLayer();
-    MediaOverlayLayer(Windows::Media::Effects::IVideoCompositorDefinition const& compositorDefinition);
-};
-
-}
+#endif

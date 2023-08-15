@@ -1,31 +1,22 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Management_Deployment_Preview_2_H
+#define WINRT_Windows_Management_Deployment_Preview_2_H
 #include "winrt/impl/Windows.Management.Deployment.Preview.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Management::Deployment::Preview {
-
-}
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Management::Deployment::Preview {
-
-struct ClassicAppManager
+namespace winrt::Windows::Management::Deployment::Preview
 {
-    ClassicAppManager() = delete;
-    static Windows::Management::Deployment::Preview::InstalledClassicAppInfo FindInstalledApp(param::hstring const& appUninstallKey);
-};
-
-struct WINRT_EBO InstalledClassicAppInfo :
-    Windows::Management::Deployment::Preview::IInstalledClassicAppInfo
-{
-    InstalledClassicAppInfo(std::nullptr_t) noexcept {}
-};
-
+    struct ClassicAppManager
+    {
+        ClassicAppManager() = delete;
+        static auto FindInstalledApp(param::hstring const& appUninstallKey);
+    };
+    struct __declspec(empty_bases) InstalledClassicAppInfo : Windows::Management::Deployment::Preview::IInstalledClassicAppInfo
+    {
+        InstalledClassicAppInfo(std::nullptr_t) noexcept {}
+        InstalledClassicAppInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Management::Deployment::Preview::IInstalledClassicAppInfo(ptr, take_ownership_from_abi) {}
+    };
 }
+#endif

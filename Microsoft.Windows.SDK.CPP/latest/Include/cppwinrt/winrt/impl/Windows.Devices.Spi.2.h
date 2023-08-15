@@ -1,52 +1,41 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Devices_Spi_2_H
+#define WINRT_Windows_Devices_Spi_2_H
 #include "winrt/impl/Windows.Devices.Spi.Provider.1.h"
 #include "winrt/impl/Windows.Foundation.1.h"
 #include "winrt/impl/Windows.Devices.Spi.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Spi {
-
+namespace winrt::Windows::Devices::Spi
+{
+    struct __declspec(empty_bases) SpiBusInfo : Windows::Devices::Spi::ISpiBusInfo
+    {
+        SpiBusInfo(std::nullptr_t) noexcept {}
+        SpiBusInfo(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Spi::ISpiBusInfo(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) SpiConnectionSettings : Windows::Devices::Spi::ISpiConnectionSettings
+    {
+        SpiConnectionSettings(std::nullptr_t) noexcept {}
+        SpiConnectionSettings(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Spi::ISpiConnectionSettings(ptr, take_ownership_from_abi) {}
+        SpiConnectionSettings(int32_t chipSelectLine);
+    };
+    struct __declspec(empty_bases) SpiController : Windows::Devices::Spi::ISpiController
+    {
+        SpiController(std::nullptr_t) noexcept {}
+        SpiController(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Spi::ISpiController(ptr, take_ownership_from_abi) {}
+        static auto GetDefaultAsync();
+        static auto GetControllersAsync(Windows::Devices::Spi::Provider::ISpiProvider const& provider);
+    };
+    struct __declspec(empty_bases) SpiDevice : Windows::Devices::Spi::ISpiDevice
+    {
+        SpiDevice(std::nullptr_t) noexcept {}
+        SpiDevice(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Devices::Spi::ISpiDevice(ptr, take_ownership_from_abi) {}
+        static auto GetDeviceSelector();
+        static auto GetDeviceSelector(param::hstring const& friendlyName);
+        static auto GetBusInfo(param::hstring const& busId);
+        static auto FromIdAsync(param::hstring const& busId, Windows::Devices::Spi::SpiConnectionSettings const& settings);
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Devices::Spi {
-
-struct WINRT_EBO SpiBusInfo :
-    Windows::Devices::Spi::ISpiBusInfo
-{
-    SpiBusInfo(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO SpiConnectionSettings :
-    Windows::Devices::Spi::ISpiConnectionSettings
-{
-    SpiConnectionSettings(std::nullptr_t) noexcept {}
-    SpiConnectionSettings(int32_t chipSelectLine);
-};
-
-struct WINRT_EBO SpiController :
-    Windows::Devices::Spi::ISpiController
-{
-    SpiController(std::nullptr_t) noexcept {}
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiController> GetDefaultAsync();
-    static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<Windows::Devices::Spi::SpiController>> GetControllersAsync(Windows::Devices::Spi::Provider::ISpiProvider const& provider);
-};
-
-struct WINRT_EBO SpiDevice :
-    Windows::Devices::Spi::ISpiDevice
-{
-    SpiDevice(std::nullptr_t) noexcept {}
-    static hstring GetDeviceSelector();
-    static hstring GetDeviceSelector(param::hstring const& friendlyName);
-    static Windows::Devices::Spi::SpiBusInfo GetBusInfo(param::hstring const& busId);
-    static Windows::Foundation::IAsyncOperation<Windows::Devices::Spi::SpiDevice> FromIdAsync(param::hstring const& busId, Windows::Devices::Spi::SpiConnectionSettings const& settings);
-};
-
-}
+#endif

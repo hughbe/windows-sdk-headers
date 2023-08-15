@@ -601,6 +601,7 @@ typedef enum {
     NVME_ADMIN_COMMAND_FORMAT_NVM               = 0x80,
     NVME_ADMIN_COMMAND_SECURITY_SEND            = 0x81,
     NVME_ADMIN_COMMAND_SECURITY_RECEIVE         = 0x82,
+    NVME_ADMIN_COMMAND_SANITIZE                 = 0x84,
 
 } NVME_ADMIN_COMMANDS;
 
@@ -1299,6 +1300,17 @@ typedef union {
 typedef union {
 
     struct {
+        ULONG   NOPPME      : 1;        // Non-Operational Power State Permissive Mode Enable (NOPPME)
+        ULONG   Reserved0   : 31;
+    } DUMMYSTRUCTNAME;
+
+    ULONG   AsUlong;
+
+} NVME_CDW11_FEATURE_NON_OPERATIONAL_POWER_STATE, *PNVME_CDW11_FEATURE_NON_OPERATIONAL_POWER_STATE;
+
+typedef union {
+
+    struct {
         ULONG   NUM         : 6;        // Number of LBA Ranges (NUM)
         ULONG   Reserved0   : 26;
     } DUMMYSTRUCTNAME;
@@ -1522,6 +1534,7 @@ typedef union {
     NVME_CDW11_FEATURE_TEMPERATURE_THRESHOLD TemperatureThreshold;
     NVME_CDW11_FEATURE_HOST_MEMORY_BUFFER   HostMemoryBuffer;
     NVME_CDW11_FEATURE_WRITE_ATOMICITY_NORMAL WriteAtomicityNormal;
+    NVME_CDW11_FEATURE_NON_OPERATIONAL_POWER_STATE NonOperationalPowerState;
 
     ULONG   AsUlong;
 } NVME_CDW11_FEATURES, *PNVME_CDW11_FEATURES;
@@ -1926,9 +1939,10 @@ typedef struct {
 //
 typedef enum {
 
-    NVME_FIRMWARE_ACTIVATE_ACTION_DOWNLOAD_TO_SLOT                  = 0,
-    NVME_FIRMWARE_ACTIVATE_ACTION_DOWNLOAD_TO_SLOT_AND_ACTIVATE     = 1,
-    NVME_FIRMWARE_ACTIVATE_ACTION_ACTIVATE                          = 2,
+    NVME_FIRMWARE_ACTIVATE_ACTION_DOWNLOAD_TO_SLOT                                       = 0,
+    NVME_FIRMWARE_ACTIVATE_ACTION_DOWNLOAD_TO_SLOT_AND_ACTIVATE                          = 1,
+    NVME_FIRMWARE_ACTIVATE_ACTION_ACTIVATE                                               = 2,
+    NVME_FIRMWARE_ACTIVATE_ACTION_DOWNLOAD_TO_SLOT_AND_ACTIVATE_IMMEDIATE                = 3,
 
 } NVME_FIRMWARE_ACTIVATE_ACTIONS;
 

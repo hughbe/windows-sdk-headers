@@ -2160,9 +2160,6 @@ typedef struct
 #if ( JET_VERSION >= 0x0602 )
 #define JET_bitKeepDbAttachedAtEndOfRecovery 0x00001000 //  this allows db to remain attached at the end of recovery (for faster transition to running state)
 #endif // JET_VERSION >= 0x0602
-#if ( JET_VERSION >= 0x0A01 )
-#endif // JET_VERSION >= 0x0A01
-
 
     /* Flags for JetTerm2 */
 
@@ -3120,7 +3117,7 @@ typedef struct
 #define JET_errBadLogVersion                -514  /* Version of log file is not compatible with Jet version */
 #define JET_errInvalidLogSequence           -515  /* Timestamp in next log does not match expected */
 #define JET_errLoggingDisabled              -516  /* Log is not active */
-#define JET_errLogBufferTooSmall            -517  /* Log buffer is too small for recovery */
+#define JET_errLogBufferTooSmall            -517  /* An operation generated a log record which was too large to fit in the log buffer or in a single log file */
 #define JET_errLogSequenceEnd               -519  /* Maximum log file number exceeded */
 #define JET_errNoBackup                     -520  /* No backup in progress */
 #define JET_errInvalidBackupSequence        -521  /* Backup call out of sequence */
@@ -7464,7 +7461,7 @@ JetOSSnapshotEnd(
 //  dump includes pages that contain valid data
 #define JET_bitDumpCacheIncludeCorruptedPages   0x00000040
 //  dump includes pages that are corrupted (expensive to compute)
-#define JET_bitDumpCacheNoDecommit	            0x00000080
+#define JET_bitDumpCacheNoDecommit              0x00000080
 //  do not decommit any pages not intending to include in crash dump
 
 

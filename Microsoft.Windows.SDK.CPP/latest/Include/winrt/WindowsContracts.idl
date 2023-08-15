@@ -4,10 +4,10 @@ namespace Windows
 {
     namespace Foundation
     {
-        [contractversion(3)]
+        [contractversion(4)]
         apicontract FoundationContract{};
 
-        [contractversion(8)]
+        [contractversion(10)]
         apicontract UniversalApiContract{};
     }
 

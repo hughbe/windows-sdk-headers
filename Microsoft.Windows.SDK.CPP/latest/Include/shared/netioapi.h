@@ -3163,19 +3163,22 @@ Return Value:
 
 --*/
 
-#define DNS_SETTINGS_VERSION1             0x0001
-#define DNS_INTERFACE_SETTINGS_VERSION1   0x0001
+#define DNS_SETTINGS_VERSION1                     0x0001
+#define DNS_INTERFACE_SETTINGS_VERSION1           0x0001
+#define DNS_INTERFACE_SETTINGS_VERSION2           0x0002
 
-#define DNS_SETTING_IPV6                  0x0001
-#define DNS_SETTING_NAMESERVER            0x0002
-#define DNS_SETTING_SEARCHLIST            0x0004
-#define DNS_SETTING_REGISTRATION_ENABLED  0x0008
-#define DNS_SETTING_REGISTER_ADAPTER_NAME 0x0010
-#define DNS_SETTING_DOMAIN                0x0020
-#define DNS_SETTING_HOSTNAME              0x0040
-#define DNS_SETTINGS_ENABLE_LLMNR         0x0080
-#define DNS_SETTINGS_QUERY_ADAPTER_NAME   0x0100
-#define DNS_SETTING_PROFILE_NAMESERVER    0x0200
+#define DNS_SETTING_IPV6                          0x0001
+#define DNS_SETTING_NAMESERVER                    0x0002
+#define DNS_SETTING_SEARCHLIST                    0x0004
+#define DNS_SETTING_REGISTRATION_ENABLED          0x0008
+#define DNS_SETTING_REGISTER_ADAPTER_NAME         0x0010
+#define DNS_SETTING_DOMAIN                        0x0020
+#define DNS_SETTING_HOSTNAME                      0x0040
+#define DNS_SETTINGS_ENABLE_LLMNR                 0x0080
+#define DNS_SETTINGS_QUERY_ADAPTER_NAME           0x0100
+#define DNS_SETTING_PROFILE_NAMESERVER            0x0200
+#define DNS_SETTING_DISABLE_UNCONSTRAINED_QUERIES 0x0400
+#define DNS_SETTING_SUPPLEMENTAL_SEARCH_LIST      0x0800
 
 typedef struct _DNS_SETTINGS
 {
@@ -3199,6 +3202,13 @@ typedef struct _DNS_INTERFACE_SETTINGS
     ULONG QueryAdapterName;
     PWSTR ProfileNameServer;
 } DNS_INTERFACE_SETTINGS;
+
+typedef struct _DNS_INTERFACE_SETTINGS_EX
+{
+    DNS_INTERFACE_SETTINGS SettingsV1;
+    ULONG                  DisableUnconstrainedQueries;
+    PWSTR                  SupplementalSearchList;
+} DNS_INTERFACE_SETTINGS_EX;
 
 NETIOAPI_API
 GetDnsSettings(
@@ -3345,6 +3355,114 @@ Return Value:
     User-Mode: NO_ERROR on success, error code on failure.
 
     Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
+
+--*/
+
+_IRQL_requires_max_(PASSIVE_LEVEL)
+IPHLPAPI_DLL_LINKAGE
+_NETIOAPI_SUCCESS_
+NETIOAPI_API
+GetNetworkConnectivityHint(
+    _Out_ NL_NETWORK_CONNECTIVITY_HINT *ConnectivityHint
+    );
+/*++
+
+Routine Description:
+
+    Queries for the aggregate level and cost of network connectivity that an
+    app or service is likely to experience.
+
+Arguments:
+
+    ConnectivityHint - Receives the aggregate connectivity level and cost hints.
+
+Return Value:
+
+    User-Mode: NO_ERROR on success, error code on failure.
+
+    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
+
+--*/
+
+_IRQL_requires_max_(PASSIVE_LEVEL)
+IPHLPAPI_DLL_LINKAGE
+_NETIOAPI_SUCCESS_
+NETIOAPI_API
+GetNetworkConnectivityHintForInterface(
+    _In_ NET_IFINDEX InterfaceIndex,
+    _Out_ NL_NETWORK_CONNECTIVITY_HINT *ConnectivityHint
+    );
+/*++
+
+Routine Description:
+
+    Queries for the level and cost of network connectivity for the specified
+    interface.
+
+Arguments:
+
+    InterfaceIndex - The index of the interface for which to retrieve
+        connectivity information.
+
+    ConnectivityHint - Receives the connectivity level and cost hints for the
+        specified interface.
+
+Return Value:
+
+    User-Mode: NO_ERROR on success, error code on failure.
+
+    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
+
+--*/
+
+typedef
+VOID
+(NETIOAPI_API_ *PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK) (
+    _In_ PVOID CallerContext,
+    _In_ NL_NETWORK_CONNECTIVITY_HINT ConnectivityHint
+    );
+
+_IRQL_requires_max_(PASSIVE_LEVEL)
+IPHLPAPI_DLL_LINKAGE
+_NETIOAPI_SUCCESS_
+NETIOAPI_API
+NotifyNetworkConnectivityHintChange(
+    _In_ PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK Callback,
+    _In_opt_ PVOID CallerContext,
+    _In_ BOOLEAN InitialNotification,
+    _Out_ PHANDLE NotificationHandle
+    );
+/*++
+
+Routine Description:
+
+    Register for notification when the aggregate network connectivity level
+    and cost hints change.
+
+Arguments:
+
+    Callback - Supplies a callback function.  This function will be invoked
+        when a network connectivity level or cost change occurs.
+
+    CallerContext - Provides the user specific caller context.  This context
+        will be supplied to the callback function.
+
+    InitialNotification - Supplies a boolean to indicate whether an
+        initialization notification should be provided.
+
+    NotificationHandle - Returns a handle to the notification registration.
+
+Return Value:
+
+    User-Mode: NO_ERROR on success, error code on failure.
+
+    Kernel-Mode: STATUS_SUCCESS on success, error code on failure.
+
+Notes:
+
+    1. Invocation of the callback function is serialized.
+
+    2. Use CancelMibChangeNotify2 to deregister for change notifications.
 
 --*/
 

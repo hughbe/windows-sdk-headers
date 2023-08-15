@@ -1,47 +1,36 @@
-﻿// C++/WinRT v1.0.190111.3
+// C++/WinRT v2.0.190620.2
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
-#pragma once
+#ifndef WINRT_Windows_Media_AppBroadcasting_2_H
+#define WINRT_Windows_Media_AppBroadcasting_2_H
 #include "winrt/impl/Windows.System.1.h"
 #include "winrt/impl/Windows.Media.AppBroadcasting.1.h"
-
-WINRT_EXPORT namespace winrt::Windows::Media::AppBroadcasting {
-
+namespace winrt::Windows::Media::AppBroadcasting
+{
+    struct __declspec(empty_bases) AppBroadcastingMonitor : Windows::Media::AppBroadcasting::IAppBroadcastingMonitor
+    {
+        AppBroadcastingMonitor(std::nullptr_t) noexcept {}
+        AppBroadcastingMonitor(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::AppBroadcasting::IAppBroadcastingMonitor(ptr, take_ownership_from_abi) {}
+        AppBroadcastingMonitor();
+    };
+    struct __declspec(empty_bases) AppBroadcastingStatus : Windows::Media::AppBroadcasting::IAppBroadcastingStatus
+    {
+        AppBroadcastingStatus(std::nullptr_t) noexcept {}
+        AppBroadcastingStatus(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::AppBroadcasting::IAppBroadcastingStatus(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppBroadcastingStatusDetails : Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails
+    {
+        AppBroadcastingStatusDetails(std::nullptr_t) noexcept {}
+        AppBroadcastingStatusDetails(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) AppBroadcastingUI : Windows::Media::AppBroadcasting::IAppBroadcastingUI
+    {
+        AppBroadcastingUI(std::nullptr_t) noexcept {}
+        AppBroadcastingUI(void* ptr, take_ownership_from_abi_t) noexcept : Windows::Media::AppBroadcasting::IAppBroadcastingUI(ptr, take_ownership_from_abi) {}
+        static auto GetDefault();
+        static auto GetForUser(Windows::System::User const& user);
+    };
 }
-
-namespace winrt::impl {
-
-}
-
-WINRT_EXPORT namespace winrt::Windows::Media::AppBroadcasting {
-
-struct WINRT_EBO AppBroadcastingMonitor :
-    Windows::Media::AppBroadcasting::IAppBroadcastingMonitor
-{
-    AppBroadcastingMonitor(std::nullptr_t) noexcept {}
-    AppBroadcastingMonitor();
-};
-
-struct WINRT_EBO AppBroadcastingStatus :
-    Windows::Media::AppBroadcasting::IAppBroadcastingStatus
-{
-    AppBroadcastingStatus(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppBroadcastingStatusDetails :
-    Windows::Media::AppBroadcasting::IAppBroadcastingStatusDetails
-{
-    AppBroadcastingStatusDetails(std::nullptr_t) noexcept {}
-};
-
-struct WINRT_EBO AppBroadcastingUI :
-    Windows::Media::AppBroadcasting::IAppBroadcastingUI
-{
-    AppBroadcastingUI(std::nullptr_t) noexcept {}
-    static Windows::Media::AppBroadcasting::AppBroadcastingUI GetDefault();
-    static Windows::Media::AppBroadcasting::AppBroadcastingUI GetForUser(Windows::System::User const& user);
-};
-
-}
+#endif
