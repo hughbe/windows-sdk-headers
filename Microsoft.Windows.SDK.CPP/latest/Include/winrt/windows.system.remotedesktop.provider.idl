@@ -41,19 +41,29 @@ namespace Windows
             {
                 typedef enum RemoteDesktopConnectionStatus RemoteDesktopConnectionStatus;
 
+                typedef enum RemoteDesktopLocalAction RemoteDesktopLocalAction;
+
+                interface IPerformLocalActionRequestedEventArgs;
+
                 interface IRemoteDesktopConnectionInfo;
 
                 interface IRemoteDesktopConnectionInfoStatics;
 
                 interface IRemoteDesktopConnectionRemoteInfo;
 
+                interface IRemoteDesktopConnectionRemoteInfo2;
+
                 interface IRemoteDesktopConnectionRemoteInfoStatics;
+
+                interface IRemoteDesktopConnectionRemoteInfoStatics2;
 
                 interface IRemoteDesktopInfo;
 
                 interface IRemoteDesktopInfoFactory;
 
                 interface IRemoteDesktopRegistrarStatics;
+
+                runtimeclass PerformLocalActionRequestedEventArgs;
 
                 runtimeclass RemoteDesktopConnectionInfo;
 
@@ -87,6 +97,8 @@ namespace Windows
                     interface Windows.Foundation.Collections.IVector<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo*>;
 
                     interface Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo*, IInspectable*>;
+
+                    interface Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo*, Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs*>;
                 }
             }
         }
@@ -110,6 +122,20 @@ namespace Windows
                     UserInputNeeded = 2,
                     Disconnected    = 3
                 };
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                enum RemoteDesktopLocalAction
+                {
+                    ShowBluetoothSettings = 0
+                };
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs)]
+                [uuid(59359F4F-0862-53A3-A3B3-C932FB718CDC)]
+                interface IPerformLocalActionRequestedEventArgs : IInspectable
+                {
+                    [propget] HRESULT Action([out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopLocalAction* value);
+                }
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo)]
@@ -140,11 +166,29 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
+                [uuid(40A046F6-207E-52E5-84D6-82371E7A2BCD)]
+                interface IRemoteDesktopConnectionRemoteInfo2 : IInspectable
+                {
+                    [eventadd] HRESULT PerformLocalActionRequested([in] Windows.Foundation.TypedEventHandler<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo*, Windows.System.RemoteDesktop.Provider.PerformLocalActionRequestedEventArgs*>* handler, [out] [retval] EventRegistrationToken* token);
+                    [eventremove] HRESULT PerformLocalActionRequested([in] EventRegistrationToken token);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
                 [uuid(C80B46ED-D5A2-5A15-95C9-8170ECBF7600)]
                 interface IRemoteDesktopConnectionRemoteInfoStatics : IInspectable
                 {
                     HRESULT Current([out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo** result);
                     HRESULT IsSupported([out] [retval] boolean* result);
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [exclusiveto(Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo)]
+                [uuid(C44F2A84-5454-5357-904A-B9F71B6090C1)]
+                interface IRemoteDesktopConnectionRemoteInfoStatics2 : IInspectable
+                {
+                    HRESULT IsSwitchSupported([out] [retval] boolean* result);
+                    HRESULT GetForLaunchUri([in] Windows.Foundation.Uri* launchUri, [out] [retval] Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo** result);
                 }
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
@@ -175,6 +219,13 @@ namespace Windows
 
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [marshaling_behavior(agile)]
+                runtimeclass PerformLocalActionRequestedEventArgs
+                {
+                    [default] interface Windows.System.RemoteDesktop.Provider.IPerformLocalActionRequestedEventArgs;
+                }
+
+                [contract(Windows.Foundation.UniversalApiContract, 15.0)]
+                [marshaling_behavior(agile)]
                 [static(Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionInfoStatics, Windows.Foundation.UniversalApiContract, 15.0)]
                 [threading(both)]
                 runtimeclass RemoteDesktopConnectionInfo
@@ -185,10 +236,12 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 15.0)]
                 [marshaling_behavior(agile)]
                 [static(Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics, Windows.Foundation.UniversalApiContract, 15.0)]
+                [static(Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics2, Windows.Foundation.UniversalApiContract, 15.0)]
                 [threading(both)]
                 runtimeclass RemoteDesktopConnectionRemoteInfo
                 {
                     [default] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo;
+                    [contract(Windows.Foundation.UniversalApiContract, 15.0)] interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo2;
                     interface Windows.Foundation.IClosable;
                 }
 

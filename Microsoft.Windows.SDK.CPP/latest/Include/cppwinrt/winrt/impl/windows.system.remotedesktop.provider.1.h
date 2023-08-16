@@ -9,6 +9,13 @@
 #include "winrt/impl/Windows.System.RemoteDesktop.Provider.0.h"
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
 {
+    struct __declspec(empty_bases) IPerformLocalActionRequestedEventArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPerformLocalActionRequestedEventArgs>
+    {
+        IPerformLocalActionRequestedEventArgs(std::nullptr_t = nullptr) noexcept {}
+        IPerformLocalActionRequestedEventArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IRemoteDesktopConnectionInfo :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRemoteDesktopConnectionInfo>
@@ -30,12 +37,26 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Provider
         IRemoteDesktopConnectionRemoteInfo(std::nullptr_t = nullptr) noexcept {}
         IRemoteDesktopConnectionRemoteInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
+    struct __declspec(empty_bases) IRemoteDesktopConnectionRemoteInfo2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRemoteDesktopConnectionRemoteInfo2>
+    {
+        IRemoteDesktopConnectionRemoteInfo2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteDesktopConnectionRemoteInfo2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
     struct __declspec(empty_bases) IRemoteDesktopConnectionRemoteInfoStatics :
         winrt::Windows::Foundation::IInspectable,
         impl::consume_t<IRemoteDesktopConnectionRemoteInfoStatics>
     {
         IRemoteDesktopConnectionRemoteInfoStatics(std::nullptr_t = nullptr) noexcept {}
         IRemoteDesktopConnectionRemoteInfoStatics(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IRemoteDesktopConnectionRemoteInfoStatics2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IRemoteDesktopConnectionRemoteInfoStatics2>
+    {
+        IRemoteDesktopConnectionRemoteInfoStatics2(std::nullptr_t = nullptr) noexcept {}
+        IRemoteDesktopConnectionRemoteInfoStatics2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IRemoteDesktopInfo :
         winrt::Windows::Foundation::IInspectable,

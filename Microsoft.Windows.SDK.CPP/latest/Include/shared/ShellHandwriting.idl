@@ -1,0 +1,134 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+cpp_quote("#include <winapifamily.h>")
+
+cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_NI)")
+
+// Shell Handwriting APIs are Desktop only.
+#pragma region Desktop Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)")
+
+typedef [v1_enum] enum TfHandwritingState
+{
+    // This value indicates the client does not want any shell handwriting experience for the context.
+    TF_HANDWRITING_DEFAULT,
+
+    // This value indicates the client does not want any shell handwriting experience for the context.
+    TF_HANDWRITING_DISABLED,
+
+    // This value indicates the client wants the shell handwriting experience for the context
+    // even if the system has quirked the context to not have handwriting by default.
+    TF_HANDWRITING_ENABLED,
+
+    // By default, shell handwriting buffers all pen input from process delivery
+    // until the handwriting intent of the user has been determined.
+    // This value indicates that client wants the input delivered immediately
+    // and will handle the buffering and intent determination itself and notify
+    // the shell via the ITfHandwriting::RequestHandwritingForPointer.
+    TF_HANDWRITING_POINTERDELIVERY,
+} TfHandwritingState;
+
+typedef [v1_enum] enum TfHandwritingTargetProximateResponse
+{
+    // The client wants the system to take its default action.
+    TF_USE_SYSTEM_DEFAULT,
+
+    // No valid handwriting target is proximate to the target point.
+    TF_NO_HANDWRITING_TARGET_PROXIMATE,
+
+    // A valid handwriting target is proximate to the target point.
+    TF_HANDWRITING_TARGET_PROXIMATE,
+
+    // The client wants the system to convert the handwriting handling
+    // to Pointer Delivery for the remainder of the handwriting session.
+    TF_USE_POINTER_DELIVERY,
+} TfHandwritingTargetProximateResponse; 
+
+typedef [v1_enum] enum TfHandwritingFocusTargetResponse
+{
+    // The system should perform the default focus handwriting target
+    // behavior that would have occured if no callback was registered.
+    TF_USE_SYSTEM_TARGETING,
+
+    // The app found no target for ink stroke and doesn't want the system
+    // to try and perform its default targeting.
+    TF_NO_HANDWRITING_TARGET,
+
+    // The app has successfully set focus to a handwriting target.
+    TF_HANDWRITING_TARGET_FOCUSED,
+
+    // Same as TF_HANDWRITING_TARGET_FOCUSED but with a request to disable
+    // system-provided corrections experience.
+    TF_HANDWRITING_TARGET_FOCUSED_NO_CORRECTIONS,
+} TfHandwritingFocusTargetResponse;
+
+// ITfTargetProximateArgs
+[object, uuid(1C0450C5-7B47-4343-ABF7-23009D2640D2), local]
+interface ITfTargetProximateArgs : IUnknown
+{
+    HRESULT GetTopLevelWindow([out] HWND* topLevelWindow);
+    HRESULT GetTargetScreenPoint([out] POINT* targetScreenPoint);
+    HRESULT GetDistanceBufferPixels([out] SIZE* distanceBuffer);
+    HRESULT SetResponse(TfHandwritingTargetProximateResponse response);
+};
+
+// ITfFocusHandwritingTargetArgs
+[object, uuid(FEA19D78-F456-48B4-A1DF-75C14887D27F), local]
+interface ITfFocusHandwritingTargetArgs : IUnknown
+{
+    HRESULT GetTopLevelWindow([out] HWND* topLevelWindow);
+    HRESULT GetTargetScreenArea([out] RECT* targetScreenArea);
+    HRESULT GetDistanceBufferPixels([out] SIZE* distanceBuffer);
+    HRESULT SetResponse(TfHandwritingFocusTargetResponse response);
+};
+
+// ITfHandwritingCallbackSink
+// Clients provide this callback if they are interested in participating in
+// determination and activation of edit contexts prior to focus being set.   
+[object, uuid(23FE8915-DEBF-4558-A903-97BFBCB806FC), local]
+interface ITfHandwritingCallbackSink : IUnknown
+{
+    // This callback requests that the client determine if there is a valid handwriting target within
+    // distanceBuffer number of pixels away from the target x,y. Valid handwriting targets are any edit
+    // context that can receive focus and participate in text services (TSF) input.
+    HRESULT IsHandwritingTargetProximate([in] ITfTargetProximateArgs* targetProximateArgs);
+
+    // This callback requsts that the client set edit focus on the edit context that most overlaps with
+    // the targetArea bounds provided plus the the additional distanceBuffer provided.
+    // The buffer is separated from the targetArea to represent an area of preference.
+    // Edit contexts that overlap with the targetArea are preferred, buf if none do
+    // then the cloest edit context within the buffer should be focused.
+    // The client also can optionally choose the correction experience provided for recognized handwriting text.
+    // Applications should return S_OK if focus has been set and E_INVALIDARG if no edit context matches the parameters.
+    HRESULT FocusHandwritingTarget([in] ITfFocusHandwritingTargetArgs* focusHandwritingTargetArgs);
+};
+
+// ITfHandwriting
+[object, uuid(6D829663-627B-4FA5-B759-68A6253BDEBE), local]
+interface ITfHandwriting : IUnknown
+{
+    HRESULT GetHandwritingState([out] TfHandwritingState* handwritingState);
+    HRESULT SetHandwritingState(TfHandwritingState handwritingState);
+    HRESULT RequestHandwritingForPointer(UINT64 pointerId);
+    HRESULT GetHandwritingDistanceBuffer([out] SIZE* distanceBufferPixels);
+    HRESULT TapEvaluatedForHandwritingPointer(UINT64 pointerId, BOOL wasTapDetected);
+};
+
+// IHandwritingInputRoutingCallback
+[object, uuid(FB403AC9-2441-48A9-B294-3423834FD13C), local]
+interface IHandwritingInputRoutingCallback : IUnknown
+{
+    // This callback requests that the client provide the thread Id of the UI thread that is responsible for
+    // the UI the pointer input is targetting
+    HRESULT GetThreadIdForInput(UINT64 PointerId, POINT* targetScreenPoint, HWND targetHWnd, [out] UINT32* threadId);
+};
+
+cpp_quote("HRESULT WINAPI RegisterHandwritingInputRoutingCallback(IHandwritingInputRoutingCallback * callback);")
+
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
+#pragma endregion
+
+cpp_quote("#endif // NTDDI_WIN10_NI")

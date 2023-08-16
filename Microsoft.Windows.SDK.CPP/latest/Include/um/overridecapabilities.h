@@ -408,7 +408,12 @@
 #define OVRDCAP_ARM64_EC_ICALL_CHECK_OPT                  0x0001001E // MUST NOT CHANGE, hard coded in compiler
 #define OVRDCAP_ARM64_EC_CALL_CHECK_OPT                   0x0001001F // MUST NOT CHANGE, hard coded in compiler
 
-#define OVRDCAP_ARM64_MAX                                 0x00010020
+// Ga Capabilities
+#define OVRDCAP_ARM64_V3_CAPSET                           0x00010020
+#define OVRDCAP_ARM64_UNALIGNED_CRT_STRESS_TEST           0x00010021
+#define OVRDCAP_ARM64_UNALIGNED_SAFE_UNCACHED_MEM         0x00010022
+
+#define OVRDCAP_ARM64_MAX                                 0x00010023
 
 #define OVRDCAP_ALWAYS_OFF                                0x7FFFFFFF
 

@@ -15873,6 +15873,44 @@ DEFINE_GUID( GUID_ACTIVE_POWERSCHEME, 0x31F9F286, 0x5084, 0x42FE, 0xB7, 0x20, 0x
 
 //
 // =========================================
+// Define GUIDs which represent Power Modes (Overlays)
+// =========================================
+//
+
+//
+// Efficiency Power Mode
+//
+// {961cc777-2547-4f9d-8174-7d86181b8a7a}
+//
+
+DEFINE_GUID( GUID_POWER_MODE_BEST_EFFICIENCY, 0x961cc777, 0x2547, 0x4f9d, 0x81, 0x74, 0x7d, 0x86, 0x18, 0x1b, 0x8a, 0x7a );
+
+//
+// Default Power Mode
+//
+// {00000000-0000-0000-0000-000000000000}
+//
+
+DEFINE_GUID( GUID_POWER_MODE_NONE, 0L, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 );
+
+//
+// Deprecated Performance Power Mode
+//
+// {3af9B8d9-7c97-431d-ad78-34a8bfea439f}
+//
+
+DEFINE_GUID( GUID_POWER_MODE_PERFORMANCE, 0x3af9b8d9, 0x7c97, 0x431d, 0xad, 0x78, 0x34, 0xa8, 0xbf, 0xea, 0x43, 0x9f );
+
+//
+// Best Performance Power Mode
+//
+// {ded574b5-45a0-4f42-8737-46345c09c238}
+//
+
+DEFINE_GUID( GUID_POWER_MODE_BEST_PERFORMANCE, 0xded574b5, 0x45a0, 0x4f42, 0x87, 0x37, 0x46, 0x34, 0x5c, 0x9, 0xc2, 0x38 );
+
+//
+// =========================================
 // Define GUIDs which represent well-known power settings
 // =========================================
 //
