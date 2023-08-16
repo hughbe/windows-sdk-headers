@@ -3042,6 +3042,12 @@ typedef struct {
     KSPROPERTY  Property;
     ULONG       RequestedBufferSize;
 } KSMIDILOOPED_BUFFER_PROPERTY, *PKSMIDILOOPED_BUFFER_PROPERTY;
+
+// Data format for KSDATAFORMAT_SUBTYPE_UNIVERSALMIDIPACKET
+typedef struct {
+    LONGLONG Position;
+    ULONG   ByteCount;
+} UMPDATAFORMAT, *PUMPDATAFORMAT;
 #endif //  (NTDDI_VERSION >= NTDDI_WIN10_CU)
 
 /*

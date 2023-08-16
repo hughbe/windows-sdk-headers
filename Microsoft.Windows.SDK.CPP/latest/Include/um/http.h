@@ -1247,6 +1247,13 @@ typedef struct _HTTP_LOG_FIELDS_DATA
 
 #endif // _WIN32_WINNT >= 0x0600
 
+
+typedef struct _HTTP_WINHTTP_FAST_FORWARDING_DATA
+{
+    UCHAR Reserved[16];
+} HTTP_WINHTTP_FAST_FORWARDING_DATA, *PHTTP_WINHTTP_FAST_FORWARDING_DATA;
+
+
 //
 // This enum defines a data source for a particular chunk of data.
 //
@@ -1258,11 +1265,11 @@ typedef enum _HTTP_DATA_CHUNK_TYPE
     HttpDataChunkFromFragmentCache,
     HttpDataChunkFromFragmentCacheEx,
     HttpDataChunkTrailers,
+    HttpDataChunkFromWinHttpFastForwarding,
 
     HttpDataChunkMaximum
 
 } HTTP_DATA_CHUNK_TYPE, *PHTTP_DATA_CHUNK_TYPE;
-
 
 //
 // This structure describes an individual data chunk.
@@ -1336,6 +1343,11 @@ typedef struct _HTTP_DATA_CHUNK
             PHTTP_UNKNOWN_HEADER pTrailers;
 
         } Trailers;
+
+        struct
+        {
+            HTTP_WINHTTP_FAST_FORWARDING_DATA WhFastForwardingData;
+        } FromWinHttpFastForwarding;
     };
 
 } HTTP_DATA_CHUNK, *PHTTP_DATA_CHUNK;

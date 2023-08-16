@@ -1,4 +1,4 @@
-
+﻿
 /*++
 
 Copyright (c) 1996 Microsoft Corporation.  All rights reserved.
@@ -60,7 +60,7 @@ Revision History:
 #define NI_UPGRADE_VERSION           2
 #define CU_UPGRADE_VERSION           3
 #define ZN_UPGRADE_VERSION           4
-
+#define GA_UPGRADE_VERSION           5
 
 #define HCI_UPGRADE_BIT 0x8000
 
@@ -94,10 +94,13 @@ Revision History:
 // ie NT13_MAJOR_VERSION = 12 = 0x0C, CU_UPGRADE_VERSION = 3 = 0x03
 #define CLUSAPI_VERSION_CU           0x00000C03
 #define CLUSAPI_VERSION_ZN           0x00000C04
+#define CLUSAPI_VERSION_GA           0x00000C05
 
 
 #if (!defined(CLUSAPI_VERSION))
-#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_ZN))
+#if (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN11_GA))
+#define CLUSAPI_VERSION  CLUSAPI_VERSION_GA
+#elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN11_ZN))
 #define CLUSAPI_VERSION  CLUSAPI_VERSION_ZN
 #elif (!defined(NTDDI_VERSION) || (NTDDI_VERSION >= NTDDI_WIN10_CU))
 #define CLUSAPI_VERSION CLUSAPI_VERSION_CU
@@ -576,8 +579,11 @@ typedef struct _CREATE_CLUSTER_CONFIG
     DWORD                       cIpEntries;
     PCLUSTER_IP_ENTRY           pIpEntries;
     BOOLEAN                     fEmptyCluster;
-    CLUSTER_MGMT_POINT_TYPE     managementPointType;    // CLUSAPI Version >= CLUSAPI_VERSION_WINDOWSBLUE
-    CLUSTER_MGMT_POINT_RESTYPE  managementPointResType;        // CLUSAPI Version >= CLUSAPI_VERSION_RS3
+    CLUSTER_MGMT_POINT_TYPE     managementPointType;        // CLUSAPI Version >= CLUSAPI_VERSION_WINDOWSBLUE
+    CLUSTER_MGMT_POINT_RESTYPE  managementPointResType;     // CLUSAPI Version >= CLUSAPI_VERSION_RS3
+    PCWSTR                      pszUserName;                // CLUSAPU Version >= CLUSAPI_VERSION_GA
+    PCWSTR                      pszPassword;                // CLUSAPU Version >= CLUSAPI_VERSION_GA
+    PCWSTR                      pszDomain;                  // CLUSAPU Version >= CLUSAPI_VERSION_GA
 } CREATE_CLUSTER_CONFIG, *PCREATE_CLUSTER_CONFIG;
 
 // CLUSAPI Version >= CLUSAPI_VERSION_WINTHRESHOLD
@@ -5547,6 +5553,14 @@ typedef enum CLUSCTL_RESOURCE_TYPE_CODES {
 
 } CLUSCTL_RESOURCE_TYPE_CODES;
 
+
+    // To be used with Control Code CLUSCTL_RESOURCE_TYPE_GET_LOCAL_NODE_VF_INFO Only:
+    typedef struct NodeVFInfo {
+        DWORD VFTotal;
+        DWORD VFUsed;
+    } NodeVFInfo;
+
+
 //
 // Cluster Control Codes for Groups
 //
@@ -8093,6 +8107,7 @@ typedef enum _CLUSTER_SETUP_PHASE {
     ClusterSetupPhaseGettingCurrentMembership       = 300,
     ClusterSetupPhaseAddNodeToCluster               = 301,
     ClusterSetupPhaseNodeUp                         = 302,
+    ClusterSetupPhaseApplyNetworkATCIntents         = 303,
 
     ClusterSetupPhaseMoveGroup                      = 400,
     ClusterSetupPhaseDeleteGroup                    = 401,

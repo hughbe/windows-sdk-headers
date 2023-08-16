@@ -617,9 +617,9 @@ SQLITE_API int SQLITE_APICALL sqlite3_exec(
 #if NTDDI_VERSION >= NTDDI_WIN10_CO
 #define SQLITE_CONSTRAINT_PINNED       (SQLITE_CONSTRAINT |(11<<8))
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_CONSTRAINT_DATATYPE     (SQLITE_CONSTRAINT |(12<<8))
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 #define SQLITE_NOTICE_RECOVER_WAL      (SQLITE_NOTICE | (1<<8))
 #define SQLITE_NOTICE_RECOVER_ROLLBACK (SQLITE_NOTICE | (2<<8))
 #define SQLITE_WARNING_AUTOINDEX       (SQLITE_WARNING | (1<<8))
@@ -676,9 +676,9 @@ SQLITE_API int SQLITE_APICALL sqlite3_exec(
 #if NTDDI_VERSION >= NTDDI_WIN10_CO
 #define SQLITE_OPEN_NOFOLLOW         0x01000000  /* Ok for sqlite3_open_v2() */
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_OPEN_EXRESCODE        0x02000000  /* Extended result codes */
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /* Reserved:                         0x00F00000 */
 /* Legacy compatibility: */
@@ -1322,11 +1322,11 @@ struct sqlite3_io_methods {
 #define SQLITE_FCNTL_RESERVE_BYTES          38
 #define SQLITE_FCNTL_CKPT_START             39
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_FCNTL_EXTERNAL_READER        40
 #define SQLITE_FCNTL_CKSM_FILE              41
 #define SQLITE_FCNTL_RESET_CACHE            42
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /* deprecated names */
 #define SQLITE_GET_LOCKPROXYFILE      SQLITE_FCNTL_GET_LOCKPROXYFILE
@@ -1358,7 +1358,7 @@ typedef struct sqlite3_mutex sqlite3_mutex;
 typedef struct sqlite3_api_routines sqlite3_api_routines;
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS2 */
 
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 /*
 ** CAPI3REF: File Name
 **
@@ -1378,7 +1378,7 @@ typedef struct sqlite3_api_routines sqlite3_api_routines;
 ** </ul>
 */
 typedef const char *sqlite3_filename;
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /* sqlite3_filename was added in 3.40.0
    it replaced const char* in some places, and char* in others.
@@ -1387,13 +1387,13 @@ typedef const char *sqlite3_filename;
    introduce _SQLITE_FILENAME and _SQLITE_FILENAME_NONCONST
 */
 #ifndef _SQLITE_FILENAME
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define _SQLITE_FILENAME sqlite3_filename
 #define _SQLITE_FILENAME_NONCONST sqlite3_filename
 #else
 #define _SQLITE_FILENAME const char *
 #define _SQLITE_FILENAME_NONCONST char *
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 #endif /* _SQLITE_FILENAME */
 
 /*
@@ -2742,9 +2742,9 @@ SQLITE_API void SQLITE_APICALL sqlite3_set_last_insert_rowid(sqlite3*,sqlite3_in
 ** </ul>
 */
 SQLITE_API int SQLITE_APICALL sqlite3_changes(sqlite3*);
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 SQLITE_API sqlite3_int64 SQLITE_APICALL sqlite3_changes64(sqlite3*);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /*
 ** CAPI3REF: Total Number Of Rows Modified
@@ -2786,9 +2786,9 @@ SQLITE_API sqlite3_int64 SQLITE_APICALL sqlite3_changes64(sqlite3*);
 ** </ul>
 */
 SQLITE_API int SQLITE_APICALL sqlite3_total_changes(sqlite3*);
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 SQLITE_API sqlite3_int64 SQLITE_APICALL sqlite3_total_changes64(sqlite3*);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /*
 ** CAPI3REF: Interrupt A Long-Running Query
@@ -4069,9 +4069,9 @@ SQLITE_API int SQLITE_APICALL sqlite3_extended_errcode(sqlite3 *db);
 SQLITE_API const char *SQLITE_APICALL sqlite3_errmsg(sqlite3*);
 SQLITE_API const void *SQLITE_APICALL sqlite3_errmsg16(sqlite3*);
 SQLITE_API const char *SQLITE_APICALL sqlite3_errstr(int);
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 SQLITE_API int SQLITE_APICALL sqlite3_error_offset(sqlite3 *db);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /*
 ** CAPI3REF: Prepared Statement Object
@@ -5807,9 +5807,9 @@ SQLITE_API int SQLITE_APICALL sqlite3_value_nochange(sqlite3_value*);
 #if NTDDI_VERSION >= NTDDI_WIN10_VB
 SQLITE_API int SQLITE_APICALL sqlite3_value_frombind(sqlite3_value*);
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_VB */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 SQLITE_API int SQLITE_APICALL sqlite3_value_encoding(sqlite3_value*);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 #if NTDDI_VERSION >= NTDDI_WIN10_RS1
 /*
@@ -6525,7 +6525,7 @@ SQLITE_API int SQLITE_APICALL sqlite3_get_autocommit(sqlite3*);
 */
 SQLITE_API sqlite3 *SQLITE_APICALL sqlite3_db_handle(sqlite3_stmt*);
 
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 /*
 ** CAPI3REF: Return The Schema Name For A Database Connection
 ** METHOD: sqlite3
@@ -6547,7 +6547,7 @@ SQLITE_API sqlite3 *SQLITE_APICALL sqlite3_db_handle(sqlite3_stmt*);
 ** private copy of the result prior to releasing the mutex.
 */
 SQLITE_API const char *SQLITE_APICALL sqlite3_db_name(sqlite3 *db, int N);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /*
 ** CAPI3REF: Return The Filename For A Database Connection
@@ -6710,7 +6710,7 @@ SQLITE_API sqlite3_stmt *SQLITE_APICALL sqlite3_next_stmt(sqlite3 *pDb, sqlite3_
 SQLITE_API void *SQLITE_APICALL sqlite3_commit_hook(sqlite3*, int(SQLITE_CALLBACK *)(void*), void*);
 SQLITE_API void *SQLITE_APICALL sqlite3_rollback_hook(sqlite3*, void(SQLITE_CALLBACK *)(void *), void*);
 
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 /*
 ** CAPI3REF: Autovacuum Compaction Amount Callback
 ** METHOD: sqlite3
@@ -6775,7 +6775,7 @@ SQLITE_API int SQLITE_APICALL sqlite3_autovacuum_pages(
   void*,
   void(SQLITE_CALLBACK *)(void*)
 );
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 
 /*
@@ -7483,10 +7483,10 @@ struct sqlite3_index_info {
 #define SQLITE_INDEX_CONSTRAINT_ISNULL    71
 #define SQLITE_INDEX_CONSTRAINT_IS        72
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS4 */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_INDEX_CONSTRAINT_LIMIT     73
 #define SQLITE_INDEX_CONSTRAINT_OFFSET    74
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 #if NTDDI_VERSION >= NTDDI_WIN10_19H1
 #define SQLITE_INDEX_CONSTRAINT_FUNCTION 150
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_19H1 */
@@ -8308,13 +8308,13 @@ SQLITE_API int SQLITE_CDECL sqlite3_test_control(int op, ...);
 #define SQLITE_TESTCTRL_EXTRA_SCHEMA_CHECKS     29
 #define SQLITE_TESTCTRL_SEEK_COUNT              30
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_TESTCTRL_TRACEFLAGS              31
 #define SQLITE_TESTCTRL_TUNE                    32
 #define SQLITE_TESTCTRL_LOGEST                  33
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_TESTCTRL_LAST                    33  /* Largest TESTCTRL */
 #elif NTDDI_VERSION >= NTDDI_WIN10_CO
 #define SQLITE_TESTCTRL_LAST                    30  /* Largest TESTCTRL */
@@ -8891,10 +8891,10 @@ SQLITE_API int SQLITE_APICALL sqlite3_stmt_status(sqlite3_stmt*, int op,int rese
 #define SQLITE_STMTSTATUS_REPREPARE         5
 #define SQLITE_STMTSTATUS_RUN               6
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS4 */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 #define SQLITE_STMTSTATUS_FILTER_MISS       7
 #define SQLITE_STMTSTATUS_FILTER_HIT        8
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 #if NTDDI_VERSION >= NTDDI_WIN10_RS4
 #define SQLITE_STMTSTATUS_MEMUSED           99
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS4 */
@@ -9904,7 +9904,7 @@ SQLITE_API int SQLITE_APICALL sqlite3_vtab_nochange(sqlite3_context*);
 SQLITE_API SQLITE_EXPERIMENTAL const char *SQLITE_APICALL sqlite3_vtab_collation(sqlite3_index_info*,int);
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_RS5 */
 
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 /*
 ** CAPI3REF: Determine if a virtual table query is DISTINCT
 ** METHOD: sqlite3_index_info
@@ -10141,7 +10141,7 @@ SQLITE_API int SQLITE_APICALL sqlite3_vtab_in_next(sqlite3_value *pVal, sqlite3_
 ** "Right-Hand Side".
 */
 SQLITE_API int SQLITE_APICALL sqlite3_vtab_rhs_value(sqlite3_index_info*, int, sqlite3_value **ppVal);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 
 /*
 ** CAPI3REF: Conflict resolution modes

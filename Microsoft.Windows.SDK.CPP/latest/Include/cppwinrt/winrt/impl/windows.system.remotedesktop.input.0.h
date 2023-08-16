@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -8,7 +8,7 @@
 #define WINRT_Windows_System_RemoteDesktop_Input_0_H
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
 {
-    enum class RemoteKeyEventFlags : uint32_t
+    enum class RemoteKeyEventAttributes : uint32_t
     {
         None = 0,
         KeyUp = 0x1,
@@ -19,7 +19,7 @@ WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
     enum class RemoteTextConnectionOptions : uint32_t
     {
         None = 0,
-        SpeculativeKeyProcessing = 0x1,
+        EnablePredictedKeyReporting = 0x1,
     };
     struct IRemoteTextConnection;
     struct IRemoteTextConnection2;
@@ -35,11 +35,11 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection>{ using type = class_category; };
-    template <> struct category<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags>{ using type = enum_category; };
+    template <> struct category<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions>{ using type = enum_category; };
     template <> struct category<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>{ using type = delegate_category; };
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnection> = L"Windows.System.RemoteDesktop.Input.RemoteTextConnection";
-    template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags> = L"Windows.System.RemoteDesktop.Input.RemoteKeyEventFlags";
+    template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes> = L"Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes";
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionOptions> = L"Windows.System.RemoteDesktop.Input.RemoteTextConnectionOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection> = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnection";
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2> = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnection2";
@@ -47,7 +47,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory2> = L"Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2";
     template <> inline constexpr auto& name_v<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler> = L"Windows.System.RemoteDesktop.Input.RemoteTextConnectionDataHandler";
     template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection>{ 0x4E7BB02A,0x183E,0x5E66,{ 0xB5,0xE4,0x3E,0x6E,0x5C,0x57,0x0C,0xF1 } }; // 4E7BB02A-183E-5E66-B5E4-3E6E5C570CF1
-    template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2>{ 0xB7B95DC6,0x02F1,0x538A,{ 0x80,0x2A,0xC9,0x91,0x6A,0x83,0x01,0x84 } }; // B7B95DC6-02F1-538A-802A-C9916A830184
+    template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2>{ 0x05F99345,0x84C8,0x56C5,{ 0x93,0x4F,0x73,0xEA,0x00,0xF8,0xC2,0xD5 } }; // 05F99345-84C8-56C5-934F-73EA00F8C2D5
     template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory>{ 0x88E075C2,0x0CAE,0x596C,{ 0x85,0x0F,0x78,0xD3,0x45,0xCD,0x72,0x8B } }; // 88E075C2-0CAE-596C-850F-78D345CD728B
     template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory2>{ 0x9425C7D9,0xED9B,0x5D00,{ 0x99,0xCC,0xB0,0xB8,0xDC,0x9E,0x4C,0x60 } }; // 9425C7D9-ED9B-5D00-99CC-B0B8DC9E4C60
     template <> inline constexpr guid guid_v<winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler>{ 0x099FFBC8,0x8BCB,0x41B5,{ 0xB0,0x56,0x57,0xE7,0x70,0x21,0xBF,0x1B } }; // 099FFBC8-8BCB-41B5-B056-57E77021BF1B
@@ -67,7 +67,7 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall DoSpeculativeKeyProcessing(uint16_t, uint32_t) noexcept = 0;
+            virtual int32_t __stdcall ReportPredictedKeyEvent(uint16_t, uint32_t) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnectionFactory>
@@ -107,7 +107,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnection2
     {
-        auto DoSpeculativeKeyProcessing(uint16_t scanCode, winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags const& flags) const;
+        auto ReportPredictedKeyEvent(uint16_t scanCode, winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes const& attributes) const;
     };
     template <> struct consume<winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2>
     {

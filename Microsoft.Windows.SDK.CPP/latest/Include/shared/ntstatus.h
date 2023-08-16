@@ -12117,6 +12117,15 @@ Notes:
 //
 #define STATUS_LAPS_ENCRYPTION_REQUIRES_2016_DFL ((NTSTATUS)0xC000A08EL)
 
+//
+// MessageId: STATUS_LAPS_PROCESS_TERMINATED
+//
+// MessageText:
+//
+// The process was terminated by Windows Local Administrator Password Solution per the configured post-authentication-action policy.
+//
+#define STATUS_LAPS_PROCESS_TERMINATED   ((NTSTATUS)0x8000A08FL)
+
 /*++
 
  MessageId's 0xa100 - 0xa120 (inclusive) are for the SMB Hash Generation Service.
@@ -25055,6 +25064,15 @@ Notes:
 // The size of the virtual disk cannot be safely reduced further.
 //
 #define STATUS_VHD_ALREADY_AT_OR_BELOW_MINIMUM_VIRTUAL_SIZE ((NTSTATUS)0xC03A0033L)
+
+//
+// MessageId: STATUS_VHD_UNEXPECTED_ID
+//
+// MessageText:
+//
+// The specified VHD has an unexpected virtual disk identifier.
+//
+#define STATUS_VHD_UNEXPECTED_ID         ((NTSTATUS)0xC03A0034L)
 
 
 //

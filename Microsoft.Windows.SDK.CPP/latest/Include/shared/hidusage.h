@@ -16,12 +16,8 @@ Environment:
 
 --*/
 
-#ifndef   __HIDUSAGE_H__
-#define   __HIDUSAGE_H__
-#include <winapifamily.h>
-
-#pragma region Desktop Family
-#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
+#ifndef __HIDUSAGE_H__
+#define __HIDUSAGE_H__
 
 //
 // Usage Pages
@@ -69,6 +65,9 @@ typedef USHORT USAGE, *PUSAGE;
 
 #define HID_USAGE_PAGE_VENDOR_DEFINED_BEGIN             ((USAGE) 0xFF00)
 #define HID_USAGE_PAGE_VENDOR_DEFINED_END               ((USAGE) 0xFFFF)
+
+// UsageId of 0 is undefined for every UsagePage
+#define HID_USAGE_UNDEFINED                             ((USAGE) 0x0000)
 
 //
 // Arcade Page (0x91)
@@ -523,8 +522,10 @@ typedef USHORT USAGE, *PUSAGE;
 //
 // Button Page (0x09)
 //
-// There is no need to label these usages.
+// There is no need to label these Usages.
+// As a convenience for strongly-typed scenarios, below macro is provided.
 //
+#define HID_USAGE_BUTTON_ID(id)    ((USAGE) id)
 
 //
 // Camera Control Page (0x90)
@@ -2984,8 +2985,5 @@ typedef USHORT USAGE, *PUSAGE;
 #define HID_USAGE_VR_ANIMATRONIC_DEVICE      ((USAGE) 0x000A)
 #define HID_USAGE_VR_STEREO_ENABLE           ((USAGE) 0x0020)
 #define HID_USAGE_VR_DISPLAY_ENABLE          ((USAGE) 0x0021)
-
-#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
-#pragma endregion
 
 #endif

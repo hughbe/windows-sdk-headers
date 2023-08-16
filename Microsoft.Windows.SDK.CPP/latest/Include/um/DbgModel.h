@@ -324,6 +324,12 @@ DEFINE_GUID(IID_IDebugHostType4, 0x77d3cdc6, 0xbd55, 0x42bf, 0xa4, 0xfd, 0xd9, 0
 // {DB6716CE-8EE8-4C86-89DB-A658915C87F4}
 DEFINE_GUID(IID_IDebugHostType5, 0xdb6716ce, 0x8ee8, 0x4c86, 0x89, 0xdb, 0xa6, 0x58, 0x91, 0x5c, 0x87, 0xf4);
 
+// {08B431ED-F684-4480-8C44-B543AA32CEB0}
+DEFINE_GUID(IID_IDebugHostType6, 0x08b431ed, 0xf684, 0x4480, 0x8c, 0x44, 0xb5, 0x43, 0xaa, 0x32, 0xce, 0xb0);
+
+// {F4A035C0-4CA0-4B6D-BFD2-B378A0DBFE4C}
+DEFINE_GUID(IID_IDebugHostTaggedUnionRangeEnumerator, 0xf4a035c0, 0x4ca0, 0x4b6d, 0xbf, 0xd2, 0xb3, 0x78, 0xa0, 0xdb, 0xfe, 0x4c);
+
 // {62787EDC-FA76-4690-BD71-5E8C3E2937EC}
 DEFINE_GUID(IID_IDebugHostConstant, 0x62787edc, 0xfa76, 0x4690, 0xbd, 0x71, 0x5e, 0x8c, 0x3e, 0x29, 0x37, 0xec);
 
@@ -555,6 +561,8 @@ struct DECLSPEC_UUID("B28632B9-8506-4676-87CE-8F7E05E59876") IDebugHostType2;
 struct DECLSPEC_UUID("8B0409AC-C1BB-433D-887A-ED12C3AF0E7D") IDebugHostType3;
 struct DECLSPEC_UUID("77D3CDC6-BD55-42BF-A4FD-D9AA60E3C1E1") IDebugHostType4;
 struct DECLSPEC_UUID("DB6716CE-8EE8-4C86-89DB-A658915C87F4") IDebugHostType5;
+struct DECLSPEC_UUID("08B431ED-F684-4480-8C44-B543AA32CEB0") IDebugHostType6;
+struct DECLSPEC_UUID("F4A035C0-4CA0-4B6D-BFD2-B378A0DBFE4C") IDebugHostTaggedUnionRangeEnumerator;
 struct DECLSPEC_UUID("62787EDC-FA76-4690-BD71-5E8C3E2937EC") IDebugHostConstant;
 struct DECLSPEC_UUID("E06F6495-16BC-4cc9-B11D-2A6B23FA72F3") IDebugHostField;
 struct DECLSPEC_UUID("99468A0B-EA92-4BD4-9EFE-A266160578CA") IDebugHostField2;
@@ -2089,6 +2097,11 @@ DECLARE_INTERFACE_(IDataModelManager, IUnknown)
     // The full type of the value is defined by the VARIANT in which it is carried.  For values which have
     // ancillary type information (e.g.: enumerations), CreateTypedIntrinsicObject can be used.
     //
+    // NOTE: 128-bit integers are represented in 2-sized, 1-dimensional SAFEARRAYs:
+    //          VT_ARRAY | VT_UI8 is the VARTYPE for 128-bit unsigned integers.
+    //          VT_ARRAY | VT_I8 is the VARTYPE for 128-bit signed integers.
+    //       The first element in the array corresponds to the low 64 bits of the 128-bit integer,
+    //       while the second corresponds to the high 64 bits. 
     STDMETHOD(CreateIntrinsicObject)(
         THIS_
         _In_ ModelObjectKind objectKind,
@@ -6254,7 +6267,10 @@ enum UDTKind
     UDTUnion,
 
     // UDT is an interface
-    UDTInterface
+    UDTInterface,
+
+    // UDT is a tagged union
+    UDTTaggedUnion
 };
 
 //
@@ -6578,7 +6594,7 @@ DECLARE_INTERFACE_(IDebugHostType4, IDebugHostType3)
 
     // GetUDTKind():
     //
-    // Returns a value indicating whether the UDT is a struct, union, class, or interface.
+    // Returns a value indicating whether the UDT is a struct, union, class, interface or tagged union.
     //
     STDMETHOD(GetUDTKind)(
         THIS_
@@ -6929,6 +6945,450 @@ DECLARE_INTERFACE_(IDebugHostType5, IDebugHostType4)
         _In_ IDebugHostType* pOtherType,
         _Out_ bool* pIsBase
         ) PURE;
+};
+
+//
+// IDebugHostType6:
+//
+// Additional type information capabilities provided in addition to those of IDebugHostType.
+//
+#undef INTERFACE
+#define INTERFACE IDebugHostType6
+DECLARE_INTERFACE_(IDebugHostType6, IDebugHostType5)
+{
+    //*************************************************
+    // IUnknown:
+
+    STDMETHOD(QueryInterface)(
+        THIS_
+        _In_ REFIID iid,
+        _COM_Outptr_ PVOID* iface
+        ) PURE;
+
+    STDMETHOD_(ULONG, AddRef)(
+        THIS
+        ) PURE;
+
+    STDMETHOD_(ULONG, Release)(
+        THIS
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostSymbol:
+
+    STDMETHOD(GetContext)(
+        THIS_
+        _COM_Outptr_ IDebugHostContext** context
+        ) PURE;
+
+    STDMETHOD(EnumerateChildren)(
+        THIS_
+        _In_ SymbolKind kind,
+        _In_opt_z_ PCWSTR name,
+        _Out_ IDebugHostSymbolEnumerator **ppEnum
+        ) PURE;
+
+    STDMETHOD(GetSymbolKind)(
+        THIS_
+        _Out_ SymbolKind *kind
+        ) PURE;
+
+    STDMETHOD(GetName)(
+        THIS_
+        _Out_ BSTR* symbolName
+        ) PURE;
+
+    STDMETHOD(GetType)(
+        THIS_
+        _Out_ IDebugHostType** type
+        ) PURE;
+
+    STDMETHOD(GetContainingModule)(
+        THIS_
+        _Out_ IDebugHostModule **containingModule
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostType:
+
+    STDMETHOD(GetTypeKind)(
+        THIS_
+        _Out_ TypeKind *kind
+        ) PURE;
+
+    STDMETHOD(GetSize)(
+        THIS_
+        _Out_ ULONG64* size
+        ) PURE;
+
+    STDMETHOD(GetBaseType)(
+        THIS_
+        _Out_ IDebugHostType** baseType
+        ) PURE;
+
+    STDMETHOD(GetHashCode)(
+        THIS_
+        _Out_ ULONG* hashCode
+        ) PURE;
+
+    STDMETHOD(GetIntrinsicType)(
+        THIS_
+        _Out_opt_ IntrinsicKind *intrinsicKind,
+        _Out_opt_ VARTYPE *carrierType
+        ) PURE;
+
+    //*************************************************
+    // Bitfield Information:
+    //
+    // The following methods only apply to types which are bitfields:
+    //
+
+    STDMETHOD(GetBitField)(
+        THIS_
+        _Out_ ULONG* lsbOfField,
+        _Out_ ULONG* lengthOfField
+        ) PURE;
+
+    //*************************************************
+    // Pointer Information (GetKind returns TypePointer):
+    //
+    // The following methods only apply to types which are pointers (or create
+    // derivative types which are pointers)
+    //
+
+    STDMETHOD(GetPointerKind)(
+        THIS_
+        _Out_ PointerKind* pointerKind
+        ) PURE;
+
+    STDMETHOD(GetMemberType)(
+        THIS_
+        _Out_ IDebugHostType** memberType
+        ) PURE;
+
+    STDMETHOD(CreatePointerTo)(
+        THIS_
+        _In_ PointerKind kind,
+        _COM_Outptr_ IDebugHostType** newType
+        ) PURE;
+
+    //*************************************************
+    // Array Information (GetKind returns TypeArray):
+    //
+    // The following methods only apply to types which are arrays (or create
+    // derivative types which are arrays)
+    //
+
+    STDMETHOD(GetArrayDimensionality)(
+        THIS_
+        _Out_ ULONG64* arrayDimensionality
+        ) PURE;
+
+    STDMETHOD(GetArrayDimensions)(
+        THIS_
+        _In_ ULONG64 dimensions,
+        _Out_writes_(dimensions) ArrayDimension *pDimensions
+        ) PURE;
+
+    STDMETHOD(CreateArrayOf)(
+        THIS_
+        _In_ ULONG64 dimensions,
+        _In_reads_(dimensions) ArrayDimension *pDimensions,
+        _COM_Outptr_ IDebugHostType** newType
+        ) PURE;
+
+    //*************************************************
+    // Function Information (GetKind returns TypeFunction):
+    //
+    // The following methods only apply to types which are functions (or create
+    // derivative types which are functions)
+    //
+
+    STDMETHOD(GetFunctionCallingConvention)(
+        THIS_
+        _Out_ CallingConventionKind* conventionKind
+        ) PURE;
+
+    STDMETHOD(GetFunctionReturnType)(
+        THIS_
+        _COM_Outptr_ IDebugHostType** returnType
+        ) PURE;
+
+    STDMETHOD(GetFunctionParameterTypeCount)(
+        THIS_
+        _Out_ ULONG64* count
+        ) PURE;
+
+    STDMETHOD(GetFunctionParameterTypeAt)(
+        THIS_
+        _In_ ULONG64 i,
+        _Out_ IDebugHostType** parameterType
+        ) PURE;
+
+    //*************************************************
+    // Template Information:
+    //
+    // The following methods only apply to types which are templates or generics (or create
+    // derivative types which are templates or generics)
+    //
+
+    STDMETHOD(IsGeneric)(
+        THIS_
+        _Out_ bool* isGeneric
+        ) PURE;
+
+    STDMETHOD(GetGenericArgumentCount)(
+        THIS_
+        _Out_ ULONG64* argCount
+        ) PURE;
+
+    STDMETHOD(GetGenericArgumentAt)(
+        THIS_
+        _In_ ULONG64 i,
+        _Out_ IDebugHostSymbol** argument
+        ) PURE;
+
+    //**************************************************************************
+    // IDebugHostType2:
+    //
+    // The following methods are only available in the v2 IDebugHostType interface.
+
+    //*************************************************
+    // Typedef Information:
+    //
+    // Typedef types are, for the vast majority of calls, indistinguishable from the types they are definitions
+    // against.  In the event that the true typedef information needs to be known, the following APIs
+    // apply.
+    //
+
+    // IsTypedef():
+    //
+    // Returns whether the type is a typedef for another type or not.
+    //
+    STDMETHOD(IsTypedef)(
+        THIS_
+        _Out_ bool* isTypedef
+        ) PURE;
+
+    // GetTypedefBaseType():
+    //
+    // If IsTypedef returns true, this will return the type that a typedef refers to.  Note that the base
+    // type may be another typedef.  It is entirely possible to have a chain of definitions.  If the caller
+    // wishes to acquire the first non-typedef type of a chain, GetTypedefFinalBaseType is the appropriate call.
+    //
+    STDMETHOD(GetTypedefBaseType)(
+        THIS_
+        _Out_ IDebugHostType2** baseType
+        ) PURE;
+
+    // GetTypedefFinalBaseType():
+    //
+    // If IsTypedef returns true, this will return the bottom-most type of a typedef chain.  That is, the first
+    // type in the chain which is NOT a typedef.  This is the type which is implicitly used for most
+    // non-typedef IDebugHostType::* methods on a typedef type.
+    //
+    STDMETHOD(GetTypedefFinalBaseType)(
+        THIS_
+        _Out_ IDebugHostType2** finalBaseType
+        ) PURE;
+
+    //*************************************************
+    // Extended Function Information:
+    //
+    // The following methods indicate additional information about function types that is only available through
+    // IDebugHostType2.
+    //
+
+    // GetFunctionVarArgsKind():
+    //
+    // Indicates whether and what kind of variable arguments a function takes.
+    //
+    STDMETHOD(GetFunctionVarArgsKind)(
+        THIS_
+        _Out_ VarArgsKind* varArgsKind
+        ) PURE;
+
+    // GetFunctionInstancePointerType():
+    //
+    // Indicates what the type of the instance ("this") pointer passed to the function is.  This method will fail
+    // if the function is not an instance method on a class.
+    //
+    STDMETHOD(GetFunctionInstancePointerType)(
+        THIS_
+        _Out_ IDebugHostType2** instancePointerType
+        ) PURE;
+
+    //**************************************************************************
+    // IDebugHostType3:
+    //
+    // The following methods are only available in the IDebugHostTyp3 interface.
+
+    // GetContainingType():
+    //
+    // Returns the type of the containing parent (containing this symbol)
+    //
+    STDMETHOD(GetContainingType)(
+        THIS_
+        _Out_ IDebugHostType3** containingParentType
+        ) PURE;
+
+    //**************************************************************************
+    // IDebugHostType4:
+    //
+    // The following methods are only available in the IDebugHostType4 interface.
+    //
+
+    // GetExtendedArrayHeaderSize():
+    //
+    // If the array has a header including layout information, this returns the size of such header.  This
+    // is the offset from the start of the array to the first element in the array as described by the
+    // extended array dimensions.
+    //
+    STDMETHOD(GetExtendedArrayHeaderSize)(
+        THIS_
+        _Out_ ULONG64* headerSize
+        ) PURE;
+
+    // GetExtendedArrayDimensions():
+    //
+    // Fills in information about each dimension of the array including its lower bound, length, and stride.
+    // This method should not be called on TypeExtendedArray.  Methods in IDebugHostType3 should be utilized.
+    //
+    STDMETHOD(GetExtendedArrayDimensions)(
+        THIS_
+        _In_ ULONG64 dimensions,
+        _Out_writes_(dimensions) ExtendedArrayDimension *pDimensions
+        ) PURE;
+
+    //*************************************************
+    // UDT Information (GetKind returns TypeUDT):
+    //
+    // The following methods only apply to types which are user-defined types:
+    //
+
+    // GetUDTKind():
+    //
+    // Returns a value indicating whether the UDT is a struct, union, class, or interface.
+    //
+    STDMETHOD(GetUDTKind)(
+        THIS_
+        _Out_ UDTKind* udtKind
+        ) PURE;
+
+    //**************************************************************************
+    // IDebugHostType5:
+    //
+    // The following methods are only available in the IDebugHostType5 interface.
+    //
+
+    // IsBaseTypeOf():
+    //
+    // Returns whether this type is a base type of another type.
+    //
+    STDMETHOD(IsBaseTypeOf)(
+        THIS_
+        _In_ IDebugHostType* pOtherType,
+        _Out_ bool* pIsBase
+        ) PURE;
+
+    //**************************************************************************
+    // IDebugHostType6:
+    //
+    // The following methods are only available in the IDebugHostType6 interface.
+    //
+
+    // GetTaggedUnionTag():
+    //
+    // For cases within a tagged union type, this returns the type and offset of the tag
+    // as well as any mask value that should be applied to the tag before comparison.
+    //
+    STDMETHOD(GetTaggedUnionTag)(
+        THIS_
+        _Out_ IDebugHostType** pTagType,
+        _Out_ ULONG* pTagOffset,
+        _Out_ VARIANT* pTagMask
+        ) PURE;
+
+    // GetTaggedUnionTagRanges():
+    //
+    // For cases within a tagged union type, this returns an enumerator over the tag ranges.
+    //
+    STDMETHOD(GetTaggedUnionTagRanges)(
+        THIS_
+        _Out_ IDebugHostTaggedUnionRangeEnumerator** pTagRangeEnumerator
+        ) PURE;
+
+    // UpcastToTaggedUnionType():
+    //
+    // For cases within a tagged union type, this will return a type that is conceptually
+    // the same as the tagged union type but narrowed to this case such that enumerating
+    // children of the type will return children of this case.
+    STDMETHOD(UpcastToTaggedUnionType)(
+        THIS_
+        _In_ IDebugHostType* pTaggedUnionType,
+        _Out_ IDebugHostType** pUpcastedCaseType
+        ) PURE;
+};
+
+//
+// IDebugHostTaggedUnionRangeEnumerator:
+//
+// This enumerates a set of tag ranges for a tagged union case. This can be acquired by calling
+// IDebugHostType6::GetTaggedUnionTagRanges() on a tagged union case type.
+//
+#undef INTERFACE
+#define INTERFACE IDebugHostTaggedUnionRangeEnumerator
+DECLARE_INTERFACE_(IDebugHostTaggedUnionRangeEnumerator, IUnknown)
+{
+    //*************************************************
+    // IUnknown:
+
+    STDMETHOD(QueryInterface)(
+        THIS_
+        _In_ REFIID iid,
+        _COM_Outptr_ PVOID* iface
+        ) PURE;
+
+    STDMETHOD_(ULONG, AddRef)(
+        THIS
+        ) PURE;
+
+    STDMETHOD_(ULONG, Release)(
+        THIS
+        ) PURE;
+
+    //*************************************************
+    // IDebugHostTaggedUnionRangeEnumerator:
+
+    // Reset():
+    //
+    // Resets the enumerator to its initial state.  A subsequent GetNext call will return
+    // the first low/high tag pair in the set in enumerator order.
+    //
+    STDMETHOD(Reset)(
+        THIS
+        ) PURE;
+
+    // GetNext():
+    //
+    // Moves the iterator forward and fetches the next low/high tag pair in the set.
+    //
+    // E_BOUNDS will be returned when the enumerator hits the end of the set.
+    //
+    STDMETHOD(GetNext)(
+        THIS_
+        _Out_ VARIANT* pLow,
+        _Out_ VARIANT* pHigh
+        ) PURE;
+
+    // GetCount():
+    //
+    // Returns the total number of tag values (not pairs) that will be returned from GetNext().
+    //
+    STDMETHOD(GetCount)(
+        THIS_
+        _Out_ ULONG* pCount
+    ) PURE;
 };
 
 

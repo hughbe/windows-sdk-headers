@@ -598,6 +598,13 @@ DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_UsbHostRouterName, 44);
 
 DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_ParentSerialNumber,  45);
 
+//
+// This property contains a boolean to indicate whether the device
+// supports DMWr along the entire device tree from the root to the device.
+//
+
+DEFINE_PCI_DEVICE_DEVPKEY(DEVPKEY_PciDevice_SupportsDmwrOnEntireDeviceTree, 46);
+
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 

@@ -346,6 +346,11 @@ typedef struct _NCRYPT_KEY_ATTEST_PADDING_INFO {
 #define NCRYPT_CLAIM_SUBJECT_ONLY                           0x00000002
 #define NCRYPT_CLAIM_AUTHORITY_AND_SUBJECT                  0x00000003
 #if (NTDDI_VERSION >= NTDDI_WIN10_RS3)
+//
+// The NCRYPT_CLAIM_VBS_KEY_ATTESTATION_STATEMENT claim type is automatically transformed to NCRYPT_CLAIM_VBS_ROOT in
+// NCryptCreateClaim. Thus, to verify a transformed NCRYPT_CLAIM_VBS_KEY_ATTESTATION_STATEMENT claim successfully,
+// the API NCryptVerifyClaim with NCRYPT_CLAIM_VBS_ROOT will have to be invoked.
+//
 #define NCRYPT_CLAIM_VBS_KEY_ATTESTATION_STATEMENT          0x00000004
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_RS3)
 #if (NTDDI_VERSION >= NTDDI_WIN11_SV3)

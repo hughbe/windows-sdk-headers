@@ -460,8 +460,6 @@
 #define PrBasePriority 0x288
 #define PrQuantumReset 0x289
 #define PrCycleTime 0x368
-#define PrKernelTime 0x384
-#define PrUserTime 0x388
 #define PrInstrumentationCallback 0x390
 #define PrMitigationFlags2 0xa94
 #define KernelProcessObjectLength 0x3f0
@@ -570,7 +568,7 @@
 #define ThStackBase 0x38
 #define ThLegoData 0x2f0
 #define KernelThreadObjectLength 0x4a0
-#define ExecutiveThreadObjectLength 0x700
+#define ExecutiveThreadObjectLength 0x708
 
 
 //
@@ -921,7 +919,7 @@
 #define PcSkipTick 0x1918
 #define PcStartCycles 0x1948
 #define PcSpBase 0x1500
-#define ProcessorControlRegisterLength 0x2a140
+#define ProcessorControlRegisterLength 0x2a1c0
 
 //
 // Defines for user shared data
@@ -972,7 +970,7 @@
 #define PbPacketBarrier 0xa80
 #define PbDeferredReadyListHead 0xa88
 #define PbLookasideIrpFloat 0xad8
-#define PbRequestMailbox 0x9780
+#define PbRequestMailbox 0x9800
 #define PbMailbox 0xb00
 #define PbDpcGate 0xc00
 #define PbWaitListHead 0xc80

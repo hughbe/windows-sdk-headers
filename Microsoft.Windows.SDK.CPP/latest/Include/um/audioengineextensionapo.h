@@ -68,6 +68,13 @@ typedef interface IAudioProcessingObjectLoggingService IAudioProcessingObjectLog
 #endif 	/* __IAudioProcessingObjectLoggingService_FWD_DEFINED__ */
 
 
+#ifndef __IAudioProcessingObjectPreferredFormatSupport_FWD_DEFINED__
+#define __IAudioProcessingObjectPreferredFormatSupport_FWD_DEFINED__
+typedef interface IAudioProcessingObjectPreferredFormatSupport IAudioProcessingObjectPreferredFormatSupport;
+
+#endif 	/* __IAudioProcessingObjectPreferredFormatSupport_FWD_DEFINED__ */
+
+
 #ifndef __IAudioProcessingObjectNotifications_FWD_DEFINED__
 #define __IAudioProcessingObjectNotifications_FWD_DEFINED__
 typedef interface IAudioProcessingObjectNotifications IAudioProcessingObjectNotifications;
@@ -609,6 +616,105 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
 extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0003_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0003_v0_0_s_ifspec;
 
+#ifndef __IAudioProcessingObjectPreferredFormatSupport_INTERFACE_DEFINED__
+#define __IAudioProcessingObjectPreferredFormatSupport_INTERFACE_DEFINED__
+
+/* interface IAudioProcessingObjectPreferredFormatSupport */
+/* [local][unique][uuid][object] */ 
+
+
+EXTERN_C const IID IID_IAudioProcessingObjectPreferredFormatSupport;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    
+    MIDL_INTERFACE("51CBD3C4-F1F3-4D2F-A0E1-7E9C4DD0FEB3")
+    IAudioProcessingObjectPreferredFormatSupport : public IUnknown
+    {
+    public:
+        virtual HRESULT STDMETHODCALLTYPE GetPreferredInputFormat( 
+            /* [in] */ IAudioMediaType *outputFormat,
+            /* [out] */ IAudioMediaType **preferredFormat) = 0;
+        
+        virtual HRESULT STDMETHODCALLTYPE GetPreferredOutputFormat( 
+            /* [in] */ IAudioMediaType *inputFormat,
+            /* [out] */ IAudioMediaType **preferredFormat) = 0;
+        
+    };
+    
+    
+#else 	/* C style interface */
+
+    typedef struct IAudioProcessingObjectPreferredFormatSupportVtbl
+    {
+        BEGIN_INTERFACE
+        
+        DECLSPEC_XFGVIRT(IUnknown, QueryInterface)
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            IAudioProcessingObjectPreferredFormatSupport * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        DECLSPEC_XFGVIRT(IUnknown, AddRef)
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            IAudioProcessingObjectPreferredFormatSupport * This);
+        
+        DECLSPEC_XFGVIRT(IUnknown, Release)
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            IAudioProcessingObjectPreferredFormatSupport * This);
+        
+        DECLSPEC_XFGVIRT(IAudioProcessingObjectPreferredFormatSupport, GetPreferredInputFormat)
+        HRESULT ( STDMETHODCALLTYPE *GetPreferredInputFormat )( 
+            IAudioProcessingObjectPreferredFormatSupport * This,
+            /* [in] */ IAudioMediaType *outputFormat,
+            /* [out] */ IAudioMediaType **preferredFormat);
+        
+        DECLSPEC_XFGVIRT(IAudioProcessingObjectPreferredFormatSupport, GetPreferredOutputFormat)
+        HRESULT ( STDMETHODCALLTYPE *GetPreferredOutputFormat )( 
+            IAudioProcessingObjectPreferredFormatSupport * This,
+            /* [in] */ IAudioMediaType *inputFormat,
+            /* [out] */ IAudioMediaType **preferredFormat);
+        
+        END_INTERFACE
+    } IAudioProcessingObjectPreferredFormatSupportVtbl;
+
+    interface IAudioProcessingObjectPreferredFormatSupport
+    {
+        CONST_VTBL struct IAudioProcessingObjectPreferredFormatSupportVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define IAudioProcessingObjectPreferredFormatSupport_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define IAudioProcessingObjectPreferredFormatSupport_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define IAudioProcessingObjectPreferredFormatSupport_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define IAudioProcessingObjectPreferredFormatSupport_GetPreferredInputFormat(This,outputFormat,preferredFormat)	\
+    ( (This)->lpVtbl -> GetPreferredInputFormat(This,outputFormat,preferredFormat) ) 
+
+#define IAudioProcessingObjectPreferredFormatSupport_GetPreferredOutputFormat(This,inputFormat,preferredFormat)	\
+    ( (This)->lpVtbl -> GetPreferredOutputFormat(This,inputFormat,preferredFormat) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* __IAudioProcessingObjectPreferredFormatSupport_INTERFACE_DEFINED__ */
+
+
 #ifndef __IAudioProcessingObjectNotifications_INTERFACE_DEFINED__
 #define __IAudioProcessingObjectNotifications_INTERFACE_DEFINED__
 
@@ -825,15 +931,15 @@ EXTERN_C const IID IID_IAudioProcessingObjectNotifications2;
 #endif 	/* __IAudioProcessingObjectNotifications2_INTERFACE_DEFINED__ */
 
 
-/* interface __MIDL_itf_audioengineextensionapo_0000_0005 */
+/* interface __MIDL_itf_audioengineextensionapo_0000_0006 */
 /* [local] */ 
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
 
-extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0005_v0_0_c_ifspec;
-extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0005_v0_0_s_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0006_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_audioengineextensionapo_0000_0006_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

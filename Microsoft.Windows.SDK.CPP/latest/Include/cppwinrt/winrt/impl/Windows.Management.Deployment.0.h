@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -131,6 +131,7 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
     struct IDeploymentResult2;
     struct IFindSharedPackageContainerOptions;
     struct IPackageAllUserProvisioningOptions;
+    struct IPackageAllUserProvisioningOptions2;
     struct IPackageManager;
     struct IPackageManager10;
     struct IPackageManager2;
@@ -195,6 +196,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Management::Deployment::IDeploymentResult2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IFindSharedPackageContainerOptions>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IPackageManager>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IPackageManager10>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Management::Deployment::IPackageManager2>{ using type = interface_category; };
@@ -302,6 +304,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IDeploymentResult2> = L"Windows.Management.Deployment.IDeploymentResult2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IFindSharedPackageContainerOptions> = L"Windows.Management.Deployment.IFindSharedPackageContainerOptions";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions> = L"Windows.Management.Deployment.IPackageAllUserProvisioningOptions";
+    template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2> = L"Windows.Management.Deployment.IPackageAllUserProvisioningOptions2";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageManager> = L"Windows.Management.Deployment.IPackageManager";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageManager10> = L"Windows.Management.Deployment.IPackageManager10";
     template <> inline constexpr auto& name_v<winrt::Windows::Management::Deployment::IPackageManager2> = L"Windows.Management.Deployment.IPackageManager2";
@@ -341,6 +344,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IDeploymentResult2>{ 0xFC0E715C,0x5A01,0x4BD7,{ 0xBC,0xF1,0x38,0x1C,0x8C,0x82,0xE0,0x4A } }; // FC0E715C-5A01-4BD7-BCF1-381C8C82E04A
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IFindSharedPackageContainerOptions>{ 0xB40FC8FE,0x8384,0x54CC,{ 0x81,0x7D,0xAE,0x09,0xD3,0xB6,0xA6,0x06 } }; // B40FC8FE-8384-54CC-817D-AE09D3B6A606
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions>{ 0xDA35AA22,0x1DE0,0x5D3E,{ 0x99,0xFF,0xD2,0x4F,0x31,0x18,0xBF,0x5E } }; // DA35AA22-1DE0-5D3E-99FF-D24F3118BF5E
+    template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>{ 0xB9E3CAB5,0x2D97,0x579F,{ 0x93,0x68,0xD1,0x0B,0xB4,0xD4,0x54,0x2B } }; // B9E3CAB5-2D97-579F-9368-D10BB4D4542B
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageManager>{ 0x9A7D4B65,0x5E8F,0x4FC7,{ 0xA2,0xE5,0x7F,0x69,0x25,0xCB,0x8B,0x53 } }; // 9A7D4B65-5E8F-4FC7-A2E5-7F6925CB8B53
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageManager10>{ 0xA7D7D07E,0x2E66,0x4093,{ 0xAE,0xD5,0xE0,0x93,0xED,0x87,0xB3,0xBB } }; // A7D7D07E-2E66-4093-AED5-E093ED87B3BB
     template <> inline constexpr guid guid_v<winrt::Windows::Management::Deployment::IPackageManager2>{ 0xF7AAD08D,0x0840,0x46F2,{ 0xB5,0xD8,0xCA,0xD4,0x76,0x93,0xA0,0x95 } }; // F7AAD08D-0840-46F2-B5D8-CAD47693A095
@@ -554,6 +558,14 @@ namespace winrt::impl
         {
             virtual int32_t __stdcall get_OptionalPackageFamilyNames(void**) noexcept = 0;
             virtual int32_t __stdcall get_ProjectionOrderPackageFamilyNames(void**) noexcept = 0;
+        };
+    };
+    template <> struct abi<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_DeferAutomaticRegistration(bool*) noexcept = 0;
+            virtual int32_t __stdcall put_DeferAutomaticRegistration(bool) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Management::Deployment::IPackageManager>
@@ -1058,6 +1070,16 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions>
     {
         template <typename D> using type = consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions2
+    {
+        [[nodiscard]] auto DeferAutomaticRegistration() const;
+        auto DeferAutomaticRegistration(bool value) const;
+    };
+    template <> struct consume<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>
+    {
+        template <typename D> using type = consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions2<D>;
     };
     template <typename D>
     struct consume_Windows_Management_Deployment_IPackageManager

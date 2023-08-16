@@ -131,6 +131,12 @@ typedef struct tagDiagnosticsInfo
     ULONG flags;
 } DiagnosticsInfo, *PDiagnosticsInfo;
 
+cpp_quote("#if defined(FKG_FORCED_USAGE) || defined(BUILD_WINDOWS)")
+cpp_quote("#define NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(x)")
+cpp_quote("#else")
+cpp_quote("#define NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(x) __pragma(deprecated(x))")
+cpp_quote("#endif")
+
 //
 // interfaces implemented by Network Diagnostics Helper Classes
 //
@@ -229,6 +235,7 @@ interface INetDiagHelper : IUnknown
     //...
 
 };
+cpp_quote("NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelper)")
 
 typedef struct tagHypothesisResult
 {
@@ -247,6 +254,7 @@ interface INetDiagHelperUtilFactory : IUnknown
       [out, iid_is(riid)] void ** ppvObject
     );
 }
+cpp_quote("NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperUtilFactory)")
 
 //
 // interface implemented by Network Diagnostics Helper Classes
@@ -273,6 +281,7 @@ interface INetDiagHelperEx : IUnknown
       );
 
 }
+cpp_quote("NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperEx)")
 
 //
 // interfaces implemented by Network Diagnostics Helper Classes
@@ -290,6 +299,7 @@ interface INetDiagHelperInfo : IUnknown
                     HelperAttributeInfo** pprgAttributeInfos
                     );
 }
+cpp_quote("NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperInfo)")
 
 //
 // interface implemented by Extensible Helper Class
@@ -308,6 +318,7 @@ interface INetDiagExtensibleHelper : IUnknown
                 [out, size_is(,*pcelt)] HELPER_ATTRIBUTE** prgMatchValues
             );
 }
+cpp_quote("NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagExtensibleHelper)")
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */")
 #pragma endregion

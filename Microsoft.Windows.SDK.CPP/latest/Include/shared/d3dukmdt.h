@@ -51,7 +51,7 @@
 #define DXGKDDI_INTERFACE_VERSION_WDDM2_9    0xE003
 #define DXGKDDI_INTERFACE_VERSION_WDDM3_0    0xF003
 #define DXGKDDI_INTERFACE_VERSION_WDDM3_1   0x10004
-#define DXGKDDI_INTERFACE_VERSION_WDDM3_2   0x11004
+#define DXGKDDI_INTERFACE_VERSION_WDDM3_2   0x11005
 
 
 #define IS_OFFICIAL_DDI_INTERFACE_VERSION(version)                 \
@@ -1398,6 +1398,10 @@ typedef enum _D3DDDI_SYNCHRONIZATIONOBJECT_TYPE
     D3DDDI_PERIODIC_MONITORED_FENCE = 6,
 #endif // DXGKDDI_INTERFACE_VERSION
 
+#if ((DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1) || \
+     (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM3_1))
+    D3DDDI_NATIVE_FENCE             = 7,
+#endif
     D3DDDI_SYNCHRONIZATION_TYPE_LIMIT
 
 } D3DDDI_SYNCHRONIZATIONOBJECT_TYPE;
@@ -1901,28 +1905,24 @@ typedef struct _D3DDDI_SYNCHRONIZATIONOBJECTINFO2
 #if ((DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1) || \
      (D3D_UMD_INTERFACE_VERSION >= D3D_UMD_INTERFACE_VERSION_WDDM3_1))
 
+#define D3DDDI_NATIVE_FENCE_PDD_SIZE 64
+
 typedef struct _D3DDDI_NATIVEFENCEMAPPING
 {
     D3DKMT_PTR(VOID*,                       CurrentValueCpuVa);     // Read-only mapping of the current value for the CPU
     D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS   CurrentValueGpuVa;      // Read/write mapping of the current value for the GPU in the current process address space
     D3DKMT_ALIGN64 D3DGPU_VIRTUAL_ADDRESS   MonitoredValueGpuVa;    // Read/write mapping of the monitored value for the GPU in the current process address space
+    D3DKMT_ALIGN64 BYTE                     Reserved[32];
 } D3DDDI_NATIVEFENCEMAPPING;
 
-typedef struct _D3DDDI_CREATENATIVEFENCEINFO
+typedef struct _D3DDDI_NATIVEFENCEINFO
 {
     D3DKMT_ALIGN64 UINT64                   InitialFenceValue;      // in: initial fence value.
-
-    D3DKMT_PTR(_Field_size_bytes_(PrivateDriverDataSize)
-    PVOID,                                  pPrivateDriverData);    // in: Private driver data to pass to KMD CreateNativeFence call
-    UINT                                    PrivateDriverDataSize;  // in: size of pPrivateDriverData array in bytes
-
     UINT                                    EngineAffinity;         // in: Defines physical adapters where the GPU VA is mapped
     D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS      Flags;                  // in: Flags.
-
-    D3DKMT_HANDLE                           hSyncObject;            // out: Handle to sync object in this process.
-
     D3DDDI_NATIVEFENCEMAPPING               NativeFenceMapping;     // out: process mapping information for the native fence
-} D3DDDI_CREATENATIVEFENCEINFO;
+    D3DKMT_ALIGN64 BYTE                     Reserved[32];
+} D3DDDI_NATIVEFENCEINFO;
 
 typedef enum _DXGK_NATIVE_FENCE_LOG_TYPE
 {
@@ -2139,6 +2139,7 @@ typedef enum _DXGK_FEATURE_ID
     DXGK_FEATURE_SAMPLE                         = 31,
     DXGK_FEATURE_PAGE_BASED_MEMORY_MANAGER      = 32,
     DXGK_FEATURE_KERNEL_MODE_TESTING            = 33,
+    DXGK_FEATURE_64K_PT_DEMOTION_FIX            = 34,
 
     DXGK_FEATURE_MAX
 } DXGK_FEATURE_ID;
@@ -2193,13 +2194,18 @@ typedef struct _D3DDDI_TESTCOMMANDBUFFER_FILL
 
 typedef struct _D3DDDI_TESTCOMMANDBUFFER
 {
-    D3DDDI_TESTCOMMANDBUFFEROP Operation;
     union 
     {
         D3DDDI_TESTCOMMANDBUFFER_COPY  Copy;
         D3DDDI_TESTCOMMANDBUFFER_FILL  Fill;
+        char                           Reserved[64];    // Reserved for future extensions
     };
+    D3DDDI_TESTCOMMANDBUFFEROP  Operation;
+    UINT                        Reserved1;
 } D3DDDI_TESTCOMMANDBUFFER;
+#if defined(__cplusplus) && !defined(SORTPP_PASS)
+static_assert(sizeof(D3DDDI_TESTCOMMANDBUFFER) == 72, "D3DDDI_TESTCOMMANDBUFFER must be 72 bytes");
+#endif
 
 typedef struct _D3DDDI_BUILDTESTCOMMANDBUFFERFLAGS
 {
@@ -2223,7 +2229,7 @@ typedef struct _D3DDDI_DRIVERESCAPE_BUILDTESTCOMMANDBUFFER
     D3DKMT_HANDLE                       hDevice;
     D3DKMT_HANDLE                       hContext;
     D3DDDI_BUILDTESTCOMMANDBUFFERFLAGS  Flags;
-    D3DDDI_TESTCOMMANDBUFFER     Command;
+    D3DDDI_TESTCOMMANDBUFFER            Command;
     D3DKMT_PTR(_Field_size_bytes_(DmaBufferSize)
     PVOID,                              pDmaBuffer);
     D3DKMT_PTR(_Field_size_bytes_(DmaBufferPrivateDataSize)

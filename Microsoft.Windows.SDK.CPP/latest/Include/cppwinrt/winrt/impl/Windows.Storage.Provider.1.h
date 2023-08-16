@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -115,6 +115,41 @@ WINRT_EXPORT namespace winrt::Windows::Storage::Provider
     {
         IStorageProviderItemPropertySource(std::nullptr_t = nullptr) noexcept {}
         IStorageProviderItemPropertySource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderKnownFolderEntry :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderKnownFolderEntry>
+    {
+        IStorageProviderKnownFolderEntry(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderKnownFolderEntry(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderKnownFolderSyncInfo :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderKnownFolderSyncInfo>
+    {
+        IStorageProviderKnownFolderSyncInfo(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderKnownFolderSyncInfo(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderKnownFolderSyncInfoSource :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderKnownFolderSyncInfoSource>
+    {
+        IStorageProviderKnownFolderSyncInfoSource(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderKnownFolderSyncInfoSource(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderKnownFolderSyncInfoSourceFactory :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderKnownFolderSyncInfoSourceFactory>
+    {
+        IStorageProviderKnownFolderSyncInfoSourceFactory(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderKnownFolderSyncInfoSourceFactory(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IStorageProviderKnownFolderSyncRequestArgs :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IStorageProviderKnownFolderSyncRequestArgs>
+    {
+        IStorageProviderKnownFolderSyncRequestArgs(std::nullptr_t = nullptr) noexcept {}
+        IStorageProviderKnownFolderSyncRequestArgs(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IStorageProviderMoreInfoUI :
         winrt::Windows::Foundation::IInspectable,

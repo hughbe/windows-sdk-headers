@@ -22551,6 +22551,15 @@
 //
 #define ERROR_LAPS_ENCRYPTION_REQUIRES_2016_DFL 8657L
 
+//
+// MessageId: ERROR_LAPS_PROCESS_TERMINATED
+//
+// MessageText:
+//
+// The process was terminated by Windows Local Administrator Password Solution per the configured post-authentication-action policy.
+//
+#define ERROR_LAPS_PROCESS_TERMINATED    8658L
+
 
 ///////////////////////////////////////////////////
 //                                                /
@@ -37346,6 +37355,15 @@ FORCEINLINE _Translates_Win32_to_HRESULT_(x) HRESULT HRESULT_FROM_WIN32(unsigned
 #define SEC_E_INSUFFICIENT_BUFFERS       _HRESULT_TYPEDEF_(0x8009036BL)
 
 //
+// MessageId: SEC_I_INVALID_SESSION_STATE
+//
+// MessageText:
+//
+// The TLS session cannot be resumed.
+//
+#define SEC_I_INVALID_SESSION_STATE      _HRESULT_TYPEDEF_(0x8009036CL)
+
+//
 // Provided for backwards compatibility
 //
 
@@ -47591,6 +47609,51 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define TPMAPI_E_INVALID_POLICYAUTH_BLOB_TYPE _HRESULT_TYPEDEF_(0x8029012EL)
 
 //
+// MessageId: TPMAPI_E_INVALID_TAG
+//
+// MessageText:
+//
+// The structure tag is invalid.
+//
+#define TPMAPI_E_INVALID_TAG             _HRESULT_TYPEDEF_(0x80290130L)
+
+//
+// MessageId: TPMAPI_E_INVALID_STRUCT_SIZE
+//
+// MessageText:
+//
+// The structure size parameter is invalid.
+//
+#define TPMAPI_E_INVALID_STRUCT_SIZE     _HRESULT_TYPEDEF_(0x80290131L)
+
+//
+// MessageId: TPMAPI_E_AUTH_CHAIN_ERROR
+//
+// MessageText:
+//
+// The authorization chain is malformed.
+//
+#define TPMAPI_E_AUTH_CHAIN_ERROR        _HRESULT_TYPEDEF_(0x80290132L)
+
+//
+// MessageId: TPMAPI_E_COUNTER_CORRUPTED
+//
+// MessageText:
+//
+// The counter is corrupted. The TPM may have gone into Failure Mode.
+//
+#define TPMAPI_E_COUNTER_CORRUPTED       _HRESULT_TYPEDEF_(0x80290133L)
+
+//
+// MessageId: TPMAPI_E_INVALID_ALGORITHM
+//
+// MessageText:
+//
+// The specified algorithm is not supported.
+//
+#define TPMAPI_E_INVALID_ALGORITHM       _HRESULT_TYPEDEF_(0x80290134L)
+
+//
 // TBS implementation error codes {0x0200..0x02ff}
 //
 //
@@ -53837,6 +53900,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 #define VM_E_MODIFY_VTL2_SETTINGS_CONFLICT _HRESULT_TYPEDEF_(0xC0370701L)
 
+//
+// MessageId: VM_E_VTL2_NOT_AVAILABLE
+//
+// MessageText:
+//
+// Management VTL settings are not available because the virtual machine does not have the correct GuestStateIsolationType.
+//
+#define VM_E_VTL2_NOT_AVAILABLE          _HRESULT_TYPEDEF_(0xC0370702L)
+
 
 //
 // Volume manager error codes mapped from status codes
@@ -55120,6 +55192,15 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 // There is no change tracking data available associated with the specified change tracking identifier.
 //
 #define ERROR_VHD_MISSING_CHANGE_TRACKING_INFORMATION _NDIS_ERROR_TYPEDEF_(0xC03A0030L)
+
+//
+// MessageId: ERROR_VHD_UNEXPECTED_ID
+//
+// MessageText:
+//
+// The specified VHD has an unexpected virtual disk identifier.
+//
+#define ERROR_VHD_UNEXPECTED_ID          _NDIS_ERROR_TYPEDEF_(0xC03A0034L)
 
 //
 // Warnings:

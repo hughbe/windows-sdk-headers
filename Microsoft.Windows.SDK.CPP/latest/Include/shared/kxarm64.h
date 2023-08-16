@@ -227,11 +227,11 @@ AlignStmt SETS "ALIGN 0x":CC: :STR:(1 << $Alignment)
         ;
 
         MACRO
-        __AddEntryThunkPointer
+        __AddEntryThunkPointer $Alignment
 
         IF :DEF:$__FuncEntryThunkLabel
-        ASSERT(__FuncComDat != "")
-        ALIGN   (1 << $__FuncAlignment),(1 << $__FuncAlignment) - 4
+        ASSERT(__FuncComDat == "")
+        ALIGN   (1 << $Alignment),(1 << $Alignment) - 4
         dcd     ($__FuncEntryThunkLabel - ({PC} + 4)) + 1
         ENDIF
 
@@ -306,7 +306,7 @@ __FuncAlignment SETA 4
 __FuncComDat SETS ""
         __DeriveFunctionLabels $FuncName,$AreaName
         __SetFunctionAreaAndAlign $Alignment
-        ASSERT (!:DEF:$__FuncEntryThunkLabel)
+        __AddEntryThunkPointer $Alignment
         __ResetUnwindState $ExceptHandler
         __ExportProc $__FuncNameNoBars
         ROUT
@@ -324,7 +324,7 @@ __FuncComDat SETS ""
 __FuncComDat SETS "COMDAT"
         __DeriveFunctionLabels $FuncName,$AreaName
         __SetFunctionAreaAndAlign $__FuncAlignment
-        __AddEntryThunkPointer
+        ASSERT (!:DEF:$__FuncEntryThunkLabel)
         __ResetUnwindState $ExceptHandler
         __ExportProc $__FuncNameNoBars
         ROUT
@@ -341,7 +341,7 @@ __FuncComDat SETS "COMDAT"
         IMPORT __os_arm64x_dispatch_ret
 
         MACRO
-        ARM64EC_ENTRY_THUNK $FuncName, $Parameters, $SaveQCount, $AreaName
+        ARM64EC_ENTRY_THUNK $FuncName, $Parameters, $SaveQCount, $AreaName, $Alignment
 
         LCLS    OriginalFunc
         LCLS    OriginalArea
@@ -359,9 +359,9 @@ QCount  SETA    (($SaveQCount + 1)/2)*2
 
         ; first derive labels for the original function
         ; and set that as the target area
-__FuncComDat SETS "COMDAT"
+__FuncComDat SETS ""
         __DeriveFunctionLabels $FuncName,$AreaName
-        __SetFunctionAreaAndAlign $__FuncAlignment
+        __SetFunctionAreaAndAlign $Alignment
 OriginalFunc SETS __FuncStartLabel
 OriginalArea SETS __FuncArea
 

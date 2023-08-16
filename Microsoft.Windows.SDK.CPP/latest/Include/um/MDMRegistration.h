@@ -341,28 +341,6 @@ RegisterDeviceWithManagementUsingAADDeviceCredentials2(_In_opt_ PCWSTR MDMApplic
 
 Routine Description:
 
-This function is used to register a MDM enrolled device to Mmpc synchronously.
-It will get MMPC information, including authentication device token from AAD
-
-Arguments:
-
-None
-
-Return Value:
-
-HRESULT indicating success or failure.
-
---*/
-HRESULT WINAPI
-RegisterDeviceDualEnrollMmpcUsingAADDeviceCredentials(
-    _In_ DWORD cchEnrollmentId,
-    _Out_writes_(cchEnrollmentId) LPWSTR pszEnrollmentId
-    );
-
-/*++
-
-Routine Description:
-
     This function is used to register a device with the MDM service synchronously.
 
 Arguments:

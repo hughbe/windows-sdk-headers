@@ -912,7 +912,16 @@ __Epilog4UnwindString SETS ""
 __EpilogStartNotDefined SETL {true}
 __FuncExceptionHandler SETS ""
         IF "$ExceptHandler" != ""
+__FuncExceptionHandler SETS "$ExceptHandler"
+
+        ;
+        ; Add bars to the exception handler name only when the name does not have bars
+        ;
+
+        IF ("$ExceptHandler":LEFT:1 != "|") && ("$ExceptHandler":RIGHT:1 != "|")
 __FuncExceptionHandler SETS "|$ExceptHandler|"
+        ENDIF
+
         ENDIF
         MEND
 

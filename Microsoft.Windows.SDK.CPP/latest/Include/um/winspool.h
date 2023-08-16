@@ -515,6 +515,10 @@ typedef LPJOB_INFO_4A LPJOB_INFO_4;
     #define JOB_CONTROL_SEND_TOAST     10
 #endif // (NTDDI_VERSION >= NTDDI_WIN10)
 
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+    #define JOB_CONTROL_PENDING_ON_DEVICE  11 // Pending PIN or badge release
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+
 #define JOB_STATUS_PAUSED               0x00000001
 #define JOB_STATUS_ERROR                0x00000002
 #define JOB_STATUS_DELETING             0x00000004

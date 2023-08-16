@@ -213,7 +213,7 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    typedef enum RemoteKeyEventFlags : unsigned int RemoteKeyEventFlags;
+                    typedef enum RemoteKeyEventAttributes : unsigned int RemoteKeyEventAttributes;
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -246,7 +246,7 @@ namespace ABI {
 
 /*
  *
- * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventFlags
+ * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
@@ -257,16 +257,16 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    enum RemoteKeyEventFlags : unsigned int
+                    enum RemoteKeyEventAttributes : unsigned int
                     {
-                        RemoteKeyEventFlags_None = 0,
-                        RemoteKeyEventFlags_KeyUp = 0x1,
-                        RemoteKeyEventFlags_Repeat = 0x2,
-                        RemoteKeyEventFlags_Extended = 0x4,
-                        RemoteKeyEventFlags_Extended1 = 0x8,
+                        RemoteKeyEventAttributes_None = 0,
+                        RemoteKeyEventAttributes_KeyUp = 0x1,
+                        RemoteKeyEventAttributes_Repeat = 0x2,
+                        RemoteKeyEventAttributes_Extended = 0x4,
+                        RemoteKeyEventAttributes_Extended1 = 0x8,
                     };
 
-                    DEFINE_ENUM_FLAG_OPERATORS(RemoteKeyEventFlags)
+                    DEFINE_ENUM_FLAG_OPERATORS(RemoteKeyEventAttributes)
                 } /* Input */
             } /* RemoteDesktop */
         } /* System */
@@ -290,7 +290,7 @@ namespace ABI {
                     enum RemoteTextConnectionOptions : unsigned int
                     {
                         RemoteTextConnectionOptions_None = 0,
-                        RemoteTextConnectionOptions_SpeculativeKeyProcessing = 0x1,
+                        RemoteTextConnectionOptions_EnablePredictedKeyReporting = 0x1,
                     };
 
                     DEFINE_ENUM_FLAG_OPERATORS(RemoteTextConnectionOptions)
@@ -407,13 +407,13 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Input {
-                    MIDL_INTERFACE("b7b95dc6-02f1-538a-802a-c9916a830184")
+                    MIDL_INTERFACE("05f99345-84c8-56c5-934f-73ea00f8c2d5")
                     IRemoteTextConnection2 : public IInspectable
                     {
                     public:
-                        virtual HRESULT STDMETHODCALLTYPE DoSpeculativeKeyProcessing(
+                        virtual HRESULT STDMETHODCALLTYPE ReportPredictedKeyEvent(
                             UINT16 scanCode,
-                            ABI::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags flags
+                            ABI::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes attributes
                             ) = 0;
                     };
 
@@ -516,8 +516,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
  * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection ** Default Interface **
@@ -578,25 +578,25 @@ typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoun
 
 #endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
-typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags;
+typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventAttributes __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventAttributes;
 
 typedef enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions;
 
 /*
  *
- * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventFlags
+ * Struct Windows.System.RemoteDesktop.Input.RemoteKeyEventAttributes
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
  *
  */
 #if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
-enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags
+enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventAttributes
 {
-    RemoteKeyEventFlags_None = 0,
-    RemoteKeyEventFlags_KeyUp = 0x1,
-    RemoteKeyEventFlags_Repeat = 0x2,
-    RemoteKeyEventFlags_Extended = 0x4,
-    RemoteKeyEventFlags_Extended1 = 0x8,
+    RemoteKeyEventAttributes_None = 0,
+    RemoteKeyEventAttributes_KeyUp = 0x1,
+    RemoteKeyEventAttributes_Repeat = 0x2,
+    RemoteKeyEventAttributes_Extended = 0x4,
+    RemoteKeyEventAttributes_Extended1 = 0x8,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
@@ -611,7 +611,7 @@ enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags
 enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteTextConnectionOptions
 {
     RemoteTextConnectionOptions_None = 0,
-    RemoteTextConnectionOptions_SpeculativeKeyProcessing = 0x1,
+    RemoteTextConnectionOptions_EnablePredictedKeyReporting = 0x1,
 };
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
 
@@ -786,9 +786,9 @@ typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnec
         HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
         TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* DoSpeculativeKeyProcessing)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
+    HRESULT (STDMETHODCALLTYPE* ReportPredictedKeyEvent)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2* This,
         UINT16 scanCode,
-        enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventFlags flags);
+        enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CRemoteKeyEventAttributes attributes);
 
     END_INTERFACE
 } __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2Vtbl;
@@ -818,8 +818,8 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2
 #define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_GetTrustLevel(This, trustLevel) \
     ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
 
-#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_DoSpeculativeKeyProcessing(This, scanCode, flags) \
-    ((This)->lpVtbl->DoSpeculativeKeyProcessing(This, scanCode, flags))
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTextConnection2_ReportPredictedKeyEvent(This, scanCode, attributes) \
+    ((This)->lpVtbl->ReportPredictedKeyEvent(This, scanCode, attributes))
 
 #endif /* COBJMACROS */
 
@@ -977,8 +977,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CInput_CIRemoteTe
  * Introduced to Windows.Foundation.UniversalApiContract in version 13.0
  *
  * RuntimeClass can be activated.
- *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory interface starting with version 13.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Type can be activated via the Windows.System.RemoteDesktop.Input.IRemoteTextConnectionFactory2 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.System.RemoteDesktop.Input.IRemoteTextConnection ** Default Interface **

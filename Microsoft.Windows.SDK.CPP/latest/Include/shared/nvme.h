@@ -964,6 +964,13 @@ typedef union {
 //
 // Output of NVME_IDENTIFY_CNS_SPECIFIC_NAMESPACE (0x0)
 //
+
+typedef enum {
+    NVME_READ_BEHAVIOR_NOT_REPORTED     = 0x0,
+    NVME_READ_BEHAVIOR_RETURN_ZERO      = 0x1,
+    NVME_READ_BEHAVIOR_RETURN_ONES      = 0x2
+} NVME_DEALLOCATE_READ_BEHAVIOR;
+
 typedef union {
 
     struct {
@@ -1014,7 +1021,8 @@ typedef struct {
     struct {
         UCHAR   LbaFormatIndex              : 4;
         UCHAR   MetadataInExtendedDataLBA   : 1;
-        UCHAR   Reserved                    : 3;
+        UCHAR   LbaFormatIndexMS            : 2;
+        UCHAR   Reserved                    : 1;
     } FLBAS;                            // byte 26      M - Formatted LBA Size (FLBAS)
 
     struct {
@@ -1045,14 +1053,13 @@ typedef struct {
 
     NVM_RESERVATION_CAPABILITIES RESCAP;    // byte 31      O - Reservation Capabilities (RESCAP)
 
-
     struct {
         UCHAR   PercentageRemained  : 7;// Bits 6:0: indicate the percentage of the namespace that remains to be formatted
         UCHAR   Supported           : 1;// Bit 7: if set to 1 indicates that the namespace supports the Format Progress Indicator.
     } FPI;                              // byte 32      O - Format Progress Indicator (FPI)
 
     struct {
-        UCHAR  ReadBehavior         : 3;// Bits 2:0: indicate deallocated logical block read behavior
+        UCHAR  ReadBehavior         : 3;// Bits 2:0: indicate deallocated logical block read behavior (NVME_DEALLOCATE_READ_BEHAVIOR)
         UCHAR  WriteZeroes          : 1;// Bit 3: indicate controller supports the deallocate bit in Write Zeroes
         UCHAR  GuardFieldWithCRC    : 1;// Bit 4: indicate guard field for deallocated logical blocks is set to CRC
         UCHAR  Reserved             : 3;
@@ -1096,24 +1103,12 @@ typedef struct {
 
     UCHAR           EUI64[8];           // byte 120:127 M - IEEE Extended Unique Identifier (EUI64)
 
-    NVME_LBA_FORMAT LBAF[16];           // byte 128:131 M - LBA Format 0 Support (LBAF0)
+    NVME_LBA_FORMAT LBAF[64];           // byte 128:131 M - LBA Format 0 Support (LBAF0)
                                         // byte 132:135 O - LBA Format 1 Support (LBAF1)
                                         // byte 136:139 O - LBA Format 2 Support (LBAF2)
                                         // byte 140:143 O - LBA Format 3 Support (LBAF3)
-                                        // byte 144:147 O - LBA Format 4 Support (LBAF4)
-                                        // byte 148:151 O - LBA Format 5 Support (LBAF5)
-                                        // byte 152:155 O - LBA Format 6 Support (LBAF6)
-                                        // byte 156:159 O - LBA Format 7 Support (LBAF7)
-                                        // byte 160:163 O - LBA Format 8 Support (LBAF8)
-                                        // byte 164:167 O - LBA Format 9 Support (LBAF9)
-                                        // byte 168:171 O - LBA Format 10 Support (LBAF10)
-                                        // byte 172:175 O - LBA Format 11 Support (LBAF11)
-                                        // byte 176:179 O - LBA Format 12 Support (LBAF12)
-                                        // byte 180:183 O - LBA Format 13 Support (LBAF13)
-                                        // byte 184:187 O - LBA Format 14 Support (LBAF14)
-                                        // byte 188:191 O - LBA Format 15 Support (LBAF15)
-
-    UCHAR           Reserved4[192];     // byte 192:383
+                                        // ...
+                                        // byte 380:383 O - LBA Format 63 Support (LBAF63)
 
     UCHAR           VS[3712];           // byte 384:4095 O - Vendor Specific (VS): This range of bytes is allocated for vendor specific usage.
 
@@ -1736,9 +1731,19 @@ typedef struct {
 //
 // Output of NVME_IDENTIFY_CNS_IO_COMMAND_SET (0x1C)
 //
+
+typedef struct {
+
+    ULONGLONG NVMCommandSet : 1;  // Bit 0, indicates whether this vector supports NVM command set.
+    ULONGLONG KVCommandSet  : 1;  // Bit 1, indicates whether this vector supports Key Value command set.
+    ULONGLONG ZNCommandSet  : 1;  // Bit 2, indicates whether this vector supports Zoned Namespace command set.
+    ULONGLONG Reserved      : 61; // Bits 3-63, reserved
+
+} IO_COMMAND_SET_VECTOR, *PIO_COMMAND_SET_VECTOR;
+
 typedef struct {
     
-    ULONGLONG       IOCommandSetVector[512];
+    IO_COMMAND_SET_VECTOR IOCommandSetVector[512];
 
 } NVME_IDENTIFY_IO_COMMAND_SET, *PNVME_IDENTIFY_IO_COMMAND_SET;
 

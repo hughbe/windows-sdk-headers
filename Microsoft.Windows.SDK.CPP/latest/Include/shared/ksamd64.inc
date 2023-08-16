@@ -470,8 +470,6 @@ PrProcessFlags equ 00278H
 PrBasePriority equ 00280H
 PrQuantumReset equ 00281H
 PrCycleTime equ 00360H
-PrKernelTime equ 0037CH
-PrUserTime equ 00380H
 PrInstrumentationCallback equ 003D8H
 PrMitigationFlags2 equ 009D4H
 KernelProcessObjectLength equ 00438H
@@ -580,7 +578,7 @@ ThWin32Thread equ 001C8H
 ThStackBase equ 00038H
 ThLegoData equ 002D0H
 KernelThreadObjectLength equ 00480H
-ExecutiveThreadObjectLength equ 006E0H
+ExecutiveThreadObjectLength equ 006E8H
 
 
 ;
@@ -905,7 +903,7 @@ PcRspBase equ 001A8H
 PcRspBaseShadow equ 0A008H
 PcShadowFlags equ 0A018H
 PcVerwSelector equ 0A02AH
-PcIsrStackNesting equ 09950H
+PcIsrStackNesting equ 09960H
 PcPrcbLock equ 001B0H
 PcCr0 equ 00280H
 PcCr2 equ 00288H
@@ -1908,7 +1906,7 @@ KMRC_KERNEL_CONSUMER equ 00010H
 
 ThNpxState equ 00250H
 ThThreadFlags2 equ 00200H
-ThSpecCtrl equ 0007FH
+ThSpecCtrl equ 0007EH
 KTHREAD_RUNNING_NON_RETPOLINE_CODE_BIT equ 00000H
 KTHREAD_RUNNING_NON_RETPOLINE_CODE equ 00001H
 ThKernelShadowStack equ 00408H

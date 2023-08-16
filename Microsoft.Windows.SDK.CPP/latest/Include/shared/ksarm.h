@@ -461,8 +461,6 @@
 #define PrBasePriority 0x68
 #define PrQuantumReset 0x69
 #define PrCycleTime 0x80
-#define PrKernelTime 0x98
-#define PrUserTime 0x9c
 #define PrInstrumentationCallback 0xa4
 #define PrMitigationFlags2 0x55c
 #define KernelProcessObjectLength 0xe0
@@ -571,7 +569,7 @@
 #define ThStackBase 0x28
 #define ThLegoData 0x1b8
 #define KernelThreadObjectLength 0x2a0
-#define ExecutiveThreadObjectLength 0x408
+#define ExecutiveThreadObjectLength 0x410
 
 #define KF_VFP_32REG 0x10
 

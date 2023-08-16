@@ -290,7 +290,7 @@ typedef struct _BCRYPT_AUTHENTICATED_CIPHER_MODE_INFO
 #define BCRYPT_HASH_BLOCK_LENGTH    L"HashBlockLength"
 #define BCRYPT_AUTH_TAG_LENGTH      L"AuthTagLength"
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 #define BCRYPT_FUNCTION_NAME_STRING L"FunctionNameString"
 #define BCRYPT_CUSTOMIZATION_STRING L"CustomizationString"
 #endif
@@ -858,7 +858,7 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 #define BCRYPT_CHACHA20_POLY1305_ALGORITHM      L"CHACHA20_POLY1305"
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 #define BCRYPT_SHA3_256_ALGORITHM               L"SHA3-256"
 #define BCRYPT_SHA3_384_ALGORITHM               L"SHA3-384"
 #define BCRYPT_SHA3_512_ALGORITHM               L"SHA3-512"
@@ -962,7 +962,7 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 #define BCRYPT_CHACHA20_POLY1305_ALG_HANDLE     ((BCRYPT_ALG_HANDLE) 0x000003A1)
 #endif
 
-#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 #define BCRYPT_SHA3_256_ALG_HANDLE              ((BCRYPT_ALG_HANDLE) 0x000003B1)
 #define BCRYPT_SHA3_384_ALG_HANDLE              ((BCRYPT_ALG_HANDLE) 0x000003C1)
 #define BCRYPT_SHA3_512_ALG_HANDLE              ((BCRYPT_ALG_HANDLE) 0x000003D1)
@@ -997,7 +997,7 @@ typedef struct _BCRYPT_MULTI_OBJECT_LENGTH_STRUCT
 // users may invoke BCryptFinishHash to generate more data out of the hash/XOF state, until
 // after a BCryptFinishHash call where this flag is unset.
 //
-#if (NTDDI_VERSION >= NTDDI_WIN10_CU)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 #define BCRYPT_HASH_DONT_RESET_FLAG            0x00000001
 #endif
 

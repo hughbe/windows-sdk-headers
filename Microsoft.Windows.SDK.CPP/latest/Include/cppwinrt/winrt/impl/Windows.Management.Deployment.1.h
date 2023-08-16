@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -106,6 +106,13 @@ WINRT_EXPORT namespace winrt::Windows::Management::Deployment
     {
         IPackageAllUserProvisioningOptions(std::nullptr_t = nullptr) noexcept {}
         IPackageAllUserProvisioningOptions(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
+    };
+    struct __declspec(empty_bases) IPackageAllUserProvisioningOptions2 :
+        winrt::Windows::Foundation::IInspectable,
+        impl::consume_t<IPackageAllUserProvisioningOptions2>
+    {
+        IPackageAllUserProvisioningOptions2(std::nullptr_t = nullptr) noexcept {}
+        IPackageAllUserProvisioningOptions2(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Foundation::IInspectable(ptr, take_ownership_from_abi) {}
     };
     struct __declspec(empty_bases) IPackageManager :
         winrt::Windows::Foundation::IInspectable,

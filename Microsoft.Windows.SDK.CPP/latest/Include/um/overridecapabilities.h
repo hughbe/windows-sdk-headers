@@ -368,9 +368,8 @@
 #define OVRDCAP_AMD64_CFG_CHECK_OPT                       0x00000141 // MUST NOT CHANGE, hard coded in compiler
 #define OVRDCAP_AMD64_CFG_DISPATCH_OPT                    0x00000142 // MUST NOT CHANGE, hard coded in compiler
 #define OVRDCAP_AMD64_XFG_DISPATCH_OPT                    0x00000143 // MUST NOT CHANGE, hard coded in compiler
-#define OVRDCAP_AMD64_POPCNT                              0x00000144
 
-#define OVRDCAP_AMD64_MAX                                 0x00000145
+#define OVRDCAP_AMD64_MAX                                 0x00000144
 
 // ARM64
 // SV2 Capabilities (OVRDCAP_ARM64_V1_CAPSET)

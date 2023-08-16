@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -44,10 +44,12 @@ WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
         static auto GetDefault();
     };
     struct __declspec(empty_bases) VoipPhoneCall : winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall,
-        impl::require<VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3>
+        impl::require<VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>
     {
         VoipPhoneCall(std::nullptr_t) noexcept {}
         VoipPhoneCall(void* ptr, take_ownership_from_abi_t) noexcept : winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall(ptr, take_ownership_from_abi) {}
+        using winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall::NotifyCallActive;
+        using impl::consume_t<VoipPhoneCall, winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>::NotifyCallActive;
     };
 }
 #endif

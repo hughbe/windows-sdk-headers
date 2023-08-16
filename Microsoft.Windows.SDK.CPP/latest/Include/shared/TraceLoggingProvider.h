@@ -625,11 +625,12 @@ using the TRACELOGGING_DEFINE_PROVIDER macro.
 
 /*
 Macro TraceLoggingOptionGroup(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11):
-Wrapper macro for use in TRACELOGGING_DEFINE_PROVIDER that declares the
-provider's membership in a provider group. A provider can be a member of no
-more than one group. The semantics of group membership are determined by
-ETW controllers that make use of the group membership information to configure
-providers via their group.
+Advanced scenarios: Wrapper macro for use in TRACELOGGING_DEFINE_PROVIDER that
+declares the provider's membership in a provider group (see
+https://learn.microsoft.com/windows/win32/etw/provider-traits#provider-groups).
+A provider can be a member of no more than one group. The semantics of group
+membership are determined by ETW controllers that make use of the group
+membership information to configure providers via their group.
 
 The parameters to this macro are 11 compile-time constant integers that will
 form the group GUID. The GUID will be initialized as follows:
@@ -645,7 +646,34 @@ Example:
         TraceLoggingOptionGroup(0xfaaf2f61, 0x9b26, 0x4591, 0x9b, 0xb1, 0xb9, 0xb8, 0xba, 0xe2, 0xd3, 0x4c));
 */
 #define TraceLoggingOptionGroup(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11) \
-    _tlgOption_Group(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11)
+    TraceLoggingOptionTrait(_TlgOptionGroup, GUID, ({ g1, g2, g3, { g4, g5, g6, g7, g8, g9, g10, g11 } }))
+
+/*
+Macro TraceLoggingOptionTrait(traitType, ctype, value):
+Advanced scenarios: Wrapper macro for use in TRACELOGGING_DEFINE_PROVIDER that
+adds a custom provider trait to a provider definition (see
+https://learn.microsoft.com/en-us/windows/win32/etw/provider-traits#custom-traits).
+
+Parameters:
+
+- traitType: Compile-time constant integer value from 128-255 indicating the
+  user-defined trait type to use for the trait.
+
+- ctype: C/C++ type to be used for the trait value, e.g. UINT32 or GUID.
+
+- value: Compile-time constant expression that initializes the trait value,
+  enclosed in parenthesis, e.g. (32) or ({ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}).
+
+Example:
+
+    TRACELOGGING_DEFINE_PROVIDER(
+        g_hMyProvider,
+        "MyProvider",
+        (0xb3864c38, 0x4273, 0x58c5, 0x54, 0x5b, 0x8b, 0x36, 0x08, 0x34, 0x34, 0x71),
+        TraceLoggingOptionTrait(128, UINT32, ( 45 ));
+*/
+#define TraceLoggingOptionTrait(traitType, ctype, value) \
+    (_tlgOption, traitType, ctype, value)
 
 /*
 Function TraceLoggingUnregister(hProvider):
@@ -3973,41 +4001,18 @@ _tlgInTypeBaseDecl(false, wchar_t const*, TlgInUNICODESTRING);
 #define _tlgExpandProviderId(a, b, c, d, e, f, g, h, i, j, k) \
     { a, b, c, { d, e, f, g, h, i, j , k } }
 
-#define _tlgParseOption(option) \
-    _tlg_TraceLogging_Unrecognized_provider_option_##option
-#define _tlg_TraceLogging_Unrecognized_provider_option__tlgOption_Group(g1, g2, g3, g4, g5, g6, g7, g8, g9, g10, g11) /* recognized */ \
-    { g1, g2, g3, { g4, g5, g6, g7, g8, g9, g10, g11 } }
-
-#define _tlgProviderStorage_imp(    storageVariable, providerName, providerId, annotationFunc, ...)  _tlgProviderStorage_impN( \
-           _tlg_NARGS(__VA_ARGS__), storageVariable, providerName, providerId, annotationFunc, __VA_ARGS__)
-#define _tlgProviderStorage_impN(n, storageVariable, providerName, providerId, annotationFunc, ...) _tlgProviderStorage_impN_CALL(_tlg_PASTE2(_tlgProviderStorage_imp, n), \
-                                 (  storageVariable, providerName, providerId, annotationFunc, __VA_ARGS__))
-#define _tlgProviderStorage_impN_CALL(macro, args) macro args
-
-#define _tlgProviderStorage_imp0(storageVariable, providerName, providerId, annotationFunc, ...) \
-    _tlgProviderStorage_impx(storageVariable, providerName, providerId, annotationFunc \
-        , () \
-        , () \
-        )
-
-#define _tlgProviderStorage_imp1(storageVariable, providerName, providerId, annotationFunc, groupOption) \
-    _tlgProviderStorage_impx(storageVariable, providerName, providerId, annotationFunc \
-        , (UINT16 _tlgOptionSize1; UINT8 _tlgOptionEnum1; GUID _tlgOptionVal1; ) \
-        , (, 3 + sizeof(GUID), _TlgOptionGroup, _tlgParseOption(groupOption)) \
-        )
-
-#define _tlgProviderStorage_impx(storageVariable, providerName, providerId, annotationFunc, optionVars, optionVals) \
+#define _tlgProviderStorage_imp(storageVariable, providerName, providerId, annotationFunc, ...) \
     _tlgPragmaUtf8Begin \
     __pragma(pack(push, 1)) \
     _tlgValidateProviderId(providerId) \
     static struct { \
         struct _tlgProviderMetadata_t _tlgProv; \
         char _tlgName[sizeof(providerName)]; \
-        _tlg_FLATTEN optionVars \
+        _tlg_FOREACH(_tlgProvVar, __VA_ARGS__) \
     } const __declspec(allocate(_tlgSegMetadataProviders)) __declspec(align(1)) storageVariable##_Meta = { \
         { _TlgBlobProvider3, _tlgExpandProviderId providerId, sizeof(storageVariable##_Meta) - 1 - _tlg_PROVIDER_METADATA_PREAMBLE }, \
         (providerName) \
-        _tlg_FLATTEN optionVals \
+        _tlg_FOREACH(_tlgProvVal, __VA_ARGS__) \
     }; \
     __pragma(pack(pop)) \
     _tlgPragmaUtf8End \
@@ -4016,6 +4021,14 @@ _tlgInTypeBaseDecl(false, wchar_t const*, TlgInUNICODESTRING);
         0, 0, 0, 0, 0 \
         _tlgAnnotationFunc_imp(annotationFunc, storageVariable) \
     }
+
+#define _tlgProvVar(n, args) _tlgApplyArgsN(_tlgProvVar, n, args)
+#define _tlgProvVar_tlgOption(n, traitType, ctype, value) \
+    UINT16 _tlgOptionSize##n; UINT8 _tlgTraitType##n; ctype _tlgOptionVal##n;
+
+#define _tlgProvVal(n, args) _tlgApplyArgs(_tlgProvVal, args)
+#define _tlgProvVal_tlgOption(traitType, ctype, value) \
+    , 3 + sizeof(ctype), traitType, _tlg_FLATTEN value
 
 #define _tlgAnnotationFunc_imp(use_annotationFunc, storageVariable) _tlg_PASTE2(_tlgAnnotationFunc_imp, use_annotationFunc) (storageVariable)
 #define _tlgAnnotationFunc_imp0(storageVariable)

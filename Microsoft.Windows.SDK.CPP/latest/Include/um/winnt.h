@@ -777,6 +777,10 @@ typedef _Return_type_success_(return >= 0) long HRESULT;
 
 #define STDAPI                  EXTERN_C HRESULT STDAPICALLTYPE
 #define STDAPI_(type)           EXTERN_C type STDAPICALLTYPE
+#define DEPRECATED_STDAPI(message) EXTERN_C __declspec(deprecated(message)) HRESULT STDAPICALLTYPE
+#define DEPRECATED_NO_MESSAGE_STDAPI EXTERN_C __declspec(deprecated) HRESULT STDAPICALLTYPE
+#define DEPRECATED_STDAPI_(type, message) EXTERN_C __declspec(deprecated(message)) type STDAPICALLTYPE
+#define DEPRECATED_NO_MESSAGE_STDAPI_(type) EXTERN_C __declspec(deprecated) type STDAPICALLTYPE
 
 #define STDMETHODIMP            HRESULT STDMETHODCALLTYPE
 #define STDMETHODIMP_(type)     type STDMETHODCALLTYPE
@@ -791,6 +795,11 @@ typedef _Return_type_success_(return >= 0) long HRESULT;
 
 #define STDAPIV                 EXTERN_C HRESULT STDAPIVCALLTYPE
 #define STDAPIV_(type)          EXTERN_C type STDAPIVCALLTYPE
+
+#define DEPRECATED_STDAPIV(message) EXTERN_C __declspec(deprecated(message)) HRESULT STDAPIVCALLTYPE
+#define DEPRECATED_NO_MESSAGE_STDAPIV EXTERN_C __declspec(deprecated) HRESULT STDAPIVCALLTYPE
+#define DEPRECATED_STDAPIV_(type, message) EXTERN_C __declspec(deprecated(message)) type STDAPIVCALLTYPE
+#define DEPRECATED_NO_MESSAGE_STDAPIV_(type) EXTERN_C __declspec(deprecated) type STDAPIVCALLTYPE
 
 #define STDMETHODIMPV           HRESULT STDMETHODVCALLTYPE
 #define STDMETHODIMPV_(type)    type STDMETHODVCALLTYPE
@@ -1681,6 +1690,7 @@ typedef EXCEPTION_ROUTINE *PEXCEPTION_ROUTINE;
 #define PRODUCT_AZURE_SERVER_CLOUDMOS               0x000000C8
 #define PRODUCT_CLOUDEDITIONN                       0x000000CA
 #define PRODUCT_CLOUDEDITION                        0x000000CB
+#define PRODUCT_VALIDATION                          0x000000CC
 #define PRODUCT_IOTENTERPRISESK                     0x000000CD
 #define PRODUCT_AZURESTACKHCI_SERVER_CORE           0x00000196
 #define PRODUCT_DATACENTER_SERVER_AZURE_EDITION     0x00000197
@@ -5818,6 +5828,11 @@ YieldProcessor (
 //
 //
 
+// TODO: Remove when clang-cl supports __ldar/__stlr/__loadacquire intrinsics
+#if !defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && defined(__clang__)
+#define __USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ 1
+#endif
+
 FORCEINLINE
 CHAR
 ReadAcquire8 (
@@ -5828,12 +5843,12 @@ ReadAcquire8 (
 
     CHAR Value;
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     Value = __iso_volatile_load8(Source);
     __dmb(_ARM64_BARRIER_ISH);
 
-#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
 #if _MSC_FULL_VER >= 193632407
     Value = (CHAR)__load_acquire8((unsigned __int8 volatile*)Source);
@@ -5841,7 +5856,7 @@ ReadAcquire8 (
     Value = (CHAR)__ldar8((unsigned __int8 volatile*)Source);
 #endif
 
-#endif // !defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     return Value;
 }
@@ -5869,7 +5884,7 @@ WriteRelease8 (
 
 {
 
-#if defined(__MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store8(Destination, Value);
 #else
@@ -5902,12 +5917,12 @@ ReadAcquire16 (
 
     SHORT Value;
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     Value = __iso_volatile_load16(Source);
     __dmb(_ARM64_BARRIER_ISH);
 
-#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
 #if _MSC_FULL_VER >= 193632407
     Value = (SHORT)__load_acquire16((unsigned __int16 volatile*)Source);
@@ -5915,7 +5930,7 @@ ReadAcquire16 (
     Value = (SHORT)__ldar16((unsigned __int16 volatile*)Source);
 #endif
 
-#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     return Value;
 }
@@ -5943,7 +5958,7 @@ WriteRelease16 (
 
 {
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store16(Destination, Value);
 #else
@@ -5976,12 +5991,12 @@ ReadAcquire (
 
     LONG Value;
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     Value = __iso_volatile_load32((int *)Source);
     __dmb(_ARM64_BARRIER_ISH);
 
-#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
 #if _MSC_FULL_VER >= 193632407
     Value = (LONG)__load_acquire32((unsigned __int32 volatile*)Source);
@@ -5989,7 +6004,7 @@ ReadAcquire (
     Value = (LONG)__ldar32((unsigned __int32 volatile*)Source);
 #endif
 
-#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     return Value;
 }
@@ -6017,7 +6032,7 @@ WriteRelease (
 
 {
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store32((int *)Destination, Value);
 #else
@@ -6050,12 +6065,12 @@ ReadAcquire64 (
 
     LONG64 Value;
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     Value = __iso_volatile_load64(Source);
     __dmb(_ARM64_BARRIER_ISH);
 
-#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#else // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
 #if _MSC_FULL_VER >= 193632407
     Value = (LONG64)__load_acquire64((unsigned __int64 volatile*)Source);
@@ -6063,7 +6078,7 @@ ReadAcquire64 (
     Value = (LONG64)__ldar64((unsigned __int64 volatile*)Source);
 #endif
 
-#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#endif // defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
 
     return Value;
 }
@@ -6091,7 +6106,7 @@ WriteRelease64 (
 
 {
 
-#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__) && (__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__ != 0)
     __dmb(_ARM64_BARRIER_ISH);
     __iso_volatile_store64(Destination, Value);
 #else
@@ -6124,6 +6139,10 @@ BarrierAfterRead (
     __dmb(_ARM64_BARRIER_ISH);
     return;
 }
+
+#if defined(__USE_MS_ARM64_DMB_ACQUIRE_RELEASE__)
+#undef __USE_MS_ARM64_DMB_ACQUIRE_RELEASE__
+#endif
 
 //
 //
@@ -9466,6 +9485,54 @@ WriteULong64Raw (
 
     WriteRaw64((PLONG64)Destination, (LONG64)Value);
     return;
+}
+
+FORCEINLINE
+LONG64
+AddRaw64 (
+    _Inout_ _Interlocked_operand_ LONG64 volatile *Destination,
+    _In_ LONG64 Value
+    )
+
+{
+    LONG64 NewValue;
+
+    NewValue = ReadRaw64(Destination);
+    NewValue += Value;
+    WriteRaw64(Destination, NewValue);
+
+    return NewValue;
+}
+
+FORCEINLINE
+DWORD64
+AddULong64Raw (
+    _Inout_ _Interlocked_operand_ DWORD64 volatile *Destination,
+    _In_ DWORD64 Value
+    )
+
+{
+    return (DWORD64)AddRaw64((PLONG64)Destination, (LONG64)Value);
+}
+
+FORCEINLINE
+LONG64
+IncrementRaw64 (
+    _Inout_ _Interlocked_operand_ LONG64 volatile *Destination
+    )
+
+{
+    return AddRaw64(Destination, 1);
+}
+
+FORCEINLINE
+DWORD64
+IncrementULong64Raw (
+    _Inout_ _Interlocked_operand_ DWORD64 volatile *Destination
+    )
+
+{
+    return (DWORD64)IncrementRaw64((PLONG64)Destination);
 }
 
 #define ReadSizeTAcquire ReadULongPtrAcquire
@@ -14768,6 +14835,113 @@ typedef struct _FILE_NOTIFY_FULL_INFORMATION {
 #endif
 
 
+//================ FileStatInformation ========================================
+
+//
+// Note: Fields up through EffectiveAccess are the same as in
+// FILE_STAT_LX_INFORMATION, and up through NumberOfLinks are the same
+// as in FILE_STAT_BASIC_INFORMATION.
+//
+
+typedef struct _FILE_STAT_INFORMATION {
+    LARGE_INTEGER FileId;
+    LARGE_INTEGER CreationTime;
+    LARGE_INTEGER LastAccessTime;
+    LARGE_INTEGER LastWriteTime;
+    LARGE_INTEGER ChangeTime;
+    LARGE_INTEGER AllocationSize;
+    LARGE_INTEGER EndOfFile;
+    DWORD FileAttributes;
+    DWORD ReparseTag;
+    DWORD NumberOfLinks;
+    ACCESS_MASK EffectiveAccess;
+} FILE_STAT_INFORMATION, *PFILE_STAT_INFORMATION;
+
+//================ FileStatLxInformation ========================================
+
+//
+// LxFlags for FILE_STAT_LX_INFORMATION that specify which metadata fields
+// were present for the file.
+//
+
+#define LX_FILE_METADATA_HAS_UID 0x1
+#define LX_FILE_METADATA_HAS_GID 0x2
+#define LX_FILE_METADATA_HAS_MODE 0x4
+#define LX_FILE_METADATA_HAS_DEVICE_ID 0x8
+#define LX_FILE_CASE_SENSITIVE_DIR 0x10
+
+//
+// Note: Fields up through EffectiveAccess are the same as in
+// FILE_STAT_INFORMATION, and up through NumberOfLinks are the same
+// as in FILE_STAT_BASIC_INFORMATION.
+//
+
+typedef struct _FILE_STAT_LX_INFORMATION {
+    LARGE_INTEGER FileId;
+    LARGE_INTEGER CreationTime;
+    LARGE_INTEGER LastAccessTime;
+    LARGE_INTEGER LastWriteTime;
+    LARGE_INTEGER ChangeTime;
+    LARGE_INTEGER AllocationSize;
+    LARGE_INTEGER EndOfFile;
+    DWORD FileAttributes;
+    DWORD ReparseTag;
+    DWORD NumberOfLinks;
+    ACCESS_MASK EffectiveAccess;
+    DWORD LxFlags;
+    DWORD LxUid;
+    DWORD LxGid;
+    DWORD LxMode;
+    DWORD LxDeviceIdMajor;
+    DWORD LxDeviceIdMinor;
+} FILE_STAT_LX_INFORMATION, *PFILE_STAT_LX_INFORMATION;
+
+//================ FileStatBasicInformation ========================================
+
+//
+// Note: Fields up through NumberOfLinks are the same
+// as in FILE_STAT_INFORMATION and FILE_STAT_LX_INFORMATION
+// (associated with file info classes FileStatInformation and
+// FileStatLxInformation, respectively).
+//
+// Fields DeviceType and DeviceCharacteristics are the same as
+// fields DeviceType and Characteristics in FILE_FS_DEVICE_INFORMATION,
+// respectively (assocated with file info class FileFsDeviceInformation).
+//
+// Field VolumeSerialNumber is the same as in FILE_ID_INFORMATION
+// (associated with file info class FileIdInformation).
+//
+// For FileId and FileId128 fields: the distinction here is the same as
+// for FILE_ID_ALL_EXTD_BOTH_DIR_INFORMATION; i.e., filesystems can
+// represent file IDs in both a 64-bit form (FileId) and a 128-bit
+// form (FileId128). Both fields are opaque and dependent on the
+// type of filesystem; and both represent a valid way to uniquely
+// identify a particular file.
+//
+
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+
+typedef struct _FILE_STAT_BASIC_INFORMATION {
+    LARGE_INTEGER FileId;
+    LARGE_INTEGER CreationTime;
+    LARGE_INTEGER LastAccessTime;
+    LARGE_INTEGER LastWriteTime;
+    LARGE_INTEGER ChangeTime;
+    LARGE_INTEGER AllocationSize;
+    LARGE_INTEGER EndOfFile;
+    DWORD FileAttributes;
+    DWORD ReparseTag;
+    DWORD NumberOfLinks;
+    DWORD DeviceType;
+    DWORD DeviceCharacteristics;
+    DWORD Reserved;
+    LARGE_INTEGER VolumeSerialNumber;
+    FILE_ID_128 FileId128;
+} FILE_STAT_BASIC_INFORMATION, *PFILE_STAT_BASIC_INFORMATION;
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+
+
 //
 // Flag definitions for Flags in FILE_CASE_SENSITIVE_INFO.
 //
@@ -14841,6 +15015,18 @@ typedef union _FILE_SEGMENT_ELEMENT {
 
 #endif  // (NTDDI_VERSION >= NTDDI_WIN10_RS1)
 
+#if (NTDDI_VERSION >= NTDDI_WIN11_GA)
+
+//
+//  If set, this operation will write the data for the given file from the
+//  Windows in-memory cache.  It will also try to skip updating the timestamp
+//  as much as possible.  This will send a SYNC to the storage device to flush its
+//  cache.  Not supported on volume or directory handles.
+//
+
+#define FLUSH_FLAGS_FLUSH_AND_PURGE                     0x00000008
+
+#endif  // (NTDDI_VERSION >= NTDDI_WIN11_GA)
 
 
 //
@@ -20419,6 +20605,9 @@ typedef PIMAGE_LOAD_CONFIG_DIRECTORY32    PIMAGE_LOAD_CONFIG_DIRECTORY;
 
 // end_ntoshvp
 
+#define IMAGE_HOT_PATCH_INFO_FLAG_PATCHORDERCRITICAL 0x00000001
+#define IMAGE_HOT_PATCH_INFO_FLAG_HOTSWAP            0x00000002
+
 typedef struct _IMAGE_HOT_PATCH_INFO {
     DWORD Version;
     DWORD Size;
@@ -20427,6 +20616,8 @@ typedef struct _IMAGE_HOT_PATCH_INFO {
     DWORD BaseImageCount;
     DWORD BufferOffset;             // Version 2 and later
     DWORD ExtraPatchSize;           // Version 3 and later
+    DWORD MinSequenceNumber;        // Version 4 and later
+    DWORD Flags;                    // Version 4 and later
 } IMAGE_HOT_PATCH_INFO, *PIMAGE_HOT_PATCH_INFO;
 
 typedef struct _IMAGE_HOT_PATCH_BASE {
@@ -23103,7 +23294,6 @@ typedef enum _RTL_SYSTEM_GLOBAL_DATA_ID {
     GlobalDataIdLastSystemRITEventTickCount,
     GlobalDataIdConsoleSharedDataFlags,
     GlobalDataIdNtSystemRootDrive,
-    GlobalDataIdQpcShift,
     GlobalDataIdQpcBypassEnabled,
     GlobalDataIdQpcData,
     GlobalDataIdQpcBias

@@ -1157,9 +1157,7 @@ QueryPartitionInformation(
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_FE)
 
-// *TODO* Needs to update NTDDT_WIN11_ZN to Gallium when available
-//        https://microsoft.visualstudio.com/DefaultCollection/OS/_workitems/edit/44048827
-#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+#if (NTDDI_VERSION >= NTDDI_WIN11_GA)
 
 #pragma region Desktop Family or OneCore Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM)
@@ -1244,7 +1242,7 @@ GetMemoryNumaPerformanceInformation(
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_SYSTEM) */
 #pragma endregion
 
-#endif // (NTDDI_VERSION >= NTDDI_WIN11_ZN)
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_GA)
 
 #if _MSC_VER >= 1200
 #pragma warning(pop)

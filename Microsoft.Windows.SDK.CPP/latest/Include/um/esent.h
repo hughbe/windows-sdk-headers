@@ -273,6 +273,19 @@ typedef struct tagCONVERT_W
 
 
 
+// Special format specifiers here
+#define JET_efvUseEngineDefault             (0x40000001)    //  Instructs the engine to use the maximal default supported Engine Format Version. (default)
+#define JET_efvUsePersistedFormat           (0x40000002)    //  Instructs the engine to use the minimal Engine Format Version of all loaded log and DB files.
+#define JET_efvAllowHigherPersistedFormat   (0x41000000)    //  Can be combined with a specific EngineFormatVersion but will not fail if persisted files are ahead of the specified EngineFormatVersion.  Will still fail if the persisted version is ahead of what the engine actually can read/understand.
+
+#define JET_efvWindows19H1Rtm                   8920        //  Last pre-efv version, shipped in Windows 10 until 19H1 release.
+#define JET_efvWindows10v2004                   9180        //  Efv shipped with Windows "Vibranium", first shipped with Windows 10 version 2004 (and all subsequent Windows 10 releases).
+#define JET_efvWindowsServer2022                9360        //  Efv shipped with Windows Server 2022.
+#define JET_efvWindows11v21H2                   9400        //  Efv shipped with Windows 11 21H2 release.
+#define JET_efvWindows11v22H2                   9480        //  Efv shipped with Windows 11 22H2 release.
+#define JET_efvWindows11v23H2                   9600        //  Efv shipped with Windows 11 23H2 release.
+
+
 //  Online defragmentation (JetDefragment/JetDefragment2) options
 #define JET_bitDefragmentBatchStart             0x00000001
 #define JET_bitDefragmentBatchStop              0x00000002
@@ -378,6 +391,7 @@ typedef struct
                                                                         //    to disallow fixed/var columns in derived tables (so that
                                                                         //    fixed/var columns may be added to the template in the future)
 #endif // JET_VERSION >= 0x0501
+
 
 typedef struct
 {
@@ -2139,7 +2153,6 @@ typedef enum
 
 // Parameters added in Windows 8.
 #if ( JET_VERSION >= 0x0602 )
-// System parameter 185 is reserved.
 #define JET_paramProcessFriendlyName            186 //  Friendly name for this instance of the process (e.g. performance counter global instance name, event logs).
 #define JET_paramDurableCommitCallback          187 //  callback for when log is flushed
 #endif // JET_VERSION >= 0x0602
@@ -2157,6 +2170,7 @@ typedef enum
 
 #endif // JET_VERSION >= 0x0A00
 
+#define JET_paramEngineFormatVersion            194 //  Engine format version - specifies the maximum format version the engine should allow, ensuring no format features are used beyond this (allowing the DB / logs to be forward compatible).
 #if ( JET_VERSION >= 0x0A01 )
 #define JET_paramUseFlushForWriteDurability     214 //  This controls whether ESE uses Flush or FUA to make sure a write to disk is durable.
 
@@ -2170,7 +2184,7 @@ typedef enum
 #endif // JET_VERSION >= 0x0A01
 
 #define JET_paramTraceFlags                     223 // Specific flags to include in IO traces indicating various info
-#define JET_paramMaxValueInvalid                225 //  This is not a valid parameter. It can change from release to release!
+#define JET_paramMaxValueInvalid                226 //  This is not a valid parameter. It can change from release to release!
 
 
 
@@ -2529,7 +2543,11 @@ typedef struct
 #endif // JET_VERSION >= 0x0601
 #if ( JET_VERSION >= 0x0602 )
 #define JET_bitTTDotNetGuid         0x00000100  //  sort all JET_coltypGUID columns according to .Net Guid sort order
-#endif // JET_VERSION >= 0x0601
+#endif // JET_VERSION >= 0x0602
+#if ( JET_VERSION >= 0x0A01 )
+#define JET_bitTTMaterializeBBT     0x00000200  // The temp table uses the Buffered BTree format when it is materialized
+#endif // JET_VERSION >= 0x0A01
+// begin_PubEsent
 
 
     /* Flags for JetSetColumn */
@@ -3181,9 +3199,6 @@ typedef struct
 #define JET_errNodeCorrupted                -358  // A node or prefix node is logically corrupted, the key suffix size is larger than the node or line's size.
 #define JET_errBBTNodeCorrupted             -364  /* A property of the BBT node is logically corrupted. Or the BBT node isn't valid. */
 #define JET_errBBTBuffCorrupted             -365  /* A BBT buff is logically corrupted. The nodes are out of sequence or the BBT header is corrupt. */
-
-/*  RECORD MANAGER errors
-/**/
 #define JET_wrnSeparateLongValue             406  /* Column is a separated long-value */
 #define JET_wrnRecordFoundGreater           JET_wrnSeekNotEqual
 #define JET_wrnRecordFoundLess              JET_wrnSeekNotEqual
@@ -3314,6 +3329,7 @@ typedef struct
 #define JET_errEngineFormatVersionSpecifiedTooLowForDatabaseVersion                 -623 /* The specified JET_ENGINEFORMATVERSION is set too low for this database file, the database file has already been upgraded to a higher version.  A higher JET_ENGINEFORMATVERSION value must be set in the param. */
 #define JET_errDbTimeBeyondMaxRequired      -625  /* dbtime on page greater than or equal to dbtimeAfter in record, but record is outside required range for the database */
 #define JET_errLogOperationInconsistentWithDatabase -626 /* Log record in the log is inconsistent with the current state of the database and cannot be applied */
+#define JET_errInsertKeyOutOfOrder          -627  /* The insert attempted was not placed in correct key order.  Possibly indicates transient memory issues. */
 #define JET_errBackupAbortByServer          -801  /* Backup was aborted by server by calling JetTerm with JET_bitTermStopBackup or by calling JetStopBackup */
 
 #define JET_errInvalidGrbit                 -900  /* Invalid flags parameter */
@@ -3440,9 +3456,6 @@ typedef struct
 #define JET_errCannotDisableVersioning      -1208 /* Cannot disable versioning for this database */
 #define JET_errInvalidDatabaseVersion       -1209 /* Database engine is incompatible with database */
 
-/*  The following error code are for NT clients only. It will return such error during
- *  JetInit if JET_paramCheckFormatWhenOpenFail is set.
- */
 #define JET_errDatabase200Format            -1210 /* The database is in an older (200) format */
 #define JET_errDatabase400Format            -1211 /* The database is in an older (400) format */
 #define JET_errDatabase500Format            -1212 /* The database is in an older (500) format */

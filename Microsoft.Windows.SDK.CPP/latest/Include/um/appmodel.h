@@ -19,7 +19,7 @@
 #if defined(_MSC_VER)
 #if _MSC_VER > 1000
 #pragma once
-#endif
+#endif // _MSC_VER > 1000
 #endif // defined(_MSC_VER)
 
 #ifndef _APPMODEL_H_
@@ -35,7 +35,7 @@
 #if defined(_MSC_VER)
 #if _MSC_VER >= 1200
 #pragma warning(push)
-#endif
+#endif // _MSC_VER >= 1200
 #pragma warning(disable:4201) /* nonstandard extension used : nameless struct/union */
 #endif // defined(_MSC_VER)
 
@@ -43,7 +43,7 @@
 
 #if defined(__cplusplus)
 extern "C" {
-#endif
+#endif // defined(__cplusplus)
 
 #pragma region Application Family
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP)
@@ -213,7 +213,7 @@ typedef enum PackagePathType
     PackagePathType_MachineExternal = 3,
     PackagePathType_UserExternal = 4,
     PackagePathType_EffectiveExternal = 5
-#endif
+#endif // NTDDI_VERSION >= NTDDI_WIN10_VB
 } PackagePathType;
 
 WINBASEAPI
@@ -518,11 +518,11 @@ GetStagedPackageOrigin(
 #if NTDDI_VERSION >= NTDDI_WIN10_MN
 #define PACKAGE_PROPERTY_HOSTRUNTIME        0x00200000
 #define PACKAGE_FILTER_HOSTRUNTIME          PACKAGE_PROPERTY_HOSTRUNTIME
-#endif
+#endif // NTDDI_VERSION >= NTDDI_WIN10_MN
 
 #if defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WINBLUE)
 #pragma deprecated("PACKAGE_FILTER_ALL_LOADED")
-#endif
+#endif // defined(NTDDI_VERSION) && (NTDDI_VERSION >= NTDDI_WINBLUE)
 // Use PACKAGE_FILTER_HEAD|PACKAGE_FILTER_DIRECT instead of PACKAGE_FILTER_ALL_LOADED
 #define PACKAGE_FILTER_ALL_LOADED   0
 
@@ -681,6 +681,16 @@ typedef enum AddPackageDependencyOptions
 } AddPackageDependencyOptions;
 DEFINE_ENUM_FLAG_OPERATORS(AddPackageDependencyOptions)
 
+#if NTDDI_VERSION >= NTDDI_WIN10_GA
+typedef enum AddPackageDependencyOptions2
+{
+    AddPackageDependencyOptions2_None                      = 0,
+    AddPackageDependencyOptions2_PrependIfRankCollision    = 0x00000001,
+    AddPackageDependencyOptions2_OnlyUseFirstPackageFamily = 0x00000002,
+} AddPackageDependencyOptions2;
+DEFINE_ENUM_FLAG_OPERATORS(AddPackageDependencyOptions2)
+#endif // NTDDI_VERSION >= NTDDI_WIN10_GA
+
 #define PACKAGE_DEPENDENCY_RANK_DEFAULT 0
 
 typedef enum PackageDependencyProcessorArchitectures
@@ -698,7 +708,7 @@ DEFINE_ENUM_FLAG_OPERATORS(PackageDependencyProcessorArchitectures)
 #if !defined(__PACKAGEDEPENDENCY_CONTEXT_DEFINED__)
 #define __PACKAGEDEPENDENCY_CONTEXT_DEFINED__
 DECLARE_HANDLE(PACKAGEDEPENDENCY_CONTEXT);
-#endif
+#endif // !defined(__PACKAGEDEPENDENCY_CONTEXT_DEFINED__)
 
 /// Define a package dependency. The criteria for a PackageDependency
 /// (package family name, minimum version, etc)
@@ -800,6 +810,7 @@ DeletePackageDependency(
 ///
 /// @param packageDependencyContext valid until passed to RemovePackageDependency()
 /// @param packageFullName allocated via HeapAlloc; use HeapFree to deallocate
+/// @see AddPackageDependency2()
 
 WINBASEAPI
 HRESULT
@@ -808,6 +819,58 @@ AddPackageDependency(
     _In_ PCWSTR packageDependencyId,
     INT32 rank,
     AddPackageDependencyOptions options,
+    _Out_ PACKAGEDEPENDENCY_CONTEXT* packageDependencyContext,
+    _Outptr_opt_result_maybenull_ PWSTR* packageFullName
+    );
+
+/// Resolve a previously-pinned PackageDependency to a specific package and
+/// add it to the invoking process' package graph. Once the dependency has
+/// been added other code-loading methods (LoadLibrary, CoCreateInstance, etc)
+/// can find the binaries in the resolved package.
+///
+/// Package resolution is specific to a user and can return different values
+/// for different users on a system.
+///
+/// Each successful AddPackageDependency2() adds the resolve packaged to the
+/// calling process' package graph, even if already present. There is no
+/// duplicate 'detection' or 'filtering' applied by the API (multiple
+/// references from a package is not harmful). Once resolution is complete
+/// the package dependency stays resolved for that user until the last reference across
+/// all processes for that user is removed via RemovePackageDependency (or
+/// process termination).
+///
+/// AddPackageDependency2() adds the resolved package to the caller's package graph,
+/// per the rank specified. A process' package graph is a list of packages sorted by
+/// rank in ascending order (-infinity...0...+infinity). If package(s) are present in the
+/// package graph with the same rank as the call to AddPackageDependency2 the resolved
+/// package is (by default) added after others of the same rank. To add a package
+/// before others o the same rank, specify AddPackageDependencyOptions2_PrependIfRankCollision.
+///
+/// Every AddPackageDependency2 can be balanced by a RemovePackageDependency
+/// to remove the entry from the package graph. If the process terminates all package
+/// references are removed, but any pins stay behind.
+///
+/// AddPackageDependency2 adds the resolved package to the process' package
+/// graph, per the rank and options parameters. The process' package
+/// graph is used to search for DLLs (per Dynamic-Link Library Search Order),
+/// WinRT objects and other resources; the caller can now load DLLs, activate
+/// WinRT objects and use other resources from the framework package until
+/// RemovePackageDependency is called. The packageDependencyId parameter
+/// must match a package dependency defined for the calling user or the
+/// system (i.e. pinned with CreatePackageDependencyOptions_ScopeIsSystem) else
+/// an error is returned.
+///
+/// @param packageDependencyContext valid until passed to RemovePackageDependency()
+/// @param packageFullName allocated via HeapAlloc; use HeapFree to deallocate
+/// @see AddPackageDependency()
+
+WINBASEAPI
+HRESULT
+WINAPI
+AddPackageDependency2(
+    _In_ PCWSTR packageDependencyId,
+    INT32 rank,
+    AddPackageDependencyOptions2 options,
     _Out_ PACKAGEDEPENDENCY_CONTEXT* packageDependencyContext,
     _Outptr_opt_result_maybenull_ PWSTR* packageFullName
     );
@@ -1020,7 +1083,7 @@ AppPolicyGetCreateFileAccess(
 #if defined(_MSC_VER)
 #if _MSC_VER >= 1200
 #pragma warning(pop)
-#endif
+#endif // _MSC_VER >= 1200
 #endif // defined(_MSC_VER)
 
-#endif
+#endif // _APPMODEL_H_

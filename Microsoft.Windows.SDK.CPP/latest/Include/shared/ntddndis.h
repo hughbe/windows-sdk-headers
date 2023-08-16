@@ -10891,6 +10891,16 @@ typedef struct _NDIS_HARDWARE_CROSSTIMESTAMP
 
 
 
+#if (NDIS_SUPPORT_NDIS685)
+
+//
+// OID_QUIC_CONNECTION_ENCRYPTION is a direct OID used for QUIC connection
+// encryption offload.
+//
+#define OID_QUIC_CONNECTION_ENCRYPTION      0xFC010215
+
+#endif // (NDIS_SUPPORT_NDIS685)
+
 #ifdef __cplusplus
 }
 #endif

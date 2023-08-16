@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_System_RemoteDesktop_Input_H
 #define WINRT_Windows_System_RemoteDesktop_Input_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220418.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.230511.6"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.230511.6"
 #include "winrt/Windows.System.RemoteDesktop.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.System.RemoteDesktop.Input.2.h"
@@ -36,9 +36,9 @@ namespace winrt::impl
     {
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection)->ReportDataReceived(pduData.size(), get_abi(pduData)));
     }
-    template <typename D> auto consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnection2<D>::DoSpeculativeKeyProcessing(uint16_t scanCode, winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags const& flags) const
+    template <typename D> auto consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnection2<D>::ReportPredictedKeyEvent(uint16_t scanCode, winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes const& attributes) const
     {
-        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2)->DoSpeculativeKeyProcessing(scanCode, static_cast<uint32_t>(flags)));
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2)->ReportPredictedKeyEvent(scanCode, static_cast<uint32_t>(attributes)));
     }
     template <typename D> auto consume_Windows_System_RemoteDesktop_Input_IRemoteTextConnectionFactory<D>::CreateInstance(winrt::guid const& connectionId, winrt::Windows::System::RemoteDesktop::Input::RemoteTextConnectionDataHandler const& pduForwarder) const
     {
@@ -108,10 +108,10 @@ namespace winrt::impl
     template <typename D>
     struct produce<D, winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2> : produce_base<D, winrt::Windows::System::RemoteDesktop::Input::IRemoteTextConnection2>
     {
-        int32_t __stdcall DoSpeculativeKeyProcessing(uint16_t scanCode, uint32_t flags) noexcept final try
+        int32_t __stdcall ReportPredictedKeyEvent(uint16_t scanCode, uint32_t attributes) noexcept final try
         {
             typename D::abi_guard guard(this->shim());
-            this->shim().DoSpeculativeKeyProcessing(scanCode, *reinterpret_cast<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventFlags const*>(&flags));
+            this->shim().ReportPredictedKeyEvent(scanCode, *reinterpret_cast<winrt::Windows::System::RemoteDesktop::Input::RemoteKeyEventAttributes const*>(&attributes));
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -148,33 +148,33 @@ namespace winrt::impl
 }
 WINRT_EXPORT namespace winrt::Windows::System::RemoteDesktop::Input
 {
-    constexpr auto operator|(RemoteKeyEventFlags const left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator|(RemoteKeyEventAttributes const left, RemoteKeyEventAttributes const right) noexcept
     {
-        return static_cast<RemoteKeyEventFlags>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
+        return static_cast<RemoteKeyEventAttributes>(impl::to_underlying_type(left) | impl::to_underlying_type(right));
     }
-    constexpr auto operator|=(RemoteKeyEventFlags& left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator|=(RemoteKeyEventAttributes& left, RemoteKeyEventAttributes const right) noexcept
     {
         left = left | right;
         return left;
     }
-    constexpr auto operator&(RemoteKeyEventFlags const left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator&(RemoteKeyEventAttributes const left, RemoteKeyEventAttributes const right) noexcept
     {
-        return static_cast<RemoteKeyEventFlags>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
+        return static_cast<RemoteKeyEventAttributes>(impl::to_underlying_type(left) & impl::to_underlying_type(right));
     }
-    constexpr auto operator&=(RemoteKeyEventFlags& left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator&=(RemoteKeyEventAttributes& left, RemoteKeyEventAttributes const right) noexcept
     {
         left = left & right;
         return left;
     }
-    constexpr auto operator~(RemoteKeyEventFlags const value) noexcept
+    constexpr auto operator~(RemoteKeyEventAttributes const value) noexcept
     {
-        return static_cast<RemoteKeyEventFlags>(~impl::to_underlying_type(value));
+        return static_cast<RemoteKeyEventAttributes>(~impl::to_underlying_type(value));
     }
-    constexpr auto operator^(RemoteKeyEventFlags const left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator^(RemoteKeyEventAttributes const left, RemoteKeyEventAttributes const right) noexcept
     {
-        return static_cast<RemoteKeyEventFlags>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
+        return static_cast<RemoteKeyEventAttributes>(impl::to_underlying_type(left) ^ impl::to_underlying_type(right));
     }
-    constexpr auto operator^=(RemoteKeyEventFlags& left, RemoteKeyEventFlags const right) noexcept
+    constexpr auto operator^=(RemoteKeyEventAttributes& left, RemoteKeyEventAttributes const right) noexcept
     {
         left = left ^ right;
         return left;

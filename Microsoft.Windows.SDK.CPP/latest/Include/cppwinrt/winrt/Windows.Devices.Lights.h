@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Devices_Lights_H
 #define WINRT_Windows_Devices_Lights_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220418.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.230511.6"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.230511.6"
 #include "winrt/Windows.Devices.h"
 #include "winrt/impl/Windows.Foundation.2.h"
 #include "winrt/impl/Windows.Foundation.Numerics.2.h"
@@ -213,6 +213,26 @@ namespace winrt::impl
         void* operation{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::ILampArray)->RequestMessageAsync(messageId, &operation));
         return winrt::Windows::Foundation::IAsyncOperation<winrt::Windows::Storage::Streams::IBuffer>{ operation, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Devices_Lights_ILampArray2<D>::IsAvailable() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::ILampArray2)->get_IsAvailable(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Devices_Lights_ILampArray2<D>::AvailabilityChanged(winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::LampArray, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        winrt::event_token token{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::ILampArray2)->add_AvailabilityChanged(*(void**)(&handler), put_abi(token)));
+        return token;
+    }
+    template <typename D> typename consume_Windows_Devices_Lights_ILampArray2<D>::AvailabilityChanged_revoker consume_Windows_Devices_Lights_ILampArray2<D>::AvailabilityChanged(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::LampArray, winrt::Windows::Foundation::IInspectable> const& handler) const
+    {
+        return impl::make_event_revoker<D, AvailabilityChanged_revoker>(this, AvailabilityChanged(handler));
+    }
+    template <typename D> auto consume_Windows_Devices_Lights_ILampArray2<D>::AvailabilityChanged(winrt::event_token const& token) const noexcept
+    {
+        WINRT_IMPL_SHIM(winrt::Windows::Devices::Lights::ILampArray2)->remove_AvailabilityChanged(impl::bind_in(token));
     }
     template <typename D> auto consume_Windows_Devices_Lights_ILampArrayStatics<D>::GetDeviceSelector() const
     {
@@ -586,6 +606,33 @@ namespace winrt::impl
 #endif
 #ifndef WINRT_LEAN_AND_MEAN
     template <typename D>
+    struct produce<D, winrt::Windows::Devices::Lights::ILampArray2> : produce_base<D, winrt::Windows::Devices::Lights::ILampArray2>
+    {
+        int32_t __stdcall get_IsAvailable(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().IsAvailable());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall add_AvailabilityChanged(void* handler, winrt::event_token* token) noexcept final try
+        {
+            zero_abi<winrt::event_token>(token);
+            typename D::abi_guard guard(this->shim());
+            *token = detach_from<winrt::event_token>(this->shim().AvailabilityChanged(*reinterpret_cast<winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Devices::Lights::LampArray, winrt::Windows::Foundation::IInspectable> const*>(&handler)));
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall remove_AvailabilityChanged(winrt::event_token token) noexcept final
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().AvailabilityChanged(*reinterpret_cast<winrt::event_token const*>(&token));
+            return 0;
+        }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
     struct produce<D, winrt::Windows::Devices::Lights::ILampArrayStatics> : produce_base<D, winrt::Windows::Devices::Lights::ILampArrayStatics>
     {
         int32_t __stdcall GetDeviceSelector(void** result) noexcept final try
@@ -789,6 +836,7 @@ namespace std
 #ifndef WINRT_LEAN_AND_MEAN
     template<> struct hash<winrt::Windows::Devices::Lights::ILamp> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::ILampArray> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Devices::Lights::ILampArray2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::ILampArrayStatics> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::ILampAvailabilityChangedEventArgs> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Devices::Lights::ILampInfo> : winrt::impl::hash_base {};

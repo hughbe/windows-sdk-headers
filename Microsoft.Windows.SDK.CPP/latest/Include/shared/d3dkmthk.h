@@ -94,6 +94,12 @@ typedef enum _D3DKMT_CLIENTHINT
     D3DKMT_CLIENTHINT_DML_TENSORFLOW = 18,
     D3DKMT_CLIENTHINT_ONEAPI_LEVEL0  = 19,
     D3DKMT_CLIENTHINT_DML_PYTORCH    = 20,
+    D3DKMT_CLIENTHINT_VKON12         = 21,
+    D3DKMT_CLIENTHINT_FASTRPC        = 22,
+    D3DKMT_CLIENTHINT_SNPE           = 23,
+    D3DKMT_CLIENTHINT_QNN            = 24,
+    D3DKMT_CLIENTHINT_VITIS          = 25,
+    D3DKMT_CLIENTHINT_FFMPEG         = 26,
     D3DKMT_CLIENTHINT_MAX
 } D3DKMT_CLIENTHINT;
 
@@ -137,10 +143,26 @@ typedef struct _D3DKMT_CREATESYNCHRONIZATIONOBJECT2
 
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
 
+typedef struct _D3DKMT_CREATENATIVEFENCE_FLAGS 
+{
+    union
+    {
+        struct 
+        {
+            UINT Reserved : 32;
+        };
+        UINT Value;
+    };
+}D3DKMT_CREATENATIVEFENCE_FLAGS;
+
 typedef struct _D3DKMT_CREATENATIVEFENCE
 {
-    D3DKMT_HANDLE                   hDevice;        // in:  Handle to the device.
-    D3DDDI_CREATENATIVEFENCEINFO    Info;           // in/out: Attributes of the synchronization object.
+    D3DKMT_HANDLE                  hDevice;                                          // in:  Handle to the device.
+    D3DKMT_HANDLE                  hSyncObject;                                      // out: Handle to sync object in this process.
+    BYTE                           pPrivateDriverData[D3DDDI_NATIVE_FENCE_PDD_SIZE]; // in: Private driver data to pass to KMD CreateNativeFence call
+    D3DDDI_NATIVEFENCEINFO         Info;                                             // in/out: Attributes of the synchronization object.
+    D3DKMT_CREATENATIVEFENCE_FLAGS Flags;
+    BYTE                           Reserved[28];
 } D3DKMT_CREATENATIVEFENCE;
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
@@ -1663,13 +1685,11 @@ typedef struct _D3DKMT_OPENNATIVEFENCEFROMNTHANDLE
 {
     D3DKMT_PTR(HANDLE,                  hNtHandle);         // in : NT handle for the sync object.
     D3DKMT_HANDLE                       hDevice;            // in : Device handle to use this sync object on.
-
     UINT                                EngineAffinity;     // in: Defines physical adapters where the GPU VA is mapped
     D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS  Flags;              // in: Flags.
-
     D3DKMT_HANDLE                       hSyncObject;        // out: Handle to sync object in this process.
-
     D3DDDI_NATIVEFENCEMAPPING           NativeFenceMapping; // out: process mapping information for the native fence
+    BYTE                                Reserved[32];
 } D3DKMT_OPENNATIVEFENCEFROMNTHANDLE;
 
 #endif // (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM3_1)
@@ -2724,6 +2744,7 @@ typedef enum _D3DKMT_VAD_ESCAPE_COMMAND
     D3DKMT_VAD_ESCAPE_GET_PTE,
     D3DKMT_VAD_ESCAPE_GET_GPUMMU_CAPS,
     D3DKMT_VAD_ESCAPE_GET_SEGMENT_CAPS,
+    D3DKMT_VAD_ESCAPE_GET_PTE_DATA,
 } D3DKMT_VAD_ESCAPE_COMMAND;
 
 typedef struct _D3DKMT_VAD_DESC
@@ -2795,6 +2816,8 @@ typedef struct _DXGK_ESCAPE_GPUMMUCAPS
     BOOLEAN LargePageSupported;
     BOOLEAN DualPteSupported;
     BOOLEAN AllowNonAlignedLargePageAddress;
+    BOOLEAN PageTable64KSupported   : 1;        // Support 64K page table (no dual-PTE)
+    BOOLEAN Reserved                : 7;
     UINT    VirtualAddressBitCount;
     UINT    PageTableLevelCount;
     D3DKMT_PAGE_TABLE_LEVEL_DESC PageTableLevelDesk[DXGK_MAX_PAGE_TABLE_LEVEL_COUNT];
@@ -2817,6 +2840,8 @@ typedef struct _D3DKMT_GET_PTE
     UINT        NumPtes;                                            // In - Number of PTEs to fill. Out - number of filled PTEs
     DXGK_PTE    Pte[D3DKMT_GET_PTE_MAX];                            // Out
     UINT        NumValidEntries;                                    // Out
+    UINT64      DriverProtection[D3DKMT_GET_PTE_MAX];               // Out
+    UINT64      AllocationData[D3DKMT_GET_PTE_MAX];                 // Out
 } D3DKMT_GET_PTE;
 
 #define D3DKMT_MAX_SEGMENT_COUNT 32
@@ -2981,7 +3006,8 @@ typedef struct _D3DKMT_VIDMM_ESCAPE
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_7)
         struct
         {
-            UINT SegmentId;
+            UINT16 PhysicalAdapterIndex;
+            UINT16 SegmentId;
         } VerifyIntegrity;
 #if (DXGKDDI_INTERFACE_VERSION >= DXGKDDI_INTERFACE_VERSION_WDDM2_9)
         struct

@@ -6562,6 +6562,14 @@ DEFINE_PROPERTYKEY(PKEY_MsGraph_DriveId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9,
 DEFINE_PROPERTYKEY(PKEY_MsGraph_ItemId, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 4);
 #define INIT_PKEY_MsGraph_ItemId { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 4 }
 
+//  Name:     System.MsGraph.RecommendationReason -- PKEY_MsGraph_RecommendationReason
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 8
+//
+//  The JSON object representing information about the reason marker for a recommended item
+DEFINE_PROPERTYKEY(PKEY_MsGraph_RecommendationReason, 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29, 8);
+#define INIT_PKEY_MsGraph_RecommendationReason { { 0x4F85567E, 0xFFF0, 0x4DF5, 0xB1, 0xD9, 0x98, 0xB3, 0x14, 0xFF, 0x07, 0x29 }, 8 }
+
 //  Name:     System.MsGraph.RecommendationReferenceId -- PKEY_MsGraph_RecommendationReferenceId
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {4F85567E-FFF0-4DF5-B1D9-98B314FF0729}, 5
@@ -7964,6 +7972,14 @@ DEFINE_PROPERTYKEY(PKEY_RecordedTV_StationName, 0x1B5439E7, 0xEBA1, 0x4AF8, 0xBD
 //-----------------------------------------------------------------------------
 // Search properties
 
+//  Name:     System.LocationEmptyString -- PKEY_LocationEmptyString
+//  Type:     Unspecified -- VT_NULL
+//  FormatID: {62D2D9AB-8B64-498D-B865-402D4796F865}, 3
+//
+//  The display string shown when the user navigates to a location, but the location is empty.
+DEFINE_PROPERTYKEY(PKEY_LocationEmptyString, 0x62D2D9AB, 0x8B64, 0x498D, 0xB8, 0x65, 0x40, 0x2D, 0x47, 0x96, 0xF8, 0x65, 3);
+#define INIT_PKEY_LocationEmptyString { { 0x62D2D9AB, 0x8B64, 0x498D, 0xB8, 0x65, 0x40, 0x2D, 0x47, 0x96, 0xF8, 0x65 }, 3 }
+
 //  Name:     System.Search.AutoSummary -- PKEY_Search_AutoSummary
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
 //  FormatID: {560C36C0-503A-11CF-BAA1-00004C752A9A}, 2
@@ -8181,6 +8197,14 @@ DEFINE_PROPERTYKEY(PKEY_Home_Grouping, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0
 //  FormatID: {30C8EEF4-A832-41E2-AB32-E3C3CA28FD29}, 4
 DEFINE_PROPERTYKEY(PKEY_Home_IsPinned, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29, 4);
 #define INIT_PKEY_Home_IsPinned { { 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29 }, 4 }
+
+//  Name:     System.Home.ItemFolderPathDisplay -- PKEY_Home_ItemFolderPathDisplay
+//  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)
+//  FormatID: {30C8EEF4-A832-41E2-AB32-E3C3CA28FD29}, 6
+//
+//  Friendly name used for the folder path when displayed on File Explorer Home"
+DEFINE_PROPERTYKEY(PKEY_Home_ItemFolderPathDisplay, 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29, 6);
+#define INIT_PKEY_Home_ItemFolderPathDisplay { { 0x30C8EEF4, 0xA832, 0x41E2, 0xAB, 0x32, 0xE3, 0xC3, 0xCA, 0x28, 0xFD, 0x29 }, 6 }
 
 //  Name:     System.InternalName -- PKEY_InternalName
 //  Type:     String -- VT_LPWSTR  (For variants: VT_BSTR)

@@ -16,6 +16,8 @@ Abstract:
 #ifndef _WINHVAPIDEFS_H_
 #define _WINHVAPIDEFS_H_
 
+#if defined(_AMD64_) || defined(_ARM64_)
+
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma once
 #pragma warning(push)
@@ -32,8 +34,10 @@ typedef enum WHV_CAPABILITY_CODE
     WHvCapabilityCodeHypervisorPresent                = 0x00000000,
     WHvCapabilityCodeFeatures                         = 0x00000001,
     WHvCapabilityCodeExtendedVmExits                  = 0x00000002,
+#if defined(_AMD64_)
     WHvCapabilityCodeExceptionExitBitmap              = 0x00000003,
     WHvCapabilityCodeX64MsrExitBitmap                 = 0x00000004,
+#endif
     WHvCapabilityCodeGpaRangePopulateFlags            = 0x00000005,
     WHvCapabilityCodeSchedulerFeatures                = 0x00000006,
 
@@ -41,15 +45,21 @@ typedef enum WHV_CAPABILITY_CODE
     WHvCapabilityCodeProcessorVendor                 = 0x00001000,
     WHvCapabilityCodeProcessorFeatures               = 0x00001001,
     WHvCapabilityCodeProcessorClFlushSize            = 0x00001002,
+#if defined(_AMD64_)
     WHvCapabilityCodeProcessorXsaveFeatures          = 0x00001003,
+#endif
     WHvCapabilityCodeProcessorClockFrequency         = 0x00001004,
+#if defined(_AMD64_)
     WHvCapabilityCodeInterruptClockFrequency         = 0x00001005,
+#endif
     WHvCapabilityCodeProcessorFeaturesBanks          = 0x00001006,
     WHvCapabilityCodeProcessorFrequencyCap           = 0x00001007,
     WHvCapabilityCodeSyntheticProcessorFeaturesBanks = 0x00001008,
+#if defined(_AMD64_)
     WHvCapabilityCodeProcessorPerfmonFeatures        = 0x00001009,
+#endif
     WHvCapabilityCodePhysicalAddressWidth            = 0x0000100A,
-
+#if defined(_AMD64_)
     // Nested-virtualization related capabilities
     WHvCapabilityCodeVmxBasic                        = 0x00002000,
     WHvCapabilityCodeVmxPinbasedCtls                 = 0x00002001,
@@ -68,6 +78,7 @@ typedef enum WHV_CAPABILITY_CODE
     WHvCapabilityCodeVmxTrueProcbasedCtls            = 0x0000200E,
     WHvCapabilityCodeVmxTrueExitCtls                 = 0x0000200F,
     WHvCapabilityCodeVmxTrueEntryCtls                = 0x00002010,
+#endif
 } WHV_CAPABILITY_CODE;
 
 //
@@ -78,11 +89,19 @@ typedef union WHV_CAPABILITY_FEATURES
     struct
     {
         UINT64 PartialUnmap : 1;
+#if defined(_AMD64_)
         UINT64 LocalApicEmulation : 1;
         UINT64 Xsave : 1;
+#else
+        UINT64 : 2;
+#endif
         UINT64 DirtyPageTracking : 1;
         UINT64 SpeculationControl : 1;
+#if defined(_AMD64_)
         UINT64 ApicRemoteRead : 1;
+#else
+        UINT64 : 1;
+#endif
         UINT64 IdleSuspend : 1;
         UINT64 VirtualPciDeviceSupport : 1;
         UINT64 IommuSupport : 1;
@@ -103,20 +122,32 @@ typedef union WHV_EXTENDED_VM_EXITS
 {
     struct
     {
+#if defined(_AMD64_)
         UINT64 X64CpuidExit               : 1; // WHvRunVpExitReasonX64CPUID supported
         UINT64 X64MsrExit                 : 1; // WHvRunVpExitX64ReasonMSRAccess supported
         UINT64 ExceptionExit              : 1; // WHvRunVpExitReasonException supported
         UINT64 X64RdtscExit               : 1; // WHvRunVpExitReasonX64Rdtsc supported
         UINT64 X64ApicSmiExitTrap         : 1; // WHvRunVpExitReasonX64ApicSmiTrap supported
+#else
+        UINT64                            : 5;
+#endif
         UINT64 HypercallExit              : 1; // WHvRunVpExitReasonHypercall supported
+#if defined(_AMD64_)
         UINT64 X64ApicInitSipiExitTrap    : 1; // WHvRunVpExitReasonX64ApicInitSipiTrap supported
         UINT64 X64ApicWriteLint0ExitTrap  : 1; // WHvRunVpExitReasonX64ApicWriteTrap supported
         UINT64 X64ApicWriteLint1ExitTrap  : 1; // WHvRunVpExitReasonX64ApicWriteTrap supported
         UINT64 X64ApicWriteSvrExitTrap    : 1; // WHvRunVpExitReasonX64ApicWriteTrap supported
+#else
+        UINT64                            : 4;
+#endif
         UINT64 UnknownSynicConnection     : 1; // WHvRunVpExitReasonHypercall supported for unknown synic connection to HvSignalEvent
         UINT64 RetargetUnknownVpciDevice  : 1; // WHvRunVpExitReasonHypercall supported for unknown device to HvRetargetDeviceInterrupt
+#if defined(_AMD64_)
         UINT64 X64ApicWriteLdrExitTrap    : 1; // WHvRunVpExitReasonX64ApicWriteTrap supported
         UINT64 X64ApicWriteDfrExitTrap    : 1; // WHvRunVpExitReasonX64ApicWriteTrap supported
+#else
+        UINT64                            : 2;
+#endif
         UINT64 GpaAccessFaultExit         : 1; // WHvRunVpExitReasonMemoryAccess supported for second-level page faults
         UINT64 Reserved                   : 49;
     };
@@ -133,7 +164,9 @@ typedef enum WHV_PROCESSOR_VENDOR
 {
     WHvProcessorVendorAmd   = 0x0000,
     WHvProcessorVendorIntel = 0x0001,
-    WHvProcessorVendorHygon = 0x0002
+    WHvProcessorVendorHygon = 0x0002,
+
+    WHvProcessorVendorArm   = 0x0010,
 
 } WHV_PROCESSOR_VENDOR;
 
@@ -142,7 +175,10 @@ typedef enum WHV_PROCESSOR_VENDOR
 // WHvPartitionPropertyCodeProcessorFeatures. Additionally the value is embeded
 // in WHV_PROCESSOR_FEATURES_BANKS.
 //
-typedef union WHV_PROCESSOR_FEATURES
+
+#if defined(_AMD64_)
+
+typedef union WHV_X64_PROCESSOR_FEATURES
 {
     struct
     {
@@ -212,16 +248,16 @@ typedef union WHV_PROCESSOR_FEATURES
     };
 
     UINT64 AsUINT64;
-} WHV_PROCESSOR_FEATURES;
+} WHV_X64_PROCESSOR_FEATURES, WHV_PROCESSOR_FEATURES;
 
-C_ASSERT(sizeof(WHV_PROCESSOR_FEATURES) == 8);
+C_ASSERT(sizeof(WHV_X64_PROCESSOR_FEATURES) == 8);
 
 //
 // Return values for WhvCapabilityCodeProcessorFeaturesBanks and input buffer
 // for WHvPartitionPropertyCodeProcessorFeaturesBanks. BanksCount must be populated
 // before calling WHP APIs.
 //
-typedef union WHV_PROCESSOR_FEATURES1
+typedef union WHV_X64_PROCESSOR_FEATURES1
 {
     struct
     {
@@ -268,9 +304,132 @@ typedef union WHV_PROCESSOR_FEATURES1
     };
 
     UINT64 AsUINT64;
-} WHV_PROCESSOR_FEATURES1;
+} WHV_X64_PROCESSOR_FEATURES1, WHV_PROCESSOR_FEATURES1;
 
-C_ASSERT(sizeof(WHV_PROCESSOR_FEATURES1) == 8);
+C_ASSERT(sizeof(WHV_X64_PROCESSOR_FEATURES1) == 8);
+
+#elif defined(_ARM64_)
+
+typedef union WHV_ARM64_PROCESSOR_FEATURES
+{
+    struct
+    {
+        //
+        // Bits for features reported by ID_AA64MMFR0_EL1
+        //
+
+        UINT64 Asid16:1;                    // 16 bits ASID.
+        UINT64 TGran16:1;                   // Indicated support for 16KB memory translation granule.
+        UINT64 TGran64:1;                   // Indicated support for 64KB memory translation granule.
+
+        //
+        // Bits for features reported by ID_AA64MMFR1_EL1
+        //
+
+        UINT64 Haf:1;                       // Hardware updates to Access flag.
+        UINT64 Hdbs:1;                      // Hardware updates to Dirty state.
+        UINT64 Pan:1;                       // Privileged access never (ARMv8.1).
+        UINT64 AtS1E1:1;                    // AT S1E1RP and AT S1E1WP supported.
+
+        //
+        // Bits for features reported by ID_AA64MMFR2_EL1
+        //
+
+        UINT64 Uao:1;                       // PSTATE override of Unprivileged Load/Store (ARMv8.2)
+
+        //
+        // Bits for features reported by ID_AA64PFR0_EL1
+        //
+
+        UINT64 El0Aarch32:1;                // If Aarch32 is supported at El0.
+        UINT64 Fp:1;                        // Floating point support.
+        UINT64 FpHp:1;                      // Floating point half-precision support.
+        UINT64 AdvSimd:1;                   // AdvSIMD is implemented.
+        UINT64 AdvSimdHp:1;                 // AdvSIMD with half precision floating point support.
+        UINT64 GicV3V4:1;                   // System register interface to versions 3 and 4 of the GIC CPU interface is implemented.
+        UINT64 GicV41:1;                    // System register interface to version 4.1 of the GIC CPU interface is implemented.
+        UINT64 Ras:1;                       // Ras
+
+        //
+        // Bits for features reported by ID_AA64DFR0_EL1
+        //
+
+        UINT64 PmuV3:1;                     // PMUv3 implemented.
+        UINT64 PmuV3ArmV81:1;               // PMUv3 for Armv8.1 implemented.
+        UINT64 PmuV3ArmV84:1;               // PMUv3 for Armv8.4 implemented.
+        UINT64 PmuV3ArmV85:1;               // PMUv3 for Armv8.5 implemented.
+
+        //
+        // Bits for features reported by ID_AA64ISAR0_EL1
+        //
+
+        UINT64 Aes:1;                      // AES(AESE, AESD, AESMC, AESIMC) instructions.
+        UINT64 PolyMul:1;                  // Polynomial multiply instructions PMULL/PMULL2
+        UINT64 Sha1:1;                     // Sha1 instructions implemented.
+        UINT64 Sha256:1;                   // Sha256 instructions implemented.
+        UINT64 Sha512:1;                   // Sha512 instructions implemented.
+        UINT64 Crc32:1;                    // CRC instructions implemented.
+        UINT64 Atomic:1;                   // Atomic instructions implemented.
+        UINT64 Rdm:1;                      // SQRDMLAH, SQRDMLSH instructions implemented.
+        UINT64 Sha3:1;                     // Sha3 instructions implemented.
+        UINT64 Sm3:1;                      // SM3 instructions implemented.
+        UINT64 Sm4:1;                      // SM4 instructions implemented.
+        UINT64 Dp:1;                       // UDOT and SDOT Dot product instructions implemented.
+        UINT64 Fhm:1;                      // FMLAL and FMLSL instructions implemented.
+
+
+        //
+        // Bits for features reported by ID_AA64ISAR1_EL1
+        //
+
+        UINT64 DcCvap:1;                   // Clean data cache by address to point of persistence.
+        UINT64 DcCvadp:1;                  // Clean data cache by address to point of deep persistence.
+
+        //
+        // Pointer authentication using QARMA algo.
+        //
+
+        UINT64 ApaBase:1;                  // HaveEnhancedPAC, HaveEnhancedPAC2 return false
+        UINT64 ApaEp:1;                    // HaveEnhancedPAC -> true, HaveEnhancedPAC2 -> false.
+        UINT64 ApaEp2:1;                   // HaveEnhancedPAC -> false, HaveEnhancedPAC2 -> true, HaveFPAC -> false, HaveFPACCombined -> false.
+        UINT64 ApaEp2Fp:1;                 // HaveEnhancedPAC -> false, HaveEnahancedPAC2 -> true, HaveFPAC -> true, HaveFPACCombined -> false.
+        UINT64 ApaEp2Fpc:1;                // HaveEnhancedPAC -> false, HaveEnahancedPAC2 -> true, HaveFPAC -> true, HaveFPACCombined -> true.
+
+        UINT64 Jscvt:1;                    // FJCVTZS instruction implemented. Support for JS conversion from double to integer.
+        UINT64 Fcma:1;                     // Complex number instructions(FCMLA and FCADD) instructions are implemented.
+        UINT64 RcpcV83:1;                  // ARMv8.3-RCPC. LDAPR* instructions.
+        UINT64 RcpcV84:1;                  // ARMv8.4-RCPC. LDAPUR* and STLUR* instructions.
+        UINT64 Gpa:1;                      // Generic code authentication using QARMA algo.
+
+        //
+        // Features reported by CTR_EL0
+        //
+
+        UINT64 L1ipPipt:1;                 // If L1 Instruction cache is PIPT.
+
+        //
+        // Features reported by DCZID_EL0
+        //
+
+        UINT64 DzPermitted:1;             // Data zero instructions permitted.
+
+        UINT64 Reserved:17;
+    };
+
+    UINT64 AsUINT64;
+} WHV_ARM64_PROCESSOR_FEATURES, WHV_PROCESSOR_FEATURES;
+
+typedef union WHV_ARM64_PROCESSOR_FEATURES1
+{
+    struct
+    {
+        UINT64 Reserved:64;
+    };
+
+    UINT64 AsUINT64;
+} WHV_ARM64_PROCESSOR_FEATURES1, WHV_PROCESSOR_FEATURES1;
+
+#endif
 
 #define WHV_PROCESSOR_FEATURES_BANKS_COUNT 2
 
@@ -477,10 +636,14 @@ typedef VOID* WHV_PARTITION_HANDLE;
 typedef enum WHV_PARTITION_PROPERTY_CODE
 {
     WHvPartitionPropertyCodeExtendedVmExits         = 0x00000001,
+#if defined(_AMD64_)
     WHvPartitionPropertyCodeExceptionExitBitmap     = 0x00000002,
+#endif
     WHvPartitionPropertyCodeSeparateSecurityDomain  = 0x00000003,
     WHvPartitionPropertyCodeNestedVirtualization    = 0x00000004,
+#if defined(_AMD64_)
     WHvPartitionPropertyCodeX64MsrExitBitmap        = 0x00000005,
+#endif
     WHvPartitionPropertyCodePrimaryNumaNode         = 0x00000006,
     WHvPartitionPropertyCodeCpuReserve              = 0x00000007,
     WHvPartitionPropertyCodeCpuCap                  = 0x00000008,
@@ -492,24 +655,31 @@ typedef enum WHV_PARTITION_PROPERTY_CODE
 
     WHvPartitionPropertyCodeProcessorFeatures               = 0x00001001,
     WHvPartitionPropertyCodeProcessorClFlushSize            = 0x00001002,
+#if defined(_AMD64_)
     WHvPartitionPropertyCodeCpuidExitList                   = 0x00001003,
     WHvPartitionPropertyCodeCpuidResultList                 = 0x00001004,
     WHvPartitionPropertyCodeLocalApicEmulationMode          = 0x00001005,
     WHvPartitionPropertyCodeProcessorXsaveFeatures          = 0x00001006,
+#endif
     WHvPartitionPropertyCodeProcessorClockFrequency         = 0x00001007,
+#if defined(_AMD64_)
     WHvPartitionPropertyCodeInterruptClockFrequency         = 0x00001008,
     WHvPartitionPropertyCodeApicRemoteReadSupport           = 0x00001009,
+#endif
     WHvPartitionPropertyCodeProcessorFeaturesBanks          = 0x0000100A,
     WHvPartitionPropertyCodeReferenceTime                   = 0x0000100B,
     WHvPartitionPropertyCodeSyntheticProcessorFeaturesBanks = 0x0000100C,
+#if defined(_AMD64_)
     WHvPartitionPropertyCodeCpuidResultList2                = 0x0000100D,
     WHvPartitionPropertyCodeProcessorPerfmonFeatures        = 0x0000100E,
     WHvPartitionPropertyCodeMsrActionList                   = 0x0000100F,
     WHvPartitionPropertyCodeUnimplementedMsrAction          = 0x00001010,
+#endif
     WHvPartitionPropertyCodePhysicalAddressWidth            = 0x00001011,
-
     WHvPartitionPropertyCodeProcessorCount          = 0x00001fff
 } WHV_PARTITION_PROPERTY_CODE;
+
+#if defined(_AMD64_)
 
 //
 // Return values for WHvCapabilityCodeProcessorXsaveFeatures and input buffer
@@ -598,6 +768,8 @@ typedef union WHV_X64_MSR_EXIT_BITMAP
 
 C_ASSERT(sizeof(WHV_X64_MSR_EXIT_BITMAP) == 8);
 
+#endif // defined(_AMD64_)
+
 //
 // Structure describing a memory range entry
 //
@@ -679,20 +851,24 @@ typedef union WHV_CAPABILITY
     WHV_PROCESSOR_VENDOR ProcessorVendor;
     WHV_PROCESSOR_FEATURES ProcessorFeatures;
     WHV_SYNTHETIC_PROCESSOR_FEATURES_BANKS SyntheticProcessorFeaturesBanks;
-    WHV_PROCESSOR_XSAVE_FEATURES ProcessorXsaveFeatures;
     UINT8 ProcessorClFlushSize;
-    UINT64 ExceptionExitBitmap;
-    WHV_X64_MSR_EXIT_BITMAP X64MsrExitBitmap;
     UINT64 ProcessorClockFrequency;
-    UINT64 InterruptClockFrequency;
     WHV_PROCESSOR_FEATURES_BANKS ProcessorFeaturesBanks;
     WHV_ADVISE_GPA_RANGE_POPULATE_FLAGS GpaRangePopulateFlags;
     WHV_CAPABILITY_PROCESSOR_FREQUENCY_CAP ProcessorFrequencyCap;
-    WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
     WHV_SCHEDULER_FEATURES SchedulerFeatures;
     UINT32 PhysicalAddressWidth;
     UINT64 NestedFeatureRegister;
+#if defined(_AMD64_)
+    WHV_PROCESSOR_XSAVE_FEATURES ProcessorXsaveFeatures;
+    UINT64 InterruptClockFrequency;
+    WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
+    WHV_X64_MSR_EXIT_BITMAP X64MsrExitBitmap;
+    UINT64 ExceptionExitBitmap;
+#endif
 } WHV_CAPABILITY;
+
+#if defined(_AMD64_)
 
 //
 // WHvPartitionPropertyCodeCpuidResultList input buffer list element.
@@ -796,6 +972,8 @@ typedef enum WHV_X64_LOCAL_APIC_EMULATION_MODE
     WHvX64LocalApicEmulationModeX2Apic
 } WHV_X64_LOCAL_APIC_EMULATION_MODE;
 
+#endif // defined(_AMD64_)
+
 //
 // WHvGetPartitionProperty output buffer / WHvSetPartitionProperty input buffer
 //
@@ -804,23 +982,12 @@ typedef union WHV_PARTITION_PROPERTY
     WHV_EXTENDED_VM_EXITS ExtendedVmExits;
     WHV_PROCESSOR_FEATURES ProcessorFeatures;
     WHV_SYNTHETIC_PROCESSOR_FEATURES_BANKS SyntheticProcessorFeaturesBanks;
-    WHV_PROCESSOR_XSAVE_FEATURES ProcessorXsaveFeatures;
     UINT8 ProcessorClFlushSize;
     UINT32 ProcessorCount;
-    UINT32 CpuidExitList[1];
-    WHV_X64_CPUID_RESULT CpuidResultList[1];
-    WHV_X64_CPUID_RESULT2 CpuidResultList2[1];
-    WHV_MSR_ACTION_ENTRY MsrActionList[1];
-    WHV_MSR_ACTION UnimplementedMsrAction;
-    UINT64 ExceptionExitBitmap;
-    WHV_X64_LOCAL_APIC_EMULATION_MODE LocalApicEmulationMode;
     BOOL SeparateSecurityDomain;
     // Nested virtualization support is experimental and not supported.
     BOOL NestedVirtualization;
-    WHV_X64_MSR_EXIT_BITMAP X64MsrExitBitmap;
     UINT64 ProcessorClockFrequency;
-    UINT64 InterruptClockFrequency;
-    BOOL ApicRemoteRead;
     WHV_PROCESSOR_FEATURES_BANKS ProcessorFeaturesBanks;
     UINT64 ReferenceTime;
     USHORT PrimaryNumaNode;
@@ -830,9 +997,22 @@ typedef union WHV_PARTITION_PROPERTY
     UINT64 CpuGroupId;
     UINT32 ProcessorFrequencyCap;
     BOOL AllowDeviceAssignment;
-    WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
     BOOL DisableSmt;
     UINT32 PhysicalAddressWidth;
+#if defined(_AMD64_)
+    WHV_PROCESSOR_XSAVE_FEATURES ProcessorXsaveFeatures;
+    UINT32 CpuidExitList[1];
+    UINT64 ExceptionExitBitmap;
+    BOOL ApicRemoteRead;
+    WHV_X64_MSR_EXIT_BITMAP X64MsrExitBitmap;
+    WHV_PROCESSOR_PERFMON_FEATURES ProcessorPerfmonFeatures;
+    UINT64 InterruptClockFrequency;
+    WHV_X64_CPUID_RESULT CpuidResultList[1];
+    WHV_X64_CPUID_RESULT2 CpuidResultList2[1];
+    WHV_MSR_ACTION_ENTRY MsrActionList[1];
+    WHV_MSR_ACTION UnimplementedMsrAction;
+    WHV_X64_LOCAL_APIC_EMULATION_MODE LocalApicEmulationMode;
+#endif
 } WHV_PARTITION_PROPERTY;
 
 //
@@ -869,10 +1049,14 @@ typedef enum WHV_TRANSLATE_GVA_FLAGS
     WHvTranslateGvaFlagValidateRead     = 0x00000001,
     WHvTranslateGvaFlagValidateWrite    = 0x00000002,
     WHvTranslateGvaFlagValidateExecute  = 0x00000004,
+#if defined(_AMD64_)
     WHvTranslateGvaFlagPrivilegeExempt  = 0x00000008,
+#endif
     WHvTranslateGvaFlagSetPageTableBits = 0x00000010,
+#if defined(_AMD64_)
     WHvTranslateGvaFlagEnforceSmap      = 0x00000100,
     WHvTranslateGvaFlagOverrideSmap     = 0x00000200
+#endif
 } WHV_TRANSLATE_GVA_FLAGS;
 
 DEFINE_ENUM_FLAG_OPERATORS(WHV_TRANSLATE_GVA_FLAGS);
@@ -958,6 +1142,9 @@ C_ASSERT(sizeof(WHV_ACCESS_GPA_CONTROLS) == 8);
 //
 typedef enum WHV_REGISTER_NAME
 {
+
+#if defined(_AMD64_)
+
     // X64 General purpose registers
     WHvX64RegisterRax              = 0x00000000,
     WHvX64RegisterRcx              = 0x00000001,
@@ -1200,6 +1387,108 @@ typedef enum WHV_REGISTER_NAME
     WHvX64RegisterApicDivide       = 0x0000303E,
     WHvX64RegisterApicSelfIpi      = 0x0000303F,
 
+#elif defined(_ARM64_)
+
+    WHvArm64RegisterX0             = 0x00000000,
+    WHvArm64RegisterX1             = 0x00000001,
+    WHvArm64RegisterX2             = 0x00000002,
+    WHvArm64RegisterX3             = 0x00000003,
+    WHvArm64RegisterX4             = 0x00000004,
+    WHvArm64RegisterX5             = 0x00000005,
+    WHvArm64RegisterX6             = 0x00000006,
+    WHvArm64RegisterX7             = 0x00000007,
+    WHvArm64RegisterX8             = 0x00000008,
+    WHvArm64RegisterX9             = 0x00000009,
+    WHvArm64RegisterX10            = 0x0000000A,
+    WHvArm64RegisterX11            = 0x0000000B,
+    WHvArm64RegisterX12            = 0x0000000C,
+    WHvArm64RegisterX13            = 0x0000000D,
+    WHvArm64RegisterX14            = 0x0000000E,
+    WHvArm64RegisterX15            = 0x0000000F,
+    WHvArm64RegisterX16            = 0x00000010,
+    WHvArm64RegisterX17            = 0x00000011,
+    WHvArm64RegisterX18            = 0x00000012,
+    WHvArm64RegisterX19            = 0x00000013,
+    WHvArm64RegisterX20            = 0x00000014,
+    WHvArm64RegisterX21            = 0x00000015,
+    WHvArm64RegisterX22            = 0x00000016,
+    WHvArm64RegisterX23            = 0x00000017,
+    WHvArm64RegisterX24            = 0x00000018,
+    WHvArm64RegisterX25            = 0x00000019,
+    WHvArm64RegisterX26            = 0x0000001A,
+    WHvArm64RegisterX27            = 0x0000001B,
+    WHvArm64RegisterX28            = 0x0000001C,
+    WHvArm64RegisterXFp            = 0x0000001D,
+    WHvArm64RegisterXLr            = 0x0000001E,
+    WHvArm64RegisterXSpEl0         = 0x00000020,
+    WHvArm64RegisterXSpElx         = 0x00000021,
+    WHvArm64RegisterXPc            = 0x00000022,
+    WHvArm64RegisterCpsr           = 0x00000023,
+
+    WHvArm64RegisterQ0             = 0x00001000,
+    WHvArm64RegisterQ1             = 0x00001001,
+    WHvArm64RegisterQ2             = 0x00001002,
+    WHvArm64RegisterQ3             = 0x00001003,
+    WHvArm64RegisterQ4             = 0x00001004,
+    WHvArm64RegisterQ5             = 0x00001005,
+    WHvArm64RegisterQ6             = 0x00001006,
+    WHvArm64RegisterQ7             = 0x00001007,
+    WHvArm64RegisterQ8             = 0x00001008,
+    WHvArm64RegisterQ9             = 0x00001009,
+    WHvArm64RegisterQ10            = 0x0000100A,
+    WHvArm64RegisterQ11            = 0x0000100B,
+    WHvArm64RegisterQ12            = 0x0000100C,
+    WHvArm64RegisterQ13            = 0x0000100D,
+    WHvArm64RegisterQ14            = 0x0000100E,
+    WHvArm64RegisterQ15            = 0x0000100F,
+    WHvArm64RegisterQ16            = 0x00001010,
+    WHvArm64RegisterQ17            = 0x00001011,
+    WHvArm64RegisterQ18            = 0x00001012,
+    WHvArm64RegisterQ19            = 0x00001013,
+    WHvArm64RegisterQ20            = 0x00001014,
+    WHvArm64RegisterQ21            = 0x00001015,
+    WHvArm64RegisterQ22            = 0x00001016,
+    WHvArm64RegisterQ23            = 0x00001017,
+    WHvArm64RegisterQ24            = 0x00001018,
+    WHvArm64RegisterQ25            = 0x00001019,
+    WHvArm64RegisterQ26            = 0x0000101A,
+    WHvArm64RegisterQ27            = 0x0000101B,
+    WHvArm64RegisterQ28            = 0x0000101C,
+    WHvArm64RegisterQ29            = 0x0000101D,
+    WHvArm64RegisterQ30            = 0x0000101E,
+    WHvArm64RegisterQ31            = 0x0000101F,
+    WHvArm64RegisterFpControl      = 0x00001020,
+    WHvArm64RegisterFpStatus       = 0x00001021,
+
+    WHvArm64RegisterMidr           = 0x00002000,
+    WHvArm64RegisterMpidr          = 0x00002001,
+    WHvArm64RegisterSctlr          = 0x00002002,
+    WHvArm64RegisterActlr          = 0x00002003,
+    WHvArm64RegisterCpacr          = 0x00002004,
+    WHvArm64RegisterTtbr0          = 0x00002005,
+    WHvArm64RegisterTtbr1          = 0x00002006,
+    WHvArm64RegisterTcr            = 0x00002007,
+    WHvArm64RegisterEsrEl1         = 0x00002008,
+    WHvArm64RegisterFarEl1         = 0x00002009,
+    WHvArm64RegisterParEl1         = 0x0000200A,
+    WHvArm64RegisterMair           = 0x0000200B,
+    WHvArm64RegisterVbar           = 0x0000200C,
+    WHvArm64RegisterContextIdr     = 0x0000200D,
+    WHvArm64RegisterTpidr          = 0x0000200E,
+    WHvArm64RegisterCntkctl        = 0x0000200F,
+    WHvArm64RegisterTpidrroEl0     = 0x00002010,
+    WHvArm64RegisterTpidrEl0       = 0x00002011,
+    WHvArm64RegisterFpcrEl1        = 0x00002012,
+    WHvArm64RegisterFpsrEl1        = 0x00002013,
+    WHvArm64RegisterSpsrEl1        = 0x00002014,
+    WHvArm64RegisterElrEl1         = 0x00002015,
+    WHvArm64RegisterAfsr0          = 0x00002016,
+    WHvArm64RegisterAfsr1          = 0x00002017,
+    WHvArm64RegisterAMair          = 0x00002018,
+    WHvArm64RegisterMdscr          = 0x00002019,
+
+#endif
+
     // Synic registers
     WHvRegisterSint0               = 0x00004000,
     WHvRegisterSint1               = 0x00004001,
@@ -1225,7 +1514,9 @@ typedef enum WHV_REGISTER_NAME
 
     // Hypervisor defined registers
     WHvRegisterVpRuntime           = 0x00005000,
+#if defined(_AMD64_)
     WHvX64RegisterHypercall        = 0x00005001,
+#endif
     WHvRegisterGuestOsId           = 0x00005002,
     WHvRegisterVpAssistPage        = 0x00005013,
     WHvRegisterReferenceTsc        = 0x00005017,
@@ -1236,13 +1527,19 @@ typedef enum WHV_REGISTER_NAME
     WHvX64RegisterNestedVmxInvVpid  = 0x00005053,
 
     // Interrupt / Event Registers
+#if defined(_AMD64_)
     WHvRegisterPendingInterruption = 0x80000000,
     WHvRegisterInterruptState      = 0x80000001,
+#endif
     WHvRegisterPendingEvent        = 0x80000002,
     WHvRegisterPendingEvent1       = 0x80000003,
+#if defined(_AMD64_)
     WHvX64RegisterDeliverabilityNotifications = 0x80000004,
+#endif
     WHvRegisterInternalActivityState = 0x80000005,
+#if defined(_AMD64_)
     WHvX64RegisterPendingDebugException = 0x80000006,
+#endif
     WHvRegisterPendingEvent2       = 0x80000007,
     WHvRegisterPendingEvent3       = 0x80000008,
 
@@ -1260,6 +1557,8 @@ typedef union DECLSPEC_ALIGN(16) WHV_UINT128
 } WHV_UINT128;
 
 C_ASSERT(sizeof(WHV_UINT128) == 16);
+
+#if defined(_AMD64_)
 
 typedef union WHV_X64_FP_REGISTER
 {
@@ -1613,6 +1912,8 @@ typedef union WHV_X64_NESTED_GUEST_STATE
 
 C_ASSERT(sizeof(WHV_X64_NESTED_GUEST_STATE) == 16);
 
+#endif // defined(_AMD64_)
+
 typedef union WHV_INTERNAL_ACTIVITY_REGISTER
 {
     struct
@@ -1627,6 +1928,8 @@ typedef union WHV_INTERNAL_ACTIVITY_REGISTER
 } WHV_INTERNAL_ACTIVITY_REGISTER;
 
 C_ASSERT(sizeof(WHV_INTERNAL_ACTIVITY_REGISTER) == 8);
+
+#if defined(_AMD64_)
 
 typedef union WHV_X64_PENDING_DEBUG_EXCEPTION
 {
@@ -1646,6 +1949,8 @@ typedef union WHV_X64_PENDING_DEBUG_EXCEPTION
 
 C_ASSERT(sizeof(WHV_X64_PENDING_DEBUG_EXCEPTION) == 8);
 
+#endif // defined(_AMD64_)
+
 typedef struct WHV_SYNIC_SINT_DELIVERABLE_CONTEXT
 {
     UINT16 DeliverableSints;
@@ -1654,6 +1959,22 @@ typedef struct WHV_SYNIC_SINT_DELIVERABLE_CONTEXT
 } WHV_SYNIC_SINT_DELIVERABLE_CONTEXT;
 
 C_ASSERT(sizeof(WHV_SYNIC_SINT_DELIVERABLE_CONTEXT) == 8);
+
+#if defined(_ARM64_)
+
+typedef enum WHV_ARM64_RESET_TYPE
+{
+    WHvArm64ResetTypePowerOff = 0,
+    WHvArm64ResetTypeReboot,
+} WHV_ARM64_RESET_TYPE;
+
+typedef struct WHV_ARM64_RESET_CONTEXT
+{
+    WHV_ARM64_RESET_TYPE ResetType;
+    UINT32 Reserved;
+} WHV_ARM64_RESET_CONTEXT;
+
+#endif // defined(_ARM64_)
 
 //
 // Register values
@@ -1665,6 +1986,9 @@ typedef union WHV_REGISTER_VALUE
     UINT32 Reg32;
     UINT16 Reg16;
     UINT8 Reg8;
+    WHV_INTERNAL_ACTIVITY_REGISTER InternalActivity;
+
+#if defined(_AMD64_)
     WHV_X64_FP_REGISTER Fp;
     WHV_X64_FP_CONTROL_STATUS_REGISTER FpControlStatus;
     WHV_X64_XMM_CONTROL_STATUS_REGISTER XmmControlStatus;
@@ -1675,7 +1999,6 @@ typedef union WHV_REGISTER_VALUE
     WHV_X64_DELIVERABILITY_NOTIFICATIONS_REGISTER DeliverabilityNotifications;
     WHV_X64_PENDING_EXCEPTION_EVENT ExceptionEvent;
     WHV_X64_PENDING_EXT_INT_EVENT ExtIntEvent;
-    WHV_INTERNAL_ACTIVITY_REGISTER InternalActivity;
     WHV_X64_PENDING_DEBUG_EXCEPTION PendingDebugException;
     WHV_X64_NESTED_GUEST_STATE NestedState;
     WHV_X64_NESTED_INVEPT_REGISTER InvEpt;
@@ -1687,6 +2010,7 @@ typedef union WHV_REGISTER_VALUE
     WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT0 VmxNestedExit0;
     WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT1 VmxNestedExit1;
     WHV_X64_PENDING_VMX_NESTED_EXIT_EVENT2 VmxNestedExit2;
+#endif
 } WHV_REGISTER_VALUE;
 
 C_ASSERT(sizeof(WHV_REGISTER_VALUE) == 16);
@@ -1704,28 +2028,41 @@ typedef enum WHV_RUN_VP_EXIT_REASON
 
     // Standard exits caused by operations of the virtual processor
     WHvRunVpExitReasonMemoryAccess           = 0x00000001,
+#if defined(_AMD64_)
     WHvRunVpExitReasonX64IoPortAccess        = 0x00000002,
+#endif
     WHvRunVpExitReasonUnrecoverableException = 0x00000004,
     WHvRunVpExitReasonInvalidVpRegisterValue = 0x00000005,
     WHvRunVpExitReasonUnsupportedFeature     = 0x00000006,
+#if defined(_AMD64_)
     WHvRunVpExitReasonX64InterruptWindow     = 0x00000007,
     WHvRunVpExitReasonX64Halt                = 0x00000008,
     WHvRunVpExitReasonX64ApicEoi             = 0x00000009,
+#endif
     WHvRunVpExitReasonSynicSintDeliverable   = 0x0000000A,
+#if defined(_ARM64_)
+    WHvRunVpExitReasonArm64Reset             = 0x0000000B,
+#endif
 
     // Additional exits that can be configured through partition properties
+#if defined(_AMD64_)
     WHvRunVpExitReasonX64MsrAccess           = 0x00001000,
     WHvRunVpExitReasonX64Cpuid               = 0x00001001,
     WHvRunVpExitReasonException              = 0x00001002,
     WHvRunVpExitReasonX64Rdtsc               = 0x00001003,
     WHvRunVpExitReasonX64ApicSmiTrap         = 0x00001004,
+#endif
     WHvRunVpExitReasonHypercall              = 0x00001005,
+#if defined(_AMD64_)
     WHvRunVpExitReasonX64ApicInitSipiTrap    = 0x00001006,
     WHvRunVpExitReasonX64ApicWriteTrap       = 0x00001007,
+#endif
 
     // Exits caused by the host
     WHvRunVpExitReasonCanceled               = 0x00002001,
 } WHV_RUN_VP_EXIT_REASON;
+
+#if defined(_AMD64_)
 
 //
 // Execution state of the virtual processor
@@ -1753,7 +2090,7 @@ C_ASSERT(sizeof(WHV_X64_VP_EXECUTION_STATE) == 2);
 //
 // Execution context of a virtual processor at the time of an exit
 //
-typedef struct WHV_VP_EXIT_CONTEXT
+typedef struct WHV_X64_VP_EXIT_CONTEXT
 {
     WHV_X64_VP_EXECUTION_STATE ExecutionState;
     UINT8 InstructionLength : 4;
@@ -1763,9 +2100,34 @@ typedef struct WHV_VP_EXIT_CONTEXT
     WHV_X64_SEGMENT_REGISTER Cs;
     UINT64 Rip;
     UINT64 Rflags;
-} WHV_VP_EXIT_CONTEXT;
+} WHV_X64_VP_EXIT_CONTEXT, WHV_VP_EXIT_CONTEXT;
 
-C_ASSERT(sizeof(WHV_VP_EXIT_CONTEXT) == 40);
+C_ASSERT(sizeof(WHV_X64_VP_EXIT_CONTEXT) == 40);
+
+#elif defined(_ARM64_)
+
+//
+// Execution state of the virtual processor
+//
+typedef union WHV_ARM64_VP_EXECUTION_STATE
+{
+    UINT16 AsUINT16;
+} WHV_ARM64_VP_EXECUTION_STATE;
+
+C_ASSERT(sizeof(WHV_ARM64_VP_EXECUTION_STATE) == 2);
+
+typedef struct WHV_ARM64_VP_EXIT_CONTEXT
+{
+    WHV_ARM64_VP_EXECUTION_STATE ExecutionState;
+    UINT8 InstructionLength : 3;
+    UINT8 Reserved : 5;
+    UINT8 Reserved2;
+    UINT32 Reserved3;
+    UINT64 Pc;
+    UINT64 Cpsr;
+} WHV_ARM64_VP_EXIT_CONTEXT, WHV_VP_EXIT_CONTEXT;
+
+#endif
 
 //
 // Context data for a VM exit caused by a memory access (WHvRunVpExitReasonMemoryAccess)
@@ -1799,6 +2161,8 @@ typedef struct WHV_MEMORY_ACCESS_CONTEXT
 } WHV_MEMORY_ACCESS_CONTEXT;
 
 C_ASSERT(sizeof(WHV_MEMORY_ACCESS_CONTEXT) == 40);
+
+#if defined(_AMD64_)
 
 //
 // Context data for an exit caused by an I/O port access (WHvRunVpExitReasonX64IOPortAccess)
@@ -1938,6 +2302,8 @@ typedef struct WHV_X64_UNSUPPORTED_FEATURE_CONTEXT
 
 C_ASSERT(sizeof(WHV_X64_UNSUPPORTED_FEATURE_CONTEXT) == 16);
 
+#endif // defined(_AMD64_)
+
 //
 // Context data for an exit caused by a cancellation from the host (WHvRunVpExitReasonCanceled)
 //
@@ -1957,6 +2323,8 @@ typedef struct WHV_RUN_VP_CANCELED_CONTEXT
 } WHV_RUN_VP_CANCELED_CONTEXT;
 
 C_ASSERT(sizeof(WHV_RUN_VP_CANCELED_CONTEXT) == 4);
+
+#if defined(_AMD64_)
 
 //
 // Context data for an exit caused by an interrupt delivery window cancellation from the host
@@ -2024,13 +2392,17 @@ typedef struct WHV_X64_APIC_SMI_CONTEXT
 
 C_ASSERT(sizeof(WHV_X64_APIC_SMI_CONTEXT) == 8);
 
+#endif // defined(_AMD64_)
+
 //
 // Context data for an exit caused by a hypercall (WHvRunVpExitReasonHypercall)
 //
 
+#if defined(_AMD64_)
+
 #define WHV_HYPERCALL_CONTEXT_MAX_XMM_REGISTERS 6
 
-typedef struct WHV_HYPERCALL_CONTEXT
+typedef struct WHV_X64_HYPERCALL_CONTEXT
 {
     UINT64 Rax;
     UINT64 Rbx;
@@ -2042,9 +2414,23 @@ typedef struct WHV_HYPERCALL_CONTEXT
     UINT64 Reserved0;
     WHV_UINT128 XmmRegisters[WHV_HYPERCALL_CONTEXT_MAX_XMM_REGISTERS];
     UINT64 Reserved1[2];
-} WHV_HYPERCALL_CONTEXT, *PWHV_HYPERCALL_CONTEXT;
+} WHV_X64_HYPERCALL_CONTEXT, WHV_HYPERCALL_CONTEXT, *PWHV_HYPERCALL_CONTEXT;
 
 C_ASSERT(sizeof(WHV_HYPERCALL_CONTEXT) == 176);
+
+#elif defined(_ARM64_)
+
+typedef struct WHV_ARM64_HYPERCALL_CONTEXT
+{
+    UINT16 Immediate;
+    UINT16 Reserved1;
+    UINT32 Reserved2;
+    UINT64 X[16];
+} WHV_ARM64_HYPERCALL_CONTEXT, WHV_HYPERCALL_CONTEXT, *PWHV_HYPERCALL_CONTEXT;
+
+#endif
+
+#if defined(_AMD64_)
 
 //
 // Context data for an exit caused by an APIC INIT SIPI (WHvRunVpExitReasonX64ApicInitSipiTrap)
@@ -2080,6 +2466,8 @@ typedef struct WHV_X64_APIC_WRITE_CONTEXT
 
 C_ASSERT(sizeof(WHV_X64_APIC_WRITE_CONTEXT) == 16);
 
+#endif // defined(_AMD64_)
+
 // WHvRunVirtualProcessor output buffer
 typedef struct WHV_RUN_VP_EXIT_CONTEXT
 {
@@ -2090,24 +2478,39 @@ typedef struct WHV_RUN_VP_EXIT_CONTEXT
     union
     {
         WHV_MEMORY_ACCESS_CONTEXT MemoryAccess;
+        WHV_RUN_VP_CANCELED_CONTEXT CancelReason;
+        WHV_HYPERCALL_CONTEXT Hypercall;
+        WHV_SYNIC_SINT_DELIVERABLE_CONTEXT SynicSintDeliverable;
+#if defined(_AMD64_)
         WHV_X64_IO_PORT_ACCESS_CONTEXT IoPortAccess;
         WHV_X64_MSR_ACCESS_CONTEXT MsrAccess;
         WHV_X64_CPUID_ACCESS_CONTEXT CpuidAccess;
         WHV_VP_EXCEPTION_CONTEXT VpException;
         WHV_X64_INTERRUPTION_DELIVERABLE_CONTEXT InterruptWindow;
         WHV_X64_UNSUPPORTED_FEATURE_CONTEXT UnsupportedFeature;
-        WHV_RUN_VP_CANCELED_CONTEXT CancelReason;
         WHV_X64_APIC_EOI_CONTEXT ApicEoi;
         WHV_X64_RDTSC_CONTEXT ReadTsc;
         WHV_X64_APIC_SMI_CONTEXT ApicSmi;
-        WHV_HYPERCALL_CONTEXT Hypercall;
         WHV_X64_APIC_INIT_SIPI_CONTEXT ApicInitSipi;
         WHV_X64_APIC_WRITE_CONTEXT ApicWrite;
-        WHV_SYNIC_SINT_DELIVERABLE_CONTEXT SynicSintDeliverable;
+#elif defined(_ARM64_)
+        WHV_ARM64_RESET_CONTEXT Arm64Reset;
+#endif
     };
 } WHV_RUN_VP_EXIT_CONTEXT;
 
+#if defined(_AMD64_)
+
 C_ASSERT(sizeof(WHV_RUN_VP_EXIT_CONTEXT) == 224);
+
+#elif defined(_ARM64_)
+
+// TODO ARM64
+//C_ASSERT(sizeof(WHV_RUN_VP_EXIT_CONTEXT) == 224);
+
+#endif
+
+#if defined(_AMD64_)
 
 typedef enum WHV_INTERRUPT_TYPE
 {
@@ -2143,6 +2546,8 @@ typedef struct WHV_INTERRUPT_CONTROL
 
 C_ASSERT(sizeof(WHV_INTERRUPT_CONTROL) == 16);
 
+#endif // defined(_AMD64_)
+
 typedef struct WHV_DOORBELL_MATCH_DATA
 {
     WHV_GUEST_PHYSICAL_ADDRESS GuestAddress;
@@ -2173,11 +2578,13 @@ C_ASSERT(sizeof(WHV_PARTITION_MEMORY_COUNTERS) == 24);
 // WHvGetVirtualProcessorCounters types
 typedef enum WHV_PROCESSOR_COUNTER_SET
 {
-    WHvProcessorCounterSetRuntime,
-    WHvProcessorCounterSetIntercepts,
-    WHvProcessorCounterSetEvents,
-    WHvProcessorCounterSetApic,
-    WHvProcessorCounterSetSyntheticFeatures,
+    WHvProcessorCounterSetRuntime                   = 0,
+    WHvProcessorCounterSetIntercepts                = 1,
+    WHvProcessorCounterSetEvents                    = 2,
+#if defined(_AMD64_)
+    WHvProcessorCounterSetApic                      = 3,
+#endif
+    WHvProcessorCounterSetSyntheticFeatures         = 4,
 } WHV_PROCESSOR_COUNTER_SET;
 
 typedef struct WHV_PROCESSOR_RUNTIME_COUNTERS
@@ -2198,6 +2605,9 @@ C_ASSERT(sizeof(WHV_PROCESSOR_INTERCEPT_COUNTER) == 16);
 
 typedef struct WHV_PROCESSOR_INTERCEPT_COUNTERS
 {
+
+#if defined(_AMD64_)
+
     WHV_PROCESSOR_INTERCEPT_COUNTER PageInvalidations;
     WHV_PROCESSOR_INTERCEPT_COUNTER ControlRegisterAccesses;
     WHV_PROCESSOR_INTERCEPT_COUNTER IoInstructions;
@@ -2212,9 +2622,27 @@ typedef struct WHV_PROCESSOR_INTERCEPT_COUNTERS
     WHV_PROCESSOR_INTERCEPT_COUNTER NestedPageFaultIntercepts;
     WHV_PROCESSOR_INTERCEPT_COUNTER Hypercalls;
     WHV_PROCESSOR_INTERCEPT_COUNTER RdpmcInstructions;
+
+#elif defined(_ARM64_)
+
+    WHV_PROCESSOR_INTERCEPT_COUNTER OtherIntercepts;
+    WHV_PROCESSOR_INTERCEPT_COUNTER PendingInterrupts;
+    WHV_PROCESSOR_INTERCEPT_COUNTER NestedPageFaultIntercepts;
+    WHV_PROCESSOR_INTERCEPT_COUNTER Hypercalls;
+
+#endif
+
 } WHV_PROCESSOR_ACTIVITY_COUNTERS;
 
+#if defined(_AMD64_)
+
 C_ASSERT(sizeof(WHV_PROCESSOR_ACTIVITY_COUNTERS) == 224);
+
+#else
+
+C_ASSERT(sizeof(WHV_PROCESSOR_ACTIVITY_COUNTERS) == 64);
+
+#endif
 
 typedef struct WHV_PROCESSOR_EVENT_COUNTERS
 {
@@ -2224,6 +2652,8 @@ typedef struct WHV_PROCESSOR_EVENT_COUNTERS
 } WHV_PROCESSOR_GUEST_EVENT_COUNTERS;
 
 C_ASSERT(sizeof(WHV_PROCESSOR_GUEST_EVENT_COUNTERS) == 24);
+
+#if defined(_AMD64_)
 
 typedef struct WHV_PROCESSOR_APIC_COUNTERS
 {
@@ -2235,6 +2665,8 @@ typedef struct WHV_PROCESSOR_APIC_COUNTERS
 } WHV_PROCESSOR_APIC_COUNTERS;
 
 C_ASSERT(sizeof(WHV_PROCESSOR_APIC_COUNTERS) == 40);
+
+#endif // defined(_AMD64_)
 
 typedef struct WHV_PROCESSOR_SYNTHETIC_FEATURES_COUNTERS
 {
@@ -2684,7 +3116,9 @@ C_ASSERT(sizeof(WHV_VPCI_INTERRUPT_TARGET) == 16);
 
 typedef enum WHV_TRIGGER_TYPE
 {
+#if defined(_AMD64_)
     WHvTriggerTypeInterrupt = 0,
+#endif
     WHvTriggerTypeSynicEvent = 1,
     WHvTriggerTypeDeviceInterrupt = 2,
 } WHV_TRIGGER_TYPE;
@@ -2695,7 +3129,9 @@ typedef struct WHV_TRIGGER_PARAMETERS
     UINT32 Reserved;
     union
     {
+#if defined(_AMD64_)
         WHV_INTERRUPT_CONTROL Interrupt;
+#endif
         WHV_SYNIC_EVENT_PARAMETERS SynicEvent;
         struct
         {
@@ -2787,5 +3223,7 @@ typedef PVOID WHV_NOTIFICATION_PORT_HANDLE;
 #if defined(_MSC_VER) && (_MSC_VER >= 1200)
 #pragma warning(pop)
 #endif
+
+#endif // defined(_AMD64_) || defined(_ARM64_)
 
 #endif // _WINHVAPIDEFS_H_

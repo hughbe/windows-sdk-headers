@@ -105,6 +105,8 @@
 #include "windowscontracts.h"
 #include "Windows.Foundation.h"
 #include "Windows.UI.h"
+// Importing Collections header
+#include <windows.foundation.collections.h>
 
 #if defined(__cplusplus) && !defined(CINTERFACE)
 /* Forward Declarations */
@@ -142,9 +144,266 @@ namespace ABI {
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfoStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    interface IRemoteDesktopConnectionRemoteInfo;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    interface IRemoteDesktopConnectionRemoteInfoStatics;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfoStatics
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    interface IRemoteDesktopInfo;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    interface IRemoteDesktopInfoFactory;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfoFactory
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    interface IRemoteDesktopRegistrarStatics;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopRegistrarStatics
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+
 // Parameterized interface forward declarations (C++)
 
 // Collection interface definitions
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    class RemoteDesktopInfo;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#define DEF___FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("a7175897-18db-5546-bf4f-b5fa4ce8ed85"))
+IIterator<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> : IIterator_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*, ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterator`1<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterator<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t;
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo ABI::Windows::Foundation::Collections::__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#define DEF___FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("1c98fa56-a539-5a93-b3b2-c7fefacc2e38"))
+IIterable<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> : IIterable_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*, ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IIterable`1<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IIterable<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t;
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo ABI::Windows::Foundation::Collections::__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#define DEF___FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("06ef3e49-753e-57de-a409-c3852f347c90"))
+IVectorView<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> : IVectorView_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*, ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVectorView`1<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVectorView<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t;
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo ABI::Windows::Foundation::Collections::__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#define DEF___FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation { namespace Collections {
+template <>
+struct __declspec(uuid("0d009032-ec6b-5789-9a69-eb769e0a1644"))
+IVector<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> : IVector_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*, ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo*>>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.Collections.IVector`1<Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef IVector<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopInfo*> __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t;
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo ABI::Windows::Foundation::Collections::__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_t
+/* Collections */ } /* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    class RemoteDesktopConnectionRemoteInfo;
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef DEF___FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_USE
+#define DEF___FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_USE
+#if !defined(RO_NO_TEMPLATE_NAME)
+namespace ABI { namespace Windows { namespace Foundation {
+template <>
+struct __declspec(uuid("109bc66e-5352-5225-b964-323abd69f8ac"))
+ITypedEventHandler<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo*, IInspectable*> : ITypedEventHandler_impl<ABI::Windows::Foundation::Internal::AggregateType<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo*, ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo*>, IInspectable*>
+{
+    static const wchar_t* z_get_rc_name_impl()
+    {
+        return L"Windows.Foundation.TypedEventHandler`2<Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo, Object>";
+    }
+};
+// Define a typedef for the parameterized interface specialization's mangled name.
+// This allows code which uses the mangled name for the parameterized interface to access the
+// correct parameterized interface specialization.
+typedef ITypedEventHandler<ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionRemoteInfo*, IInspectable*> __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_t;
+#define __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable ABI::Windows::Foundation::__FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_t
+/* Foundation */ } /* Windows */ } /* ABI */ }
+
+#endif // !defined(RO_NO_TEMPLATE_NAME)
+#endif /* DEF___FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_USE */
+
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+namespace ABI {
+    namespace Windows {
+        namespace Foundation {
+            interface IClosable;
+        } /* Foundation */
+    } /* Windows */
+} /* ABI */
+#define __x_ABI_CWindows_CFoundation_CIClosable ABI::Windows::Foundation::IClosable
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+
 namespace ABI {
     namespace Windows {
         namespace Foundation {
@@ -243,13 +502,14 @@ namespace ABI {
         namespace System {
             namespace RemoteDesktop {
                 namespace Provider {
-                    MIDL_INTERFACE("886bde2a-46ad-5a25-9348-03e801c78575")
+                    MIDL_INTERFACE("68bd69d6-6dea-543b-b737-f347919f5093")
                     IRemoteDesktopConnectionInfo : public IInspectable
                     {
                     public:
                         virtual HRESULT STDMETHODCALLTYPE SetConnectionStatus(
                             ABI::Windows::System::RemoteDesktop::Provider::RemoteDesktopConnectionStatus value
                             ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE SwitchToLocalSession(void) = 0;
                     };
 
                     MIDL_CONST_ID IID& IID_IRemoteDesktopConnectionInfo = __uuidof(IRemoteDesktopConnectionInfo);
@@ -305,6 +565,212 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
 
 /*
  *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionRemoteInfo[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    MIDL_INTERFACE("e50e00e5-010d-5cab-b468-cf871a8543b5")
+                    IRemoteDesktopConnectionRemoteInfo : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE ReportSwitched(void) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE add_SwitchToLocalSessionRequested(
+                            __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* handler,
+                            EventRegistrationToken* token
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE remove_SwitchToLocalSessionRequested(
+                            EventRegistrationToken token
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteDesktopConnectionRemoteInfo = __uuidof(IRemoteDesktopConnectionRemoteInfo);
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionRemoteInfoStatics[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    MIDL_INTERFACE("c80b46ed-d5a2-5a15-95c9-8170ecbf7600")
+                    IRemoteDesktopConnectionRemoteInfoStatics : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE Current(
+                            ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopConnectionRemoteInfo** result
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE IsSupported(
+                            boolean* result
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteDesktopConnectionRemoteInfoStatics = __uuidof(IRemoteDesktopConnectionRemoteInfoStatics);
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopInfo[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    MIDL_INTERFACE("d185bb25-2f1e-5098-b9e0-f46d6358c5c4")
+                    IRemoteDesktopInfo : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_DisplayName(
+                            HSTRING* value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE get_Id(
+                            HSTRING* value
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteDesktopInfo = __uuidof(IRemoteDesktopInfo);
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopInfoFactory[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    MIDL_INTERFACE("ad0e8d58-b56f-5a8b-b419-8002ee0c5ee9")
+                    IRemoteDesktopInfoFactory : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE CreateInstance(
+                            HSTRING id,
+                            HSTRING displayName,
+                            ABI::Windows::System::RemoteDesktop::Provider::IRemoteDesktopInfo** value
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteDesktopInfoFactory = __uuidof(IRemoteDesktopInfoFactory);
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopRegistrarStatics[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics";
+namespace ABI {
+    namespace Windows {
+        namespace System {
+            namespace RemoteDesktop {
+                namespace Provider {
+                    MIDL_INTERFACE("687c2750-46d9-5de3-8dc3-84a9202cecfb")
+                    IRemoteDesktopRegistrarStatics : public IInspectable
+                    {
+                    public:
+                        virtual HRESULT STDMETHODCALLTYPE get_DesktopInfos(
+                            __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo** value
+                            ) = 0;
+                        virtual HRESULT STDMETHODCALLTYPE IsSwitchToLocalSessionEnabled(
+                            boolean* result
+                            ) = 0;
+                    };
+
+                    MIDL_CONST_ID IID& IID_IRemoteDesktopRegistrarStatics = __uuidof(IRemoteDesktopRegistrarStatics);
+                } /* Provider */
+            } /* RemoteDesktop */
+        } /* System */
+    } /* Windows */
+} /* ABI */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -327,6 +793,76 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
 #else // !defined(__cplusplus)
 /* Forward Declarations */
 #ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo_FWD_DEFINED__
@@ -341,9 +877,450 @@ typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesk
 
 #endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfoStatics_FWD_DEFINED__
 
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_FWD_DEFINED__
+
+#ifndef ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics;
+
+#endif // ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_FWD_DEFINED__
+
 // Parameterized interface forward declarations (C)
 
 // Collection interface definitions
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+typedef struct __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_HasCurrent)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* MoveNext)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl;
+
+interface __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo
+{
+    CONST_VTBL struct __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_get_Current(This, result) \
+    ((This)->lpVtbl->get_Current(This, result))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_get_HasCurrent(This, result) \
+    ((This)->lpVtbl->get_HasCurrent(This, result))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_MoveNext(This, result) \
+    ((This)->lpVtbl->MoveNext(This, result))
+
+#define __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetMany(This, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+
+typedef interface __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+typedef struct __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* First)(__FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __FIIterator_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo** result);
+
+    END_INTERFACE
+} __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl;
+
+interface __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo
+{
+    CONST_VTBL struct __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_First(This, result) \
+    ((This)->lpVtbl->First(This, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIIterable_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+
+typedef interface __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+typedef struct __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** items,
+        UINT32* result);
+
+    END_INTERFACE
+} __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl;
+
+interface __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo
+{
+    CONST_VTBL struct __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+
+typedef interface __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo;
+
+typedef struct __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** result);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* GetView)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __FIVectorView_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo** result);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* value,
+        UINT32* index,
+        boolean* result);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 index,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* Clear)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 startIndex,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** items,
+        UINT32* result);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(__FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo* This,
+        UINT32 itemsLength,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** items);
+
+    END_INTERFACE
+} __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl;
+
+interface __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo
+{
+    CONST_VTBL struct __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetAt(This, index, result) \
+    ((This)->lpVtbl->GetAt(This, index, result))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_get_Size(This, result) \
+    ((This)->lpVtbl->get_Size(This, result))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetView(This, result) \
+    ((This)->lpVtbl->GetView(This, result))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_IndexOf(This, value, index, result) \
+    ((This)->lpVtbl->IndexOf(This, value, index, result))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_SetAt(This, index, value) \
+    ((This)->lpVtbl->SetAt(This, index, value))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_InsertAt(This, index, value) \
+    ((This)->lpVtbl->InsertAt(This, index, value))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_RemoveAt(This, index) \
+    ((This)->lpVtbl->RemoveAt(This, index))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Append(This, value) \
+    ((This)->lpVtbl->Append(This, value))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_RemoveAtEnd(This) \
+    ((This)->lpVtbl->RemoveAtEnd(This))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_Clear(This) \
+    ((This)->lpVtbl->Clear(This))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_GetMany(This, startIndex, itemsLength, items, result) \
+    ((This)->lpVtbl->GetMany(This, startIndex, itemsLength, items, result))
+
+#define __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_ReplaceAll(This, itemsLength, items) \
+    ((This)->lpVtbl->ReplaceAll(This, itemsLength, items))
+
+#endif /* COBJMACROS */
+
+#endif // ____FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_INTERFACE_DEFINED__)
+#define ____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_INTERFACE_DEFINED__
+
+typedef interface __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable;
+
+//  Declare the parameterized interface IID.
+EXTERN_C const IID IID___FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable;
+
+typedef struct __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectableVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(__FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* sender,
+        IInspectable* args);
+
+    END_INTERFACE
+} __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectableVtbl;
+
+interface __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable
+{
+    CONST_VTBL struct __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectableVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_Invoke(This, sender, args) \
+    ((This)->lpVtbl->Invoke(This, sender, args))
+
+#endif /* COBJMACROS */
+
+#endif // ____FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable_INTERFACE_DEFINED__
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+#ifndef ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+#define ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
+typedef interface __x_ABI_CWindows_CFoundation_CIClosable __x_ABI_CWindows_CFoundation_CIClosable;
+
+#endif // ____x_ABI_CWindows_CFoundation_CIClosable_FWD_DEFINED__
 
 #ifndef ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
 #define ____x_ABI_CWindows_CFoundation_CIUriRuntimeClass_FWD_DEFINED__
@@ -403,6 +1380,7 @@ typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktop
         TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* SetConnectionStatus)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo* This,
         enum __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CRemoteDesktopConnectionStatus value);
+    HRESULT (STDMETHODCALLTYPE* SwitchToLocalSession)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo* This);
 
     END_INTERFACE
 } __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfoVtbl;
@@ -434,6 +1412,9 @@ interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConne
 
 #define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo_SetConnectionStatus(This, value) \
     ((This)->lpVtbl->SetConnectionStatus(This, value))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionInfo_SwitchToLocalSession(This) \
+    ((This)->lpVtbl->SwitchToLocalSession(This))
 
 #endif /* COBJMACROS */
 
@@ -514,6 +1495,378 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
 
 /*
  *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionRemoteInfo[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* ReportSwitched)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This);
+    HRESULT (STDMETHODCALLTYPE* add_SwitchToLocalSessionRequested)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        __FITypedEventHandler_2_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopConnectionRemoteInfo_IInspectable* handler,
+        EventRegistrationToken* token);
+    HRESULT (STDMETHODCALLTYPE* remove_SwitchToLocalSessionRequested)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo* This,
+        EventRegistrationToken token);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoVtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_ReportSwitched(This) \
+    ((This)->lpVtbl->ReportSwitched(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_add_SwitchToLocalSessionRequested(This, handler, token) \
+    ((This)->lpVtbl->add_SwitchToLocalSessionRequested(This, handler, token))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_remove_SwitchToLocalSessionRequested(This, token) \
+    ((This)->lpVtbl->remove_SwitchToLocalSessionRequested(This, token))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopConnectionRemoteInfoStatics[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStaticsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Current)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfo** result);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics* This,
+        boolean* result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStaticsVtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStaticsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_Current(This, result) \
+    ((This)->lpVtbl->Current(This, result))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_IsSupported(This, result) \
+    ((This)->lpVtbl->IsSupported(This, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopConnectionRemoteInfoStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopInfo[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DisplayName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        HSTRING* value);
+    HRESULT (STDMETHODCALLTYPE* get_Id)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo* This,
+        HSTRING* value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoVtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_get_DisplayName(This, value) \
+    ((This)->lpVtbl->get_DisplayName(This, value))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_get_Id(This, value) \
+    ((This)->lpVtbl->get_Id(This, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopInfoFactory[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactoryVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory* This,
+        HSTRING id,
+        HSTRING displayName,
+        __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfo** value);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactoryVtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactoryVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_CreateInstance(This, id, displayName, value) \
+    ((This)->lpVtbl->CreateInstance(This, id, displayName, value))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopInfoFactory_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Interface Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * Interface is a part of the implementation of type Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#if !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__)
+#define ____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__
+extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_System_RemoteDesktop_Provider_IRemoteDesktopRegistrarStatics[] = L"Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics";
+typedef struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStaticsVtbl
+{
+    BEGIN_INTERFACE
+
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        REFIID riid,
+        void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        ULONG* iidCount,
+        IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_DesktopInfos)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        __FIVector_1_Windows__CSystem__CRemoteDesktop__CProvider__CRemoteDesktopInfo** value);
+    HRESULT (STDMETHODCALLTYPE* IsSwitchToLocalSessionEnabled)(__x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics* This,
+        boolean* result);
+
+    END_INTERFACE
+} __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStaticsVtbl;
+
+interface __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics
+{
+    CONST_VTBL struct __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStaticsVtbl* lpVtbl;
+};
+
+#ifdef COBJMACROS
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_QueryInterface(This, riid, ppvObject) \
+    ((This)->lpVtbl->QueryInterface(This, riid, ppvObject))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_AddRef(This) \
+    ((This)->lpVtbl->AddRef(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_Release(This) \
+    ((This)->lpVtbl->Release(This))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_GetIids(This, iidCount, iids) \
+    ((This)->lpVtbl->GetIids(This, iidCount, iids))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_GetRuntimeClassName(This, className) \
+    ((This)->lpVtbl->GetRuntimeClassName(This, className))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_GetTrustLevel(This, trustLevel) \
+    ((This)->lpVtbl->GetTrustLevel(This, trustLevel))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_get_DesktopInfos(This, value) \
+    ((This)->lpVtbl->get_DesktopInfos(This, value))
+
+#define __x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_IsSwitchToLocalSessionEnabled(This, result) \
+    ((This)->lpVtbl->IsSwitchToLocalSessionEnabled(This, result))
+
+#endif /* COBJMACROS */
+
+EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics;
+#endif /* !defined(____x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemoteDesktopRegistrarStatics_INTERFACE_DEFINED__) */
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
  * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo
  *
  * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
@@ -533,6 +1886,76 @@ EXTERN_C const IID IID___x_ABI_CWindows_CSystem_CRemoteDesktop_CProvider_CIRemot
 #ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionInfo_DEFINED
 #define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionInfo_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionInfo[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfoStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.RemoteDesktop.Provider.IRemoteDesktopConnectionRemoteInfo ** Default Interface **
+ *    Windows.Foundation.IClosable
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopConnectionRemoteInfo[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopConnectionRemoteInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass can be activated.
+ *   Type can be activated via the Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfoFactory interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class implements the following interfaces:
+ *    Windows.System.RemoteDesktop.Provider.IRemoteDesktopInfo ** Default Interface **
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopInfo[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopInfo";
+#endif
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+
+/*
+ *
+ * Class Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar
+ *
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
+ *
+ * RuntimeClass contains static methods.
+ *   Static Methods exist on the Windows.System.RemoteDesktop.Provider.IRemoteDesktopRegistrarStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
+ *
+ * Class Threading Model:  Both Single and Multi Threaded Apartment
+ *
+ * Class Marshaling Behavior:  Agile - Class is agile
+ *
+ */
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
+#ifndef RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar_DEFINED
+#define RUNTIMECLASS_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar_DEFINED
+extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_System_RemoteDesktop_Provider_RemoteDesktopRegistrar[] = L"Windows.System.RemoteDesktop.Provider.RemoteDesktopRegistrar";
 #endif
 #endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 

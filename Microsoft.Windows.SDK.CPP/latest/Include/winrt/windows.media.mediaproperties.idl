@@ -373,7 +373,7 @@ namespace Windows
                 HRESULT GetFormatUserData([out] UINT32* __valueSize, [out] [size_is(, *__valueSize)] BYTE** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.Av1ProfileIds)]
             [uuid(9105812B-7C09-5882-88A4-678008A5174D)]
             interface IAv1ProfileIdsStatics : IInspectable
@@ -426,7 +426,7 @@ namespace Windows
                 [propget] HRESULT MultiviewHigh([out] [retval] INT32* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.HevcProfileIds)]
             [uuid(1E50D280-2AA7-53C1-973F-2189FA656F53)]
             interface IHevcProfileIdsStatics : IInspectable
@@ -569,7 +569,7 @@ namespace Windows
                 HRESULT CreateHevc([in] Windows.Media.MediaProperties.VideoEncodingQuality quality, [out] [retval] Windows.Media.MediaProperties.MediaEncodingProfile** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.MediaEncodingProfile)]
             [uuid(6FAFD7B5-9404-514A-81DD-C9444D648AF0)]
             interface IMediaEncodingProfileStatics4 : IInspectable
@@ -682,7 +682,7 @@ namespace Windows
                 [propget] HRESULT VobSub([out] [retval] HSTRING* value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.MediaEncodingSubtypes)]
             [uuid(92F2DCA7-9937-52A1-B619-DDFAD81CD99C)]
             interface IMediaEncodingSubtypesStatics7 : IInspectable
@@ -804,7 +804,7 @@ namespace Windows
                 HRESULT CreateHevc([out] [retval] Windows.Media.MediaProperties.VideoEncodingProperties** value);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.VideoEncodingProperties)]
             [uuid(65B46685-60DA-5E51-91A2-B38C4763B872)]
             interface IVideoEncodingPropertiesStatics3 : IInspectable
@@ -813,7 +813,7 @@ namespace Windows
                 HRESULT CreateAv1([out] [retval] Windows.Media.MediaProperties.VideoEncodingProperties** result);
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [exclusiveto(Windows.Media.MediaProperties.Vp9ProfileIds)]
             [uuid(20311A55-FE06-5883-92D9-6080C97743E5)]
             interface IVp9ProfileIdsStatics : IInspectable
@@ -838,9 +838,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.MediaProperties.IAudioEncodingProperties3;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [marshaling_behavior(agile)]
-            [static(Windows.Media.MediaProperties.IAv1ProfileIdsStatics, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IAv1ProfileIdsStatics, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(both)]
             runtimeclass Av1ProfileIds
             {
@@ -865,9 +865,9 @@ namespace Windows
             {
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [marshaling_behavior(agile)]
-            [static(Windows.Media.MediaProperties.IHevcProfileIdsStatics, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IHevcProfileIdsStatics, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(both)]
             runtimeclass HevcProfileIds
             {
@@ -893,7 +893,7 @@ namespace Windows
             [static(Windows.Media.MediaProperties.IMediaEncodingProfileStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingProfileStatics2, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingProfileStatics3, Windows.Foundation.UniversalApiContract, 4.0)]
-            [static(Windows.Media.MediaProperties.IMediaEncodingProfileStatics4, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IMediaEncodingProfileStatics4, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(mta)]
             runtimeclass MediaEncodingProfile
             {
@@ -910,7 +910,7 @@ namespace Windows
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4, Windows.Foundation.UniversalApiContract, 6.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5, Windows.Foundation.UniversalApiContract, 7.0)]
             [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6, Windows.Foundation.UniversalApiContract, 10.0)]
-            [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(both)]
             runtimeclass MediaEncodingSubtypes
             {
@@ -958,7 +958,7 @@ namespace Windows
             [marshaling_behavior(agile)]
             [static(Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics, Windows.Foundation.UniversalApiContract, 1.0)]
             [static(Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2, Windows.Foundation.UniversalApiContract, 4.0)]
-            [static(Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(both)]
             runtimeclass VideoEncodingProperties
             {
@@ -970,9 +970,9 @@ namespace Windows
                 [contract(Windows.Foundation.UniversalApiContract, 6.0)] interface Windows.Media.MediaProperties.IVideoEncodingProperties5;
             }
 
-            [contract(Windows.Foundation.UniversalApiContract, 16.0)]
+            [contract(Windows.Foundation.UniversalApiContract, 15.0)]
             [marshaling_behavior(agile)]
-            [static(Windows.Media.MediaProperties.IVp9ProfileIdsStatics, Windows.Foundation.UniversalApiContract, 16.0)]
+            [static(Windows.Media.MediaProperties.IVp9ProfileIdsStatics, Windows.Foundation.UniversalApiContract, 15.0)]
             [threading(both)]
             runtimeclass Vp9ProfileIds
             {

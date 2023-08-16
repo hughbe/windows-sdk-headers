@@ -632,6 +632,56 @@ typedef HRESULT(WINAPI *PWLDP_CANEXECUTEFILEFROMDETACHEDSIGNATURE_API)(
 
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
 
+#if NTDDI_VERSION >= NTDDI_WIN11_GA
+
+STDAPI
+WldpGetApplicationSettingBoolean(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _Out_ BOOL *result
+    );
+
+typedef HRESULT(WINAPI *PWLDP_GETAPPLICATIONSETTINGBOOLEAN_API)(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _Out_ BOOL *result
+    );
+
+STDAPI
+WldpGetApplicationSettingStringList(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _In_ SIZE_T dataCount,
+    _Out_ SIZE_T *requiredCount,
+    _Out_writes_to_opt_(dataCount, *requiredCount) PZZWSTR result
+    );
+
+typedef HRESULT(WINAPI *PWLDP_GETAPPLICATIONSETTINGSTRINGLIST_API)(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _In_ SIZE_T dataCount,
+    _Out_ SIZE_T *requiredCount,
+    _Out_writes_to_opt_(dataCount, *requiredCount) PZZWSTR result
+    );
+
+STDAPI
+WldpGetApplicationSettingStringSet(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _In_ SIZE_T dataCount,
+    _Out_ SIZE_T *requiredCount,
+    _Out_writes_to_opt_(dataCount, *requiredCount) PZZWSTR result
+    );
+
+typedef HRESULT(WINAPI *PWLDP_GETAPPLICATIONSETTINGSTRINGSET_API)(
+    _In_ PCWSTR id,
+    _In_ PCWSTR setting,
+    _In_ SIZE_T dataCount,
+    _Out_ SIZE_T *requiredCount,
+    _Out_writes_to_opt_(dataCount, *requiredCount) PZZWSTR result
+    );
+
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_GA */
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion

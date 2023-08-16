@@ -361,6 +361,21 @@ typedef struct APO_NOTIFICATION_DESCRIPTOR
 } APO_NOTIFICATION_DESCRIPTOR;
 
 //
+// Interface to be implemented by an APO that wishes to report its preferred audio input format
+//
+[
+    object,
+    uuid(51CBD3C4-F1F3-4D2F-A0E1-7E9C4DD0FEB3),
+    pointer_default(unique),
+    local
+]
+interface IAudioProcessingObjectPreferredFormatSupport : IUnknown
+{
+    HRESULT GetPreferredInputFormat([in] IAudioMediaType* outputFormat, [out] IAudioMediaType** preferredFormat);
+    HRESULT GetPreferredOutputFormat([in] IAudioMediaType* inputFormat, [out] IAudioMediaType** preferredFormat);
+};
+
+//
 // Interface to be implemented by an APO that wishes to use the notification service provided by the OS.
 //
 [

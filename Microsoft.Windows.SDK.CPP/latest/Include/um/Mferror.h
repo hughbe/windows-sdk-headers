@@ -3407,6 +3407,15 @@ Notes:
 //
 #define MF_E_MEDIA_EXTENSION_PACKAGE_LICENSE_INVALID _HRESULT_TYPEDEF_(0xC00DB3B3L)
 
+//
+// MessageId: MF_E_MEDIA_EXTENSION_PACKAGE_BAD_STATUS
+//
+// MessageText:
+//
+// Package status for app not ok.%0
+//
+#define MF_E_MEDIA_EXTENSION_PACKAGE_BAD_STATUS _HRESULT_TYPEDEF_(0xC00DB3B4L)
+
 
 //////////////////////////////////////////////////////////////////////////////
 //

@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -11,6 +11,11 @@ WINRT_EXPORT namespace winrt::Windows::Foundation
     struct EventRegistrationToken;
     template <typename TSender, typename TResult> struct __declspec(empty_bases) TypedEventHandler;
     struct Uri;
+}
+WINRT_EXPORT namespace winrt::Windows::Foundation::Collections
+{
+    template <typename T> struct __declspec(empty_bases) IIterable;
+    template <typename T> struct __declspec(empty_bases) IVector;
 }
 WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
 {
@@ -63,6 +68,7 @@ WINRT_EXPORT namespace winrt::Windows::Phone::Networking::Voip
     struct IVoipPhoneCall;
     struct IVoipPhoneCall2;
     struct IVoipPhoneCall3;
+    struct IVoipPhoneCall4;
     struct IVoipPhoneCallReady;
     struct CallAnswerEventArgs;
     struct CallRejectEventArgs;
@@ -91,6 +97,7 @@ namespace winrt::impl
     template <> struct category<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3>{ using type = interface_category; };
+    template <> struct category<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady>{ using type = interface_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::CallAnswerEventArgs>{ using type = class_category; };
     template <> struct category<winrt::Windows::Phone::Networking::Voip::CallRejectEventArgs>{ using type = class_category; };
@@ -133,6 +140,7 @@ namespace winrt::impl
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall> = L"Windows.Phone.Networking.Voip.IVoipPhoneCall";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2> = L"Windows.Phone.Networking.Voip.IVoipPhoneCall2";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3> = L"Windows.Phone.Networking.Voip.IVoipPhoneCall3";
+    template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4> = L"Windows.Phone.Networking.Voip.IVoipPhoneCall4";
     template <> inline constexpr auto& name_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady> = L"Windows.Phone.Networking.Voip.IVoipPhoneCallReady";
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs>{ 0x61F132AA,0xF92A,0x48FA,{ 0xAA,0x8F,0x4F,0x3A,0x17,0x66,0x29,0x80 } }; // 61F132AA-F92A-48FA-AA8F-4F3A17662980
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs2>{ 0xEC5DCBBE,0x3C84,0x4DE4,{ 0x88,0x17,0xFC,0x78,0x81,0x73,0x40,0x6E } }; // EC5DCBBE-3C84-4DE4-8817-FC788173406E
@@ -151,6 +159,7 @@ namespace winrt::impl
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall>{ 0x716654BE,0x28E8,0x495E,{ 0xB6,0x57,0x80,0x53,0x07,0x4B,0x41,0x50 } }; // 716654BE-28E8-495E-B657-8053074B4150
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall2>{ 0x1AC5B7DC,0xC83F,0x4862,{ 0x83,0x93,0x1E,0xA1,0x4A,0xF7,0xEF,0xEA } }; // 1AC5B7DC-C83F-4862-8393-1EA14AF7EFEA
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3>{ 0xA92AB1D1,0x52FB,0x4ADF,{ 0x82,0x25,0x4D,0x28,0x9B,0x86,0x6F,0xE0 } }; // A92AB1D1-52FB-4ADF-8225-4D289B866FE0
+    template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>{ 0x5F593D10,0x24EF,0x5006,{ 0xB8,0x46,0x27,0x61,0x32,0x29,0x4A,0x37 } }; // 5F593D10-24EF-5006-B846-276132294A37
     template <> inline constexpr guid guid_v<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady>{ 0xB3F5AC79,0xF40F,0x4E52,{ 0xA8,0xEE,0xE8,0xA9,0xA7,0x1F,0x51,0x1A } }; // B3F5AC79-F40F-4E52-A8EE-E8A9A71F511A
     template <> struct default_interface<winrt::Windows::Phone::Networking::Voip::CallAnswerEventArgs>{ using type = winrt::Windows::Phone::Networking::Voip::ICallAnswerEventArgs; };
     template <> struct default_interface<winrt::Windows::Phone::Networking::Voip::CallRejectEventArgs>{ using type = winrt::Windows::Phone::Networking::Voip::ICallRejectEventArgs; };
@@ -211,7 +220,7 @@ namespace winrt::impl
             virtual int32_t __stdcall add_UnmuteRequested(void*, winrt::event_token*) noexcept = 0;
             virtual int32_t __stdcall remove_UnmuteRequested(winrt::event_token) noexcept = 0;
             virtual int32_t __stdcall RequestNewIncomingCall(void*, void*, void*, void*, void*, void*, void*, void*, uint32_t, int64_t, void**) noexcept = 0;
-            virtual int32_t __stdcall RequestNewOutgoingCall(void*, void*, void*, uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall RequestNewOutgoingCall(void*, void*, void*, uint32_t, void*, void**) noexcept = 0;
             virtual int32_t __stdcall NotifyMuted() noexcept = 0;
             virtual int32_t __stdcall NotifyUnmuted() noexcept = 0;
         };
@@ -220,15 +229,15 @@ namespace winrt::impl
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall SetupNewAcceptedCall(void*, void*, void*, void*, uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall SetupNewAcceptedCall(void*, void*, void*, void*, uint32_t, void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator3>
     {
         struct __declspec(novtable) type : inspectable_abi
         {
-            virtual int32_t __stdcall RequestNewIncomingCallWithContactRemoteId(void*, void*, void*, void*, void*, void*, void*, void*, uint32_t, int64_t, void*, void**) noexcept = 0;
-            virtual int32_t __stdcall RequestNewAppInitiatedCall(void*, void*, void*, void*, uint32_t, void**) noexcept = 0;
+            virtual int32_t __stdcall RequestNewIncomingCallWithContactRemoteId(void*, void*, void*, void*, void*, void*, void*, void*, uint32_t, int64_t, void*, void*, void**) noexcept = 0;
+            virtual int32_t __stdcall RequestNewAppInitiatedCall(void*, void*, void*, void*, uint32_t, void*, void**) noexcept = 0;
         };
     };
     template <> struct abi<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinatorStatics>
@@ -308,6 +317,18 @@ namespace winrt::impl
             virtual int32_t __stdcall NotifyCallAccepted(uint32_t) noexcept = 0;
         };
     };
+    template <> struct abi<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>
+    {
+        struct __declspec(novtable) type : inspectable_abi
+        {
+            virtual int32_t __stdcall get_IsUsingAssociatedDevicesList(bool*) noexcept = 0;
+            virtual int32_t __stdcall NotifyCallActiveOnDevices(void*) noexcept = 0;
+            virtual int32_t __stdcall AddAssociatedCallControlDevice(void*) noexcept = 0;
+            virtual int32_t __stdcall RemoveAssociatedCallControlDevice(void*) noexcept = 0;
+            virtual int32_t __stdcall SetAssociatedCallControlDevices(void*) noexcept = 0;
+            virtual int32_t __stdcall GetAssociatedCallControlDevices(void**) noexcept = 0;
+        };
+    };
     template <> struct abi<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCallReady>
     {
         struct __declspec(novtable) type : inspectable_abi
@@ -382,7 +403,7 @@ namespace winrt::impl
         [[nodiscard]] UnmuteRequested_revoker UnmuteRequested(auto_revoke_t, winrt::Windows::Foundation::TypedEventHandler<winrt::Windows::Phone::Networking::Voip::VoipCallCoordinator, winrt::Windows::Phone::Networking::Voip::MuteChangeEventArgs> const& muteChangeHandler) const;
         auto UnmuteRequested(winrt::event_token const& token) const noexcept;
         auto RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
-        auto RequestNewOutgoingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestNewOutgoingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, param::vector<hstring> const& pAssociatedDeviceIds, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
         auto NotifyMuted() const;
         auto NotifyUnmuted() const;
     };
@@ -393,7 +414,7 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinator2
     {
-        auto SetupNewAcceptedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto SetupNewAcceptedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, param::vector<hstring> const& pAssociatedDeviceIds, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator2>
     {
@@ -402,8 +423,8 @@ namespace winrt::impl
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipCallCoordinator3
     {
-        auto RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, param::hstring const& contactRemoteId) const;
-        auto RequestNewAppInitiatedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
+        auto RequestNewIncomingCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, winrt::Windows::Foundation::Uri const& contactImage, param::hstring const& serviceName, winrt::Windows::Foundation::Uri const& brandingImage, param::hstring const& callDetails, winrt::Windows::Foundation::Uri const& ringtone, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, winrt::Windows::Foundation::TimeSpan const& ringTimeout, param::hstring const& contactRemoteId, param::vector<hstring> const& pAssociatedDeviceIds) const;
+        auto RequestNewAppInitiatedCall(param::hstring const& context, param::hstring const& contactName, param::hstring const& contactNumber, param::hstring const& serviceName, winrt::Windows::Phone::Networking::Voip::VoipCallMedia const& media, param::vector<hstring> const& pAssociatedDeviceIds, winrt::Windows::Phone::Networking::Voip::VoipPhoneCall& call) const;
     };
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipCallCoordinator3>
     {
@@ -511,6 +532,20 @@ namespace winrt::impl
     template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall3>
     {
         template <typename D> using type = consume_Windows_Phone_Networking_Voip_IVoipPhoneCall3<D>;
+    };
+    template <typename D>
+    struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCall4
+    {
+        [[nodiscard]] auto IsUsingAssociatedDevicesList() const;
+        auto NotifyCallActive(param::iterable<hstring> const& associatedDeviceIds) const;
+        auto AddAssociatedCallControlDevice(param::hstring const& deviceId) const;
+        auto RemoveAssociatedCallControlDevice(param::hstring const& deviceId) const;
+        auto SetAssociatedCallControlDevices(param::iterable<hstring> const& associatedDeviceIds) const;
+        auto GetAssociatedCallControlDevices() const;
+    };
+    template <> struct consume<winrt::Windows::Phone::Networking::Voip::IVoipPhoneCall4>
+    {
+        template <typename D> using type = consume_Windows_Phone_Networking_Voip_IVoipPhoneCall4<D>;
     };
     template <typename D>
     struct consume_Windows_Phone_Networking_Voip_IVoipPhoneCallReady

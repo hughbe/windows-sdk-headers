@@ -101,6 +101,8 @@ namespace Windows
 
             interface IPackageAllUserProvisioningOptions;
 
+            interface IPackageAllUserProvisioningOptions2;
+
             interface IPackageManager;
 
             interface IPackageManager10;
@@ -577,6 +579,15 @@ namespace Windows
                 [propget] HRESULT ProjectionOrderPackageFamilyNames([out] [retval] Windows.Foundation.Collections.IVector<HSTRING>** value);
             }
 
+            [contract(Windows.Foundation.UniversalApiContract, 17.0)]
+            [exclusiveto(Windows.Management.Deployment.PackageAllUserProvisioningOptions)]
+            [uuid(B9E3CAB5-2D97-579F-9368-D10BB4D4542B)]
+            interface IPackageAllUserProvisioningOptions2 : IInspectable
+            {
+                [propget] HRESULT DeferAutomaticRegistration([out] [retval] boolean* value);
+                [propput] HRESULT DeferAutomaticRegistration([in] boolean value);
+            }
+
             [contract(Windows.Foundation.UniversalApiContract, 1.0)]
             [exclusiveto(Windows.Management.Deployment.PackageManager)]
             [uuid(9A7D4B65-5E8F-4FC7-A2E5-7F6925CB8B53)]
@@ -992,6 +1003,7 @@ namespace Windows
             runtimeclass PackageAllUserProvisioningOptions
             {
                 [default] interface Windows.Management.Deployment.IPackageAllUserProvisioningOptions;
+                [contract(Windows.Foundation.UniversalApiContract, 17.0)] interface Windows.Management.Deployment.IPackageAllUserProvisioningOptions2;
             }
 
             [activatable(Windows.Foundation.UniversalApiContract, 1.0)]

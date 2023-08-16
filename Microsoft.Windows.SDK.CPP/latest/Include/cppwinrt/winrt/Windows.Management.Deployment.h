@@ -1,4 +1,4 @@
-// C++/WinRT v2.0.220418.1
+// C++/WinRT v2.0.230511.6
 
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
@@ -7,8 +7,8 @@
 #ifndef WINRT_Windows_Management_Deployment_H
 #define WINRT_Windows_Management_Deployment_H
 #include "winrt/base.h"
-static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.220418.1"), "Mismatched C++/WinRT headers.");
-#define CPPWINRT_VERSION "2.0.220418.1"
+static_assert(winrt::check_version(CPPWINRT_VERSION, "2.0.230511.6"), "Mismatched C++/WinRT headers.");
+#define CPPWINRT_VERSION "2.0.230511.6"
 #include "winrt/Windows.Management.h"
 #include "winrt/impl/Windows.ApplicationModel.2.h"
 #include "winrt/impl/Windows.Foundation.2.h"
@@ -461,6 +461,16 @@ namespace winrt::impl
         void* value{};
         check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions)->get_ProjectionOrderPackageFamilyNames(&value));
         return winrt::Windows::Foundation::Collections::IVector<hstring>{ value, take_ownership_from_abi };
+    }
+    template <typename D> auto consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions2<D>::DeferAutomaticRegistration() const
+    {
+        bool value{};
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2)->get_DeferAutomaticRegistration(&value));
+        return value;
+    }
+    template <typename D> auto consume_Windows_Management_Deployment_IPackageAllUserProvisioningOptions2<D>::DeferAutomaticRegistration(bool value) const
+    {
+        check_hresult(WINRT_IMPL_SHIM(winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2)->put_DeferAutomaticRegistration(value));
     }
     template <typename D> auto consume_Windows_Management_Deployment_IPackageManager<D>::AddPackageAsync(winrt::Windows::Foundation::Uri const& packageUri, param::async_iterable<winrt::Windows::Foundation::Uri> const& dependencyPackageUris, winrt::Windows::Management::Deployment::DeploymentOptions const& deploymentOptions) const
     {
@@ -2046,6 +2056,26 @@ namespace winrt::impl
             clear_abi(value);
             typename D::abi_guard guard(this->shim());
             *value = detach_from<winrt::Windows::Foundation::Collections::IVector<hstring>>(this->shim().ProjectionOrderPackageFamilyNames());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+    };
+#endif
+#ifndef WINRT_LEAN_AND_MEAN
+    template <typename D>
+    struct produce<D, winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2> : produce_base<D, winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2>
+    {
+        int32_t __stdcall get_DeferAutomaticRegistration(bool* value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            *value = detach_from<bool>(this->shim().DeferAutomaticRegistration());
+            return 0;
+        }
+        catch (...) { return to_hresult(); }
+        int32_t __stdcall put_DeferAutomaticRegistration(bool value) noexcept final try
+        {
+            typename D::abi_guard guard(this->shim());
+            this->shim().DeferAutomaticRegistration(value);
             return 0;
         }
         catch (...) { return to_hresult(); }
@@ -3642,6 +3672,7 @@ namespace std
     template<> struct hash<winrt::Windows::Management::Deployment::IDeploymentResult2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IFindSharedPackageContainerOptions> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions> : winrt::impl::hash_base {};
+    template<> struct hash<winrt::Windows::Management::Deployment::IPackageAllUserProvisioningOptions2> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager10> : winrt::impl::hash_base {};
     template<> struct hash<winrt::Windows::Management::Deployment::IPackageManager2> : winrt::impl::hash_base {};

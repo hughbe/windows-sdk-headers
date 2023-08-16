@@ -161,18 +161,25 @@ CimDismountImage(_In_ const GUID* volumeId);
 //
 // Reads a file from the CIM at a given offset. Returns the read bytes in
 // in the buffer provided, the number of bytes read, and the number of bytes
-// remaining in the file. Reading a file  at offset 0, with null input buffer
-// can be used to get the file size.
+// remaining in the file.
 //
 STDAPI
-CimReadFile(_In_ PCWSTR imageContainingPath,
-            _In_ PCWSTR imageName,
-            _In_ PCWSTR imageRelativePath,
+CimReadFile(_In_ PCWSTR cimPath,
+            _In_ PCWSTR filePath,
+            _In_ UINT64 offset,
             _In_ UINT64 bufferSize,
             _Out_ void* buffer,
             _Out_ UINT64* bytesRead,
-            _Out_ UINT64* bytesRemaining,
-            _In_opt_ UINT64 offset = 0);
+            _Out_ UINT64* bytesRemaining);
+
+//
+// Queries the file stat info for a file from the CIM.
+// Returns the FILE_STAT_INFORMATION
+//
+STDAPI
+CimStatFile(_In_ PCWSTR cimPath,
+            _In_ PCWSTR filePath,
+            _Out_ FILE_STAT_INFORMATION* statInfo);
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 

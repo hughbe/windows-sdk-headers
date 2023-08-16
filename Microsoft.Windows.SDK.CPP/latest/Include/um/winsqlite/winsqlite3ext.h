@@ -12,8 +12,8 @@
 ** This header file defines the SQLite interface for use by
 ** shared libraries that want to be imported as extensions into
 ** an SQLite instance.  Shared libraries that intend to be loaded
-** as extensions by SQLite should #include this file instead of
-** sqlite3.h.
+** as extensions by SQLite should #include this file instead of 
+** winsqlite3.h.
 */
 #ifndef SQLITE3EXT_H
 #define SQLITE3EXT_H
@@ -361,7 +361,7 @@ struct sqlite3_api_routines {
   /* Version 3.34.0 and later */
   int (SQLITE_APICALL *txn_state)(sqlite3*,const char*);
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
   /* Version 3.36.1 and later */
   sqlite3_int64 (SQLITE_APICALL *changes64)(sqlite3*);
   sqlite3_int64 (SQLITE_APICALL *total_changes64)(sqlite3*);
@@ -384,7 +384,7 @@ struct sqlite3_api_routines {
   const char *(SQLITE_APICALL *db_name)(sqlite3*,int);
   /* Version 3.40.0 and later */
   int (SQLITE_APICALL *value_encoding)(sqlite3_value*);
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 };
 
 #if NTDDI_VERSION >= NTDDI_WIN10_RS2
@@ -711,7 +711,7 @@ typedef int (SQLITE_APICALL *sqlite3_loadext_entry)(
 /* Version 3.34.0 and later */
 #define sqlite3_txn_state              sqlite3_api->txn_state
 #endif /* NTDDI_VERSION >= NTDDI_WIN10_CO */
-#if NTDDI_VERSION >= NTDDI_WIN10_CU
+#if NTDDI_VERSION >= NTDDI_WIN11_ZN
 /* Version 3.36.1 and later */
 #define sqlite3_changes64              sqlite3_api->changes64
 #define sqlite3_total_changes64        sqlite3_api->total_changes64
@@ -732,7 +732,7 @@ typedef int (SQLITE_APICALL *sqlite3_loadext_entry)(
 #define sqlite3_db_name                sqlite3_api->db_name
 /* Version 3.40.0 and later */
 #define sqlite3_value_encoding         sqlite3_api->value_encoding
-#endif /* NTDDI_VERSION >= NTDDI_WIN10_CU */
+#endif /* NTDDI_VERSION >= NTDDI_WIN11_ZN */
 #endif /* !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION) */
 
 #if !defined(SQLITE_CORE) && !defined(SQLITE_OMIT_LOAD_EXTENSION)

@@ -3767,7 +3767,7 @@ DWRITE_BEGIN_INTERFACE(IDWriteBitmapRenderTarget2, "C553A742-FC01-44DA-A66E-B8B9
 /// See the DWRITE_PAINT_TYPE enumeration for which paint types are required for each
 /// feature level.
 /// </remarks>
-enum DWRITE_PAINT_FEATURE_LEVEL
+enum DWRITE_PAINT_FEATURE_LEVEL : INT32
 {
     /// <summary>
     /// No paint API support.

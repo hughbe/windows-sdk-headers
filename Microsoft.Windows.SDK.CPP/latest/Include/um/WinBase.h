@@ -5962,8 +5962,24 @@ typedef struct COPYFILE2_EXTENDED_PARAMETERS_V2 {
 
 #define COPY_FILE2_V2_DONT_COPY_JUNCTIONS        0x00000001
 
+#if (NTDDI_VERSION >= NTDDI_WIN11_GA)
+
+//
+//  Disable attempting block cloning during copy
+//
+
+#define COPY_FILE2_V2_DISABLE_BLOCK_CLONING      0x00000002
+
 #define COPY_FILE2_V2_VALID_FLAGS               \
     (COPY_FILE2_V2_DONT_COPY_JUNCTIONS)         \
+ |  (COPY_FILE2_V2_DISABLE_BLOCK_CLONING)       \
+
+#else // (NTDDI_VERSION < NTDDI_WIN11_GA)
+
+#define COPY_FILE2_V2_VALID_FLAGS               \
+    (COPY_FILE2_V2_DONT_COPY_JUNCTIONS)         \
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_GA)
 
 #endif // (NTDDI_VERSION >= NTDDI_WIN10_NI)
 
@@ -9305,7 +9321,7 @@ GetFileInformationByHandleEx(
     _In_  DWORD dwBufferSize
 );
 
-#if defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#if (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 
 BOOL
 WINAPI
@@ -9316,7 +9332,7 @@ GetFileInformationByName(
     _In_ ULONG FileInfoBufferSize
     );
 
-#endif // defined(NTDDI_WIN10_NI) && (NTDDI_VERSION >= NTDDI_WIN10_NI)
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_ZN)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_SYSTEM | WINAPI_PARTITION_GAMES) */
 #pragma endregion

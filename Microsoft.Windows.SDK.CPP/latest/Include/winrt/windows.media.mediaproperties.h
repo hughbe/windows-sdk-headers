@@ -2004,12 +2004,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingP
  *
  * Interface Windows.Media.MediaProperties.IAv1ProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.Av1ProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IAv1ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IAv1ProfileIdsStatics";
@@ -2067,7 +2067,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -2208,12 +2208,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIds
  *
  * Interface Windows.Media.MediaProperties.IHevcProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.HevcProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IHevcProfileIdsStatics[] = L"Windows.Media.MediaProperties.IHevcProfileIdsStatics";
@@ -2301,7 +2301,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -2791,12 +2791,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingP
  *
  * Interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingProfile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingProfileStatics4[] = L"Windows.Media.MediaProperties.IMediaEncodingProfileStatics4";
@@ -2826,7 +2826,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3229,12 +3229,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingS
  *
  * Interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingSubtypes
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingSubtypesStatics7[] = L"Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7";
@@ -3259,7 +3259,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3747,12 +3747,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingP
  *
  * Interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.VideoEncodingProperties
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVideoEncodingPropertiesStatics3[] = L"Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3";
@@ -3780,18 +3780,18 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
  * Interface Windows.Media.MediaProperties.IVp9ProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.Vp9ProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVp9ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IVp9ProfileIdsStatics";
@@ -3822,7 +3822,7 @@ namespace ABI {
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3834,8 +3834,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IAudioEncodingProperties ** Default Interface **
@@ -3860,22 +3860,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.Av1ProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Av1ProfileIds[] = L"Windows.Media.MediaProperties.Av1ProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3928,22 +3928,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.HevcProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_HevcProfileIds[] = L"Windows.Media.MediaProperties.HevcProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -3955,8 +3955,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -3986,8 +3986,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -4016,12 +4016,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -4141,8 +4141,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IVideoEncodingProperties ** Default Interface **
@@ -4168,22 +4168,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.Vp9ProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Vp9ProfileIds[] = L"Windows.Media.MediaProperties.Vp9ProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #else // !defined(__cplusplus)
 /* Forward Declarations */
@@ -6724,12 +6724,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAudioEncodingP
  *
  * Interface Windows.Media.MediaProperties.IAv1ProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.Av1ProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IAv1ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IAv1ProfileIdsStatics";
@@ -6842,7 +6842,7 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIAv1ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -7098,12 +7098,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIH264ProfileIds
  *
  * Interface Windows.Media.MediaProperties.IHevcProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.HevcProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IHevcProfileIdsStatics[] = L"Windows.Media.MediaProperties.IHevcProfileIdsStatics";
@@ -7266,7 +7266,7 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIHevcProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -8167,12 +8167,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingP
  *
  * Interface Windows.Media.MediaProperties.IMediaEncodingProfileStatics4
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingProfile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingProfileStatics4[] = L"Windows.Media.MediaProperties.IMediaEncodingProfileStatics4";
@@ -8237,7 +8237,7 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingProfileStatics4_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -8969,12 +8969,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingS
  *
  * Interface Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.MediaEncodingSubtypes
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IMediaEncodingSubtypesStatics7[] = L"Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7";
@@ -9032,7 +9032,7 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatic
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIMediaEncodingSubtypesStatics7_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -9931,12 +9931,12 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingP
  *
  * Interface Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.VideoEncodingProperties
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVideoEncodingPropertiesStatics3[] = L"Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3";
@@ -9999,18 +9999,18 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStat
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVideoEncodingPropertiesStatics3_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
  * Interface Windows.Media.MediaProperties.IVp9ProfileIdsStatics
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * Interface is a part of the implementation of type Windows.Media.MediaProperties.Vp9ProfileIds
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #if !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__)
 #define ____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__
 extern const __declspec(selectany) _Null_terminated_ WCHAR InterfaceName_Windows_Media_MediaProperties_IVp9ProfileIdsStatics[] = L"Windows.Media.MediaProperties.IVp9ProfileIdsStatics";
@@ -10078,7 +10078,7 @@ interface __x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics
 
 EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics;
 #endif /* !defined(____x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsStatics_INTERFACE_DEFINED__) */
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -10090,8 +10090,8 @@ EXTERN_C const IID IID___x_ABI_CWindows_CMedia_CMediaProperties_CIVp9ProfileIdsS
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAudioEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IAudioEncodingProperties ** Default Interface **
@@ -10116,22 +10116,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.Av1ProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IAv1ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_Av1ProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Av1ProfileIds[] = L"Windows.Media.MediaProperties.Av1ProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -10184,22 +10184,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.HevcProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IHevcProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_HevcProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_HevcProfileIds[] = L"Windows.Media.MediaProperties.HevcProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 /*
  *
@@ -10211,8 +10211,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics3 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IImageEncodingPropertiesStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
@@ -10242,8 +10242,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *   Type can be activated via RoActivateInstance starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics4 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics2 interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingProfileStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
  *
@@ -10272,12 +10272,12 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics5 interface starting with version 7.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics3 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics7 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics6 interface starting with version 10.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IMediaEncodingSubtypesStatics4 interface starting with version 6.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
@@ -10397,8 +10397,8 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * RuntimeClass contains static methods.
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics2 interface starting with version 4.0 of the Windows.Foundation.UniversalApiContract API contract
- *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
  *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics interface starting with version 1.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IVideoEncodingPropertiesStatics3 interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class implements the following interfaces:
  *    Windows.Media.MediaProperties.IVideoEncodingProperties ** Default Interface **
@@ -10424,22 +10424,22 @@ extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_
  *
  * Class Windows.Media.MediaProperties.Vp9ProfileIds
  *
- * Introduced to Windows.Foundation.UniversalApiContract in version 16.0
+ * Introduced to Windows.Foundation.UniversalApiContract in version 15.0
  *
  * RuntimeClass contains static methods.
- *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 16.0 of the Windows.Foundation.UniversalApiContract API contract
+ *   Static Methods exist on the Windows.Media.MediaProperties.IVp9ProfileIdsStatics interface starting with version 15.0 of the Windows.Foundation.UniversalApiContract API contract
  *
  * Class Threading Model:  Both Single and Multi Threaded Apartment
  *
  * Class Marshaling Behavior:  Agile - Class is agile
  *
  */
-#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#if WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 #ifndef RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
 #define RUNTIMECLASS_Windows_Media_MediaProperties_Vp9ProfileIds_DEFINED
 extern const __declspec(selectany) _Null_terminated_ WCHAR RuntimeClass_Windows_Media_MediaProperties_Vp9ProfileIds[] = L"Windows.Media.MediaProperties.Vp9ProfileIds";
 #endif
-#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0x100000
+#endif // WINDOWS_FOUNDATION_UNIVERSALAPICONTRACT_VERSION >= 0xf0000
 
 #endif // defined(__cplusplus)
 #pragma pop_macro("MIDL_CONST_ID")

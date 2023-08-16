@@ -164,6 +164,11 @@ typedef struct tagDiagnosticsInfo
 
 typedef struct tagDiagnosticsInfo *PDiagnosticsInfo;
 
+#if defined(FKG_FORCED_USAGE) || defined(BUILD_WINDOWS)
+#define NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(x)
+#else
+#define NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(x) __pragma(deprecated(x))
+#endif
 
 
 extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0000_v0_0_c_ifspec;
@@ -477,6 +482,7 @@ EXTERN_C const IID IID_INetDiagHelper;
 /* interface __MIDL_itf_ndhelper_0000_0001 */
 /* [local] */ 
 
+NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelper)
 typedef struct tagHypothesisResult
     {
     HYPOTHESIS hypothesis;
@@ -573,6 +579,15 @@ EXTERN_C const IID IID_INetDiagHelperUtilFactory;
 
 #endif 	/* __INetDiagHelperUtilFactory_INTERFACE_DEFINED__ */
 
+
+/* interface __MIDL_itf_ndhelper_0000_0002 */
+/* [local] */ 
+
+NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperUtilFactory)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0002_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0002_v0_0_s_ifspec;
 
 #ifndef __INetDiagHelperEx_INTERFACE_DEFINED__
 #define __INetDiagHelperEx_INTERFACE_DEFINED__
@@ -684,6 +699,15 @@ EXTERN_C const IID IID_INetDiagHelperEx;
 #endif 	/* __INetDiagHelperEx_INTERFACE_DEFINED__ */
 
 
+/* interface __MIDL_itf_ndhelper_0000_0003 */
+/* [local] */ 
+
+NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperEx)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0003_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0003_v0_0_s_ifspec;
+
 #ifndef __INetDiagHelperInfo_INTERFACE_DEFINED__
 #define __INetDiagHelperInfo_INTERFACE_DEFINED__
 
@@ -769,6 +793,15 @@ EXTERN_C const IID IID_INetDiagHelperInfo;
 
 #endif 	/* __INetDiagHelperInfo_INTERFACE_DEFINED__ */
 
+
+/* interface __MIDL_itf_ndhelper_0000_0004 */
+/* [local] */ 
+
+NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagHelperInfo)
+
+
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0004_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_ndhelper_0000_0004_v0_0_s_ifspec;
 
 #ifndef __INetDiagExtensibleHelper_INTERFACE_DEFINED__
 #define __INetDiagExtensibleHelper_INTERFACE_DEFINED__
@@ -863,6 +896,7 @@ EXTERN_C const IID IID_INetDiagExtensibleHelper;
 /* interface __MIDL_itf_ndhelper_0000_0005 */
 /* [local] */ 
 
+NOT_BUILD_WINDOWS_NDHELPER_DEPRECATE(INetDiagExtensibleHelper)
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 #pragma endregion
 
