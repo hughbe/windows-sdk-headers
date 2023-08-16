@@ -84,8 +84,8 @@ cpp_quote("#if (NTDDI_VERSION >= NTDDI_WIN10_19H1)")
     [object, uuid(B8A2ACD7-A0F0-40EE-8EE7-C82F59CC5CD4)]
     interface ICoreInputInterop2: IInspectable
     {
-        [propget] HRESULT WindowHandle([out,retval] HWND *hwnd);
-        HRESULT ChangeHostingContext([in] HWND newParent, [in] UINT32 newViewInstanceId);
+        [propget] HRESULT WindowHandle([out,retval] HWND *window);
+        HRESULT ChangeHostingContext([in] HWND newParentWindow, [in] UINT32 newViewInstanceId);
     }
 
 cpp_quote("#endif // NTDDI_VERSION >= NTDDI_WIN10_19H1")

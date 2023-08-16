@@ -25,6 +25,7 @@ Notes:
 
         Version     First available in
         ------------------------------------------------------------------
+        689         Windows 11, gallium release
         688         Windows 11, copper release
         687         Windows 11, nickel release
         686         Windows 11, cobalt release

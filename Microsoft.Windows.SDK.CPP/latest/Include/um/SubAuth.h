@@ -276,6 +276,7 @@ typedef struct _NETLOGON_GENERIC_INFO {
 // Values for Flags
 #define MSV1_0_PASSTHRU     0x01
 #define MSV1_0_GUEST_LOGON  0x02
+#define MSV1_0_KERBEROS_LOGON  0x04
 
 NTSTATUS NTAPI
 Msv1_0SubAuthenticationRoutine(

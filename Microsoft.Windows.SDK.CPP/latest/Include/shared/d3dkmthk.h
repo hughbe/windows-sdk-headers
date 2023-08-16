@@ -149,7 +149,8 @@ typedef struct _D3DKMT_CREATENATIVEFENCE_FLAGS
     {
         struct 
         {
-            UINT Reserved : 32;
+            UINT PreferCurrentValueInLocalMemory : 1;
+            UINT Reserved : 31;
         };
         UINT Value;
     };
@@ -159,7 +160,7 @@ typedef struct _D3DKMT_CREATENATIVEFENCE
 {
     D3DKMT_HANDLE                  hDevice;                                          // in:  Handle to the device.
     D3DKMT_HANDLE                  hSyncObject;                                      // out: Handle to sync object in this process.
-    BYTE                           pPrivateDriverData[D3DDDI_NATIVE_FENCE_PDD_SIZE]; // in: Private driver data to pass to KMD CreateNativeFence call
+    BYTE                           PrivateDriverData[D3DDDI_NATIVE_FENCE_PDD_SIZE];  // in: Private driver data to pass to KMD CreateNativeFence call
     D3DDDI_NATIVEFENCEINFO         Info;                                             // in/out: Attributes of the synchronization object.
     D3DKMT_CREATENATIVEFENCE_FLAGS Flags;
     BYTE                           Reserved[28];
@@ -1689,6 +1690,7 @@ typedef struct _D3DKMT_OPENNATIVEFENCEFROMNTHANDLE
     D3DDDI_SYNCHRONIZATIONOBJECT_FLAGS  Flags;              // in: Flags.
     D3DKMT_HANDLE                       hSyncObject;        // out: Handle to sync object in this process.
     D3DDDI_NATIVEFENCEMAPPING           NativeFenceMapping; // out: process mapping information for the native fence
+    BYTE                                PrivateDriverData[D3DDDI_NATIVE_FENCE_PDD_SIZE];
     BYTE                                Reserved[32];
 } D3DKMT_OPENNATIVEFENCEFROMNTHANDLE;
 

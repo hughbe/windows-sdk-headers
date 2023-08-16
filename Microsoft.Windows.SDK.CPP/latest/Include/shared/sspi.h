@@ -2103,6 +2103,29 @@ typedef SECURITY_STATUS
 (SEC_ENTRY * FREE_CONTEXT_BUFFER_FN)(
     _Inout_ PVOID
     );
+    
+SECURITY_STATUS
+SEC_ENTRY
+SecAllocateAndSetIPAddress(
+    _In_reads_bytes_(cchIpAddress)  PUCHAR lpIpAddress,
+    _In_  ULONG  cchIpAddress,
+    _Out_ int* FreeCallContext // Avoid creating a dependence on minwindef.h by replacing PBOOL with its definition int*
+    );
+
+SECURITY_STATUS
+SEC_ENTRY
+SecAllocateAndSetCallTarget(
+    _In_reads_bytes_opt_(cchIpAddress)  PUCHAR lpIpAddress,
+    _In_  ULONG  cchIpAddress,
+    _In_opt_ LPWSTR TargetName,
+    _Out_ int* FreeCallContext // Avoid creating a dependence on minwindef.h by replacing PBOOL with its definition int*
+    );
+
+VOID
+SEC_ENTRY
+SecFreeCallContext(
+    VOID
+    );
 
 // end_ntifs
 

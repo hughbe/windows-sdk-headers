@@ -726,6 +726,7 @@
 #define TeGuaranteedStackBytes 0x1748
 #define TeChpeV2CpuAreaInfo 0x1788
 #define TeFlsData 0x17c8
+#define TeCurrentIdealProcessor 0x1744
 #define ThreadEnvironmentBlockLength 0x1860
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
@@ -808,6 +809,8 @@
 //
 
 #define KPRIORITY_STATE_PRIORITY_BITMASK 0x7f
+#define PnGroup 0x0
+#define PnNumber 0x2
 #define PERF_SYSCALL_FLAG_BIT 0x6
 
 //

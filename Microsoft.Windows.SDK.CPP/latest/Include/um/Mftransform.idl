@@ -611,6 +611,20 @@ cpp_quote(" EXTERN_C const DECLSPEC_SELECTANY GUID MFT_AUDIO_DECODER_SPATIAL_MET
 
 #endif //(NTDDI_VERSION >= NTDDI_WIN10_RS2)
 
+// MFT_AUDIO_DECODER_AUDIO_ENDPOINT_FORMFACTOR
+// Data Type: UINT32 (treat as a value from the EndpointFormFactor enumeration in mmdeviceapi.h.)
+// This attribute is set on components via the attribute store obtained from IMFTransform::GetAttributes
+// The default value is UnknownFormFactor (10)
+cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_AUDIO_DECODER_AUDIO_ENDPOINT_FORMFACTOR = { 0x8d574310, 0x909a, 0x433a, { 0xac, 0xe7, 0xee, 0xe7, 0x47, 0x19, 0xf9, 0x01 } };" )
+
+// MFT_AUDIO_DECODER_AUDIO_ENDPOINT_IS_DIGITAL_STEREO_ONLY
+// Data type: UINT32 (treat as BOOL)
+// This attribute is set on components via the attribute store obtained from IMFTransform::GetAttributes
+// When the value is TRUE, it indicates that the audio renderer endpoint is a digital audio display device that only supports
+// uncompressed stereo signals.
+// The default value is FALSE.
+cpp_quote( "EXTERN_C const DECLSPEC_SELECTANY GUID MFT_AUDIO_DECODER_AUDIO_ENDPOINT_IS_DIGITAL_STEREO_ONLY = { 0x26e5a90d, 0x4ad1, 0x4f8c, { 0xb8, 0xaf, 0xad, 0xf1, 0x4d, 0x21, 0x78, 0xf1 } };" )
+
 
 cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion

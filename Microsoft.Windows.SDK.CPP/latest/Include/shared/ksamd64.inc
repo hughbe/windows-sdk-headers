@@ -698,6 +698,7 @@ TeInstrumentation equ 016B8H
 TeGdiBatchCount equ 01740H
 TeGuaranteedStackBytes equ 01748H
 TeFlsData equ 017C8H
+TeCurrentIdealProcessor equ 01744H
 ThreadEnvironmentBlockLength equ 01860H
 CmThreadEnvironmentBlockOffset equ 02000H
 TLS_MINIMUM_AVAILABLE equ 00040H
@@ -837,6 +838,8 @@ KENTROPY_TIMING_ANALYSIS equ 00000H
 ;
 
 KPRIORITY_STATE_PRIORITY_BITMASK equ 0007FH
+PnGroup equ 00000H
+PnNumber equ 00002H
 
 ;
 ;  Register Argument Home Address Offset Definitions
@@ -958,6 +961,7 @@ PcInterruptCount equ 082C0H
 PcDebuggerSavedIRQL equ 082D8H
 PcStartCycles equ 08300H
 PcSelfIpiRequestSummary equ 00228H
+PcMceRecoveryContext equ 08360H
 RTL_RETPOLINE_STUBS_UNWIND_INFO_MAX_SIZE equ 001F4H
 ProcessorControlRegisterLength equ 02C040H
 

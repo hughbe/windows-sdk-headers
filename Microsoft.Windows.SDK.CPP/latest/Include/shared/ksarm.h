@@ -686,6 +686,7 @@
 #define TeGdiBatchCount 0xf70
 #define TeGuaranteedStackBytes 0xf78
 #define TeFlsData 0xfb4
+#define TeCurrentIdealProcessor 0xf74
 #define ThreadEnvironmentBlockLength 0x1020
 #define CmThreadEnvironmentBlockOffset 0x2000
 #define TLS_MINIMUM_AVAILABLE 0x40
@@ -768,6 +769,8 @@
 //
 
 #define KPRIORITY_STATE_PRIORITY_BITMASK 0x7f
+#define PnGroup 0x0
+#define PnNumber 0x2
 
 //
 // Special Register Structure Offset Definition

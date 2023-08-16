@@ -646,10 +646,10 @@ EXTERN_C const IID IID_ICoreInputInterop2;
     {
     public:
         virtual /* [propget] */ HRESULT STDMETHODCALLTYPE get_WindowHandle( 
-            /* [retval][out] */ __RPC__deref_out_opt HWND *hwnd) = 0;
+            /* [retval][out] */ __RPC__deref_out_opt HWND *window) = 0;
         
         virtual HRESULT STDMETHODCALLTYPE ChangeHostingContext( 
-            /* [in] */ __RPC__in HWND newParent,
+            /* [in] */ __RPC__in HWND newParentWindow,
             /* [in] */ UINT32 newViewInstanceId) = 0;
         
     };
@@ -695,12 +695,12 @@ EXTERN_C const IID IID_ICoreInputInterop2;
         DECLSPEC_XFGVIRT(ICoreInputInterop2, get_WindowHandle)
         /* [propget] */ HRESULT ( STDMETHODCALLTYPE *get_WindowHandle )( 
             __RPC__in ICoreInputInterop2 * This,
-            /* [retval][out] */ __RPC__deref_out_opt HWND *hwnd);
+            /* [retval][out] */ __RPC__deref_out_opt HWND *window);
         
         DECLSPEC_XFGVIRT(ICoreInputInterop2, ChangeHostingContext)
         HRESULT ( STDMETHODCALLTYPE *ChangeHostingContext )( 
             __RPC__in ICoreInputInterop2 * This,
-            /* [in] */ __RPC__in HWND newParent,
+            /* [in] */ __RPC__in HWND newParentWindow,
             /* [in] */ UINT32 newViewInstanceId);
         
         END_INTERFACE
@@ -736,11 +736,11 @@ EXTERN_C const IID IID_ICoreInputInterop2;
     ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
 
 
-#define ICoreInputInterop2_get_WindowHandle(This,hwnd)	\
-    ( (This)->lpVtbl -> get_WindowHandle(This,hwnd) ) 
+#define ICoreInputInterop2_get_WindowHandle(This,window)	\
+    ( (This)->lpVtbl -> get_WindowHandle(This,window) ) 
 
-#define ICoreInputInterop2_ChangeHostingContext(This,newParent,newViewInstanceId)	\
-    ( (This)->lpVtbl -> ChangeHostingContext(This,newParent,newViewInstanceId) ) 
+#define ICoreInputInterop2_ChangeHostingContext(This,newParentWindow,newViewInstanceId)	\
+    ( (This)->lpVtbl -> ChangeHostingContext(This,newParentWindow,newViewInstanceId) ) 
 
 #endif /* COBJMACROS */
 

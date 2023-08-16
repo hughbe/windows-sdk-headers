@@ -247,9 +247,7 @@ typedef struct _FD_DEVICEMETRICS {       // devm
     LONG      lMinA;
     LONG      lMinC;
     LONG      lMinD;
-
     LONG      alReserved[1]; // just in case we need it.
-
 } FD_DEVICEMETRICS, *PFD_DEVICEMETRICS;
 
 typedef struct _LIGATURE { /* lig */
@@ -421,13 +419,14 @@ typedef struct _FD_KERNINGPAIR {
 //
 // IFMETRICS::fsSelection flags
 //
-#define  FM_SEL_ITALIC          0x0001
-#define  FM_SEL_UNDERSCORE      0x0002
-#define  FM_SEL_NEGATIVE        0x0004
-#define  FM_SEL_OUTLINED        0x0008
-#define  FM_SEL_STRIKEOUT       0x0010
-#define  FM_SEL_BOLD            0x0020
-#define  FM_SEL_REGULAR         0x0040
+#define  FM_SEL_ITALIC           0x0001
+#define  FM_SEL_UNDERSCORE       0x0002
+#define  FM_SEL_NEGATIVE         0x0004
+#define  FM_SEL_OUTLINED         0x0008
+#define  FM_SEL_STRIKEOUT        0x0010
+#define  FM_SEL_BOLD             0x0020
+#define  FM_SEL_REGULAR          0x0040
+#define  FM_SEL_USE_TYPO_METRICS 0x0080
 
 //
 // The FONTDIFF structure contains all of the fields that could

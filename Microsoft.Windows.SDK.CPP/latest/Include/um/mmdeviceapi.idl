@@ -145,6 +145,12 @@ typedef enum
     ERole_enum_count
 } ERole;
 
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+#pragma endregion
+
+#pragma region Application or Games Family
+cpp_quote("#if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES)")
+
 typedef enum
 {
     RemoteNetworkDevice,    // = 0
@@ -163,7 +169,7 @@ typedef enum
 
 cpp_quote("#define HDMI     DigitalAudioDisplayDevice")
 cpp_quote("")
-cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP | WINAPI_PARTITION_GAMES) */")
+cpp_quote("#endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_APP | WINAPI_PARTITION_GAMES) */")
 #pragma endregion
 
 #pragma region Application Family
