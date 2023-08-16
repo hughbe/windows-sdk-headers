@@ -158,28 +158,31 @@ CimMountImage(_In_ PCWSTR imageContainingPath,
 STDAPI
 CimDismountImage(_In_ const GUID* volumeId);
 
+#if (NTDDI_VERSION >= NTDDI_WIN11_GA)
+
 //
 // Reads a file from the CIM at a given offset. Returns the read bytes in
 // in the buffer provided, the number of bytes read, and the number of bytes
 // remaining in the file.
 //
 STDAPI
-CimReadFile(_In_ PCWSTR cimPath,
+CimReadFile(_In_ PCWSTR imagePath,
             _In_ PCWSTR filePath,
             _In_ UINT64 offset,
-            _In_ UINT64 bufferSize,
             _Out_ void* buffer,
+            _In_ UINT64 bufferSize,
             _Out_ UINT64* bytesRead,
             _Out_ UINT64* bytesRemaining);
-
 //
 // Queries the file stat info for a file from the CIM.
-// Returns the FILE_STAT_INFORMATION
+// Returns the FILE_STAT_BASIC_INFORMATION
 //
 STDAPI
-CimStatFile(_In_ PCWSTR cimPath,
-            _In_ PCWSTR filePath,
-            _Out_ FILE_STAT_INFORMATION* statInfo);
+CimGetFileStatBasicInformation(_In_ PCWSTR imagePath,
+                               _In_ PCWSTR filePath,
+                               _Out_ FILE_STAT_BASIC_INFORMATION* statInfo);
+
+#endif // (NTDDI_VERSION >= NTDDI_WIN11_GA)
 
 #endif /* WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP) */
 

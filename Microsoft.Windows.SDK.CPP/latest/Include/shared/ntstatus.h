@@ -26444,6 +26444,15 @@ Notes:
 #define STATUS_REMOTE_MAILSLOTS_DEPRECATED ((NTSTATUS)0xC05D0005L)
 
 //
+// MessageId: STATUS_SMB_GUEST_LOGON_BLOCKED_SIGNING_REQUIRED
+//
+// MessageText:
+//
+// You can't access this shared folder because your computer is configured to require SMB signing. These policies help protect your PC from unsafe or malicious devices on the network.
+//
+#define STATUS_SMB_GUEST_LOGON_BLOCKED_SIGNING_REQUIRED ((NTSTATUS)0xC05D0006L)
+
+//
 // Embedded Security Core
 //
 // Reserved id values 0x0001 - 0x00FF

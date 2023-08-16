@@ -13696,14 +13696,14 @@ typedef struct D3D12_DXIL_LIBRARY_DESC
     {
     D3D12_SHADER_BYTECODE DXILLibrary;
     UINT NumExports;
-    _In_reads_(NumExports)  D3D12_EXPORT_DESC *pExports;
+    _In_reads_(NumExports)  const D3D12_EXPORT_DESC *pExports;
     } 	D3D12_DXIL_LIBRARY_DESC;
 
 typedef struct D3D12_EXISTING_COLLECTION_DESC
     {
     ID3D12StateObject *pExistingCollection;
     UINT NumExports;
-    _In_reads_(NumExports)  D3D12_EXPORT_DESC *pExports;
+    _In_reads_(NumExports)  const D3D12_EXPORT_DESC *pExports;
     } 	D3D12_EXISTING_COLLECTION_DESC;
 
 typedef struct D3D12_SUBOBJECT_TO_EXPORTS_ASSOCIATION

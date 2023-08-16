@@ -15424,7 +15424,7 @@ typedef struct _SCRUB_DATA_OUTPUT {
 
 #endif /* (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE) */
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5)
 
     //
     // Number of bytes of metadata processed
@@ -15630,7 +15630,7 @@ typedef struct _SHARED_VIRTUAL_DISK_SUPPORT {
 
 #endif // (_WIN32_WINNT >= _WIN32_WINNT_WINBLUE)
 
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5)
+#if (NTDDI_VERSION >= NTDDI_WIN10_RS5) || (NTDDI_VERSION >= NTDDI_WIN8) //Win8 check is for backward compatibility.
 
 //
 //=============== FSCTL_REARRANGE_FILE ====================
@@ -15687,7 +15687,7 @@ typedef struct _REARRANGE_FILE_DATA32 {
 } REARRANGE_FILE_DATA32, *PREARRANGE_FILE_DATA32;
 #endif // defined(_WIN64)
 
-#endif /* (_WIN32_WINNT >= _WIN32_WINNT_WIN10_RS5) */
+#endif /* (NTDDI_VERSION >= NTDDI_WIN10_RS5) */
 
 #if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
 //

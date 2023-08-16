@@ -300,7 +300,9 @@ typedef union WHV_X64_PROCESSOR_FEATURES1
         UINT64 Reserved4 : 1;
         UINT64 Reserved5 : 1;
         UINT64 Reserved6 : 1;
-        UINT64 Reserved7 : 25;
+        UINT64 Reserved7 : 1;
+        UINT64 CmpccxaddSupport : 1;
+        UINT64 Reserved8 : 23;
     };
 
     UINT64 AsUINT64;
@@ -720,7 +722,9 @@ typedef union WHV_PROCESSOR_XSAVE_FEATURES
         UINT64 AmxBf16Support : 1;
         UINT64 AmxInt8Support : 1;
         UINT64 AvxVnniSupport : 1;
-        UINT64 Reserved : 33;
+        UINT64 AvxIfmaSupport : 1;
+        UINT64 AvxNeConvertSupport : 1;
+        UINT64 Reserved : 31;
     };
 
     UINT64 AsUINT64;
@@ -2425,7 +2429,7 @@ typedef struct WHV_ARM64_HYPERCALL_CONTEXT
     UINT16 Immediate;
     UINT16 Reserved1;
     UINT32 Reserved2;
-    UINT64 X[16];
+    UINT64 X[18];
 } WHV_ARM64_HYPERCALL_CONTEXT, WHV_HYPERCALL_CONTEXT, *PWHV_HYPERCALL_CONTEXT;
 
 #endif

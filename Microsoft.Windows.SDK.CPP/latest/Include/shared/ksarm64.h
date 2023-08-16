@@ -463,7 +463,7 @@
 #define PrInstrumentationCallback 0x390
 #define PrMitigationFlags2 0xa94
 #define KernelProcessObjectLength 0x3f0
-#define ExecutiveProcessObjectLength 0xc80
+#define ExecutiveProcessObjectLength 0xd80
 #define Win32BatchFlushCallout 0x7
 
 //
@@ -922,7 +922,7 @@
 #define PcSkipTick 0x1918
 #define PcStartCycles 0x1948
 #define PcSpBase 0x1500
-#define ProcessorControlRegisterLength 0x2a1c0
+#define ProcessorControlRegisterLength 0x2a6c0
 
 //
 // Defines for user shared data
@@ -973,7 +973,7 @@
 #define PbPacketBarrier 0xa80
 #define PbDeferredReadyListHead 0xa88
 #define PbLookasideIrpFloat 0xad8
-#define PbRequestMailbox 0x9800
+#define PbRequestMailbox 0x9d00
 #define PbMailbox 0xb00
 #define PbDpcGate 0xc00
 #define PbWaitListHead 0xc80
@@ -2604,7 +2604,7 @@
 
 #define EpDebugPort 0x530
 #define EpSecurityDomain 0xaa0
-#define EpPointerAuthUserIpKey 0xbe8
+#define EpPointerAuthUserIpKey 0xca8
 
 //
 // EPROCESS MitigationFlags2

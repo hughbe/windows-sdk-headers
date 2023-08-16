@@ -654,6 +654,14 @@ typedef struct _SERVER_CERTIFICATE_INFO_0 {
     DWORD      srvci0_mapping_status;
 } SERVER_CERTIFICATE_INFO_0, *PSERVER_CERTIFICATE_INFO_0, *LPSERVER_CERTIFICATE_INFO_0;
 
+typedef struct _CLIENT_CERTIFICATE_ACE_0 {
+    LMSTR Name;
+    LMSTR Description;
+    LMSTR Identifier;
+    DWORD IdentifierType;
+    DWORD AccessControlType;
+} CLIENT_CERTIFICATE_ACE_0, *PCLIENT_CERTIFICATE_ACE_0, *LPCLIENT_CERTIFICATE_ACE_0;
+
 //
 // Special Values and Constants - File
 //

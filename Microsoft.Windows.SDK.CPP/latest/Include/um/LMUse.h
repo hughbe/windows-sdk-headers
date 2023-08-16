@@ -268,10 +268,20 @@ typedef enum _TRANSPORT_TYPE {
    UseTransportType_Quic
 } TRANSPORT_TYPE, *PTRANSPORT_TYPE;
 
+typedef enum _TRANSPORT_INFO_FLAG {
+    NoneFlag               = 0x00000000,
+    TcpPortSetFlag         = 0x00000001,
+    QuicPortSetFlag        = 0x00000002,
+    RdmaPortSetFlag        = 0x00000004
+}  TRANSPORT_INFO_FLAG, *PTRANSPORT_INFO_FLAG;
+
 typedef struct _TRANSPORT_INFO {
     TRANSPORT_TYPE Type;
     BOOLEAN SkipCertificateCheck;
-    // TODO: port number
+    USHORT TcpPort;
+    USHORT QuicPort;
+    USHORT RdmaPort;
+    ULONG Flags; // TRANSPORT_INFO_FLAG
 } TRANSPORT_INFO, *PTRANSPORT_INFO;
 
 typedef struct _USE_OPTION_TRANSPORT_PARAMETERS {

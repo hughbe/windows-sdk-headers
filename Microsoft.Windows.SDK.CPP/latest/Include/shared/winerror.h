@@ -12841,6 +12841,15 @@
 //
 #define ERROR_REMOTE_MAILSLOTS_DEPRECATED 3025L
 
+//
+// MessageId: ERROR_SMB_GUEST_LOGON_BLOCKED_SIGNING_REQUIRED
+//
+// MessageText:
+//
+// You can't access this shared folder because your computer is configured to require SMB signing. These policies help protect your PC from unsafe or malicious devices on the network.
+//
+#define ERROR_SMB_GUEST_LOGON_BLOCKED_SIGNING_REQUIRED 3026L
+
 
 ///////////////////////////////////////////////////
 //                                               //
@@ -53910,6 +53919,111 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 #define VM_E_VTL2_NOT_AVAILABLE          _HRESULT_TYPEDEF_(0xC0370702L)
 
 
+ //
+ // Management VTL related error codes (0x0800 - 0x08ff)
+ //
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_IN_PROGRESS
+//
+// MessageText:
+//
+// Reload of the management VTL was already in progress.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_IN_PROGRESS _HRESULT_TYPEDEF_(0xC0370800L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_INVALID_PROTOCOL_RESPONSE
+//
+// MessageText:
+//
+// Received an invalid protocol response.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_INVALID_PROTOCOL_RESPONSE _HRESULT_TYPEDEF_(0xC0370801L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_SAVE_FAILURE
+//
+// MessageText:
+//
+// Management VTL failed to save itself.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_SAVE_FAILURE _HRESULT_TYPEDEF_(0xC0370802L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_RESTORE_FAILURE
+//
+// MessageText:
+//
+// Management VTL failed to restore itself.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_RESTORE_FAILURE _HRESULT_TYPEDEF_(0xC0370803L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_NO_SAVED_STATE
+//
+// MessageText:
+//
+// There is no saved state for the management VTL.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_NO_SAVED_STATE _HRESULT_TYPEDEF_(0xC0370804L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_INVALID_SAVE_NOTIFICATION_RECEIVED
+//
+// MessageText:
+//
+// Received an invalid or unexpected management VTL save notification.
+// 
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_INVALID_SAVE_NOTIFICATION_RECEIVED _HRESULT_TYPEDEF_(0xC0370805L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_INVALID_RESTORE_REQUEST_RECEIVED
+//
+// MessageText:
+//
+// Received an invalid or unexpected request to restore management VTL.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_INVALID_RESTORE_REQUEST_RECEIVED _HRESULT_TYPEDEF_(0xC0370806L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_INVALID_RESTORE_NOTIFICATION_RECEIVED
+//
+// MessageText:
+//
+// Received an invalid or unexpected notification to restore management VTL.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_INVALID_RESTORE_NOTIFICATION_RECEIVED _HRESULT_TYPEDEF_(0xC0370807L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_NO_IGVM_FILE
+//
+// MessageText:
+//
+// The virtual machine was not booted from an IGVM file. There is no management VTL.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_NO_IGVM_FILE _HRESULT_TYPEDEF_(0xC0370808L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_RELOAD_UNSUPPORTED
+//
+// MessageText:
+//
+// Reloading the management VTL environment is not supported for this VM.
+//
+#define VM_E_MANAGEMENT_VTL_RELOAD_UNSUPPORTED _HRESULT_TYPEDEF_(0xC0370809L)
+
+//
+// MessageId: VM_E_MANAGEMENT_VTL_PROTOCOL_ESTABLISHMENT_TIMEOUT
+//
+// MessageText:
+//
+// The management VTL environment failed to negotiate protocol with the host within the allowed time limit.
+//
+#define VM_E_MANAGEMENT_VTL_PROTOCOL_ESTABLISHMENT_TIMEOUT _HRESULT_TYPEDEF_(0xC037080AL)
+
+
 //
 // Volume manager error codes mapped from status codes
 //
@@ -65501,7 +65615,7 @@ FORCEINLINE HRESULT HRESULT_FROM_SETUPAPI(unsigned long x) { return (((x) & (0x2
 //
 // MessageText:
 //
-// The PRM update cannot be applied due to an outstanding PRM transaction. 
+// The PRM update cannot be applied due to an outstanding PRM transaction.
 //
 #define ERROR_PRM_UPDATE_MODULE_LOCKED   _HRESULT_TYPEDEF_(0xC9260209L)
 

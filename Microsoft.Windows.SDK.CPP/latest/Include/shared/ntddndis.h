@@ -4193,6 +4193,9 @@ typedef struct NDIS_WMI_OUTPUT_INFO
 #if (NDIS_SUPPORT_NDIS688)
 #define NDIS_WLAN_WAKE_ON_INCOMING_ACTION_FRAME_SUPPORTED         0x00000010
 #endif // (NDIS_SUPPORT_NDIS688)
+#if (NDIS_SUPPORT_NDIS689)
+#define NDIS_WLAN_WAKE_ON_CLIENT_DRIVER_DIAGNOSTIC_SUPPORTED     0x00000020
+#endif // (NDIS_SUPPORT_NDIS689)
 
 //
 // Flags for NDIS_PM_CAPABILITIES.MediaSpecificWakeUpEvents field
@@ -4260,6 +4263,9 @@ typedef struct NDIS_WMI_OUTPUT_INFO
 #if (NDIS_SUPPORT_NDIS688)
 #define NDIS_WLAN_WAKE_ON_INCOMING_ACTION_FRAME_ENABLED         0x00000010
 #endif // (NDIS_SUPPORT_NDIS688)
+#if (NDIS_SUPPORT_NDIS689)
+#define NDIS_WLAN_WAKE_ON_CLIENT_DRIVER_DIAGNOSTIC_ENABLED     0x00000020
+#endif // (NDIS_SUPPORT_NDIS689)
 //
 // Flags for NDIS_PM_PARAMETERS.MediaSpecificWakeUpEvents field
 // when miniport's physical media type is NdisPhysicalMediumWirelessWan
@@ -4652,6 +4658,9 @@ typedef enum _NDIS_PM_WAKE_REASON_TYPE
 #if (NDIS_SUPPORT_NDIS688)
     NdisWakeReasonWlanIncomingActionFrame   = 0x1004,
 #endif // (NDIS_SUPPORT_NDIS688)
+#if (NDIS_SUPPORT_NDIS689)
+    NdisWakeReasonWlanClientDriverDiagnostic = 0x1005,
+#endif // (NDIS_SUPPORT_NDIS689)
     // WWAN-specific wake reasons
     NdisWakeReasonWwanRegisterState         = 0x2000,
     NdisWakeReasonWwanSMSReceive            = 0x2001,

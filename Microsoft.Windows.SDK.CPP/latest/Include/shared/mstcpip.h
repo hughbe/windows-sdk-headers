@@ -1114,7 +1114,7 @@ IN6_PREFIX_EQUAL(
     return (BOOLEAN)
         (((memcmp(a, b, Bytes)) == 0) &&
          ((Bits == 0) ||
-          ((a->s6_bytes[Bytes] | Mask) == (b->s6_bytes[Bytes] | Mask))));
+          ((a->s6_bytes[Bytes] & Mask) == (b->s6_bytes[Bytes] & Mask))));
 }
 
 #ifdef _PREFAST_

@@ -2747,6 +2747,24 @@ Notes:
 //
 #define EVENT_BROWSER_NOT_STARTED_IPX_CONFIG_MISMATCH 0xC0001F64L
 
+//
+// MessageId: EVENT_BROWSER_REMOTE_MAILSLOTS_ENABLED
+//
+// MessageText:
+//
+// An administrator has enabled remote mailslots, which are off by default. Microsoft does not recommend enabling remote mailslots. To disable remote mailslots, run the PowerShell command: Set-SmbServerConfiguration -EnableMailslots $FALSE.
+//
+#define EVENT_BROWSER_REMOTE_MAILSLOTS_ENABLED 0x80001F65L
+
+//
+// MessageId: EVENT_BROWSER_REMOTE_MAILSLOTS_DISABLED
+//
+// MessageText:
+//
+// An administrator has disabled remote mailslots.
+//
+#define EVENT_BROWSER_REMOTE_MAILSLOTS_DISABLED 0x40001F66L
+
 
 /////////////////////////////////////////////////////////////////////////
 //
